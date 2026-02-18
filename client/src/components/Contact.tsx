@@ -20,9 +20,9 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: "Service Area",
-    value: "All Melbourne Suburbs",
-    href: null,
+    label: "Address",
+    value: "31 Northumberland Dr, Keysborough VIC 3173",
+    href: "https://maps.google.com/?q=31+Northumberland+Dr+Keysborough+VIC+3173",
   },
   {
     icon: Clock,

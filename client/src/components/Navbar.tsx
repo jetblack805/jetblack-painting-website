@@ -68,11 +68,11 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="tel:+61000000000"
-            className="flex items-center gap-2 bg-[oklch(0.7_0.15_220)] hover:bg-[oklch(0.6_0.15_220)] text-white px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
+            href="tel:0432077782"
+            className="flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
           >
             <Phone className="w-4 h-4" />
-            Get a Free Quote
+            Call Now
           </a>
         </div>
 

@@ -48,12 +48,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
             style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
           >
-            Quality Painting,{" "}
-            <span className="text-[#00AACC]">Flawless</span>{" "}
-            Results
+            House Painting Melbourne{" "}
+            <span className="text-[#00AACC]">Done Right</span>
           </motion.h1>
 
           {/* Subtext */}
@@ -61,10 +60,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-white/70 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl"
+            className="text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
           >
-            Commercial and residential repaint specialists delivering superior
-            finishes across all Melbourne suburbs. Fully licensed and insured.
+            Melbourne's #1 rated house painters. Interior, exterior & commercial painting specialists. Serving Keysborough, Bayside, Mornington Peninsula & all Melbourne suburbs. 5-star rated. Fully licensed & insured.
           </motion.p>
 
           {/* CTAs */}

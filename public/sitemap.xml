@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://jetblackpainting.manus.space/</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Services Pages -->
+    <url>
+        <loc>https://jetblackpainting.manus.space/services/exterior-painting</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Suburb Landing Pages -->
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-toorak</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-malvern</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-brighton</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-camberwell</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-hawthorn</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-bentleigh</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-caulfield</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-hampton</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/painter-mordialloc</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://jetblackpainting.manus.space/keysborough-painters</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- FAQ Page -->
+    <url>
+        <loc>https://jetblackpainting.manus.space/faq</loc>
+        <lastmod>2024-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset>

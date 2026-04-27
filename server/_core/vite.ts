@@ -21,6 +21,9 @@ export async function setupVite(app: Express, server: Server) {
   });
 
   app.use(vite.middlewares);
+  app.get("/googlebc9e38933d2233a8.html", (req, res) => {
+    res.sendFile(path.resolve(import.meta.dirname, "../..", "public", "googlebc9e38933d2233a8.html"));
+  });
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
 

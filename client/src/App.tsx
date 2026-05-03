@@ -20,6 +20,7 @@ import HamptonPainters from "./pages/HamptonPainters";
 import MordiallocPainters from "./pages/MordiallocPainters";
 import Blog from "./pages/Blog";
 import InteriorPainting from "./pages/InteriorPainting";
+import RoofPainting from "./pages/RoofPainting";
 
 function Router() {
   return (
@@ -40,6 +41,7 @@ function Router() {
       <Route path={"/painter-mordialloc"} component={MordiallocPainters} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/services/interior-painting"} component={InteriorPainting} />
+      <Route path={"/services/roof-painting"} component={RoofPainting} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

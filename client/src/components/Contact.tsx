@@ -33,6 +33,15 @@ const contactInfo = [
 ];
 
 export default function Contact() {
+  const handleContactClick = (label: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "contact_click", {
+        event_category: "contact",
+        event_label: label,
+      });
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-[#F5F5F0]">
       <div className="container">
@@ -72,6 +81,7 @@ export default function Contact() {
                     {item.href ? (
                       <a
                         href={item.href}
+                        onClick={() => handleContactClick(item.label)}
                         target={item.href.startsWith("http") ? "_blank" : undefined}
                         rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                         className="text-[#0D0D0D] font-semibold hover:text-[#00AACC] transition-colors"
@@ -115,6 +125,7 @@ export default function Contact() {
                 {/* Big Phone CTA */}
                 <a
                   href="tel:0432077782"
+                  onClick={() => handleContactClick("Big Phone CTA")}
                   className="flex items-center justify-center gap-3 bg-[#00AACC] hover:bg-[#0099BB] text-white w-full py-5 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5 mb-4"
                 >
                   <Phone className="w-6 h-6" />
@@ -124,6 +135,7 @@ export default function Contact() {
                 {/* Instagram CTA */}
                 <a
                   href="https://www.instagram.com/jetblack_painting"
+                  onClick={() => handleContactClick("Instagram CTA")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 border border-white/20 hover:border-[#00AACC]/50 text-white w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:bg-white/5"

@@ -1,7 +1,80 @@
 import { motion } from "framer-motion";
 import { Shield, Droplets, Clock, CheckCircle } from "lucide-react";
+import { useEffect } from "react";
 
 export default function RoofPainting() {
+  useEffect(() => {
+    // Update meta tags
+    document.title = "Roof Painting Melbourne | Professional Painters | Jetblack Painting";
+    
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", "Expert roof painting services in Melbourne. Protect your home with professional roof painters. Free quotes, 5-star rated, fully licensed & insured. Call 0432 077 782.");
+
+    // Remove existing schema
+    const existingSchema = document.querySelector('script[type="application/ld+json"]');
+    if (existingSchema) existingSchema.remove();
+
+    // Add Service Schema
+    const serviceSchema = document.createElement("script");
+    serviceSchema.type = "application/ld+json";
+    serviceSchema.textContent = JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Service",
+      "serviceType": "Roof Painting",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Jetblack Painting",
+        "image": "https://jetblackpainting.manus.space/logo.jpg",
+        "url": "https://jetblackpainting.manus.space",
+        "telephone": "+61432077782",
+        "email": "jimmy.jetblackpainting@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "31 Northumberland Dr",
+          "addressLocality": "Keysborough",
+          "addressRegion": "VIC",
+          "postalCode": "3173",
+          "addressCountry": "AU"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "100"
+        }
+      },
+      "areaServed": "Melbourne, VIC, Australia",
+      "description": "Professional roof painting services for residential and commercial properties across Melbourne. Expert surface preparation, premium materials, and lasting protection."
+    });
+    document.head.appendChild(serviceSchema);
+
+    // Add Article Schema for this service page
+    const articleSchema = document.createElement("script");
+    articleSchema.type = "application/ld+json";
+    articleSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Roof Painting Services in Melbourne",
+      "description": "Comprehensive guide to professional roof painting services in Melbourne. Learn about the benefits, process, and why Jetblack Painting is your trusted choice for roof protection.",
+      "image": "https://jetblackpainting.manus.space/images/roof-painting.jpg",
+      "datePublished": "2024-02-01",
+      "dateModified": "2026-05-09",
+      "author": {
+        "@type": "Organization",
+        "name": "Jetblack Painting"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jetblack Painting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://jetblackpainting.manus.space/logo.jpg"
+        }
+      }
+    });
+    document.head.appendChild(articleSchema);
+  }, []);
   const benefits = [
     {
       icon: Shield,

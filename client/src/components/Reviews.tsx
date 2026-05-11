@@ -63,50 +63,11 @@ function StarRating({ count }: { count: number }) {
 
 export default function Reviews() {
   useEffect(() => {
-    // Add AggregateRating and Review schema
-    const reviewSchema = document.createElement("script");
-    reviewSchema.type = "application/ld+json";
-    reviewSchema.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "100",
-      "reviewCount": "100"
-    });
-    document.head.appendChild(reviewSchema);
-
-    // Add individual Review schema for each review
-    const reviewsSchema = document.createElement("script");
-    reviewsSchema.type = "application/ld+json";
-    reviewsSchema.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Jetblack Painting",
-      "review": reviews.map(review => ({
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": review.rating,
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "reviewBody": review.text,
-        "author": {
-          "@type": "Person",
-          "name": review.name
-        },
-        "datePublished": convertToISODate(review.date)
-      }))
-    });
-    document.head.appendChild(reviewsSchema);
+    // Schema generation removed - consolidated into main LocalBusiness schema
+    // to comply with Google Search Console validation requirements
   }, []);
 
-  const convertToISODate = (dateStr: string): string => {
-    const date = new Date(dateStr);
-    return date.toISOString().split('T')[0];
-  };
+
 
   return (
     <section id="reviews" className="py-24 bg-[#F5F5F0]">

@@ -79,61 +79,7 @@ export default function ExteriorPainting() {
         "Transform your home or business with Jetblack Painting's professional exterior painting services across Melbourne. Durable finishes, free quotes."
       );
     }
-
-    // Add Service Schema Markup
-    const serviceSchema = document.querySelector('script[type="application/ld+json"]');
-    if (serviceSchema) {
-      serviceSchema.remove();
-    }
-
-    const newSchema = document.createElement("script");
-    newSchema.type = "application/ld+json";
-    newSchema.textContent = JSON.stringify({
-      "@context": "http://schema.org",
-      "@type": "Service",
-      "serviceType": "Exterior Painting",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Jetblack Painting",
-        "image": "https://jetblackpainting.com/images/jetblack-painting-logo.png",
-        "url": "https://jetblackpainting.com/",
-        "telephone": "+61432077782",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "31 Northumberland Dr",
-          "addressLocality": "Keysborough",
-          "addressRegion": "VIC",
-          "postalCode": "3173",
-          "addressCountry": "AU"
-        },
-        "areaServed": {
-          "@type": "State",
-          "name": "Victoria"
-        }
-      },
-      "description": "Professional exterior house painting services in Melbourne including weatherboard, render, fascia, and gutter painting.",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Jetblack Painting Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Residential Exterior Painting"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercial Building Exterior Painting"
-            }
-          }
-        ]
-      }
-    });
-    document.head.appendChild(newSchema);
+    // Dynamic schema injection removed for GSC compliance
   }, []);
 
   return (

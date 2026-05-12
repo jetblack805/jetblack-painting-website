@@ -78,51 +78,7 @@ export default function Blog() {
       );
     }
 
-    // Add BreadcrumbList Schema
-    const breadcrumbSchema = document.createElement("script");
-    breadcrumbSchema.type = "application/ld+json";
-    breadcrumbSchema.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://jetblackpainting.manus.space"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://jetblackpainting.manus.space/blog"
-        }
-      ]
-    });
-    document.head.appendChild(breadcrumbSchema);
-
-    // Add CollectionPage Schema for blog listing
-    const collectionSchema = document.createElement("script");
-    collectionSchema.type = "application/ld+json";
-    collectionSchema.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Jetblack Painting Blog",
-      "description": "Expert painting tips, guides, and industry insights from Jetblack Painting",
-      "url": "https://jetblackpainting.manus.space/blog",
-      "mainEntity": posts.map(post => ({
-        "@type": "BlogPosting",
-        "headline": post.title,
-        "description": post.excerpt,
-        "datePublished": convertToISODate(post.date),
-        "author": {
-          "@type": "Organization",
-          "name": post.author
-        },
-        "url": post.url
-      }))
-    });
-    document.head.appendChild(collectionSchema);
+    // Dynamic schema injection removed for GSC compliance
   }, []);
 
   const convertToISODate = (dateStr: string): string => {

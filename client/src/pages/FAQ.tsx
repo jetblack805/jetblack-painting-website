@@ -19,46 +19,7 @@ export default function FAQ() {
         "Frequently asked questions about Jetblack Painting services in Melbourne. Learn about our painting process, pricing, and more."
       );
     }
-
-    // Add FAQ Schema Markup
-    const faqSchema = document.querySelector('script[type="application/ld+json"]');
-    if (faqSchema) {
-      faqSchema.remove();
-    }
-
-    const newSchema = document.createElement("script");
-    newSchema.type = "application/ld+json";
-    newSchema.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What areas do Jetblack Painting services cover in Melbourne?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Jetblack Painting proudly serves Keysborough, Bayside suburbs, Mornington Peninsula & all Melbourne suburbs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are Jetblack Painting services licensed and insured?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Jetblack Painting is fully licensed and insured, providing complete protection and peace of mind."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer free quotes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Jetblack Painting is fully licensed and insured, providing complete protection and peace of mind."
-          }
-        }
-      ]
-    });
-    document.head.appendChild(newSchema);
+    // Dynamic schema injection removed for GSC compliance
   }, []);
 
   const faqs = [

@@ -12,31 +12,7 @@ export default function HawthornPainters() {
     document.title = "House Painters Hawthorn | Interior & Exterior | Jetblack Painting";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute("content", "Expert house painters in Hawthorn, Melbourne. Jetblack Painting delivers premium interior & exterior painting, weather protection and flawless finishes. Free quotes — call 0432 077 782.");
-    const schema = document.querySelector('script[type="application/ld+json"]');
-    if (schema) schema.remove();
-    const s = document.createElement("script");
-    s.type = "application/ld+json";
-    s.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "House Painting",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Jetblack Painting",
-        "telephone": "+61432077782",
-        "url": "https://jetblackpainting.com.au",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Hawthorn",
-          "addressRegion": "VIC",
-          "postalCode": "3122",
-          "addressCountry": "AU"
-        },
-        "areaServed": { "@type": "City", "name": "Hawthorn" }
-      },
-      "description": "Professional house painters in Hawthorn, VIC. Interior, exterior, weather protection and premium finishes."
-    });
-    document.head.appendChild(s);
+    // Dynamic schema injection removed for GSC compliance
   }, []);
 
   const faqs = [

@@ -1,6 +1,6 @@
 /*
  * Design: Bold Contrast — Contact section on light background
- * Contact info + call-to-action
+ * Contact info + call-to-action + Google Maps
  */
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
@@ -97,7 +97,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right: CTA Card */}
+          {/* Right: Google Maps */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -105,66 +105,88 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="flex items-center"
           >
-            <div className="w-full bg-[#0D0D0D] rounded-xl p-8 sm:p-10 relative overflow-hidden">
-              {/* Decorative accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#00AACC]/10 rounded-bl-full" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#00AACC]/5 rounded-tr-full" />
-
-              <div className="relative z-10">
-                <h3
-                  className="text-2xl sm:text-3xl font-bold text-white mb-4"
-                  style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
-                >
-                  Get Your Free Quote Today
-                </h3>
-                <p className="text-white/60 leading-relaxed mb-8">
-                  Call us directly or reach out on Instagram. We respond within minutes
-                  and can arrange a site visit at a time that suits you.
-                </p>
-
-                {/* Big Phone CTA */}
-                <a
-                  href="tel:0432077782"
-                  onClick={() => handleContactClick("Big Phone CTA")}
-                  className="flex items-center justify-center gap-3 bg-[#00AACC] hover:bg-[#0099BB] text-white w-full py-5 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5 mb-4"
-                >
-                  <Phone className="w-6 h-6" />
-                  0432 077 782
-                </a>
-
-                {/* Instagram CTA */}
-                <a
-                  href="https://www.instagram.com/jetblack_painting"
-                  onClick={() => handleContactClick("Instagram CTA")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 border border-white/20 hover:border-[#00AACC]/50 text-white w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:bg-white/5"
-                >
-                  <Instagram className="w-5 h-5" />
-                  Follow us on Instagram
-                </a>
-
-                {/* Trust signals */}
-                <div className="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-white/10">
-                  <div className="text-center">
-                    <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>5.0★</div>
-                    <div className="text-white/40 text-xs">Google Rating</div>
-                  </div>
-                  <div className="w-px h-8 bg-white/10" />
-                  <div className="text-center">
-                    <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>13+</div>
-                    <div className="text-white/40 text-xs">Years Experience</div>
-                  </div>
-                  <div className="w-px h-8 bg-white/10" />
-                  <div className="text-center">
-                    <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>100%</div>
-                    <div className="text-white/40 text-xs">Insured</div>
-                  </div>
-                </div>
-              </div>
+            <div className="w-full rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.8860472260006!2d145.1312!3d-37.9722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b5e5e5e5e5%3A0x1234567890!2s31%20Northumberland%20Dr%2C%20Keysborough%20VIC%203173!5e0!3m2!1sen!2sau!4v1234567890"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Jetblack Painting Location - 31 Northumberland Dr, Keysborough VIC 3173"
+              />
             </div>
           </motion.div>
         </div>
+
+        {/* CTA Card Below */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mt-16"
+        >
+          <div className="w-full bg-[#0D0D0D] rounded-xl p-8 sm:p-10 relative overflow-hidden">
+            {/* Decorative accent */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00AACC]/10 rounded-bl-full" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#00AACC]/5 rounded-tr-full" />
+
+            <div className="relative z-10">
+              <h3
+                className="text-2xl sm:text-3xl font-bold text-white mb-4"
+                style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+              >
+                Get Your Free Quote Today
+              </h3>
+              <p className="text-white/60 leading-relaxed mb-8">
+                Call us directly or reach out on Instagram. We respond within minutes
+                and can arrange a site visit at a time that suits you.
+              </p>
+
+              {/* Big Phone CTA */}
+              <a
+                href="tel:0432077782"
+                onClick={() => handleContactClick("Big Phone CTA")}
+                className="flex items-center justify-center gap-3 bg-[#00AACC] hover:bg-[#0099BB] text-white w-full py-5 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5 mb-4"
+              >
+                <Phone className="w-6 h-6" />
+                0432 077 782
+              </a>
+
+              {/* Instagram CTA */}
+              <a
+                href="https://www.instagram.com/jetblack_painting"
+                onClick={() => handleContactClick("Instagram CTA")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 border border-white/20 hover:border-[#00AACC]/50 text-white w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:bg-white/5"
+              >
+                <Instagram className="w-5 h-5" />
+                Follow us on Instagram
+              </a>
+
+              {/* Trust signals */}
+              <div className="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-white/10">
+                <div className="text-center">
+                  <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>5.0★</div>
+                  <div className="text-white/40 text-xs">Google Rating</div>
+                </div>
+                <div className="w-px h-8 bg-white/10" />
+                <div className="text-center">
+                  <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>13+</div>
+                  <div className="text-white/40 text-xs">Years Experience</div>
+                </div>
+                <div className="w-px h-8 bg-white/10" />
+                <div className="text-center">
+                  <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>100%</div>
+                  <div className="text-white/40 text-xs">Insured</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

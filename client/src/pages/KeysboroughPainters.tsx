@@ -80,40 +80,7 @@ export default function KeysboroughPainters() {
       );
     }
 
-    // Add Local Landing Page Schema Markup
-    const serviceSchema = document.querySelector('script[type="application/ld+json"]');
-    if (serviceSchema) {
-      serviceSchema.remove();
-    }
-
-    const newSchema = document.createElement("script");
-    newSchema.type = "application/ld+json";
-    newSchema.textContent = JSON.stringify({
-      "@context": "http://schema.org",
-      "@type": "Service",
-      "serviceType": "House Painting",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Jetblack Painting",
-        "image": "https://jetblackpainting.com/images/jetblack-painting-logo.png",
-        "url": "https://jetblackpainting.com/",
-        "telephone": "+61432077782",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "31 Northumberland Dr",
-          "addressLocality": "Keysborough",
-          "addressRegion": "VIC",
-          "postalCode": "3173",
-          "addressCountry": "AU"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Keysborough"
-        }
-      },
-      "description": "Top-rated painters in Keysborough, VIC. Jetblack Painting offers professional interior, exterior, and commercial painting services in Keysborough and surrounding suburbs. Free quotes!"
-    });
-    document.head.appendChild(newSchema);
+    
   }, []);
 
   return (

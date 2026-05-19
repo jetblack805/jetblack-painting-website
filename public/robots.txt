@@ -6,6 +6,7 @@ User-agent: *
 Allow: /
 Disallow: /deployments
 Disallow: /admin
+Disallow: /private
 Disallow: /*.json$
 Disallow: /*?*sort=
 Disallow: /*?*filter=

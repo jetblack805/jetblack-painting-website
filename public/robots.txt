@@ -6,6 +6,7 @@ User-agent: *
 Allow: /
 Disallow: /deployments
 Disallow: /admin
+Disallow: /private
 Disallow: /*.json$
 Disallow: /*?*sort=
 Disallow: /*?*filter=
@@ -34,8 +35,12 @@ Disallow: /
 User-agent: MJ12bot
 Disallow: /
 
-# Sitemap location
+# Sitemap locations
+Sitemap: https://jetblackpainting.manus.space/sitemap-index.xml
 Sitemap: https://jetblackpainting.manus.space/sitemap.xml
+Sitemap: https://jetblackpainting.manus.space/sitemap-blog.xml
+Sitemap: https://jetblackpainting.manus.space/sitemap-locations.xml
+Sitemap: https://jetblackpainting.manus.space/sitemap-services.xml
 
 # Crawl delay (in seconds)
 Crawl-delay: 1

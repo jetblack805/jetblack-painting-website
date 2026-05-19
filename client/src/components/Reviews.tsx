@@ -4,6 +4,7 @@
  */
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { useEffect } from "react";
 
 const reviews = [
   {
@@ -61,6 +62,13 @@ function StarRating({ count }: { count: number }) {
 }
 
 export default function Reviews() {
+  useEffect(() => {
+    // Schema generation removed - consolidated into main LocalBusiness schema
+    // to comply with Google Search Console validation requirements
+  }, []);
+
+
+
   return (
     <section id="reviews" className="py-24 bg-[#F5F5F0]">
       <div className="container">

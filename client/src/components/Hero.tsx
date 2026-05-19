@@ -12,6 +12,23 @@ export default function Hero() {
   const scrollToSection = (id: string) => {
     const el = document.querySelector(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+
+    // Track scroll clicks
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "nav_click", {
+        event_category: "navigation",
+        event_label: `Hero Scroll to ${id}`,
+      });
+    }
+  };
+
+  const handlePhoneClick = () => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "phone_click", {
+        event_category: "contact",
+        event_label: "Hero Section",
+      });
+    }
   };
 
   return (
@@ -74,6 +91,7 @@ export default function Hero() {
           >
             <a
               href="tel:0432077782"
+              onClick={handlePhoneClick}
               className="flex items-center justify-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-4 rounded font-bold text-base transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5"
             >
               <Phone className="w-5 h-5" />

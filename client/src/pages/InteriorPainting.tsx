@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
 import { CheckCircle, Phone, MapPin } from "lucide-react";
+import { useEffect } from "react";
 
 export default function InteriorPainting() {
+  useEffect(() => {
+    // Update meta tags
+    document.title = "Interior Painting Melbourne | Professional Painters | Jetblack Painting";
+    
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", "Expert interior painting services in Melbourne. Transform your home with professional painters. Free quotes, 5-star rated, fully licensed & insured. Call 0432 077 782.");
+
+    // Dynamic schema injection removed - consolidated into main LocalBusiness schema
+    // to comply with Google Search Console validation requirements
+  }, []);
   const benefits = [
     "Professional surface preparation and priming",
     "Premium quality paint products",

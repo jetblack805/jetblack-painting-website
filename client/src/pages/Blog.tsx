@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, User, ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 
 export default function Blog() {
   const posts = [
@@ -10,7 +11,8 @@ export default function Blog() {
       date: "April 18, 2026",
       author: "Jetblack Painting",
       category: "Design Tips",
-      readTime: "5 min read"
+      readTime: "5 min read",
+      url: "https://jetblackpainting.manus.space/blog/best-house-painting-colors"
     },
     {
       id: 2,
@@ -19,7 +21,8 @@ export default function Blog() {
       date: "April 15, 2026",
       author: "Jetblack Painting",
       category: "Trends",
-      readTime: "6 min read"
+      readTime: "6 min read",
+      url: "https://jetblackpainting.manus.space/blog/interior-painting-trends-2026"
     },
     {
       id: 3,
@@ -28,7 +31,8 @@ export default function Blog() {
       date: "April 12, 2026",
       author: "Jetblack Painting",
       category: "Guide",
-      readTime: "7 min read"
+      readTime: "7 min read",
+      url: "https://jetblackpainting.manus.space/blog/prepare-home-professional-painting"
     },
     {
       id: 4,
@@ -37,7 +41,8 @@ export default function Blog() {
       date: "April 10, 2026",
       author: "Jetblack Painting",
       category: "Commercial",
-      readTime: "6 min read"
+      readTime: "6 min read",
+      url: "https://jetblackpainting.manus.space/blog/commercial-painting-minimize-disruption"
     },
     {
       id: 5,
@@ -46,7 +51,8 @@ export default function Blog() {
       date: "April 8, 2026",
       author: "Jetblack Painting",
       category: "Roof Painting",
-      readTime: "8 min read"
+      readTime: "8 min read",
+      url: "https://jetblackpainting.manus.space/blog/roof-painting-guide"
     },
     {
       id: 6,
@@ -55,9 +61,30 @@ export default function Blog() {
       date: "April 5, 2026",
       author: "Jetblack Painting",
       category: "Exterior",
-      readTime: "7 min read"
+      readTime: "7 min read",
+      url: "https://jetblackpainting.manus.space/blog/exterior-paint-protection-melbourne"
     }
   ];
+
+  useEffect(() => {
+    // Update meta tags
+    document.title = "Blog - Jetblack Painting | Painting Tips & Guides";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "Expert painting tips, guides, and industry insights from Jetblack Painting. Learn about interior, exterior, and commercial painting trends for Melbourne homes."
+      );
+    }
+
+    // Dynamic schema injection removed for GSC compliance
+  }, []);
+
+  const convertToISODate = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    return date.toISOString().split('T')[0];
+  };
 
   return (
     <div className="min-h-screen bg-white">

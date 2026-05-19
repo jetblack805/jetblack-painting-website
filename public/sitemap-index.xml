@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Main Sitemap -->
+    <sitemap>
+        <loc>https://jetblackpainting.manus.space/sitemap.xml</loc>
+        <lastmod>2026-05-09</lastmod>
+    </sitemap>
+    
+    <!-- Blog Posts Sitemap -->
+    <sitemap>
+        <loc>https://jetblackpainting.manus.space/sitemap-blog.xml</loc>
+        <lastmod>2026-05-09</lastmod>
+    </sitemap>
+    
+    <!-- Location Pages Sitemap -->
+    <sitemap>
+        <loc>https://jetblackpainting.manus.space/sitemap-locations.xml</loc>
+        <lastmod>2026-05-09</lastmod>
+    </sitemap>
+    
+    <!-- Service Pages Sitemap -->
+    <sitemap>
+        <loc>https://jetblackpainting.manus.space/sitemap-services.xml</loc>
+        <lastmod>2026-05-09</lastmod>
+    </sitemap>
+    
+</sitemapindex>

@@ -12,31 +12,7 @@ export default function ToorakPainters() {
     document.title = "House Painters Toorak | Interior & Exterior | Jetblack Painting";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute("content", "Expert house painters in Toorak, Melbourne. Jetblack Painting delivers premium interior & exterior painting, weather protection and flawless finishes. Free quotes — call 0432 077 782.");
-    const schema = document.querySelector('script[type="application/ld+json"]');
-    if (schema) schema.remove();
-    const s = document.createElement("script");
-    s.type = "application/ld+json";
-    s.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "House Painting",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Jetblack Painting",
-        "telephone": "+61432077782",
-        "url": "https://jetblackpainting.com.au",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Toorak",
-          "addressRegion": "VIC",
-          "postalCode": "3142",
-          "addressCountry": "AU"
-        },
-        "areaServed": { "@type": "City", "name": "Toorak" }
-      },
-      "description": "Professional house painters in Toorak, VIC. Interior, exterior, weather protection and premium finishes."
-    });
-    document.head.appendChild(s);
+    // Dynamic schema injection removed for GSC compliance
   }, []);
 
   const faqs = [

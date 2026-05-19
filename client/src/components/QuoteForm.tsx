@@ -69,6 +69,16 @@ export default function QuoteForm() {
       // Log the data (in production, send to your backend)
       console.log("Quote form submitted:", data);
 
+      // Track conversion in Google Analytics
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "generate_lead", {
+          event_category: "engagement",
+          event_label: "Quote Form Submission",
+          service_type: data.serviceType,
+          suburb: data.suburb,
+        });
+      }
+
       toast.success("Quote request submitted successfully! We'll contact you within 24 hours.");
       reset();
     } catch (error) {

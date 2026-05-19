@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
 import { Shield, Droplets, Clock, CheckCircle } from "lucide-react";
+import { useEffect } from "react";
 
 export default function RoofPainting() {
+  useEffect(() => {
+    // Update meta tags
+    document.title = "Roof Painting Melbourne | Professional Painters | Jetblack Painting";
+    
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", "Expert roof painting services in Melbourne. Protect your home with professional roof painters. Free quotes, 5-star rated, fully licensed & insured. Call 0432 077 782.");
+
+    // Dynamic schema injection removed - consolidated into main LocalBusiness schema
+    // to comply with Google Search Console validation requirements
+  }, []);
   const benefits = [
     {
       icon: Shield,

@@ -31,6 +31,23 @@ export default function Navbar() {
     setIsOpen(false);
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+    
+    // Track navigation clicks
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "nav_click", {
+        event_category: "navigation",
+        event_label: href,
+      });
+    }
+  };
+
+  const handlePhoneClick = (label: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "phone_click", {
+        event_category: "contact",
+        event_label: label,
+      });
+    }
   };
 
   return (
@@ -69,6 +86,7 @@ export default function Navbar() {
           ))}
           <a
             href="tel:0432077782"
+            onClick={() => handlePhoneClick("Desktop Navbar")}
             className="flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
           >
             <Phone className="w-4 h-4" />
@@ -108,11 +126,12 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="tel:+61000000000"
+                href="tel:0432077782"
+                onClick={() => handlePhoneClick("Mobile Navbar")}
                 className="flex items-center justify-center gap-2 bg-[oklch(0.7_0.15_220)] hover:bg-[oklch(0.6_0.15_220)] text-white px-5 py-3 rounded font-semibold text-sm transition-colors duration-200 mt-2"
               >
                 <Phone className="w-4 h-4" />
-                Get a Free Quote
+                Call Now
               </a>
             </div>
           </motion.div>

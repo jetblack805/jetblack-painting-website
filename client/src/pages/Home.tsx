@@ -6,6 +6,7 @@ import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import About from "@/components/About";
 import QuoteForm from "@/components/QuoteForm";
+import GoogleMap from "@/components/GoogleMap";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Reviews />
       <About />
       <QuoteForm />
+      <GoogleMap />
       <Contact />
       <Footer />
     </div>

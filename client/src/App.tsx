@@ -21,6 +21,11 @@ import CaulfieldPainters from "./pages/CaulfieldPainters";
 import HamptonPainters from "./pages/HamptonPainters";
 import MordiallocPainters from "./pages/MordiallocPainters";
 import Blog from "./pages/Blog";
+import ReviewUs from "./pages/ReviewUs";
+import BestPaintColours2025 from "./pages/blog/BestPaintColours2025";
+import HousePaintingCostMelbourne from "./pages/blog/HousePaintingCostMelbourne";
+import PrepareHomePainting from "./pages/blog/PrepareHomePainting";
+import KitchenCabinetResurfacing from "./pages/blog/KitchenCabinetResurfacing";
 
 function Router() {
   return (
@@ -52,8 +57,14 @@ function Router() {
       <Route path={"/painters-mordialloc"} component={MordiallocPainters} />
       <Route path={"/keysborough-painters"} component={KeysboroughPainters} />
       <Route path={"/painter-keysborough"} component={KeysboroughPainters} />
-      {/* Content Pages */}
+      {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />
+      <Route path={"/blog/house-painting-cost-melbourne"} component={HousePaintingCostMelbourne} />
+      <Route path={"/blog/prepare-home-for-painting"} component={PrepareHomePainting} />
+      <Route path={"/blog/kitchen-cabinet-resurfacing-vs-replacement"} component={KitchenCabinetResurfacing} />
+      {/* Other Pages */}
+      <Route path={"/review-us"} component={ReviewUs} />
       <Route path={"/faq"} component={FAQ} />
       {/* 404 */}
       <Route path={"/404"} component={NotFound} />

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import TrustBadges from "@/components/TrustBadges";
 import PremiumServices from "@/components/PremiumServices";
 import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
@@ -15,6 +16,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <TrustBadges />
       <Services />
       <PremiumServices />
       <Gallery />

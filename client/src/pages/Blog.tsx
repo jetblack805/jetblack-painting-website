@@ -1,68 +1,73 @@
 import { motion } from "framer-motion";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Blog() {
   const posts = [
     {
       id: 1,
-      title: "Best House Painting Colors for Melbourne Homes in 2026",
-      excerpt: "Discover the trending paint colors that are transforming Melbourne homes. From warm neutrals to bold statement colors, find the perfect palette for your property.",
-      date: "April 18, 2026",
-      author: "Jetblack Painting",
+      title: "Best Paint Colours for Melbourne Homes in 2025",
+      excerpt: "Discover the trending paint colours that are transforming Melbourne homes. From warm neutrals to bold statement colours, find the perfect palette for your property.",
+      date: "May 2025",
       category: "Design Tips",
-      readTime: "5 min read"
+      readTime: "6 min read",
+      slug: "/blog/best-paint-colours-melbourne-2025"
     },
     {
       id: 2,
-      title: "Interior Painting Trends 2026: What's Hot in Melbourne",
-      excerpt: "Stay ahead of the curve with the latest interior painting trends. Learn about feature walls, accent colors, and finishes that are dominating Melbourne homes.",
-      date: "April 15, 2026",
-      author: "Jetblack Painting",
-      category: "Trends",
-      readTime: "6 min read"
+      title: "How Much Does House Painting Cost in Melbourne? (2025 Price Guide)",
+      excerpt: "Get a comprehensive breakdown of painting costs across Melbourne. Interior, exterior, and commercial pricing with real examples from our recent projects.",
+      date: "May 2025",
+      category: "Price Guide",
+      readTime: "8 min read",
+      slug: "/blog/house-painting-cost-melbourne"
     },
     {
       id: 3,
-      title: "How to Prepare Your Home for Professional Painting",
+      title: "How to Prepare Your Melbourne Home for Professional Painting",
       excerpt: "Proper preparation is key to a successful painting project. Learn our expert tips for preparing your home to ensure the best results.",
-      date: "April 12, 2026",
-      author: "Jetblack Painting",
+      date: "May 2025",
       category: "Guide",
-      readTime: "7 min read"
+      readTime: "5 min read",
+      slug: "/blog/prepare-home-for-painting"
     },
     {
       id: 4,
-      title: "Commercial Painting: Minimizing Business Disruption",
-      excerpt: "Discover how to schedule commercial painting projects to minimize impact on your business operations. Expert strategies from Melbourne's top painters.",
-      date: "April 10, 2026",
-      author: "Jetblack Painting",
-      category: "Commercial",
-      readTime: "6 min read"
+      title: "Kitchen Cabinet Resurfacing vs Replacement: What Melbourne Homeowners Need to Know",
+      excerpt: "Transform your kitchen for a fraction of the cost of a full renovation. Learn about 2-pack cabinet resurfacing and when it's the right choice.",
+      date: "May 2025",
+      category: "Kitchen",
+      readTime: "7 min read",
+      slug: "/blog/kitchen-cabinet-resurfacing-vs-replacement"
     },
     {
       id: 5,
-      title: "Roof Painting Guide: Protection & Aesthetics",
-      excerpt: "Learn everything about roof painting - from the benefits of roof protection to choosing the right colors for your Melbourne home.",
-      date: "April 8, 2026",
-      author: "Jetblack Painting",
+      title: "Roof Painting Guide: Protection & Aesthetics for Melbourne Homes",
+      excerpt: "Learn everything about roof painting - from the benefits of roof protection to choosing the right colours for your Melbourne home.",
+      date: "May 2025",
       category: "Roof Painting",
-      readTime: "8 min read"
+      readTime: "8 min read",
+      slug: "/services/roof-painting"
     },
     {
       id: 6,
-      title: "Exterior Paint Protection: Melbourne's Weather Challenges",
+      title: "Exterior Paint Protection: Surviving Melbourne's Weather",
       excerpt: "Melbourne's unpredictable weather requires special exterior paint protection. Learn how to protect your home's exterior from UV, moisture, and temperature changes.",
-      date: "April 5, 2026",
-      author: "Jetblack Painting",
+      date: "May 2025",
       category: "Exterior",
-      readTime: "7 min read"
+      readTime: "7 min read",
+      slug: "/services/exterior-painting"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
+      
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,8 +78,9 @@ export default function Blog() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Painting Tips & Guides
             </h1>
-            <p className="text-xl text-gray-300">
-              Expert advice on interior, exterior, and commercial painting for Melbourne homes and businesses
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Expert advice on interior, exterior, and commercial painting for Melbourne homes and businesses. 
+              Written by our team with 13+ years of experience.
             </p>
           </motion.div>
         </div>
@@ -101,9 +107,11 @@ export default function Blog() {
                     <span>{post.readTime}</span>
                   </div>
                   
-                  <h2 className="text-xl font-bold text-[#0D0D0D] mb-3 hover:text-[#00AACC] transition-colors">
-                    {post.title}
-                  </h2>
+                  <Link href={post.slug}>
+                    <h2 className="text-xl font-bold text-[#0D0D0D] mb-3 hover:text-[#00AACC] transition-colors cursor-pointer">
+                      {post.title}
+                    </h2>
+                  </Link>
                   
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {post.excerpt}
@@ -116,10 +124,10 @@ export default function Blog() {
                         {post.date}
                       </div>
                     </div>
-                    <button className="text-[#00AACC] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
+                    <Link href={post.slug} className="text-[#00AACC] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </motion.article>
@@ -146,6 +154,8 @@ export default function Blog() {
           </motion.div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

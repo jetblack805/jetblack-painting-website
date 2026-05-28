@@ -1,14 +1,29 @@
 import { motion } from "framer-motion";
 import { CheckCircle, Phone, MapPin } from "lucide-react";
+import { Link } from "wouter";
+import SEOHead from "@/components/SEOHead";
 
 export default function InteriorPainting() {
   const benefits = [
     "Professional surface preparation and priming",
-    "Premium quality paint products",
-    "Expert color consultation",
+    "Premium quality Dulux and Taubmans paint products",
+    "Expert colour consultation included",
     "Minimal disruption to your home",
-    "Fully licensed and insured",
-    "Satisfaction guaranteed"
+    "Fully licensed and insured with $20M public liability",
+    "5-year workmanship guarantee"
+  ];
+
+  const suburbs = [
+    { name: "Brighton", link: "/painter-brighton" },
+    { name: "Toorak", link: "/painter-toorak" },
+    { name: "Malvern", link: "/painter-malvern" },
+    { name: "Camberwell", link: "/painter-camberwell" },
+    { name: "Hawthorn", link: "/painter-hawthorn" },
+    { name: "Bentleigh", link: "/painter-bentleigh" },
+    { name: "Caulfield", link: "/painter-caulfield" },
+    { name: "Hampton", link: "/painter-hampton" },
+    { name: "Mordialloc", link: "/painter-mordialloc" },
+    { name: "Keysborough", link: "/keysborough-painters" },
   ];
 
   const faqs = [
@@ -22,16 +37,22 @@ export default function InteriorPainting() {
     },
     {
       question: "What paint do you use?",
-      answer: "We use premium quality paints from leading brands like Dulux and Taubmans. We can recommend the best products for your specific needs."
+      answer: "We use premium quality paints from Dulux and Taubmans. We can recommend the best products for your specific needs and budget."
     },
     {
-      question: "Can you help with color selection?",
-      answer: "Absolutely! Our team has extensive experience with color trends and can help you choose colors that complement your home's style."
+      question: "Can you help with colour selection?",
+      answer: "Absolutely! Our team has extensive experience with colour trends and can help you choose colours that complement your home's style."
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Interior Painting Melbourne | Professional House Painters | Jetblack Painting"
+        description="Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
+        canonical="https://jetblackpainting.manus.space/services/interior-painting"
+      />
+
       {/* Header */}
       <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
         <div className="container">
@@ -44,7 +65,7 @@ export default function InteriorPainting() {
               Professional Interior Painting Melbourne
             </h1>
             <p className="text-xl text-gray-300 mb-6">
-              Transform your home with expert interior painting services. From feature walls to complete room makeovers, Jetblack Painting delivers flawless finishes.
+              Transform your home with expert interior painting services. From feature walls to complete room makeovers, Jetblack Painting delivers flawless finishes with premium Dulux and Taubmans paints.
             </p>
             <a
               href="tel:0432077782"
@@ -67,49 +88,24 @@ export default function InteriorPainting() {
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">
-              Expert Interior Painting for Melbourne Homes
+              Melbourne's Trusted Interior Painting Specialists
             </h2>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-              Jetblack Painting specializes in professional interior painting services across Melbourne. Whether you're looking to refresh a single room or completely transform your home's interior, our experienced team delivers exceptional results with meticulous attention to detail.
+              Jetblack Painting delivers premium interior painting services across Melbourne. With 13+ years of experience and a 5-star Google rating, we transform homes with expert craftsmanship and premium materials. Our professional team handles everything from single rooms to complete home repaints.
             </p>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-              With over 13 years of experience in residential painting, we understand that your home is your most valuable asset. We treat every project with the care and professionalism it deserves, ensuring minimal disruption to your daily life while delivering stunning results.
+              We specialise in residential interior painting including living rooms, bedrooms, kitchens, bathrooms, hallways, and ceilings. Every project includes thorough surface preparation, premium primers, and top-quality topcoats for a flawless, long-lasting finish.
             </p>
           </motion.div>
 
-          {/* Services */}
+          {/* Benefits */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Our Interior Painting Services</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { title: "Bedroom Painting", desc: "Create a peaceful retreat with professional bedroom painting" },
-                { title: "Living Room Painting", desc: "Transform your living space with expert color and finish selection" },
-                { title: "Kitchen Painting", desc: "Durable, high-quality finishes for kitchen walls and cabinets" },
-                { title: "Bathroom Painting", desc: "Moisture-resistant paints for humid bathroom environments" },
-                { title: "Feature Walls", desc: "Bold accent walls that add character and depth to any room" },
-                { title: "Ceiling Painting", desc: "Professional ceiling painting for a complete room transformation" }
-              ].map((service, i) => (
-                <div key={i} className="bg-gray-50 p-6 rounded-lg">
-                  <h4 className="font-bold text-[#0D0D0D] mb-2">{service.title}</h4>
-                  <p className="text-gray-600">{service.desc}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Why Choose Us */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Why Choose Jetblack Painting for Interior Painting?</h3>
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Why Choose Our Interior Painting Service</h2>
             <div className="space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
@@ -120,23 +116,24 @@ export default function InteriorPainting() {
             </div>
           </motion.div>
 
-          {/* Service Areas */}
+          {/* Service Areas with Internal Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12 bg-[#F5F5F0] p-8 rounded-lg"
           >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-4">Interior Painting Services Across Melbourne</h3>
-            <p className="text-gray-700 mb-6">
-              We provide professional interior painting services throughout Melbourne, including:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {["Keysborough", "Brighton", "Toorak", "Mordialloc", "Hawthorn", "Mentone", "Sandringham", "Camberwell", "Bentleigh"].map((suburb) => (
-                <div key={suburb} className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#00AACC]" />
-                  <span className="text-gray-700">{suburb}</span>
-                </div>
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Interior Painting Service Areas</h2>
+            <p className="text-gray-700 mb-4">We provide professional interior painting services across all Melbourne suburbs including:</p>
+            <div className="flex flex-wrap gap-3">
+              {suburbs.map((s) => (
+                <Link
+                  key={s.name}
+                  href={s.link}
+                  className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium"
+                >
+                  {s.name}
+                </Link>
               ))}
             </div>
           </motion.div>
@@ -148,14 +145,33 @@ export default function InteriorPainting() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Frequently Asked Questions</h3>
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Interior Painting FAQs</h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (
-                <div key={i} className="border-b pb-6">
-                  <h4 className="font-bold text-[#0D0D0D] mb-2 text-lg">{faq.question}</h4>
+                <div key={i} className="border-b border-gray-200 pb-4">
+                  <h3 className="text-lg font-bold text-[#0D0D0D] mb-2">{faq.question}</h3>
                   <p className="text-gray-700">{faq.answer}</p>
                 </div>
               ))}
+            </div>
+          </motion.div>
+
+          {/* Related Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12 bg-gray-50 p-8 rounded-lg"
+          >
+            <h3 className="text-xl font-bold text-[#0D0D0D] mb-4">Our Other Services</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline font-medium">Exterior Painting</Link>
+              <span className="text-gray-300">|</span>
+              <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline font-medium">Commercial Painting</Link>
+              <span className="text-gray-300">|</span>
+              <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline font-medium">Roof Painting</Link>
+              <span className="text-gray-300">|</span>
+              <Link href="/blog" className="text-[#00AACC] hover:underline font-medium">Painting Blog</Link>
             </div>
           </motion.div>
 
@@ -166,9 +182,9 @@ export default function InteriorPainting() {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center"
           >
-            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Interior?</h3>
+            <h2 className="text-3xl font-bold mb-4">Get Your Free Interior Painting Quote</h2>
             <p className="text-xl mb-6 text-gray-300">
-              Get a free, no-obligation quote from Melbourne's trusted interior painting specialists.
+              Contact Jetblack Painting for a free, no-obligation quote on your interior painting project.
             </p>
             <a
               href="tel:0432077782"

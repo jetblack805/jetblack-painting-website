@@ -1,18 +1,39 @@
 import { motion } from "framer-motion";
-import { CheckCircle, Phone, MapPin } from "lucide-react";
+import { CheckCircle, Phone } from "lucide-react";
+import { Link } from "wouter";
+import SEOHead from "@/components/SEOHead";
 
 export default function ExteriorPainting() {
   const benefits = [
     "Professional surface preparation and power washing",
-    "Premium weather-resistant paint products",
-    "Expert color consultation for curb appeal",
-    "Protection against Melbourne's harsh weather",
-    "Fully licensed and insured",
-    "Satisfaction guaranteed"
+    "Premium weather-resistant Dulux and Taubmans paints",
+    "Expert colour consultation for maximum curb appeal",
+    "Protection against Melbourne's harsh weather conditions",
+    "Fully licensed and insured with $20M public liability",
+    "5-year workmanship guarantee"
+  ];
+
+  const suburbs = [
+    { name: "Brighton", link: "/painter-brighton" },
+    { name: "Toorak", link: "/painter-toorak" },
+    { name: "Malvern", link: "/painter-malvern" },
+    { name: "Camberwell", link: "/painter-camberwell" },
+    { name: "Hawthorn", link: "/painter-hawthorn" },
+    { name: "Bentleigh", link: "/painter-bentleigh" },
+    { name: "Caulfield", link: "/painter-caulfield" },
+    { name: "Hampton", link: "/painter-hampton" },
+    { name: "Mordialloc", link: "/painter-mordialloc" },
+    { name: "Keysborough", link: "/keysborough-painters" },
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Exterior Painting Melbourne | Weather-Resistant House Painters | Jetblack Painting"
+        description="Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
+        canonical="https://jetblackpainting.manus.space/services/exterior-painting"
+      />
+
       {/* Header */}
       <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
         <div className="container">
@@ -25,7 +46,7 @@ export default function ExteriorPainting() {
               Professional Exterior Painting Melbourne
             </h1>
             <p className="text-xl text-gray-300 mb-6">
-              Protect and enhance your home's exterior with expert painting. Weather-resistant finishes for Melbourne's climate.
+              Protect and enhance your home's exterior with expert painting. Weather-resistant finishes designed for Melbourne's climate using premium Dulux products.
             </p>
             <a
               href="tel:0432077782"
@@ -48,49 +69,24 @@ export default function ExteriorPainting() {
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">
-              Expert Exterior Painting for Melbourne Homes
+              Melbourne's Expert Exterior House Painters
             </h2>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-              Your home's exterior is its first line of defense against Melbourne's unpredictable weather. Jetblack Painting specializes in professional exterior painting that not only enhances your home's curb appeal but also provides long-lasting protection.
+              Jetblack Painting provides premium exterior painting services across Melbourne. We specialise in protecting and beautifying homes with weather-resistant coatings that withstand Melbourne's harsh UV, rain, and coastal conditions. Our 13+ years of experience means we understand exactly what your home needs.
             </p>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-              With over 13 years of experience, we understand the unique challenges of exterior painting in Melbourne. From weatherboard homes to brick facades, we deliver exceptional results that stand the test of time.
+              Every exterior project includes thorough surface preparation including power washing, scraping, sanding, and priming. We handle all surface types including weatherboard, rendered walls, brick, timber, metal roofing, and concrete.
             </p>
           </motion.div>
 
-          {/* Services */}
+          {/* Benefits */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Our Exterior Painting Services</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { title: "House Exterior Painting", desc: "Complete exterior repaints for residential properties" },
-                { title: "Weatherboard Painting", desc: "Specialized weatherboard painting and preparation" },
-                { title: "Brick & Render Painting", desc: "Expert painting for brick and render facades" },
-                { title: "Roof Painting", desc: "Professional roof painting and restoration" },
-                { title: "Fence Painting", desc: "Quality fence and gate painting services" },
-                { title: "Trim & Fascia", desc: "Professional painting of gutters, fascia, and trim" }
-              ].map((service, i) => (
-                <div key={i} className="bg-gray-50 p-6 rounded-lg">
-                  <h4 className="font-bold text-[#0D0D0D] mb-2">{service.title}</h4>
-                  <p className="text-gray-600">{service.desc}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Why Choose Us */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Why Choose Jetblack Painting for Exterior Painting?</h3>
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Why Choose Our Exterior Painting Service</h2>
             <div className="space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
@@ -101,40 +97,44 @@ export default function ExteriorPainting() {
             </div>
           </motion.div>
 
-          {/* Melbourne Weather */}
+          {/* Service Areas with Internal Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12 bg-[#F5F5F0] p-8 rounded-lg"
           >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-4">Exterior Painting Built for Melbourne Weather</h3>
-            <p className="text-gray-700 mb-4">
-              Melbourne's climate presents unique challenges for exterior painting. Our team understands the impact of UV exposure, moisture, and temperature fluctuations on exterior finishes.
-            </p>
-            <p className="text-gray-700">
-              We recommend premium weather-resistant paints that provide superior protection and longevity. Our expertise ensures your exterior paint job will look great and perform well for years to come.
-            </p>
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Exterior Painting Service Areas</h2>
+            <p className="text-gray-700 mb-4">We provide professional exterior painting services across all Melbourne suburbs including:</p>
+            <div className="flex flex-wrap gap-3">
+              {suburbs.map((s) => (
+                <Link
+                  key={s.name}
+                  href={s.link}
+                  className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium"
+                >
+                  {s.name}
+                </Link>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Service Areas */}
+          {/* Related Services */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="mb-12 bg-gray-50 p-8 rounded-lg"
           >
-            <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Exterior Painting Across Melbourne</h3>
-            <p className="text-gray-700 mb-6">
-              We provide professional exterior painting throughout Melbourne, including:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {["Keysborough", "Brighton", "Toorak", "Mordialloc", "Hawthorn", "Mentone", "Sandringham", "Camberwell", "Bentleigh", "Mornington Peninsula"].map((suburb) => (
-                <div key={suburb} className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#00AACC]" />
-                  <span className="text-gray-700">{suburb}</span>
-                </div>
-              ))}
+            <h3 className="text-xl font-bold text-[#0D0D0D] mb-4">Our Other Services</h3>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline font-medium">Interior Painting</Link>
+              <span className="text-gray-300">|</span>
+              <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline font-medium">Commercial Painting</Link>
+              <span className="text-gray-300">|</span>
+              <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline font-medium">Roof Painting</Link>
+              <span className="text-gray-300">|</span>
+              <Link href="/blog" className="text-[#00AACC] hover:underline font-medium">Painting Blog</Link>
             </div>
           </motion.div>
 
@@ -145,9 +145,9 @@ export default function ExteriorPainting() {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center"
           >
-            <h3 className="text-3xl font-bold mb-4">Protect Your Home's Exterior</h3>
+            <h2 className="text-3xl font-bold mb-4">Get Your Free Exterior Painting Quote</h2>
             <p className="text-xl mb-6 text-gray-300">
-              Get a free quote from Melbourne's trusted exterior painting specialists.
+              Contact Jetblack Painting for a free, no-obligation quote on your exterior painting project.
             </p>
             <a
               href="tel:0432077782"

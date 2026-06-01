@@ -1,0 +1,141 @@
+/*
+ * Design: Bold Contrast — Services section on light background
+ * Card-based layout with real project photos and hover interactions
+ */
+import { motion } from "framer-motion";
+import { Home, Building2, PaintBucket, Paintbrush, Warehouse, Fence } from "lucide-react";
+import { Link } from "wouter";
+
+const services = [
+  {
+    icon: Home,
+    title: "Interior House Painting Melbourne",
+    description: "Our professional interior painting Melbourne services transform your living spaces with flawless finishes. From walls and ceilings to detailed trims and doors, our expert painters deliver fresh, clean looks throughout your home. We proudly serve Keysborough, Bayside, and all Melbourne suburbs with premium quality paints and meticulous attention to detail.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/KYFGAGWwrHFpqGZW.jpeg",
+    link: "/services/interior-painting",
+  },
+  {
+    icon: Paintbrush,
+    title: "Exterior House Painting Melbourne",
+    description: "Boost your property's curb appeal with our expert exterior painting Melbourne services. We specialise in high-quality repaints for weatherboards, render, fascias, and gutters, using durable paints built to withstand Melbourne's varied weather. Our exterior house painters ensure long-lasting protection and a beautiful finish for homes in Keysborough and Bayside.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/rEhHpLqiuktAVhOl.jpeg",
+    link: "/services/exterior-painting",
+  },
+  {
+    icon: Building2,
+    title: "Commercial Painting Melbourne",
+    description: "Jetblack Painting provides professional commercial painting Melbourne services to keep your business premises looking their best. Our commercial painting contractors work with offices, retail shops, warehouses, and factories across Melbourne, ensuring high-quality results while minimising disruption to your daily operations.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/mQxpXRxNSxlrzUtw.jpeg",
+    link: "/services/commercial-painting",
+  },
+  {
+    icon: PaintBucket,
+    title: "Pre-Sale Property Painting Melbourne",
+    description: "Maximise your property's market value with our pre-sale property painting Melbourne services. A fresh, modern coat of paint is one of the most cost-effective ways to increase buyer appeal and achieve a higher sale price. Our painters help homeowners in Keysborough and Bayside prepare their properties for a successful sale.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/kBOMcHSWYZOFHhIp.jpeg",
+    link: "/services/pre-sale-property-painting",
+  },
+  {
+    icon: Warehouse,
+    title: "Rental Property Painting Melbourne",
+    description: "We provide efficient rental property painting Melbourne services for landlords, property managers, and real estate agencies. Our team ensures a fast turnaround between tenancies, keeping your investment properties in top condition with durable, high-quality finishes across all Melbourne suburbs.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/PjnbMqfamLZEUUyM.jpeg",
+    link: "/services/rental-property-painting",
+  },
+  {
+    icon: Fence,
+    title: "Roof & Fence Painting Melbourne",
+    description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Keysborough, Bayside, and throughout Melbourne.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/unIjWONLqcppDssG.jpeg",
+    link: "/services/roof-fence-painting",
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+};
+
+export default function Services() {
+  return (
+    <section id="services" className="py-24 bg-[#F5F5F0]">
+      <div className="container">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-16"
+        >
+          <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
+            Professional Painting Services
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D0D0D] leading-tight mb-5"
+            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+          >
+            Our Services
+          </h2>
+          <p className="text-[#555] text-lg leading-relaxed">
+            From residential repaints to large-scale commercial projects, Jetblack Painting
+            delivers professional results across all aspects of painting in Melbourne.
+          </p>
+        </motion.div>
+
+        {/* Services Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {services.map((service) => (
+            <Link key={service.title} href={service.link}>
+              <motion.div
+                variants={cardVariants}
+                className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full"
+              >
+                {/* Image */}
+                <div className="relative h-52 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-10 h-10 rounded bg-[#00AACC] flex items-center justify-center">
+                      <service.icon className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3
+                    className="text-xl font-bold text-[#0D0D0D] mb-3 group-hover:text-[#00AACC] transition-colors"
+                    style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+                  >
+                    {service.title}
+                  </h3>
+                  <p className="text-[#666] text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}

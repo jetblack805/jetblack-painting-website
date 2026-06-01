@@ -9,6 +9,10 @@ import ExteriorPainting from "./pages/ExteriorPainting";
 import InteriorPainting from "./pages/InteriorPainting";
 import RoofPainting from "./pages/RoofPainting";
 import CommercialPainting from "./pages/CommercialPainting";
+import PreSalePropertyPainting from "./pages/PreSalePropertyPainting";
+import RentalPropertyPainting from "./pages/RentalPropertyPainting";
+import RoofFencePainting from "./pages/RoofFencePainting";
+import KitchenCabinetResurfacing from "./pages/KitchenCabinetResurfacing";
 import KeysboroughPainters from "./pages/KeysboroughPainters";
 import FAQ from "./pages/FAQ";
 import ToorakPainters from "./pages/ToorakPainters";
@@ -36,6 +40,10 @@ function Router() {
       <Route path={"/services/exterior-painting"} component={ExteriorPainting} />
       <Route path={"/services/roof-painting"} component={RoofPainting} />
       <Route path={"/services/commercial-painting"} component={CommercialPainting} />
+      <Route path={"/services/pre-sale-property-painting"} component={PreSalePropertyPainting} />
+      <Route path={"/services/rental-property-painting"} component={RentalPropertyPainting} />
+      <Route path={"/services/roof-fence-painting"} component={RoofFencePainting} />
+      <Route path={"/services/kitchen-cabinet-resurfacing"} component={KitchenCabinetResurfacing} />
       {/* Suburb Landing Pages */}
       <Route path={"/painter-toorak"} component={ToorakPainters} />
       <Route path={"/painters-toorak"} component={ToorakPainters} />

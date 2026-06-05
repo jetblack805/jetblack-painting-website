@@ -5,6 +5,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const projects = [
   {
@@ -120,43 +127,49 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Gallery Grid */}
-        <motion.div
-          layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
-        >
-          <AnimatePresence mode="popLayout">
-            {filtered.map((project, idx) => (
-              <motion.div
-                key={project.src}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4 }}
-                className={`group relative overflow-hidden rounded-lg cursor-pointer ${
-                  idx === 0 ? "sm:col-span-2 sm:row-span-2" : ""
-                }`}
-                onClick={() => setLightbox(idx)}
-              >
-                <img
-                  src={project.src}
-                  alt={project.alt}
-                  className={`w-full object-cover group-hover:scale-105 transition-transform duration-500 ${
-                    idx === 0 ? "h-64 sm:h-full" : "h-52 sm:h-56"
-                  }`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-[#00AACC] text-xs font-semibold uppercase tracking-wider">
-                    {project.category}
-                  </span>
-                  <p className="text-white text-sm mt-1">{project.alt}</p>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Gallery Carousel */}
+        <div className="relative px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              <AnimatePresence mode="popLayout">
+                {filtered.map((project, idx) => (
+                  <CarouselItem key={project.src} className="pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                    <motion.div
+                      layout
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.4 }}
+                      className="group relative overflow-hidden rounded-lg cursor-pointer h-64"
+                      onClick={() => setLightbox(idx)}
+                    >
+                      <img
+                        src={project.src}
+                        alt={project.alt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <span className="text-[#00AACC] text-xs font-semibold uppercase tracking-wider">
+                          {project.category}
+                        </span>
+                        <p className="text-white text-sm mt-1 line-clamp-2">{project.alt}</p>
+                      </div>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </AnimatePresence>
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 lg:-left-12 text-white border-white/20 bg-white/10 hover:bg-white/20" />
+            <CarouselNext className="-right-4 lg:-right-12 text-white border-white/20 bg-white/10 hover:bg-white/20" />
+          </Carousel>
+        </div>
       </div>
 
       {/* Lightbox */}

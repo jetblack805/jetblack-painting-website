@@ -4,6 +4,13 @@
  */
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const reviews = [
   {
@@ -101,45 +108,58 @@ export default function Reviews() {
           </div>
         </motion.div>
 
-        {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map((review, idx) => (
-            <motion.div
-              key={review.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative"
-            >
-              {/* Quote icon */}
-              <Quote className="w-8 h-8 text-[#00AACC]/15 absolute top-4 right-4" />
+        {/* Reviews Carousel */}
+        <div className="relative px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {reviews.map((review, idx) => (
+                <CarouselItem key={review.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative h-full flex flex-col"
+                  >
+                    {/* Quote icon */}
+                    <Quote className="w-8 h-8 text-[#00AACC]/15 absolute top-4 right-4" />
 
-              {/* Stars */}
-              <StarRating count={review.rating} />
+                    {/* Stars */}
+                    <StarRating count={review.rating} />
 
-              {/* Review text */}
-              <p className="text-[#444] text-sm leading-relaxed mt-4 mb-5">
-                "{review.text}"
-              </p>
+                    {/* Review text */}
+                    <p className="text-[#444] text-sm leading-relaxed mt-4 mb-5 flex-grow">
+                      "{review.text}"
+                    </p>
 
-              {/* Reviewer info */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#0D0D0D] flex items-center justify-center text-white text-sm font-bold">
-                    {review.name[0]}
-                  </div>
-                  <div>
-                    <div className="text-[#0D0D0D] font-semibold text-sm">{review.name}</div>
-                    <div className="text-[#999] text-xs">{review.date}</div>
-                  </div>
-                </div>
-                <span className="text-xs text-[#999] bg-gray-50 px-2 py-1 rounded">
-                  {review.source}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+                    {/* Reviewer info */}
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+                      <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-full bg-[#0D0D0D] flex items-center justify-center text-white text-sm font-bold">
+                          {review.name[0]}
+                        </div>
+                        <div>
+                          <div className="text-[#0D0D0D] font-semibold text-sm">{review.name}</div>
+                          <div className="text-[#999] text-xs">{review.date}</div>
+                        </div>
+                      </div>
+                      <span className="text-xs text-[#999] bg-gray-50 px-2 py-1 rounded">
+                        {review.source}
+                      </span>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 lg:-left-12" />
+            <CarouselNext className="-right-4 lg:-right-12" />
+          </Carousel>
         </div>
       </div>
     </section>

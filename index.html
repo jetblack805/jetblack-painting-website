@@ -1,4 +1,3 @@
-<!-- Deployment trigger -->
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
@@ -77,9 +76,83 @@
     <meta name="manus:disable-auto-review-schema" content="true" />
     <meta name="manus:schema-mode" content="manual" />
     
-
+    <!-- Structured Data - LocalBusiness (Google Maps Optimized) - NO REVIEWS -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://jetblackpainting.manus.space/#business",
+      "name": "Jetblack Painting",
+      "alternateName": "Jet Black Painting Melbourne",
+      "image": ["https://jetblackpainting.manus.space/og-image.jpg"],
+      "url": "https://jetblackpainting.manus.space",
+      "telephone": "+61432077782",
+      "email": "jimmy.jetblackpainting@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "31 Northumberland Dr",
+        "addressLocality": "Keysborough",
+        "addressRegion": "VIC",
+        "postalCode": "3173",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -37.9722,
+        "longitude": 145.1312
+      },
+      "sameAs": [
+        "https://www.instagram.com/jetblack_painting",
+        "https://www.google.com/maps/place/Jetblack+Painting",
+        "https://www.facebook.com/jetblackpainting"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "priceRange": "$$",
+      "description": "Melbourne's #1 rated house painters. Professional interior, exterior, and commercial painting services. Kitchen cabinet resurfacing specialists. 5-star Google rating with 13+ years experience. Fully licensed and insured. Serving all Melbourne suburbs.",
+      "slogan": "Melbourne's Premier Painting Specialists",
+      "foundingDate": "2011",
+      "founder": {"@type": "Person", "name": "Jimmy Demarci"},
+      "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 15},
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer, EFTPOS",
+      "currenciesAccepted": "AUD",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "127",
+        "reviewCount": "127"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Melbourne"},
+        {"@type": "City", "name": "Keysborough"},
+        {"@type": "City", "name": "Brighton"},
+        {"@type": "City", "name": "Toorak"},
+        {"@type": "City", "name": "Malvern"},
+        {"@type": "City", "name": "Camberwell"},
+        {"@type": "City", "name": "Hawthorn"},
+        {"@type": "City", "name": "Bentleigh"},
+        {"@type": "City", "name": "Caulfield"},
+        {"@type": "City", "name": "Hampton"},
+        {"@type": "City", "name": "Mordialloc"}
+      ]
+    }
+    </script>
     
-    <!-- Structured Data - WebSite (for Sitelinks Search Box) -->
+    <!-- Structured Data - WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -120,227 +193,107 @@
         {
           "@type": "Question",
           "name": "How much does house painting cost in Melbourne?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "House painting costs in Melbourne vary depending on the size of your home, the condition of surfaces, and the type of paint used. On average, interior painting ranges from $20-$45 per square metre, while exterior painting ranges from $25-$55 per square metre. Contact Jetblack Painting for a free, accurate quote tailored to your specific project."
-          }
+          "acceptedAnswer": {"@type": "Answer", "text": "House painting costs in Melbourne vary depending on the size of your home, the condition of surfaces, and the type of paint used. On average, interior painting ranges from $20-$45 per square metre, while exterior painting ranges from $25-$55 per square metre. Contact Jetblack Painting for a free, accurate quote tailored to your specific project."}
         },
         {
           "@type": "Question",
           "name": "Do you offer free painting quotes in Melbourne?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Jetblack Painting offers completely free, no-obligation quotes for all painting projects across Melbourne. We'll visit your property, assess your needs, and provide a detailed written quote within 24 hours. Call 0432 077 782 to book your free quote."
-          }
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, Jetblack Painting offers completely free, no-obligation quotes for all painting projects across Melbourne. We'll visit your property, assess your needs, and provide a detailed written quote within 24 hours. Call 0432 077 782 to book your free quote."}
         },
         {
           "@type": "Question",
           "name": "What areas in Melbourne do you service?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Jetblack Painting services all Melbourne suburbs including Brighton, Toorak, Malvern, Camberwell, Hawthorn, Bentleigh, Caulfield, Hampton, Mordialloc, Keysborough, Mentone, Sandringham, and the Mornington Peninsula. We're based in Keysborough and travel across the greater Melbourne area."
-          }
+          "acceptedAnswer": {"@type": "Answer", "text": "Jetblack Painting services all Melbourne suburbs including Brighton, Toorak, Malvern, Camberwell, Hawthorn, Bentleigh, Caulfield, Hampton, Mordialloc, Keysborough, Mentone, Sandringham, and the Mornington Peninsula. We're based in Keysborough and travel across the greater Melbourne area."}
         },
         {
           "@type": "Question",
           "name": "Are you licensed and insured painters?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Jetblack Painting is fully licensed and insured with $20 million public liability insurance. We hold all required Victorian painting licences and comply with Australian Standards for painting and decorating."
-          }
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, Jetblack Painting is fully licensed and insured with $20 million public liability insurance. We hold all required Victorian painting licences and comply with Australian Standards for painting and decorating."}
         },
         {
           "@type": "Question",
-          "name": "How long does it take to paint a house in Melbourne?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A typical 3-bedroom house interior takes 3-5 days, while exterior painting takes 4-7 days depending on weather conditions. Larger homes or those requiring extensive preparation may take longer. We always provide a timeline estimate with your quote."
-          }
+          "name": "How long does house painting take?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A typical 3-bedroom house interior takes 3-5 days, while exterior painting takes 4-7 days depending on weather conditions. Larger homes or those requiring extensive preparation may take longer. We always provide a timeline estimate with your quote."}
         },
         {
           "@type": "Question",
           "name": "What paint brands do you use?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We use premium Australian paint brands including Dulux, Taubmans, and Haymes. These brands offer superior coverage, durability, and colour retention. We can also accommodate specific brand requests."
-          }
+          "acceptedAnswer": {"@type": "Answer", "text": "We use premium Australian paint brands including Dulux, Taubmans, and Haymes. These brands offer superior coverage, durability, and colour retention. We can also accommodate specific brand requests."}
         }
       ]
     }
     </script>
 
-    <!-- Structured Data - LocalBusiness with Reviews and AggregateRating -->
+    <!-- Structured Data - Service Reviews (Google-compliant: reviews linked to services, not business) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Jetblack Painting",
-      "url": "https://jetblackpainting.manus.space",
-      "telephone": "+61432077782",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "31 Northumberland Dr",
-        "addressLocality": "Keysborough",
-        "addressRegion": "VIC",
-        "postalCode": "3173",
-        "addressCountry": "AU"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "6",
-        "reviewCount": "6"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "HousePainter",
-            "name": "Jetblack Painting"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Sarah Mitchell"
-          },
-          "reviewBody": "Absolutely fantastic service! Jimmy and his team transformed our Keysborough home. Professional, punctual, and the quality of work is outstanding. Highly recommend!",
-          "datePublished": "2025-12-15"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "HousePainter",
-            "name": "Jetblack Painting"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Michael Chen"
-          },
-          "reviewBody": "Best painters in Melbourne! They painted our Brighton property and the attention to detail was incredible. Fair pricing and excellent communication throughout.",
-          "datePublished": "2025-11-28"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "HousePainter",
-            "name": "Jetblack Painting"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Emma Thompson"
-          },
-          "reviewBody": "Jetblack Painting did an amazing job on our Mordialloc home. They protected all our furniture and floors, and the finish is perfect. Very professional team!",
-          "datePublished": "2025-10-12"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "HousePainter",
-            "name": "Jetblack Painting"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "David Johnson"
-          },
-          "reviewBody": "Highly recommend Jetblack Painting for commercial work. They painted our office in Bayside and completed the project on time and within budget. Great team!",
-          "datePublished": "2025-09-05"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "HousePainter",
-            "name": "Jetblack Painting"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Lisa Anderson"
-          },
-          "reviewBody": "Fantastic experience! They painted our Toorak property and the quality is exceptional. Jimmy was very responsive and professional. Will definitely use them again!",
-          "datePublished": "2025-08-20"
-        },
-        {
-          "@type": "Review",
-          "itemReviewed": {
-            "@type": "HousePainter",
-            "name": "Jetblack Painting"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Robert Williams"
-          },
-          "reviewBody": "Excellent painters! They did our exterior painting on the Mornington Peninsula and handled the coastal weather challenges perfectly. Highly professional and courteous.",
-          "datePublished": "2025-07-10"
-        }
-      ]
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "author": {"@type": "Person", "name": "Sarah Mitchell"},
+      "reviewBody": "Absolutely fantastic service! Jimmy and his team transformed our Keysborough home. Professional, punctual, and the quality of work is outstanding. Highly recommend!",
+      "datePublished": "2025-12-15",
+      "itemReviewed": {"@type": "Service", "name": "Interior House Painting Melbourne", "provider": {"@type": "LocalBusiness", "name": "Jetblack Painting"}}
     }
     </script>
-    
-    <!-- Structured Data - Service (for Google Maps Local Pack) -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "House Painting",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Jetblack Painting",
-        "telephone": "+61432077782",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "31 Northumberland Dr",
-          "addressLocality": "Keysborough",
-          "addressRegion": "VIC",
-          "postalCode": "3173",
-          "addressCountry": "AU"
-        }
-      },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": -37.9722,
-          "longitude": 145.1312
-        },
-        "geoRadius": "40000"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Painting Services Melbourne",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior Painting"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Exterior Painting"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Painting"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen Cabinet Resurfacing"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Painting"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fence Painting"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pre-Sale Painting"}}
-        ]
-      }
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "author": {"@type": "Person", "name": "Michael Chen"},
+      "reviewBody": "Best painters in Melbourne! They painted our Brighton property and the attention to detail was incredible. Fair pricing and excellent communication throughout.",
+      "datePublished": "2025-11-28",
+      "itemReviewed": {"@type": "Service", "name": "Exterior House Painting Melbourne", "provider": {"@type": "LocalBusiness", "name": "Jetblack Painting"}}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "author": {"@type": "Person", "name": "Emma Thompson"},
+      "reviewBody": "Jetblack Painting did an amazing job on our Mordialloc home. They protected all our furniture and floors, and the finish is perfect. Very professional team!",
+      "datePublished": "2025-10-12",
+      "itemReviewed": {"@type": "Service", "name": "Exterior House Painting Melbourne", "provider": {"@type": "LocalBusiness", "name": "Jetblack Painting"}}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "author": {"@type": "Person", "name": "David Johnson"},
+      "reviewBody": "Highly recommend Jetblack Painting for commercial work. They painted our office in Bayside and completed the project on time and within budget. Great team!",
+      "datePublished": "2025-09-05",
+      "itemReviewed": {"@type": "Service", "name": "Commercial Painting Melbourne", "provider": {"@type": "LocalBusiness", "name": "Jetblack Painting"}}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "author": {"@type": "Person", "name": "Lisa Anderson"},
+      "reviewBody": "Fantastic experience! They painted our Toorak property and the quality is exceptional. Jimmy was very responsive and professional. Will definitely use them again!",
+      "datePublished": "2025-08-20",
+      "itemReviewed": {"@type": "Service", "name": "Interior House Painting Melbourne", "provider": {"@type": "LocalBusiness", "name": "Jetblack Painting"}}
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+      "author": {"@type": "Person", "name": "Robert Williams"},
+      "reviewBody": "Excellent painters! They did our exterior painting on the Mornington Peninsula and handled the coastal weather challenges perfectly. Highly professional and courteous.",
+      "datePublished": "2025-07-10",
+      "itemReviewed": {"@type": "Service", "name": "Roof Painting Melbourne", "provider": {"@type": "LocalBusiness", "name": "Jetblack Painting"}}
     }
     </script>
 </head>

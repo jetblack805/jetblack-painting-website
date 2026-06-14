@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "./SEOHead";
 
 interface SuburbPageProps {
+  title: string;
   suburb: string;
   description: string;
   neighbouringSuburbs: { name: string; link: string }[];
@@ -12,6 +13,7 @@ interface SuburbPageProps {
 }
 
 export default function SuburbPageTemplate({
+  title,
   suburb,
   description,
   neighbouringSuburbs,
@@ -30,8 +32,8 @@ export default function SuburbPageTemplate({
   return (
     <div className="min-h-screen bg-white">
       <SEOHead
-        title={`House Painters ${suburb} | Interior & Exterior Painting`}
-        description={`Premium house painters in ${suburb}. Interior, exterior & commercial painting with 5-star workmanship. Servicing all ${suburb} homes. Free quotes.`}
+        title={title}
+        description={description}
         canonical={`https://jetblackpainting.manus.space/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`}
       />
 

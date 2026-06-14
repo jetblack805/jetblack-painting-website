@@ -41,6 +41,18 @@ export default function FAQ() {
         {
           q: "Is there a minimum project size?",
           a: "No, we welcome projects of all sizes, from small room touch-ups to large commercial projects."
+        },
+        {
+          q: "Do you offer painting services specifically for Mordialloc's coastal homes?",
+          a: "Yes, we specialize in painting homes in coastal areas like Mordialloc. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and harsh UV rays, ensuring a durable and beautiful finish for your bayside property."
+        },
+        {
+          q: "What types of homes do you paint in Mordialloc?",
+          a: "In Mordialloc, we paint a variety of homes, including classic weatherboard houses, modern residences, and period homes. Our team is experienced with the diverse architectural styles found in the area, providing tailored painting solutions for each."
+        },
+        {
+          q: "How do you ensure the longevity of paintwork in Mordialloc's coastal environment?",
+          a: "To ensure longevity in Mordialloc's coastal environment, we focus on meticulous surface preparation, including thorough cleaning and priming. We then apply high-quality, flexible, and breathable paints designed to withstand salt spray, strong winds, and sun exposure, preventing premature cracking, peeling, and fading."
         }
       ]
     },

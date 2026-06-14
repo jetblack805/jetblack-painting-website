@@ -51,8 +51,8 @@ export default function FAQ() {
           a: "In Mordialloc, we paint a variety of homes, including classic weatherboard houses, modern residences, and period homes. Our team is experienced with the diverse architectural styles found in the area, providing tailored painting solutions for each."
         },
         {
-          q: "How do you ensure the longevity of paintwork in Mordialloc's coastal environment?",
-          a: "To ensure longevity in Mordialloc's coastal environment, we focus on meticulous surface preparation, including thorough cleaning and priming. We then apply high-quality, flexible, and breathable paints designed to withstand salt spray, strong winds, and sun exposure, preventing premature cracking, peeling, and fading."
+          q: "How do you protect homes from coastal conditions in Mordialloc?",
+          a: "We protect Mordialloc homes from coastal conditions through meticulous surface preparation, high-quality flexible and breathable paints, and specialized techniques. Our approach prevents cracking, peeling, and fading caused by salt spray, strong winds, and sun exposure."
         }
       ]
     },

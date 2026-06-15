@@ -1,11 +1,54 @@
 import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function MordiallocPainters() {
+  const suburb = "Mordialloc";
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `Professional House Painting Services in ${suburb}`,
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Jetblack Painting",
+      "telephone": "0432 077 782",
+      "url": "https://jetblackpainting.manus.space",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Melbourne",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": suburb
+    },
+    "description": `Jetblack Painting provides premium interior, exterior, and commercial painting services in ${suburb}. Specializing in coastal home protection and heritage property restoration.`,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://jetblackpainting.manus.space/painter-${suburb.toLowerCase()}`
+    }
+  };
+
+  const faqs = [
+    {
+      question: `How do you protect ${suburb} homes from coastal salt air?`,
+      answer: `In ${suburb}, we use specialized coastal-grade paints and a multi-step preparation process. This includes thorough pressure washing to remove salt deposits, followed by premium flexible primers and weather-resistant topcoats from Dulux and Taubmans that are designed to withstand the harsh Bayside environment.`
+    },
+    {
+      question: `What types of properties do you paint in ${suburb}?`,
+      answer: `We have extensive experience with ${suburb}'s diverse architecture, from classic weatherboard beach houses and Victorian-era heritage homes to modern architecturally-designed residences and commercial buildings along Main Street.`
+    },
+    {
+      question: "How long does a typical house painting project take?",
+      answer: "Most residential projects in Mordialloc are completed within 5 to 10 working days, depending on the size of the home and the extent of preparation required. We provide a detailed timeline with every quote to ensure minimal disruption to your daily life."
+    }
+  ];
+
   return (
     <SuburbPageTemplate
-      suburb="Mordialloc"
-      title="Mordialloc Painters | House Painting Services | Jetblack Painting"
-      description="Mordialloc Painters | Jetblack Painting offers premium house painting services in Mordialloc, Melbourne. Specializing in interior, exterior, and commercial painting for bayside homes, weatherboard properties, and modern residences. 5-star rated, fully licensed, and experts in protecting homes from coastal conditions. Get a free quote today!"
+      suburb={suburb}
+      title="Mordialloc Painters | Coastal House Painting Specialists | Jetblack Painting"
+      description={`Expert house painters in ${suburb}. Specializing in interior, exterior, and commercial painting for coastal and heritage homes. 5-star rated, fully licensed, free quotes.`}
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Bentleigh", link: "/painter-bentleigh" },
@@ -13,8 +56,10 @@ export default function MordiallocPainters() {
         { name: "Keysborough", link: "/keysborough-painters" },
         { name: "Caulfield", link: "/painter-caulfield" },
       ]}
-      localExpertise="As local painting experts serving Mordialloc and the wider Bayside area, we understand the unique challenges of coastal living. Our team has extensive experience with Mordialloc's distinctive coastal environment, including protection against salt air corrosion, UV rays, and Melbourne's unpredictable climate. We're experts in protecting homes from coastal conditions and are familiar with Mordialloc's diverse architecture, from classic weatherboard homes near the beach to contemporary bayside residences and period homes. We use advanced weather-resistant paints and specialized techniques to ensure your home not only looks stunning but remains protected for years to come."
-      propertyTypes="Mordialloc's diverse range of properties includes classic weatherboard beach houses, contemporary bayside residences, and period homes. We have extensive experience with the architectural styles found in Mordialloc, from heritage properties to modern designs. We adapt our techniques to suit each unique architectural style, ensuring a flawless and durable finish that complements your home's character and withstands the coastal environment."
+      localExpertise={`As local painting experts serving ${suburb} and the wider Bayside area, we understand the unique challenges of coastal living. Our team has extensive experience with ${suburb}'s distinctive coastal environment, including protection against salt air corrosion, UV rays, and Melbourne's unpredictable climate.`}
+      propertyTypes={`${suburb}'s diverse range of properties includes classic weatherboard beach houses, contemporary bayside residences, and period homes. We adapt our techniques to suit each unique architectural style, ensuring a flawless and durable finish.`}
+      faqs={faqs}
+      schema={schema}
     />
   );
 }

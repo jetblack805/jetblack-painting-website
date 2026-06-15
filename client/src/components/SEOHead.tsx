@@ -5,9 +5,10 @@ interface SEOHeadProps {
   description: string;
   canonical: string;
   ogImage?: string;
+  schema?: object;
 }
 
-export default function SEOHead({ title, description, canonical, ogImage }: SEOHeadProps) {
+export default function SEOHead({ title, description, canonical, ogImage, schema }: SEOHeadProps) {
   useEffect(() => {
     // Update document title
     document.title = title;
@@ -53,6 +54,21 @@ export default function SEOHead({ title, description, canonical, ogImage }: SEOH
         document.head.appendChild(tag);
       }
     });
+
+    // Handle JSON-LD Schema
+    let schemaScript = document.querySelector('script[type="application/ld+json"]');
+    if (schema) {
+      if (schemaScript) {
+        schemaScript.textContent = JSON.stringify(schema);
+      } else {
+        schemaScript = document.createElement("script");
+        schemaScript.setAttribute("type", "application/ld+json");
+        schemaScript.textContent = JSON.stringify(schema);
+        document.head.appendChild(schemaScript);
+      }
+    } else if (schemaScript) {
+      schemaScript.remove();
+    }
 
     // Cleanup on unmount - restore defaults
     return () => {

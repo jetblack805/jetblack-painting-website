@@ -10,6 +10,8 @@ interface SuburbPageProps {
   neighbouringSuburbs: { name: string; link: string }[];
   localExpertise: string;
   propertyTypes: string;
+  faqs?: { question: string; answer: string }[];
+  schema?: object;
 }
 
 export default function SuburbPageTemplate({
@@ -19,6 +21,8 @@ export default function SuburbPageTemplate({
   neighbouringSuburbs,
   localExpertise,
   propertyTypes,
+  faqs,
+  schema,
 }: SuburbPageProps) {
   const services = [
     "Interior house painting",
@@ -35,6 +39,7 @@ export default function SuburbPageTemplate({
         title={title}
         description={description}
         canonical={`https://jetblackpainting.manus.space/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`}
+        schema={schema}
       />
 
       {/* Hero Section */}
@@ -214,6 +219,28 @@ export default function SuburbPageTemplate({
               </div>
             </div>
           </motion.div>
+
+          {/* FAQ Section for AEO */}
+          {faqs && faqs.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">
+                Frequently Asked Questions about Painting in {suburb}
+              </h2>
+              <div className="space-y-6">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <h3 className="text-xl font-bold text-[#0D0D0D] mb-3">{faq.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
 
           {/* Neighbouring Suburbs - Internal Linking */}
           <motion.div

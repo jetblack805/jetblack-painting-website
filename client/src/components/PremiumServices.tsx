@@ -42,18 +42,18 @@ const allServices = [
 const premiumSuburbs = [
   { name: "Brighton", link: "/painter-brighton" },
   { name: "Toorak", link: "/painter-toorak" },
-  { name: "Kew", link: "/#contact" },
+  { name: "Kew", link: "/painter-kew" },
   { name: "Camberwell", link: "/painter-camberwell" },
   { name: "Malvern", link: "/painter-malvern" },
-  { name: "Sandringham", link: "/#contact" },
-  { name: "Mentone", link: "/#contact" },
+  { name: "Sandringham", link: "/painter-sandringham" },
+  { name: "Mentone", link: "/painter-mentone" },
   { name: "Mordialloc", link: "/painter-mordialloc" },
   { name: "Caulfield", link: "/painter-caulfield" },
   { name: "Bentleigh", link: "/painter-bentleigh" },
   { name: "Hampton", link: "/painter-hampton" },
   { name: "Keysborough", link: "/keysborough-painters" },
   { name: "Hawthorn", link: "/painter-hawthorn" },
-  { name: "Carlton", link: "/#contact" },
+  { name: "Carlton", link: "/painter-carlton" },
 ];
 
 export default function PremiumServices() {

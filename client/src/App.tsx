@@ -24,6 +24,14 @@ import BentleighPainters from "./pages/BentleighPainters";
 import CaulfieldPainters from "./pages/CaulfieldPainters";
 import HamptonPainters from "./pages/HamptonPainters";
 import MordiallocPainters from "./pages/MordiallocPainters";
+import KewPainters from "./pages/KewPainters";
+import SandringhamPainters from "./pages/SandringhamPainters";
+import MentonePainters from "./pages/MentonePainters";
+import CarltonPainters from "./pages/CarltonPainters";
+import MorningtonPeninsulaPainters from "./pages/MorningtonPeninsulaPainters";
+import BaysidePainters from "./pages/BaysidePainters";
+import KingstonPainters from "./pages/KingstonPainters";
+import GreaterDandenongPainters from "./pages/GreaterDandenongPainters";
 import Blog from "./pages/Blog";
 import ReviewUs from "./pages/ReviewUs";
 import BestPaintColours2025 from "./pages/blog/BestPaintColours2025";
@@ -65,6 +73,22 @@ function Router() {
       <Route path={"/painters-mordialloc"} component={MordiallocPainters} />
       <Route path={"/keysborough-painters"} component={KeysboroughPainters} />
       <Route path={"/painter-keysborough"} component={KeysboroughPainters} />
+      <Route path={"/painter-kew"} component={KewPainters} />
+      <Route path={"/painters-kew"} component={KewPainters} />
+      <Route path={"/painter-sandringham"} component={SandringhamPainters} />
+      <Route path={"/painters-sandringham"} component={SandringhamPainters} />
+      <Route path={"/painter-mentone"} component={MentonePainters} />
+      <Route path={"/painters-mentone"} component={MentonePainters} />
+      <Route path={"/painter-carlton"} component={CarltonPainters} />
+      <Route path={"/painters-carlton"} component={CarltonPainters} />
+      <Route path={"/painter-mornington-peninsula"} component={MorningtonPeninsulaPainters} />
+      <Route path={"/painters-mornington-peninsula"} component={MorningtonPeninsulaPainters} />
+      <Route path={"/painter-bayside"} component={BaysidePainters} />
+      <Route path={"/painters-bayside"} component={BaysidePainters} />
+      <Route path={"/painter-kingston"} component={KingstonPainters} />
+      <Route path={"/painters-kingston"} component={KingstonPainters} />
+      <Route path={"/painter-greater-dandenong"} component={GreaterDandenongPainters} />
+      <Route path={"/painters-greater-dandenong"} component={GreaterDandenongPainters} />
       {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />

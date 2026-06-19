@@ -1,22 +1,27 @@
 # Robots.txt for Jetblack Painting
 # https://jetblackpainting.manus.space
 
-# Allow all search engines full access
 User-agent: *
 Allow: /
 Disallow: /deployments
 Disallow: /admin
 Disallow: /404
 
-# Google - no delay for fastest indexing
-User-agent: Googlebot
+# Allow AI/search answer engines to read public business/service information
+User-agent: GPTBot
 Allow: /
-Crawl-delay: 0
 
-# Bing
-User-agent: Bingbot
+User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 1
 
-# Sitemap location
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Main XML sitemap
 Sitemap: https://jetblackpainting.manus.space/sitemap.xml

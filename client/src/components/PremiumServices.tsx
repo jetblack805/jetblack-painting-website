@@ -4,24 +4,24 @@ import { Link } from "wouter";
 const featuredServices = [
   {
     title: "Interior Painting",
-    description: "Transform your living spaces with premium interior painting. We use Dulux and Taubmans paints for a flawless, long-lasting finish.",
-    link: "/services/interior-painting"
+    description: "Transform your living spaces with premium interior painting, sharp cutting-in and durable Dulux or Taubmans finishes.",
+    link: "/services/interior-painting",
   },
   {
     title: "Exterior Painting",
-    description: "Protect and beautify your home's exterior with weather-resistant coatings designed for Melbourne's climate.",
-    link: "/services/exterior-painting"
+    description: "Protect and lift your home's exterior with proper washing, preparation, priming and weather-resistant coatings.",
+    link: "/services/exterior-painting",
   },
   {
     title: "Kitchen Cabinet Resurfacing",
-    description: "Luxury 2-pack kitchen cabinet finishes. Save thousands compared to a full kitchen renovation.",
-    link: "/#services"
+    description: "Luxury 2-pack kitchen cabinet finishes. Save thousands compared with replacing the whole kitchen.",
+    link: "/services/kitchen-cabinet-resurfacing",
   },
   {
     title: "Roof Painting",
-    description: "Restore and protect your roof with professional roof painting services. Extend the life of your roof by 10+ years.",
-    link: "/services/roof-painting"
-  }
+    description: "Restore and protect your roof with professional roof painting and coating systems for Melbourne conditions.",
+    link: "/services/roof-painting",
+  },
 ];
 
 const allServices = [
@@ -32,11 +32,15 @@ const allServices = [
   "Roof Painting & Restoration",
   "Fence & Deck Staining",
   "Pre-Sale Property Painting",
+  "Rental Property Painting",
   "Concrete & Epoxy Flooring",
-  "Wallpaper Removal & Installation",
+  "Wallpaper Removal",
   "Colour Consultation",
   "Heritage Home Painting",
-  "Strata & Body Corporate Painting"
+  "Strata & Body Corporate Painting",
+  "Real Estate Painting",
+  "Shop & Office Repaints",
+  "Garage Floor Coatings",
 ];
 
 const premiumSuburbs = [
@@ -54,13 +58,16 @@ const premiumSuburbs = [
   { name: "Keysborough", link: "/keysborough-painters" },
   { name: "Hawthorn", link: "/painter-hawthorn" },
   { name: "Carlton", link: "/painter-carlton" },
+  { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },
+  { name: "Bayside", link: "/painter-bayside" },
+  { name: "Kingston", link: "/painter-kingston" },
+  { name: "Greater Dandenong", link: "/painter-greater-dandenong" },
 ];
 
 export default function PremiumServices() {
   return (
     <section id="premium-services" className="py-24 bg-white">
       <div className="container">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,17 +76,16 @@ export default function PremiumServices() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-[#0D0D0D] mb-4">
-            Premium Painters in Melbourne's Bayside &amp; Inner Suburbs
+            Premium Painters Across Melbourne, Bayside &amp; Inner Suburbs
           </h2>
           <p className="text-xl text-[#666] mb-2">
-            Interior, Exterior &amp; High-End Finishes for Luxury Homes
+            Interior, Exterior, Commercial, Roof &amp; Cabinet Painting Services
           </p>
           <p className="text-lg text-[#999]">
-            Jet Black Painting delivers high-quality residential and commercial painting services across Melbourne's most sought-after suburbs. With 13+ years of experience and a 5-star Google rating, we are Melbourne's trusted painting professionals.
+            Jetblack Painting targets local search properly with dedicated suburb landing pages, clear service pages and internal links for every suburb listed on the site.
           </p>
         </motion.div>
 
-        {/* Suburbs List - Now with Internal Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,19 +93,20 @@ export default function PremiumServices() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="bg-[#F5F5F0] rounded-xl p-8 mb-16"
         >
-          <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Serving Melbourne's Premium Suburbs</h3>
+          <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Service Areas for Local &amp; Map Search</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSuburbs.map((suburb) => (
               <Link key={suburb.name} href={suburb.link} className="flex items-center gap-2 hover:text-[#00AACC] transition-colors">
                 <div className="w-2 h-2 rounded-full bg-[#00AACC]" />
-                <span className="text-[#0D0D0D] font-medium hover:text-[#00AACC]">{suburb.name}</span>
+                <span className="text-[#0D0D0D] font-medium hover:text-[#00AACC]">Painters {suburb.name}</span>
               </Link>
             ))}
           </div>
-          <p className="text-sm text-[#666] mt-4">Click on a suburb to view our local painting services in your area.</p>
+          <p className="text-sm text-[#666] mt-4">
+            Each suburb links to its own landing page to improve crawl depth, AEO answers and Google Business Profile location relevance.
+          </p>
         </motion.div>
 
-        {/* Featured Services with Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +116,7 @@ export default function PremiumServices() {
         >
           {featuredServices.map((service) => (
             <Link key={service.title} href={service.link}>
-              <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-[#00AACC] transition-all cursor-pointer">
+              <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-[#00AACC] transition-all cursor-pointer h-full">
                 <h3 className="text-xl font-bold text-[#0D0D0D] mb-3">{service.title}</h3>
                 <p className="text-[#666] mb-4">{service.description}</p>
                 <span className="text-[#00AACC] font-semibold">Learn More →</span>
@@ -118,7 +125,6 @@ export default function PremiumServices() {
           ))}
         </motion.div>
 
-        {/* All Services */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +145,6 @@ export default function PremiumServices() {
           </div>
         </motion.div>
 
-        {/* Authority Content for SEO */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -150,13 +155,13 @@ export default function PremiumServices() {
           <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Why Melbourne Homeowners Choose Jetblack Painting</h3>
           <div className="prose prose-lg text-[#666] space-y-4">
             <p>
-              With over 13 years of experience painting homes across Melbourne's premium suburbs, including <Link href="/painter-mordialloc" className="text-[#00AACC] hover:underline">Mordialloc</Link>, <Link href="/painter-brighton" className="text-[#00AACC] hover:underline">Brighton</Link>, <Link href="/painter-toorak" className="text-[#00AACC] hover:underline">Toorak</Link>, <Link href="/painter-camberwell" className="text-[#00AACC] hover:underline">Camberwell</Link>, and <Link href="/painter-hawthorn" className="text-[#00AACC] hover:underline">Hawthorn</Link>, Jetblack Painting has earned a reputation as Melbourne's most trusted painting specialists. Our expertise in <Link href="/painter-mordialloc" className="text-[#00AACC] hover:underline">Mordialloc painting services</Link> is particularly renowned for protecting coastal homes from salt air and harsh weather conditions.
+              Jetblack Painting services Melbourne homeowners, landlords, real estate agents and commercial clients across <Link href="/painter-mordialloc" className="text-[#00AACC] hover:underline">Mordialloc</Link>, <Link href="/painter-brighton" className="text-[#00AACC] hover:underline">Brighton</Link>, <Link href="/painter-toorak" className="text-[#00AACC] hover:underline">Toorak</Link>, <Link href="/painter-camberwell" className="text-[#00AACC] hover:underline">Camberwell</Link>, <Link href="/painter-hawthorn" className="text-[#00AACC] hover:underline">Hawthorn</Link>, <Link href="/painter-bayside" className="text-[#00AACC] hover:underline">Bayside</Link>, <Link href="/painter-kingston" className="text-[#00AACC] hover:underline">Kingston</Link> and <Link href="/painter-greater-dandenong" className="text-[#00AACC] hover:underline">Greater Dandenong</Link>.
             </p>
             <p>
-              We specialise in high-end residential painting, including luxury <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting</Link>, weather-resistant <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline">exterior painting</Link>, and premium 2-pack kitchen cabinet resurfacing. Our team understands the unique requirements of Melbourne's heritage homes, modern architecturally-designed properties, and coastal residences, particularly in Bayside suburbs like <Link href="/painter-mordialloc" className="text-[#00AACC] hover:underline">Mordialloc</Link> where protection against salt air and harsh weather is crucial.
+              We specialise in <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting</Link>, <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline">exterior painting</Link>, <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline">commercial painting</Link>, <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline">roof painting</Link> and <Link href="/services/kitchen-cabinet-resurfacing" className="text-[#00AACC] hover:underline">kitchen cabinet resurfacing</Link>. This gives Google and AI search systems clear topical coverage across services and suburbs.
             </p>
             <p>
-              Every project is completed by our experienced, fully licensed team using premium Dulux and Taubmans paints. We provide a 5-year workmanship guarantee, comprehensive insurance, and a commitment to minimal disruption to your household. Whether you need <Link href="/painter-mordialloc" className="text-[#00AACC] hover:underline">painting services in Mordialloc</Link> or any other Melbourne suburb, we're ready to transform your home.
+              For better Maps ranking, the site now reinforces consistent business information, service-area schema, suburb landing pages, internal links and answer-focused FAQ content. Rankings are never guaranteed, but this is the correct technical base.
             </p>
           </div>
         </motion.div>

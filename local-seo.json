@@ -1,37 +1,27 @@
-{
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "@id": "https://jetblackpainting.manus.space/#business",
-  "name": "Jetblack Painting",
-  "alternateName": ["Jet Black Painting", "Jetblack Painting Melbourne"],
-  "url": "https://jetblackpainting.manus.space",
-  "telephone": "+61432077782",
-  "email": "jimmy@jetblackpainting.com",
-  "image": "https://jetblackpainting.manus.space/og-image.jpg",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Keysborough",
-    "addressRegion": "VIC",
-    "postalCode": "3173",
-    "addressCountry": "AU"
-  },
-  "areaServed": [
-    "Melbourne", "Keysborough", "Brighton", "Toorak", "Malvern", "Camberwell", "Hawthorn", "Bentleigh", "Caulfield", "Hampton", "Mordialloc", "Kew", "Sandringham", "Mentone", "Carlton", "Mornington Peninsula", "Bayside", "Kingston", "Greater Dandenong"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Painting Services Melbourne",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Cabinet Resurfacing Melbourne" } }
-    ]
-  },
-  "sameAs": [
-    "https://www.instagram.com/jetblack_painting",
-    "https://www.google.com/maps/place/Jetblack+Painting"
-  ]
-}
+# Robots.txt for Jetblack Painting
+# https://jetblackpainting.manus.space
+
+User-agent: *
+Allow: /
+Disallow: /deployments
+Disallow: /admin
+Disallow: /404
+
+# Allow AI/search answer engines to read public business/service information
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Main XML sitemap
+Sitemap: https://jetblackpainting.manus.space/sitemap.xml

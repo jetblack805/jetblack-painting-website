@@ -69,6 +69,31 @@ function writeToLogFile(source: LogSource, entries: unknown[]) {
 }
 
 /**
+ * Vite plugin to copy static files (sitemap.xml, robots.txt) to dist
+ * Ensures these files are available in the build output for the web server
+ */
+function vitePluginCopyStaticFiles(): Plugin {
+  return {
+    name: "copy-static-files",
+    apply: "build",
+    async writeBundle() {
+      const filesToCopy = ["sitemap.xml", "robots.txt"];
+      const sourceDir = path.join(PROJECT_ROOT, "public");
+      const destDir = path.join(PROJECT_ROOT, "dist/public");
+
+      for (const file of filesToCopy) {
+        const src = path.join(sourceDir, file);
+        const dest = path.join(destDir, file);
+        if (fs.existsSync(src)) {
+          fs.copyFileSync(src, dest);
+          console.log(`Copied ${file} to dist/public/`);
+        }
+      }
+    },
+  };
+}
+
+/**
  * Vite plugin to collect browser debug logs
  * - POST /__manus__/logs: Browser sends logs, written directly to files
  * - Files: browserConsole.log, networkRequests.log, sessionReplay.log
@@ -150,7 +175,7 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginCopyStaticFiles(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
   plugins,

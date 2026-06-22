@@ -6,6 +6,9 @@
   RewriteEngine On
   RewriteBase /
   
+  # Allow sitemap.xml and robots.txt to be served as-is
+  RewriteRule ^(sitemap\.xml|robots\.txt)$ - [L]
+  
   # Remove .html extension
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
@@ -73,6 +76,11 @@
   # Cache static assets for 1 year
   <FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|svg|webp|woff|woff2|ttf|otf)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # Cache sitemap and robots.txt for 1 week (they change less frequently)
+  <FilesMatch "\.(xml|txt)$">
+    Header set Cache-Control "public, max-age=604800, must-revalidate"
   </FilesMatch>
   
   # Don't cache HTML

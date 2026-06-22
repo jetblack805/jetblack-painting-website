@@ -1,12 +1,26 @@
+# Robots.txt for Jetblack Painting
+# https://jetblackpainting.manus.space
+
 User-agent: *
 Allow: /
+Disallow: /deployments
+Disallow: /admin
+Disallow: /404
 
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /*?*sort=
-Disallow: /*?*filter=
+# Allow AI/search answer engines
+User-agent: GPTBot
+Allow: /
 
-Crawl-delay: 1
+User-agent: ChatGPT-User
+Allow: /
 
-Sitemap: https://jetblackpainting.com.au/sitemap.xml
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://jetblackpainting.manus.space/sitemap.xml

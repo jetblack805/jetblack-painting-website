@@ -7,7 +7,7 @@ Disallow: /deployments
 Disallow: /admin
 Disallow: /404
 
-# Allow AI/search answer engines to read public business/service information
+# Allow AI/search answer engines
 User-agent: GPTBot
 Allow: /
 
@@ -23,5 +23,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# Main XML sitemap
 Sitemap: https://jetblackpainting.manus.space/sitemap.xml

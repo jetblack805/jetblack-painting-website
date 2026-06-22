@@ -1,0 +1,9 @@
+# Robots.txt for Jetblack Painting
+# https://jetblackpainting.manus.space
+
+User-agent: *
+Disallow: /deployments
+Disallow: /admin
+
+# Sitemap
+Sitemap: https://jetblackpainting.manus.space/sitemap.xml

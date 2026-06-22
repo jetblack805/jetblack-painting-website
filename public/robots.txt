@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jetblackpainting.manus.space/sitemap.xml
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+Crawl-delay: 1
+
+Sitemap: https://jetblackpainting.com.au/sitemap.xml

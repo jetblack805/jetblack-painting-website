@@ -3,7 +3,10 @@
   "@type": "HomeAndConstructionBusiness",
   "@id": "https://jetblackpainting.manus.space/#business",
   "name": "Jetblack Painting",
-  "alternateName": ["Jet Black Painting", "Jetblack Painting Melbourne"],
+  "alternateName": [
+    "Jet Black Painting",
+    "Jetblack Painting Melbourne"
+  ],
   "url": "https://jetblackpainting.manus.space",
   "telephone": "+61432077782",
   "email": "jimmy@jetblackpainting.com",
@@ -17,17 +20,71 @@
     "addressCountry": "AU"
   },
   "areaServed": [
-    "Melbourne", "Keysborough", "Brighton", "Toorak", "Malvern", "Camberwell", "Hawthorn", "Bentleigh", "Caulfield", "Hampton", "Mordialloc", "Kew", "Sandringham", "Mentone", "Carlton", "Mornington Peninsula", "Bayside", "Kingston", "Greater Dandenong"
+    "Melbourne",
+    "Keysborough",
+    "Brighton",
+    "Toorak",
+    "Malvern",
+    "Camberwell",
+    "Hawthorn",
+    "Bentleigh",
+    "Caulfield",
+    "Hampton",
+    "Mordialloc",
+    "Kew",
+    "Sandringham",
+    "Mentone",
+    "Carlton",
+    "Mornington Peninsula",
+    "Bayside",
+    "Kingston",
+    "Greater Dandenong",
+    "Armadale",
+    "Berwick",
+    "Dandenong",
+    "Donvale",
+    "Moorabbin",
+    "Stonnington"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Painting Services Melbourne",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roof Painting Melbourne" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Cabinet Resurfacing Melbourne" } }
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Interior Painting Melbourne"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Exterior Painting Melbourne"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial Painting Melbourne"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Roof Painting Melbourne"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kitchen Cabinet Resurfacing Melbourne"
+        }
+      }
     ]
   },
   "sameAs": [

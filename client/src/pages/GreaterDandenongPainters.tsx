@@ -47,7 +47,7 @@ export default function GreaterDandenongPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Greater Dandenong Painters | Residential & Commercial Painting"
+      title="Greater Dandenong Painters | Residential & Commercial Painting | Jetblack Painting"
       description="Expert painters in Greater Dandenong. Interior, exterior, and commercial painting services. Serving Keysborough, Dandenong, and surrounds. Free quotes."
       neighbouringSuburbs={[
         { name: "Keysborough", link: "/keysborough-painters" },

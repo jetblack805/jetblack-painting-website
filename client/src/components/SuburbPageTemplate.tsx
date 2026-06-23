@@ -23,6 +23,33 @@ const coreServices = [
   { name: "Pre-sale property painting", link: "/services/pre-sale-property-painting" },
 ];
 
+const KNOWN_LANDING_PATHS = new Set([
+  "/keysborough-painters",
+  "/painter-armadale",
+  "/painter-bayside",
+  "/painter-bentleigh",
+  "/painter-berwick",
+  "/painter-brighton",
+  "/painter-camberwell",
+  "/painter-carlton",
+  "/painter-caulfield",
+  "/painter-dandenong",
+  "/painter-donvale",
+  "/painter-greater-dandenong",
+  "/painter-hampton",
+  "/painter-hawthorn",
+  "/painter-kingston",
+  "/painter-kew",
+  "/painter-malvern",
+  "/painter-mentone",
+  "/painter-moorabbin",
+  "/painter-mordialloc",
+  "/painter-mornington-peninsula",
+  "/painter-sandringham",
+  "/painter-stonnington",
+  "/painter-toorak",
+]);
+
 function suburbSlug(suburb: string) {
   return suburb.toLowerCase().replace(/&/g, "and").replace(/\s+/g, "-");
 }
@@ -42,7 +69,9 @@ export default function SuburbPageTemplate({
   schema,
 }: SuburbPageProps) {
   const canonical = `https://jetblackpainting.manus.space${primarySuburbPath(suburb)}`;
+  const validNeighbouringSuburbs = neighbouringSuburbs.filter((s) => KNOWN_LANDING_PATHS.has(s.link));
   const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+  const breadcrumbId = `${canonical}#breadcrumb`;
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -88,6 +117,9 @@ export default function SuburbPageTemplate({
       "@id": "https://jetblackpainting.manus.space/#website",
       name: "Jetblack Painting",
       url: "https://jetblackpainting.manus.space",
+    },
+    breadcrumb: {
+      "@id": breadcrumbId,
     },
     about: localBusinessSchema,
     primaryImageOfPage: "https://jetblackpainting.manus.space/og-image.jpg",
@@ -138,10 +170,44 @@ export default function SuburbPageTemplate({
       }
     : null;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": breadcrumbId,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://jetblackpainting.manus.space/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: `Painters ${suburb}`,
+        item: canonical,
+      },
+    ],
+  };
+
+  const internalLinksSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `Related painting links for ${suburb}`,
+    itemListElement: [...coreServices, ...validNeighbouringSuburbs].map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `https://jetblackpainting.manus.space${item.link}`,
+      name: `${item.name}`,
+    })),
+  };
+
   const pageSchema = [
     localBusinessSchema,
     webPageSchema,
     serviceSchema,
+    breadcrumbSchema,
+    internalLinksSchema,
     ...(faqSchema ? [faqSchema] : []),
     ...extraSchemas,
   ];
@@ -312,19 +378,21 @@ export default function SuburbPageTemplate({
             </motion.div>
           )}
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 bg-gray-50 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-[#0D0D0D] mb-4">Painters Near {suburb}</h2>
-            <p className="text-gray-700 mb-5">
-              We also service nearby suburbs, so Google and customers can clearly understand the local painting service area around {suburb}.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {neighbouringSuburbs.map((s) => (
-                <Link key={s.name} href={s.link} className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium">
-                  Painters {s.name}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
+          {validNeighbouringSuburbs.length > 0 && (
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 bg-gray-50 p-8 rounded-lg">
+              <h2 className="text-2xl font-bold text-[#0D0D0D] mb-4">Painters Near {suburb}</h2>
+              <p className="text-gray-700 mb-5">
+                We also service nearby suburbs, so Google and customers can clearly understand the local painting service area around {suburb}.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {validNeighbouringSuburbs.map((s) => (
+                  <Link key={s.name} href={s.link} className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium">
+                    Painters {s.name}
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+          )}
 
           <motion.div id="quote" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center">
             <h2 className="text-3xl font-bold mb-4">Get Your Free {suburb} Painting Quote</h2>

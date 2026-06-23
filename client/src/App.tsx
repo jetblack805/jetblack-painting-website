@@ -38,6 +38,12 @@ import BestPaintColours2025 from "./pages/blog/BestPaintColours2025";
 import HousePaintingCostMelbourne from "./pages/blog/HousePaintingCostMelbourne";
 import PrepareHomePainting from "./pages/blog/PrepareHomePainting";
 import KitchenCabinetResurfacingBlog from "./pages/blog/KitchenCabinetResurfacing";
+import ArmadalePainters from "./pages/ArmadalePainters";
+import BerwickPainters from "./pages/BerwickPainters";
+import DandenongPainters from "./pages/DandenongPainters";
+import DonvalePainters from "./pages/DonvalePainters";
+import MoorabbinPainters from "./pages/MoorabbinPainters";
+import StonningtonPainters from "./pages/StonningtonPainters";
 
 function Router() {
   return (
@@ -90,6 +96,18 @@ function Router() {
       <Route path={"/painters-kingston"} component={KingstonPainters} />
       <Route path={"/painter-greater-dandenong"} component={GreaterDandenongPainters} />
       <Route path={"/painters-greater-dandenong"} component={GreaterDandenongPainters} />
+      <Route path={"/painter-armadale"} component={ArmadalePainters} />
+      <Route path={"/painters-armadale"} component={ArmadalePainters} />
+      <Route path={"/painter-berwick"} component={BerwickPainters} />
+      <Route path={"/painters-berwick"} component={BerwickPainters} />
+      <Route path={"/painter-dandenong"} component={DandenongPainters} />
+      <Route path={"/painters-dandenong"} component={DandenongPainters} />
+      <Route path={"/painter-donvale"} component={DonvalePainters} />
+      <Route path={"/painters-donvale"} component={DonvalePainters} />
+      <Route path={"/painter-moorabbin"} component={MoorabbinPainters} />
+      <Route path={"/painters-moorabbin"} component={MoorabbinPainters} />
+      <Route path={"/painter-stonnington"} component={StonningtonPainters} />
+      <Route path={"/painters-stonnington"} component={StonningtonPainters} />
       {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />

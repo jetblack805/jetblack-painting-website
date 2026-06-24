@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Star, Phone, MapPin, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "./SEOHead";
+import { getSuburbData } from "../suburbsData";
 
 interface SuburbPageProps {
   title: string;
@@ -363,6 +364,59 @@ export default function SuburbPageTemplate({
               </div>
             </div>
           </motion.div>
+
+          {faqs.length > 0 && (
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+              <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Find Us on Google Maps - {suburb} Painters</h2>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Located in Keysborough, Melbourne, Jetblack Painting services {suburb} and all surrounding suburbs. Find us on Google Maps or call for immediate assistance.
+              </p>
+              {getSuburbData(suburb) && (
+                <div className="rounded-xl overflow-hidden shadow-lg mb-8">
+                  <iframe
+                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150!2d${getSuburbData(suburb)!.coordinates.lng}!3d${getSuburbData(suburb)!.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65a19d0e0e0e0d%3A0x0!2sJetblack+Painting+-+${suburb}+Painters!5e0!3m2!1sen!2sau!4v`}
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Jetblack Painting - House Painters in ${suburb}, Melbourne`}
+                  ></iframe>
+                </div>
+              )}
+              <div className="bg-[#F5F5F0] p-6 rounded-lg">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-bold text-[#0D0D0D] mb-2 flex items-center gap-2">
+                      <MapPin className="w-5 h-5 text-[#00AACC]" />
+                      Main Office
+                    </h3>
+                    <p className="text-gray-700">31 Northumberland Drive</p>
+                    <p className="text-gray-700">Keysborough VIC 3173</p>
+                    <p className="text-gray-700 mt-2 font-semibold">Australia</p>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#0D0D0D] mb-2 flex items-center gap-2">
+                      <Phone className="w-5 h-5 text-[#00AACC]" />
+                      Contact Us
+                    </h3>
+                    <p className="text-gray-700">
+                      <a href="tel:0432077782" className="text-[#00AACC] hover:underline font-bold">
+                        0432 077 782
+                      </a>
+                    </p>
+                    <p className="text-gray-700">
+                      <a href="mailto:jimmy@jetblackpainting.com" className="text-[#00AACC] hover:underline">
+                        jimmy@jetblackpainting.com
+                      </a>
+                    </p>
+                    <p className="text-gray-600 text-sm mt-3">Mon-Fri: 7am-5pm | Sat: 8am-2pm</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
 
           {faqs.length > 0 && (
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">

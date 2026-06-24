@@ -50,6 +50,16 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
       name: "googlebot",
       content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     });
+    
+    // AEO (AI Engine Optimization) meta tags - explicit AI-friendly markup
+    upsertMeta('meta[name="aeo"]', {
+      name: "aeo",
+      content: "enabled",
+    });
+    upsertMeta('meta[name="ai-content-api"]', {
+      name: "ai-content-api",
+      content: "enabled",
+    });
 
     upsertLink('link[rel="canonical"]', { rel: "canonical", href: canonical });
 

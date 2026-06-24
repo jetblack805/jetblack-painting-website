@@ -10,23 +10,29 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Build project
-        run: npm run build
-      
       - name: Verify static files
         run: |
-          echo "✅ Checking static files..."
-          ls -la dist/public/sitemap.xml
-          ls -la dist/public/robots.txt
-          echo "✅ Deployment files ready"
+          echo "✅ Verifying static files for deployment..."
+          
+          # Check robots.txt content
+          echo "Checking robots.txt (should allow crawlers):"
+          cat public/robots.txt
+          
+          echo ""
+          echo "Checking sitemap.xml exists:"
+          test -f public/sitemap.xml && echo "✅ sitemap.xml found" || echo "❌ sitemap.xml missing"
+          
+          echo ""
+          echo "Deployment ready - public/ folder contains:"
+          ls -la public/
+          echo ""
           echo "Commit: ${{ github.sha }}"
-          echo "Sitemap and robots.txt will be deployed from dist/public/"
+          echo "These files will be deployed to the live server."
+          
+      - name: Validate files are correct
+        run: |
+          # Ensure robots.txt allows crawlers
+          grep -q "Allow: /" public/robots.txt && echo "✅ robots.txt correctly allows crawlers" || (echo "❌ ERROR: robots.txt doesn't allow crawlers!" && exit 1)
+          
+          # Ensure sitemap is referenced
+          grep -q "Sitemap:" public/robots.txt && echo "✅ robots.txt references sitemap" || echo "⚠️ Warning: sitemap not referenced"

@@ -10,8 +10,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Trigger Manus Deployment
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Verify static files
         run: |
-          echo "✅ Deployment triggered for Manus"
+          echo "✅ Checking static files..."
+          ls -la dist/public/sitemap.xml
+          ls -la dist/public/robots.txt
+          echo "✅ Deployment files ready"
           echo "Commit: ${{ github.sha }}"
-          echo "Sitemap and static files will be deployed"
+          echo "Sitemap and robots.txt will be deployed from dist/public/"

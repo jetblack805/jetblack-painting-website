@@ -1,27 +1,7 @@
 # Robots.txt for Jetblack Painting
-# https://jetblackpainting.manus.space
+# Keep this minimal to avoid crawler parsing edge cases.
 
 User-agent: *
 Allow: /
-Disallow: /deployments
-Disallow: /admin
-Disallow: /404
 
-# Allow AI/search answer engines to read public business/service information
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-# Main XML sitemap
 Sitemap: https://jetblackpainting.manus.space/sitemap.xml

@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
 export default function HousePaintingCostMelbourne() {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="House Painting Cost Melbourne (2025 Price Guide) | Jetblack Painting"
+        description="Learn how much house painting costs in Melbourne with Jetblack Painting’s 2025 pricing guide for interior, exterior and commercial projects."
+        canonical="https://jetblackpainting.manus.space/blog/house-painting-cost-melbourne"
+      />
       <Navbar />
       
       <article className="pt-32 pb-16 bg-white">

@@ -69,7 +69,7 @@ export default function SuburbPageTemplate({
   faqs = [],
   schema,
 }: SuburbPageProps) {
-  const canonical = `https://jetblackpainting.manus.space${primarySuburbPath(suburb)}`;
+  const canonical = `https://jetblackpainting.manus.space${primarySuburbPath(suburb)}/`;
   const validNeighbouringSuburbs = neighbouringSuburbs.filter((s) => KNOWN_LANDING_PATHS.has(s.link));
   const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   const breadcrumbId = `${canonical}#breadcrumb`;

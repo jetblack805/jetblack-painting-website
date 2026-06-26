@@ -3,6 +3,7 @@ import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 export default function Blog() {
   const posts = [
@@ -64,6 +65,11 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Painting Tips & Guides Melbourne | Jetblack Painting Blog"
+        description="Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting."
+        canonical="https://jetblackpainting.manus.space/blog"
+      />
       <Navbar />
       
       {/* Header */}

@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
 export default function KitchenCabinetResurfacing() {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Kitchen Cabinet Resurfacing vs Replacement | Melbourne Guide | Jetblack Painting"
+        description="Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting."
+        canonical="https://jetblackpainting.manus.space/blog/kitchen-cabinet-resurfacing-vs-replacement"
+      />
       <Navbar />
       
       <article className="pt-32 pb-16 bg-white">

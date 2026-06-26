@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
 export default function BestPaintColours2025() {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Best Paint Colours for Melbourne Homes in 2025 | Jetblack Painting"
+        description="Discover the best paint colours for Melbourne homes in 2025, with expert advice from Jetblack Painting on interior and exterior colour selection."
+        canonical="https://jetblackpainting.manus.space/blog/best-paint-colours-melbourne-2025"
+      />
       <Navbar />
       
       <article className="pt-32 pb-16 bg-white">

@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
 export default function PrepareHomePainting() {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="How to Prepare Your Home for Painting | Melbourne Guide | Jetblack Painting"
+        description="Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results."
+        canonical="https://jetblackpainting.manus.space/blog/prepare-home-for-painting"
+      />
       <Navbar />
       
       <article className="pt-32 pb-16 bg-white">

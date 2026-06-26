@@ -2,6 +2,7 @@ import { Star, ExternalLink, Copy, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 export default function ReviewUs() {
   const [copied, setCopied] = useState(false);
@@ -17,6 +18,11 @@ export default function ReviewUs() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Leave a Review | Jetblack Painting Melbourne"
+        description="Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters."
+        canonical="https://jetblackpainting.manus.space/review-us"
+      />
       <Navbar />
       
       <section className="pt-32 pb-16 bg-[#0D0D0D]">

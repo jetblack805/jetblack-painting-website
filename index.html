@@ -74,22 +74,25 @@
         "@type": "WebSite",
         "@id": "https://jetblackpainting.manus.space/#website",
         "name": "Jetblack Painting",
-        "url": "https://jetblackpainting.manus.space",
+        "url": "https://jetblackpainting.manus.space/",
         "inLanguage": "en-AU",
         "publisher": { "@id": "https://jetblackpainting.manus.space/#business" },
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://jetblackpainting.manus.space/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://jetblackpainting.manus.space/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       },
       {
-        "@type": "HomeAndConstructionBusiness",
+        "@type": "LocalBusiness",
         "@id": "https://jetblackpainting.manus.space/#business",
         "name": "Jetblack Painting",
         "alternateName": ["Jet Black Painting", "Jetblack Painting Melbourne"],
         "image": "https://jetblackpainting.manus.space/og-image.jpg",
-        "url": "https://jetblackpainting.manus.space",
+        "url": "https://jetblackpainting.manus.space/",
         "telephone": "+61432077782",
         "email": "jimmy@jetblackpainting.com",
         "priceRange": "$$",
@@ -107,10 +110,7 @@
           "latitude": -37.9722,
           "longitude": 145.1312
         },
-        "sameAs": [
-          "https://www.instagram.com/jetblack_painting",
-          "https://www.google.com/maps/place/Jetblack+Painting"
-        ],
+        "sameAs": ["https://www.instagram.com/jetblack_painting"],
         "areaServed": [
           { "@type": "City", "name": "Melbourne" },
           { "@type": "City", "name": "Keysborough", "geo": { "@type": "GeoCoordinates", "latitude": -37.9722, "longitude": 145.1312 } },
@@ -143,34 +143,22 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Cabinet Resurfacing Melbourne" } }
           ]
         }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://jetblackpainting.manus.space/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Who are the best house painters in Melbourne?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Jetblack Painting is a Melbourne painting business providing interior, exterior, commercial, roof and cabinet painting services across Melbourne suburbs including Keysborough, Brighton, Toorak, Mordialloc, Bayside, Kingston and Greater Dandenong." }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you provide free painting quotes in Melbourne?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Jetblack Painting provides free painting quotes across Melbourne. Call 0432 077 782 to request an interior, exterior, commercial, roof or cabinet painting quote." }
-          },
-          {
-            "@type": "Question",
-            "name": "What Melbourne suburbs does Jetblack Painting service?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Jetblack Painting services Melbourne suburbs including Keysborough, Brighton, Toorak, Malvern, Camberwell, Hawthorn, Bentleigh, Caulfield, Hampton, Mordialloc, Kew, Sandringham, Mentone, Carlton, Mornington Peninsula, Bayside, Kingston and Greater Dandenong." }
-          }
-        ]
       }
     ]
   }
   </script>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <main>
+      <h1>House Painters Melbourne | Interior, Exterior & Commercial Painters | Jetblack Painting</h1>
+      <p>
+        Jetblack Painting is a Melbourne painting business offering interior, exterior, commercial, roof, and cabinet painting.
+        We service Keysborough, Bayside, Kingston, Greater Dandenong, and surrounding suburbs with detailed preparation,
+        premium paint systems, and durable finishes for homes and businesses.
+      </p>
+    </main>
+  </div>
   <script type="module" src="/client/src/main.tsx"></script>
 </body>
 </html>

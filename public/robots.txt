@@ -1,7 +1,37 @@
 # Robots.txt for Jetblack Painting
-# Keep this minimal to avoid crawler parsing edge cases.
+# Keep crawler access open for public pages and AI/search discovery.
 
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 Sitemap: https://jetblackpainting.manus.space/sitemap.xml

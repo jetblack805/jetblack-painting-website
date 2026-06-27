@@ -49,6 +49,18 @@ export default function Home() {
         canonical="https://jetblackpainting.manus.space/"
       />
       <Navbar />
+      <section className="bg-white border-b border-gray-100 py-8">
+        <div className="container">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#0D0D0D] mb-3">
+            House Painters Melbourne | Interior, Exterior & Commercial Painting
+          </h1>
+          <p className="text-gray-700 max-w-4xl">
+            Jetblack Painting provides interior, exterior, roof, cabinet, and commercial painting services across Melbourne.
+            We service homeowners, landlords, and businesses in Keysborough, Bayside, Kingston, Greater Dandenong, and nearby
+            suburbs with premium preparation, durable paint systems, and clean finishes tailored to each property type.
+          </p>
+        </div>
+      </section>
       <Hero />
       <TrustBadges />
       <Services />

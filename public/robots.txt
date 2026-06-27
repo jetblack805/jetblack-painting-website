@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Allow: /llms.txt
 
 User-agent: GPTBot
 Allow: /

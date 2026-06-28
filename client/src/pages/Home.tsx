@@ -44,20 +44,21 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="House Painters Melbourne | Interior & Exterior Painting Experts | Jetblack Painting"
-        description="Premium house painters in Melbourne. 5-star rated, fully insured, interior & exterior painting specialists. Servicing all Melbourne suburbs. Free quotes - Call 0432 077 782."
+        title="Best Painters Melbourne | Local Painters Near Me | Free Quotes | Jetblack Painting"
+        description="Best painters Melbourne — 5-star rated, fully insured, local painters near me. Interior, exterior, commercial, roof & cabinet painting across 30+ Melbourne suburbs. Servicing Brighton, Toorak, Keysborough, Mordialloc, Dandenong & more. Free quotes: 0432 077 782."
         canonical="https://jetblackpainting.manus.space/"
       />
       <Navbar />
       <section className="bg-white border-b border-gray-100 py-8">
         <div className="container">
           <h1 className="text-3xl md:text-4xl font-bold text-[#0D0D0D] mb-3">
-            House Painters Melbourne | Interior, Exterior & Commercial Painters | Jetblack Painting
+            Best Painters Melbourne | Local Painters Near Me | Jetblack Painting
           </h1>
           <p className="text-gray-700 max-w-4xl">
-            Jetblack Painting provides interior, exterior, roof, cabinet, and commercial painting services across Melbourne.
-            We service homeowners, landlords, and businesses in Keysborough, Bayside, Kingston, Greater Dandenong, and nearby
-            suburbs with premium preparation, durable paint systems, and clean finishes tailored to each property type.
+            Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 30+ suburbs.
+            We provide interior, exterior, roof, cabinet, and commercial painting for homeowners, landlords, and businesses.
+            Based in Keysborough, we cover Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Mordialloc, Dandenong, and all surrounding Melbourne areas.
+            Free painting quotes — call 0432 077 782.
           </p>
         </div>
       </section>

@@ -374,7 +374,7 @@ export default function SuburbPageTemplate({
               {getSuburbData(suburb) && (
                 <div className="rounded-xl overflow-hidden shadow-lg mb-8">
                   <iframe
-                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150!2d${getSuburbData(suburb)!.coordinates.lng}!3d${getSuburbData(suburb)!.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65a19d0e0e0e0d%3A0x0!2sJetblack+Painting+-+${suburb}+Painters!5e0!3m2!1sen!2sau!4v`}
+                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150!2d${getSuburbData(suburb)!.coordinates.lng}!3d${getSuburbData(suburb)!.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1`}
                     width="100%"
                     height="450"
                     style={{ border: 0 }}

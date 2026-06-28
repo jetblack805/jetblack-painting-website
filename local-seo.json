@@ -1,23 +1,62 @@
 {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
   "@id": "https://jetblackpainting.manus.space/#business",
   "name": "Jetblack Painting",
   "alternateName": [
     "Jet Black Painting",
-    "Jetblack Painting Melbourne"
+    "Jetblack Painting Melbourne",
+    "Best Painters Melbourne"
   ],
   "url": "https://jetblackpainting.manus.space",
   "telephone": "+61432077782",
   "email": "jimmy@jetblackpainting.com",
   "image": "https://jetblackpainting.manus.space/og-image.jpg",
   "priceRange": "$$",
+  "description": "Jetblack Painting — Melbourne's top-rated local painters. 5-star rated, fully insured painting contractors offering interior, exterior, commercial, roof and kitchen cabinet painting across 30+ Melbourne suburbs. Free quotes available.",
+  "keywords": "painters Melbourne, house painters Melbourne, painters near me, best painters Melbourne, local painters Melbourne, interior painters Melbourne, exterior painters Melbourne, painting contractors Melbourne, residential painters Melbourne, painting company Melbourne, affordable painters Melbourne, licensed painters Melbourne",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Keysborough",
     "addressLocality": "Keysborough",
     "addressRegion": "VIC",
     "postalCode": "3173",
     "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -37.9722,
+    "longitude": 145.1312
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": -37.9722,
+      "longitude": 145.1312
+    },
+    "geoRadius": "50000"
   },
   "areaServed": [
     "Melbourne",
@@ -44,7 +83,17 @@
     "Dandenong",
     "Donvale",
     "Moorabbin",
-    "Stonnington"
+    "Stonnington",
+    "Box Hill",
+    "Croydon",
+    "Doncaster",
+    "Glen Waverley",
+    "McKinnon",
+    "Murrumbeena",
+    "Ormond",
+    "Ringwood",
+    "Templestowe",
+    "Wheelers Hill"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -54,35 +103,64 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Interior Painting Melbourne"
+          "name": "Interior Painting Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/interior-painting"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Exterior Painting Melbourne"
+          "name": "Exterior Painting Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/exterior-painting"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Commercial Painting Melbourne"
+          "name": "Commercial Painting Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/commercial-painting"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Roof Painting Melbourne"
+          "name": "Roof Painting Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/roof-painting"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Kitchen Cabinet Resurfacing Melbourne"
+          "name": "Kitchen Cabinet Resurfacing Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/kitchen-cabinet-resurfacing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pre-Sale Property Painting Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/pre-sale-property-painting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rental Property Painting Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/rental-property-painting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Roof and Fence Painting Melbourne",
+          "url": "https://jetblackpainting.manus.space/services/roof-fence-painting"
         }
       }
     ]

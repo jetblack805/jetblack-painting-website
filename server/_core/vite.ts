@@ -1,4 +1,4 @@
-import express, { type Express } from "express";
+﻿import express, { type Express } from "express";
 import fs from "fs";
 import { type Server } from "http";
 import { nanoid } from "nanoid";
@@ -345,6 +345,45 @@ function blogPosting(opts: {
   });
 }
 
+function suburbService(suburb: string, slug: string) {
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${BASE_URL}${slug}/#service`,
+    name: `Painters ${suburb} Melbourne`,
+    serviceType: "House Painting",
+    description: `Professional house painting services in ${suburb}, Melbourne. Interior, exterior, roof and commercial painting by Jetblack Painting — 5-star rated, fully insured. Free quotes — call 0432 077 782.`,
+    provider: {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": `${BASE_URL}/#business`,
+      name: "Jetblack Painting",
+      telephone: "+61432077782",
+      url: BASE_URL,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Mordialloc",
+        addressRegion: "VIC",
+        postalCode: "3195",
+        addressCountry: "AU",
+      },
+    },
+    areaServed: {
+      "@type": "City",
+      name: suburb,
+      containedInPlace: { "@type": "State", name: "Victoria" },
+    },
+    url: `${BASE_URL}${slug}/`,
+    offers: {
+      "@type": "Offer",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "AUD",
+        description: "Free written quote — call 0432 077 782",
+      },
+    },
+  });
+}
+
 const FAQ_SCHEMA = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -503,6 +542,245 @@ const SCHEMAS_BY_ROUTE: Record<string, string[]> = {
       { name: "Home", item: `${BASE_URL}/` },
       { name: "Painting Services", item: `${BASE_URL}/services/kitchen-cabinet-resurfacing` },
       { name: "Kitchen Cabinet Resurfacing Melbourne", item: `${BASE_URL}/services/kitchen-cabinet-resurfacing` },
+    ]),
+  ],
+  // ─── Suburb pages ────────────────────────────────────────────────────────
+  "/painter-toorak": [
+    suburbService("Toorak", "/painter-toorak"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Toorak", item: `${BASE_URL}/painter-toorak/` },
+    ]),
+  ],
+  "/painter-brighton": [
+    suburbService("Brighton", "/painter-brighton"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Brighton", item: `${BASE_URL}/painter-brighton/` },
+    ]),
+  ],
+  "/painter-malvern": [
+    suburbService("Malvern", "/painter-malvern"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Malvern", item: `${BASE_URL}/painter-malvern/` },
+    ]),
+  ],
+  "/painter-camberwell": [
+    suburbService("Camberwell", "/painter-camberwell"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Camberwell", item: `${BASE_URL}/painter-camberwell/` },
+    ]),
+  ],
+  "/painter-hawthorn": [
+    suburbService("Hawthorn", "/painter-hawthorn"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Hawthorn", item: `${BASE_URL}/painter-hawthorn/` },
+    ]),
+  ],
+  "/painter-bentleigh": [
+    suburbService("Bentleigh", "/painter-bentleigh"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Bentleigh", item: `${BASE_URL}/painter-bentleigh/` },
+    ]),
+  ],
+  "/painter-caulfield": [
+    suburbService("Caulfield", "/painter-caulfield"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Caulfield", item: `${BASE_URL}/painter-caulfield/` },
+    ]),
+  ],
+  "/painter-hampton": [
+    suburbService("Hampton", "/painter-hampton"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Hampton", item: `${BASE_URL}/painter-hampton/` },
+    ]),
+  ],
+  "/painter-mordialloc": [
+    suburbService("Mordialloc", "/painter-mordialloc"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Mordialloc", item: `${BASE_URL}/painter-mordialloc/` },
+    ]),
+  ],
+  "/keysborough-painters": [
+    suburbService("Keysborough", "/keysborough-painters"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Keysborough", item: `${BASE_URL}/keysborough-painters/` },
+    ]),
+  ],
+  "/painter-kew": [
+    suburbService("Kew", "/painter-kew"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Kew", item: `${BASE_URL}/painter-kew/` },
+    ]),
+  ],
+  "/painter-sandringham": [
+    suburbService("Sandringham", "/painter-sandringham"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Sandringham", item: `${BASE_URL}/painter-sandringham/` },
+    ]),
+  ],
+  "/painter-mentone": [
+    suburbService("Mentone", "/painter-mentone"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Mentone", item: `${BASE_URL}/painter-mentone/` },
+    ]),
+  ],
+  "/painter-carlton": [
+    suburbService("Carlton", "/painter-carlton"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Carlton", item: `${BASE_URL}/painter-carlton/` },
+    ]),
+  ],
+  "/painter-mornington-peninsula": [
+    suburbService("Mornington Peninsula", "/painter-mornington-peninsula"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Mornington Peninsula", item: `${BASE_URL}/painter-mornington-peninsula/` },
+    ]),
+  ],
+  "/painter-bayside": [
+    suburbService("Bayside", "/painter-bayside"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Bayside", item: `${BASE_URL}/painter-bayside/` },
+    ]),
+  ],
+  "/painter-kingston": [
+    suburbService("Kingston", "/painter-kingston"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Kingston", item: `${BASE_URL}/painter-kingston/` },
+    ]),
+  ],
+  "/painter-greater-dandenong": [
+    suburbService("Greater Dandenong", "/painter-greater-dandenong"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Greater Dandenong", item: `${BASE_URL}/painter-greater-dandenong/` },
+    ]),
+  ],
+  "/painter-armadale": [
+    suburbService("Armadale", "/painter-armadale"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Armadale", item: `${BASE_URL}/painter-armadale/` },
+    ]),
+  ],
+  "/painter-berwick": [
+    suburbService("Berwick", "/painter-berwick"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Berwick", item: `${BASE_URL}/painter-berwick/` },
+    ]),
+  ],
+  "/painter-dandenong": [
+    suburbService("Dandenong", "/painter-dandenong"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Dandenong", item: `${BASE_URL}/painter-dandenong/` },
+    ]),
+  ],
+  "/painter-donvale": [
+    suburbService("Donvale", "/painter-donvale"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Donvale", item: `${BASE_URL}/painter-donvale/` },
+    ]),
+  ],
+  "/painter-moorabbin": [
+    suburbService("Moorabbin", "/painter-moorabbin"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Moorabbin", item: `${BASE_URL}/painter-moorabbin/` },
+    ]),
+  ],
+  "/painter-stonnington": [
+    suburbService("Stonnington", "/painter-stonnington"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Stonnington", item: `${BASE_URL}/painter-stonnington/` },
+    ]),
+  ],
+  "/painter-box-hill": [
+    suburbService("Box Hill", "/painter-box-hill"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Box Hill", item: `${BASE_URL}/painter-box-hill/` },
+    ]),
+  ],
+  "/painter-croydon": [
+    suburbService("Croydon", "/painter-croydon"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Croydon", item: `${BASE_URL}/painter-croydon/` },
+    ]),
+  ],
+  "/painter-doncaster": [
+    suburbService("Doncaster", "/painter-doncaster"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Doncaster", item: `${BASE_URL}/painter-doncaster/` },
+    ]),
+  ],
+  "/painter-glen-waverley": [
+    suburbService("Glen Waverley", "/painter-glen-waverley"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Glen Waverley", item: `${BASE_URL}/painter-glen-waverley/` },
+    ]),
+  ],
+  "/painter-mckinnon": [
+    suburbService("McKinnon", "/painter-mckinnon"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters McKinnon", item: `${BASE_URL}/painter-mckinnon/` },
+    ]),
+  ],
+  "/painter-murrumbeena": [
+    suburbService("Murrumbeena", "/painter-murrumbeena"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Murrumbeena", item: `${BASE_URL}/painter-murrumbeena/` },
+    ]),
+  ],
+  "/painter-ormond": [
+    suburbService("Ormond", "/painter-ormond"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Ormond", item: `${BASE_URL}/painter-ormond/` },
+    ]),
+  ],
+  "/painter-ringwood": [
+    suburbService("Ringwood", "/painter-ringwood"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Ringwood", item: `${BASE_URL}/painter-ringwood/` },
+    ]),
+  ],
+  "/painter-templestowe": [
+    suburbService("Templestowe", "/painter-templestowe"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Templestowe", item: `${BASE_URL}/painter-templestowe/` },
+    ]),
+  ],
+  "/painter-wheelers-hill": [
+    suburbService("Wheelers Hill", "/painter-wheelers-hill"),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painters Wheelers Hill", item: `${BASE_URL}/painter-wheelers-hill/` },
     ]),
   ],
 };

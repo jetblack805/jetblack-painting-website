@@ -295,6 +295,218 @@ const AGGREGATE_RATING_SCHEMA = JSON.stringify({
   },
 });
 
+// ─── Per-route extra schemas ──────────────────────────────────────────────────
+// Injected server-side so AI crawlers (Perplexity, ChatGPT, Claude) see them
+// in raw HTML without needing to execute JavaScript.
+
+function breadcrumb(crumbs: { name: string; item: string }[]) {
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: c.item,
+    })),
+  });
+}
+
+function blogPosting(opts: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  image: string;
+}) {
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${opts.url}#article`,
+    headline: opts.headline,
+    description: opts.description,
+    image: opts.image,
+    url: opts.url,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    author: {
+      "@type": "Person",
+      name: "Jimmy Demirci",
+      url: `${BASE_URL}/`,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#business`,
+      name: "Jetblack Painting",
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/og-image.jpg` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": opts.url },
+  });
+}
+
+const FAQ_SCHEMA = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${BASE_URL}/faq#faqpage`,
+  mainEntity: [
+    { "@type": "Question", name: "Do you offer free quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes! We provide completely free, no-obligation quotes. We'll visit your property, assess your needs, and provide a competitive price estimate. Call Jimmy on 0432 077 782 or use the online form." } },
+    { "@type": "Question", name: "Are you licensed and insured?", acceptedAnswer: { "@type": "Answer", text: "Yes, Jetblack Painting is fully licensed and carries $20 million public liability insurance. All work is backed by a 5-year workmanship guarantee." } },
+    { "@type": "Question", name: "How long have you been in business?", acceptedAnswer: { "@type": "Answer", text: "Jetblack Painting has been serving Melbourne for over 13 years, building a reputation for quality workmanship and customer satisfaction across 30+ suburbs." } },
+    { "@type": "Question", name: "Do you provide references?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We're happy to provide references from previous customers. We also have a 5-star Google rating with 127+ satisfied clients." } },
+    { "@type": "Question", name: "What areas do you serve?", acceptedAnswer: { "@type": "Answer", text: "We serve all Melbourne suburbs including Keysborough, Brighton, Toorak, Mordialloc, Hawthorn, Mentone, Sandringham, Camberwell, Bentleigh, Caulfield, Hampton, Kew, Carlton, Bayside, Mornington Peninsula, and 30+ more suburbs across Melbourne's south-east, inner east, and eastern suburbs." } },
+    { "@type": "Question", name: "Do you travel outside Melbourne?", acceptedAnswer: { "@type": "Answer", text: "We primarily serve the Melbourne metropolitan area including the Mornington Peninsula. For projects outside our usual service area, please contact us to discuss availability." } },
+    { "@type": "Question", name: "Is there a minimum project size?", acceptedAnswer: { "@type": "Answer", text: "No, we welcome projects of all sizes, from small room touch-ups to large commercial painting projects." } },
+    { "@type": "Question", name: "Do you offer painting services for coastal homes in Mordialloc and Bayside?", acceptedAnswer: { "@type": "Answer", text: "Yes, we specialise in painting coastal homes across Mordialloc, Sandringham, Hampton, and Bayside. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and UV rays." } },
+    { "@type": "Question", name: "How long does interior painting take?", acceptedAnswer: { "@type": "Answer", text: "Most interior painting projects take 3–7 days depending on the size and complexity. A standard 3-bedroom interior repaint typically takes 3–5 days. We'll provide a detailed timeline during your free quote." } },
+    { "@type": "Question", name: "Do you move furniture before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes, we move and protect your furniture as part of our service. We use drop cloths and plastic sheeting to protect floors and belongings." } },
+    { "@type": "Question", name: "Can you help with colour selection?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! Our team has extensive experience with colour trends and can help you choose colours that complement your Melbourne home's style and architecture." } },
+    { "@type": "Question", name: "What paint brands do you use?", acceptedAnswer: { "@type": "Answer", text: "We use premium quality paints from leading Australian brands including Dulux and Taubmans. We can recommend the best products for your specific surfaces and conditions." } },
+    { "@type": "Question", name: "How often should I repaint my home exterior?", acceptedAnswer: { "@type": "Answer", text: "Most exterior paint jobs last 5–10 years depending on weather conditions, paint quality, and surface type. In Melbourne's coastal suburbs, salt air can accelerate weathering. We can assess your home and recommend a timeline during your free quote." } },
+    { "@type": "Question", name: "Can you paint in all weather conditions?", acceptedAnswer: { "@type": "Answer", text: "We can paint in most conditions, but avoid extreme heat, cold, or rain. We'll schedule your project during optimal weather windows to ensure the best possible finish." } },
+    { "@type": "Question", name: "Do you prepare surfaces before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes, proper preparation is essential to a long-lasting result. We clean, sand, fill, and prime surfaces before applying any paint coats." } },
+    { "@type": "Question", name: "What's included in an exterior painting service?", acceptedAnswer: { "@type": "Answer", text: "Our exterior service includes full surface preparation (wash, sand, fill, prime), painting of walls, fascias, gutters, trim, and cleanup. All prep is included in every quote." } },
+    { "@type": "Question", name: "Can you handle large commercial painting projects?", acceptedAnswer: { "@type": "Answer", text: "Yes! We have experience with commercial painting projects of all sizes, from small offices to large retail spaces, strata buildings, and industrial facilities." } },
+    { "@type": "Question", name: "Can you work after hours for commercial projects?", acceptedAnswer: { "@type": "Answer", text: "Yes, we can arrange after-hours or weekend work to minimise disruption to your business operations." } },
+    { "@type": "Question", name: "How much does house painting cost in Melbourne?", acceptedAnswer: { "@type": "Answer", text: "Pricing depends on project size, surface condition, paint quality, and location. Interior painting typically starts from $1,500 for a standard room. Full exterior repaints for an average Melbourne home range from $4,000–$10,000. We provide free detailed quotes with no hidden costs." } },
+    { "@type": "Question", name: "Do you offer kitchen cabinet resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Yes! We specialise in luxury kitchen cabinet resurfacing using 2-pack spray finishes. It's a fraction of the cost of replacement and leaves your kitchen looking brand new. Free quotes available." } },
+    { "@type": "Question", name: "Do you provide roof painting services?", acceptedAnswer: { "@type": "Answer", text: "Yes, we provide professional roof painting and restoration services including cleaning, crack repair, priming, and quality roof coatings to protect and refresh your roof." } },
+    { "@type": "Question", name: "Do you do pre-sale property painting?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We specialise in pre-sale painting to maximise your Melbourne property's buyer appeal and sale price. Fast turnaround available for vendor campaigns." } },
+  ],
+});
+
+const SCHEMAS_BY_ROUTE: Record<string, string[]> = {
+  "/faq": [
+    FAQ_SCHEMA,
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting FAQs Melbourne", item: `${BASE_URL}/faq` },
+    ]),
+  ],
+  "/blog": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Blog & Guides", item: `${BASE_URL}/blog` },
+    ]),
+  ],
+  "/blog/best-paint-colours-melbourne-2025": [
+    blogPosting({
+      headline: "Best Paint Colours for Melbourne Homes in 2025",
+      description: "Discover the best interior and exterior paint colours for Melbourne homes in 2025. Expert colour recommendations from Jetblack Painting — Melbourne's top-rated house painters.",
+      url: `${BASE_URL}/blog/best-paint-colours-melbourne-2025`,
+      datePublished: "2025-05-01",
+      dateModified: "2026-07-02",
+      image: `${BASE_URL}/og-image.jpg`,
+    }),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Blog", item: `${BASE_URL}/blog` },
+      { name: "Best Paint Colours 2025", item: `${BASE_URL}/blog/best-paint-colours-melbourne-2025` },
+    ]),
+  ],
+  "/blog/house-painting-cost-melbourne": [
+    blogPosting({
+      headline: "How Much Does House Painting Cost in Melbourne? (2025 Price Guide)",
+      description: "How much does house painting cost in Melbourne? Full price guide covering interior, exterior and commercial painting costs from Jetblack Painting.",
+      url: `${BASE_URL}/blog/house-painting-cost-melbourne`,
+      datePublished: "2025-05-01",
+      dateModified: "2026-07-02",
+      image: `${BASE_URL}/og-image.jpg`,
+    }),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Blog", item: `${BASE_URL}/blog` },
+      { name: "House Painting Cost Melbourne", item: `${BASE_URL}/blog/house-painting-cost-melbourne` },
+    ]),
+  ],
+  "/blog/prepare-home-for-painting": [
+    blogPosting({
+      headline: "How to Prepare Your Home for Painting",
+      description: "Everything you need to know about preparing your Melbourne home for interior or exterior painting. Expert tips from Jetblack Painting.",
+      url: `${BASE_URL}/blog/prepare-home-for-painting`,
+      datePublished: "2025-05-01",
+      dateModified: "2026-07-02",
+      image: `${BASE_URL}/og-image.jpg`,
+    }),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Blog", item: `${BASE_URL}/blog` },
+      { name: "How to Prepare Your Home for Painting", item: `${BASE_URL}/blog/prepare-home-for-painting` },
+    ]),
+  ],
+  "/blog/kitchen-cabinet-resurfacing-vs-replacement": [
+    blogPosting({
+      headline: "Kitchen Cabinet Resurfacing vs Replacement: What Melbourne Homeowners Need to Know",
+      description: "Resurfacing or full replacement — which is right for your Melbourne kitchen? Jetblack Painting breaks down the costs, benefits and process.",
+      url: `${BASE_URL}/blog/kitchen-cabinet-resurfacing-vs-replacement`,
+      datePublished: "2025-05-01",
+      dateModified: "2026-07-02",
+      image: `${BASE_URL}/og-image.jpg`,
+    }),
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Blog", item: `${BASE_URL}/blog` },
+      { name: "Kitchen Cabinet Resurfacing vs Replacement", item: `${BASE_URL}/blog/kitchen-cabinet-resurfacing-vs-replacement` },
+    ]),
+  ],
+  "/services/interior-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/interior-painting` },
+      { name: "Interior Painting Melbourne", item: `${BASE_URL}/services/interior-painting` },
+    ]),
+  ],
+  "/services/exterior-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/exterior-painting` },
+      { name: "Exterior Painting Melbourne", item: `${BASE_URL}/services/exterior-painting` },
+    ]),
+  ],
+  "/services/roof-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/roof-painting` },
+      { name: "Roof Painting Melbourne", item: `${BASE_URL}/services/roof-painting` },
+    ]),
+  ],
+  "/services/commercial-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/commercial-painting` },
+      { name: "Commercial Painting Melbourne", item: `${BASE_URL}/services/commercial-painting` },
+    ]),
+  ],
+  "/services/pre-sale-property-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/pre-sale-property-painting` },
+      { name: "Pre-Sale Property Painting Melbourne", item: `${BASE_URL}/services/pre-sale-property-painting` },
+    ]),
+  ],
+  "/services/rental-property-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/rental-property-painting` },
+      { name: "Rental Property Painting Melbourne", item: `${BASE_URL}/services/rental-property-painting` },
+    ]),
+  ],
+  "/services/roof-fence-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/roof-fence-painting` },
+      { name: "Roof & Fence Painting Melbourne", item: `${BASE_URL}/services/roof-fence-painting` },
+    ]),
+  ],
+  "/services/kitchen-cabinet-resurfacing": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/kitchen-cabinet-resurfacing` },
+      { name: "Kitchen Cabinet Resurfacing Melbourne", item: `${BASE_URL}/services/kitchen-cabinet-resurfacing` },
+    ]),
+  ],
+};
+
 // ─── serveStatic ─────────────────────────────────────────────────────────────
 
 export function serveStatic(app: Express) {
@@ -351,11 +563,13 @@ export function serveStatic(app: Express) {
 
       let html = getBaseHtml();
 
-      // Inject aggregateRating schema before </head>
-      html = html.replace(
-        "</head>",
-        `<script type="application/ld+json">${AGGREGATE_RATING_SCHEMA}</script></head>`
-      );
+      // Inject aggregateRating + any route-specific schemas before </head>
+      const extraSchemas = SCHEMAS_BY_ROUTE[metaKey] ?? SCHEMAS_BY_ROUTE[reqPath] ?? [];
+      const allSchemas = [AGGREGATE_RATING_SCHEMA, ...extraSchemas];
+      const schemaHtml = allSchemas
+        .map((s) => `<script type="application/ld+json">${s}</script>`)
+        .join("\n  ");
+      html = html.replace("</head>", `\n  ${schemaHtml}\n</head>`);
 
       // Replace <title>
       html = html.replace(

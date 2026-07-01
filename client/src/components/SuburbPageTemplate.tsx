@@ -49,6 +49,17 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-sandringham",
   "/painter-stonnington",
   "/painter-toorak",
+  // Additional suburbs
+  "/painter-box-hill",
+  "/painter-croydon",
+  "/painter-doncaster",
+  "/painter-glen-waverley",
+  "/painter-mckinnon",
+  "/painter-murrumbeena",
+  "/painter-ormond",
+  "/painter-ringwood",
+  "/painter-templestowe",
+  "/painter-wheelers-hill",
 ]);
 
 function suburbSlug(suburb: string) {

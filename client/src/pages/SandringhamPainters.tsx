@@ -56,8 +56,8 @@ export default function SandringhamPainters() {
         { name: "Highett", link: "/painter-highett" },
         { name: "Cheltenham", link: "/painter-cheltenham" }
       ]}
-      localExpertise=`Serving the Sandringham community and the wider Bayside area, we are experts in protecting coastal homes. We understand the unique challenges of Sandringham's environment, from salt air corrosion to intense UV exposure, and use specialized products to ensure your property remains beautiful and protected.`
-      propertyTypes=`Sandringham features a mix of classic weatherboard beach cottages, Edwardian homes, and modern bayside residences. Our team is skilled in tailoring our painting methods to suit each unique property type found along the Sandringham coastline.`
+      localExpertise={`Serving the Sandringham community and the wider Bayside area, we are experts in protecting coastal homes. We understand the unique challenges of Sandringham's environment, from salt air corrosion to intense UV exposure, and use specialized products to ensure your property remains beautiful and protected.`}
+      propertyTypes={`Sandringham features a mix of classic weatherboard beach cottages, Edwardian homes, and modern bayside residences. Our team is skilled in tailoring our painting methods to suit each unique property type found along the Sandringham coastline.`}
       faqs={faqs}
       schema={schema}
     />

@@ -56,8 +56,8 @@ export default function BaysidePainters() {
         { name: "Black Rock", link: "/painter-black-rock" },
         { name: "Beaumaris", link: "/painter-beaumaris" }
       ]}
-      localExpertise=`Serving the entire Bayside region, we are the experts in coastal house painting. We understand the specific environmental factors affecting Bayside properties and provide specialized solutions to ensure long-lasting beauty and protection.`
-      propertyTypes=`Bayside is home to some of Melbourne's most prestigious properties, including historic mansions, modern architectural masterpieces, and classic coastal homes. We provide premium painting services for all Bayside property types.`
+      localExpertise={`Serving the entire Bayside region, we are the experts in coastal house painting. We understand the specific environmental factors affecting Bayside properties and provide specialized solutions to ensure long-lasting beauty and protection.`}
+      propertyTypes={`Bayside is home to some of Melbourne's most prestigious properties, including historic mansions, modern architectural masterpieces, and classic coastal homes. We provide premium painting services for all Bayside property types.`}
       faqs={faqs}
       schema={schema}
     />

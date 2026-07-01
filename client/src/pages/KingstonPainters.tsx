@@ -56,8 +56,8 @@ export default function KingstonPainters() {
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Chelsea", link: "/painter-chelsea" }
       ]}
-      localExpertise=`Serving the diverse City of Kingston, we provide professional painting services for residential and commercial properties. From the coastal suburbs to the industrial hubs, we understand the local needs and deliver high-quality, durable results.`
-      propertyTypes=`Kingston features a wide variety of properties, including suburban family homes, coastal residences, and commercial warehouses. Our team is equipped to handle projects of all scales across the Kingston area.`
+      localExpertise={`Serving the diverse City of Kingston, we provide professional painting services for residential and commercial properties. From the coastal suburbs to the industrial hubs, we understand the local needs and deliver high-quality, durable results.`}
+      propertyTypes={`Kingston features a wide variety of properties, including suburban family homes, coastal residences, and commercial warehouses. Our team is equipped to handle projects of all scales across the Kingston area.`}
       faqs={faqs}
       schema={schema}
     />

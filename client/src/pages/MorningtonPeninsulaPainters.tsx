@@ -56,8 +56,8 @@ export default function MorningtonPeninsulaPainters() {
         { name: "Dromana", link: "/painter-dromana" },
         { name: "Sorrento", link: "/painter-sorrento" }
       ]}
-      localExpertise=`As specialists serving the Mornington Peninsula, we understand the diverse needs of this region. From salt-sprayed coastal residences to rural farmhouses and luxury holiday homes, we provide durable painting solutions tailored to the Peninsula's unique climate.`
-      propertyTypes=`The Mornington Peninsula features a wide range of properties, including contemporary coastal mansions, rustic rural retreats, and classic beach shacks. Our team is experienced in selecting the right materials for each environment.`
+      localExpertise={`As specialists serving the Mornington Peninsula, we understand the diverse needs of this region. From salt-sprayed coastal residences to rural farmhouses and luxury holiday homes, we provide durable painting solutions tailored to the Peninsula's unique climate.`}
+      propertyTypes={`The Mornington Peninsula features a wide range of properties, including contemporary coastal mansions, rustic rural retreats, and classic beach shacks. Our team is experienced in selecting the right materials for each environment.`}
       faqs={faqs}
       schema={schema}
     />

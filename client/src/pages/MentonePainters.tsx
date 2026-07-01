@@ -56,8 +56,8 @@ export default function MentonePainters() {
         { name: "Beaumaris", link: "/painter-beaumaris" },
         { name: "Heatherton", link: "/painter-heatherton" }
       ]}
-      localExpertise=`As painters serving the Mentone area, we are deeply connected to the local architectural history, including the influence of the Heidelberg School. We specialize in providing durable, high-quality finishes that respect the heritage of Mentone's Italian-themed streets and coastal location.`
-      propertyTypes=`Mentone's properties range from historic Victorian-era homes to mid-century residences and modern apartments. We provide tailored painting solutions for every property type, ensuring a finish that enhances the unique character of your Mentone home.`
+      localExpertise={`As painters serving the Mentone area, we are deeply connected to the local architectural history, including the influence of the Heidelberg School. We specialize in providing durable, high-quality finishes that respect the heritage of Mentone's Italian-themed streets and coastal location.`}
+      propertyTypes={`Mentone's properties range from historic Victorian-era homes to mid-century residences and modern apartments. We provide tailored painting solutions for every property type, ensuring a finish that enhances the unique character of your Mentone home.`}
       faqs={faqs}
       schema={schema}
     />

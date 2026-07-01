@@ -56,8 +56,8 @@ export default function CarltonPainters() {
         { name: "East Melbourne", link: "/painter-east-melbourne" },
         { name: "Collingwood", link: "/painter-collingwood" }
       ]}
-      localExpertise=`Serving the vibrant Carlton community, we are experts in the restoration of iconic Victorian terrace houses. We understand the intricacies of Carlton's heritage architecture and the specific requirements for maintaining these historic properties within the City of Melbourne.`
-      propertyTypes=`Carlton is famous for its 19th-century Victorian architecture, including ornate terraced houses and heritage public buildings. We specialize in the detailed painting and restoration required for these unique property types.`
+      localExpertise={`Serving the vibrant Carlton community, we are experts in the restoration of iconic Victorian terrace houses. We understand the intricacies of Carlton's heritage architecture and the specific requirements for maintaining these historic properties within the City of Melbourne.`}
+      propertyTypes={`Carlton is famous for its 19th-century Victorian architecture, including ornate terraced houses and heritage public buildings. We specialize in the detailed painting and restoration required for these unique property types.`}
       faqs={faqs}
       schema={schema}
     />

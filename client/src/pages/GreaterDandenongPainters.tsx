@@ -56,8 +56,8 @@ export default function GreaterDandenongPainters() {
         { name: "Springvale", link: "/painter-springvale" },
         { name: "Lyndhurst", link: "/painter-lyndhurst" }
       ]}
-      localExpertise=`As painters serving the City of Greater Dandenong, we are committed to providing high-quality services for the region's homes and businesses. We specialize in durable finishes that withstand the local environment and enhance the value of your property.`
-      propertyTypes=`Greater Dandenong has a diverse range of properties, from established family homes and modern developments to large-scale commercial and industrial buildings. We have the expertise to handle any painting project in the area.`
+      localExpertise={`As painters serving the City of Greater Dandenong, we are committed to providing high-quality services for the region's homes and businesses. We specialize in durable finishes that withstand the local environment and enhance the value of your property.`}
+      propertyTypes={`Greater Dandenong has a diverse range of properties, from established family homes and modern developments to large-scale commercial and industrial buildings. We have the expertise to handle any painting project in the area.`}
       faqs={faqs}
       schema={schema}
     />

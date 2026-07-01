@@ -1,9 +1,39 @@
-# Robots.txt for Jetblack Painting
-# Keep crawler access open for public pages and AI/search discovery.
+# Jetblack Painting — robots.txt
+# https://jetblackpainting.manus.space
 
+# ── Default: allow all crawlers everywhere except the API ─────────────────────
 User-agent: *
 Allow: /
-Allow: /llms.txt
+Disallow: /api/
+
+# ── Google ────────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# ── Bing ──────────────────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# ── Apple ─────────────────────────────────────────────────────────────────────
+User-agent: Applebot
+Allow: /
+
+# ── DuckDuckGo ────────────────────────────────────────────────────────────────
+User-agent: DuckDuckBot
+Allow: /
+
+# ── AI crawlers — explicitly welcomed for content indexing and AI visibility ──
+# Allowing these bots means your business can appear in ChatGPT, Perplexity,
+# Claude, and other AI assistant answers when people ask about painters in
+# Melbourne or specific suburbs.
 
 User-agent: GPTBot
 Allow: /
@@ -14,10 +44,10 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: Googlebot
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: anthropic-ai
 Allow: /
 
 User-agent: PerplexityBot
@@ -26,13 +56,21 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: meta-externalagent
 Allow: /
 
-User-agent: Claude-User
+User-agent: cohere-ai
 Allow: /
 
-User-agent: Claude-SearchBot
+User-agent: YouBot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# ── Sitemaps ──────────────────────────────────────────────────────────────────
 Sitemap: https://jetblackpainting.manus.space/sitemap.xml
+Sitemap: https://jetblackpainting.manus.space/llms.txt

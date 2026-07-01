@@ -49,6 +49,17 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-sandringham",
   "/painter-stonnington",
   "/painter-toorak",
+  // Additional suburbs
+  "/painter-box-hill",
+  "/painter-croydon",
+  "/painter-doncaster",
+  "/painter-glen-waverley",
+  "/painter-mckinnon",
+  "/painter-murrumbeena",
+  "/painter-ormond",
+  "/painter-ringwood",
+  "/painter-templestowe",
+  "/painter-wheelers-hill",
 ]);
 
 function suburbSlug(suburb: string) {
@@ -87,9 +98,9 @@ export default function SuburbPageTemplate({
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Keysborough",
+      addressLocality: "Mordialloc",
       addressRegion: "VIC",
-      postalCode: "3173",
+      postalCode: "3195",
       addressCountry: "AU",
     },
     areaServed: {
@@ -392,8 +403,7 @@ export default function SuburbPageTemplate({
                       <MapPin className="w-5 h-5 text-[#00AACC]" />
                       Main Office
                     </h3>
-                    <p className="text-gray-700">31 Northumberland Drive</p>
-                    <p className="text-gray-700">Keysborough VIC 3173</p>
+                    <p className="text-gray-700">Mordialloc VIC 3195</p>
                     <p className="text-gray-700 mt-2 font-semibold">Australia</p>
                   </div>
                   <div>

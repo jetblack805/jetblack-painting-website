@@ -14,15 +14,20 @@
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Keysborough",
+    "addressLocality": "Mordialloc",
     "addressRegion": "VIC",
-    "postalCode": "3173",
+    "postalCode": "3195",
     "addressCountry": "AU"
   },
   "areaServed": [
     "Melbourne",
-    "Keysborough",
+    "Mordialloc",
+    "Mentone",
+    "Sandringham",
     "Brighton",
+    "Hampton",
+    "Bentleigh",
+    "Keysborough",
     "Toorak",
     "Malvern",
     "Camberwell",

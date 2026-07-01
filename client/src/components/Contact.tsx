@@ -21,8 +21,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "31 Northumberland Dr, Keysborough VIC 3173",
-    href: "https://maps.google.com/?q=31+Northumberland+Dr+Keysborough+VIC+3173",
+    value: "Mordialloc VIC 3195",
+    href: "https://maps.google.com/?q=Jetblack+Painting+Mordialloc+VIC+3195",
   },
   {
     icon: Clock,

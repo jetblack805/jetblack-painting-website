@@ -64,12 +64,12 @@ interface Meta {
   canonical: string;
 }
 
-function sm(suburb: string, slug: string, customTitle?: string): Meta {
+function sm(suburb: string, slug: string, customTitle?: string, customDesc?: string): Meta {
   return {
     title:
       customTitle ??
       `${suburb} Painters | Professional House Painting | Jetblack Painting`,
-    description: `Jetblack Painting provides professional interior, exterior and commercial painting in ${suburb}, Melbourne. Fully insured, 5-star rated. Free written quotes — call 0432 077 782.`,
+    description: customDesc ?? `Jetblack Painting provides professional interior, exterior and commercial painting in ${suburb}, Melbourne. Fully insured, 5-star rated. Free written quotes — call 0432 077 782.`,
     canonical: `${BASE_URL}${slug}/`,
   };
 }
@@ -92,7 +92,7 @@ const META: Record<string, Meta> = {
   "/painter-bentleigh":           sm("Bentleigh",           "/painter-bentleigh"),
   "/painter-caulfield":           sm("Caulfield",           "/painter-caulfield"),
   "/painter-hampton":             sm("Hampton",             "/painter-hampton"),
-  "/painter-mordialloc":          sm("Mordialloc",          "/painter-mordialloc"),
+  "/painter-mordialloc":          sm("Mordialloc",          "/painter-mordialloc",          "Mordialloc Painters | Local Painting Experts Based in Mordialloc | Jetblack Painting", "Jetblack Painting is based in Mordialloc and provides expert interior, exterior, roof and commercial painting across Mordialloc and surrounds. 5-star rated, fully insured. Free quotes — call 0432 077 782."),
   "/keysborough-painters":        sm("Keysborough",         "/keysborough-painters",        "Keysborough Painters | Local House Painting Specialists | Jetblack Painting"),
   "/painter-kew":                 sm("Kew",                 "/painter-kew"),
   "/painter-sandringham":         sm("Sandringham",         "/painter-sandringham"),
@@ -354,7 +354,7 @@ const FAQ_SCHEMA = JSON.stringify({
     { "@type": "Question", name: "Are you licensed and insured?", acceptedAnswer: { "@type": "Answer", text: "Yes, Jetblack Painting is fully licensed and carries $20 million public liability insurance. All work is backed by a 5-year workmanship guarantee." } },
     { "@type": "Question", name: "How long have you been in business?", acceptedAnswer: { "@type": "Answer", text: "Jetblack Painting has been serving Melbourne for over 13 years, building a reputation for quality workmanship and customer satisfaction across 30+ suburbs." } },
     { "@type": "Question", name: "Do you provide references?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We're happy to provide references from previous customers. We also have a 5-star Google rating with 127+ satisfied clients." } },
-    { "@type": "Question", name: "What areas do you serve?", acceptedAnswer: { "@type": "Answer", text: "We serve all Melbourne suburbs including Keysborough, Brighton, Toorak, Mordialloc, Hawthorn, Mentone, Sandringham, Camberwell, Bentleigh, Caulfield, Hampton, Kew, Carlton, Bayside, Mornington Peninsula, and 30+ more suburbs across Melbourne's south-east, inner east, and eastern suburbs." } },
+    { "@type": "Question", name: "What areas do you serve?", acceptedAnswer: { "@type": "Answer", text: "We serve all Melbourne suburbs including Mordialloc, Mentone, Sandringham, Brighton, Hampton, Bentleigh, Keysborough, Toorak, Hawthorn, Camberwell, Caulfield, Kew, Carlton, Bayside, Mornington Peninsula, and 30+ more suburbs across Melbourne's south-east, inner east, and eastern suburbs." } },
     { "@type": "Question", name: "Do you travel outside Melbourne?", acceptedAnswer: { "@type": "Answer", text: "We primarily serve the Melbourne metropolitan area including the Mornington Peninsula. For projects outside our usual service area, please contact us to discuss availability." } },
     { "@type": "Question", name: "Is there a minimum project size?", acceptedAnswer: { "@type": "Answer", text: "No, we welcome projects of all sizes, from small room touch-ups to large commercial painting projects." } },
     { "@type": "Question", name: "Do you offer painting services for coastal homes in Mordialloc and Bayside?", acceptedAnswer: { "@type": "Answer", text: "Yes, we specialise in painting coastal homes across Mordialloc, Sandringham, Hampton, and Bayside. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and UV rays." } },

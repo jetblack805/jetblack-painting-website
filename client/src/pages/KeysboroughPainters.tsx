@@ -12,7 +12,7 @@ export default function KeysboroughPainters() {
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Caulfield", link: "/painter-caulfield" },
       ]}
-      localExpertise="Jetblack Painting is proudly based in Keysborough at 31 Northumberland Dr. As your local painters, we offer the fastest response times and most personalised service. We know every street in Keysborough and have painted hundreds of local homes over our 13+ years in business."
+      localExpertise="Jetblack Painting is based in nearby Mordialloc and has been painting Keysborough homes for 13+ years. As your local painters, we offer fast response times, personalised service, and expert knowledge of every street in Keysborough."
       propertyTypes="Keysborough's modern family homes, townhouses, and established residences"
     />
   );

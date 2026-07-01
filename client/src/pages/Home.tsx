@@ -57,7 +57,7 @@ export default function Home() {
           <p className="text-gray-700 max-w-4xl">
             Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 30+ suburbs.
             We provide interior, exterior, roof, cabinet, and commercial painting for homeowners, landlords, and businesses.
-            Based in Keysborough, we cover Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Mordialloc, Dandenong, and all surrounding Melbourne areas.
+            Based in Mordialloc, we cover Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and all surrounding Melbourne areas.
             Free painting quotes — call 0432 077 782.
           </p>
         </div>

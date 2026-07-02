@@ -291,7 +291,7 @@ const AGGREGATE_RATING_SCHEMA = JSON.stringify({
     ratingValue: "5.0",
     bestRating: "5",
     worstRating: "1",
-    reviewCount: "127", // ← UPDATE THIS with your actual Google review count
+    reviewCount: "14", // ← UPDATE THIS with your actual Google review count
   },
 });
 

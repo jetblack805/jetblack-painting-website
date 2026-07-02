@@ -80,6 +80,7 @@ function vitePluginCopyStaticFiles(): Plugin {
       const filesToCopy = ["sitemap.xml", "robots.txt"];
       const sourceDir = path.join(PROJECT_ROOT, "public");
       const destDir = path.join(PROJECT_ROOT, "dist/public");
+      fs.mkdirSync(destDir, { recursive: true });
 
       for (const file of filesToCopy) {
         const src = path.join(sourceDir, file);

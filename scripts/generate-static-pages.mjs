@@ -5,6 +5,7 @@ const SITE_URL = "https://jetblackpainting.manus.space";
 const PHONE_DISPLAY = "0432 077 782";
 const PHONE_HREF = "0432077782";
 const EMAIL = "jimmy@jetblackpainting.com";
+const GOOGLE_REVIEW_LINK = "https://g.page/r/jetblackpainting/review";
 const PUBLIC_DIR = path.resolve("public");
 const PAGE_DIR = path.resolve("client/src/pages");
 
@@ -655,7 +656,7 @@ writePage(
         type: "steps",
         heading: "How to leave a Google review",
         items: [
-          { title: "Open our review link", body: "Visit https://g.page/r/jetblackpainting/review on your phone or computer." },
+          { title: "Open our review link", body: `Visit ${GOOGLE_REVIEW_LINK} on your phone or computer.` },
           { title: "Choose your star rating", body: "Select the star rating that matches your experience working with Jetblack Painting." },
           { title: "Add a short comment", body: "Mention the type of painting service, your suburb, and what stood out about the job." },
           { title: "Submit the review", body: "Post the review so other Melbourne property owners can read your feedback." },

@@ -1,4 +1,4 @@
-﻿import express, { type Express } from "express";
+import express, { type Express } from "express";
 import fs from "fs";
 import { type Server } from "http";
 import { nanoid } from "nanoid";
@@ -92,7 +92,7 @@ const META: Record<string, Meta> = {
   "/painter-bentleigh":           sm("Bentleigh",           "/painter-bentleigh"),
   "/painter-caulfield":           sm("Caulfield",           "/painter-caulfield"),
   "/painter-hampton":             sm("Hampton",             "/painter-hampton"),
-  "/painter-mordialloc":          sm("Mordialloc",          "/painter-mordialloc",          "Mordialloc Painters | Local Painting Experts Based in Mordialloc | Jetblack Painting", "Jetblack Painting is based in Mordialloc and provides expert interior, exterior, roof and commercial painting across Mordialloc and surrounds. 5-star rated, fully insured. Free quotes — call 0432 077 782."),
+  "/painter-mordialloc":          sm("Mordialloc",          "/painter-mordialloc",          "Mordialloc Painters | Local Painting Experts Based in Mordialloc | Jetblack Painting", "Jetblack Painting is based in Mordialloc and provides expert interior, exterior and commercial painting throughout Mordialloc and nearby suburbs. Fully insured, 5-star rated. Free quotes."),
   "/keysborough-painters":        sm("Keysborough",         "/keysborough-painters",        "Keysborough Painters | Local House Painting Specialists | Jetblack Painting"),
   "/painter-kew":                 sm("Kew",                 "/painter-kew"),
   "/painter-sandringham":         sm("Sandringham",         "/painter-sandringham"),
@@ -352,7 +352,7 @@ function suburbService(suburb: string, slug: string) {
     "@id": `${BASE_URL}${slug}/#service`,
     name: `Painters ${suburb} Melbourne`,
     serviceType: "House Painting",
-    description: `Professional house painting services in ${suburb}, Melbourne. Interior, exterior, roof and commercial painting by Jetblack Painting — 5-star rated, fully insured. Free quotes — call 0432 077 782.`,
+    description: `Professional house painting services in ${suburb}, Melbourne. Interior, exterior, roof and commercial painting by Jetblack Painting — 5-star rated, fully insured. Free quotes.`,
     provider: {
       "@type": "HomeAndConstructionBusiness",
       "@id": `${BASE_URL}/#business`,
@@ -389,28 +389,28 @@ const FAQ_SCHEMA = JSON.stringify({
   "@type": "FAQPage",
   "@id": `${BASE_URL}/faq#faqpage`,
   mainEntity: [
-    { "@type": "Question", name: "Do you offer free quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes! We provide completely free, no-obligation quotes. We'll visit your property, assess your needs, and provide a competitive price estimate. Call Jimmy on 0432 077 782 or use the online form." } },
-    { "@type": "Question", name: "Are you licensed and insured?", acceptedAnswer: { "@type": "Answer", text: "Yes, Jetblack Painting is fully licensed and carries $20 million public liability insurance. All work is backed by a 5-year workmanship guarantee." } },
-    { "@type": "Question", name: "How long have you been in business?", acceptedAnswer: { "@type": "Answer", text: "Jetblack Painting has been serving Melbourne for over 13 years, building a reputation for quality workmanship and customer satisfaction across 30+ suburbs." } },
-    { "@type": "Question", name: "Do you provide references?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We're happy to provide references from previous customers. We also have a 5-star Google rating with 127+ satisfied clients." } },
-    { "@type": "Question", name: "What areas do you serve?", acceptedAnswer: { "@type": "Answer", text: "We serve all Melbourne suburbs including Mordialloc, Mentone, Sandringham, Brighton, Hampton, Bentleigh, Keysborough, Toorak, Hawthorn, Camberwell, Caulfield, Kew, Carlton, Bayside, Mornington Peninsula, and 30+ more suburbs across Melbourne's south-east, inner east, and eastern suburbs." } },
-    { "@type": "Question", name: "Do you travel outside Melbourne?", acceptedAnswer: { "@type": "Answer", text: "We primarily serve the Melbourne metropolitan area including the Mornington Peninsula. For projects outside our usual service area, please contact us to discuss availability." } },
-    { "@type": "Question", name: "Is there a minimum project size?", acceptedAnswer: { "@type": "Answer", text: "No, we welcome projects of all sizes, from small room touch-ups to large commercial painting projects." } },
-    { "@type": "Question", name: "Do you offer painting services for coastal homes in Mordialloc and Bayside?", acceptedAnswer: { "@type": "Answer", text: "Yes, we specialise in painting coastal homes across Mordialloc, Sandringham, Hampton, and Bayside. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and UV rays." } },
-    { "@type": "Question", name: "How long does interior painting take?", acceptedAnswer: { "@type": "Answer", text: "Most interior painting projects take 3–7 days depending on the size and complexity. A standard 3-bedroom interior repaint typically takes 3–5 days. We'll provide a detailed timeline during your free quote." } },
-    { "@type": "Question", name: "Do you move furniture before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes, we move and protect your furniture as part of our service. We use drop cloths and plastic sheeting to protect floors and belongings." } },
-    { "@type": "Question", name: "Can you help with colour selection?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! Our team has extensive experience with colour trends and can help you choose colours that complement your Melbourne home's style and architecture." } },
-    { "@type": "Question", name: "What paint brands do you use?", acceptedAnswer: { "@type": "Answer", text: "We use premium quality paints from leading Australian brands including Dulux and Taubmans. We can recommend the best products for your specific surfaces and conditions." } },
-    { "@type": "Question", name: "How often should I repaint my home exterior?", acceptedAnswer: { "@type": "Answer", text: "Most exterior paint jobs last 5–10 years depending on weather conditions, paint quality, and surface type. In Melbourne's coastal suburbs, salt air can accelerate weathering. We can assess your home and recommend a timeline during your free quote." } },
-    { "@type": "Question", name: "Can you paint in all weather conditions?", acceptedAnswer: { "@type": "Answer", text: "We can paint in most conditions, but avoid extreme heat, cold, or rain. We'll schedule your project during optimal weather windows to ensure the best possible finish." } },
-    { "@type": "Question", name: "Do you prepare surfaces before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes, proper preparation is essential to a long-lasting result. We clean, sand, fill, and prime surfaces before applying any paint coats." } },
-    { "@type": "Question", name: "What's included in an exterior painting service?", acceptedAnswer: { "@type": "Answer", text: "Our exterior service includes full surface preparation (wash, sand, fill, prime), painting of walls, fascias, gutters, trim, and cleanup. All prep is included in every quote." } },
-    { "@type": "Question", name: "Can you handle large commercial painting projects?", acceptedAnswer: { "@type": "Answer", text: "Yes! We have experience with commercial painting projects of all sizes, from small offices to large retail spaces, strata buildings, and industrial facilities." } },
+    { "@type": "Question", name: "Do you offer free quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes! We provide completely free, no-obligation quotes. We'll visit your property, assess the work, and provide a detailed written quote." } },
+    { "@type": "Question", name: "Are you licensed and insured?", acceptedAnswer: { "@type": "Answer", text: "Yes, Jetblack Painting is fully licensed and carries $20 million public liability insurance for your complete peace of mind." } },
+    { "@type": "Question", name: "How long have you been in business?", acceptedAnswer: { "@type": "Answer", text: "Jetblack Painting has been serving Melbourne for over 13 years, building a reputation for quality workmanship and reliability." } },
+    { "@type": "Question", name: "Do you provide references?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We're happy to provide references from previous customers. We also have a 5-star Google rating with many verified reviews." } },
+    { "@type": "Question", name: "What areas do you serve?", acceptedAnswer: { "@type": "Answer", text: "We serve all Melbourne suburbs including Mordialloc, Mentone, Sandringham, Brighton, Hampton, and the Mornington Peninsula." } },
+    { "@type": "Question", name: "Do you travel outside Melbourne?", acceptedAnswer: { "@type": "Answer", text: "We primarily serve the Melbourne metropolitan area including the Mornington Peninsula. Contact us to discuss your location." } },
+    { "@type": "Question", name: "Is there a minimum project size?", acceptedAnswer: { "@type": "Answer", text: "No, we welcome projects of all sizes, from small room touch-ups to large commercial buildings." } },
+    { "@type": "Question", name: "Do you offer painting services for coastal homes in Mordialloc and Bayside?", acceptedAnswer: { "@type": "Answer", text: "Yes, we specialise in painting coastal properties and use weather-resistant products designed for Melbourne's coastal conditions." } },
+    { "@type": "Question", name: "How long does interior painting take?", acceptedAnswer: { "@type": "Answer", text: "Most interior painting projects take 3–7 days depending on the size and complexity of the job." } },
+    { "@type": "Question", name: "Do you move furniture before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes, we move and protect your furniture as part of our service. We use drop sheets and plastic covering to keep your home clean." } },
+    { "@type": "Question", name: "Can you help with colour selection?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! Our team has extensive experience with colour trends and can help you choose the perfect palette for your home." } },
+    { "@type": "Question", name: "What paint brands do you use?", acceptedAnswer: { "@type": "Answer", text: "We use premium quality paints from leading Australian brands including Dulux and Taubmans." } },
+    { "@type": "Question", name: "How often should I repaint my home exterior?", acceptedAnswer: { "@type": "Answer", text: "Most exterior paint jobs last 5–10 years depending on weather conditions, surface quality, and paint type used." } },
+    { "@type": "Question", name: "Can you paint in all weather conditions?", acceptedAnswer: { "@type": "Answer", text: "We can paint in most conditions, but avoid extreme heat, cold, or rain. We schedule work for optimal weather to ensure the best finish." } },
+    { "@type": "Question", name: "Do you prepare surfaces before painting?", acceptedAnswer: { "@type": "Answer", text: "Yes, proper preparation is essential to a long-lasting result. We clean, sand, fill cracks, and prime before painting." } },
+    { "@type": "Question", name: "What's included in an exterior painting service?", acceptedAnswer: { "@type": "Answer", text: "Our exterior service includes full surface preparation (wash, sand, repair), priming, and two topcoats for a durable finish." } },
+    { "@type": "Question", name: "Can you handle large commercial painting projects?", acceptedAnswer: { "@type": "Answer", text: "Yes! We have experience with commercial painting projects of all sizes, including offices, retail spaces, and strata properties." } },
     { "@type": "Question", name: "Can you work after hours for commercial projects?", acceptedAnswer: { "@type": "Answer", text: "Yes, we can arrange after-hours or weekend work to minimise disruption to your business operations." } },
-    { "@type": "Question", name: "How much does house painting cost in Melbourne?", acceptedAnswer: { "@type": "Answer", text: "Pricing depends on project size, surface condition, paint quality, and location. Interior painting typically starts from $1,500 for a standard room. Full exterior repaints for an average Melbourne home range from $4,000–$10,000. We provide free detailed quotes with no hidden costs." } },
-    { "@type": "Question", name: "Do you offer kitchen cabinet resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Yes! We specialise in luxury kitchen cabinet resurfacing using 2-pack spray finishes. It's a fraction of the cost of replacement and leaves your kitchen looking brand new. Free quotes available." } },
-    { "@type": "Question", name: "Do you provide roof painting services?", acceptedAnswer: { "@type": "Answer", text: "Yes, we provide professional roof painting and restoration services including cleaning, crack repair, priming, and quality roof coatings to protect and refresh your roof." } },
-    { "@type": "Question", name: "Do you do pre-sale property painting?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We specialise in pre-sale painting to maximise your Melbourne property's buyer appeal and sale price. Fast turnaround available for vendor campaigns." } },
+    { "@type": "Question", name: "How much does house painting cost in Melbourne?", acceptedAnswer: { "@type": "Answer", text: "Pricing depends on project size, surface condition, paint quality, and access. Contact us for a free detailed quote." } },
+    { "@type": "Question", name: "Do you offer kitchen cabinet resurfacing?", acceptedAnswer: { "@type": "Answer", text: "Yes! We specialise in luxury kitchen cabinet resurfacing using 2-pack spray finishes for a factory-like result." } },
+    { "@type": "Question", name: "Do you provide roof painting services?", acceptedAnswer: { "@type": "Answer", text: "Yes, we provide professional roof painting and restoration services including cleaning, repairs, priming, and coating." } },
+    { "@type": "Question", name: "Do you do pre-sale property painting?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We specialise in pre-sale painting to maximise your Melbourne property's presentation and sale value." } },
   ],
 });
 
@@ -544,7 +544,7 @@ const SCHEMAS_BY_ROUTE: Record<string, string[]> = {
       { name: "Kitchen Cabinet Resurfacing Melbourne", item: `${BASE_URL}/services/kitchen-cabinet-resurfacing` },
     ]),
   ],
-  // ─── Suburb pages ────────────────────────────────────────────────────────
+  // ─── Suburb pages ─────────────────────────────────────────────────────────
   "/painter-toorak": [
     suburbService("Toorak", "/painter-toorak"),
     breadcrumb([
@@ -785,13 +785,13 @@ const SCHEMAS_BY_ROUTE: Record<string, string[]> = {
   ],
 };
 
-// ─── serveStatic ─────────────────────────────────────────────────────────────
+// ─── serveStatic ───────────────────────────────────────────────────────────────
 
 export function serveStatic(app: Express) {
   const distPath =
     process.env.NODE_ENV === "development"
       ? path.resolve(import.meta.dirname, "../..", "dist", "public")
-      : path.resolve(import.meta.dirname, "public");
+      : path.resolve(process.cwd(), "dist", "public");
 
   if (!fs.existsSync(distPath)) {
     console.error(

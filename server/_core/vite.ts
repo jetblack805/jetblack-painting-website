@@ -788,10 +788,11 @@ const SCHEMAS_BY_ROUTE: Record<string, string[]> = {
 // ─── serveStatic ───────────────────────────────────────────────────────────────
 
 export function serveStatic(app: Express) {
-  const _d1 = path.resolve(process.cwd(), 'dist', 'public');
-const _d2 = path.resolve(import.meta.dirname, 'public');
-const distPath = fs.existsSync(_d1) ? _d1 : fs.existsSync(_d2) ? _d2 : _d1;
-console.log('DIST:', distPath, fs.existsSync(distPath));
+  const distPath =
+  process.env.NODE_ENV === "development"
+    ? path.resolve(import.meta.dirname, "..
+    : path.resolve(process.cwd(), "dist",
+
 
 
   if (!fs.existsSync(distPath)) {

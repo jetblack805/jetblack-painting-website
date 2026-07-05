@@ -5,8 +5,7 @@
  */
 import { motion } from "framer-motion";
 import { ArrowDown, Phone, ChevronRight } from "lucide-react";
-
-const HERO_BG = "https://private-us-east-1.manuscdn.com/sessionFile/quv5t936LnGr5RkCM2qg9C/sandbox/KUjptAuQEUUICu4dv5y25x-img-1_1770474108000_na1fn_aGVyby1iZw.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvcXV2NXQ5MzZMbkdyNVJrQ00ycWc5Qy9zYW5kYm94L0tVanB0QXVRRVVVSUN1NGR2NXkyNXgtaW1nLTFfMTc3MDQ3NDEwODAwMF9uYTFmbl9hR1Z5YnkxaVp3LmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=wCeA6qUcgrY77~3yEongFN3vDDSKzM4MVfe9YrrgU-NHYlnR6BBchYI7jHSv8JVbccdklthXTRu3SOfcNuX1dS2dYEhOvBOurvCUbsjnxBWi5OKYbpFCRQ6zaRdFj5PBmDiuRKRVy7Lftwpxg10e0Uk7cs67T~NvzZvWVnytjerX~Z9Ryq0p0mA-SZ4YEvuo8H6zA6TKwWS4fHqUlBfWu4FW~9Zk~gzI7ZPupARiUplLbQ~cNmB4zFfaHr6pC4zPLhworaKIhK329FmridVO1TA0dlLqa6QUXXbqOhBbg0ZZtiNbgfRuvsYuqtc4YLALv~2Nu0Nc7tfhV8EKqL2J7g__";
+import HERO_BG from "@/assets/images/hero-background.jpg";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {

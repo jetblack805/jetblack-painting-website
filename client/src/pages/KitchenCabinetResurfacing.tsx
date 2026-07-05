@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MidPageCTA from "@/components/MidPageCTA";
 import imgService from "@/assets/images/about-team-at-work.jpeg";
 
 export default function KitchenCabinetResurfacing() {
@@ -160,6 +161,8 @@ export default function KitchenCabinetResurfacing() {
           </motion.div>
 
           {/* Process Section */}
+          <MidPageCTA heading="Get your free Kitchen Cabinet Resurfacing quote today" />
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

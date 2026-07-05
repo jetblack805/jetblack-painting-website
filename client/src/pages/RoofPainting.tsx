@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MidPageCTA from "@/components/MidPageCTA";
 import imgService from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
 
 export default function RoofPainting() {
@@ -105,6 +106,8 @@ export default function RoofPainting() {
           </motion.div>
 
           {/* Service Areas */}
+          <MidPageCTA heading="Get your free Roof Painting quote today" />
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

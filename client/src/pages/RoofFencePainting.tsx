@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { CheckCircle, Phone, Shield, Zap } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function RoofFencePainting() {
   const benefits = [
@@ -52,9 +54,10 @@ export default function RoofFencePainting() {
         description="Professional roof painting and fence painting Melbourne. Extends roof life 10-15 years, weather-resistant coatings, 5-star rated. Free quotes - Call 0432 077 782."
         canonical="https://jetblackpainting.com/services/roof-fence-painting"
       />
+      <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -277,6 +280,7 @@ export default function RoofFencePainting() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

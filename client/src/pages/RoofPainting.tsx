@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { CheckCircle, Phone } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function RoofPainting() {
   const benefits = [
@@ -30,9 +32,10 @@ export default function RoofPainting() {
         description="Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes."
         canonical="https://jetblackpainting.com/services/roof-painting"
       />
+      <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -150,6 +153,7 @@ export default function RoofPainting() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

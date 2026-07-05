@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { CheckCircle, Phone } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function ExteriorPainting() {
   const benefits = [
@@ -33,9 +35,10 @@ export default function ExteriorPainting() {
         description="Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
         canonical="https://jetblackpainting.com/services/exterior-painting"
       />
+      <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -159,6 +162,7 @@ export default function ExteriorPainting() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

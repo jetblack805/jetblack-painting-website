@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -159,8 +161,9 @@ export default function FAQ() {
         description="Frequently asked questions about Jetblack Painting services in Melbourne, including quotes, service areas, interior, exterior and commercial painting."
         canonical="https://jetblackpainting.com/faq"
       />
+      <Navbar />
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -244,6 +247,7 @@ export default function FAQ() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

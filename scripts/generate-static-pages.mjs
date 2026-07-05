@@ -324,20 +324,44 @@ function generateSuburbPage(route, sourceFile) {
   );
 }
 
-const missingSuburbPages = [
+const allSuburbPages = [
+  { route: "/painter-armadale", source: "ArmadalePainters.tsx" },
+  { route: "/painter-bayside", source: "BaysidePainters.tsx" },
+  { route: "/painter-bentleigh", source: "BentleighPainters.tsx" },
+  { route: "/painter-berwick", source: "BerwickPainters.tsx" },
   { route: "/painter-box-hill", source: "BoxHillPainters.tsx" },
+  { route: "/painter-brighton", source: "BrightonPainters.tsx" },
+  { route: "/painter-camberwell", source: "CamberwellPainters.tsx" },
+  { route: "/painter-carlton", source: "CarltonPainters.tsx" },
+  { route: "/painter-caulfield", source: "CaulfieldPainters.tsx" },
   { route: "/painter-croydon", source: "CroydonPainters.tsx" },
+  { route: "/painter-dandenong", source: "DandenongPainters.tsx" },
   { route: "/painter-doncaster", source: "DoncasterPainters.tsx" },
+  { route: "/painter-donvale", source: "DonvalePainters.tsx" },
   { route: "/painter-glen-waverley", source: "GlenWaverleyPainters.tsx" },
+  { route: "/painter-greater-dandenong", source: "GreaterDandenongPainters.tsx" },
+  { route: "/painter-hampton", source: "HamptonPainters.tsx" },
+  { route: "/painter-hawthorn", source: "HawthornPainters.tsx" },
+  { route: "/painter-kew", source: "KewPainters.tsx" },
+  { route: "/keysborough-painters", source: "KeysboroughPainters.tsx" },
+  { route: "/painter-kingston", source: "KingstonPainters.tsx" },
+  { route: "/painter-malvern", source: "MalvernPainters.tsx" },
   { route: "/painter-mckinnon", source: "McKinnonPainters.tsx" },
+  { route: "/painter-mentone", source: "MentonePainters.tsx" },
+  { route: "/painter-moorabbin", source: "MoorabbinPainters.tsx" },
+  { route: "/painter-mordialloc", source: "MordiallocPainters.tsx" },
+  { route: "/painter-mornington-peninsula", source: "MorningtonPeninsulaPainters.tsx" },
   { route: "/painter-murrumbeena", source: "MurrumbeenaPainters.tsx" },
   { route: "/painter-ormond", source: "OrmondPainters.tsx" },
   { route: "/painter-ringwood", source: "RingwoodPainters.tsx" },
+  { route: "/painter-sandringham", source: "SandringhamPainters.tsx" },
+  { route: "/painter-stonnington", source: "StonningtonPainters.tsx" },
   { route: "/painter-templestowe", source: "TemplestowePainters.tsx" },
+  { route: "/painter-toorak", source: "ToorakPainters.tsx" },
   { route: "/painter-wheelers-hill", source: "WheelersHillPainters.tsx" },
 ];
 
-for (const page of missingSuburbPages) {
+for (const page of allSuburbPages) {
   generateSuburbPage(page.route, path.join(PAGE_DIR, page.source));
 }
 

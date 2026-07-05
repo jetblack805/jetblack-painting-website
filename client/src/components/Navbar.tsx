@@ -51,7 +51,7 @@ export default function Navbar() {
           <img
             src={LOGO_URL}
             alt="Jetblack Painting"
-            className="h-10 lg:h-12 w-auto rounded"
+            className="h-10 w-40 lg:h-12 lg:w-48 rounded object-cover object-center"
           />
         </a>
 

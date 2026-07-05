@@ -2,8 +2,7 @@
  * Design: Bold Contrast — Footer on jet black background
  */
 import { Phone, Instagram, MapPin } from "lucide-react";
-
-const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/uutbBQWpBSMyhXzk.jpg";
+import LOGO_URL from "@/assets/images/logo.jpg";
 
 export default function Footer() {
   const scrollToSection = (id: string) => {

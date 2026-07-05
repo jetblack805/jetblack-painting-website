@@ -6,8 +6,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/uutbBQWpBSMyhXzk.jpg";
+import LOGO_URL from "@/assets/images/logo.jpg";
 
 const navLinks = [
   { label: "Home", href: "#home" },

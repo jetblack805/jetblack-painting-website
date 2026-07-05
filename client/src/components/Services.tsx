@@ -5,48 +5,54 @@
 import { motion } from "framer-motion";
 import { Home, Building2, PaintBucket, Paintbrush, Warehouse, Fence } from "lucide-react";
 import { Link } from "wouter";
+import imgInteriorPainting from "@/assets/images/service-interior-painting.jpeg";
+import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
+import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
+import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.jpeg";
+import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.jpeg";
+import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.jpeg";
 
 const services = [
   {
     icon: Home,
     title: "Interior House Painting Melbourne",
     description: "Our professional interior painting Melbourne services transform your living spaces with flawless finishes. From walls and ceilings to detailed trims and doors, our expert painters deliver fresh, clean looks throughout your home. We proudly serve Keysborough, Bayside, and all Melbourne suburbs with premium quality paints and meticulous attention to detail.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/KYFGAGWwrHFpqGZW.jpeg",
+    image: imgInteriorPainting,
     link: "/services/interior-painting",
   },
   {
     icon: Paintbrush,
     title: "Exterior House Painting Melbourne",
     description: "Boost your property's curb appeal with our expert exterior painting Melbourne services. We specialise in high-quality repaints for weatherboards, render, fascias, and gutters, using durable paints built to withstand Melbourne's varied weather. Our exterior house painters ensure long-lasting protection and a beautiful finish for homes in Keysborough and Bayside.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/rEhHpLqiuktAVhOl.jpeg",
+    image: imgNavyWeatherboard,
     link: "/services/exterior-painting",
   },
   {
     icon: Building2,
     title: "Commercial Painting Melbourne",
     description: "Jetblack Painting provides professional commercial painting Melbourne services to keep your business premises looking their best. Our commercial painting contractors work with offices, retail shops, warehouses, and factories across Melbourne, ensuring high-quality results while minimising disruption to your daily operations.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/mQxpXRxNSxlrzUtw.jpeg",
+    image: imgEpoxyFloor,
     link: "/services/commercial-painting",
   },
   {
     icon: PaintBucket,
     title: "Pre-Sale Property Painting Melbourne",
     description: "Maximise your property's market value with our pre-sale property painting Melbourne services. A fresh, modern coat of paint is one of the most cost-effective ways to increase buyer appeal and achieve a higher sale price. Our painters help homeowners in Keysborough and Bayside prepare their properties for a successful sale.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/kBOMcHSWYZOFHhIp.jpeg",
+    image: imgWhiteModern,
     link: "/services/pre-sale-property-painting",
   },
   {
     icon: Warehouse,
     title: "Rental Property Painting Melbourne",
     description: "We provide efficient rental property painting Melbourne services for landlords, property managers, and real estate agencies. Our team ensures a fast turnaround between tenancies, keeping your investment properties in top condition with durable, high-quality finishes across all Melbourne suburbs.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/PjnbMqfamLZEUUyM.jpeg",
+    image: imgTudorHeritage,
     link: "/services/rental-property-painting",
   },
   {
     icon: Fence,
     title: "Roof & Fence Painting Melbourne",
     description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Keysborough, Bayside, and throughout Melbourne.",
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/unIjWONLqcppDssG.jpeg",
+    image: imgRoofFencePainting,
     link: "/services/roof-fence-painting",
   },
 ];

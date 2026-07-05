@@ -12,65 +12,77 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import imgBeforeAfterKeysborough from "@/assets/images/gallery-exterior-before-after-keysborough.jpeg";
+import imgGreyModernBayside from "@/assets/images/gallery-exterior-grey-modern-bayside.jpeg";
+import imgPainterOnLadder from "@/assets/images/gallery-exterior-painter-on-ladder.jpeg";
+import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
+import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
+import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
+import imgTwoStoryMornington from "@/assets/images/gallery-exterior-two-story-mornington.jpeg";
+import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.jpeg";
+import imgDarkCommercialBuilding from "@/assets/images/gallery-commercial-dark-building.jpeg";
+import imgVictorianTrim from "@/assets/images/gallery-exterior-victorian-trim.jpeg";
+import imgScissorLift from "@/assets/images/gallery-commercial-scissor-lift.jpeg";
+import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.jpeg";
 
 const projects = [
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/YlVHtJeJnaAjwGUT.jpeg",
+    src: imgBeforeAfterKeysborough,
     alt: "Before and after exterior house painting transformation in Keysborough Melbourne",
     category: "Exterior",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/NfJeTGVkbdCmILwC.png",
+    src: imgGreyModernBayside,
     alt: "Modern grey home exterior repaint by professional painters in Bayside Melbourne",
     category: "Exterior",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/aZGARrzupCzIyxjh.jpeg",
+    src: imgPainterOnLadder,
     alt: "Professional house painter on ladder working on exterior residential project Melbourne",
     category: "Exterior",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/mQxpXRxNSxlrzUtw.jpeg",
+    src: imgEpoxyFloor,
     alt: "Commercial epoxy floor painting for warehouse in Melbourne Victoria",
     category: "Commercial",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/rEhHpLqiuktAVhOl.jpeg",
+    src: imgNavyWeatherboard,
     alt: "Navy weatherboard house with white fence - exterior painting specialists Melbourne",
     category: "Exterior",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/wOgKqvGwAnSxzfWQ.jpeg",
+    src: imgVictorianRoof,
     alt: "Victorian house roof painting and restoration Melbourne",
     category: "Roof",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/GnDIeFAcerFsmqSJ.jpeg",
+    src: imgTwoStoryMornington,
     alt: "Two-story house exterior painting project in Mornington Peninsula",
     category: "Exterior",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/PjnbMqfamLZEUUyM.jpeg",
+    src: imgTudorHeritage,
     alt: "Tudor-style house repaint - heritage home painting experts Melbourne",
     category: "Exterior",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/gRIEjScrUoPmeNVf.png",
+    src: imgDarkCommercialBuilding,
     alt: "Dark commercial building painting - professional commercial contractors Melbourne",
     category: "Commercial",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/AGutyPeftuRokEnd.jpeg",
+    src: imgVictorianTrim,
     alt: "Victorian house exterior painting - detailed trim work Melbourne",
     category: "Exterior",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/GRTEGDmhTFOjaXQZ.jpeg",
+    src: imgScissorLift,
     alt: "Commercial scissor lift painting for high-access building Melbourne",
     category: "Commercial",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/kBOMcHSWYZOFHhIp.jpeg",
+    src: imgWhiteModern,
     alt: "White modern exterior repaint - high-quality finish Melbourne",
     category: "Exterior",
   },

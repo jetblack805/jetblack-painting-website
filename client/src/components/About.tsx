@@ -4,9 +4,8 @@
  */
 import { motion } from "framer-motion";
 import { Shield, Clock, Award, Users } from "lucide-react";
-
-const ABOUT_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/wjwiXBJIOEBzcfyC.jpeg";
-const TEAM_IMG = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663339742950/yFfMHmJsFmtUHouB.jpeg";
+import ABOUT_IMG from "@/assets/images/about-team-at-work.jpeg";
+import TEAM_IMG from "@/assets/images/about-branded-workwear.jpeg";
 
 const values = [
   {

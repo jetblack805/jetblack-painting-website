@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Star, Phone, MapPin, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "./SEOHead";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { getSuburbData } from "../suburbsData";
 
 interface SuburbPageProps {
@@ -227,8 +229,9 @@ export default function SuburbPageTemplate({
   return (
     <div className="min-h-screen bg-white">
       <SEOHead title={title} description={description} canonical={canonical} schema={pageSchema} />
+      <Navbar />
 
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-[#00AACC] font-semibold uppercase tracking-wide mb-3">
@@ -470,6 +473,7 @@ export default function SuburbPageTemplate({
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

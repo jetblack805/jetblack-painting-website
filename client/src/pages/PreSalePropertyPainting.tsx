@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { CheckCircle, Phone, TrendingUp, Home, Zap } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function PreSalePropertyPainting() {
   const benefits = [
@@ -52,9 +54,10 @@ export default function PreSalePropertyPainting() {
         description="Pre-sale property painting Melbourne to maximise your home's value. Professional painters, neutral colour consultation, fast turnaround. Free quotes - Call 0432 077 782."
         canonical="https://jetblackpainting.com/services/pre-sale-property-painting"
       />
+      <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -220,6 +223,7 @@ export default function PreSalePropertyPainting() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

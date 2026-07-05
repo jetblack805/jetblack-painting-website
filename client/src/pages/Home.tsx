@@ -49,7 +49,7 @@ export default function Home() {
         canonical="https://jetblackpainting.com/"
       />
       <Navbar />
-      <section className="bg-white border-b border-gray-100 py-8">
+      <section className="bg-white border-b border-gray-100 py-8 pt-32">
         <div className="container">
           <h1 className="text-3xl md:text-4xl font-bold text-[#0D0D0D] mb-3">
             Best Painters Melbourne | Local Painters Near Me | Jetblack Painting

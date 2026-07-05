@@ -10,7 +10,7 @@ export default function KewPainters() {
       "@type": "HomeAndConstructionBusiness",
       "name": "Jetblack Painting",
       "telephone": "0432 077 782",
-      "url": "https://jetblackpainting.manus.space",
+      "url": "https://jetblackpainting.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Melbourne",
@@ -25,7 +25,7 @@ export default function KewPainters() {
     "description": `Jetblack Painting provides premium interior, exterior, and heritage painting services in Kew. Specializing in Victorian mansion restoration and contemporary home protection.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://jetblackpainting.manus.space/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`
+      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`
     }
   };
 

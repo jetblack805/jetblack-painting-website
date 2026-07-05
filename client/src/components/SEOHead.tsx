@@ -63,7 +63,7 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
 
     upsertLink('link[rel="canonical"]', { rel: "canonical", href: canonical });
 
-    const image = ogImage || "https://jetblackpainting.manus.space/og-image.jpg";
+    const image = ogImage || "https://jetblackpainting.com/og-image.jpg";
     upsertMeta('meta[property="og:type"]', { property: "og:type", content: "website" });
     upsertMeta('meta[property="og:title"]', { property: "og:title", content: title });
     upsertMeta('meta[property="og:description"]', { property: "og:description", content: description });

@@ -31,7 +31,7 @@ export default function ExteriorPainting() {
       <SEOHead
         title="Exterior Painting Melbourne | Weather-Resistant House Painters | Jetblack Painting"
         description="Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
-        canonical="https://jetblackpainting.manus.space/services/exterior-painting"
+        canonical="https://jetblackpainting.com/services/exterior-painting"
       />
 
       {/* Header */}

@@ -10,7 +10,7 @@ export default function HousePaintingCostMelbourne() {
       <SEOHead
         title="House Painting Cost Melbourne (2025 Price Guide) | Jetblack Painting"
         description="Learn how much house painting costs in Melbourne with Jetblack Painting’s 2025 pricing guide for interior, exterior and commercial projects."
-        canonical="https://jetblackpainting.manus.space/blog/house-painting-cost-melbourne"
+        canonical="https://jetblackpainting.com/blog/house-painting-cost-melbourne"
       />
       <Navbar />
       

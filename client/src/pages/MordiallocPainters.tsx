@@ -10,7 +10,7 @@ export default function MordiallocPainters() {
       "@type": "HomeAndConstructionBusiness",
       "name": "Jetblack Painting",
       "telephone": "0432 077 782",
-      "url": "https://jetblackpainting.manus.space",
+      "url": "https://jetblackpainting.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Melbourne",
@@ -25,7 +25,7 @@ export default function MordiallocPainters() {
     "description": `Jetblack Painting provides premium interior, exterior, and commercial painting services in ${suburb}. Specializing in coastal home protection and heritage property restoration.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://jetblackpainting.manus.space/painter-${suburb.toLowerCase()}`
+      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}`
     }
   };
 

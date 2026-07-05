@@ -46,7 +46,7 @@ export default function Home() {
       <SEOHead
         title="Best Painters Melbourne | Local Painters Near Me | Free Quotes | Jetblack Painting"
         description="Best painters Melbourne — 5-star rated, fully insured, local painters near me. Interior, exterior, commercial, roof & cabinet painting across 30+ Melbourne suburbs. Servicing Brighton, Toorak, Keysborough, Mordialloc, Dandenong & more. Free quotes: 0432 077 782."
-        canonical="https://jetblackpainting.manus.space/"
+        canonical="https://jetblackpainting.com/"
       />
       <Navbar />
       <section className="bg-white border-b border-gray-100 py-8">

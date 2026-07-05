@@ -80,7 +80,7 @@ export default function SuburbPageTemplate({
   faqs = [],
   schema,
 }: SuburbPageProps) {
-  const canonical = `https://jetblackpainting.manus.space${primarySuburbPath(suburb)}/`;
+  const canonical = `https://jetblackpainting.com${primarySuburbPath(suburb)}/`;
   const validNeighbouringSuburbs = neighbouringSuburbs.filter((s) => KNOWN_LANDING_PATHS.has(s.link));
   const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   const breadcrumbId = `${canonical}#breadcrumb`;
@@ -88,11 +88,11 @@ export default function SuburbPageTemplate({
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "@id": "https://jetblackpainting.manus.space/#business",
+    "@id": "https://jetblackpainting.com/#business",
     name: "Jetblack Painting",
     alternateName: ["Jet Black Painting", "Jetblack Painting Melbourne"],
-    url: "https://jetblackpainting.manus.space",
-    image: "https://jetblackpainting.manus.space/og-image.jpg",
+    url: "https://jetblackpainting.com",
+    image: "https://jetblackpainting.com/og-image.jpg",
     telephone: "+61432077782",
     email: "jimmy@jetblackpainting.com",
     priceRange: "$$",
@@ -126,15 +126,15 @@ export default function SuburbPageTemplate({
     description,
     isPartOf: {
       "@type": "WebSite",
-      "@id": "https://jetblackpainting.manus.space/#website",
+      "@id": "https://jetblackpainting.com/#website",
       name: "Jetblack Painting",
-      url: "https://jetblackpainting.manus.space",
+      url: "https://jetblackpainting.com",
     },
     breadcrumb: {
       "@id": breadcrumbId,
     },
     about: localBusinessSchema,
-    primaryImageOfPage: "https://jetblackpainting.manus.space/og-image.jpg",
+    primaryImageOfPage: "https://jetblackpainting.com/og-image.jpg",
   };
 
   const serviceSchema = {
@@ -150,7 +150,7 @@ export default function SuburbPageTemplate({
       "Kitchen cabinet resurfacing",
     ],
     provider: {
-      "@id": "https://jetblackpainting.manus.space/#business",
+      "@id": "https://jetblackpainting.com/#business",
     },
     areaServed: {
       "@type": "City",
@@ -191,7 +191,7 @@ export default function SuburbPageTemplate({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://jetblackpainting.manus.space/",
+        item: "https://jetblackpainting.com/",
       },
       {
         "@type": "ListItem",
@@ -209,7 +209,7 @@ export default function SuburbPageTemplate({
     itemListElement: [...coreServices, ...validNeighbouringSuburbs].map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      url: `https://jetblackpainting.manus.space${item.link}`,
+      url: `https://jetblackpainting.com${item.link}`,
       name: `${item.name}`,
     })),
   };

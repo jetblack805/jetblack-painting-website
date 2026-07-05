@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import imgService from "@/assets/images/about-team-at-work.jpeg";
 
 export default function KitchenCabinetResurfacing() {
   const benefits = [
@@ -82,6 +83,17 @@ export default function KitchenCabinetResurfacing() {
               Call for Free Quote
             </a>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container">
+          <img
+            src={imgService}
+            alt="Jetblack Painting team completing a premium finish project"
+            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            loading="lazy"
+          />
         </div>
       </section>
 

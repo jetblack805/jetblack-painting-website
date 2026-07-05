@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import imgService from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
 
 export default function CommercialPainting() {
   const services = [
@@ -57,6 +58,17 @@ export default function CommercialPainting() {
               Call for Free Quote
             </a>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container">
+          <img
+            src={imgService}
+            alt="Commercial painting example by Jetblack Painting"
+            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            loading="lazy"
+          />
         </div>
       </section>
 

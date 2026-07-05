@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import imgService from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
 
 export default function RoofPainting() {
   const benefits = [
@@ -56,6 +57,17 @@ export default function RoofPainting() {
               Call for Free Quote
             </a>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container">
+          <img
+            src={imgService}
+            alt="Roof painting and restoration example by Jetblack Painting"
+            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            loading="lazy"
+          />
         </div>
       </section>
 

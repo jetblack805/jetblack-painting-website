@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -5,59 +6,60 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import StickyCallBar from "./components/StickyCallBar";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-import ExteriorPainting from "./pages/ExteriorPainting";
-import InteriorPainting from "./pages/InteriorPainting";
-import RoofPainting from "./pages/RoofPainting";
-import CommercialPainting from "./pages/CommercialPainting";
-import PreSalePropertyPainting from "./pages/PreSalePropertyPainting";
-import RentalPropertyPainting from "./pages/RentalPropertyPainting";
-import RoofFencePainting from "./pages/RoofFencePainting";
-import KitchenCabinetResurfacingPage from "./pages/KitchenCabinetResurfacing";
-import KeysboroughPainters from "./pages/KeysboroughPainters";
-import FAQ from "./pages/FAQ";
-import ToorakPainters from "./pages/ToorakPainters";
-import MalvernPainters from "./pages/MalvernPainters";
-import BrightonPainters from "./pages/BrightonPainters";
-import CamberwellPainters from "./pages/CamberwellPainters";
-import HawthornPainters from "./pages/HawthornPainters";
-import BentleighPainters from "./pages/BentleighPainters";
-import CaulfieldPainters from "./pages/CaulfieldPainters";
-import HamptonPainters from "./pages/HamptonPainters";
-import MordiallocPainters from "./pages/MordiallocPainters";
-import KewPainters from "./pages/KewPainters";
-import SandringhamPainters from "./pages/SandringhamPainters";
-import MentonePainters from "./pages/MentonePainters";
-import CarltonPainters from "./pages/CarltonPainters";
-import MorningtonPeninsulaPainters from "./pages/MorningtonPeninsulaPainters";
-import BaysidePainters from "./pages/BaysidePainters";
-import KingstonPainters from "./pages/KingstonPainters";
-import GreaterDandenongPainters from "./pages/GreaterDandenongPainters";
-import Blog from "./pages/Blog";
-import ReviewUs from "./pages/ReviewUs";
-import BestPaintColours2025 from "./pages/blog/BestPaintColours2025";
-import HousePaintingCostMelbourne from "./pages/blog/HousePaintingCostMelbourne";
-import PrepareHomePainting from "./pages/blog/PrepareHomePainting";
-import KitchenCabinetResurfacingBlog from "./pages/blog/KitchenCabinetResurfacing";
-import ArmadalePainters from "./pages/ArmadalePainters";
-import BerwickPainters from "./pages/BerwickPainters";
-import DandenongPainters from "./pages/DandenongPainters";
-import DonvalePainters from "./pages/DonvalePainters";
-import MoorabbinPainters from "./pages/MoorabbinPainters";
-import StonningtonPainters from "./pages/StonningtonPainters";
-import BoxHillPainters from "./pages/BoxHillPainters";
-import CroydonPainters from "./pages/CroydonPainters";
-import DoncasterPainters from "./pages/DoncasterPainters";
-import GlenWaverleyPainters from "./pages/GlenWaverleyPainters";
-import McKinnonPainters from "./pages/McKinnonPainters";
-import MurrumbeenaPainters from "./pages/MurrumbeenaPainters";
-import OrmondPainters from "./pages/OrmondPainters";
-import RingwoodPainters from "./pages/RingwoodPainters";
-import TemplestowePainters from "./pages/TemplestowePainters";
-import WheelersHillPainters from "./pages/WheelersHillPainters";
+const Home = lazy(() => import("./pages/Home"));
+const ExteriorPainting = lazy(() => import("./pages/ExteriorPainting"));
+const InteriorPainting = lazy(() => import("./pages/InteriorPainting"));
+const RoofPainting = lazy(() => import("./pages/RoofPainting"));
+const CommercialPainting = lazy(() => import("./pages/CommercialPainting"));
+const PreSalePropertyPainting = lazy(() => import("./pages/PreSalePropertyPainting"));
+const RentalPropertyPainting = lazy(() => import("./pages/RentalPropertyPainting"));
+const RoofFencePainting = lazy(() => import("./pages/RoofFencePainting"));
+const KitchenCabinetResurfacingPage = lazy(() => import("./pages/KitchenCabinetResurfacing"));
+const KeysboroughPainters = lazy(() => import("./pages/KeysboroughPainters"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const ToorakPainters = lazy(() => import("./pages/ToorakPainters"));
+const MalvernPainters = lazy(() => import("./pages/MalvernPainters"));
+const BrightonPainters = lazy(() => import("./pages/BrightonPainters"));
+const CamberwellPainters = lazy(() => import("./pages/CamberwellPainters"));
+const HawthornPainters = lazy(() => import("./pages/HawthornPainters"));
+const BentleighPainters = lazy(() => import("./pages/BentleighPainters"));
+const CaulfieldPainters = lazy(() => import("./pages/CaulfieldPainters"));
+const HamptonPainters = lazy(() => import("./pages/HamptonPainters"));
+const MordiallocPainters = lazy(() => import("./pages/MordiallocPainters"));
+const KewPainters = lazy(() => import("./pages/KewPainters"));
+const SandringhamPainters = lazy(() => import("./pages/SandringhamPainters"));
+const MentonePainters = lazy(() => import("./pages/MentonePainters"));
+const CarltonPainters = lazy(() => import("./pages/CarltonPainters"));
+const MorningtonPeninsulaPainters = lazy(() => import("./pages/MorningtonPeninsulaPainters"));
+const BaysidePainters = lazy(() => import("./pages/BaysidePainters"));
+const KingstonPainters = lazy(() => import("./pages/KingstonPainters"));
+const GreaterDandenongPainters = lazy(() => import("./pages/GreaterDandenongPainters"));
+const Blog = lazy(() => import("./pages/Blog"));
+const ReviewUs = lazy(() => import("./pages/ReviewUs"));
+const BestPaintColours2025 = lazy(() => import("./pages/blog/BestPaintColours2025"));
+const HousePaintingCostMelbourne = lazy(() => import("./pages/blog/HousePaintingCostMelbourne"));
+const PrepareHomePainting = lazy(() => import("./pages/blog/PrepareHomePainting"));
+const KitchenCabinetResurfacingBlog = lazy(() => import("./pages/blog/KitchenCabinetResurfacing"));
+const ArmadalePainters = lazy(() => import("./pages/ArmadalePainters"));
+const BerwickPainters = lazy(() => import("./pages/BerwickPainters"));
+const DandenongPainters = lazy(() => import("./pages/DandenongPainters"));
+const DonvalePainters = lazy(() => import("./pages/DonvalePainters"));
+const MoorabbinPainters = lazy(() => import("./pages/MoorabbinPainters"));
+const StonningtonPainters = lazy(() => import("./pages/StonningtonPainters"));
+const BoxHillPainters = lazy(() => import("./pages/BoxHillPainters"));
+const CroydonPainters = lazy(() => import("./pages/CroydonPainters"));
+const DoncasterPainters = lazy(() => import("./pages/DoncasterPainters"));
+const GlenWaverleyPainters = lazy(() => import("./pages/GlenWaverleyPainters"));
+const McKinnonPainters = lazy(() => import("./pages/McKinnonPainters"));
+const MurrumbeenaPainters = lazy(() => import("./pages/MurrumbeenaPainters"));
+const OrmondPainters = lazy(() => import("./pages/OrmondPainters"));
+const RingwoodPainters = lazy(() => import("./pages/RingwoodPainters"));
+const TemplestowePainters = lazy(() => import("./pages/TemplestowePainters"));
+const WheelersHillPainters = lazy(() => import("./pages/WheelersHillPainters"));
 
 function Router() {
   return (
+    <Suspense fallback={null}>
     <Switch>
       <Route path={"/"} component={Home} />
       {/* Service Pages */}
@@ -170,6 +172,7 @@ function Router() {
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
+    </Suspense>
   );
 }
 

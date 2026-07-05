@@ -20,7 +20,7 @@ export default function Footer() {
             <img
               src={LOGO_URL}
               alt="Jetblack Painting"
-              className="h-12 w-auto rounded mb-4"
+              className="h-12 w-48 rounded object-cover object-center mb-4 bg-white p-1"
             />
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Melbourne's trusted painting specialists. Commercial and residential

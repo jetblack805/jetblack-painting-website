@@ -21,7 +21,7 @@ export default function ReviewUs() {
       <SEOHead
         title="Leave a Review | Jetblack Painting Melbourne"
         description="Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters."
-        canonical="https://jetblackpainting.manus.space/review-us"
+        canonical="https://jetblackpainting.com/review-us"
       />
       <Navbar />
       

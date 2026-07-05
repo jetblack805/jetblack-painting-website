@@ -157,7 +157,7 @@ export default function FAQ() {
       <SEOHead
         title="Painting FAQs Melbourne | Jetblack Painting"
         description="Frequently asked questions about Jetblack Painting services in Melbourne, including quotes, service areas, interior, exterior and commercial painting."
-        canonical="https://jetblackpainting.manus.space/faq"
+        canonical="https://jetblackpainting.com/faq"
       />
       {/* Header */}
       <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white py-16">

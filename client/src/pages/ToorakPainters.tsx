@@ -10,7 +10,7 @@ export default function ToorakPainters() {
       "@type": "HomeAndConstructionBusiness",
       "name": "Jetblack Painting",
       "telephone": "0432 077 782",
-      "url": "https://jetblackpainting.manus.space",
+      "url": "https://jetblackpainting.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Melbourne",
@@ -25,7 +25,7 @@ export default function ToorakPainters() {
     "description": `Jetblack Painting provides high-end interior and exterior painting for Toorak's prestigious mansions and modern luxury residences.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://jetblackpainting.manus.space/painter-${suburb.toLowerCase()}`
+      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}`
     }
   };
 

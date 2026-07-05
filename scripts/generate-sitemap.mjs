@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE_URL = "https://jetblackpainting.manus.space";
+const SITE_URL = "https://jetblackpainting.com";
 const OUT_PATH = path.resolve("public/sitemap.xml");
 
 const ROUTES = [

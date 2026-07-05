@@ -10,7 +10,7 @@ export default function BrightonPainters() {
       "@type": "HomeAndConstructionBusiness",
       "name": "Jetblack Painting",
       "telephone": "0432 077 782",
-      "url": "https://jetblackpainting.manus.space",
+      "url": "https://jetblackpainting.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Melbourne",
@@ -25,7 +25,7 @@ export default function BrightonPainters() {
     "description": `Jetblack Painting offers luxury interior and exterior painting for Brighton's heritage and modern homes. Expert colour consulting and premium finishes.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://jetblackpainting.manus.space/painter-${suburb.toLowerCase()}`
+      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}`
     }
   };
 

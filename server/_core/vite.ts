@@ -48,7 +48,7 @@ export async function setupVite(app: Express, server: Server) {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-const BASE_URL = "https://jetblackpainting.manus.space";
+const BASE_URL = "https://jetblackpainting.com";
 
 function escapeAttr(str: string): string {
   return str

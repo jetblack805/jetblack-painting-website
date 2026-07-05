@@ -68,7 +68,7 @@ export default function Blog() {
       <SEOHead
         title="Painting Tips & Guides Melbourne | Jetblack Painting Blog"
         description="Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting."
-        canonical="https://jetblackpainting.manus.space/blog"
+        canonical="https://jetblackpainting.com/blog"
       />
       <Navbar />
       

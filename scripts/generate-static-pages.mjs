@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE_URL = "https://jetblackpainting.manus.space";
+const SITE_URL = "https://jetblackpainting.com";
 const PHONE_DISPLAY = "0432 077 782";
 const PHONE_HREF = "0432077782";
 const EMAIL = "jimmy@jetblackpainting.com";

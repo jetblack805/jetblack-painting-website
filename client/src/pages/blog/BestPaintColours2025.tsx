@@ -10,7 +10,7 @@ export default function BestPaintColours2025() {
       <SEOHead
         title="Best Paint Colours for Melbourne Homes in 2025 | Jetblack Painting"
         description="Discover the best paint colours for Melbourne homes in 2025, with expert advice from Jetblack Painting on interior and exterior colour selection."
-        canonical="https://jetblackpainting.manus.space/blog/best-paint-colours-melbourne-2025"
+        canonical="https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025"
       />
       <Navbar />
       

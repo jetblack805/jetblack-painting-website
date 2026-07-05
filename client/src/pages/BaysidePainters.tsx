@@ -10,7 +10,7 @@ export default function BaysidePainters() {
       "@type": "HomeAndConstructionBusiness",
       "name": "Jetblack Painting",
       "telephone": "0432 077 782",
-      "url": "https://jetblackpainting.manus.space",
+      "url": "https://jetblackpainting.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Melbourne",
@@ -25,7 +25,7 @@ export default function BaysidePainters() {
     "description": `Jetblack Painting provides expert coastal painting services across the Bayside region. Specializing in salt-air protection and luxury property finishes.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://jetblackpainting.manus.space/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`
+      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`
     }
   };
 

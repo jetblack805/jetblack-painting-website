@@ -10,7 +10,7 @@ export default function CarltonPainters() {
       "@type": "HomeAndConstructionBusiness",
       "name": "Jetblack Painting",
       "telephone": "0432 077 782",
-      "url": "https://jetblackpainting.manus.space",
+      "url": "https://jetblackpainting.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Melbourne",
@@ -25,7 +25,7 @@ export default function CarltonPainters() {
     "description": `Jetblack Painting provides expert heritage painting services in Carlton. Specializing in Victorian terrace restoration and historic property preservation.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://jetblackpainting.manus.space/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`
+      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`
     }
   };
 

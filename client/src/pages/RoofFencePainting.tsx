@@ -50,7 +50,7 @@ export default function RoofFencePainting() {
       <SEOHead
         title="Roof & Fence Painting Melbourne | Professional Restoration | Jetblack Painting"
         description="Professional roof painting and fence painting Melbourne. Extends roof life 10-15 years, weather-resistant coatings, 5-star rated. Free quotes - Call 0432 077 782."
-        canonical="https://jetblackpainting.manus.space/services/roof-fence-painting"
+        canonical="https://jetblackpainting.com/services/roof-fence-painting"
       />
 
       {/* Header */}

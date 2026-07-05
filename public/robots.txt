@@ -1,5 +1,5 @@
 # Jetblack Painting — robots.txt
-# https://jetblackpainting.manus.space
+# https://jetblackpainting.com
 
 # ── Default: allow all crawlers everywhere except the API ─────────────────────
 User-agent: *
@@ -72,5 +72,5 @@ User-agent: Bytespider
 Allow: /
 
 # ── Sitemaps ──────────────────────────────────────────────────────────────────
-Sitemap: https://jetblackpainting.manus.space/sitemap.xml
-Sitemap: https://jetblackpainting.manus.space/llms.txt
+Sitemap: https://jetblackpainting.com/sitemap.xml
+Sitemap: https://jetblackpainting.com/llms.txt

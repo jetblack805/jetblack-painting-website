@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "./SEOHead";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import MidPageCTA from "./MidPageCTA";
 import { getSuburbData } from "../suburbsData";
 import imgExteriorWork from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
 import imgCommercialWork from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
@@ -341,6 +342,8 @@ export default function SuburbPageTemplate({
               <p className="text-gray-700">{localExpertise}</p>
             </div>
           </motion.div>
+
+          <MidPageCTA heading={`Get your free ${suburb} painting quote today`} />
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Painting Services in {suburb}</h2>

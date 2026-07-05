@@ -9,11 +9,11 @@ import { toast } from "sonner";
 // Validation schema
 const quoteFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
+  email: z.string().email("Invalid email address").optional().or(z.literal("")),
   phone: z.string().regex(/^[\d\s\-\+\(\)]+$/, "Invalid phone number"),
   suburb: z.string().min(1, "Please select a suburb"),
   serviceType: z.string().min(1, "Please select a service type"),
-  projectDescription: z.string().min(10, "Please provide at least 10 characters"),
+  projectDescription: z.string().optional(),
   preferredDate: z.string().optional(),
   budget: z.string().optional(),
 });
@@ -60,19 +60,30 @@ export default function QuoteForm() {
     resolver: zodResolver(quoteFormSchema),
   });
 
+  const QUOTE_DESTINATION_EMAIL = "jimmy@jetblackpainting.com";
+
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
     try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const subject = `Quote request: ${data.serviceType} in ${data.suburb}`;
+      const bodyLines = [
+        `Name: ${data.name}`,
+        `Phone: ${data.phone}`,
+        data.email ? `Email: ${data.email}` : null,
+        `Suburb: ${data.suburb}`,
+        `Service: ${data.serviceType}`,
+        data.preferredDate ? `Preferred date: ${data.preferredDate}` : null,
+        data.budget ? `Budget: ${data.budget}` : null,
+        data.projectDescription ? `\nProject description:\n${data.projectDescription}` : null,
+      ].filter(Boolean);
+      const mailtoUrl = `mailto:${QUOTE_DESTINATION_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
 
-      // Log the data (in production, send to your backend)
-      console.log("Quote form submitted:", data);
+      window.location.href = mailtoUrl;
 
-      toast.success("Quote request submitted successfully! We'll contact you within 24 hours.");
+      toast.success("Opening your email app to send the quote request — just hit send!");
       reset();
     } catch (error) {
-      toast.error("Failed to submit quote request. Please try again.");
+      toast.error("Couldn't open your email app. Please call us instead on 0432 077 782.");
       console.error("Quote submission error:", error);
     } finally {
       setIsSubmitting(false);
@@ -122,7 +133,7 @@ export default function QuoteForm() {
               {/* Email */}
               <div>
                 <label className="block text-sm font-semibold text-[#0D0D0D] mb-2">
-                  Email Address *
+                  Email Address (optional)
                 </label>
                 <input
                   type="email"
@@ -222,7 +233,7 @@ export default function QuoteForm() {
             {/* Project Description */}
             <div className="mb-6">
               <label className="block text-sm font-semibold text-[#0D0D0D] mb-2">
-                Project Description *
+                Project Description (optional)
               </label>
               <textarea
                 placeholder="Tell us about your painting project. Include details like room size, current condition, color preferences, etc."

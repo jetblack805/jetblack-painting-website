@@ -3,6 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
+import StickyCallBar from "./components/StickyCallBar";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import ExteriorPainting from "./pages/ExteriorPainting";
@@ -178,7 +179,10 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <div className="pb-14 lg:pb-0">
+            <Router />
+          </div>
+          <StickyCallBar />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

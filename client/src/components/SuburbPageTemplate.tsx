@@ -102,6 +102,7 @@ export default function SuburbPageTemplate({
     telephone: "+61432077782",
     email: "jimmy@jetblackpainting.com",
     priceRange: "$$",
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "127", bestRating: "5" },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Mordialloc",

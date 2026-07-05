@@ -176,6 +176,7 @@ ${schemaScripts}
   </style>
 </head>
 <body>
+  <div id="root">
   <header class="hero">
     <h1>${escapeHtml(heroTitle)}</h1>
     <p>${escapeHtml(heroBody)}</p>
@@ -188,6 +189,7 @@ ${sectionHtml}
     <p><strong>Jetblack Painting</strong> — ${escapeHtml(heroTitle)} | Phone: <a href="tel:${PHONE_HREF}">${PHONE_DISPLAY}</a> | Email: <a href="mailto:${EMAIL}">${EMAIL}</a></p>
     <p>${footerLinks.map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join(" | ")}</p>
   </footer>
+  </div>
 </body>
 </html>
 `;

@@ -79,6 +79,18 @@ function writeToLogFile(source: LogSource, entries: unknown[]) {
  * since that one must stay as Vite's real build output (it has the
  * script tag that boots the React app).
  */
+function collectHtmlFiles(dir: string, acc: string[] = []): string[] {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      collectHtmlFiles(entryPath, acc);
+    } else if (entry.name.endsWith(".html")) {
+      acc.push(entryPath);
+    }
+  }
+  return acc;
+}
+
 function copyDirRecursive(src: string, dest: string, skipTopLevel: Set<string>, isTopLevel = true) {
   fs.mkdirSync(dest, { recursive: true });
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
@@ -102,6 +114,28 @@ function vitePluginCopyStaticFiles(): Plugin {
       const destDir = path.join(PROJECT_ROOT, "dist/public");
       const skipTopLevel = new Set(["index.html", ".htaccess", "jetblack_sitemap_fix.zip"]);
       copyDirRecursive(sourceDir, destDir, skipTopLevel);
+
+      // Pull the real built script/stylesheet tags out of Vite's own
+      // index.html (hashed filenames are only known after this build) and
+      // inject them into every copied static page, so the browser loads
+      // the real app on top of the static content and React replaces it
+      // with the full interactive site — same as how the homepage works.
+      const builtIndexPath = path.join(destDir, "index.html");
+      const builtIndexHtml = fs.readFileSync(builtIndexPath, "utf-8");
+      const scriptTagMatch = builtIndexHtml.match(/<script type="module"[^>]*><\/script>/);
+      const styleTagMatch = builtIndexHtml.match(/<link rel="stylesheet"[^>]*>/);
+      const injectedTags = [scriptTagMatch?.[0], styleTagMatch?.[0]].filter(Boolean).join("\n  ");
+
+      if (injectedTags) {
+        for (const htmlFile of collectHtmlFiles(sourceDir).map((f) =>
+          path.join(destDir, path.relative(sourceDir, f))
+        )) {
+          if (htmlFile === builtIndexPath) continue;
+          const html = fs.readFileSync(htmlFile, "utf-8");
+          fs.writeFileSync(htmlFile, html.replace("</head>", `  ${injectedTags}\n</head>`), "utf-8");
+        }
+      }
+
       console.log("Copied pre-rendered static pages to dist/public/");
     },
   };

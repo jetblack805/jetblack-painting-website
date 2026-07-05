@@ -5,6 +5,9 @@ import SEOHead from "./SEOHead";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { getSuburbData } from "../suburbsData";
+import imgExteriorWork from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
+import imgCommercialWork from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
+import imgRoofWork from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
 
 interface SuburbPageProps {
   title: string;
@@ -348,6 +351,33 @@ export default function SuburbPageTemplate({
                   <p className="text-gray-600 mt-2 text-sm">View service details and request a quote.</p>
                 </Link>
               ))}
+            </div>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Our Painting Work</h2>
+            <p className="text-gray-700 mb-6">
+              A selection of recent interior, exterior and commercial painting projects completed by Jetblack Painting across Melbourne.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <img
+                src={imgExteriorWork}
+                alt={`Exterior house painting example by Jetblack Painting, servicing ${suburb}`}
+                className="rounded-lg shadow-sm w-full h-56 object-cover"
+                loading="lazy"
+              />
+              <img
+                src={imgCommercialWork}
+                alt={`Commercial painting example by Jetblack Painting, servicing ${suburb}`}
+                className="rounded-lg shadow-sm w-full h-56 object-cover"
+                loading="lazy"
+              />
+              <img
+                src={imgRoofWork}
+                alt={`Roof painting example by Jetblack Painting, servicing ${suburb}`}
+                className="rounded-lg shadow-sm w-full h-56 object-cover"
+                loading="lazy"
+              />
             </div>
           </motion.div>
 

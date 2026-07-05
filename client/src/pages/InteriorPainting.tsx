@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import imgService from "@/assets/images/service-interior-painting.jpeg";
 
 export default function InteriorPainting() {
   const benefits = [
@@ -78,6 +79,17 @@ export default function InteriorPainting() {
               Call for Free Quote
             </a>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container">
+          <img
+            src={imgService}
+            alt="Interior painting example by Jetblack Painting"
+            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            loading="lazy"
+          />
         </div>
       </section>
 

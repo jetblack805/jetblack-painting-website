@@ -79,7 +79,7 @@ export default function Reviews() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Customer Reviews
           </span>
           <h2

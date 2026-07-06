@@ -81,7 +81,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-16"
         >
-          <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Professional Painting Services
           </span>
           <h2
@@ -119,7 +119,7 @@ export default function Services() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <div className="w-10 h-10 rounded bg-[#00AACC] flex items-center justify-center">
+                    <div className="w-10 h-10 rounded bg-[#007A99] flex items-center justify-center">
                       <service.icon className="w-5 h-5 text-white" />
                     </div>
                   </div>
@@ -128,7 +128,7 @@ export default function Services() {
                 {/* Content */}
                 <div className="p-6">
                   <h3
-                    className="text-xl font-bold text-[#0D0D0D] mb-3 group-hover:text-[#00AACC] transition-colors"
+                    className="text-xl font-bold text-[#0D0D0D] mb-3 group-hover:text-[#007A99] transition-colors"
                     style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
                   >
                     {service.title}

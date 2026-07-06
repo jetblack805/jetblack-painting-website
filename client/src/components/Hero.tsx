@@ -34,9 +34,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[#00AACC]/10 border border-[#00AACC]/25 rounded-full px-4 py-1.5 mb-6"
+            className="inline-flex items-center gap-2 bg-[#007A99]/10 border border-[#00AACC]/25 rounded-full px-4 py-1.5 mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-[#00AACC] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#007A99] animate-pulse" />
             <span className="text-[#00AACC] text-sm font-medium tracking-wide">
               Melbourne's Trusted Painting Specialists
             </span>
@@ -73,7 +73,7 @@ export default function Hero() {
           >
             <a
               href="tel:0432077782"
-              className="flex items-center justify-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-4 rounded font-bold text-base transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-base transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

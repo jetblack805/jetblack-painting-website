@@ -130,7 +130,7 @@ export default function Gallery() {
               onClick={() => setFilter(cat)}
               className={`px-5 py-2 rounded text-sm font-medium transition-all duration-200 ${
                 filter === cat
-                  ? "bg-[#00AACC] text-white"
+                  ? "bg-[#007A99] text-white"
                   : "bg-white/10 text-white/60 hover:bg-white/15 hover:text-white"
               }`}
             >

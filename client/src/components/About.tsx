@@ -58,7 +58,7 @@ export default function About() {
                 />
               </div>
               {/* Experience badge */}
-              <div className="absolute -top-4 -left-4 bg-[#00AACC] text-white rounded-lg px-5 py-3 shadow-lg">
+              <div className="absolute -top-4 -left-4 bg-[#007A99] text-white rounded-lg px-5 py-3 shadow-lg">
                 <div className="text-2xl font-bold" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>13+</div>
                 <div className="text-xs font-medium uppercase tracking-wider">Years Exp.</div>
               </div>
@@ -106,7 +106,7 @@ export default function About() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="flex gap-3"
                 >
-                  <div className="w-10 h-10 rounded bg-[#00AACC]/10 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded bg-[#007A99]/10 flex items-center justify-center shrink-0">
                     <value.icon className="w-5 h-5 text-[#00AACC]" />
                   </div>
                   <div>

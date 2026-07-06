@@ -44,7 +44,7 @@ export default function Contact() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
+            <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
               Get In Touch
             </span>
             <h2
@@ -52,7 +52,7 @@ export default function Contact() {
               style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
             >
               Ready for a{" "}
-              <span className="text-[#00AACC]">Fresh Look?</span>
+              <span className="text-[#007A99]">Fresh Look?</span>
             </h2>
             <p className="text-[#555] text-lg leading-relaxed mb-10">
               Get in touch for a free, no-obligation quote. We'll visit your property,
@@ -74,7 +74,7 @@ export default function Contact() {
                         href={item.href}
                         target={item.href.startsWith("http") ? "_blank" : undefined}
                         rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-[#0D0D0D] font-semibold hover:text-[#00AACC] transition-colors"
+                        className="text-[#0D0D0D] font-semibold hover:text-[#007A99] transition-colors"
                       >
                         {item.value}
                       </a>
@@ -97,8 +97,8 @@ export default function Contact() {
           >
             <div className="w-full bg-[#0D0D0D] rounded-xl p-8 sm:p-10 relative overflow-hidden">
               {/* Decorative accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#00AACC]/10 rounded-bl-full" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#00AACC]/5 rounded-tr-full" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#007A99]/10 rounded-bl-full" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#007A99]/5 rounded-tr-full" />
 
               <div className="relative z-10">
                 <h3
@@ -115,7 +115,7 @@ export default function Contact() {
                 {/* Big Phone CTA */}
                 <a
                   href="tel:0432077782"
-                  className="flex items-center justify-center gap-3 bg-[#00AACC] hover:bg-[#0099BB] text-white w-full py-5 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5 mb-4"
+                  className="flex items-center justify-center gap-3 bg-[#007A99] hover:bg-[#006B85] text-white w-full py-5 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5 mb-4"
                 >
                   <Phone className="w-6 h-6" />
                   0432 077 782
@@ -135,17 +135,17 @@ export default function Contact() {
                 {/* Trust signals */}
                 <div className="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-white/10">
                   <div className="text-center">
-                    <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>5.0★</div>
+                    <div className="text-[#4DC4DE] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>5.0★</div>
                     <div className="text-white/40 text-xs">Google Rating</div>
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div className="text-center">
-                    <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>13+</div>
+                    <div className="text-[#4DC4DE] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>13+</div>
                     <div className="text-white/40 text-xs">Years Experience</div>
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div className="text-center">
-                    <div className="text-[#00AACC] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>100%</div>
+                    <div className="text-[#4DC4DE] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>100%</div>
                     <div className="text-white/40 text-xs">Insured</div>
                   </div>
                 </div>

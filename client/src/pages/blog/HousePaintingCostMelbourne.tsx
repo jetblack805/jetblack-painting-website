@@ -18,7 +18,7 @@ export default function HousePaintingCostMelbourne() {
         <div className="container max-w-3xl">
           {/* Breadcrumb */}
           <nav className="mb-6" aria-label="Breadcrumb">
-            <Link href="/blog" className="inline-flex items-center text-[#00AACC] hover:underline text-sm">
+            <Link href="/blog" className="inline-flex items-center text-[#007A99] hover:underline text-sm">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Blog
             </Link>
           </nav>
@@ -85,7 +85,7 @@ export default function HousePaintingCostMelbourne() {
             </div>
 
             <p className="text-gray-700 mb-4">
-              Our <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting services</Link> include 
+              Our <Link href="/services/interior-painting" className="text-[#007A99] hover:underline">interior painting services</Link> include 
               thorough preparation (filling holes, sanding, priming), premium Dulux or Taubmans paint, and a spotless cleanup.
             </p>
 
@@ -121,9 +121,9 @@ export default function HousePaintingCostMelbourne() {
             </div>
 
             <p className="text-gray-700 mb-4">
-              Our <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline">exterior painting services</Link> use 
+              Our <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline">exterior painting services</Link> use 
               weather-resistant coatings designed for Melbourne's harsh UV and variable climate. We also offer 
-              <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline"> roof painting</Link> from $3,500.
+              <Link href="/services/roof-painting" className="text-[#007A99] hover:underline"> roof painting</Link> from $3,500.
             </p>
 
             <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Factors That Affect Painting Costs</h2>
@@ -134,7 +134,7 @@ export default function HousePaintingCostMelbourne() {
               <li><strong>Height & access</strong> — Multi-storey homes require scaffolding ($500-$2,000 extra)</li>
               <li><strong>Paint quality</strong> — Premium paints cost more but last 10-15 years vs. 5-7 for budget options</li>
               <li><strong>Trim & detail work</strong> — Heritage homes with ornate trim cost more due to detailed preparation</li>
-              <li><strong>Location</strong> — Premium suburbs like <Link href="/painter-toorak" className="text-[#00AACC] hover:underline">Toorak</Link> and <Link href="/painter-brighton" className="text-[#00AACC] hover:underline">Brighton</Link> often have larger homes</li>
+              <li><strong>Location</strong> — Premium suburbs like <Link href="/painter-toorak" className="text-[#007A99] hover:underline">Toorak</Link> and <Link href="/painter-brighton" className="text-[#007A99] hover:underline">Brighton</Link> often have larger homes</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">How to Get an Accurate Quote</h2>
@@ -157,10 +157,10 @@ export default function HousePaintingCostMelbourne() {
             <p className="text-gray-700 mb-6">
               With <strong>127+ five-star Google reviews</strong>, 13+ years of experience, and $20M public liability insurance, 
               Jetblack Painting is Melbourne's most trusted painting company. We service all suburbs including 
-              <Link href="/painter-malvern" className="text-[#00AACC] hover:underline"> Malvern</Link>, 
-              <Link href="/painter-camberwell" className="text-[#00AACC] hover:underline"> Camberwell</Link>, 
-              <Link href="/painter-hawthorn" className="text-[#00AACC] hover:underline"> Hawthorn</Link>, and 
-              <Link href="/keysborough-painters" className="text-[#00AACC] hover:underline"> Keysborough</Link>.
+              <Link href="/painter-malvern" className="text-[#007A99] hover:underline"> Malvern</Link>, 
+              <Link href="/painter-camberwell" className="text-[#007A99] hover:underline"> Camberwell</Link>, 
+              <Link href="/painter-hawthorn" className="text-[#007A99] hover:underline"> Hawthorn</Link>, and 
+              <Link href="/keysborough-painters" className="text-[#007A99] hover:underline"> Keysborough</Link>.
             </p>
 
             <div className="bg-[#F5F5F0] rounded-xl p-6 mt-8">
@@ -171,7 +171,7 @@ export default function HousePaintingCostMelbourne() {
               </p>
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center px-6 py-3 bg-[#00AACC] text-white font-bold rounded-lg hover:bg-[#0099bb] transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-[#007A99] text-white font-bold rounded-lg hover:bg-[#006B85] transition-colors"
               >
                 Call Now: 0432 077 782
               </a>

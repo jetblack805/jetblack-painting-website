@@ -247,7 +247,7 @@ export default function SuburbPageTemplate({
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center justify-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-3 rounded font-bold transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-3 rounded font-bold transition-all"
               >
                 <Phone className="w-5 h-5" />
                 Call 0432 077 782
@@ -302,7 +302,7 @@ export default function SuburbPageTemplate({
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               Whether you need a full interior repaint, a rental refresh, a pre-sale makeover or a feature wall, our {suburb} painting team focuses on preparation, sharp cutting-in and a durable finish that helps your property present properly.
             </p>
-            <Link href="/services/interior-painting" className="text-[#00AACC] font-semibold hover:underline">
+            <Link href="/services/interior-painting" className="text-[#007A99] font-semibold hover:underline">
               Learn more about our interior painting services →
             </Link>
           </motion.div>
@@ -315,7 +315,7 @@ export default function SuburbPageTemplate({
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               Every exterior project is quoted with the prep included, not hidden later. That means cleaner lines, stronger adhesion and a finish that suits Melbourne weather conditions.
             </p>
-            <Link href="/services/exterior-painting" className="text-[#00AACC] font-semibold hover:underline">
+            <Link href="/services/exterior-painting" className="text-[#007A99] font-semibold hover:underline">
               Learn more about our exterior painting services →
             </Link>
           </motion.div>
@@ -402,7 +402,7 @@ export default function SuburbPageTemplate({
                 href="https://www.google.com/maps/place/Jetblack+Painting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-6 py-3 rounded font-bold transition-all"
+                className="shrink-0 inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-6 py-3 rounded font-bold transition-all"
               >
                 Read our Google reviews
               </a>
@@ -445,12 +445,12 @@ export default function SuburbPageTemplate({
                       Contact Us
                     </h3>
                     <p className="text-gray-700">
-                      <a href="tel:0432077782" className="text-[#00AACC] hover:underline font-bold">
+                      <a href="tel:0432077782" className="text-[#007A99] hover:underline font-bold">
                         0432 077 782
                       </a>
                     </p>
                     <p className="text-gray-700">
-                      <a href="mailto:jimmy@jetblackpainting.com" className="text-[#00AACC] hover:underline">
+                      <a href="mailto:jimmy@jetblackpainting.com" className="text-[#007A99] hover:underline">
                         jimmy@jetblackpainting.com
                       </a>
                     </p>
@@ -496,7 +496,7 @@ export default function SuburbPageTemplate({
             <p className="text-xl mb-6 text-gray-300">
               Contact Jetblack Painting for a free, no-obligation quote on your {suburb} painting project. Call now and speak directly with Jimmy.
             </p>
-            <a href="tel:0432077782" className="inline-flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-4 rounded font-bold text-lg transition-all">
+            <a href="tel:0432077782" className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-lg transition-all">
               <Phone className="w-5 h-5" />
               Call 0432 077 782
             </a>

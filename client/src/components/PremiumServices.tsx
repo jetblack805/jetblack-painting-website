@@ -96,9 +96,9 @@ export default function PremiumServices() {
           <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Service Areas for Local &amp; Map Search</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSuburbs.map((suburb) => (
-              <Link key={suburb.name} href={suburb.link} className="flex items-center gap-2 hover:text-[#00AACC] transition-colors">
-                <div className="w-2 h-2 rounded-full bg-[#00AACC]" />
-                <span className="text-[#0D0D0D] font-medium hover:text-[#00AACC]">Painters {suburb.name}</span>
+              <Link key={suburb.name} href={suburb.link} className="flex items-center gap-2 hover:text-[#007A99] transition-colors">
+                <div className="w-2 h-2 rounded-full bg-[#007A99]" />
+                <span className="text-[#0D0D0D] font-medium hover:text-[#007A99]">Painters {suburb.name}</span>
               </Link>
             ))}
           </div>
@@ -119,7 +119,7 @@ export default function PremiumServices() {
               <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-[#00AACC] transition-all cursor-pointer h-full">
                 <h3 className="text-xl font-bold text-[#0D0D0D] mb-3">{service.title}</h3>
                 <p className="text-[#666] mb-4">{service.description}</p>
-                <span className="text-[#00AACC] font-semibold">Learn More â†’</span>
+                <span className="text-[#007A99] font-semibold">Learn More â†’</span>
               </div>
             </Link>
           ))}
@@ -136,7 +136,7 @@ export default function PremiumServices() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {allServices.map((service) => (
               <div key={service} className="flex items-center gap-2 bg-gray-50 p-3 rounded-lg">
-                <svg className="w-4 h-4 text-[#00AACC] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 text-[#007A99] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
                 <span className="text-[#0D0D0D] text-sm font-medium">{service}</span>
@@ -155,10 +155,10 @@ export default function PremiumServices() {
           <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Why Melbourne Homeowners Choose Jetblack Painting</h3>
           <div className="prose prose-lg text-[#666] space-y-4">
             <p>
-              Jetblack Painting services Melbourne homeowners, landlords, real estate agents and commercial clients across <Link href="/painter-mordialloc" className="text-[#00AACC] hover:underline">Mordialloc</Link>, <Link href="/painter-brighton" className="text-[#00AACC] hover:underline">Brighton</Link>, <Link href="/painter-toorak" className="text-[#00AACC] hover:underline">Toorak</Link>, <Link href="/painter-camberwell" className="text-[#00AACC] hover:underline">Camberwell</Link>, <Link href="/painter-hawthorn" className="text-[#00AACC] hover:underline">Hawthorn</Link>, <Link href="/painter-bayside" className="text-[#00AACC] hover:underline">Bayside</Link>, <Link href="/painter-kingston" className="text-[#00AACC] hover:underline">Kingston</Link> and <Link href="/painter-greater-dandenong" className="text-[#00AACC] hover:underline">Greater Dandenong</Link>.
+              Jetblack Painting services Melbourne homeowners, landlords, real estate agents and commercial clients across <Link href="/painter-mordialloc" className="text-[#007A99] hover:underline">Mordialloc</Link>, <Link href="/painter-brighton" className="text-[#007A99] hover:underline">Brighton</Link>, <Link href="/painter-toorak" className="text-[#007A99] hover:underline">Toorak</Link>, <Link href="/painter-camberwell" className="text-[#007A99] hover:underline">Camberwell</Link>, <Link href="/painter-hawthorn" className="text-[#007A99] hover:underline">Hawthorn</Link>, <Link href="/painter-bayside" className="text-[#007A99] hover:underline">Bayside</Link>, <Link href="/painter-kingston" className="text-[#007A99] hover:underline">Kingston</Link> and <Link href="/painter-greater-dandenong" className="text-[#007A99] hover:underline">Greater Dandenong</Link>.
             </p>
             <p>
-              We specialise in <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting</Link>, <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline">exterior painting</Link>, <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline">commercial painting</Link>, <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline">roof painting</Link> and <Link href="/services/kitchen-cabinet-resurfacing" className="text-[#00AACC] hover:underline">kitchen cabinet resurfacing</Link>.
+              We specialise in <Link href="/services/interior-painting" className="text-[#007A99] hover:underline">interior painting</Link>, <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline">exterior painting</Link>, <Link href="/services/commercial-painting" className="text-[#007A99] hover:underline">commercial painting</Link>, <Link href="/services/roof-painting" className="text-[#007A99] hover:underline">roof painting</Link> and <Link href="/services/kitchen-cabinet-resurfacing" className="text-[#007A99] hover:underline">kitchen cabinet resurfacing</Link>.
             </p>
             <p>
               Every job is backed by a 5-year workmanship guarantee, $20M public liability insurance and a 5-star Google rating from 127+ verified reviews.

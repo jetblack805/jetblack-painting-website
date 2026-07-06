@@ -35,7 +35,7 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mb-16"
         >
-          <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Questions & Answers
           </span>
           <h2
@@ -93,7 +93,7 @@ export default function FAQSection() {
           <div className="mt-12">
             <a 
               href="/faq" 
-              className="text-[#00AACC] font-semibold hover:underline flex items-center gap-2"
+              className="text-[#007A99] font-semibold hover:underline flex items-center gap-2"
             >
               View all FAQs
               <ChevronDown className="w-4 h-4 -rotate-90" />

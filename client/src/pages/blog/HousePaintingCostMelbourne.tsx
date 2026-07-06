@@ -29,7 +29,7 @@ export default function HousePaintingCostMelbourne() {
               How Much Does House Painting Cost in Melbourne? (2025 Price Guide)
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
-              <span className="flex items-center gap-1"><User className="w-4 h-4" /> Jimmy Demarci</span>
+              <span className="flex items-center gap-1"><User className="w-4 h-4" /> Jimmy Demirci</span>
               <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> May 2025</span>
               <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 8 min read</span>
             </div>
@@ -149,7 +149,7 @@ export default function HousePaintingCostMelbourne() {
               <li>Colour consultation and recommendations</li>
               <li>Timeline estimate for completion</li>
               <li>Paint brand and product specifications</li>
-              <li>Warranty information (up to 7 years)</li>
+              <li>Warranty information (5-year workmanship guarantee)</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Why Choose Jetblack Painting?</h2>

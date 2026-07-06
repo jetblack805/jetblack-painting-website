@@ -4,7 +4,7 @@ export default function KeysboroughPainters() {
   return (
     <SuburbPageTemplate
       suburb="Keysborough"
-      description="Local house painters in Keysborough, Melbourne. Based right here in Keysborough. Interior, exterior & commercial painting. 5-star rated, fully licensed. Free quotes."
+      description="Local house painters in Keysborough, Melbourne. Servicing Keysborough daily from our nearby Mordialloc base. Interior, exterior & commercial painting. 5-star rated, fully licensed. Free quotes."
       neighbouringSuburbs={[
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Mordialloc", link: "/painter-mordialloc" },

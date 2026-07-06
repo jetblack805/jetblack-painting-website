@@ -73,7 +73,7 @@ export default function TrustBadges() {
               Call Now: 0432 077 782
             </a>
             <a
-              href="mailto:jimmy.jetblackpainting@gmail.com"
+              href="mailto:jimmy@jetblackpainting.com"
               className="inline-flex items-center px-6 py-3 border-2 border-[#00AACC] text-[#00AACC] font-bold rounded-lg hover:bg-[#00AACC] hover:text-white transition-colors"
             >
               Email for Free Quote

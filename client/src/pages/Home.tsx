@@ -49,16 +49,15 @@ export default function Home() {
         canonical="https://jetblackpainting.com/"
       />
       <Navbar />
-      <section className="bg-white border-b border-gray-100 py-8 pt-32">
-        <div className="container">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#0D0D0D] mb-3">
-            Best Painters Melbourne | Local Painters Near Me | Jetblack Painting
+      <section className="bg-[#F5F5F0] pt-28 pb-6 lg:pt-32">
+        <div className="container max-w-4xl text-center">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#0D0D0D] mb-2">
+            Melbourne's Best-Rated Local House Painters
           </h1>
-          <p className="text-gray-700 max-w-4xl">
-            Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 30+ suburbs.
-            We provide interior, exterior, roof, cabinet, and commercial painting for homeowners, landlords, and businesses.
-            Based in Mordialloc, we cover Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and all surrounding Melbourne areas.
-            Free painting quotes — call 0432 077 782.
+          <p className="text-gray-600 text-sm md:text-base">
+            5-star rated, fully insured, and servicing 30+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
+            Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.
+            Free quotes — call 0432 077 782.
           </p>
         </div>
       </section>

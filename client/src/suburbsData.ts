@@ -144,6 +144,6 @@ export function getSuburbData(suburb: string) {
 }
 
 export function getEmbedMapSrc(coordinates: { lat: number; lng: number }, suburb: string) {
-  // Google Maps Embed API - shows suburb area without fake place ID
-  return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150!2d${coordinates.lng}!3d${coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1`;
+  // No-API-key Google Maps embed - centers the map on the suburb's coordinates
+  return `https://www.google.com/maps?q=${coordinates.lat},${coordinates.lng}&z=13&output=embed`;
 }

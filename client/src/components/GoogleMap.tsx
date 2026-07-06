@@ -23,10 +23,10 @@ export default function GoogleMap() {
             <strong>Jetblack Painting</strong> | Mordialloc VIC 3195
           </p>
           <p className="text-gray-600 mt-1">
-            <a href="tel:0432077782" className="text-[#00AACC] hover:underline font-bold">0432 077 782</a> | 
-            <a href="mailto:jimmy.jetblackpainting@gmail.com" className="text-[#00AACC] hover:underline ml-2">jimmy.jetblackpainting@gmail.com</a>
+            <a href="tel:0432077782" className="text-[#00AACC] hover:underline font-bold">0432 077 782</a> |
+            <a href="mailto:jimmy@jetblackpainting.com" className="text-[#00AACC] hover:underline ml-2">jimmy@jetblackpainting.com</a>
           </p>
-          <p className="text-gray-500 text-sm mt-2">Mon-Fri: 7am-5pm | Sat: 8am-2pm | Sun: Closed</p>
+          <p className="text-gray-500 text-sm mt-2">Mon-Fri: 7am-5pm | Sat-Sun: 9am-5pm</p>
         </div>
       </div>
     </section>

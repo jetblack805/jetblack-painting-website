@@ -44,14 +44,14 @@ export default function About() {
             className="relative"
           >
             <div className="relative">
-              <img
+              <img loading="lazy" decoding="async"
                 src={TEAM_IMG}
                 alt="Jetblack Painting team at work"
                 className="w-full rounded-lg shadow-2xl"
               />
               {/* Floating accent image */}
               <div className="absolute -bottom-8 -right-4 lg:-right-8 w-40 sm:w-52 rounded-lg overflow-hidden shadow-xl border-4 border-[#0D0D0D]">
-                <img
+                <img loading="lazy" decoding="async"
                   src={ABOUT_IMG}
                   alt="Jetblack Painting branded workwear"
                   className="w-full h-32 sm:h-40 object-cover"

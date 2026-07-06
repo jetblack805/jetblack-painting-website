@@ -112,7 +112,7 @@ export default function Services() {
               >
                 {/* Image */}
                 <div className="relative h-52 overflow-hidden">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

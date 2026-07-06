@@ -283,9 +283,9 @@ export default function SuburbPageTemplate({
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-xl font-bold text-[#0D0D0D] mb-2">Map trust signals</h2>
+              <h2 className="text-xl font-bold text-[#0D0D0D] mb-2">Trusted local painters</h2>
               <p className="text-gray-700">
-                Melbourne-based, insured, review-focused and servicing {suburb} with suburb-specific landing pages and clear NAP signals.
+                Melbourne-based and fully insured, with a 5-star Google rating and a 5-year workmanship guarantee on every {suburb} project.
               </p>
             </div>
           </div>
@@ -330,7 +330,7 @@ export default function SuburbPageTemplate({
                 "Clear written quotes with scope, prep and coatings included",
                 "Premium finish standards for owner-occupied homes, rentals and pre-sale work",
                 "Fast response by phone on 0432 077 782",
-                "Suburb-specific service pages for better local search relevance",
+                "Local knowledge of homes and paint conditions in your area",
                 "Clean work areas and minimal disruption to your home",
               ].map((reason) => (
                 <div key={reason} className="flex items-start gap-3">
@@ -386,30 +386,26 @@ export default function SuburbPageTemplate({
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
-            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Recent Projects in {suburb}</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-[#F5F5F0] p-6 rounded-lg">
-                <div className="flex gap-1 mb-3">
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Rated 5 Stars by Melbourne Customers</h2>
+            <div className="bg-[#F5F5F0] p-6 rounded-lg flex flex-col sm:flex-row items-center gap-4 justify-between">
+              <div>
+                <div className="flex gap-1 mb-2">
                   {[...Array(5)].map((_, index) => (
                     <Star key={index} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">
-                  “Jetblack Painting transformed our {suburb} home. Professional, punctual and a clean finish.”
+                <p className="text-gray-700">
+                  Jetblack Painting holds a 5.0-star Google rating from 127+ verified customer reviews across Melbourne.
                 </p>
-                <p className="font-bold text-[#0D0D0D]">Local {suburb} Customer</p>
               </div>
-              <div className="bg-[#F5F5F0] p-6 rounded-lg">
-                <div className="flex gap-1 mb-3">
-                  {[...Array(5)].map((_, index) => (
-                    <Star key={index} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 italic">
-                  “The team handled the prep properly, communicated clearly and left everything spotless.”
-                </p>
-                <p className="font-bold text-[#0D0D0D]">Verified {suburb} Review</p>
-              </div>
+              <a
+                href="https://www.google.com/maps/place/Jetblack+Painting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-6 py-3 rounded font-bold transition-all"
+              >
+                Read our Google reviews
+              </a>
             </div>
           </motion.div>
 
@@ -417,7 +413,7 @@ export default function SuburbPageTemplate({
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
               <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Find Us on Google Maps - {suburb} Painters</h2>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Located in Keysborough, Melbourne, Jetblack Painting services {suburb} and all surrounding suburbs. Find us on Google Maps or call for immediate assistance.
+                Based in Mordialloc, Melbourne, Jetblack Painting services {suburb} and all surrounding suburbs. Find us on Google Maps or call for immediate assistance.
               </p>
               {getSuburbData(suburb) && (
                 <div className="rounded-xl overflow-hidden shadow-lg mb-8">
@@ -483,7 +479,7 @@ export default function SuburbPageTemplate({
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 bg-gray-50 p-8 rounded-lg">
               <h2 className="text-2xl font-bold text-[#0D0D0D] mb-4">Painters Near {suburb}</h2>
               <p className="text-gray-700 mb-5">
-                We also service nearby suburbs, so Google and customers can clearly understand the local painting service area around {suburb}.
+                We also service these nearby suburbs — if you're close to {suburb}, we've got you covered too.
               </p>
               <div className="flex flex-wrap gap-3">
                 {validNeighbouringSuburbs.map((s) => (

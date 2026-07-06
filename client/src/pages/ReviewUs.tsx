@@ -8,7 +8,7 @@ export default function ReviewUs() {
   const [copied, setCopied] = useState(false);
   
   // Replace this with your actual Google review link from GBP
-  const googleReviewLink = "https://g.page/r/jetblackpainting/review";
+  const googleReviewLink = "https://www.google.com/maps/place/Jetblack+Painting";
   
   const handleCopy = () => {
     navigator.clipboard.writeText(googleReviewLink);
@@ -129,35 +129,6 @@ export default function ReviewUs() {
             </div>
           </div>
 
-          {/* SMS/Email Templates */}
-          <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-gray-800">
-            <h2 className="text-2xl font-bold text-white mb-4">Review Request Templates</h2>
-            <p className="text-gray-300 mb-6">
-              Use these templates to ask your customers for reviews via SMS or email:
-            </p>
-            
-            <div className="space-y-6">
-              <div className="bg-[#0D0D0D] rounded-lg p-4">
-                <h3 className="text-[#00AACC] font-semibold mb-2">SMS Template</h3>
-                <p className="text-gray-300 text-sm italic">
-                  "Hi [Name], thanks for choosing Jetblack Painting! If you're happy with the work, we'd really appreciate a quick Google review. It only takes 30 seconds: [link] — Jimmy & the team 🎨"
-                </p>
-              </div>
-              
-              <div className="bg-[#0D0D0D] rounded-lg p-4">
-                <h3 className="text-[#00AACC] font-semibold mb-2">Email Template</h3>
-                <p className="text-gray-300 text-sm italic">
-                  "Hi [Name],<br /><br />
-                  Thank you for trusting Jetblack Painting with your [service type] project. We hope you love the results!<br /><br />
-                  If you have a moment, we'd be grateful if you could share your experience on Google. Your review helps other Melbourne homeowners find quality painters they can trust.<br /><br />
-                  Leave a review here: [link]<br /><br />
-                  Thanks again,<br />
-                  Jimmy Demarci<br />
-                  Jetblack Painting"
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

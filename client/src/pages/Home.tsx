@@ -74,7 +74,7 @@ export default function Home() {
         <div className="container">
           <h2 className="text-3xl font-bold text-[#0D0D0D] mb-4">Melbourne Suburb Painting Pages</h2>
           <p className="text-gray-700 mb-6">
-            Explore suburb-specific painting pages for local service details, project focus, and quote options.
+            Find your suburb below for local project examples, services and a fast free quote.
           </p>
           <div className="flex flex-wrap gap-3">
             {suburbLandingPages.map((suburb) => (

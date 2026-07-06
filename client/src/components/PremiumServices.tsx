@@ -82,7 +82,7 @@ export default function PremiumServices() {
             Interior, Exterior, Commercial, Roof &amp; Cabinet Painting Services
           </p>
           <p className="text-lg text-[#999]">
-            Jetblack Painting targets local search properly with dedicated suburb landing pages, clear service pages and internal links for every suburb listed on the site.
+            Wherever you are in Melbourne, Jetblack Painting has a local team that knows your area — from beachside weatherboards to heritage brick homes.
           </p>
         </motion.div>
 
@@ -103,7 +103,7 @@ export default function PremiumServices() {
             ))}
           </div>
           <p className="text-sm text-[#666] mt-4">
-            Each suburb links to its own landing page to improve crawl depth, AEO answers and Google Business Profile location relevance.
+            Select your suburb to see local project details, services and quote options.
           </p>
         </motion.div>
 
@@ -119,7 +119,7 @@ export default function PremiumServices() {
               <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-[#00AACC] transition-all cursor-pointer h-full">
                 <h3 className="text-xl font-bold text-[#0D0D0D] mb-3">{service.title}</h3>
                 <p className="text-[#666] mb-4">{service.description}</p>
-                <span className="text-[#00AACC] font-semibold">Learn More →</span>
+                <span className="text-[#00AACC] font-semibold">Learn More â†’</span>
               </div>
             </Link>
           ))}
@@ -158,10 +158,10 @@ export default function PremiumServices() {
               Jetblack Painting services Melbourne homeowners, landlords, real estate agents and commercial clients across <Link href="/painter-mordialloc" className="text-[#00AACC] hover:underline">Mordialloc</Link>, <Link href="/painter-brighton" className="text-[#00AACC] hover:underline">Brighton</Link>, <Link href="/painter-toorak" className="text-[#00AACC] hover:underline">Toorak</Link>, <Link href="/painter-camberwell" className="text-[#00AACC] hover:underline">Camberwell</Link>, <Link href="/painter-hawthorn" className="text-[#00AACC] hover:underline">Hawthorn</Link>, <Link href="/painter-bayside" className="text-[#00AACC] hover:underline">Bayside</Link>, <Link href="/painter-kingston" className="text-[#00AACC] hover:underline">Kingston</Link> and <Link href="/painter-greater-dandenong" className="text-[#00AACC] hover:underline">Greater Dandenong</Link>.
             </p>
             <p>
-              We specialise in <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting</Link>, <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline">exterior painting</Link>, <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline">commercial painting</Link>, <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline">roof painting</Link> and <Link href="/services/kitchen-cabinet-resurfacing" className="text-[#00AACC] hover:underline">kitchen cabinet resurfacing</Link>. This gives Google and AI search systems clear topical coverage across services and suburbs.
+              We specialise in <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting</Link>, <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline">exterior painting</Link>, <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline">commercial painting</Link>, <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline">roof painting</Link> and <Link href="/services/kitchen-cabinet-resurfacing" className="text-[#00AACC] hover:underline">kitchen cabinet resurfacing</Link>.
             </p>
             <p>
-              For better Maps ranking, the site now reinforces consistent business information, service-area schema, suburb landing pages, internal links and answer-focused FAQ content. Rankings are never guaranteed, but this is the correct technical base.
+              Every job is backed by a 5-year workmanship guarantee, $20M public liability insurance and a 5-star Google rating from 127+ verified reviews.
             </p>
           </div>
         </motion.div>

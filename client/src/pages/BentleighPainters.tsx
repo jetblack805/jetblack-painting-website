@@ -12,7 +12,7 @@ export default function BentleighPainters() {
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Keysborough", link: "/keysborough-painters" },
       ]}
-      localExpertise="Based locally in nearby Keysborough, we know Bentleigh's mix of family homes, period properties, and modern townhouses. Our team delivers premium painting results with quick response times and personalised service for all Bentleigh residents."
+      localExpertise="Based locally in nearby Mordialloc, we know Bentleigh's mix of family homes, period properties, and modern townhouses. Our team delivers premium painting results with quick response times and personalised service for all Bentleigh residents."
       propertyTypes="Bentleigh's family homes, period properties, and modern townhouses"
     />
   );

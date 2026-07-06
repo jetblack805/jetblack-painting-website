@@ -177,6 +177,7 @@ export default function QuoteForm() {
                       {suburb}
                     </option>
                   ))}
+                  <option value="Other">Other (Melbourne metro)</option>
                 </select>
                 {errors.suburb && (
                   <p className="text-red-500 text-sm mt-1">{errors.suburb.message}</p>

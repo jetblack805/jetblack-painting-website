@@ -5,7 +5,7 @@ import SEOHead from "./SEOHead";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MidPageCTA from "./MidPageCTA";
-import { getSuburbData } from "../suburbsData";
+import { getSuburbData, getEmbedMapSrc } from "../suburbsData";
 import imgExteriorWork from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
 import imgCommercialWork from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
 import imgRoofWork from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
@@ -422,7 +422,7 @@ export default function SuburbPageTemplate({
               {getSuburbData(suburb) && (
                 <div className="rounded-xl overflow-hidden shadow-lg mb-8">
                   <iframe
-                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150!2d${getSuburbData(suburb)!.coordinates.lng}!3d${getSuburbData(suburb)!.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1`}
+                    src={getEmbedMapSrc(getSuburbData(suburb)!.coordinates, suburb)}
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
@@ -458,7 +458,7 @@ export default function SuburbPageTemplate({
                         jimmy@jetblackpainting.com
                       </a>
                     </p>
-                    <p className="text-gray-600 text-sm mt-3">Mon-Fri: 7am-5pm | Sat: 8am-2pm</p>
+                    <p className="text-gray-600 text-sm mt-3">Mon-Fri: 7am-5pm | Sat-Sun: 9am-5pm</p>
                   </div>
                 </div>
               </div>

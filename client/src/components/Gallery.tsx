@@ -161,7 +161,7 @@ export default function Gallery() {
                       className="group relative overflow-hidden rounded-lg cursor-pointer h-64"
                       onClick={() => setLightbox(idx)}
                     >
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={project.src}
                         alt={project.alt}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

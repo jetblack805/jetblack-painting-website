@@ -68,13 +68,13 @@ export default function TrustBadges() {
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a
               href="tel:0432077782"
-              className="inline-flex items-center px-6 py-3 bg-[#00AACC] text-white font-bold rounded-lg hover:bg-[#0099bb] transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#007A99] text-white font-bold rounded-lg hover:bg-[#006B85] transition-colors"
             >
               Call Now: 0432 077 782
             </a>
             <a
               href="mailto:jimmy@jetblackpainting.com"
-              className="inline-flex items-center px-6 py-3 border-2 border-[#00AACC] text-[#00AACC] font-bold rounded-lg hover:bg-[#00AACC] hover:text-white transition-colors"
+              className="inline-flex items-center px-6 py-3 border-2 border-[#00AACC] text-[#00AACC] font-bold rounded-lg hover:bg-[#007A99] hover:text-white transition-colors"
             >
               Email for Free Quote
             </a>

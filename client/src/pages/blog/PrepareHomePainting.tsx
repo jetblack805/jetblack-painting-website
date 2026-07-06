@@ -18,7 +18,7 @@ export default function PrepareHomePainting() {
         <div className="container max-w-3xl">
           {/* Breadcrumb */}
           <nav className="mb-6" aria-label="Breadcrumb">
-            <Link href="/blog" className="inline-flex items-center text-[#00AACC] hover:underline text-sm">
+            <Link href="/blog" className="inline-flex items-center text-[#007A99] hover:underline text-sm">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Blog
             </Link>
           </nav>
@@ -47,7 +47,7 @@ export default function PrepareHomePainting() {
             <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">1. Clear the Rooms</h3>
             <p className="text-gray-700 mb-4">
               Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers. 
-              The more space our <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting team</Link> has 
+              The more space our <Link href="/services/interior-painting" className="text-[#007A99] hover:underline">interior painting team</Link> has 
               to work, the faster and more efficient the job will be.
             </p>
 
@@ -68,7 +68,7 @@ export default function PrepareHomePainting() {
 
             <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">3. Exterior Preparation</h3>
             <p className="text-gray-700 mb-4">
-              For <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline">exterior painting</Link>, ensure:
+              For <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline">exterior painting</Link>, ensure:
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
               <li>Garden beds are trimmed back from walls (30cm clearance)</li>
@@ -105,8 +105,8 @@ export default function PrepareHomePainting() {
 
             <p className="text-gray-700 mb-6">
               We monitor weather forecasts closely and schedule exterior work on optimal days. This is especially important 
-              for homes in coastal areas like <Link href="/painter-brighton" className="text-[#00AACC] hover:underline">Brighton</Link> and 
-              <Link href="/painter-hampton" className="text-[#00AACC] hover:underline"> Hampton</Link> where salt air can affect drying times.
+              for homes in coastal areas like <Link href="/painter-brighton" className="text-[#007A99] hover:underline">Brighton</Link> and 
+              <Link href="/painter-hampton" className="text-[#007A99] hover:underline"> Hampton</Link> where salt air can affect drying times.
             </p>
 
             <div className="bg-[#F5F5F0] rounded-xl p-6 mt-8">
@@ -117,7 +117,7 @@ export default function PrepareHomePainting() {
               </p>
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center px-6 py-3 bg-[#00AACC] text-white font-bold rounded-lg hover:bg-[#0099bb] transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-[#007A99] text-white font-bold rounded-lg hover:bg-[#006B85] transition-colors"
               >
                 Call Now: 0432 077 782
               </a>

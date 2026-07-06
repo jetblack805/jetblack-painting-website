@@ -18,7 +18,7 @@ export default function BestPaintColours2025() {
         <div className="container max-w-3xl">
           {/* Breadcrumb */}
           <nav className="mb-6" aria-label="Breadcrumb">
-            <Link href="/blog" className="inline-flex items-center text-[#00AACC] hover:underline text-sm">
+            <Link href="/blog" className="inline-flex items-center text-[#007A99] hover:underline text-sm">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Blog
             </Link>
           </nav>
@@ -47,16 +47,16 @@ export default function BestPaintColours2025() {
             
             <p className="text-gray-700 mb-4">
               Melbourne homeowners are embracing warm, earthy tones that create a sense of calm and sophistication. 
-              Here are the top interior colours we're painting across <Link href="/painter-brighton" className="text-[#00AACC] hover:underline">Brighton</Link>, 
-              <Link href="/painter-toorak" className="text-[#00AACC] hover:underline"> Toorak</Link>, and 
-              <Link href="/painter-malvern" className="text-[#00AACC] hover:underline"> Malvern</Link> homes this year:
+              Here are the top interior colours we're painting across <Link href="/painter-brighton" className="text-[#007A99] hover:underline">Brighton</Link>, 
+              <Link href="/painter-toorak" className="text-[#007A99] hover:underline"> Toorak</Link>, and 
+              <Link href="/painter-malvern" className="text-[#007A99] hover:underline"> Malvern</Link> homes this year:
             </p>
 
             <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">1. Warm Whites & Off-Whites</h3>
             <p className="text-gray-700 mb-4">
               Dulux Lexicon Quarter and Natural White remain the most popular choices for Melbourne interiors. 
               These warm whites work beautifully with natural light and complement both modern and period homes. 
-              Our <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline">interior painting team</Link> recommends 
+              Our <Link href="/services/interior-painting" className="text-[#007A99] hover:underline">interior painting team</Link> recommends 
               these for open-plan living areas where you want a bright, airy feel.
             </p>
 
@@ -64,8 +64,8 @@ export default function BestPaintColours2025() {
             <p className="text-gray-700 mb-4">
               Inspired by Melbourne's leafy suburbs, sage green has become the accent colour of choice for feature walls, 
               bedrooms, and bathrooms. Dulux Tranquil Retreat and Haymes Sage are particularly popular in 
-              <Link href="/painter-hawthorn" className="text-[#00AACC] hover:underline"> Hawthorn</Link> and 
-              <Link href="/painter-camberwell" className="text-[#00AACC] hover:underline"> Camberwell</Link> homes.
+              <Link href="/painter-hawthorn" className="text-[#007A99] hover:underline"> Hawthorn</Link> and 
+              <Link href="/painter-camberwell" className="text-[#007A99] hover:underline"> Camberwell</Link> homes.
             </p>
 
             <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">3. Deep Navy & Charcoal</h3>
@@ -79,7 +79,7 @@ export default function BestPaintColours2025() {
             
             <p className="text-gray-700 mb-4">
               Melbourne's variable weather — from scorching summers to cold, wet winters — means your 
-              <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline"> exterior paint</Link> needs 
+              <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline"> exterior paint</Link> needs 
               to withstand UV exposure, moisture, and temperature fluctuations. Here's what's working in 2025:
             </p>
 
@@ -93,8 +93,8 @@ export default function BestPaintColours2025() {
             <p className="text-gray-700 mb-4">
               A bold trend gaining traction in Melbourne's inner suburbs is dark charcoal or black exteriors paired 
               with crisp white window frames and doors. This creates a striking, contemporary look that's particularly 
-              popular in <Link href="/painter-toorak" className="text-[#00AACC] hover:underline">Toorak</Link> and 
-              <Link href="/painter-brighton" className="text-[#00AACC] hover:underline"> Brighton</Link>.
+              popular in <Link href="/painter-toorak" className="text-[#007A99] hover:underline">Toorak</Link> and 
+              <Link href="/painter-brighton" className="text-[#007A99] hover:underline"> Brighton</Link>.
             </p>
 
             <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Tips for Choosing the Right Colour</h2>
@@ -123,7 +123,7 @@ export default function BestPaintColours2025() {
               </p>
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center px-6 py-3 bg-[#00AACC] text-white font-bold rounded-lg hover:bg-[#0099bb] transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-[#007A99] text-white font-bold rounded-lg hover:bg-[#006B85] transition-colors"
               >
                 Call Now: 0432 077 782
               </a>

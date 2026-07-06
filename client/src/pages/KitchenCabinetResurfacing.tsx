@@ -78,7 +78,7 @@ export default function KitchenCabinetResurfacing() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-3 rounded font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-3 rounded font-bold transition-all"
             >
               <Phone className="w-5 h-5" />
               Call for Free Quote
@@ -172,35 +172,35 @@ export default function KitchenCabinetResurfacing() {
             <h2 className="text-2xl font-bold text-[#0D0D0D] mb-6">Our Kitchen Cabinet Resurfacing Process</h2>
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#00AACC] text-white flex items-center justify-center font-bold">1</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#007A99] text-white flex items-center justify-center font-bold">1</div>
                 <div>
                   <h3 className="font-bold text-[#0D0D0D] mb-1">Consultation & Colour Selection</h3>
                   <p className="text-gray-700">We discuss your vision and help you choose the perfect colour and finish for your kitchen.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#00AACC] text-white flex items-center justify-center font-bold">2</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#007A99] text-white flex items-center justify-center font-bold">2</div>
                 <div>
                   <h3 className="font-bold text-[#0D0D0D] mb-1">Cabinet Removal & Preparation</h3>
                   <p className="text-gray-700">We carefully remove cabinet doors and hardware, then thoroughly clean and sand all surfaces.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#00AACC] text-white flex items-center justify-center font-bold">3</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#007A99] text-white flex items-center justify-center font-bold">3</div>
                 <div>
                   <h3 className="font-bold text-[#0D0D0D] mb-1">Priming & Base Coat</h3>
                   <p className="text-gray-700">We apply professional primer and base coat to ensure excellent adhesion and coverage.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#00AACC] text-white flex items-center justify-center font-bold">4</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#007A99] text-white flex items-center justify-center font-bold">4</div>
                 <div>
                   <h3 className="font-bold text-[#0D0D0D] mb-1">2-Pack Finish Application</h3>
                   <p className="text-gray-700">We apply premium 2-pack finish in multiple coats for a durable, high-gloss result.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#00AACC] text-white flex items-center justify-center font-bold">5</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#007A99] text-white flex items-center justify-center font-bold">5</div>
                 <div>
                   <h3 className="font-bold text-[#0D0D0D] mb-1">Reassembly & Final Inspection</h3>
                   <p className="text-gray-700">We reinstall doors, hardware, and handles, then perform a final quality inspection.</p>
@@ -258,13 +258,13 @@ export default function KitchenCabinetResurfacing() {
           >
             <h3 className="text-xl font-bold text-[#0D0D0D] mb-4">Our Other Services</h3>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/interior-painting" className="text-[#00AACC] hover:underline font-medium">Interior Painting</Link>
+              <Link href="/services/interior-painting" className="text-[#007A99] hover:underline font-medium">Interior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline font-medium">Exterior Painting</Link>
+              <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline font-medium">Exterior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline font-medium">Commercial Painting</Link>
+              <Link href="/services/commercial-painting" className="text-[#007A99] hover:underline font-medium">Commercial Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline font-medium">Roof Painting</Link>
+              <Link href="/services/roof-painting" className="text-[#007A99] hover:underline font-medium">Roof Painting</Link>
             </div>
           </motion.div>
 
@@ -281,7 +281,7 @@ export default function KitchenCabinetResurfacing() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-lg transition-all"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

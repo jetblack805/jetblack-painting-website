@@ -90,10 +90,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs">
+          <p className="text-white/60 text-xs">
             &copy; {new Date().getFullYear()} Jetblack Painting. All rights reserved. ABN 50 548 669 474.
           </p>
-          <p className="text-white/30 text-xs">
+          <p className="text-white/60 text-xs">
             Serving all Melbourne suburbs since 2012
           </p>
         </div>

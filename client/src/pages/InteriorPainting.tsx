@@ -74,7 +74,7 @@ export default function InteriorPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-3 rounded font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-3 rounded font-bold transition-all"
             >
               <Phone className="w-5 h-5" />
               Call for Free Quote
@@ -183,13 +183,13 @@ export default function InteriorPainting() {
           >
             <h3 className="text-xl font-bold text-[#0D0D0D] mb-4">Our Other Services</h3>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/exterior-painting" className="text-[#00AACC] hover:underline font-medium">Exterior Painting</Link>
+              <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline font-medium">Exterior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/commercial-painting" className="text-[#00AACC] hover:underline font-medium">Commercial Painting</Link>
+              <Link href="/services/commercial-painting" className="text-[#007A99] hover:underline font-medium">Commercial Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/roof-painting" className="text-[#00AACC] hover:underline font-medium">Roof Painting</Link>
+              <Link href="/services/roof-painting" className="text-[#007A99] hover:underline font-medium">Roof Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/blog" className="text-[#00AACC] hover:underline font-medium">Painting Blog</Link>
+              <Link href="/blog" className="text-[#007A99] hover:underline font-medium">Painting Blog</Link>
             </div>
           </motion.div>
 
@@ -206,7 +206,7 @@ export default function InteriorPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-lg transition-all"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

@@ -37,7 +37,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-[oklch(0.12_0.005_285/0.97)] shadow-lg shadow-black/20 backdrop-blur-md"
-          : "bg-transparent"
+          : "bg-[oklch(0.12_0.005_285/0.97)]"
       }`}
     >
       <div className="container flex items-center justify-between h-18 lg:h-20">
@@ -68,7 +68,7 @@ export default function Navbar() {
           ))}
           <a
             href="tel:0432077782"
-            className="flex items-center gap-2 bg-[#00AACC] hover:bg-[#0099BB] text-white px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
+            className="flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
           >
             <Phone className="w-4 h-4" />
             Call Now

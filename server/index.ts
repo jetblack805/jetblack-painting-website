@@ -15,12 +15,8 @@ async function startServer() {
   // server only still runs on the old Manus deployment, whose sole job is
   // to 301 every request to the new domain — required for Google Search
   // Console's Change of Address validation.
-  app.use((req, res, next) => {
-    const host = req.headers.host ?? "";
-    if (host.endsWith(".manus.space")) {
-      return res.redirect(301, `https://jetblackpainting.com${req.originalUrl}`);
-    }
-    next();
+  app.use((req, res) => {
+    res.redirect(301, `https://jetblackpainting.com${req.originalUrl}`);
   });
 
   if (process.env.NODE_ENV !== "production") {

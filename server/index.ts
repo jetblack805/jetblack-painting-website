@@ -11,6 +11,18 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
+  // The site now lives at jetblackpainting.com (Cloudflare). This Express
+  // server only still runs on the old Manus deployment, whose sole job is
+  // to 301 every request to the new domain — required for Google Search
+  // Console's Change of Address validation.
+  app.use((req, res, next) => {
+    const host = req.headers.host ?? "";
+    if (host.endsWith(".manus.space")) {
+      return res.redirect(301, `https://jetblackpainting.com${req.originalUrl}`);
+    }
+    next();
+  });
+
   if (process.env.NODE_ENV !== "production") {
     await setupVite(app, server);
   } else {

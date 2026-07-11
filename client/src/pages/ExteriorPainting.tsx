@@ -13,7 +13,7 @@ export default function ExteriorPainting() {
     "Premium weather-resistant Dulux and Taubmans paints",
     "Expert colour consultation for maximum curb appeal",
     "Protection against Melbourne's harsh weather conditions",
-    "Fully licensed and insured with $20M public liability",
+    "Fully licensed and insured with $10M public liability",
     "5-year workmanship guarantee"
   ];
 

@@ -13,7 +13,7 @@ export default function RoofPainting() {
     "All roof types: tile, metal, Colorbond",
     "Professional pressure cleaning included",
     "Premium roof coatings and sealants",
-    "Fully licensed and insured with $20M public liability",
+    "Fully licensed and insured with $10M public liability",
     "5-year workmanship guarantee"
   ];
 

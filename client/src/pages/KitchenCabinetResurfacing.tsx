@@ -13,7 +13,7 @@ export default function KitchenCabinetResurfacing() {
     "Fraction of full kitchen renovation cost",
     "Professional colour consultation included",
     "Durable, long-lasting finish resistant to wear",
-    "Fully licensed and insured with $20M public liability",
+    "Fully licensed and insured with $10M public liability",
     "5-year workmanship guarantee"
   ];
 

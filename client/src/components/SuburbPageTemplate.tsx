@@ -102,7 +102,7 @@ export default function SuburbPageTemplate({
     telephone: "+61432077782",
     email: "jimmy@jetblackpainting.com",
     priceRange: "$$",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "127", bestRating: "5" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "14", bestRating: "5" },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Mordialloc",
@@ -395,7 +395,7 @@ export default function SuburbPageTemplate({
                   ))}
                 </div>
                 <p className="text-gray-700">
-                  Jetblack Painting holds a 5.0-star Google rating from 127+ verified customer reviews across Melbourne.
+                  Jetblack Painting holds a 5.0-star Google rating from 14 verified customer reviews across Melbourne.
                 </p>
               </div>
               <a

@@ -13,7 +13,7 @@ export default function RentalPropertyPainting() {
     "Durable finishes that withstand tenant wear",
     "Professional property management coordination",
     "Premium quality Dulux and Taubmans paints",
-    "Fully licensed and insured with $20M public liability",
+    "Fully licensed and insured with $10M public liability",
     "5-year workmanship guarantee"
   ];
 

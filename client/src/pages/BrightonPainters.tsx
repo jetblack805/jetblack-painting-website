@@ -40,7 +40,7 @@ export default function BrightonPainters() {
     },
     {
       question: "Are your painters licensed and insured to work on luxury Brighton residences?",
-      answer: "Absolutely. All our painters are fully licensed, and we carry $20 million in public liability insurance. We pride ourselves on our professional conduct and respect for the high-end properties we work on in Brighton."
+      answer: "Absolutely. All our painters are fully licensed, and we carry $10 million in public liability insurance. We pride ourselves on our professional conduct and respect for the high-end properties we work on in Brighton."
     }
   ];
 

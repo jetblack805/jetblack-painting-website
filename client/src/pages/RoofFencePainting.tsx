@@ -13,7 +13,7 @@ export default function RoofFencePainting() {
     "Professional surface preparation and priming",
     "Premium weather-resistant Dulux and Taubmans paints",
     "Handles all roof types: metal, tile, concrete, asphalt",
-    "Fully licensed and insured with $20M public liability",
+    "Fully licensed and insured with $10M public liability",
     "5-year workmanship guarantee"
   ];
 

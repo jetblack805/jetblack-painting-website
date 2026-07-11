@@ -4,7 +4,7 @@ export default function TrustBadges() {
   const badges = [
     {
       icon: <Shield className="w-10 h-10 text-[#00AACC]" />,
-      title: "$20M Public Liability",
+      title: "$10M Public Liability",
       description: "Fully insured for your peace of mind"
     },
     {
@@ -20,7 +20,7 @@ export default function TrustBadges() {
     {
       icon: <Star className="w-10 h-10 text-[#00AACC]" />,
       title: "5-Star Google Rating",
-      description: "127+ verified 5-star reviews"
+      description: "14 verified 5-star reviews"
     },
     {
       icon: <Clock className="w-10 h-10 text-[#00AACC]" />,

@@ -161,7 +161,7 @@ export default function PremiumServices() {
               We specialise in <Link href="/services/interior-painting" className="text-[#007A99] hover:underline">interior painting</Link>, <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline">exterior painting</Link>, <Link href="/services/commercial-painting" className="text-[#007A99] hover:underline">commercial painting</Link>, <Link href="/services/roof-painting" className="text-[#007A99] hover:underline">roof painting</Link> and <Link href="/services/kitchen-cabinet-resurfacing" className="text-[#007A99] hover:underline">kitchen cabinet resurfacing</Link>.
             </p>
             <p>
-              Every job is backed by a 5-year workmanship guarantee, $20M public liability insurance and a 5-star Google rating from 127+ verified reviews.
+              Every job is backed by a 5-year workmanship guarantee, $10M public liability insurance and a 5-star Google rating from 14 verified reviews.
             </p>
           </div>
         </motion.div>

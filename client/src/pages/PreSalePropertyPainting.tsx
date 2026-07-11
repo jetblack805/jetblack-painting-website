@@ -13,7 +13,7 @@ export default function PreSalePropertyPainting() {
     "Professional colour consultation for buyer appeal",
     "Fast turnaround to meet sale timelines",
     "Premium quality Dulux and Taubmans paints",
-    "Fully licensed and insured with $20M public liability",
+    "Fully licensed and insured with $10M public liability",
     "5-year workmanship guarantee"
   ];
 

@@ -5,7 +5,10 @@ import SEOHead from "@/components/SEOHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/service-interior-painting.jpeg";
+import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.jpeg";
+import imgKitchenTimber from "@/assets/images/gallery-interior-kitchen-timber.jpeg";
+import imgLounge from "@/assets/images/gallery-interior-lounge.jpeg";
+import imgStaircase from "@/assets/images/gallery-interior-staircase.jpeg";
 
 export default function InteriorPainting() {
   const benefits = [
@@ -13,7 +16,7 @@ export default function InteriorPainting() {
     "Premium quality Dulux and Taubmans paint products",
     "Expert colour consultation included",
     "Minimal disruption to your home",
-    "Fully licensed and insured with $20M public liability",
+    "Fully licensed and insured with $10M public liability",
     "5-year workmanship guarantee"
   ];
 
@@ -86,11 +89,31 @@ export default function InteriorPainting() {
       <section className="py-12 bg-white">
         <div className="container">
           <img
-            src={imgService}
-            alt="Interior painting example by Jetblack Painting"
+            src={imgOpenPlanLiving}
+            alt="Open plan living room and kitchen interior painted by Jetblack Painting"
             className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
             loading="lazy"
           />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            <img
+              src={imgKitchenTimber}
+              alt="Modern kitchen with timber panelling painted by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgLounge}
+              alt="Freshly painted lounge room by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgStaircase}
+              alt="Staircase balustrade and walls painted white by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

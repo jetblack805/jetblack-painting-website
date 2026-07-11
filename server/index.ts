@@ -11,6 +11,14 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
+  // Force HTTPS behind the proxy (Railway/Cloudflare set x-forwarded-proto)
+  app.use((req, res, next) => {
+    if (req.headers["x-forwarded-proto"] === "http") {
+      return res.redirect(301, `https://${req.headers.host}${req.originalUrl}`);
+    }
+    next();
+  });
+
   // The site now lives at jetblackpainting.com (Cloudflare).
   // This server will serve the minimal redirect HTML pages.
 

@@ -277,24 +277,6 @@ const NOINDEX_PATHS = new Set([
   "/blog/best-paint-colors-melbourne",
 ]);
 
-// ─── AggregateRating schema ───────────────────────────────────────────────────
-// Injected server-side so it appears in the static HTML for crawlers.
-// ⚠️  UPDATE reviewCount with your actual Google review count from GBP dashboard.
-
-const AGGREGATE_RATING_SCHEMA = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "@id": `${BASE_URL}/#business`,
-  name: "Jetblack Painting",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    bestRating: "5",
-    worstRating: "1",
-    reviewCount: "14", // ← UPDATE THIS with your actual Google review count
-  },
-});
-
 // ─── Per-route extra schemas ──────────────────────────────────────────────────
 // Injected server-side so AI crawlers (Perplexity, ChatGPT, Claude) see them
 // in raw HTML without needing to execute JavaScript.
@@ -818,7 +800,7 @@ console.log('DIST:', distPath, fs.existsSync(distPath));
     return _baseHtml;
   }
 
-  // ── 4. Catch-all: inject per-route meta + noindex + aggregateRating ────────
+  // ── 4. Catch-all: inject per-route meta + noindex + schemas ────────────────
   app.use("*", (_req, res) => {
     try {
       // Normalise path
@@ -843,13 +825,14 @@ console.log('DIST:', distPath, fs.existsSync(distPath));
 
       let html = getBaseHtml();
 
-      // Inject aggregateRating + any route-specific schemas before </head>
+      // Inject any route-specific schemas before </head>
       const extraSchemas = SCHEMAS_BY_ROUTE[metaKey] ?? SCHEMAS_BY_ROUTE[reqPath] ?? [];
-      const allSchemas = [AGGREGATE_RATING_SCHEMA, ...extraSchemas];
-      const schemaHtml = allSchemas
-        .map((s) => `<script type="application/ld+json">${s}</script>`)
-        .join("\n  ");
-      html = html.replace("</head>", `\n  ${schemaHtml}\n</head>`);
+      if (extraSchemas.length > 0) {
+        const schemaHtml = extraSchemas
+          .map((s) => `<script type="application/ld+json">${s}</script>`)
+          .join("\n  ");
+        html = html.replace("</head>", `\n  ${schemaHtml}\n</head>`);
+      }
 
       // Replace <title>
       html = html.replace(

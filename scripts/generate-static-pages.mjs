@@ -37,7 +37,8 @@ function writePage(route, html) {
 }
 
 function extractProp(source, propName) {
-  const pattern = new RegExp(`${propName}=(?:"([\\s\\S]*?)"|\\\`([\\s\\S]*?)\\\`)`);
+  // Props may be written as name="...", name=`...`, or name={`...`}
+  const pattern = new RegExp(`${propName}=\\{?(?:"([\\s\\S]*?)"|\\\`([\\s\\S]*?)\\\`)\\}?`);
   const match = source.match(pattern);
   return match ? (match[1] ?? match[2] ?? "").trim() : "";
 }

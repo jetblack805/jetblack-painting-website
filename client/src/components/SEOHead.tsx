@@ -82,6 +82,13 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
     document.getElementById(managedSchemaId)?.remove();
 
     if (schemaJson) {
+      // The pre-rendered static pages carry their own crawler-facing JSON-LD.
+      // Once the React schema is available it supersedes them — leaving both in
+      // the DOM gives Google's renderer duplicate, conflicting business items.
+      document
+        .querySelectorAll('script[type="application/ld+json"][data-static-schema]')
+        .forEach((tag) => tag.remove());
+
       const script = document.createElement("script");
       script.id = managedSchemaId;
       script.type = "application/ld+json";

@@ -82,7 +82,7 @@ function extractNeighbours(source) {
 function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema }) {
   const schemaScripts = (Array.isArray(schema) ? schema : [schema])
     .filter(Boolean)
-    .map((item) => `  <script type="application/ld+json">${JSON.stringify(item)}</script>`)
+    .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
     .join("\n");
 
   const sectionHtml = sections
@@ -209,6 +209,15 @@ function suburbSchema({ suburb, title, description, canonical }) {
         telephone: PHONE_DISPLAY,
         email: EMAIL,
         url: SITE_URL,
+        image: `${SITE_URL}/og-image.jpg`,
+        priceRange: "$$",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Mordialloc",
+          addressRegion: "VIC",
+          postalCode: "3195",
+          addressCountry: "AU",
+        },
       },
       areaServed: {
         "@type": "City",
@@ -381,6 +390,8 @@ function serviceSchema({ name, title, description, canonical }) {
         telephone: PHONE_DISPLAY,
         email: EMAIL,
         url: SITE_URL,
+        image: `${SITE_URL}/og-image.jpg`,
+        priceRange: "$$",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Mordialloc",

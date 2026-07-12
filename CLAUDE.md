@@ -55,7 +55,7 @@ Each suburb page (`client/src/pages/<Suburb>Painters.tsx`) is a thin wrapper aro
 
 ### Serving & deployment
 
-- **Production**: Cloudflare Worker (`wrangler.jsonc` + `worker/index.js`). The worker 301-redirects `www.` → apex, then serves `dist/public` static assets with SPA fallback. Deploy with `npx wrangler deploy` after `pnpm build`.
+- **Production**: Cloudflare Worker (`wrangler.jsonc` + `worker/index.js`). The worker 301-redirects `www.` → apex, then serves `dist/public` static assets with SPA fallback. Deployment is automated via Cloudflare Workers Builds Git integration — pushing to the repo triggers a build and deploy (the Cloudflare bot comments deploy status on PRs). A broken `pnpm build` therefore breaks deploys; verify it locally before pushing.
 - `server/index.ts` is a small Express server (bundled by esbuild in `pnpm build`, run via `pnpm start`) from the earlier Railway hosting; it force-redirects to https and serves `dist/public`. It is not the primary production path anymore.
 - `DEPLOYMENT_GUIDE.md`, `OPTIMIZATION_SUMMARY.md`, `PERFORMANCE_OPTIMIZATIONS.md`, and `SPEED_OPTIMIZATION.md` predate the Cloudflare move (they reference the old Manus platform) — treat them as historical, not current instructions.
 

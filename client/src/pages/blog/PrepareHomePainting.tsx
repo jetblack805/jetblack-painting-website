@@ -10,7 +10,7 @@ export default function PrepareHomePainting() {
       <SEOHead
         title="How to Prepare Your Home for Painting | Melbourne Guide | Jetblack Painting"
         description="Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results."
-        canonical="https://jetblackpainting.com/blog/prepare-home-for-painting"
+        canonical="https://jetblackpainting.com/blog/prepare-home-for-painting/"
       />
       <Navbar />
       

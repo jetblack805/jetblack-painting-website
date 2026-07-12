@@ -366,6 +366,311 @@ for (const page of allSuburbPages) {
   generateSuburbPage(page.route, path.join(PAGE_DIR, page.source));
 }
 
+// Service pages. Titles and descriptions must stay in sync with the SEOHead
+// props in the matching client/src/pages/<Service>.tsx component.
+function serviceSchema({ name, title, description, canonical }) {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name,
+      serviceType: name,
+      provider: {
+        "@type": "HomeAndConstructionBusiness",
+        name: "Jetblack Painting",
+        telephone: PHONE_DISPLAY,
+        email: EMAIL,
+        url: SITE_URL,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Mordialloc",
+          addressRegion: "VIC",
+          postalCode: "3195",
+          addressCountry: "AU",
+        },
+      },
+      areaServed: { "@type": "City", name: "Melbourne" },
+      description,
+      url: canonical,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url: canonical,
+    },
+  ];
+}
+
+const popularSuburbLinks = [
+  { label: "Painters Toorak", href: "/painter-toorak/" },
+  { label: "Painters Brighton", href: "/painter-brighton/" },
+  { label: "Painters Camberwell", href: "/painter-camberwell/" },
+  { label: "Painters Hawthorn", href: "/painter-hawthorn/" },
+  { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+  { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+  { label: "Painters Keysborough", href: "/keysborough-painters/" },
+  { label: "Painters Glen Waverley", href: "/painter-glen-waverley/" },
+];
+
+const servicePages = [
+  {
+    route: "/services/interior-painting",
+    name: "Interior Painting",
+    title: "Interior Painting Melbourne | Professional House Painters | Jetblack Painting",
+    description:
+      "Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.",
+    heroTitle: "Interior Painting Melbourne",
+    heroBody:
+      "Professional interior house painting across Melbourne — walls, ceilings, trims, doors, and full home repaints finished with premium Dulux and Taubmans systems and meticulous preparation.",
+    cards: [
+      { title: "Walls and ceilings", body: "Smooth, even finishes with proper surface preparation, patching, and premium low-sheen and matt systems." },
+      { title: "Trims, doors and skirting", body: "Crisp enamel finishes on architraves, skirting boards, doors, and window frames." },
+      { title: "Feature walls and colour consulting", body: "Help choosing colours and sheens that suit the room's light, furniture, and style." },
+      { title: "Full home repaints", body: "Whole-house interior repaints staged room by room to minimise disruption for your household." },
+    ],
+    paragraphs: [
+      "Every interior project starts with thorough preparation: furniture protection, filling and sanding, gap sealing, and priming where needed, so the final coats look sharp and last longer.",
+      "Jetblack Painting is a 5-star rated Melbourne painting business with 13+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every interior project.",
+    ],
+    faqs: [
+      { question: "How long does interior painting take?", answer: "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required." },
+      { question: "Do I need to move out during interior painting?", answer: "No. We stage the work room by room, use low-odour premium paints, and keep living areas usable throughout the project." },
+      { question: "Which paint brands do you use for interiors?", answer: "We use premium Australian brands including Dulux and Taubmans, matched to each surface and traffic level." },
+    ],
+  },
+  {
+    route: "/services/exterior-painting",
+    name: "Exterior Painting",
+    title: "Exterior Painting Melbourne | Weather-Resistant House Painters | Jetblack Painting",
+    description:
+      "Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.",
+    heroTitle: "Exterior Painting Melbourne",
+    heroBody:
+      "Weather-resistant exterior house painting across Melbourne — weatherboards, render, brick, eaves, fascias, and fences prepared properly so the finish lasts through Melbourne's changing conditions.",
+    cards: [
+      { title: "Weatherboard homes", body: "Sanding, priming, gap sealing, and durable topcoats that protect timber weatherboards from moisture and UV." },
+      { title: "Render and brick", body: "Membrane and acrylic systems for rendered and masonry exteriors, matched to the substrate." },
+      { title: "Eaves, fascias and gutters", body: "Detail work on trims and high areas completed safely with the right access equipment." },
+      { title: "Fences and outdoor structures", body: "Fence painting and staining that finishes the property's street appeal." },
+    ],
+    paragraphs: [
+      "Melbourne exteriors need real preparation: pressure washing, scraping and sanding back failing coatings, priming bare timber, and sealing gaps before any topcoat is applied.",
+      "We use exterior-grade Dulux and Taubmans systems selected for the substrate and exposure, backed by a 5-year workmanship guarantee and $10 million public liability insurance.",
+    ],
+    faqs: [
+      { question: "What time of year is best for exterior painting in Melbourne?", answer: "Exterior painting is possible most of the year in Melbourne. We schedule around weather and use coatings suited to the season's temperature and humidity." },
+      { question: "How long does an exterior repaint last?", answer: "With proper preparation and premium coatings, a Melbourne exterior repaint typically lasts 10 years or more." },
+      { question: "Do you paint two-storey homes?", answer: "Yes. We paint single and multi-storey homes using ladders, scaffolding, or elevated work platforms as required." },
+    ],
+  },
+  {
+    route: "/services/roof-painting",
+    name: "Roof Painting",
+    title: "Roof Painting Melbourne | Roof Restoration & Coating | Jetblack Painting",
+    description:
+      "Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes.",
+    heroTitle: "Roof Painting Melbourne",
+    heroBody:
+      "Professional roof painting and restoration across Melbourne — cleaning, repairs, priming, and membrane coatings that extend the life of tile and metal roofs by 10–15 years.",
+    cards: [
+      { title: "Tile roof restoration", body: "High-pressure cleaning, rebedding and repointing where needed, then primer and flexible membrane topcoats." },
+      { title: "Metal and Colorbond roofs", body: "Rust treatment, priming, and roof-grade coatings that restore colour and protection." },
+      { title: "Heat-reflective coatings", body: "Lighter, heat-reflective roof colours that can reduce summer heat load." },
+      { title: "Roof inspections and quotes", body: "Honest assessments of whether painting, restoration, or repairs are the right call for your roof." },
+    ],
+    paragraphs: [
+      "Roof painting is as much about preparation as paint: thorough cleaning, repairs, and the correct primer are what make the coating system last.",
+      "All roof work is completed safely and is covered by our 5-year workmanship guarantee and $10 million public liability insurance.",
+    ],
+    faqs: [
+      { question: "How much longer will my roof last after painting?", answer: "A properly prepared and coated roof typically gains 10–15 years of life compared with an untreated roof." },
+      { question: "Can you change my roof colour?", answer: "Yes. Roof painting is an opportunity to update the roof colour, including modern heat-reflective options." },
+      { question: "Do you paint both tile and metal roofs?", answer: "Yes. We restore and paint concrete tile, terracotta (where suitable), metal, and Colorbond roofs across Melbourne." },
+    ],
+  },
+  {
+    route: "/services/commercial-painting",
+    name: "Commercial Painting",
+    title: "Commercial Painting Melbourne | Office & Retail Painters | Jetblack Painting",
+    description:
+      "Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes.",
+    heroTitle: "Commercial Painting Melbourne",
+    heroBody:
+      "Commercial painting for Melbourne offices, retail fit-outs, warehouses, and strata properties — scheduled around your trading hours with after-hours and weekend availability.",
+    cards: [
+      { title: "Offices and retail", body: "Clean, low-disruption repaints for offices, shops, and hospitality venues, including after-hours work." },
+      { title: "Warehouses and industrial", body: "Large-area wall and ceiling painting plus epoxy floor coatings for industrial spaces." },
+      { title: "Strata and body corporate", body: "Common areas, external facades, and scheduled maintenance painting for strata managers." },
+      { title: "Maintenance programs", body: "Ongoing repaint and touch-up programs that keep commercial premises presentable." },
+    ],
+    paragraphs: [
+      "Commercial projects run on clear scope, fixed schedules, and tidy sites. We coordinate with managers and tenants so painting never gets in the way of business.",
+      "Jetblack Painting carries $10 million public liability insurance and provides compliance documentation on request, with a 5-year workmanship guarantee on completed work.",
+    ],
+    faqs: [
+      { question: "Can you paint outside business hours?", answer: "Yes. We regularly complete commercial painting after hours and on weekends so trading isn't disrupted." },
+      { question: "Do you provide insurance and compliance documents?", answer: "Yes. We carry $10 million public liability insurance and can provide documentation for building and site inductions." },
+      { question: "What size commercial projects do you take on?", answer: "From single office suites and shopfronts to warehouses and multi-site strata repaint programs." },
+    ],
+  },
+  {
+    route: "/services/pre-sale-property-painting",
+    name: "Pre-Sale Property Painting",
+    title: "Pre-Sale Property Painting Melbourne | Increase Home Value | Jetblack Painting",
+    description:
+      "Pre-sale property painting Melbourne to maximise your home's value. Professional painters, neutral colour consultation, fast turnaround. Free quotes - Call 0432 077 782.",
+    heroTitle: "Pre-Sale Property Painting Melbourne",
+    heroBody:
+      "Fast-turnaround pre-sale repaints that lift presentation and buyer appeal — neutral colour consultation, sharp finishes, and scheduling that works around your sale campaign.",
+    cards: [
+      { title: "Neutral colour consultation", body: "Broad-appeal colour schemes that photograph well and help buyers see themselves in the home." },
+      { title: "Interior refresh", body: "Walls, ceilings, and trims refreshed to make living spaces feel clean, bright, and well maintained." },
+      { title: "Exterior street appeal", body: "Front facades, fences, and entry areas painted to maximise first impressions at inspections." },
+      { title: "Agent-friendly scheduling", body: "Work completed to deadline before photography, styling, and the first open home." },
+    ],
+    paragraphs: [
+      "A professional repaint is one of the highest-return improvements before selling: it deals with scuffs, dated colours, and tired facades that buyers otherwise price against you.",
+      "We work to your campaign timeline and coordinate with agents and stylists, so the property is ready for photography and inspections on schedule.",
+    ],
+    faqs: [
+      { question: "Is pre-sale painting worth the cost?", answer: "In most cases yes — a professional repaint typically returns more than it costs by improving presentation, photography, and buyer perception." },
+      { question: "How quickly can a pre-sale repaint be done?", answer: "Depending on scope, most pre-sale repaints are completed within days to a week, scheduled to suit your campaign dates." },
+      { question: "What colours sell best?", answer: "Warm whites and soft neutrals photograph well and appeal to the widest range of buyers. We help you choose a scheme that suits the property." },
+    ],
+  },
+  {
+    route: "/services/rental-property-painting",
+    name: "Rental Property Painting",
+    title: "Rental Property Painting Melbourne | Property Manager Painters | Jetblack Painting",
+    description:
+      "Professional rental property painting Melbourne for landlords and property managers. Fast turnaround, durable finishes, 5-star rated. Free quotes - Call 0432 077 782.",
+    heroTitle: "Rental Property Painting Melbourne",
+    heroBody:
+      "Durable, fast-turnaround repaints for Melbourne landlords and property managers — hard-wearing finishes and scheduling built around vacancy periods and tenancy changeovers.",
+    cards: [
+      { title: "Between-tenancy repaints", body: "Fast full or partial repaints during vacancy so the property re-lists quickly." },
+      { title: "Durable, washable finishes", body: "Hard-wearing paint systems that stand up to tenant wear and simplify future touch-ups." },
+      { title: "Property manager coordination", body: "Direct coordination with property managers for access, quotes, and invoicing." },
+      { title: "Compliance and presentation", body: "Clean, well-presented interiors that support rental appraisals and reduce vacancy time." },
+    ],
+    paragraphs: [
+      "Rental repaints are about speed and durability. We quote quickly, work within vacancy windows, and use washable finishes that keep maintenance costs down across tenancies.",
+      "Landlords and property managers across Melbourne use Jetblack Painting for reliable scheduling, clear communication, and consistent results — backed by a 5-year workmanship guarantee.",
+    ],
+    faqs: [
+      { question: "Can you complete a repaint between tenants?", answer: "Yes. Most rental repaints are completed within the vacancy window, and we coordinate access directly with the property manager." },
+      { question: "Do you work with property managers directly?", answer: "Yes. We handle quotes, scheduling, access, and invoicing directly with property managers when preferred." },
+      { question: "Is rental property painting tax deductible?", answer: "Repainting a rental property is generally a deductible repair or capital expense — confirm the treatment with your accountant." },
+    ],
+  },
+  {
+    route: "/services/roof-fence-painting",
+    name: "Roof & Fence Painting",
+    title: "Roof & Fence Painting Melbourne | Professional Restoration | Jetblack Painting",
+    description:
+      "Professional roof painting and fence painting Melbourne. Extends roof life 10-15 years, weather-resistant coatings, 5-star rated. Free quotes - Call 0432 077 782.",
+    heroTitle: "Roof & Fence Painting Melbourne",
+    heroBody:
+      "Roof restoration and fence painting across Melbourne — weather-resistant coating systems that protect the biggest exposed surfaces on your property and lift its street appeal.",
+    cards: [
+      { title: "Roof restoration", body: "Cleaning, repairs, priming, and membrane coatings for tile and metal roofs." },
+      { title: "Timber fence painting", body: "Preparation, priming, and exterior finishes or stains for timber paling and picket fences." },
+      { title: "Metal and Colorbond fences", body: "Rust treatment and durable coatings that bring metal fencing back to life." },
+      { title: "Combined packages", body: "Roof and fence work quoted together for a complete exterior refresh." },
+    ],
+    paragraphs: [
+      "Roofs and fences take the most weather of any surface on a property. The right preparation and exterior-grade coatings protect them for years and transform how the property presents from the street.",
+      "All work is completed by insured professionals and covered by our 5-year workmanship guarantee.",
+    ],
+    faqs: [
+      { question: "Can you do the roof and fences in one project?", answer: "Yes. We regularly quote roof and fence painting together as a combined exterior refresh." },
+      { question: "Do you stain fences as well as paint them?", answer: "Yes. Depending on the timber and the look you want, we can apply paint systems or exterior stains." },
+      { question: "How long does fence painting last?", answer: "With proper preparation and exterior-grade products, fence coatings typically last 5–10 years depending on exposure." },
+    ],
+  },
+  {
+    route: "/services/kitchen-cabinet-resurfacing",
+    name: "Kitchen Cabinet Resurfacing",
+    title: "Kitchen Cabinet Resurfacing Melbourne | 2-Pack Finishes | Jetblack Painting",
+    description:
+      "Professional kitchen cabinet resurfacing Melbourne. Premium 2-pack finishes, fraction of renovation cost, 5-star rated. Transform your kitchen. Free quotes - Call 0432 077 782.",
+    heroTitle: "Kitchen Cabinet Resurfacing Melbourne",
+    heroBody:
+      "Transform your kitchen for a fraction of renovation cost — premium 2-pack finishes applied to existing cabinetry for a factory-quality result without demolition.",
+    cards: [
+      { title: "2-pack polyurethane finishes", body: "Durable, factory-style 2-pack coatings sprayed for a smooth, hard-wearing finish." },
+      { title: "Doors, panels and drawers", body: "Complete resurfacing of cabinet doors, drawer fronts, and end panels in your chosen colour." },
+      { title: "Colour transformation", body: "Update dated timber or coloured cabinetry to modern whites, neutrals, or bold feature tones." },
+      { title: "Laundry and built-in cabinetry", body: "The same resurfacing process applied to laundries, wardrobes, and built-in units." },
+    ],
+    paragraphs: [
+      "Resurfacing keeps your existing kitchen layout and cabinetry carcasses and renews the visible surfaces — typically at a fraction of the cost and downtime of a full renovation.",
+      "Surfaces are degreased, sanded, primed, and finished in premium 2-pack systems for a durable, wipeable finish, backed by our 5-year workmanship guarantee.",
+    ],
+    faqs: [
+      { question: "How much cheaper is resurfacing than a new kitchen?", answer: "Cabinet resurfacing typically costs a fraction of a full kitchen renovation because the layout, carcasses, and benchtops stay in place." },
+      { question: "How long does cabinet resurfacing take?", answer: "Most kitchens are completed within about a week, including preparation, priming, and 2-pack topcoats." },
+      { question: "Is a 2-pack finish durable in a kitchen?", answer: "Yes. 2-pack polyurethane is a hard-wearing, wipeable finish designed for high-use surfaces like kitchen cabinetry." },
+    ],
+  },
+];
+
+for (const service of servicePages) {
+  const canonical = canonicalForRoute(service.route);
+  writePage(
+    service.route,
+    pageHtml({
+      title: service.title,
+      description: service.description,
+      canonical,
+      heroTitle: service.heroTitle,
+      heroBody: service.heroBody,
+      schema: [
+        ...serviceSchema({ name: service.name, title: service.title, description: service.description, canonical }),
+        faqSchema(service.faqs),
+      ],
+      sections: [
+        {
+          type: "cards",
+          heading: `What's included in our ${service.name.toLowerCase()} service`,
+          items: service.cards,
+        },
+        {
+          heading: `Why Melbourne chooses Jetblack Painting for ${service.name.toLowerCase()}`,
+          paragraphs: service.paragraphs,
+        },
+        {
+          type: "faqs",
+          heading: `${service.name} FAQs`,
+          items: service.faqs,
+        },
+        {
+          type: "links",
+          heading: "Suburbs we service",
+          body: "We provide this service across Melbourne, including these popular areas.",
+          items: popularSuburbLinks,
+        },
+        {
+          type: "links",
+          heading: "Related painting services",
+          body: "Explore our other painting services across Melbourne.",
+          items: servicePages
+            .filter((other) => other.route !== service.route)
+            .slice(0, 4)
+            .map((other) => ({ label: other.name, href: `${other.route}/` })),
+        },
+      ],
+      footerLinks: [
+        { label: "Home", href: "/" },
+        { label: "FAQ", href: "/faq/" },
+        { label: "Blog", href: "/blog/" },
+      ],
+    })
+  );
+}
+
 const blogIndexArticles = [
   {
     title: "Best Paint Colours for Melbourne Homes in 2025",

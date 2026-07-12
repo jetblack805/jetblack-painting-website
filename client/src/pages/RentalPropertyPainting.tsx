@@ -54,7 +54,7 @@ export default function RentalPropertyPainting() {
       <SEOHead
         title="Rental Property Painting Melbourne | Property Manager Painters | Jetblack Painting"
         description="Professional rental property painting Melbourne for landlords and property managers. Fast turnaround, durable finishes, 5-star rated. Free quotes - Call 0432 077 782."
-        canonical="https://jetblackpainting.com/services/rental-property-painting"
+        canonical="https://jetblackpainting.com/services/rental-property-painting/"
       />
       <Navbar />
 

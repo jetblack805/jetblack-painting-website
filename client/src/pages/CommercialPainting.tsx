@@ -33,7 +33,7 @@ export default function CommercialPainting() {
       <SEOHead
         title="Commercial Painting Melbourne | Office & Retail Painters | Jetblack Painting"
         description="Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes."
-        canonical="https://jetblackpainting.com/services/commercial-painting"
+        canonical="https://jetblackpainting.com/services/commercial-painting/"
       />
       <Navbar />
 

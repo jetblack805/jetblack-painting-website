@@ -32,7 +32,7 @@ export default function RoofPainting() {
       <SEOHead
         title="Roof Painting Melbourne | Roof Restoration & Coating | Jetblack Painting"
         description="Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes."
-        canonical="https://jetblackpainting.com/services/roof-painting"
+        canonical="https://jetblackpainting.com/services/roof-painting/"
       />
       <Navbar />
 

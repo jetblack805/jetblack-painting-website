@@ -73,4 +73,4 @@ Allow: /
 
 # ── Sitemaps ──────────────────────────────────────────────────────────────────
 Sitemap: https://jetblackpainting.com/sitemap.xml
-Sitemap: https://jetblackpainting.com/llms.txt
+# AI/LLM guidance: https://jetblackpainting.com/llms.txt

@@ -57,7 +57,7 @@ export default function InteriorPainting() {
       <SEOHead
         title="Interior Painting Melbourne | Professional House Painters | Jetblack Painting"
         description="Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
-        canonical="https://jetblackpainting.com/services/interior-painting"
+        canonical="https://jetblackpainting.com/services/interior-painting/"
       />
       <Navbar />
 

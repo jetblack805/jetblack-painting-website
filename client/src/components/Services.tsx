@@ -3,7 +3,7 @@
  * Card-based layout with real project photos and hover interactions
  */
 import { motion } from "framer-motion";
-import { Home, Building2, PaintBucket, Paintbrush, Warehouse, Fence } from "lucide-react";
+import { Home, Building2, PaintBucket, Paintbrush, Warehouse, Fence, Key, Building } from "lucide-react";
 import { Link } from "wouter";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.jpeg";
 import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
@@ -11,6 +11,8 @@ import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
 import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.jpeg";
 import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.jpeg";
 import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.jpeg";
+import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.jpeg";
+import imgCommercialBuilding from "@/assets/images/gallery-commercial-dark-building.jpeg";
 
 const services = [
   {
@@ -54,6 +56,20 @@ const services = [
     description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Keysborough, Bayside, and throughout Melbourne.",
     image: imgRoofFencePainting,
     link: "/services/roof-fence-painting",
+  },
+  {
+    icon: Key,
+    title: "Real Estate Painting Melbourne",
+    description: "Our real estate painting Melbourne services help agents, vendors and investors present properties at their best. We deliver fast, sale-ready interior and exterior repaints with broad-appeal neutral colours, coordinating directly with agents and stylists so the property is ready for photography and open homes on schedule.",
+    image: imgOpenPlanLiving,
+    link: "/services/real-estate-painting",
+  },
+  {
+    icon: Building,
+    title: "Body Corporate Painting Melbourne",
+    description: "Jetblack Painting provides professional body corporate and strata painting Melbourne services for owners corporations and strata managers. We repaint common areas, hallways, stairwells and external façades with minimal disruption to residents — fully insured, with detailed scopes and clear schedules for committee approval.",
+    image: imgCommercialBuilding,
+    link: "/services/body-corporate-painting",
   },
 ];
 

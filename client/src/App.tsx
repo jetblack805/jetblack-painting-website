@@ -14,6 +14,8 @@ const CommercialPainting = lazy(() => import("./pages/CommercialPainting"));
 const PreSalePropertyPainting = lazy(() => import("./pages/PreSalePropertyPainting"));
 const RentalPropertyPainting = lazy(() => import("./pages/RentalPropertyPainting"));
 const RoofFencePainting = lazy(() => import("./pages/RoofFencePainting"));
+const RealEstatePainting = lazy(() => import("./pages/RealEstatePainting"));
+const BodyCorporatePainting = lazy(() => import("./pages/BodyCorporatePainting"));
 const KitchenCabinetResurfacingPage = lazy(() => import("./pages/KitchenCabinetResurfacing"));
 const KeysboroughPainters = lazy(() => import("./pages/KeysboroughPainters"));
 const FAQ = lazy(() => import("./pages/FAQ"));
@@ -71,6 +73,8 @@ function Router() {
       <Route path={"/services/rental-property-painting"} component={RentalPropertyPainting} />
       <Route path={"/services/roof-fence-painting"} component={RoofFencePainting} />
       <Route path={"/services/kitchen-cabinet-resurfacing"} component={KitchenCabinetResurfacingPage} />
+      <Route path={"/services/real-estate-painting"} component={RealEstatePainting} />
+      <Route path={"/services/body-corporate-painting"} component={BodyCorporatePainting} />
       {/* Suburb Landing Pages */}
       <Route path={"/painter-toorak"} component={ToorakPainters} />
       <Route path={"/painters-toorak"} component={ToorakPainters} />

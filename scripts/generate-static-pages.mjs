@@ -626,6 +626,56 @@ const servicePages = [
       { question: "Is a 2-pack finish durable in a kitchen?", answer: "Yes. 2-pack polyurethane is a hard-wearing, wipeable finish designed for high-use surfaces like kitchen cabinetry." },
     ],
   },
+  {
+    route: "/services/real-estate-painting",
+    name: "Real Estate Painting",
+    title: "Real Estate Painting Melbourne | Pre-Sale & Agent Painters | Jetblack Painting",
+    description:
+      "Real estate painting in Melbourne for agents, vendors and investors. Fast pre-sale and pre-lease repaints, neutral colours, agent coordination. 5-star rated. Free quotes.",
+    heroTitle: "Real Estate Painting Melbourne",
+    heroBody:
+      "Presentation-ready repaints for agents, vendors and investors — fast, sale-ready interior and exterior painting that lifts value and buyer appeal, scheduled around your campaign.",
+    cards: [
+      { title: "Pre-sale repaints", body: "Fast interior and exterior refreshes that deal with scuffs, dated colours and tired façades before photography and open homes." },
+      { title: "Neutral colour consultation", body: "Broad-appeal, photograph-friendly colour schemes that help the widest range of buyers and tenants picture themselves in the home." },
+      { title: "Agent and stylist coordination", body: "Direct coordination with real estate agents, vendors and property stylists on quotes, access and timing." },
+      { title: "Investment and pre-lease refreshes", body: "Durable, presentation-ready repaints for investors preparing a property to lease or re-list." },
+    ],
+    paragraphs: [
+      "A professional repaint is one of the highest-return improvements before a sale or lease — it lifts listing photography, inspection appeal and buyer perception, often returning far more than it costs.",
+      "We understand real estate timelines and work to your campaign and settlement dates, coordinating with agents and stylists so the property is ready for photography and the first open home — backed by a 5-year workmanship guarantee and $10 million public liability insurance.",
+    ],
+    faqs: [
+      { question: "Do you work directly with real estate agents and vendors?", answer: "Yes. We coordinate directly with agents, vendors and stylists on quotes, access, scheduling and invoicing so the repaint is finished on time for photography and the first open home." },
+      { question: "How quickly can you paint a property before it goes on the market?", answer: "Most pre-sale and pre-lease repaints are completed within a few days to a week, scheduled around your campaign dates and settlement deadlines." },
+      { question: "What colours work best for selling or leasing a property?", answer: "Warm whites and soft, broad-appeal neutrals photograph well and help the widest range of buyers and tenants. We provide colour consultation to suit the property." },
+    ],
+  },
+  {
+    route: "/services/body-corporate-painting",
+    name: "Body Corporate Painting",
+    title: "Body Corporate Painting Melbourne | Strata & Owners Corporation Painters | Jetblack Painting",
+    description:
+      "Body corporate and strata painting in Melbourne. Common areas, façades and maintenance programs for owners corporations. Fully insured, minimal disruption. Free quotes.",
+    heroTitle: "Body Corporate Painting Melbourne",
+    heroBody:
+      "Professional painting for owners corporations and strata-managed properties — common areas and façades repainted with minimal disruption to residents, fully insured and on schedule.",
+    cards: [
+      { title: "Common areas", body: "Entry lobbies, hallways, corridors, stairwells and shared amenities repainted with durable, low-maintenance finishes." },
+      { title: "External façades", body: "Rendered walls, eaves, balconies and building exteriors prepared and coated to protect the structure and its value." },
+      { title: "Owners corporation coordination", body: "Detailed scopes, transparent pricing and insurance documentation so committees and strata managers can approve works with confidence." },
+      { title: "Maintenance programs", body: "Scheduled repaint and maintenance programs across single or multiple buildings, staged around residents." },
+    ],
+    paragraphs: [
+      "Body corporate painting keeps apartment blocks, unit complexes and townhouse developments presenting well and protects shared property against wear and weather. We repaint common areas and façades with hard-wearing systems built for high-traffic spaces.",
+      "Committees and managers need clarity and confidence, so every project comes with a detailed written scope, transparent pricing, $10 million public liability insurance and a clear schedule — delivered with minimal disruption to residents and backed by a 5-year workmanship guarantee.",
+    ],
+    faqs: [
+      { question: "Do you work with owners corporations and strata managers?", answer: "Yes. We work directly with owners corporations, body corporate committees and strata managers, providing detailed quotes, scopes, insurance documentation and clear schedules." },
+      { question: "What areas of a unit complex do you paint?", answer: "All common property — entry lobbies, hallways, stairwells, car parks, external façades, balconies, eaves and shared amenities — as a full repaint or a staged maintenance program." },
+      { question: "How do you minimise disruption to residents?", answer: "We plan works around residents, keep access ways safe and open, use low-odour products in occupied buildings, and communicate the schedule clearly in advance." },
+    ],
+  },
 ];
 
 for (const service of servicePages) {

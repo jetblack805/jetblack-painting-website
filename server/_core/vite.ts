@@ -159,6 +159,16 @@ const META: Record<string, Meta> = {
     description: "Transform your Melbourne kitchen without a full renovation. Professional cabinet resurfacing — new colour, new look, fraction of the price. Free quotes. Call 0432 077 782.",
     canonical: `${BASE_URL}/services/kitchen-cabinet-resurfacing`,
   },
+  "/services/real-estate-painting": {
+    title: "Real Estate Painting Melbourne | Pre-Sale & Agent Painters | Jetblack Painting",
+    description: "Real estate painting in Melbourne for agents, vendors and investors. Fast pre-sale and pre-lease repaints, neutral colours, agent coordination. 5-star rated. Free quotes.",
+    canonical: `${BASE_URL}/services/real-estate-painting`,
+  },
+  "/services/body-corporate-painting": {
+    title: "Body Corporate Painting Melbourne | Strata & Owners Corporation Painters | Jetblack Painting",
+    description: "Body corporate and strata painting in Melbourne. Common areas, façades and maintenance programs for owners corporations. Fully insured, minimal disruption. Free quotes.",
+    canonical: `${BASE_URL}/services/body-corporate-painting`,
+  },
   // Blog pages
   "/blog": {
     title: "Painting Tips & Guides | Melbourne House Painting Blog | Jetblack Painting",
@@ -524,6 +534,20 @@ const SCHEMAS_BY_ROUTE: Record<string, string[]> = {
       { name: "Home", item: `${BASE_URL}/` },
       { name: "Painting Services", item: `${BASE_URL}/services/kitchen-cabinet-resurfacing` },
       { name: "Kitchen Cabinet Resurfacing Melbourne", item: `${BASE_URL}/services/kitchen-cabinet-resurfacing` },
+    ]),
+  ],
+  "/services/real-estate-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/real-estate-painting` },
+      { name: "Real Estate Painting Melbourne", item: `${BASE_URL}/services/real-estate-painting` },
+    ]),
+  ],
+  "/services/body-corporate-painting": [
+    breadcrumb([
+      { name: "Home", item: `${BASE_URL}/` },
+      { name: "Painting Services", item: `${BASE_URL}/services/body-corporate-painting` },
+      { name: "Body Corporate Painting Melbourne", item: `${BASE_URL}/services/body-corporate-painting` },
     ]),
   ],
   // ─── Suburb pages ─────────────────────────────────────────────────────────

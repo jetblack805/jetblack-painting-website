@@ -142,7 +142,7 @@ export default function SuburbPageTemplate({
     breadcrumb: {
       "@id": breadcrumbId,
     },
-    about: localBusinessSchema,
+    about: { "@id": "https://jetblackpainting.com/#business" },
     primaryImageOfPage: "https://jetblackpainting.com/og-image.jpg",
   };
 

@@ -11,11 +11,9 @@ import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living
 import imgKitchenTimber from "@/assets/images/gallery-interior-kitchen-timber.jpeg";
 import imgLounge from "@/assets/images/gallery-interior-lounge.jpeg";
 import imgStaircase from "@/assets/images/gallery-interior-staircase.jpeg";
-import imgLuxuryDark from "@/assets/images/gallery-interior-luxury-dark.jpeg";
 import imgStagedLiving from "@/assets/images/gallery-interior-staged-living.jpeg";
 import imgOpenLiving from "@/assets/images/gallery-interior-open-living.jpeg";
-import imgPowderRoom from "@/assets/images/gallery-interior-dark-powder-room.jpeg";
-import imgTealBathroom from "@/assets/images/gallery-interior-teal-bathroom.jpeg";
+import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.jpeg";
 
 export default function InteriorPainting() {
   const benefits = [
@@ -128,13 +126,7 @@ export default function InteriorPainting() {
               loading="lazy"
             />
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
-            <img
-              src={imgLuxuryDark}
-              alt="Luxury dark feature living room painted by Jetblack Painting"
-              className="rounded-lg shadow-md w-full h-56 object-cover"
-              loading="lazy"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
               src={imgStagedLiving}
               alt="Freshly painted staged living room by Jetblack Painting"
@@ -148,14 +140,8 @@ export default function InteriorPainting() {
               loading="lazy"
             />
             <img
-              src={imgPowderRoom}
-              alt="Dark feature powder room painted by Jetblack Painting"
-              className="rounded-lg shadow-md w-full h-56 object-cover"
-              loading="lazy"
-            />
-            <img
-              src={imgTealBathroom}
-              alt="Modern bathroom painted in teal and grey by Jetblack Painting"
+              src={imgBoucleLiving}
+              alt="Styled living and dining room interior painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />

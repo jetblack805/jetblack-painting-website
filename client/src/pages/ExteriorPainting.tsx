@@ -31,13 +31,28 @@ export default function ExteriorPainting() {
     { name: "Keysborough", link: "/keysborough-painters" },
   ];
 
+  const faqs = [
+    {
+      question: "How often should I repaint my home's exterior in Melbourne?",
+      answer: "Most Melbourne homes need an exterior repaint every 7 to 10 years, though coastal and heavily sun-exposed properties can need it sooner. Weatherboard and timber usually need attention before rendered or brick surfaces. During your free quote we'll assess the current condition and give you an honest recommendation.",
+    },
+    {
+      question: "What preparation is included in your exterior painting?",
+      answer: "Proper preparation is where a lasting exterior finish is won or lost, so it's always included in our quote — never added later. That means pressure washing, scraping and sanding back flaking paint, filling and repairing surfaces, spot-priming bare timber and metal, and caulking gaps before any topcoats go on.",
+    },
+    {
+      question: "What time of year is best for exterior painting in Melbourne?",
+      answer: "Spring and autumn are ideal, but with Melbourne's variable weather we paint year-round by working to the conditions — applying coatings in suitable temperatures and humidity and allowing proper drying between coats. We simply schedule around wet spells so your finish cures correctly.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <SEOHead
         title="Exterior Painting Melbourne | Weather-Resistant House Painters | Jetblack Painting"
         description="Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
         canonical="https://jetblackpainting.com/services/exterior-painting/"
-      schema={serviceSchema({ serviceType: "Exterior Painting", name: "Exterior Painting Melbourne", description: "Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.", canonical: "https://jetblackpainting.com/services/exterior-painting/" })}
+      schema={serviceSchema({ serviceType: "Exterior Painting", name: "Exterior Painting Melbourne", description: "Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.", canonical: "https://jetblackpainting.com/services/exterior-painting/", faqs })}
       />
       <Navbar />
 
@@ -135,6 +150,24 @@ export default function ExteriorPainting() {
                 >
                   {s.name}
                 </Link>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* FAQ */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Exterior Painting FAQs</h2>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className="border-b border-gray-200 pb-4">
+                  <h3 className="text-lg font-bold text-[#0D0D0D] mb-2">{faq.question}</h3>
+                  <p className="text-gray-700">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </motion.div>

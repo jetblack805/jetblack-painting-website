@@ -18,6 +18,21 @@ export default function RoofPainting() {
     "5-year workmanship guarantee"
   ];
 
+  const faqs = [
+    {
+      question: "How long does a professional roof painting last?",
+      answer: "A properly prepared and coated roof typically lasts 10 to 15 years before it needs redoing. The key is preparation — cleaning, rust treatment, repairs and the right primer — followed by quality membrane or roof coatings applied at the correct thickness. We include all of that in every roof painting quote.",
+    },
+    {
+      question: "What roof types can you paint?",
+      answer: "We paint and restore all common Melbourne roof types, including Colorbond and Zincalume metal roofing, concrete and terracotta tiles, and cement sheet. Each surface needs a specific preparation and coating system, and we match the right one to your roof so the finish bonds properly and lasts.",
+    },
+    {
+      question: "Can roof painting help keep my home cooler?",
+      answer: "Yes. Lighter colours and modern heat-reflective roof coatings can reduce how much heat your roof absorbs, helping keep the home more comfortable in Melbourne summers and easing the load on cooling. We're happy to recommend suitable heat-reflective options during your quote.",
+    },
+  ];
+
   const suburbs = [
     { name: "Brighton", link: "/painter-brighton" },
     { name: "Toorak", link: "/painter-toorak" },
@@ -34,7 +49,7 @@ export default function RoofPainting() {
         title="Roof Painting Melbourne | Roof Restoration & Coating | Jetblack Painting"
         description="Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes."
         canonical="https://jetblackpainting.com/services/roof-painting/"
-      schema={serviceSchema({ serviceType: "Roof Painting", name: "Roof Painting Melbourne", description: "Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes.", canonical: "https://jetblackpainting.com/services/roof-painting/" })}
+      schema={serviceSchema({ serviceType: "Roof Painting", name: "Roof Painting Melbourne", description: "Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes.", canonical: "https://jetblackpainting.com/services/roof-painting/", faqs })}
       />
       <Navbar />
 
@@ -126,6 +141,24 @@ export default function RoofPainting() {
                 >
                   {s.name}
                 </Link>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* FAQ */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Roof Painting FAQs</h2>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className="border-b border-gray-200 pb-4">
+                  <h3 className="text-lg font-bold text-[#0D0D0D] mb-2">{faq.question}</h3>
+                  <p className="text-gray-700">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </motion.div>

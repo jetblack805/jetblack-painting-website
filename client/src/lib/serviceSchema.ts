@@ -1,14 +1,18 @@
-// Builds Schema.org Service structured data for a service page.
+// Builds Schema.org structured data for a service page.
 // Deliberately omits aggregateRating — the business rating lives once in the
 // LocalBusiness schema (suburb pages / homepage) to avoid Google's
 // "multiple aggregate ratings" error.
+//
+// When `faqs` are supplied, a FAQPage schema is returned alongside the Service
+// schema (as an array) so the page is eligible for FAQ rich results.
 export function serviceSchema(opts: {
   serviceType: string;
   name: string;
   description: string;
   canonical: string;
+  faqs?: { question: string; answer: string }[];
 }) {
-  return {
+  const service = {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: opts.serviceType,
@@ -32,4 +36,18 @@ export function serviceSchema(opts: {
       serviceUrl: "https://jetblackpainting.com",
     },
   };
+
+  if (!opts.faqs || opts.faqs.length === 0) return service;
+
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: opts.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
+  return [service, faqPage];
 }

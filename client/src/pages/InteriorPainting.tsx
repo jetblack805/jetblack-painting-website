@@ -59,7 +59,7 @@ export default function InteriorPainting() {
         title="Interior Painting Melbourne | Professional House Painters | Jetblack Painting"
         description="Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
         canonical="https://jetblackpainting.com/services/interior-painting/"
-      schema={serviceSchema({ serviceType: "Interior Painting", name: "Interior Painting Melbourne", description: "Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.", canonical: "https://jetblackpainting.com/services/interior-painting/" })}
+      schema={serviceSchema({ serviceType: "Interior Painting", name: "Interior Painting Melbourne", description: "Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.", canonical: "https://jetblackpainting.com/services/interior-painting/", faqs })}
       />
       <Navbar />
 

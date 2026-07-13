@@ -20,6 +20,21 @@ export default function CommercialPainting() {
     "After-hours and weekend work available"
   ];
 
+  const faqs = [
+    {
+      question: "Can you paint outside business hours to avoid disruption?",
+      answer: "Yes. We regularly work after hours, overnight and on weekends for commercial clients so your business keeps running with minimal disruption. We plan the job around your operating hours, staging areas so staff and customers stay safe and productive throughout.",
+    },
+    {
+      question: "What types of commercial premises do you paint?",
+      answer: "We paint offices, retail and hospitality fit-outs, warehouses and industrial units, strata and body-corporate common areas, medical and childcare facilities, and owners-corporation buildings across Melbourne. Whatever the site, we tailor the coatings and access approach to suit.",
+    },
+    {
+      question: "Are you licensed and insured for commercial work?",
+      answer: "Absolutely. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and we follow proper site safety and access procedures. We're happy to provide documentation for building managers and owners corporations before work begins.",
+    },
+  ];
+
   const suburbs = [
     { name: "Brighton", link: "/painter-brighton" },
     { name: "Toorak", link: "/painter-toorak" },
@@ -35,7 +50,7 @@ export default function CommercialPainting() {
         title="Commercial Painting Melbourne | Office & Retail Painters | Jetblack Painting"
         description="Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes."
         canonical="https://jetblackpainting.com/services/commercial-painting/"
-      schema={serviceSchema({ serviceType: "Commercial Painting", name: "Commercial Painting Melbourne", description: "Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes.", canonical: "https://jetblackpainting.com/services/commercial-painting/" })}
+      schema={serviceSchema({ serviceType: "Commercial Painting", name: "Commercial Painting Melbourne", description: "Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes.", canonical: "https://jetblackpainting.com/services/commercial-painting/", faqs })}
       />
       <Navbar />
 
@@ -127,6 +142,24 @@ export default function CommercialPainting() {
                 >
                   {s.name}
                 </Link>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* FAQ */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Commercial Painting FAQs</h2>
+            <div className="space-y-6">
+              {faqs.map((faq, i) => (
+                <div key={i} className="border-b border-gray-200 pb-4">
+                  <h3 className="text-lg font-bold text-[#0D0D0D] mb-2">{faq.question}</h3>
+                  <p className="text-gray-700">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </motion.div>

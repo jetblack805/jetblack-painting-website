@@ -56,7 +56,7 @@ export default function PreSalePropertyPainting() {
         title="Pre-Sale Property Painting Melbourne | Increase Home Value | Jetblack Painting"
         description="Pre-sale property painting Melbourne to maximise your home's value. Professional painters, neutral colour consultation, fast turnaround. Free quotes - Call 0432 077 782."
         canonical="https://jetblackpainting.com/services/pre-sale-property-painting/"
-      schema={serviceSchema({ serviceType: "Pre-Sale Property Painting", name: "Pre-Sale Property Painting Melbourne", description: "Pre-sale property painting Melbourne to maximise your home's value. Professional painters, neutral colour consultation, fast turnaround. Free quotes - Call 0432 077 782.", canonical: "https://jetblackpainting.com/services/pre-sale-property-painting/" })}
+      schema={serviceSchema({ serviceType: "Pre-Sale Property Painting", name: "Pre-Sale Property Painting Melbourne", description: "Pre-sale property painting Melbourne to maximise your home's value. Professional painters, neutral colour consultation, fast turnaround. Free quotes - Call 0432 077 782.", canonical: "https://jetblackpainting.com/services/pre-sale-property-painting/", faqs })}
       />
       <Navbar />
 

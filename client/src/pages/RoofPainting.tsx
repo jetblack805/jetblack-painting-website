@@ -6,7 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
+import imgService from "@/assets/images/gallery-roof-charcoal-tiles.jpeg";
+import imgMetalRoof from "@/assets/images/gallery-roof-metal-colorbond.jpeg";
+import imgRoofCleaning from "@/assets/images/gallery-roof-cleaning.jpeg";
+import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
 
 export default function RoofPainting() {
   const benefits = [
@@ -82,10 +85,30 @@ export default function RoofPainting() {
         <div className="container">
           <img
             src={imgService}
-            alt="Roof painting and restoration example by Jetblack Painting"
-            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            alt="Charcoal grey tiled roof freshly painted by Jetblack Painting"
+            className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
           />
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+            <img
+              src={imgMetalRoof}
+              alt="Colorbond metal roof painted by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgRoofCleaning}
+              alt="High-pressure roof cleaning and preparation by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgVictorianRoof}
+              alt="Restored Victorian tile roof by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

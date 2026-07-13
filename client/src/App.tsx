@@ -11,8 +11,6 @@ const ExteriorPainting = lazy(() => import("./pages/ExteriorPainting"));
 const InteriorPainting = lazy(() => import("./pages/InteriorPainting"));
 const RoofPainting = lazy(() => import("./pages/RoofPainting"));
 const CommercialPainting = lazy(() => import("./pages/CommercialPainting"));
-const PreSalePropertyPainting = lazy(() => import("./pages/PreSalePropertyPainting"));
-const RentalPropertyPainting = lazy(() => import("./pages/RentalPropertyPainting"));
 const RoofFencePainting = lazy(() => import("./pages/RoofFencePainting"));
 const RealEstatePainting = lazy(() => import("./pages/RealEstatePainting"));
 const BodyCorporatePainting = lazy(() => import("./pages/BodyCorporatePainting"));
@@ -69,8 +67,6 @@ function Router() {
       <Route path={"/services/exterior-painting"} component={ExteriorPainting} />
       <Route path={"/services/roof-painting"} component={RoofPainting} />
       <Route path={"/services/commercial-painting"} component={CommercialPainting} />
-      <Route path={"/services/pre-sale-property-painting"} component={PreSalePropertyPainting} />
-      <Route path={"/services/rental-property-painting"} component={RentalPropertyPainting} />
       <Route path={"/services/roof-fence-painting"} component={RoofFencePainting} />
       <Route path={"/services/kitchen-cabinet-resurfacing"} component={KitchenCabinetResurfacingPage} />
       <Route path={"/services/real-estate-painting"} component={RealEstatePainting} />

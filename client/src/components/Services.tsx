@@ -3,13 +3,11 @@
  * Card-based layout with real project photos and hover interactions
  */
 import { motion } from "framer-motion";
-import { Home, Building2, PaintBucket, Paintbrush, Warehouse, Fence, Key, Building } from "lucide-react";
+import { Home, Building2, Paintbrush, Fence, Key, Building } from "lucide-react";
 import { Link } from "wouter";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.jpeg";
 import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
 import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building.jpeg";
-import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.jpeg";
-import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.jpeg";
 import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.jpeg";
 import imgOpenPlanLiving from "@/assets/images/gallery-interior-staged-living.jpeg";
 import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.jpeg";
@@ -37,20 +35,6 @@ const services = [
     link: "/services/commercial-painting",
   },
   {
-    icon: PaintBucket,
-    title: "Pre-Sale Property Painting Melbourne",
-    description: "Maximise your property's market value with our pre-sale property painting Melbourne services. A fresh, modern coat of paint is one of the most cost-effective ways to increase buyer appeal and achieve a higher sale price. Our painters help homeowners in Keysborough and Bayside prepare their properties for a successful sale.",
-    image: imgWhiteModern,
-    link: "/services/pre-sale-property-painting",
-  },
-  {
-    icon: Warehouse,
-    title: "Rental Property Painting Melbourne",
-    description: "We provide efficient rental property painting Melbourne services for landlords, property managers, and real estate agencies. Our team ensures a fast turnaround between tenancies, keeping your investment properties in top condition with durable, high-quality finishes across all Melbourne suburbs.",
-    image: imgTudorHeritage,
-    link: "/services/rental-property-painting",
-  },
-  {
     icon: Fence,
     title: "Roof & Fence Painting Melbourne",
     description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Keysborough, Bayside, and throughout Melbourne.",
@@ -60,7 +44,7 @@ const services = [
   {
     icon: Key,
     title: "Real Estate Painting Melbourne",
-    description: "Our real estate painting Melbourne services help agents, vendors and investors present properties at their best. We deliver fast, sale-ready interior and exterior repaints with broad-appeal neutral colours, coordinating directly with agents and stylists so the property is ready for photography and open homes on schedule.",
+    description: "Our real estate painting Melbourne services cover pre-sale repaints, rental and investment property refreshes, and property styling for agents, vendors, landlords and property managers. We deliver fast, sale-ready interior and exterior finishes with broad-appeal neutral colours, coordinating directly with agents and stylists so the property is ready for photography and open homes on schedule.",
     image: imgOpenPlanLiving,
     link: "/services/real-estate-painting",
   },

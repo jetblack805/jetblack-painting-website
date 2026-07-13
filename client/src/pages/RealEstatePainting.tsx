@@ -170,11 +170,23 @@ export default function RealEstatePainting() {
           >
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Painting for Every Stage of a Property</h2>
             <p className="text-gray-700 mb-4">
-              From vendors preparing to sell to landlords and property managers preparing to lease, we cover the full property lifecycle:
+              Our real estate painting service covers the full property lifecycle in one place — whether you're selling, leasing or refreshing an investment:
             </p>
+            <div className="space-y-4 mb-6">
+              <div>
+                <h3 className="text-lg font-bold text-[#0D0D0D] mb-1">Pre-sale property painting</h3>
+                <p className="text-gray-700">Fast, broad-appeal repaints that lift presentation and photography before your sale campaign, timed around your styling and open-home dates.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-[#0D0D0D] mb-1">Rental &amp; investment property painting</h3>
+                <p className="text-gray-700">Durable, washable finishes for landlords and property managers, with quick turnarounds scheduled around vacancy periods and tenancy changeovers.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-[#0D0D0D] mb-1">Property styling &amp; agent coordination</h3>
+                <p className="text-gray-700">Neutral colour consultation and direct coordination with agents and stylists so the property presents at its best on listing day.</p>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/pre-sale-property-painting" className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium">Pre-Sale Property Painting</Link>
-              <Link href="/services/rental-property-painting" className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium">Rental Property Painting</Link>
               <Link href="/services/interior-painting" className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium">Interior Painting</Link>
               <Link href="/services/exterior-painting" className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium">Exterior Painting</Link>
             </div>

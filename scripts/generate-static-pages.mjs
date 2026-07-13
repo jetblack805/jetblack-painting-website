@@ -527,56 +527,6 @@ const servicePages = [
     ],
   },
   {
-    route: "/services/pre-sale-property-painting",
-    name: "Pre-Sale Property Painting",
-    title: "Pre-Sale Property Painting Melbourne | Increase Home Value | Jetblack Painting",
-    description:
-      "Pre-sale property painting Melbourne to maximise your home's value. Professional painters, neutral colour consultation, fast turnaround. Free quotes - Call 0432 077 782.",
-    heroTitle: "Pre-Sale Property Painting Melbourne",
-    heroBody:
-      "Fast-turnaround pre-sale repaints that lift presentation and buyer appeal — neutral colour consultation, sharp finishes, and scheduling that works around your sale campaign.",
-    cards: [
-      { title: "Neutral colour consultation", body: "Broad-appeal colour schemes that photograph well and help buyers see themselves in the home." },
-      { title: "Interior refresh", body: "Walls, ceilings, and trims refreshed to make living spaces feel clean, bright, and well maintained." },
-      { title: "Exterior street appeal", body: "Front facades, fences, and entry areas painted to maximise first impressions at inspections." },
-      { title: "Agent-friendly scheduling", body: "Work completed to deadline before photography, styling, and the first open home." },
-    ],
-    paragraphs: [
-      "A professional repaint is one of the highest-return improvements before selling: it deals with scuffs, dated colours, and tired facades that buyers otherwise price against you.",
-      "We work to your campaign timeline and coordinate with agents and stylists, so the property is ready for photography and inspections on schedule.",
-    ],
-    faqs: [
-      { question: "Is pre-sale painting worth the cost?", answer: "In most cases yes — a professional repaint typically returns more than it costs by improving presentation, photography, and buyer perception." },
-      { question: "How quickly can a pre-sale repaint be done?", answer: "Depending on scope, most pre-sale repaints are completed within days to a week, scheduled to suit your campaign dates." },
-      { question: "What colours sell best?", answer: "Warm whites and soft neutrals photograph well and appeal to the widest range of buyers. We help you choose a scheme that suits the property." },
-    ],
-  },
-  {
-    route: "/services/rental-property-painting",
-    name: "Rental Property Painting",
-    title: "Rental Property Painting Melbourne | Property Manager Painters | Jetblack Painting",
-    description:
-      "Professional rental property painting Melbourne for landlords and property managers. Fast turnaround, durable finishes, 5-star rated. Free quotes - Call 0432 077 782.",
-    heroTitle: "Rental Property Painting Melbourne",
-    heroBody:
-      "Durable, fast-turnaround repaints for Melbourne landlords and property managers — hard-wearing finishes and scheduling built around vacancy periods and tenancy changeovers.",
-    cards: [
-      { title: "Between-tenancy repaints", body: "Fast full or partial repaints during vacancy so the property re-lists quickly." },
-      { title: "Durable, washable finishes", body: "Hard-wearing paint systems that stand up to tenant wear and simplify future touch-ups." },
-      { title: "Property manager coordination", body: "Direct coordination with property managers for access, quotes, and invoicing." },
-      { title: "Compliance and presentation", body: "Clean, well-presented interiors that support rental appraisals and reduce vacancy time." },
-    ],
-    paragraphs: [
-      "Rental repaints are about speed and durability. We quote quickly, work within vacancy windows, and use washable finishes that keep maintenance costs down across tenancies.",
-      "Landlords and property managers across Melbourne use Jetblack Painting for reliable scheduling, clear communication, and consistent results — backed by a 5-year workmanship guarantee.",
-    ],
-    faqs: [
-      { question: "Can you complete a repaint between tenants?", answer: "Yes. Most rental repaints are completed within the vacancy window, and we coordinate access directly with the property manager." },
-      { question: "Do you work with property managers directly?", answer: "Yes. We handle quotes, scheduling, access, and invoicing directly with property managers when preferred." },
-      { question: "Is rental property painting tax deductible?", answer: "Repainting a rental property is generally a deductible repair or capital expense — confirm the treatment with your accountant." },
-    ],
-  },
-  {
     route: "/services/roof-fence-painting",
     name: "Roof & Fence Painting",
     title: "Roof & Fence Painting Melbourne | Professional Restoration | Jetblack Painting",

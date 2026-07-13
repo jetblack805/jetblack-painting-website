@@ -28,7 +28,7 @@ const coreServices = [
   { name: "Commercial painting", link: "/services/commercial-painting" },
   { name: "Kitchen cabinet resurfacing", link: "/services/kitchen-cabinet-resurfacing" },
   { name: "Roof painting", link: "/services/roof-painting" },
-  { name: "Pre-sale property painting", link: "/services/pre-sale-property-painting" },
+  { name: "Real estate painting", link: "/services/real-estate-painting" },
 ];
 
 const KNOWN_LANDING_PATHS = new Set([

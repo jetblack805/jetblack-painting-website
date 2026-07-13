@@ -31,8 +31,6 @@ const allServices = [
   "Kitchen Cabinet Resurfacing (2-Pack)",
   "Roof Painting & Restoration",
   "Fence & Deck Staining",
-  "Pre-Sale Property Painting",
-  "Rental Property Painting",
   "Concrete & Epoxy Flooring",
   "Wallpaper Removal",
   "Colour Consultation",

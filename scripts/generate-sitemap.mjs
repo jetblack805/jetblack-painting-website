@@ -10,8 +10,6 @@ const ROUTES = [
   { path: "/services/exterior-painting/",                       priority: "0.8", changefreq: "monthly" },
   { path: "/services/roof-painting/",                           priority: "0.8", changefreq: "monthly" },
   { path: "/services/commercial-painting/",                     priority: "0.8", changefreq: "monthly" },
-  { path: "/services/pre-sale-property-painting/",              priority: "0.7", changefreq: "monthly" },
-  { path: "/services/rental-property-painting/",                priority: "0.7", changefreq: "monthly" },
   { path: "/services/roof-fence-painting/",                     priority: "0.7", changefreq: "monthly" },
   { path: "/services/kitchen-cabinet-resurfacing/",             priority: "0.7", changefreq: "monthly" },
   { path: "/services/real-estate-painting/",                    priority: "0.8", changefreq: "monthly" },

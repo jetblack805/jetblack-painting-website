@@ -139,16 +139,6 @@ const META: Record<string, Meta> = {
     description: "Commercial painting services across Melbourne. Offices, retail, strata and industrial. Minimal disruption, professional finish. Free quotes. Call 0432 077 782.",
     canonical: `${BASE_URL}/services/commercial-painting`,
   },
-  "/services/pre-sale-property-painting": {
-    title: "Pre-Sale Property Painting Melbourne | Increase Sale Price | Jetblack Painting",
-    description: "Maximise your Melbourne property sale price with professional pre-sale painting. Fast turnaround, premium finish. Free quotes. Call 0432 077 782.",
-    canonical: `${BASE_URL}/services/pre-sale-property-painting`,
-  },
-  "/services/rental-property-painting": {
-    title: "Rental Property Painting Melbourne | Landlords & Property Managers | Jetblack Painting",
-    description: "Affordable rental property painting for Melbourne landlords and property managers. Fast turnaround, quality finish. Free quotes. Call 0432 077 782.",
-    canonical: `${BASE_URL}/services/rental-property-painting`,
-  },
   "/services/roof-fence-painting": {
     title: "Roof & Fence Painting Melbourne | Jetblack Painting",
     description: "Professional roof and fence painting across Melbourne. Restore and protect your property with quality coatings. Free quotes. Call 0432 077 782.",
@@ -506,20 +496,6 @@ const SCHEMAS_BY_ROUTE: Record<string, string[]> = {
       { name: "Home", item: `${BASE_URL}/` },
       { name: "Painting Services", item: `${BASE_URL}/services/commercial-painting` },
       { name: "Commercial Painting Melbourne", item: `${BASE_URL}/services/commercial-painting` },
-    ]),
-  ],
-  "/services/pre-sale-property-painting": [
-    breadcrumb([
-      { name: "Home", item: `${BASE_URL}/` },
-      { name: "Painting Services", item: `${BASE_URL}/services/pre-sale-property-painting` },
-      { name: "Pre-Sale Property Painting Melbourne", item: `${BASE_URL}/services/pre-sale-property-painting` },
-    ]),
-  ],
-  "/services/rental-property-painting": [
-    breadcrumb([
-      { name: "Home", item: `${BASE_URL}/` },
-      { name: "Painting Services", item: `${BASE_URL}/services/rental-property-painting` },
-      { name: "Rental Property Painting Melbourne", item: `${BASE_URL}/services/rental-property-painting` },
     ]),
   ],
   "/services/roof-fence-painting": [

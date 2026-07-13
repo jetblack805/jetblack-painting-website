@@ -30,6 +30,7 @@ export default function CaulfieldPainters() {
           ],
         },
       ]}
+      faqs={[{"question":"Do you paint Caulfield's Art Deco and heritage homes?","answer":"Yes. Caulfield has striking interwar Art Deco apartments and solid period homes, and we take care with their rendered façades, decorative detailing and original features, using period-appropriate colours and premium coatings that protect the surface long term."},{"question":"How long does a house repaint take in Caulfield?","answer":"Most Caulfield homes are completed within 5 to 10 working days depending on size and preparation required. We provide a clear timeline with every quote so you know exactly what to expect."},{"question":"Do you offer free quotes in Caulfield?","answer":"Yes. We provide free, no-obligation written quotes across Caulfield, Caulfield North and Caulfield South, with the full scope and preparation included. Call Jimmy on 0432 077 782 to arrange a visit."}]}
     />
   );
 }

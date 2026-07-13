@@ -30,6 +30,7 @@ export default function CamberwellPainters() {
           ],
         },
       ]}
+      faqs={[{"question":"Do you paint Camberwell's Edwardian and bungalow homes?","answer":"Yes. Camberwell is known for its Edwardian homes and Californian bungalows, and we're experienced with their timber detailing, rendered surfaces and roof lines. We use the right preparation and heritage-sympathetic colours to keep these classic homes looking their best."},{"question":"How long does a repaint take in Camberwell?","answer":"Most Camberwell homes are completed within 5 to 10 working days depending on size and the amount of preparation required. We provide a detailed timeline with every quote so there's minimal disruption to your household."},{"question":"Do you offer free quotes in Camberwell?","answer":"Absolutely. We provide free, no-obligation written quotes across Camberwell, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a visit."}]}
     />
   );
 }

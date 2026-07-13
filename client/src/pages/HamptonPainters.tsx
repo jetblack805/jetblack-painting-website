@@ -30,6 +30,7 @@ export default function HamptonPainters() {
           ],
         },
       ]}
+      faqs={[{"question":"How do you protect Hampton homes from coastal salt air?","answer":"In Hampton we use specialised coastal-grade preparation and coatings — thorough salt washing, flexible primers and premium salt-resistant topcoats — so your bayside home stays protected against salt air, UV and damp winters far longer than a standard repaint would."},{"question":"Do you paint weatherboard homes in Hampton?","answer":"Yes. Weatherboard is a Hampton staple, and coastal timber needs particular care — bare timber priming, careful filling and sharp caulking to keep moisture out. From heritage weatherboard cottages to rendered modern builds, we tailor the system to the surface for a durable finish."},{"question":"Do you offer free quotes in Hampton?","answer":"Absolutely. As a local Bayside painter based nearby in Mordialloc, we provide free written quotes across Hampton with the full scope and preparation included. Call Jimmy on 0432 077 782."}]}
     />
   );
 }

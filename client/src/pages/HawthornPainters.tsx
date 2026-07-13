@@ -30,6 +30,7 @@ export default function HawthornPainters() {
           ],
         },
       ]}
+      faqs={[{"question":"Do you specialise in Hawthorn's Victorian and Federation homes?","answer":"Yes. Hawthorn is known for its grand Victorian terraces and Federation homes, and we're experienced with their ornate detailing — lead-paint-safe preparation, timber and cast-iron lacework restoration, and heritage-appropriate colour schemes that suit the era and streetscape."},{"question":"How long does a house repaint take in Hawthorn?","answer":"Most Hawthorn homes are completed within 5 to 10 working days depending on size and the amount of preparation and detailing required. We provide a detailed timeline with every quote."},{"question":"Do you offer free quotes in Hawthorn?","answer":"Yes. We provide free, no-obligation written quotes across Hawthorn and Hawthorn East, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a visit."}]}
     />
   );
 }

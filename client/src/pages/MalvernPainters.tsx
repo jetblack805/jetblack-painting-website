@@ -30,6 +30,7 @@ export default function MalvernPainters() {
           ],
         },
       ]}
+      faqs={[{"question":"Do you paint Malvern's Edwardian and Victorian homes?","answer":"Yes. Malvern is known for its grand Edwardian and Victorian period homes, and we're experienced with heritage-appropriate palettes, meticulous timber and ornamental detailing, and lead-paint-safe preparation that protects both the look and long-term value of these homes."},{"question":"How long does a house repaint take in Malvern?","answer":"Most Malvern homes are completed within 5 to 10 working days depending on size and the detailing involved. We provide a clear timeline with every quote so there's minimal disruption to your household."},{"question":"Do you offer free quotes in Malvern?","answer":"Absolutely. We provide free, no-obligation written quotes across Malvern and Malvern East, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a visit."}]}
     />
   );
 }

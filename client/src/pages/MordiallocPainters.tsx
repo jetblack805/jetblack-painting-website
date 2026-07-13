@@ -58,6 +58,22 @@ export default function MordiallocPainters() {
       ]}
       localExpertise={`As local painting experts serving ${suburb} and the wider Bayside area, we understand the unique challenges of coastal living. Our team has extensive experience with ${suburb}'s distinctive coastal environment, including protection against salt air corrosion, UV rays, and Melbourne's unpredictable climate.`}
       propertyTypes={`${suburb}'s diverse range of properties includes classic weatherboard beach houses, contemporary bayside residences, and period homes. We adapt our techniques to suit each unique architectural style, ensuring a flawless and durable finish.`}
+      localContent={[
+        {
+          heading: "House Painters Based in Mordialloc",
+          body: [
+            "Mordialloc is our home. Jetblack Painting is based right here in the 3195, so when you book a quote for a home near Main Street, along the Nepean Highway, or in the quiet streets around Mordialloc Creek and Peter Scullin Reserve, you're dealing with a genuinely local painter — not a call centre that sends a subcontractor from the other side of Melbourne. We know the area's homes because we live and work among them every day.",
+            "That local base means fast quotes, easy site visits, and a team that turns up when it says it will. From the heritage cottages near the foreshore to the newer townhouses and unit developments spreading back from the beach, we've painted across every pocket of Mordialloc and the surrounding Kingston area.",
+          ],
+        },
+        {
+          heading: "Coastal Painting Built for Mordialloc's Bayside Weather",
+          body: [
+            "Being a beachside suburb on Port Phillip Bay, Mordialloc homes take a beating from salt air, strong UV and damp winter conditions. Paint that isn't prepared and applied correctly will blister, peel and fade far faster here than it would inland. We counter that with thorough salt washing, flexible exterior primers and premium weather-resistant topcoats from Dulux and Taubmans rated for coastal exposure.",
+            "Weatherboard is everywhere in Mordialloc, and timber near the water needs particular care — proper filling, sanding, priming of bare timber and sharp caulking so moisture can't get behind the paint film. Whether it's a classic weatherboard beach house, a rendered façade or a Colorbond-and-render new build, we tailor the system to the surface so the finish lasts.",
+          ],
+        },
+      ]}
       faqs={faqs}
       schema={schema}
     />

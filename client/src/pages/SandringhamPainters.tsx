@@ -58,6 +58,22 @@ export default function SandringhamPainters() {
       ]}
       localExpertise={`Serving the Sandringham community and the wider Bayside area, we are experts in protecting coastal homes. We understand the unique challenges of Sandringham's environment, from salt air corrosion to intense UV exposure, and use specialized products to ensure your property remains beautiful and protected.`}
       propertyTypes={`Sandringham features a mix of classic weatherboard beach cottages, Edwardian homes, and modern bayside residences. Our team is skilled in tailoring our painting methods to suit each unique property type found along the Sandringham coastline.`}
+      localContent={[
+        {
+          heading: "Bayside House Painters Serving Sandringham",
+          body: [
+            "Sandringham is a prized Bayside suburb where classic weatherboard beach cottages, Edwardian homes and modern coastal residences overlook Port Phillip Bay around Sandringham Beach, the yacht club and Royal Avenue. Jetblack Painting provides premium interior and exterior painting built for this seaside setting — protecting Sandringham homes against salt air and sun while delivering a clean, lasting finish.",
+            "Based nearby in Mordialloc, we're a genuinely local Bayside painter who knows Sandringham's homes and coastal conditions. Every project comes with a clear written quote, thorough preparation and a tidy, respectful team, whether it's a full exterior repaint or a refreshed interior scheme.",
+          ],
+        },
+        {
+          heading: "Coastal Painting and Weatherboard Care in Sandringham",
+          body: [
+            "Homes near the water in Sandringham are exposed to relentless salt air, UV and damp winters that quickly break down paintwork that hasn't been prepared properly. We use thorough salt washing, flexible primers and premium salt-resistant topcoats so your Sandringham home's finish stays protected and looks sharp for years.",
+            "Weatherboard is everywhere along the Sandringham coastline, and coastal timber needs particular attention — bare timber priming, careful filling and sharp caulking to lock out moisture. From heritage beach cottages to rendered modern homes, we match the paint system to the surface for a durable, flawless result.",
+          ],
+        },
+      ]}
       faqs={faqs}
       schema={schema}
     />

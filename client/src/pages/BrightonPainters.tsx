@@ -58,6 +58,22 @@ export default function BrightonPainters() {
       ]}
       localExpertise={`We understand ${suburb}'s unique properties, from Victorian heritage homes to modern beachside residences. Our team knows the local climate challenges including salt air and coastal weather, and can recommend the best paint finishes and colours for ${suburb} homes.`}
       propertyTypes={`${suburb}'s heritage homes, modern beachside residences, and period properties require specialized care and premium materials.`}
+      localContent={[
+        {
+          heading: "Premium House Painters Serving Brighton",
+          body: [
+            "Brighton blends beachside prestige with heritage character, from the landmark bathing boxes along Dendy Street Beach to the grand period homes lining the Golden Mile and the streets around Church Street and Bay Street. Jetblack Painting provides the premium interior and exterior painting these homes deserve — combining careful preparation, expert colour work and durable, high-quality finishes on some of Bayside's most valuable properties.",
+            "Whether you own a stately Victorian or Edwardian residence, a renovated period home or a sleek modern beachside build, we tailor our approach to the property. Our detailed written quotes include the full scope and preparation up front, so there are no surprises — just a clean, professional result and respectful conduct on site.",
+          ],
+        },
+        {
+          heading: "Heritage Restoration and Coastal Protection in Brighton",
+          body: [
+            "Brighton's heritage homes need more than a coat of paint. We handle the specifics of Victorian and Edwardian properties — lead-paint-safe preparation, meticulous timber and ornamental restoration, and authentic heritage colour schemes that suit the era and any overlay requirements. The result protects the home's value and keeps its character intact.",
+            "Sitting right on Port Phillip Bay, Brighton homes also face constant salt air and coastal weather. We use high-performance, salt-resistant coatings and thorough surface preparation so exteriors stay protected against the elements and hold their finish far longer than a standard repaint would in this environment.",
+          ],
+        },
+      ]}
       faqs={faqs}
       schema={schema}
     />

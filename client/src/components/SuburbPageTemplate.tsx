@@ -19,6 +19,7 @@ interface SuburbPageProps {
   propertyTypes: string;
   faqs?: { question: string; answer: string }[];
   schema?: object | object[];
+  localContent?: { heading: string; body: string[] }[];
 }
 
 const coreServices = [
@@ -85,6 +86,7 @@ export default function SuburbPageTemplate({
   propertyTypes,
   faqs = [],
   schema,
+  localContent = [],
 }: SuburbPageProps) {
   const canonical = `https://jetblackpainting.com${primarySuburbPath(suburb)}/`;
   const validNeighbouringSuburbs = neighbouringSuburbs.filter((s) => KNOWN_LANDING_PATHS.has(s.link));
@@ -294,6 +296,21 @@ export default function SuburbPageTemplate({
 
       <section className="py-16">
         <div className="container max-w-4xl">
+          {localContent.length > 0 && (
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12">
+              {localContent.map((block) => (
+                <div key={block.heading} className="mb-10">
+                  <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">{block.heading}</h2>
+                  {block.body.map((para, i) => (
+                    <p key={i} className="text-lg text-gray-700 mb-4 leading-relaxed">
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              ))}
+            </motion.div>
+          )}
+
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Interior Painting {suburb}</h2>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">

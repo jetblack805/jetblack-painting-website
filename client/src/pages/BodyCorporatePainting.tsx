@@ -6,7 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-commercial-dark-building.jpeg";
+import imgService from "@/assets/images/gallery-commercial-heritage-white.jpeg";
+import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.jpeg";
+import imgComfortelBuilding from "@/assets/images/gallery-commercial-comfortel-building.jpeg";
+import imgComfortelFront from "@/assets/images/gallery-commercial-comfortel-front.jpeg";
 
 export default function BodyCorporatePainting() {
   const benefits = [
@@ -93,10 +96,30 @@ export default function BodyCorporatePainting() {
         <div className="container">
           <img
             src={imgService}
-            alt="Body corporate façade repaint by Jetblack Painting on a Melbourne strata property"
-            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            alt="Heritage multi-storey building repainted white by Jetblack Painting for a Melbourne owners corporation"
+            className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
           />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            <img
+              src={imgBeforeAfter}
+              alt="Before and after of a strata building façade repaint by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgComfortelBuilding}
+              alt="Commercial and strata building exterior painted by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgComfortelFront}
+              alt="Multi-tenancy building frontage painted by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

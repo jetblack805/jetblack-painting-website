@@ -7,12 +7,12 @@ import { Home, Building2, PaintBucket, Paintbrush, Warehouse, Fence, Key, Buildi
 import { Link } from "wouter";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.jpeg";
 import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
-import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
+import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building.jpeg";
 import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.jpeg";
 import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.jpeg";
 import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.jpeg";
 import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.jpeg";
-import imgCommercialBuilding from "@/assets/images/gallery-commercial-dark-building.jpeg";
+import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.jpeg";
 
 const services = [
   {

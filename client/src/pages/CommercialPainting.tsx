@@ -6,7 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
+import imgService from "@/assets/images/gallery-commercial-comfortel-building.jpeg";
+import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.jpeg";
+import imgComfortelFront from "@/assets/images/gallery-commercial-comfortel-front.jpeg";
+import imgIndustrialLift from "@/assets/images/gallery-commercial-industrial-lift.jpeg";
 
 export default function CommercialPainting() {
   const services = [
@@ -83,10 +86,30 @@ export default function CommercialPainting() {
         <div className="container">
           <img
             src={imgService}
-            alt="Commercial painting example by Jetblack Painting"
-            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            alt="Commercial building exterior painted by Jetblack Painting in Melbourne"
+            className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
           />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            <img
+              src={imgBeforeAfter}
+              alt="Before and after of a commercial building repaint by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgComfortelFront}
+              alt="Commercial office and warehouse frontage painted by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgIndustrialLift}
+              alt="Industrial building painting in progress with access equipment by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

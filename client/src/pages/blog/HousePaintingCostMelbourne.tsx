@@ -155,7 +155,7 @@ export default function HousePaintingCostMelbourne() {
             <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Why Choose Jetblack Painting?</h2>
             
             <p className="text-gray-700 mb-6">
-              With <strong>14 five-star Google reviews</strong>, 13+ years of experience, and $10M public liability insurance, 
+              With <strong>5-star Google reviews</strong>, 13+ years of experience, and $10M public liability insurance,
               Jetblack Painting is Melbourne's most trusted painting company. We service all suburbs including 
               <Link href="/painter-malvern" className="text-[#007A99] hover:underline"> Malvern</Link>, 
               <Link href="/painter-camberwell" className="text-[#007A99] hover:underline"> Camberwell</Link>, 

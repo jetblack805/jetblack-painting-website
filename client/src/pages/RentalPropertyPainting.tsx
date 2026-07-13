@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, Phone, Clock, DollarSign, Users } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
+import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
@@ -55,6 +56,7 @@ export default function RentalPropertyPainting() {
         title="Rental Property Painting Melbourne | Property Manager Painters | Jetblack Painting"
         description="Professional rental property painting Melbourne for landlords and property managers. Fast turnaround, durable finishes, 5-star rated. Free quotes - Call 0432 077 782."
         canonical="https://jetblackpainting.com/services/rental-property-painting/"
+      schema={serviceSchema({ serviceType: "Rental Property Painting", name: "Rental Property Painting Melbourne", description: "Professional rental property painting Melbourne for landlords and property managers. Fast turnaround, durable finishes, 5-star rated. Free quotes - Call 0432 077 782.", canonical: "https://jetblackpainting.com/services/rental-property-painting/" })}
       />
       <Navbar />
 

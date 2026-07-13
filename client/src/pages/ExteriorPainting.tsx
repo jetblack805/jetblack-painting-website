@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, Phone } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
+import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
@@ -36,6 +37,7 @@ export default function ExteriorPainting() {
         title="Exterior Painting Melbourne | Weather-Resistant House Painters | Jetblack Painting"
         description="Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
         canonical="https://jetblackpainting.com/services/exterior-painting/"
+      schema={serviceSchema({ serviceType: "Exterior Painting", name: "Exterior Painting Melbourne", description: "Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.", canonical: "https://jetblackpainting.com/services/exterior-painting/" })}
       />
       <Navbar />
 

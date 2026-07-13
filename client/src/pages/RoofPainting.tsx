@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, Phone } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
+import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
@@ -33,6 +34,7 @@ export default function RoofPainting() {
         title="Roof Painting Melbourne | Roof Restoration & Coating | Jetblack Painting"
         description="Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes."
         canonical="https://jetblackpainting.com/services/roof-painting/"
+      schema={serviceSchema({ serviceType: "Roof Painting", name: "Roof Painting Melbourne", description: "Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes.", canonical: "https://jetblackpainting.com/services/roof-painting/" })}
       />
       <Navbar />
 

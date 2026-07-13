@@ -11,7 +11,7 @@ import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building
 import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.jpeg";
 import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.jpeg";
 import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.jpeg";
-import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.jpeg";
+import imgOpenPlanLiving from "@/assets/images/gallery-interior-luxury-dark.jpeg";
 import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.jpeg";
 
 const services = [

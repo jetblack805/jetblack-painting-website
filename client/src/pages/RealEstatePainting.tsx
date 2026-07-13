@@ -6,7 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-interior-open-plan-living.jpeg";
+import imgService from "@/assets/images/gallery-interior-luxury-dark.jpeg";
+import imgStagedLiving from "@/assets/images/gallery-interior-staged-living.jpeg";
+import imgOpenLiving from "@/assets/images/gallery-interior-open-living.jpeg";
+import imgTealBathroom from "@/assets/images/gallery-interior-teal-bathroom.jpeg";
 
 export default function RealEstatePainting() {
   const benefits = [
@@ -93,10 +96,30 @@ export default function RealEstatePainting() {
         <div className="container">
           <img
             src={imgService}
-            alt="Sale-ready interior repaint by Jetblack Painting for a Melbourne real estate campaign"
-            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            alt="Luxury interior styled and painted by Jetblack Painting for a premium Melbourne property"
+            className="rounded-lg shadow-md w-full max-h-[560px] object-cover"
             loading="lazy"
           />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            <img
+              src={imgStagedLiving}
+              alt="Sale-ready living room repaint by Jetblack Painting for a Melbourne real estate campaign"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgOpenLiving}
+              alt="Freshly painted open living room presented for sale by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src={imgTealBathroom}
+              alt="Modern bathroom repaint by Jetblack Painting for a property sale"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

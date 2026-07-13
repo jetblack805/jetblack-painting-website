@@ -6,6 +6,7 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import imgHallway from "@/assets/images/service-interior-painting.jpeg";
 import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.jpeg";
 import imgKitchenTimber from "@/assets/images/gallery-interior-kitchen-timber.jpeg";
 import imgLounge from "@/assets/images/gallery-interior-lounge.jpeg";
@@ -91,12 +92,18 @@ export default function InteriorPainting() {
       <section className="py-12 bg-white">
         <div className="container">
           <img
-            src={imgOpenPlanLiving}
-            alt="Open plan living room and kitchen interior painted by Jetblack Painting"
-            className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
+            src={imgHallway}
+            alt="Elegant painted hallway with ornate cornices and parquet flooring by Jetblack Painting"
+            className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+            <img
+              src={imgOpenPlanLiving}
+              alt="Open plan living room and kitchen interior painted by Jetblack Painting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
             <img
               src={imgKitchenTimber}
               alt="Modern kitchen with timber panelling painted by Jetblack Painting"

@@ -125,6 +125,27 @@ export const SUBURBS_DATA = {
     postcode: "3175",
     description: "South-eastern municipality with diverse properties",
     areasServed: ["Dandenong", "Dandenong South", "Noble Park"]
+  },
+  cheltenham: {
+    name: "Cheltenham",
+    coordinates: { lat: -37.9583, lng: 145.0528 },
+    postcode: "3192",
+    description: "Bayside suburb with family homes and period properties",
+    areasServed: ["Cheltenham", "Highett"]
+  },
+  parkdale: {
+    name: "Parkdale",
+    coordinates: { lat: -38.0000, lng: 145.0653 },
+    postcode: "3195",
+    description: "Coastal Bayside suburb with beach houses and brick veneer homes",
+    areasServed: ["Parkdale", "Mordialloc North"]
+  },
+  aspendale: {
+    name: "Aspendale",
+    coordinates: { lat: -38.0278, lng: 145.1014 },
+    postcode: "3195",
+    description: "Quiet coastal suburb bordering Mordialloc with beachside properties",
+    areasServed: ["Aspendale", "Aspendale Gardens"]
   }
 };
 

@@ -41,6 +41,9 @@ const PATH_REDIRECTS = {
   "/painters-ringwood":             "/painter-ringwood/",
   "/painters-templestowe":          "/painter-templestowe/",
   "/painters-wheelers-hill":        "/painter-wheelers-hill/",
+  "/painters-cheltenham":           "/painter-cheltenham/",
+  "/painters-parkdale":             "/painter-parkdale/",
+  "/painters-aspendale":            "/painter-aspendale/",
 };
 
 export default {

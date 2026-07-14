@@ -59,6 +59,7 @@ const WheelersHillPainters = lazy(() => import("./pages/WheelersHillPainters"));
 const CheltenhamPainters = lazy(() => import("./pages/CheltenhamPainters"));
 const ParkdalePainters = lazy(() => import("./pages/ParkdalePainters"));
 const AspendalePainters = lazy(() => import("./pages/AspendalePainters"));
+const ChelseaPainters = lazy(() => import("./pages/ChelseaPainters"));
 
 function Router() {
   return (
@@ -150,6 +151,8 @@ function Router() {
       <Route path={"/painters-parkdale"} component={ParkdalePainters} />
       <Route path={"/painter-aspendale"} component={AspendalePainters} />
       <Route path={"/painters-aspendale"} component={AspendalePainters} />
+      <Route path={"/painter-chelsea"} component={ChelseaPainters} />
+      <Route path={"/painters-chelsea"} component={ChelseaPainters} />
       {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />

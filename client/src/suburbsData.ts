@@ -146,6 +146,13 @@ export const SUBURBS_DATA = {
     postcode: "3195",
     description: "Quiet coastal suburb bordering Mordialloc with beachside properties",
     areasServed: ["Aspendale", "Aspendale Gardens"]
+  },
+  chelsea: {
+    name: "Chelsea",
+    coordinates: { lat: -38.0497, lng: 145.1208 },
+    postcode: "3196",
+    description: "Coastal suburb on Port Phillip Bay with weatherboard and brick veneer homes",
+    areasServed: ["Chelsea", "Chelsea Heights"]
   }
 };
 

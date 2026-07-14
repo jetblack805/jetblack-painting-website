@@ -58,6 +58,9 @@ export default {
       return Response.redirect(`${url.origin}${target}`, 301);
     }
 
-    return env.ASSETS.fetch(request);
+    const response = await env.ASSETS.fetch(request);
+    const headers = new Headers(response.headers);
+    headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   },
 };

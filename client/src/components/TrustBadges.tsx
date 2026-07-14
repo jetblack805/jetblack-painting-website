@@ -14,8 +14,8 @@ export default function TrustBadges() {
     },
     {
       icon: <CheckCircle className="w-10 h-10 text-[#00AACC]" />,
-      title: "Master Painters Member",
-      description: "Accredited by Master Painters Australia"
+      title: "5-Year Written Guarantee",
+      description: "Every project backed by our written guarantee"
     },
     {
       icon: <Star className="w-10 h-10 text-[#00AACC]" />,
@@ -60,10 +60,10 @@ export default function TrustBadges() {
         {/* Trust Statement */}
         <div className="mt-12 text-center border-t border-gray-800 pt-8">
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Jetblack Painting is a <strong className="text-white">fully licensed and insured</strong> painting company 
-            based in Melbourne, Victoria. We are proud members of <strong className="text-white">Master Painters Australia</strong> and 
-            comply with all <strong className="text-white">Australian Standards for painting and decorating</strong>. 
-            Our team is <strong className="text-white">WorkSafe compliant</strong> with current police checks and working with children checks.
+            Jetblack Painting is a <strong className="text-white">fully licensed and insured</strong> painting company
+            based in Mordialloc, Melbourne. All work is backed by a <strong className="text-white">5-year written workmanship guarantee</strong> and
+            covered by <strong className="text-white">$10M public liability insurance</strong>.
+            We use only <strong className="text-white">premium Dulux and Taubmans paints</strong> and comply with all Australian Standards for painting and decorating.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a

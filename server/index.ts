@@ -7,9 +7,23 @@ import { setupVite } from "./_core/vite";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const CANONICAL_HOST = "jetblackpainting.com";
+
 async function startServer() {
   const app = express();
   const server = createServer(app);
+
+  // The site has permanently moved to https://jetblackpainting.com.
+  // Every request to this legacy deployment must return a real HTTP 301
+  // (not a meta refresh or JS redirect) with the path preserved — required
+  // for Google Search Console's Change of Address validation.
+  app.use((req, res, next) => {
+    const host = (req.headers.host ?? "").toLowerCase().split(":")[0];
+    if (host === CANONICAL_HOST || host === "localhost" || host === "127.0.0.1") {
+      return next();
+    }
+    return res.redirect(301, `https://${CANONICAL_HOST}${req.originalUrl}`);
+  });
 
   // Force HTTPS behind the proxy (Railway/Cloudflare set x-forwarded-proto)
   app.use((req, res, next) => {
@@ -18,9 +32,6 @@ async function startServer() {
     }
     next();
   });
-
-  // The site now lives at jetblackpainting.com (Cloudflare).
-  // This server will serve the minimal redirect HTML pages.
 
   if (process.env.NODE_ENV !== "production") {
     await setupVite(app, server);

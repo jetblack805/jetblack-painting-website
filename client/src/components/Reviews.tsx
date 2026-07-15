@@ -2,8 +2,8 @@
  * Design: Bold Contrast — Reviews on light warm background
  * Google reviews displayed in a card grid with star ratings
  */
-import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { useInView } from "@/lib/useInView";
 import {
   Carousel,
   CarouselContent,
@@ -68,16 +68,14 @@ function StarRating({ count }: { count: number }) {
 }
 
 export default function Reviews() {
+  const header = useInView("-100px");
   return (
     <section id="reviews" className="py-24 bg-[#F5F5F0]">
       <div className="container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+        <div
+          ref={header.ref}
+          className={`reveal up text-center max-w-2xl mx-auto mb-16 ${header.visible ? "visible" : ""}`}
         >
           <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Customer Reviews
@@ -106,7 +104,7 @@ export default function Reviews() {
             </div>
             <span className="text-[#666] text-sm">on Google</span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Reviews Carousel */}
         <div className="relative px-12">
@@ -118,15 +116,9 @@ export default function Reviews() {
             className="w-full"
           >
             <CarouselContent className="-ml-4">
-              {reviews.map((review, idx) => (
+              {reviews.map((review) => (
                 <CarouselItem key={review.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative h-full flex flex-col"
-                  >
+                  <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative h-full flex flex-col">
                     {/* Quote icon */}
                     <Quote className="w-8 h-8 text-[#00AACC]/15 absolute top-4 right-4" />
 
@@ -153,7 +145,7 @@ export default function Reviews() {
                         {review.source}
                       </span>
                     </div>
-                  </motion.div>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>

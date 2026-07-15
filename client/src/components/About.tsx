@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { Shield, Clock, Award, Users } from "lucide-react";
+import { useInView } from "@/lib/useInView";
 import ABOUT_IMG from "@/assets/images/about-team-at-work.jpeg";
 import TEAM_IMG from "@/assets/images/about-branded-workwear.jpeg";
 
@@ -27,17 +27,17 @@ const values = [
 ];
 
 export default function About() {
+  const images = useInView("-100px");
+  const content = useInView("-100px");
+
   return (
     <section id="about" className="py-24 bg-[#0D0D0D]">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Images */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
-            className="relative"
+          <div
+            ref={images.ref}
+            className={`reveal left relative ${images.visible ? "visible" : ""}`}
           >
             <div className="relative">
               <img loading="lazy" decoding="async"
@@ -57,14 +57,12 @@ export default function About() {
                 <div className="text-xs font-medium uppercase tracking-wider">Years Exp.</div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
+          <div
+            ref={content.ref}
+            className={`reveal right ${content.visible ? "visible" : ""}`}
           >
             <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
               Meet the Owner
@@ -97,27 +95,31 @@ export default function About() {
             {/* Values Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {values.map((value, idx) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="flex gap-3"
-                >
-                  <div className="w-10 h-10 rounded bg-[#007A99]/10 flex items-center justify-center shrink-0">
-                    <value.icon className="w-5 h-5 text-[#00AACC]" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-sm mb-1">{value.title}</h3>
-                    <p className="text-white/50 text-xs leading-relaxed">{value.description}</p>
-                  </div>
-                </motion.div>
+                <ValueCard key={value.title} value={value} delay={idx * 0.1} />
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function ValueCard({ value, delay }: { value: (typeof values)[number]; delay: number }) {
+  const { ref, visible } = useInView();
+  return (
+    <div
+      ref={ref}
+      className={`reveal up flex gap-3 ${visible ? "visible" : ""}`}
+      style={{ transitionDelay: visible ? `${delay}s` : "0s" }}
+    >
+      <div className="w-10 h-10 rounded bg-[#007A99]/10 flex items-center justify-center shrink-0">
+        <value.icon className="w-5 h-5 text-[#00AACC]" />
+      </div>
+      <div>
+        <h3 className="text-white font-semibold text-sm mb-1">{value.title}</h3>
+        <p className="text-white/50 text-xs leading-relaxed">{value.description}</p>
+      </div>
+    </div>
   );
 }

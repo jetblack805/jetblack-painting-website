@@ -3,8 +3,8 @@
  * Masonry-style grid showcasing real project photos
  */
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { useInView } from "@/lib/useInView";
 import {
   Carousel,
   CarouselContent,
@@ -93,6 +93,7 @@ const categories = ["All", "Exterior", "Commercial", "Roof"];
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const header = useInView("-100px");
 
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
@@ -100,12 +101,9 @@ export default function Gallery() {
     <section id="gallery" className="py-24 bg-[#0D0D0D]">
       <div className="container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-12"
+        <div
+          ref={header.ref}
+          className={`reveal up max-w-2xl mb-12 ${header.visible ? "visible" : ""}`}
         >
           <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Our Portfolio
@@ -120,7 +118,7 @@ export default function Gallery() {
             Browse our recent projects across Melbourne. Every job is completed with
             the same attention to detail and commitment to quality.
           </p>
-        </motion.div>
+        </div>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 mb-10">
@@ -149,34 +147,27 @@ export default function Gallery() {
             className="w-full"
           >
             <CarouselContent className="-ml-4">
-              <AnimatePresence mode="popLayout">
-                {filtered.map((project, idx) => (
-                  <CarouselItem key={project.src} className="pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                    <motion.div
-                      layout
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.4 }}
-                      className="group relative overflow-hidden rounded-lg cursor-pointer h-64"
-                      onClick={() => setLightbox(idx)}
-                    >
-                      <img loading="lazy" decoding="async"
-                        src={project.src}
-                        alt={project.alt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <span className="text-[#00AACC] text-xs font-semibold uppercase tracking-wider">
-                          {project.category}
-                        </span>
-                        <p className="text-white text-sm mt-1 line-clamp-2">{project.alt}</p>
-                      </div>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </AnimatePresence>
+              {filtered.map((project, idx) => (
+                <CarouselItem key={project.src} className="pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                  <div
+                    className="group relative overflow-hidden rounded-lg cursor-pointer h-64 transition-opacity duration-300"
+                    onClick={() => setLightbox(idx)}
+                  >
+                    <img loading="lazy" decoding="async"
+                      src={project.src}
+                      alt={project.alt}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <span className="text-[#00AACC] text-xs font-semibold uppercase tracking-wider">
+                        {project.category}
+                      </span>
+                      <p className="text-white text-sm mt-1 line-clamp-2">{project.alt}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious className="-left-4 lg:-left-12 text-white border-white/20 bg-white/10 hover:bg-white/20" />
             <CarouselNext className="-right-4 lg:-right-12 text-white border-white/20 bg-white/10 hover:bg-white/20" />
@@ -185,33 +176,27 @@ export default function Gallery() {
       </div>
 
       {/* Lightbox */}
-      <AnimatePresence>
+      <div
+        className={`fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 transition-opacity duration-300 ${
+          lightbox !== null ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setLightbox(null)}
+      >
+        <button
+          onClick={() => setLightbox(null)}
+          className="absolute top-6 right-6 text-white/70 hover:text-white z-50"
+        >
+          <X className="w-8 h-8" />
+        </button>
         {lightbox !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-            onClick={() => setLightbox(null)}
-          >
-            <button
-              onClick={() => setLightbox(null)}
-              className="absolute top-6 right-6 text-white/70 hover:text-white z-50"
-            >
-              <X className="w-8 h-8" />
-            </button>
-            <motion.img
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              src={filtered[lightbox]?.src}
-              alt={filtered[lightbox]?.alt}
-              className="max-w-full max-h-[85vh] object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </motion.div>
+          <img
+            src={filtered[lightbox]?.src}
+            alt={filtered[lightbox]?.alt}
+            className="max-w-full max-h-[85vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
         )}
-      </AnimatePresence>
+      </div>
     </section>
   );
 }

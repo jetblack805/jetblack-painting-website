@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useInView } from "@/lib/useInView";
 
 const featuredServices = [
   {
@@ -63,15 +63,18 @@ const premiumSuburbs = [
 ];
 
 export default function PremiumServices() {
+  const header = useInView("-100px");
+  const areas = useInView("-100px");
+  const featured = useInView("-100px");
+  const allSvcs = useInView("-100px");
+  const why = useInView("-100px");
+
   return (
     <section id="premium-services" className="py-24 bg-white">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center mb-16"
+        <div
+          ref={header.ref}
+          className={`reveal up max-w-3xl mx-auto text-center mb-16 ${header.visible ? "visible" : ""}`}
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-[#0D0D0D] mb-4">
             Premium Painters Across Melbourne, Bayside &amp; Inner Suburbs
@@ -82,14 +85,11 @@ export default function PremiumServices() {
           <p className="text-lg text-[#999]">
             Wherever you are in Melbourne, Jetblack Painting has a local team that knows your area — from beachside weatherboards to heritage brick homes.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-[#F5F5F0] rounded-xl p-8 mb-16"
+        <div
+          ref={areas.ref}
+          className={`reveal up bg-[#F5F5F0] rounded-xl p-8 mb-16 ${areas.visible ? "visible" : ""}`}
         >
           <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Service Areas for Local &amp; Map Search</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -103,32 +103,26 @@ export default function PremiumServices() {
           <p className="text-sm text-[#666] mt-4">
             Select your suburb to see local project details, services and quote options.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid md:grid-cols-2 gap-8 mb-16"
+        <div
+          ref={featured.ref}
+          className={`reveal up grid md:grid-cols-2 gap-8 mb-16 ${featured.visible ? "visible" : ""}`}
         >
           {featuredServices.map((service) => (
             <Link key={service.title} href={service.link}>
               <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg hover:border-[#00AACC] transition-all cursor-pointer h-full">
                 <h3 className="text-xl font-bold text-[#0D0D0D] mb-3">{service.title}</h3>
                 <p className="text-[#666] mb-4">{service.description}</p>
-                <span className="text-[#007A99] font-semibold">Learn More â†’</span>
+                <span className="text-[#007A99] font-semibold">Learn More →</span>
               </div>
             </Link>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-16"
+        <div
+          ref={allSvcs.ref}
+          className={`reveal up mb-16 ${allSvcs.visible ? "visible" : ""}`}
         >
           <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6 text-center">Complete Range of Painting Services</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -141,14 +135,11 @@ export default function PremiumServices() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="max-w-4xl mx-auto"
+        <div
+          ref={why.ref}
+          className={`reveal up max-w-4xl mx-auto ${why.visible ? "visible" : ""}`}
         >
           <h3 className="text-2xl font-bold text-[#0D0D0D] mb-6">Why Melbourne Homeowners Choose Jetblack Painting</h3>
           <div className="prose prose-lg text-[#666] space-y-4">
@@ -162,7 +153,7 @@ export default function PremiumServices() {
               Every job is backed by a 5-year workmanship guarantee, $10M public liability insurance and a 5-star Google rating from verified reviews.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -134,17 +134,17 @@ export default function Contact() {
                 <div className="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-white/10">
                   <div className="text-center">
                     <div className="text-[#4DC4DE] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>5.0★</div>
-                    <div className="text-white/40 text-xs">Google Rating</div>
+                    <div className="text-white/60 text-xs">Google Rating</div>
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div className="text-center">
                     <div className="text-[#4DC4DE] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>13+</div>
-                    <div className="text-white/40 text-xs">Years Experience</div>
+                    <div className="text-white/60 text-xs">Years Experience</div>
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div className="text-center">
                     <div className="text-[#4DC4DE] font-bold text-lg" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>100%</div>
-                    <div className="text-white/40 text-xs">Insured</div>
+                    <div className="text-white/60 text-xs">Insured</div>
                   </div>
                 </div>
               </div>

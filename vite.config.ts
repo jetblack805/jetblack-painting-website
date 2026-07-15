@@ -232,8 +232,8 @@ function vitePluginDeferCSS(): Plugin {
     name: "defer-css",
     apply: "build",
     transformIndexHtml: {
-      enforce: "post",
-      transform(html: string): string {
+      order: "post",
+      handler(html: string): string {
         return html.replace(
           /(<link\b[^>]*\brel="stylesheet"[^>]*>)/g,
           (match) => {

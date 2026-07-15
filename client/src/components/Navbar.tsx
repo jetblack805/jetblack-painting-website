@@ -150,7 +150,7 @@ export default function Navbar() {
               }`}
             >
                   <div className="px-5 py-4 border-b border-white/10">
-                    <p className="text-white/40 text-xs uppercase tracking-widest">Melbourne suburbs we serve</p>
+                    <p className="text-white/60 text-xs uppercase tracking-widest">Melbourne suburbs we serve</p>
                   </div>
                   <div className="p-4 grid grid-cols-3 gap-1">
                     {SUBURBS.map((s) => (

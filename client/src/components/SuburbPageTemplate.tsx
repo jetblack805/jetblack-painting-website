@@ -5,9 +5,9 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MidPageCTA from "./MidPageCTA";
 import { getSuburbData, getEmbedMapSrc } from "../suburbsData";
-import imgExteriorWork from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
-import imgCommercialWork from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
-import imgRoofWork from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
+import imgExteriorWork from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
+import imgCommercialWork from "@/assets/images/gallery-commercial-epoxy-floor.webp";
+import imgRoofWork from "@/assets/images/gallery-roof-victorian-restoration.webp";
 
 interface SuburbPageProps {
   title: string;

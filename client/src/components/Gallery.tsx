@@ -12,18 +12,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import imgBeforeAfterKeysborough from "@/assets/images/gallery-exterior-before-after-keysborough.jpeg";
-import imgGreyModernBayside from "@/assets/images/gallery-exterior-grey-modern-bayside.jpeg";
-import imgPainterOnLadder from "@/assets/images/gallery-exterior-painter-on-ladder.jpeg";
-import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.jpeg";
-import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
-import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
-import imgTwoStoryMornington from "@/assets/images/gallery-exterior-two-story-mornington.jpeg";
-import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.jpeg";
-import imgDarkCommercialBuilding from "@/assets/images/gallery-commercial-dark-building.jpeg";
-import imgVictorianTrim from "@/assets/images/gallery-exterior-victorian-trim.jpeg";
-import imgScissorLift from "@/assets/images/gallery-commercial-scissor-lift.jpeg";
-import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.jpeg";
+import imgBeforeAfterKeysborough from "@/assets/images/gallery-exterior-before-after-keysborough.webp";
+import imgGreyModernBayside from "@/assets/images/gallery-exterior-grey-modern-bayside.webp";
+import imgPainterOnLadder from "@/assets/images/gallery-exterior-painter-on-ladder.webp";
+import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.webp";
+import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
+import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.webp";
+import imgTwoStoryMornington from "@/assets/images/gallery-exterior-two-story-mornington.webp";
+import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.webp";
+import imgDarkCommercialBuilding from "@/assets/images/gallery-commercial-dark-building.webp";
+import imgVictorianTrim from "@/assets/images/gallery-exterior-victorian-trim.webp";
+import imgScissorLift from "@/assets/images/gallery-commercial-scissor-lift.webp";
+import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.webp";
 
 const projects = [
   {

@@ -6,10 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-interior-staged-living.jpeg";
-import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.jpeg";
-import imgOpenLiving from "@/assets/images/gallery-interior-open-living.jpeg";
-import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.jpeg";
+import imgService from "@/assets/images/gallery-interior-staged-living.webp";
+import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.webp";
+import imgOpenLiving from "@/assets/images/gallery-interior-open-living.webp";
+import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.webp";
 
 export default function RealEstatePainting() {
   const benefits = [

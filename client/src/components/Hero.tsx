@@ -17,7 +17,7 @@ export default function Hero() {
           the static hero <img> in index.html owns LCP and stays in DOM. */}
       <div
         className="absolute inset-0"
-        style={{ backgroundImage: "url(/hero-background.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "url(/hero-background.webp)", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]/40" />
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent" />

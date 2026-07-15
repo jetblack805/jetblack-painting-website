@@ -2,7 +2,7 @@
  * Design: Bold Contrast — Footer on jet black background
  */
 import { Phone, Instagram, MapPin } from "lucide-react";
-import LOGO_URL from "@/assets/images/logo.jpg";
+import LOGO_URL from "@/assets/images/logo.webp";
 
 const SERVICE_AREAS = [
   { name: "Armadale",            href: "/painter-armadale/" },

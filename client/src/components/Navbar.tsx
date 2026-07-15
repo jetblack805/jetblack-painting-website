@@ -6,7 +6,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { useLocation } from "wouter";
-import LOGO_URL from "@/assets/images/logo.jpg";
+import LOGO_URL from "@/assets/images/logo.webp";
 
 const SUBURBS = [
   { name: "Armadale",           href: "/painter-armadale/" },

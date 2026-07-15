@@ -6,7 +6,7 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/about-team-at-work.jpeg";
+import imgService from "@/assets/images/about-team-at-work.webp";
 
 export default function KitchenCabinetResurfacing() {
   const benefits = [

@@ -65,12 +65,12 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4
+            <h2
               className="text-white font-semibold mb-4 text-sm uppercase tracking-wider"
               style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
             >
               Quick Links
-            </h4>
+            </h2>
             <nav className="flex flex-col gap-2.5">
               {[
                 { label: "Home",     href: "/" },
@@ -94,12 +94,12 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4
+            <h2
               className="text-white font-semibold mb-4 text-sm uppercase tracking-wider"
               style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
             >
               Contact Us
-            </h4>
+            </h2>
             <div className="space-y-3">
               <a
                 href="tel:0432077782"
@@ -127,18 +127,18 @@ export default function Footer() {
 
         {/* Service Areas */}
         <div className="mt-10 pt-10 border-t border-white/5">
-          <h4
+          <h2
             className="text-white font-semibold mb-5 text-sm uppercase tracking-wider"
             style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
           >
             Service Areas
-          </h4>
+          </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-4 gap-y-2">
             {SERVICE_AREAS.map((s) => (
               <a
                 key={s.href}
                 href={s.href}
-                className="text-white/40 hover:text-[#00AACC] transition-colors text-xs"
+                className="text-white/60 hover:text-[#00AACC] transition-colors text-xs"
               >
                 {s.name}
               </a>

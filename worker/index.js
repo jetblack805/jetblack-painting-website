@@ -86,6 +86,18 @@ export default {
     const response = await env.ASSETS.fetch(request);
     const headers = new Headers(response.headers);
     headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+
+    // Long-lived cache for immutable hashed assets (JS/CSS bundles with content hash in filename)
+    // and for stable public images (hero-background.jpg, og-image.jpg etc.)
+    const pathname = url.pathname;
+    const isHashedAsset = /\.[a-f0-9]{8,}\.(js|css|woff2?)$/.test(pathname);
+    const isStaticImage = /\.(jpg|jpeg|png|webp|avif|gif|ico|svg)$/.test(pathname);
+    if (isHashedAsset) {
+      headers.set("Cache-Control", "public, max-age=31536000, immutable");
+    } else if (isStaticImage) {
+      headers.set("Cache-Control", "public, max-age=2592000");
+    }
+
     return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   },
 };

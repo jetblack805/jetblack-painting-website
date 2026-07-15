@@ -306,10 +306,21 @@
   </script>
 </head>
 <body>
-  <div id="root">
-    <main>
-      <h1>Melbourne's Best-Rated Local House Painters</h1>
-      <p>
+  <!--
+    Static hero background rendered from HTML so the browser can paint the
+    LCP image before any JavaScript runs. React's own Hero section (z-index:1
+    via #root) naturally covers this once the app mounts.
+  -->
+  <div id="hero-static" aria-hidden="true" style="position:fixed;inset:0;z-index:0;background:#0a0a0a;overflow:hidden;">
+    <img src="/hero-background.jpg" alt="" width="1400" height="933"
+         fetchpriority="high" decoding="async"
+         style="width:100%;height:100%;object-fit:cover;object-position:center;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,0.95),rgba(10,10,10,0.8),rgba(10,10,10,0.4))"></div>
+  </div>
+  <div id="root" style="position:relative;z-index:1;">
+    <main style="padding:7rem 1.5rem 2rem;color:rgba(255,255,255,0.85);font-family:system-ui,sans-serif;">
+      <h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.75rem;">Melbourne's Best-Rated Local House Painters</h1>
+      <p style="font-size:1rem;line-height:1.6;max-width:40rem;">
         Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 30+ suburbs.
         We offer interior, exterior, commercial, roof, and cabinet painting for homeowners, landlords, and businesses.
         Based in Mordialloc, we cover Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and all surrounding areas.

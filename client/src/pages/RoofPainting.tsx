@@ -43,7 +43,7 @@ export default function RoofPainting() {
     { name: "Camberwell", link: "/painter-camberwell" },
     { name: "Hawthorn", link: "/painter-hawthorn" },
     { name: "Bentleigh", link: "/painter-bentleigh" },
-    { name: "Keysborough", link: "/keysborough-painters" },
+    { name: "Mordialloc", link: "/painter-mordialloc" },
   ];
 
   return (

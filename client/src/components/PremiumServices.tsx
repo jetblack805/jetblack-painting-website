@@ -53,7 +53,6 @@ const premiumSuburbs = [
   { name: "Caulfield", link: "/painter-caulfield" },
   { name: "Bentleigh", link: "/painter-bentleigh" },
   { name: "Hampton", link: "/painter-hampton" },
-  { name: "Keysborough", link: "/keysborough-painters" },
   { name: "Hawthorn", link: "/painter-hawthorn" },
   { name: "Carlton", link: "/painter-carlton" },
   { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },

@@ -44,7 +44,7 @@ export default function CommercialPainting() {
     { name: "Malvern", link: "/painter-malvern" },
     { name: "Camberwell", link: "/painter-camberwell" },
     { name: "Hawthorn", link: "/painter-hawthorn" },
-    { name: "Keysborough", link: "/keysborough-painters" },
+    { name: "Mordialloc", link: "/painter-mordialloc" },
   ];
 
   return (

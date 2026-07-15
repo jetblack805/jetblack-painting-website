@@ -16,14 +16,14 @@ const services = [
   {
     icon: Home,
     title: "Interior House Painting Melbourne",
-    description: "Our professional interior painting Melbourne services transform your living spaces with flawless finishes. From walls and ceilings to detailed trims and doors, our expert painters deliver fresh, clean looks throughout your home. We proudly serve Keysborough, Bayside, and all Melbourne suburbs with premium quality paints and meticulous attention to detail.",
+    description: "Our professional interior painting Melbourne services transform your living spaces with flawless finishes. From walls and ceilings to detailed trims and doors, our expert painters deliver fresh, clean looks throughout your home. We proudly serve Mordialloc, Bayside, and all Melbourne suburbs with premium quality paints and meticulous attention to detail.",
     image: imgInteriorPainting,
     link: "/services/interior-painting",
   },
   {
     icon: Paintbrush,
     title: "Exterior House Painting Melbourne",
-    description: "Boost your property's curb appeal with our expert exterior painting Melbourne services. We specialise in high-quality repaints for weatherboards, render, fascias, and gutters, using durable paints built to withstand Melbourne's varied weather. Our exterior house painters ensure long-lasting protection and a beautiful finish for homes in Keysborough and Bayside.",
+    description: "Boost your property's curb appeal with our expert exterior painting Melbourne services. We specialise in high-quality repaints for weatherboards, render, fascias, and gutters, using durable paints built to withstand Melbourne's varied weather. Our exterior house painters ensure long-lasting protection and a beautiful finish for homes in Mordialloc and Bayside.",
     image: imgNavyWeatherboard,
     link: "/services/exterior-painting",
   },
@@ -37,7 +37,7 @@ const services = [
   {
     icon: Fence,
     title: "Roof & Fence Painting Melbourne",
-    description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Keysborough, Bayside, and throughout Melbourne.",
+    description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Mordialloc, Bayside, and throughout Melbourne.",
     image: imgRoofFencePainting,
     link: "/services/roof-fence-painting",
   },

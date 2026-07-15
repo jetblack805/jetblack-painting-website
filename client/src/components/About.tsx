@@ -109,7 +109,7 @@ export default function About() {
                     <value.icon className="w-5 h-5 text-[#00AACC]" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold text-sm mb-1">{value.title}</h4>
+                    <h3 className="text-white font-semibold text-sm mb-1">{value.title}</h3>
                     <p className="text-white/50 text-xs leading-relaxed">{value.description}</p>
                   </div>
                 </motion.div>

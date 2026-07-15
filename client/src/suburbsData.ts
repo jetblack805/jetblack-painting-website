@@ -153,6 +153,13 @@ export const SUBURBS_DATA = {
     postcode: "3196",
     description: "Coastal suburb on Port Phillip Bay with weatherboard and brick veneer homes",
     areasServed: ["Chelsea", "Chelsea Heights"]
+  },
+  southyarra: {
+    name: "South Yarra",
+    coordinates: { lat: -37.8393, lng: 144.9957 },
+    postcode: "3141",
+    description: "Affluent inner-city suburb with Victorian terraces, apartments and heritage streetscapes",
+    areasServed: ["South Yarra", "Prahran", "Windsor"]
   }
 };
 

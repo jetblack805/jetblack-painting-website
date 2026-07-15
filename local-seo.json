@@ -64,13 +64,8 @@
     "Malvern",
     "Camberwell",
     "Hawthorn",
-    "Bentleigh",
     "Caulfield",
-    "Hampton",
-    "Mordialloc",
     "Kew",
-    "Sandringham",
-    "Mentone",
     "Carlton",
     "Mornington Peninsula",
     "Bayside",
@@ -91,7 +86,11 @@
     "Ormond",
     "Ringwood",
     "Templestowe",
-    "Wheelers Hill"
+    "Wheelers Hill",
+    "Chelsea",
+    "Aspendale",
+    "Parkdale",
+    "Cheltenham"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -165,6 +164,8 @@
   },
   "sameAs": [
     "https://www.instagram.com/jetblack_painting",
-    "https://www.google.com/maps/place/Jetblack+Painting"
+    "https://www.facebook.com/jetblackpainting",
+    "https://www.google.com/maps/place/Jetblack+Painting",
+    "https://www.oneflare.com.au/painter/vic/mordialloc/jetblack-painting"
   ]
 }

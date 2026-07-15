@@ -32,9 +32,10 @@ Allow: /
 
 # ── AI crawlers — explicitly welcomed for content indexing and AI visibility ──
 # Allowing these bots means your business can appear in ChatGPT, Perplexity,
-# Claude, and other AI assistant answers when people ask about painters in
-# Melbourne or specific suburbs.
+# Claude, Gemini, and other AI assistant answers when people ask about painters
+# in Melbourne or specific suburbs.
 
+# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 
@@ -44,31 +45,54 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
+# Google Gemini / AI Overviews (Google-Extended opts content INTO Bard/Gemini training)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Perplexity-User
 Allow: /
 
+# Meta AI
 User-agent: meta-externalagent
 Allow: /
 
+# Cohere
 User-agent: cohere-ai
 Allow: /
 
+# You.com
 User-agent: YouBot
 Allow: /
 
+# Amazon Alexa / Rufus
 User-agent: Amazonbot
 Allow: /
 
+# ByteDance / TikTok AI
 User-agent: Bytespider
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Allen Institute for AI (Semantic Scholar)
+User-agent: AI2Bot
+Allow: /
+
+# Diffbot (AI web intelligence)
+User-agent: Diffbot
 Allow: /
 
 # ── Sitemaps ──────────────────────────────────────────────────────────────────

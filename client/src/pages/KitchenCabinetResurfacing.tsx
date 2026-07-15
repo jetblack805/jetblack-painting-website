@@ -28,7 +28,6 @@ export default function KitchenCabinetResurfacing() {
     { name: "Caulfield", link: "/painter-caulfield" },
     { name: "Hampton", link: "/painter-hampton" },
     { name: "Mordialloc", link: "/painter-mordialloc" },
-    { name: "Keysborough", link: "/keysborough-painters" },
   ];
 
   const faqs = [

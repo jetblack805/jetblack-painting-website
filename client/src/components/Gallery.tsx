@@ -13,76 +13,100 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import imgBeforeAfterKeysborough from "@/assets/images/gallery-exterior-before-after-keysborough.webp";
+import imgBeforeAfterKeysborough900 from "@/assets/images/gallery-exterior-before-after-keysborough-900.webp";
 import imgGreyModernBayside from "@/assets/images/gallery-exterior-grey-modern-bayside.webp";
+import imgGreyModernBayside900 from "@/assets/images/gallery-exterior-grey-modern-bayside-900.webp";
 import imgPainterOnLadder from "@/assets/images/gallery-exterior-painter-on-ladder.webp";
+import imgPainterOnLadder900 from "@/assets/images/gallery-exterior-painter-on-ladder-900.webp";
 import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.webp";
+import imgEpoxyFloor900 from "@/assets/images/gallery-commercial-epoxy-floor-900.webp";
 import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
+import imgNavyWeatherboard900 from "@/assets/images/gallery-exterior-navy-weatherboard-900.webp";
 import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.webp";
+import imgVictorianRoof900 from "@/assets/images/gallery-roof-victorian-restoration-900.webp";
 import imgTwoStoryMornington from "@/assets/images/gallery-exterior-two-story-mornington.webp";
+import imgTwoStoryMornington900 from "@/assets/images/gallery-exterior-two-story-mornington-900.webp";
 import imgTudorHeritage from "@/assets/images/gallery-exterior-tudor-heritage.webp";
+import imgTudorHeritage900 from "@/assets/images/gallery-exterior-tudor-heritage-900.webp";
 import imgDarkCommercialBuilding from "@/assets/images/gallery-commercial-dark-building.webp";
+import imgDarkCommercialBuilding900 from "@/assets/images/gallery-commercial-dark-building-900.webp";
 import imgVictorianTrim from "@/assets/images/gallery-exterior-victorian-trim.webp";
+import imgVictorianTrim900 from "@/assets/images/gallery-exterior-victorian-trim-900.webp";
 import imgScissorLift from "@/assets/images/gallery-commercial-scissor-lift.webp";
+import imgScissorLift900 from "@/assets/images/gallery-commercial-scissor-lift-900.webp";
 import imgWhiteModern from "@/assets/images/gallery-exterior-white-modern.webp";
+import imgWhiteModern900 from "@/assets/images/gallery-exterior-white-modern-900.webp";
 
 const projects = [
   {
     src: imgBeforeAfterKeysborough,
+    srcSmall: imgBeforeAfterKeysborough900,
     alt: "Before and after exterior house painting transformation in Keysborough Melbourne",
     category: "Exterior",
   },
   {
     src: imgGreyModernBayside,
+    srcSmall: imgGreyModernBayside900,
     alt: "Modern grey home exterior repaint by professional painters in Bayside Melbourne",
     category: "Exterior",
   },
   {
     src: imgPainterOnLadder,
+    srcSmall: imgPainterOnLadder900,
     alt: "Professional house painter on ladder working on exterior residential project Melbourne",
     category: "Exterior",
   },
   {
     src: imgEpoxyFloor,
+    srcSmall: imgEpoxyFloor900,
     alt: "Commercial epoxy floor painting for warehouse in Melbourne Victoria",
     category: "Commercial",
   },
   {
     src: imgNavyWeatherboard,
+    srcSmall: imgNavyWeatherboard900,
     alt: "Navy weatherboard house with white fence - exterior painting specialists Melbourne",
     category: "Exterior",
   },
   {
     src: imgVictorianRoof,
+    srcSmall: imgVictorianRoof900,
     alt: "Victorian house roof painting and restoration Melbourne",
     category: "Roof",
   },
   {
     src: imgTwoStoryMornington,
+    srcSmall: imgTwoStoryMornington900,
     alt: "Two-story house exterior painting project in Mornington Peninsula",
     category: "Exterior",
   },
   {
     src: imgTudorHeritage,
+    srcSmall: imgTudorHeritage900,
     alt: "Tudor-style house repaint - heritage home painting experts Melbourne",
     category: "Exterior",
   },
   {
     src: imgDarkCommercialBuilding,
+    srcSmall: imgDarkCommercialBuilding900,
     alt: "Dark commercial building painting - professional commercial contractors Melbourne",
     category: "Commercial",
   },
   {
     src: imgVictorianTrim,
+    srcSmall: imgVictorianTrim900,
     alt: "Victorian house exterior painting - detailed trim work Melbourne",
     category: "Exterior",
   },
   {
     src: imgScissorLift,
+    srcSmall: imgScissorLift900,
     alt: "Commercial scissor lift painting for high-access building Melbourne",
     category: "Commercial",
   },
   {
     src: imgWhiteModern,
+    srcSmall: imgWhiteModern900,
     alt: "White modern exterior repaint - high-quality finish Melbourne",
     category: "Exterior",
   },
@@ -155,6 +179,10 @@ export default function Gallery() {
                   >
                     <img loading="lazy" decoding="async"
                       src={project.src}
+                      srcSet={`${project.srcSmall} 900w, ${project.src} 1400w`}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      width={900}
+                      height={900}
                       alt={project.alt}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

@@ -4,12 +4,48 @@
 import { Phone, Instagram, MapPin } from "lucide-react";
 import LOGO_URL from "@/assets/images/logo.jpg";
 
-export default function Footer() {
-  const scrollToSection = (id: string) => {
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+const SERVICE_AREAS = [
+  { name: "Armadale",            href: "/painter-armadale/" },
+  { name: "Aspendale",           href: "/painter-aspendale/" },
+  { name: "Bayside",             href: "/painter-bayside/" },
+  { name: "Bentleigh",           href: "/painter-bentleigh/" },
+  { name: "Berwick",             href: "/painter-berwick/" },
+  { name: "Box Hill",            href: "/painter-box-hill/" },
+  { name: "Brighton",            href: "/painter-brighton/" },
+  { name: "Camberwell",          href: "/painter-camberwell/" },
+  { name: "Carlton",             href: "/painter-carlton/" },
+  { name: "Caulfield",           href: "/painter-caulfield/" },
+  { name: "Chelsea",             href: "/painter-chelsea/" },
+  { name: "Cheltenham",          href: "/painter-cheltenham/" },
+  { name: "Croydon",             href: "/painter-croydon/" },
+  { name: "Dandenong",           href: "/painter-dandenong/" },
+  { name: "Doncaster",           href: "/painter-doncaster/" },
+  { name: "Donvale",             href: "/painter-donvale/" },
+  { name: "Glen Waverley",       href: "/painter-glen-waverley/" },
+  { name: "Greater Dandenong",   href: "/painter-greater-dandenong/" },
+  { name: "Hampton",             href: "/painter-hampton/" },
+  { name: "Hawthorn",            href: "/painter-hawthorn/" },
+  { name: "Keysborough",         href: "/keysborough-painters/" },
+  { name: "Kew",                 href: "/painter-kew/" },
+  { name: "Kingston",            href: "/painter-kingston/" },
+  { name: "Malvern",             href: "/painter-malvern/" },
+  { name: "McKinnon",            href: "/painter-mckinnon/" },
+  { name: "Mentone",             href: "/painter-mentone/" },
+  { name: "Moorabbin",           href: "/painter-moorabbin/" },
+  { name: "Mordialloc",          href: "/painter-mordialloc/" },
+  { name: "Mornington Peninsula", href: "/painter-mornington-peninsula/" },
+  { name: "Murrumbeena",         href: "/painter-murrumbeena/" },
+  { name: "Ormond",              href: "/painter-ormond/" },
+  { name: "Parkdale",            href: "/painter-parkdale/" },
+  { name: "Ringwood",            href: "/painter-ringwood/" },
+  { name: "Sandringham",         href: "/painter-sandringham/" },
+  { name: "Stonnington",         href: "/painter-stonnington/" },
+  { name: "Templestowe",         href: "/painter-templestowe/" },
+  { name: "Toorak",              href: "/painter-toorak/" },
+  { name: "Wheelers Hill",       href: "/painter-wheelers-hill/" },
+];
 
+export default function Footer() {
   return (
     <footer className="bg-[#080808] border-t border-white/5">
       <div className="container py-14">
@@ -37,16 +73,17 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-2.5">
               {[
-                { label: "Home", href: "#home" },
-                { label: "Services", href: "#services" },
-                { label: "Our Work", href: "#gallery" },
-                { label: "About", href: "#about" },
-                { label: "Contact", href: "#contact" },
+                { label: "Home",     href: "/" },
+                { label: "Services", href: "/#services" },
+                { label: "Our Work", href: "/#gallery" },
+                { label: "About",    href: "/#about" },
+                { label: "Contact",  href: "/#contact" },
+                { label: "Blog",     href: "/blog/" },
+                { label: "FAQ",      href: "/faq/" },
               ].map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
                   className="text-white/50 hover:text-[#00AACC] transition-colors text-sm"
                 >
                   {link.label}
@@ -88,8 +125,29 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Service Areas */}
+        <div className="mt-10 pt-10 border-t border-white/5">
+          <h4
+            className="text-white font-semibold mb-5 text-sm uppercase tracking-wider"
+            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+          >
+            Service Areas
+          </h4>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-4 gap-y-2">
+            {SERVICE_AREAS.map((s) => (
+              <a
+                key={s.href}
+                href={s.href}
+                className="text-white/40 hover:text-[#00AACC] transition-colors text-xs"
+              >
+                {s.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/60 text-xs">
             &copy; {new Date().getFullYear()} Jetblack Painting. All rights reserved. ABN 50 548 669 474.
           </p>

@@ -3,9 +3,7 @@
  * Hero: Full-viewport dark section with generated hero background,
  * bold headline, subtext, and dual CTAs.
  */
-import { motion } from "framer-motion";
-import { ArrowDown, Phone, ChevronRight } from "lucide-react";
-import HERO_BG from "@/assets/images/hero-background.jpg";
+import { Phone, ChevronRight, ArrowDown } from "lucide-react";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -15,14 +13,14 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image — preloaded in index.html for fast LCP */}
       <div className="absolute inset-0">
         <img
-          src={HERO_BG}
+          src="/hero-background.jpg"
           alt="Professional house painter at work"
           className="w-full h-full object-cover object-center"
           fetchPriority="high"
-          decoding="async"
+          decoding="sync"
           width={1400}
           height={933}
         />
@@ -34,47 +32,32 @@ export default function Hero() {
       <div className="container relative z-10 pt-28 pb-20">
         <div className="max-w-2xl">
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[#007A99]/10 border border-[#00AACC]/25 rounded-full px-4 py-1.5 mb-6"
-          >
+          <div className="hero-fade-in inline-flex items-center gap-2 bg-[#007A99]/10 border border-[#00AACC]/25 rounded-full px-4 py-1.5 mb-6" style={{ animationDelay: "0.1s" }}>
             <span className="w-2 h-2 rounded-full bg-[#007A99] animate-pulse" />
             <span className="text-[#00AACC] text-sm font-medium tracking-wide">
               Melbourne's Trusted Painting Specialists
             </span>
-          </motion.div>
+          </div>
 
           {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
-            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+          <h1
+            className="hero-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
+            style={{ fontFamily: "'Outfit', system-ui, sans-serif", animationDelay: "0.25s" }}
           >
             Professional House Painting in Melbourne{" "}
             <span className="text-[#00AACC]">Done Right</span>
-          </motion.h1>
+          </h1>
 
           {/* Subtext */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
+          <p
+            className="hero-fade-in text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
+            style={{ animationDelay: "0.4s" }}
           >
             Melbourne's #1 rated house painters. Interior, exterior & commercial painting specialists. Serving Keysborough, Bayside, Mornington Peninsula & all Melbourne suburbs. 5-star rated. Fully licensed & insured.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
+          <div className="hero-fade-in flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.55s" }}>
             <a
               href="tel:0432077782"
               className="flex items-center justify-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-base transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5"
@@ -89,15 +72,10 @@ export default function Hero() {
               View Our Work
               <ChevronRight className="w-5 h-5" />
             </button>
-          </motion.div>
+          </div>
 
           {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 1.0 }}
-            className="flex gap-8 sm:gap-12 mt-14 pt-8 border-t border-white/10"
-          >
+          <div className="hero-fade-in flex gap-8 sm:gap-12 mt-14 pt-8 border-t border-white/10" style={{ animationDelay: "0.7s" }}>
             {[
               { value: "13+", label: "Years Experience" },
               { value: "5.0★", label: "Google Rating" },
@@ -110,30 +88,20 @@ export default function Hero() {
                 <div className="text-white/50 text-sm mt-1">{stat.label}</div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
+      <div className="hero-fade-in absolute bottom-8 left-1/2 -translate-x-1/2 z-10" style={{ animationDelay: "1s" }}>
         <button
           onClick={() => scrollToSection("#services")}
           className="text-white/40 hover:text-[#00AACC] transition-colors"
           aria-label="Scroll down"
         >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <ArrowDown className="w-6 h-6" />
-          </motion.div>
+          <ArrowDown className="w-6 h-6 animate-bounce" />
         </button>
-      </motion.div>
+      </div>
     </section>
   );
 }

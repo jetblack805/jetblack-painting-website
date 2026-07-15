@@ -73,6 +73,7 @@ export default {
 
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.slice(4);
+      url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
 

@@ -184,6 +184,7 @@ export default function Gallery() {
       >
         <button
           onClick={() => setLightbox(null)}
+          aria-label="Close"
           className="absolute top-6 right-6 text-white/70 hover:text-white z-50"
         >
           <X className="w-8 h-8" />

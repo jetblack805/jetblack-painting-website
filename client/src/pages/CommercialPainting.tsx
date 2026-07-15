@@ -6,10 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-commercial-comfortel-building.jpeg";
-import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.jpeg";
-import imgComfortelFront from "@/assets/images/gallery-commercial-comfortel-front.jpeg";
-import imgIndustrialLift from "@/assets/images/gallery-commercial-industrial-lift.jpeg";
+import imgService from "@/assets/images/gallery-commercial-comfortel-building.webp";
+import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.webp";
+import imgComfortelFront from "@/assets/images/gallery-commercial-comfortel-front.webp";
+import imgIndustrialLift from "@/assets/images/gallery-commercial-industrial-lift.webp";
 
 export default function CommercialPainting() {
   const services = [

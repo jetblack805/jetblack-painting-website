@@ -6,10 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-roof-charcoal-tiles.jpeg";
-import imgMetalRoof from "@/assets/images/gallery-roof-metal-colorbond.jpeg";
-import imgRoofCleaning from "@/assets/images/gallery-roof-cleaning.jpeg";
-import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.jpeg";
+import imgService from "@/assets/images/gallery-roof-charcoal-tiles.webp";
+import imgMetalRoof from "@/assets/images/gallery-roof-metal-colorbond.webp";
+import imgRoofCleaning from "@/assets/images/gallery-roof-cleaning.webp";
+import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.webp";
 
 export default function RoofPainting() {
   const benefits = [

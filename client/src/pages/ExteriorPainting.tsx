@@ -6,7 +6,7 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
+import imgService from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
 
 export default function ExteriorPainting() {
   const benefits = [

@@ -6,14 +6,14 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgHallway from "@/assets/images/service-interior-painting.jpeg";
-import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.jpeg";
-import imgKitchenTimber from "@/assets/images/gallery-interior-kitchen-timber.jpeg";
-import imgLounge from "@/assets/images/gallery-interior-lounge.jpeg";
-import imgStaircase from "@/assets/images/gallery-interior-staircase.jpeg";
-import imgStagedLiving from "@/assets/images/gallery-interior-staged-living.jpeg";
-import imgOpenLiving from "@/assets/images/gallery-interior-open-living.jpeg";
-import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.jpeg";
+import imgHallway from "@/assets/images/service-interior-painting.webp";
+import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.webp";
+import imgKitchenTimber from "@/assets/images/gallery-interior-kitchen-timber.webp";
+import imgLounge from "@/assets/images/gallery-interior-lounge.webp";
+import imgStaircase from "@/assets/images/gallery-interior-staircase.webp";
+import imgStagedLiving from "@/assets/images/gallery-interior-staged-living.webp";
+import imgOpenLiving from "@/assets/images/gallery-interior-open-living.webp";
+import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.webp";
 
 export default function InteriorPainting() {
   const benefits = [

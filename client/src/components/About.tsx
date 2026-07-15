@@ -1,7 +1,7 @@
 import { Shield, Clock, Award, Users } from "lucide-react";
 import { useInView } from "@/lib/useInView";
-import ABOUT_IMG from "@/assets/images/about-team-at-work.jpeg";
-import TEAM_IMG from "@/assets/images/about-branded-workwear.jpeg";
+import ABOUT_IMG from "@/assets/images/about-team-at-work.webp";
+import TEAM_IMG from "@/assets/images/about-branded-workwear.webp";
 
 const values = [
   {

@@ -5,12 +5,12 @@
 import { Home, Building2, Paintbrush, Fence, Key, Building } from "lucide-react";
 import { Link } from "wouter";
 import { useInView } from "@/lib/useInView";
-import imgInteriorPainting from "@/assets/images/service-interior-painting.jpeg";
-import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
-import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building.jpeg";
-import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.jpeg";
-import imgOpenPlanLiving from "@/assets/images/gallery-interior-staged-living.jpeg";
-import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.jpeg";
+import imgInteriorPainting from "@/assets/images/service-interior-painting.webp";
+import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
+import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building.webp";
+import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.webp";
+import imgOpenPlanLiving from "@/assets/images/gallery-interior-staged-living.webp";
+import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.webp";
 
 const services = [
   {

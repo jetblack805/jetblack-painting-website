@@ -4,7 +4,26 @@
 const PATH_REDIRECTS = {
   // Consolidated service pages
   "/services/pre-sale-property-painting": "/services/real-estate-painting/",
-  "/services/rental-property-painting": "/services/real-estate-painting/",
+  "/services/rental-property-painting":   "/services/real-estate-painting/",
+
+  // Legacy short-form service URLs → canonical /services/ paths
+  "/interior-painting":           "/services/interior-painting/",
+  "/kitchen-cabinet-resurfacing": "/services/kitchen-cabinet-resurfacing/",
+
+  // Ghost blog routes (duplicate suburb/service content) → canonical pages
+  "/blog/toorak-painting-guide":        "/painter-toorak/",
+  "/blog/brighton-painters-guide":      "/painter-brighton/",
+  "/blog/camberwell-painters-guide":    "/painter-camberwell/",
+  "/blog/glen-waverley-painting-guide": "/painter-glen-waverley/",
+  "/blog/hawthorn-painting-services":   "/painter-hawthorn/",
+  "/blog/commercial-vs-residential":    "/services/commercial-painting/",
+  "/blog/exterior-paint-protection":    "/services/exterior-painting/",
+  "/blog/exterior-painting-preparation":"/blog/prepare-home-for-painting/",
+  "/blog/how-to-choose-painter":        "/blog/prepare-home-for-painting/",
+  "/blog/interior-painting-cost-guide": "/blog/house-painting-cost-melbourne/",
+  "/blog/paint-color-trends-2024":      "/blog/best-paint-colours-melbourne-2025/",
+  "/blog/seasonal-painting-guide":      "/blog/prepare-home-for-painting/",
+  "/blog/best-paint-colors-melbourne":  "/blog/best-paint-colours-melbourne-2025/",
 
   // Plural suburb aliases → canonical singular URLs
   "/painters-toorak":               "/painter-toorak/",
@@ -17,6 +36,7 @@ const PATH_REDIRECTS = {
   "/painters-hampton":              "/painter-hampton/",
   "/painters-mordialloc":           "/painter-mordialloc/",
   "/painters-keysborough":          "/keysborough-painters/",
+  "/painter-keysborough":           "/keysborough-painters/",
   "/painters-kew":                  "/painter-kew/",
   "/painters-sandringham":          "/painter-sandringham/",
   "/painters-mentone":              "/painter-mentone/",

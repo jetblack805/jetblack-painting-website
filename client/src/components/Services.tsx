@@ -2,9 +2,9 @@
  * Design: Bold Contrast — Services section on light background
  * Card-based layout with real project photos and hover interactions
  */
-import { motion } from "framer-motion";
 import { Home, Building2, Paintbrush, Fence, Key, Building } from "lucide-react";
 import { Link } from "wouter";
+import { useInView } from "@/lib/useInView";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.jpeg";
 import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.jpeg";
 import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building.jpeg";
@@ -57,29 +57,16 @@ const services = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
-};
-
 export default function Services() {
+  const header = useInView("-100px");
+
   return (
     <section id="services" className="py-24 bg-[#F5F5F0]">
       <div className="container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-16"
+        <div
+          ref={header.ref}
+          className={`reveal up max-w-2xl mb-16 ${header.visible ? "visible" : ""}`}
         >
           <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Professional Painting Services
@@ -94,54 +81,62 @@ export default function Services() {
             From residential repaints to large-scale commercial projects, Jetblack Painting
             delivers professional results across all aspects of painting in Melbourne.
           </p>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {services.map((service) => (
-            <Link key={service.title} href={service.link}>
-              <motion.div
-                variants={cardVariants}
-                className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full"
-              >
-                {/* Image */}
-                <div className="relative h-52 overflow-hidden">
-                  <img loading="lazy" decoding="async"
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <div className="w-10 h-10 rounded bg-[#007A99] flex items-center justify-center">
-                      <service.icon className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <h3
-                    className="text-xl font-bold text-[#0D0D0D] mb-3 group-hover:text-[#007A99] transition-colors"
-                    style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
-                  >
-                    {service.title}
-                  </h3>
-                  <p className="text-[#666] text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </motion.div>
-            </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, idx) => (
+            <ServiceCard key={service.title} service={service} delay={idx * 0.1} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
+  );
+}
+
+function ServiceCard({
+  service,
+  delay,
+}: {
+  service: (typeof services)[number];
+  delay: number;
+}) {
+  const { ref, visible } = useInView("-50px");
+  return (
+    <Link href={service.link}>
+      <div
+        ref={ref}
+        className={`reveal up group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full ${visible ? "visible" : ""}`}
+        style={{ transitionDelay: visible ? `${delay}s` : "0s" }}
+      >
+        {/* Image */}
+        <div className="relative h-52 overflow-hidden">
+          <img loading="lazy" decoding="async"
+            src={service.image}
+            alt={service.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 to-transparent" />
+          <div className="absolute bottom-4 left-4">
+            <div className="w-10 h-10 rounded bg-[#007A99] flex items-center justify-center">
+              <service.icon className="w-5 h-5 text-white" />
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <h3
+            className="text-xl font-bold text-[#0D0D0D] mb-3 group-hover:text-[#007A99] transition-colors"
+            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+          >
+            {service.title}
+          </h3>
+          <p className="text-[#666] text-sm leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+      </div>
+    </Link>
   );
 }

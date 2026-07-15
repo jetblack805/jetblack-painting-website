@@ -2,8 +2,8 @@
  * Design: Bold Contrast — Contact section on light background
  * Contact info + call-to-action
  */
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram } from "lucide-react";
+import { useInView } from "@/lib/useInView";
 
 const contactInfo = [
   {
@@ -33,16 +33,17 @@ const contactInfo = [
 ];
 
 export default function Contact() {
+  const left = useInView("-100px");
+  const right = useInView("-100px");
+
   return (
     <section id="contact" className="py-24 bg-[#F5F5F0]">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left: Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
+          <div
+            ref={left.ref}
+            className={`reveal left ${left.visible ? "visible" : ""}`}
           >
             <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
               Get In Touch
@@ -85,15 +86,12 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right: CTA Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center"
+          <div
+            ref={right.ref}
+            className={`reveal right flex items-center ${right.visible ? "visible" : ""}`}
           >
             <div className="w-full bg-[#0D0D0D] rounded-xl p-8 sm:p-10 relative overflow-hidden">
               {/* Decorative accent */}
@@ -151,7 +149,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

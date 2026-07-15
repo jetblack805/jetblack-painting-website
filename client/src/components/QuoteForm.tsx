@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { useInView } from "@/lib/useInView";
 import { toast } from "sonner";
 
 // Validation schema
@@ -90,15 +90,13 @@ export default function QuoteForm() {
     }
   };
 
+  const wrapper = useInView("-100px");
   return (
     <section id="quote" className="py-20 bg-white">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+        <div
+          ref={wrapper.ref}
+          className={`reveal up max-w-4xl mx-auto ${wrapper.visible ? "visible" : ""}`}
         >
           <div className="text-center mb-12">
             <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
@@ -271,49 +269,31 @@ export default function QuoteForm() {
 
           {/* Trust Indicators */}
           <div className="grid grid-cols-3 gap-6 mt-12">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-center"
-            >
+            <div className="text-center">
               <div className="flex justify-center mb-3">
                 <Phone className="w-8 h-8 text-[#007A99]" />
               </div>
               <p className="text-[#0D0D0D] font-semibold">24-Hour Response</p>
               <p className="text-[#999] text-sm">We'll call you within 24 hours</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-center"
-            >
+            <div className="text-center">
               <div className="flex justify-center mb-3">
                 <Mail className="w-8 h-8 text-[#007A99]" />
               </div>
               <p className="text-[#0D0D0D] font-semibold">No Obligation</p>
               <p className="text-[#999] text-sm">Free quote with no hidden costs</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="text-center"
-            >
+            <div className="text-center">
               <div className="flex justify-center mb-3">
                 <MapPin className="w-8 h-8 text-[#007A99]" />
               </div>
               <p className="text-[#0D0D0D] font-semibold">Local Experts</p>
               <p className="text-[#999] text-sm">Serving all Melbourne suburbs</p>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

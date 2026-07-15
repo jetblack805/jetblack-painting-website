@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useInView } from "@/lib/useInView";
 
 const faqs = [
   {
@@ -23,17 +23,15 @@ const faqs = [
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const header = useInView("-100px");
 
   return (
     <section id="faq" className="py-24 bg-white">
       <div className="container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-16"
+        <div
+          ref={header.ref}
+          className={`reveal up max-w-2xl mb-16 ${header.visible ? "visible" : ""}`}
         >
           <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Questions & Answers
@@ -47,52 +45,24 @@ export default function FAQSection() {
           <p className="text-[#555] text-lg leading-relaxed">
             Find answers to common questions about our professional house painting services in Melbourne.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-3xl">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <FAQItem
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="border border-gray-200 rounded-lg overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-[#F5F5F0] transition-colors"
-                >
-                  <h3 className="text-lg font-semibold text-[#0D0D0D] text-left">
-                    {faq.question}
-                  </h3>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#00AACC] transition-transform flex-shrink-0 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 py-4 bg-[#F5F5F0] border-t border-gray-200"
-                  >
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </motion.div>
+                faq={faq}
+                isOpen={openIndex === index}
+                onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+                delay={index * 0.05}
+              />
             ))}
           </div>
-          
+
           <div className="mt-12">
-            <a 
-              href="/faq" 
+            <a
+              href="/faq"
               className="text-[#007A99] font-semibold hover:underline flex items-center gap-2"
             >
               View all FAQs
@@ -102,5 +72,47 @@ export default function FAQSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function FAQItem({
+  faq,
+  isOpen,
+  onToggle,
+  delay,
+}: {
+  faq: { question: string; answer: string };
+  isOpen: boolean;
+  onToggle: () => void;
+  delay: number;
+}) {
+  const { ref, visible } = useInView();
+  return (
+    <div
+      ref={ref}
+      className={`reveal up border border-gray-200 rounded-lg overflow-hidden ${visible ? "visible" : ""}`}
+      style={{ transitionDelay: visible ? `${delay}s` : "0s" }}
+    >
+      <button
+        onClick={onToggle}
+        className="w-full px-6 py-4 flex items-center justify-between hover:bg-[#F5F5F0] transition-colors"
+      >
+        <h3 className="text-lg font-semibold text-[#0D0D0D] text-left">
+          {faq.question}
+        </h3>
+        <ChevronDown
+          className={`w-5 h-5 text-[#00AACC] transition-transform flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96" : "max-h-0"}`}
+      >
+        <div className="px-6 py-4 bg-[#F5F5F0] border-t border-gray-200">
+          <p className="text-gray-700 leading-relaxed">
+            {faq.answer}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }

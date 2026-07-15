@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Star, Phone, MapPin, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import SEOHead from "./SEOHead";
@@ -244,7 +243,7 @@ export default function SuburbPageTemplate({
 
       <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <div>
             <p className="text-[#00AACC] font-semibold uppercase tracking-wide mb-3">
               Local {suburb} Painting Contractor
             </p>
@@ -269,7 +268,7 @@ export default function SuburbPageTemplate({
                 <span>Serving {suburb} and nearby Melbourne suburbs</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -301,7 +300,7 @@ export default function SuburbPageTemplate({
       <section className="py-16">
         <div className="container max-w-4xl">
           {localContent.length > 0 && (
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12">
+            <div className="mb-12">
               {localContent.map((block) => (
                 <div key={block.heading} className="mb-10">
                   <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">{block.heading}</h2>
@@ -312,10 +311,10 @@ export default function SuburbPageTemplate({
                   ))}
                 </div>
               ))}
-            </motion.div>
+            </div>
           )}
 
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mb-12">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Interior Painting {suburb}</h2>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               Transform your {suburb} home with professional interior painting by Jetblack Painting. We specialise in premium finishes for living rooms, bedrooms, kitchens, bathrooms, ceilings, trims and doors using proven paint systems from leading Australian brands.
@@ -326,9 +325,9 @@ export default function SuburbPageTemplate({
             <Link href="/services/interior-painting" className="text-[#007A99] font-semibold hover:underline">
               Learn more about our interior painting services →
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Exterior Painting {suburb}</h2>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               Protect and lift your {suburb} property with exterior painting built around proper washing, sanding, filling, priming and weather-resistant topcoats. We understand {propertyTypes}
@@ -339,9 +338,9 @@ export default function SuburbPageTemplate({
             <Link href="/services/exterior-painting" className="text-[#007A99] font-semibold hover:underline">
               Learn more about our exterior painting services →
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Why {suburb} Chooses Jetblack Painting</h2>
             <div className="space-y-4 mb-6">
               {[
@@ -363,11 +362,11 @@ export default function SuburbPageTemplate({
             <div className="bg-[#F5F5F0] p-6 rounded-lg">
               <p className="text-gray-700">{localExpertise}</p>
             </div>
-          </motion.div>
+          </div>
 
           <MidPageCTA heading={`Get your free ${suburb} painting quote today`} />
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Painting Services in {suburb}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {coreServices.map((service) => (
@@ -377,9 +376,9 @@ export default function SuburbPageTemplate({
                 </Link>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Our Painting Work</h2>
             <p className="text-gray-700 mb-6">
               A selection of recent interior, exterior and commercial painting projects completed by Jetblack Painting across Melbourne.
@@ -404,9 +403,9 @@ export default function SuburbPageTemplate({
                 loading="lazy"
               />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+          <div className="mb-12">
             <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Rated 5 Stars by Melbourne Customers</h2>
             <div className="bg-[#F5F5F0] p-6 rounded-lg flex flex-col sm:flex-row items-center gap-4 justify-between">
               <div>
@@ -428,10 +427,10 @@ export default function SuburbPageTemplate({
                 Read our Google reviews
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {faqs.length > 0 && (
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <div className="mb-12">
               <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Find Us on Google Maps - {suburb} Painters</h2>
               <p className="text-gray-700 mb-6 leading-relaxed">
                 Based in Mordialloc, Melbourne, Jetblack Painting services {suburb} and all surrounding suburbs. Find us on Google Maps or call for immediate assistance.
@@ -479,11 +478,11 @@ export default function SuburbPageTemplate({
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {faqs.length > 0 && (
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12">
+            <div className="mb-12">
               <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Frequently Asked Questions about Painting in {suburb}</h2>
               <div className="space-y-6">
                 {faqs.map((faq) => (
@@ -493,11 +492,11 @@ export default function SuburbPageTemplate({
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
 
           {validNeighbouringSuburbs.length > 0 && (
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 bg-gray-50 p-8 rounded-lg">
+            <div className="mb-12 bg-gray-50 p-8 rounded-lg">
               <h2 className="text-2xl font-bold text-[#0D0D0D] mb-4">Painters Near {suburb}</h2>
               <p className="text-gray-700 mb-5">
                 We also service these nearby suburbs — if you're close to {suburb}, we've got you covered too.
@@ -509,10 +508,10 @@ export default function SuburbPageTemplate({
                   </Link>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
 
-          <motion.div id="quote" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center">
+          <div id="quote" className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center">
             <h2 className="text-3xl font-bold mb-4">Get Your Free {suburb} Painting Quote</h2>
             <p className="text-xl mb-6 text-gray-300">
               Contact Jetblack Painting for a free, no-obligation quote on your {suburb} painting project. Call now and speak directly with Jimmy.
@@ -521,7 +520,7 @@ export default function SuburbPageTemplate({
               <Phone className="w-5 h-5" />
               Call 0432 077 782
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
       <Footer />

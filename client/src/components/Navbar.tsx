@@ -5,7 +5,6 @@
  */
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
 import LOGO_URL from "@/assets/images/logo.jpg";
 
@@ -145,15 +144,11 @@ export default function Navbar() {
               />
             </button>
 
-            <AnimatePresence>
-              {areasOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 8 }}
-                  transition={{ duration: 0.18 }}
-                  className="absolute right-0 top-full mt-3 w-[560px] bg-[oklch(0.12_0.005_285/0.98)] border border-white/10 rounded-lg shadow-2xl shadow-black/40 backdrop-blur-md overflow-hidden"
-                >
+            <div
+              className={`absolute right-0 top-full mt-3 w-[560px] bg-[oklch(0.12_0.005_285/0.98)] border border-white/10 rounded-lg shadow-2xl shadow-black/40 backdrop-blur-md overflow-hidden transition-all duration-200 origin-top ${
+                areasOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
+              }`}
+            >
                   <div className="px-5 py-4 border-b border-white/10">
                     <p className="text-white/40 text-xs uppercase tracking-widest">Melbourne suburbs we serve</p>
                   </div>
@@ -169,9 +164,7 @@ export default function Navbar() {
                       </a>
                     ))}
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            </div>
           </div>
 
           <a
@@ -194,15 +187,11 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[oklch(0.12_0.005_285/0.98)] backdrop-blur-md border-t border-white/10 overflow-hidden"
-          >
+      <div
+        className={`lg:hidden bg-[oklch(0.12_0.005_285/0.98)] backdrop-blur-md border-t border-white/10 overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-[100vh] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
             <div className="container py-6 flex flex-col gap-4">
               {NAV_LINKS.map((link) => (
                 <a
@@ -226,15 +215,11 @@ export default function Navbar() {
                 />
               </button>
 
-              <AnimatePresence>
-                {mobileAreas && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="overflow-hidden -mt-2"
-                  >
+              <div
+                className={`overflow-hidden -mt-2 transition-all duration-200 ${
+                  mobileAreas ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
                     <div className="grid grid-cols-2 gap-1 pt-2 pl-2 border-l border-white/10">
                       {SUBURBS.map((s) => (
                         <a
@@ -247,9 +232,7 @@ export default function Navbar() {
                         </a>
                       ))}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              </div>
 
               <a
                 href="tel:0432077782"
@@ -259,9 +242,7 @@ export default function Navbar() {
                 Call Now
               </a>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      </div>
     </nav>
   );
 }

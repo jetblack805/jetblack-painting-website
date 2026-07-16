@@ -1,7 +1,7 @@
 import { Shield, Clock, Award, Users } from "lucide-react";
 import { useInView } from "@/lib/useInView";
 import ABOUT_IMG from "@/assets/images/about-team-at-work.webp";
-import TEAM_IMG from "@/assets/images/about-branded-workwear.webp";
+import TEAM_IMG from "@/assets/images/about-jimmy-owner.webp";
 
 const values = [
   {
@@ -42,7 +42,7 @@ export default function About() {
             <div className="relative">
               <img loading="lazy" decoding="async"
                 src={TEAM_IMG}
-                alt="Jimmy Demirci — owner of Jetblack Painting Melbourne"
+                alt="Jimmy Demirci, owner of Jetblack Painting, on the job in Melbourne"
                 className="w-full rounded-lg shadow-2xl"
               />
               <div className="absolute -bottom-8 -right-4 lg:-right-8 w-40 sm:w-52 rounded-lg overflow-hidden shadow-xl border-4 border-[#0D0D0D]">

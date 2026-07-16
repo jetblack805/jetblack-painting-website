@@ -39,6 +39,7 @@ const SERVICE_AREAS = [
   { name: "Parkdale",            href: "/painter-parkdale/" },
   { name: "Ringwood",            href: "/painter-ringwood/" },
   { name: "Sandringham",         href: "/painter-sandringham/" },
+  { name: "South Yarra",         href: "/painter-south-yarra/" },
   { name: "Stonnington",         href: "/painter-stonnington/" },
   { name: "Templestowe",         href: "/painter-templestowe/" },
   { name: "Toorak",              href: "/painter-toorak/" },

@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="container relative z-10 pt-28 pb-20">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="hero-fade-in inline-flex items-center gap-2 bg-[#007A99]/10 border border-[#00AACC]/25 rounded-full px-4 py-1.5 mb-6" style={{ animationDelay: "0.1s" }}>
+          <div className="hero-fade-in inline-flex items-center gap-2 border border-[#00AACC]/40 rounded-full px-4 py-1.5 mb-6" style={{ animationDelay: "0.1s" }}>
             <span className="w-2 h-2 rounded-full bg-[#007A99] animate-pulse" />
             <span className="text-[#00AACC] text-sm font-medium tracking-wide">
               Melbourne's Trusted Painting Specialists

@@ -249,7 +249,7 @@ function vitePluginDeferCSS(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), vitePluginCopyStaticFiles(), vitePluginManusDebugCollector()];
+const plugins = [react(), tailwindcss(), vitePluginCopyStaticFiles(), vitePluginManusDebugCollector(), vitePluginDeferCSS()];
 
 export default defineConfig({
   plugins,

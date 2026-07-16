@@ -13,20 +13,9 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background — CSS background-image so this div is not an LCP candidate;
-          the static hero <img> in index.html owns LCP and stays in DOM.
-          On mobile (<= 640px) use the smaller 640w variant to save ~150KB. */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${window.innerWidth <= 640 ? '/hero-background-640.webp' : '/hero-background.webp'})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/95 via-[#0a0a0a]/80 to-[#0a0a0a]/40" />
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
-      </div>
+      {/* No background here — the fixed <picture> in index.html (#hero-static) provides
+          the background image and gradients. Keeping this div absent means Chrome never
+          covers the static <img> and it remains the LCP element (preloaded, ~29KB). */}
 
       {/* Content */}
       <div className="container relative z-10 pt-28 pb-20">
@@ -39,10 +28,10 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Headline — no fade-in so it paints immediately and is measured as LCP */}
+          {/* Headline — fade-in is fine now; the static <img> owns LCP, not this h1 */}
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
-            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+            className="hero-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
+            style={{ fontFamily: "'Outfit', system-ui, sans-serif", animationDelay: "0.25s" }}
           >
             Professional House Painting in Melbourne{" "}
             <span className="text-[#00AACC]">Done Right</span>

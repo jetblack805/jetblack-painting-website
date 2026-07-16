@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -6,11 +7,12 @@ import PremiumServices from "@/components/PremiumServices";
 import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import About from "@/components/About";
-import QuoteForm from "@/components/QuoteForm";
 import GoogleMap from "@/components/GoogleMap";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
 export default function Home() {
   return (
@@ -41,7 +43,9 @@ export default function Home() {
       <Gallery />
       <Reviews />
       <About />
-      <QuoteForm />
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm />
+      </Suspense>
       <GoogleMap />
       <Contact />
       </main>

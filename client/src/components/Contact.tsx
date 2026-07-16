@@ -69,7 +69,7 @@ export default function Contact() {
                     <item.icon className="w-5 h-5 text-[#00AACC]" />
                   </div>
                   <div>
-                    <div className="text-[#999] text-xs uppercase tracking-wider mb-0.5">{item.label}</div>
+                    <div className="text-[#666] text-xs uppercase tracking-wider mb-0.5">{item.label}</div>
                     {item.href ? (
                       <a
                         href={item.href}

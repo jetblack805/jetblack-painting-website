@@ -122,7 +122,7 @@ export default function QuoteForm() {
                   placeholder="John Doe"
                   id="quote-name"
                   {...register("name")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -139,7 +139,7 @@ export default function QuoteForm() {
                   placeholder="john@example.com"
                   id="quote-email"
                   {...register("email")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -156,7 +156,7 @@ export default function QuoteForm() {
                   placeholder="0432 077 782"
                   id="quote-phone"
                   {...register("phone")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -231,7 +231,7 @@ export default function QuoteForm() {
                   placeholder="e.g., $5,000 - $10,000"
                   id="quote-budget"
                   {...register("budget")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
                 />
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function QuoteForm() {
                 rows={5}
                 id="quote-description"
                 {...register("projectDescription")}
-                className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#999] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition resize-none"
               />
               {errors.projectDescription && (
                 <p className="text-red-500 text-sm mt-1">{errors.projectDescription.message}</p>
@@ -262,7 +262,7 @@ export default function QuoteForm() {
               {isSubmitting ? "Submitting..." : "Request Free Quote"}
             </button>
 
-            <p className="text-center text-[#999] text-sm mt-4">
+            <p className="text-center text-[#666] text-sm mt-4">
               We respect your privacy. Your information will only be used to provide your quote.
             </p>
           </form>
@@ -274,7 +274,7 @@ export default function QuoteForm() {
                 <Phone className="w-8 h-8 text-[#007A99]" />
               </div>
               <p className="text-[#0D0D0D] font-semibold">24-Hour Response</p>
-              <p className="text-[#999] text-sm">We'll call you within 24 hours</p>
+              <p className="text-[#666] text-sm">We'll call you within 24 hours</p>
             </div>
 
             <div className="text-center">
@@ -282,7 +282,7 @@ export default function QuoteForm() {
                 <Mail className="w-8 h-8 text-[#007A99]" />
               </div>
               <p className="text-[#0D0D0D] font-semibold">No Obligation</p>
-              <p className="text-[#999] text-sm">Free quote with no hidden costs</p>
+              <p className="text-[#666] text-sm">Free quote with no hidden costs</p>
             </div>
 
             <div className="text-center">
@@ -290,7 +290,7 @@ export default function QuoteForm() {
                 <MapPin className="w-8 h-8 text-[#007A99]" />
               </div>
               <p className="text-[#0D0D0D] font-semibold">Local Experts</p>
-              <p className="text-[#999] text-sm">Serving all Melbourne suburbs</p>
+              <p className="text-[#666] text-sm">Serving all Melbourne suburbs</p>
             </div>
           </div>
         </div>

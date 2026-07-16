@@ -81,7 +81,7 @@ export default function PremiumServices() {
           <p className="text-xl text-[#666] mb-2">
             Interior, Exterior, Commercial, Roof &amp; Cabinet Painting Services
           </p>
-          <p className="text-lg text-[#999]">
+          <p className="text-lg text-[#666]">
             Wherever you are in Melbourne, Jetblack Painting has a local team that knows your area — from beachside weatherboards to heritage brick homes.
           </p>
         </div>

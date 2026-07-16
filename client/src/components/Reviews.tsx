@@ -138,10 +138,10 @@ export default function Reviews() {
                         </div>
                         <div>
                           <div className="text-[#0D0D0D] font-semibold text-sm">{review.name}</div>
-                          <div className="text-[#999] text-xs">{review.date}</div>
+                          <div className="text-[#666] text-xs">{review.date}</div>
                         </div>
                       </div>
-                      <span className="text-xs text-[#999] bg-gray-50 px-2 py-1 rounded">
+                      <span className="text-xs text-[#666] bg-gray-50 px-2 py-1 rounded">
                         {review.source}
                       </span>
                     </div>

@@ -167,6 +167,83 @@ export const SUBURBS_DATA = {
     postcode: "3185",
     description: "Affluent inner-southeast suburb with Victorian terraces, Art Deco apartments and period homes",
     areasServed: ["Elsternwick", "Ripponlea", "Gardenvale"]
+  },
+  beaumaris: {
+    name: "Beaumaris",
+    coordinates: { lat: -37.9874, lng: 145.0098 },
+    postcode: "3193",
+    description: "Prestigious bayside suburb known for mid-century architect-designed homes on generous blocks",
+    areasServed: ["Beaumaris", "Black Rock South"]
+  },
+  blackrock: {
+    name: "Black Rock",
+    coordinates: { lat: -37.9697, lng: 145.0201 },
+    postcode: "3193",
+    description: "Exclusive bayside suburb with prestige homes and direct foreshore access",
+    areasServed: ["Black Rock", "Beaumaris North"]
+  },
+  brightoneast: {
+    name: "Brighton East",
+    coordinates: { lat: -37.9127, lng: 145.0397 },
+    postcode: "3187",
+    description: "Prestigious inner-south-east suburb with large family homes on generous blocks",
+    areasServed: ["Brighton East", "Gardenvale"]
+  },
+  highett: {
+    name: "Highett",
+    coordinates: { lat: -37.9601, lng: 145.0397 },
+    postcode: "3190",
+    description: "Well-connected Bayside suburb with post-war brick homes and growing townhouse development",
+    areasServed: ["Highett", "Moorabbin East"]
+  },
+  heatherton: {
+    name: "Heatherton",
+    coordinates: { lat: -37.9501, lng: 145.0697 },
+    postcode: "3202",
+    description: "Quiet residential suburb in Kingston council with post-war brick homes",
+    areasServed: ["Heatherton", "Clayton South"]
+  },
+  edithvale: {
+    name: "Edithvale",
+    coordinates: { lat: -38.0400, lng: 145.1001 },
+    postcode: "3196",
+    description: "Coastal suburb on Port Phillip Bay with wetlands and foreshore properties",
+    areasServed: ["Edithvale", "Chelsea Heights"]
+  },
+  bonbeach: {
+    name: "Bonbeach",
+    coordinates: { lat: -38.0651, lng: 145.1271 },
+    postcode: "3196",
+    description: "Small coastal suburb on Port Phillip Bay with beach houses and foreshore access",
+    areasServed: ["Bonbeach", "Edithvale South"]
+  },
+  carrum: {
+    name: "Carrum",
+    coordinates: { lat: -38.0771, lng: 145.1231 },
+    postcode: "3197",
+    description: "Coastal suburb at the mouth of Patterson River with waterway and bay access",
+    areasServed: ["Carrum", "Patterson Lakes"]
+  },
+  oakleigh: {
+    name: "Oakleigh",
+    coordinates: { lat: -37.8971, lng: 145.0900 },
+    postcode: "3166",
+    description: "Established Monash council suburb with post-war homes, townhouses and a vibrant retail strip",
+    areasServed: ["Oakleigh", "Huntingdale"]
+  },
+  clarinda: {
+    name: "Clarinda",
+    coordinates: { lat: -37.9481, lng: 145.0981 },
+    postcode: "3169",
+    description: "Quiet residential suburb in Kingston council with solid post-war brick housing stock",
+    areasServed: ["Clarinda", "Heatherton North"]
+  },
+  chadstone: {
+    name: "Chadstone",
+    coordinates: { lat: -37.8800, lng: 145.0800 },
+    postcode: "3148",
+    description: "Well-connected Monash council suburb with post-war brick homes and modern infill development",
+    areasServed: ["Chadstone", "Oakleigh North"]
   }
 };
 

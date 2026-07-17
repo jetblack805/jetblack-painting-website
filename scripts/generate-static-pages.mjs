@@ -375,6 +375,17 @@ const allSuburbPages = [
   { route: "/painter-chelsea", source: "ChelseaPainters.tsx" },
   { route: "/painter-south-yarra", source: "SouthYarraPainters.tsx" },
   { route: "/painter-elsternwick", source: "ElsternwickPainters.tsx" },
+  { route: "/painter-beaumaris", source: "BeaumarisPainters.tsx" },
+  { route: "/painter-black-rock", source: "BlackRockPainters.tsx" },
+  { route: "/painter-brighton-east", source: "BrightonEastPainters.tsx" },
+  { route: "/painter-highett", source: "HighettPainters.tsx" },
+  { route: "/painter-heatherton", source: "HeathertonPainters.tsx" },
+  { route: "/painter-edithvale", source: "EdithvalePainters.tsx" },
+  { route: "/painter-bonbeach", source: "BonbeachPainters.tsx" },
+  { route: "/painter-carrum", source: "CarrumPainters.tsx" },
+  { route: "/painter-oakleigh", source: "OakleighPainters.tsx" },
+  { route: "/painter-clarinda", source: "ClarindaPainters.tsx" },
+  { route: "/painter-chadstone", source: "ChadstonePainters.tsx" },
 ];
 
 for (const page of allSuburbPages) {

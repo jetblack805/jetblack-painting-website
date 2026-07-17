@@ -32,24 +32,24 @@ export default function SandringhamPainters() {
 
   const faqs = [
     {
-      question: `How do you protect Sandringham homes from the coastal environment?`,
-      answer: `In Sandringham, we use specialized coastal-grade paints and a multi-step preparation process. This includes thorough pressure washing to remove salt deposits, followed by premium flexible primers and weather-resistant topcoats designed for Bayside conditions.`
+      question: `Do you specialise in painting weatherboard beach cottages in Sandringham?`,
+      answer: `Yes — weatherboard cottages close to Sandringham Beach and the yacht club are a core part of what we do in the area. Coastal timber needs specific care: safe removal of old failing paint, bare-timber priming, careful filling of cracks and gaps, sharp caulking to lock out moisture, and a premium flexible topcoat rated for salt air and UV. Done right, the finish protects the timber and lasts years longer than a standard repaint. Every exterior job is backed by our 5-year written workmanship guarantee.`
     },
     {
-      question: `What experience do you have with weatherboard homes in Sandringham?`,
-      answer: `We specialize in the restoration and painting of weatherboard properties common in Sandringham. Our process ensures that old paint is safely removed, wood is repaired where necessary, and high-quality flexible paints are applied to prevent cracking and peeling.`
+      question: `How do you protect Sandringham homes from salt air and coastal conditions?`,
+      answer: `Salt air from Port Phillip Bay is a real threat to paintwork along the Sandringham foreshore. We start every coastal job with a thorough pressure wash to remove salt deposits and contaminants before any paint goes on. We then apply premium flexible primers and salt-resistant topcoats from Dulux and Taubmans — products specifically engineered for coastal exposure. Skipping or rushing preparation is why coastal paint jobs fail early; we don't cut corners on it.`
     },
     {
-      question: `Do you offer commercial painting for businesses in Sandringham?`,
-      answer: `Yes, we provide professional commercial painting services for shops and offices along Sandringham's commercial strips, ensuring high-quality results with minimal disruption to your business operations.`
+      question: `Do you offer free quotes across Sandringham?`,
+      answer: `Yes. We provide free, no-obligation written quotes across Sandringham and the surrounding Bayside area, with the full scope and preparation detailed up front. Call Jimmy on 0432 077 782 or submit a request online — we're usually able to come out and quote within a few days.`
     }
   ];
 
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Sandringham Painters | Coastal House Painting Specialists | Jetblack Painting"
-      description="Professional house painters in Sandringham. Coastal-grade protection for Bayside homes. Interior, exterior, and commercial painting. Free quotes."
+      title="Sandringham Painters | Coastal & Weatherboard Home Specialists | Jetblack Painting"
+      description={`Professional house painters in ${suburb}. Specialists in weatherboard beach cottages and coastal salt-air protection. Based in Mordialloc. Free quotes.`}
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Black Rock", link: "/painter-black-rock" },
@@ -57,8 +57,8 @@ export default function SandringhamPainters() {
         { name: "Highett", link: "/painter-highett" },
         { name: "Cheltenham", link: "/painter-cheltenham" }
       ]}
-      localExpertise={`Serving the Sandringham community and the wider Bayside area, we are experts in protecting coastal homes. We understand the unique challenges of Sandringham's environment, from salt air corrosion to intense UV exposure, and use specialized products to ensure your property remains beautiful and protected.`}
-      propertyTypes={`Sandringham features a mix of classic weatherboard beach cottages, Edwardian homes, and modern bayside residences. Our team is skilled in tailoring our painting methods to suit each unique property type found along the Sandringham coastline.`}
+      localExpertise={`Serving the Sandringham community and the wider Bayside coast, Jetblack Painting is based nearby in Mordialloc — close enough that Sandringham is genuinely local territory for us. We know the suburb's weatherboard beach cottages near the foreshore, the Edwardian homes along Royal Avenue, and the coastal conditions that make proper preparation and product choice so important here.`}
+      propertyTypes={`Sandringham features classic weatherboard beach cottages near the foreshore, Edwardian and interwar homes along Royal Avenue and the surrounding streets, and modern coastal residences — each requiring a tailored preparation and coating approach for the Bayside environment.`}
       localContent={[
         {
           heading: "Bayside House Painters Serving Sandringham",

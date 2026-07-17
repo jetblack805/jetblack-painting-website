@@ -2,42 +2,52 @@ import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function GlenWaverleyPainters() {
   const suburb = "Glen Waverley";
-
   const faqs = [
     {
-      question: "Do you paint brick veneer and rendered homes in Glen Waverley?",
-      answer:
-        "Yes. We repaint brick, render and weatherboard homes in Glen Waverley with the correct prep for each substrate.",
+      question: `Do you paint the large family homes common in ${suburb}?`,
+      answer: `Yes. ${suburb} is known for substantial family homes — many rebuilt on large blocks with rendered façades, feature walls and big open-plan interiors. We're well set up for these: proper team sizing, the right access equipment, and premium Dulux and Taubmans systems that give the crisp, seamless result these homes are built around.`
     },
     {
-      question: "Can you repaint occupied homes with minimal disruption?",
-      answer:
-        "Yes. We plan works in stages and keep work areas tidy so your household can remain functional.",
+      question: `Can you repaint a brick veneer home in ${suburb}?`,
+      answer: `Absolutely. ${suburb} has plenty of 1960s–80s brick-veneer homes, and a proper repaint makes a significant difference to presentation and protection. We clean, prime and use quality exterior coatings rated for Melbourne's conditions — no shortcuts on prep, so the topcoat bonds properly and lasts.`
     },
     {
-      question: "Do you provide painting for investment properties in Glen Waverley?",
-      answer:
-        "Yes. We provide efficient repainting for rentals and pre-sale projects to improve presentation and value.",
-    },
+      question: `Do you offer free quotes in ${suburb}?`,
+      answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and the surrounding City of Monash area, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 or submit a request online.`
+    }
   ];
 
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Glen Waverley Painters | Local House Painting Experts | Jetblack Painting"
-      description="Professional painters in Glen Waverley for interior, exterior, roof and commercial painting. Fully insured and free written quotes."
+      title="Glen Waverley Painters | Family Home Specialists | Jetblack Painting"
+      description={`Professional house painters in ${suburb}. Specialists in large family homes, brick veneer, rendered façades and modern interiors across ${suburb} and the City of Monash. 5-star rated, fully licensed, free quotes.`}
       neighbouringSuburbs={[
         { name: "Wheelers Hill", link: "/painter-wheelers-hill" },
         { name: "Doncaster", link: "/painter-doncaster" },
-        { name: "Croydon", link: "/painter-croydon" },
-        { name: "Templestowe", link: "/painter-templestowe" },
         { name: "Box Hill", link: "/painter-box-hill" },
+        { name: "Templestowe", link: "/painter-templestowe" },
+        { name: "Ringwood", link: "/painter-ringwood" },
       ]}
-      localExpertise="Jetblack Painting delivers quality repainting across Glen Waverley with clear scope definitions, durable systems and reliable communication."
-      propertyTypes="Glen Waverley includes established homes, renovated residences and modern properties requiring specific preparation standards."
+      localExpertise={`We understand ${suburb}'s housing stock — from the established 1960s–80s brick-veneer homes on quiet streets to the many rebuilt and architect-designed family homes that have replaced them, often with rendered façades and premium interiors. Whether it's a classic brick exterior repaint or a seamless modern interior finish, we match our approach to the property every time.`}
+      propertyTypes={`${suburb}'s large rebuilt family homes with rendered façades, established brick-veneer homes, modern interiors with feature walls, and investment properties across the ${suburb} and City of Monash area.`}
+      localContent={[
+        {
+          heading: `House Painters Serving Glen Waverley`,
+          body: [
+            `${suburb} is one of Melbourne's most sought-after family suburbs in the City of Monash — prized for its large homes, excellent schools and the busy lifestyle precinct around The Glen shopping centre and Kingsway. Jetblack Painting provides premium interior and exterior painting across ${suburb}, from established brick family homes to the many modern rebuilds and architect-designed residences that have become a hallmark of the area.`,
+            `Every ${suburb} project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's a full exterior repaint, a fresh contemporary interior or cabinetry work, we deliver sharp lines, durable coatings and a clean result with minimal disruption to your household.`,
+          ],
+        },
+        {
+          heading: `Modern and Established Home Painting in ${suburb}`,
+          body: [
+            `${suburb}'s newer and rebuilt family homes typically feature rendered façades, feature walls and large open-plan interiors. We deliver the crisp, seamless finishes these homes demand — using premium Dulux and Taubmans systems, with proper render priming so the topcoat sits perfectly and the result holds up through Melbourne's climate for years.`,
+            `For ${suburb}'s established brick-veneer and interwar homes, we bring thorough preparation and premium coatings that refresh the look, protect the surface and add genuine life to the paintwork. Whatever the era, the standard stays the same: meticulous prep, premium coatings, and a finish you'll notice the difference in.`,
+          ],
+        },
+      ]}
       faqs={faqs}
-      localContent={[{"heading":"Trusted House Painters Serving Glen Waverley","body":["Glen Waverley is one of Melbourne's most sought-after family suburbs in the City of Monash, prized for its large homes, excellent schools and the bustling precinct around The Glen and Kingsway. Jetblack Painting provides premium interior and exterior painting across Glen Waverley, from established brick family homes to the many modern rebuilds and architect-designed residences the area is known for.","Every Glen Waverley project comes with a clear written quote and thorough preparation from a tidy, professional team. Whether it's a full exterior repaint, a modern interior scheme or feature cabinetry, we deliver sharp lines, durable coatings and a clean result with minimal disruption to your family."]},{"heading":"Modern and Family Home Painting in Glen Waverley","body":["Glen Waverley has a high proportion of newer and rebuilt family homes with rendered façades, feature walls and large open interiors. We deliver the crisp, seamless modern finishes these homes are built around, using premium Dulux and Taubmans systems for durable interiors and weather-resistant exteriors.","For Glen Waverley's established brick and interwar homes, we bring careful preparation and premium coatings that protect the property and refresh its look. Whatever the era, you get meticulous prep and a finish designed to handle Melbourne's climate and last for years."]}]}
     />
   );
 }
-

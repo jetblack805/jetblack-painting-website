@@ -2,41 +2,52 @@ import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function WheelersHillPainters() {
   const suburb = "Wheelers Hill";
-
   const faqs = [
     {
-      question: "Do you paint brick and rendered homes in Wheelers Hill?",
-      answer:
-        "Yes. We repaint brick and rendered homes in Wheelers Hill using substrate-appropriate preparation and products.",
+      question: `Do you paint the large 1980s and 1990s homes common in ${suburb}?`,
+      answer: `Yes. ${suburb}'s established family homes are often substantial brick or rendered builds from the 1980s and 90s, and a professional repaint transforms them. We bring thorough surface preparation, quality primers and premium Dulux and Taubmans topcoats that refresh the look and protect the property for another decade or more.`
     },
     {
-      question: "Can you complete interior painting while we live in the home?",
-      answer:
-        "Yes. We can stage interior painting works room-by-room to reduce disruption and keep spaces usable.",
+      question: `Can you paint both interior and exterior while we live in the home?`,
+      answer: `Yes. We stage interior painting room by room to keep spaces functional, and sequence exterior work to minimise disruption. We protect furniture and floors throughout, maintain tidy work zones and communicate clearly about access — most ${suburb} families stay comfortably in the home throughout the project.`
     },
     {
-      question: "Do you provide free quotes in Wheelers Hill?",
-      answer:
-        "Yes. We provide free written quotes with clear scope and timeline guidance.",
-    },
+      question: `Do you offer free quotes in ${suburb}?`,
+      answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and the City of Monash, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 or submit a request online.`
+    }
   ];
 
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Wheelers Hill Painters | House Painting Specialists | Jetblack Painting"
-      description="Trusted painters in Wheelers Hill for interior, exterior, roof and commercial painting. Fully insured and free written quotes."
+      title="Wheelers Hill Painters | Family Home Painting Specialists | Jetblack Painting"
+      description={`Professional house painters in ${suburb}. Specialists in large family homes, brick and rendered properties near Jells Park and across the City of Monash. Thorough preparation, premium finishes, free quotes.`}
       neighbouringSuburbs={[
         { name: "Glen Waverley", link: "/painter-glen-waverley" },
-        { name: "Doncaster", link: "/painter-doncaster" },
-        { name: "Templestowe", link: "/painter-templestowe" },
-        { name: "Croydon", link: "/painter-croydon" },
-        { name: "Ringwood", link: "/painter-ringwood" },
+        { name: "Keysborough", link: "/painter-keysborough" },
+        { name: "Dandenong", link: "/painter-dandenong" },
+        { name: "Kingston", link: "/painter-kingston" },
+        { name: "Moorabbin", link: "/painter-moorabbin" },
       ]}
-      localExpertise="Jetblack Painting supports Wheelers Hill property owners with durable repaint systems and consistent workmanship."
-      propertyTypes="Wheelers Hill includes established family homes and updated properties requiring thorough prep for lasting results."
+      localExpertise={`We understand ${suburb}'s housing stock — the large, established family homes from the 1980s and 90s on elevated blocks near Jells Park and the Dandenong Valley, where solid brick and rendered façades need experienced preparation and premium coatings to protect against Melbourne's variable climate.`}
+      propertyTypes={`${suburb}'s large 1980s–90s brick and rendered family homes on elevated blocks, established residences near Jells Park, and updated contemporary homes across ${suburb} and the City of Monash.`}
+      localContent={[
+        {
+          heading: `House Painters Serving Wheelers Hill`,
+          body: [
+            `${suburb} is an established, family-focused suburb in the City of Monash, known for its large homes on elevated blocks, generous back yards and the green surrounds of Jells Park and the Dandenong Valley Parklands. The suburb's housing stock is largely substantial 1980s and 90s brick and rendered family homes — properties that repaint beautifully when the preparation is done properly.`,
+            `Jetblack Painting provides premium interior and exterior painting across ${suburb}, delivering the careful preparation and durable finish these larger homes deserve. Every project comes with a clear written quote and a professional team that shows up when it says it will — whether it's a full exterior repaint, an interior refresh or a deck restoration.`,
+          ],
+        },
+        {
+          heading: `Large Family Home Painting in ${suburb}`,
+          body: [
+            `Many ${suburb} homes are substantial two-storey or split-level brick builds with wide facades, eaves, fascias and generous interiors that need proper access equipment and an experienced team to do well. We handle these bigger projects safely and efficiently, with thorough surface preparation and premium weather-resistant coatings that protect the home through Melbourne's seasons.`,
+            `For updated and contemporary ${suburb} homes, we deliver smooth, modern finishes using premium Dulux and Taubmans systems. Whatever the size or style, you get considered preparation, quality product and a finish designed to last well beyond the next paint cycle.`,
+          ],
+        },
+      ]}
       faqs={faqs}
-      localContent={[{"heading":"Local House Painters Serving Wheelers Hill","body":["Wheelers Hill is an established, family-focused suburb in the City of Monash, known for its large elevated homes, generous blocks and green surrounds near Jells Park and the Dandenong Valley. Jetblack Painting provides premium interior and exterior painting across Wheelers Hill, delivering the careful preparation and durable finish these substantial homes deserve.","Every Wheelers Hill project comes with a clear written quote and thorough preparation from a professional, tidy team. From full exterior repaints of large two-storey homes to interior refreshes and cabinetry, we deliver sharp lines, premium coatings and a clean result with minimal disruption."]},{"heading":"Large Family Home Painting in Wheelers Hill","body":["Many Wheelers Hill homes are substantial 1980s and 1990s builds with rendered and brick façades, high ceilings and large interior spaces that need an experienced team and the right access equipment. We handle these bigger projects safely and efficiently, with thorough preparation and premium, weather-resistant coatings.","For updated and modern Wheelers Hill homes, we deliver smooth contemporary finishes using premium Dulux and Taubmans systems built for Melbourne's climate. Whatever the size or style, you get considered preparation and a finish designed to last."]}]}
     />
   );
 }

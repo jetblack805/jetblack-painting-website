@@ -1,36 +1,53 @@
 import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function CaulfieldPainters() {
+  const suburb = "Caulfield";
+  const faqs = [
+    {
+      question: `Do you paint period homes in ${suburb}?`,
+      answer: `Yes. ${suburb} has a strong mix of Edwardian terraces, interwar homes and post-war brick properties, and we're experienced with each. We use heritage-sympathetic colour choices, proper surface preparation and lead-paint-safe methods on older homes so the result looks right and holds up well.`
+    },
+    {
+      question: `How long does a house repaint take in ${suburb}?`,
+      answer: `Most ${suburb} homes are completed within 5 to 10 working days depending on size and the preparation involved. We provide a clear timeline with every quote so you can plan around the work with minimal disruption.`
+    },
+    {
+      question: `Do you offer free quotes in ${suburb}?`,
+      answer: `Absolutely. We provide free, no-obligation written quotes across ${suburb}, Caulfield North and Caulfield South, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 to arrange a visit.`
+    }
+  ];
+
   return (
     <SuburbPageTemplate
-      suburb="Caulfield"
-      description="Expert house painters in Caulfield, Melbourne. Interior, exterior & commercial painting services. 5-star rated, fully licensed. Free quotes."
+      suburb={suburb}
+      title="Caulfield Painters | Interior & Exterior House Painting | Jetblack Painting"
+      description={`Professional house painters in ${suburb}. Interior, exterior and heritage home painting across Caulfield, Caulfield North and Caulfield South. 5-star rated, fully licensed, free quotes.`}
       neighbouringSuburbs={[
-        { name: "Malvern", link: "/painter-malvern" },
         { name: "Bentleigh", link: "/painter-bentleigh" },
+        { name: "Malvern", link: "/painter-malvern" },
         { name: "Brighton", link: "/painter-brighton" },
-        { name: "Toorak", link: "/painter-toorak" },
-        { name: "Hampton", link: "/painter-hampton" },
+        { name: "Elsternwick", link: "/painter-elsternwick" },
+        { name: "McKinnon", link: "/painter-mckinnon" },
       ]}
-      localExpertise="We understand Caulfield's diverse property landscape, from Art Deco apartments to modern family homes and heritage properties. Our team delivers premium painting results that enhance the character of Caulfield's varied architecture."
-      propertyTypes="Caulfield's Art Deco apartments, modern family homes, and heritage properties"
+      localExpertise={`Jetblack Painting understands ${suburb}'s diverse housing stock — from the Edwardian terraces and interwar homes around Hawthorn Road and Glen Huntly Road to the post-war brick homes and modern apartments that make up ${suburb}'s broader residential mix. We tailor our preparation and coating systems to the property type every time.`}
+      propertyTypes={`${suburb}'s Edwardian terraces, interwar homes, post-war brick properties, modern units and apartment buildings across Caulfield, Caulfield North and Caulfield South.`}
       localContent={[
         {
-          heading: "Professional House Painters Serving Caulfield",
+          heading: `House Painters Serving Caulfield, Caulfield North and Caulfield South`,
           body: [
-            "Caulfield offers some of Melbourne's most varied architecture — from striking interwar Art Deco apartments and solid brick period homes to modern family residences near Caulfield Park and the racecourse. Jetblack Painting delivers premium painting across all of it, matching our preparation and finish to each home's era and materials throughout Caulfield, Caulfield North and Caulfield South.",
-            "Every Caulfield project is quoted clearly with the full scope and preparation included, and carried out by a tidy, reliable team. Whether it's a heritage exterior, an Art Deco interior or a contemporary repaint, we focus on sharp detail and coatings built to last.",
+            `${suburb} is a well-connected inner-south-east suburb known for its mix of Edwardian and interwar streetscapes, the Caulfield Racecourse precinct and popular shopping strips along Glen Huntly Road and Hawthorn Road. Jetblack Painting delivers premium interior and exterior painting across ${suburb} — careful preparation, sharp execution and durable results every time.`,
+            `Whether you're refreshing the exterior of a classic period home, repainting a modern townhouse interior or updating cabinetry in a Caulfield apartment, we bring the same detailed approach to every project. Our written quotes lay out the full scope and preparation clearly before work starts, and our team keeps your property clean and tidy throughout.`,
           ],
         },
         {
-          heading: "Art Deco and Heritage Painting in Caulfield",
+          heading: `Period Home and Modern Apartment Painting in ${suburb}`,
           body: [
-            "Caulfield's Art Deco and interwar homes have distinctive rendered façades, decorative detailing and original features worth preserving. We take care with render preparation, crack repair and period-appropriate colours so these homes keep their character, using premium coatings that protect the surface for the long term.",
-            "For Caulfield's modern family homes and apartments, we deliver smooth, durable interior and exterior finishes with premium Dulux and Taubmans systems designed for Melbourne's climate. Whatever the property type, you get meticulous preparation and a professional, long-lasting result.",
+            `${suburb}'s Edwardian and interwar homes need proper preparation to maintain their character and protect their value — crack filling on rendered surfaces, bare timber priming, careful colour choices that suit the era and the street. We handle all of this as part of our standard approach, not as an afterthought.`,
+            `For ${suburb}'s modern townhouses and apartment buildings, including body corporate and strata repaints, we deliver clean contemporary finishes using premium Dulux and Taubmans systems rated for Melbourne's conditions. Projects are scoped clearly, communicated throughout and completed to a standard that lasts.`,
           ],
         },
       ]}
-      faqs={[{"question":"Do you paint Caulfield's Art Deco and heritage homes?","answer":"Yes. Caulfield has striking interwar Art Deco apartments and solid period homes, and we take care with their rendered façades, decorative detailing and original features, using period-appropriate colours and premium coatings that protect the surface long term."},{"question":"How long does a house repaint take in Caulfield?","answer":"Most Caulfield homes are completed within 5 to 10 working days depending on size and preparation required. We provide a clear timeline with every quote so you know exactly what to expect."},{"question":"Do you offer free quotes in Caulfield?","answer":"Yes. We provide free, no-obligation written quotes across Caulfield, Caulfield North and Caulfield South, with the full scope and preparation included. Call Jimmy on 0432 077 782 to arrange a visit."}]}
+      faqs={faqs}
     />
   );
 }

@@ -160,6 +160,13 @@ export const SUBURBS_DATA = {
     postcode: "3141",
     description: "Affluent inner-city suburb with Victorian terraces, apartments and heritage streetscapes",
     areasServed: ["South Yarra", "Prahran", "Windsor"]
+  },
+  elsternwick: {
+    name: "Elsternwick",
+    coordinates: { lat: -37.8822, lng: 144.9986 },
+    postcode: "3185",
+    description: "Affluent inner-southeast suburb with Victorian terraces, Art Deco apartments and period homes",
+    areasServed: ["Elsternwick", "Ripponlea", "Gardenvale"]
   }
 };
 

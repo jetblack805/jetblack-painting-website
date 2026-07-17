@@ -374,6 +374,7 @@ const allSuburbPages = [
   { route: "/painter-aspendale", source: "AspendalePainters.tsx" },
   { route: "/painter-chelsea", source: "ChelseaPainters.tsx" },
   { route: "/painter-south-yarra", source: "SouthYarraPainters.tsx" },
+  { route: "/painter-elsternwick", source: "ElsternwickPainters.tsx" },
 ];
 
 for (const page of allSuburbPages) {

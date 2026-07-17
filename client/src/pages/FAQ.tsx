@@ -154,12 +154,28 @@ export default function FAQ() {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.flatMap((category) =>
+      category.items.map((item) => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a
+        }
+      }))
+    )
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <SEOHead
         title="Painting FAQs Melbourne | Jetblack Painting"
         description="Frequently asked questions about Jetblack Painting services in Melbourne, including quotes, service areas, interior, exterior and commercial painting."
         canonical="https://jetblackpainting.com/faq/"
+        schema={faqSchema}
       />
       <Navbar />
       {/* Header */}

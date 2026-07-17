@@ -143,7 +143,10 @@ function localBusinessSchema() {
       { "@type": "City", "name": "Stonnington" },
       { "@type": "City", "name": "Templestowe" },
       { "@type": "City", "name": "Toorak" },
-      { "@type": "City", "name": "Wheelers Hill" }
+      { "@type": "City", "name": "Wheelers Hill" },
+      { "@type": "City", "name": "Frankston" },
+      { "@type": "City", "name": "Mornington" },
+      { "@type": "City", "name": "Mount Eliza" }
     ],
     "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 50+ Melbourne suburbs.",
     "openingHoursSpecification": {
@@ -504,6 +507,9 @@ const allSuburbPages = [
   { route: "/painter-oakleigh", source: "OakleighPainters.tsx" },
   { route: "/painter-clarinda", source: "ClarindaPainters.tsx" },
   { route: "/painter-chadstone", source: "ChadstonePainters.tsx" },
+  { route: "/painter-frankston", source: "FrankstonPainters.tsx" },
+  { route: "/painter-mornington", source: "MorningtonPainters.tsx" },
+  { route: "/painter-mount-eliza", source: "MountElizaPainters.tsx" },
 ];
 
 for (const page of allSuburbPages) {

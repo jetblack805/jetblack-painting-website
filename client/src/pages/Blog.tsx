@@ -9,18 +9,18 @@ export default function Blog() {
   const posts = [
     {
       id: 1,
-      title: "Best Paint Colours for Melbourne Homes in 2025",
+      title: "Best Paint Colours for Melbourne Homes in 2026",
       excerpt: "Discover the trending paint colours that are transforming Melbourne homes. From warm neutrals to bold statement colours, find the perfect palette for your property.",
-      date: "May 2025",
+      date: "July 2026",
       category: "Design Tips",
       readTime: "6 min read",
       slug: "/blog/best-paint-colours-melbourne-2025"
     },
     {
       id: 2,
-      title: "How Much Does House Painting Cost in Melbourne? (2025 Price Guide)",
+      title: "How Much Does House Painting Cost in Melbourne? (2026 Price Guide)",
       excerpt: "Get a comprehensive breakdown of painting costs across Melbourne. Interior, exterior, and commercial pricing with real examples from our recent projects.",
-      date: "May 2025",
+      date: "July 2026",
       category: "Price Guide",
       readTime: "8 min read",
       slug: "/blog/house-painting-cost-melbourne"
@@ -29,7 +29,7 @@ export default function Blog() {
       id: 3,
       title: "How to Prepare Your Melbourne Home for Professional Painting",
       excerpt: "Proper preparation is key to a successful painting project. Learn our expert tips for preparing your home to ensure the best results.",
-      date: "May 2025",
+      date: "July 2026",
       category: "Guide",
       readTime: "5 min read",
       slug: "/blog/prepare-home-for-painting"
@@ -38,25 +38,34 @@ export default function Blog() {
       id: 4,
       title: "Kitchen Cabinet Resurfacing vs Replacement: What Melbourne Homeowners Need to Know",
       excerpt: "Transform your kitchen for a fraction of the cost of a full renovation. Learn about 2-pack cabinet resurfacing and when it's the right choice.",
-      date: "May 2025",
+      date: "July 2026",
       category: "Kitchen",
       readTime: "7 min read",
       slug: "/blog/kitchen-cabinet-resurfacing-vs-replacement"
     },
     {
       id: 5,
+      title: "Mould Remediation & Painting Guide for Melbourne Homes",
+      excerpt: "How to correctly identify, treat and paint over mould in Melbourne homes. Covers bathroom mould, external render, anti-mould primers and which paints to use by surface type.",
+      date: "July 2026",
+      category: "Guide",
+      readTime: "7 min read",
+      slug: "/blog/mould-remediation-painting-melbourne"
+    },
+    {
+      id: 6,
       title: "Roof Painting Guide: Protection & Aesthetics for Melbourne Homes",
       excerpt: "Learn everything about roof painting - from the benefits of roof protection to choosing the right colours for your Melbourne home.",
-      date: "May 2025",
+      date: "July 2026",
       category: "Roof Painting",
       readTime: "8 min read",
       slug: "/services/roof-painting"
     },
     {
-      id: 6,
+      id: 7,
       title: "Exterior Paint Protection: Surviving Melbourne's Weather",
       excerpt: "Melbourne's unpredictable weather requires special exterior paint protection. Learn how to protect your home's exterior from UV, moisture, and temperature changes.",
-      date: "May 2025",
+      date: "July 2026",
       category: "Exterior",
       readTime: "7 min read",
       slug: "/services/exterior-painting"

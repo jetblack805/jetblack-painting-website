@@ -361,6 +361,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://jetblackpainting.com/painter-frankston/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jetblackpainting.com/painter-mornington/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jetblackpainting.com/painter-mount-eliza/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://jetblackpainting.com/blog/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -386,6 +404,12 @@
   </url>
   <url>
     <loc>https://jetblackpainting.com/blog/kitchen-cabinet-resurfacing-vs-replacement/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://jetblackpainting.com/blog/mould-remediation-painting-melbourne/</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

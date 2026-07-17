@@ -51,11 +51,11 @@ export default function MorningtonPeninsulaPainters() {
       title="Mornington Peninsula Painters | Coastal & Rural Painting | Jetblack Painting"
       description="Expert painters serving the Mornington Peninsula. Specializing in coastal home protection, rural properties, and holiday homes. Free quotes."
       neighbouringSuburbs={[
-        { name: "Frankston", link: "/painter-frankston" },
-        { name: "Mount Eliza", link: "/painter-mount-eliza" },
-        { name: "Mornington", link: "/painter-mornington" },
-        { name: "Dromana", link: "/painter-dromana" },
-        { name: "Sorrento", link: "/painter-sorrento" }
+        { name: "Berwick", link: "/painter-berwick" },
+        { name: "Dandenong", link: "/painter-dandenong" },
+        { name: "Greater Dandenong", link: "/painter-greater-dandenong" },
+        { name: "Kingston", link: "/painter-kingston" },
+        { name: "Moorabbin", link: "/painter-moorabbin" }
       ]}
       localExpertise={`As specialists serving the Mornington Peninsula, we understand the diverse needs of this region. From salt-sprayed coastal residences to rural farmhouses and luxury holiday homes, we provide durable painting solutions tailored to the Peninsula's unique climate.`}
       propertyTypes={`The Mornington Peninsula features a wide range of properties, including contemporary coastal mansions, rustic rural retreats, and classic beach shacks. Our team is experienced in selecting the right materials for each environment.`}

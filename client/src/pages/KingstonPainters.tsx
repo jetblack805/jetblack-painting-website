@@ -23,7 +23,7 @@ export default function KingstonPainters() {
       "@type": "City",
       "name": suburb
     },
-    "description": `Jetblack Painting provides professional painting services across the City of Kingston. Specializing in residential repaints and commercial property maintenance.`,
+    "description": `Jetblack Painting provides professional painting services across the City of Kingston. Specializing in coastal and residential repaints for homes across Mordialloc, Mentone, Cheltenham, Moorabbin, Parkdale and beyond.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase().replace(/\s+/g, "-")}`
@@ -32,24 +32,24 @@ export default function KingstonPainters() {
 
   const faqs = [
     {
-      question: `Which suburbs in Kingston do you service?`,
-      answer: `We service all suburbs within the City of Kingston, including Moorabbin, Cheltenham, Mentone, Mordialloc, Parkdale, and Chelsea.`
+      question: `Which suburbs across Kingston do you cover?`,
+      answer: `We cover the full City of Kingston — Mordialloc (our home suburb), Mentone, Cheltenham, Moorabbin, Parkdale, Highett, Aspendale, Chelsea, Edithvale, Bonbeach, Carrum, Clarinda and Heatherton. Based in Mordialloc, we're in this area every day and can quote and start work quickly across the whole council.`
     },
     {
-      question: `Do you offer commercial painting in Kingston?`,
-      answer: `Yes, we provide professional commercial painting for offices, retail spaces, and industrial facilities throughout the Kingston area.`
+      question: `Do you understand the coastal conditions in Kingston's bayside suburbs?`,
+      answer: `Yes — we're based in Mordialloc and work along the Kingston coastline constantly. Salt air, UV and moisture from Port Phillip Bay are factors we deal with on every job along this stretch. We use thorough salt washing, flexible primers and premium exterior acrylic systems rated for coastal exposure, and back every exterior job with a 5-year written guarantee. Proper preparation is the difference between a coastal paint job that lasts 3 years and one that lasts 10.`
     },
     {
-      question: `How long does it take to paint a typical Kingston home?`,
-      answer: `Most residential projects are completed within 5-10 working days, depending on the size and scope of the work. We provide a detailed timeline with every quote.`
+      question: `Do you offer free quotes across the Kingston area?`,
+      answer: `Yes. We provide free, no-obligation written quotes across all Kingston suburbs, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 or submit a request online — we're usually able to quote within a few days.`
     }
   ];
 
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Kingston Painters | Professional House Painting | Jetblack Painting"
-      description="Trusted house painters in the City of Kingston. Interior, exterior, and commercial painting services. Servicing all Kingston suburbs. Free quotes."
+      title="Kingston Painters | Local House Painting Across City of Kingston | Jetblack Painting"
+      description={`Local house painters across the City of ${suburb}. Based in Mordialloc — covering Mentone, Cheltenham, Moorabbin, Parkdale, Chelsea, Aspendale and all Kingston suburbs. Free quotes.`}
       neighbouringSuburbs={[
         { name: "Moorabbin", link: "/painter-moorabbin" },
         { name: "Cheltenham", link: "/painter-cheltenham" },
@@ -57,11 +57,26 @@ export default function KingstonPainters() {
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Chelsea", link: "/painter-chelsea" }
       ]}
-      localExpertise={`Serving the diverse City of Kingston, we provide professional painting services for residential and commercial properties. From the coastal suburbs to the industrial hubs, we understand the local needs and deliver high-quality, durable results.`}
-      propertyTypes={`Kingston features a wide variety of properties, including suburban family homes, coastal residences, and commercial warehouses. Our team is equipped to handle projects of all scales across the Kingston area.`}
+      localExpertise={`Jetblack Painting is based in Mordialloc — right at the heart of the City of Kingston. We work across the whole council area every day: coastal suburbs like Mentone, Parkdale, Chelsea and Aspendale where salt air is a real factor in exterior coating choices; and inland suburbs like Cheltenham, Moorabbin, Clarinda and Heatherton where established brick homes make up the core of the housing stock. This is genuinely our home territory.`}
+      propertyTypes={`Kingston's housing spans weatherboard beach houses and coastal cottages along the foreshore suburbs, established brick homes across the inland suburbs, and modern townhouse developments throughout — each needing a tailored approach to preparation and coating selection.`}
       faqs={faqs}
       schema={schema}
-      localContent={[{"heading":"Local House Painters Across the Kingston Region","body":["The City of Kingston covers a broad stretch of Melbourne's south-east and Bayside coast — including Mordialloc, Mentone, Cheltenham, Moorabbin, Parkdale and Highett — with a mix of coastal homes, established family residences and commercial precincts. Based in Mordialloc at the heart of Kingston, Jetblack Painting is a truly local painter for the whole area.","Every Kingston project comes with a clear written quote and thorough preparation from a reliable local team. From coastal exteriors to interior refreshes, commercial repaints and cabinetry, we deliver sharp lines, durable coatings and a clean, professional result close to home."]},{"heading":"Coastal and Suburban Painting Across Kingston","body":["Kingston's Bayside pockets face salt air and strong UV, so coastal homes need proper salt washing, flexible primers and premium weather-resistant topcoats to keep their finish protected. Further inland, established family homes benefit from careful render and timber preparation and durable coatings suited to Melbourne conditions.","As a Mordialloc-based painter, we know Kingston's homes and conditions better than anyone travelling in from across town. Whatever the property or location within Kingston, you get considered preparation and a finish designed to last for years."]}]}
+      localContent={[
+        {
+          heading: `Local House Painters Across the City of Kingston`,
+          body: [
+            `The City of Kingston covers a broad stretch of Melbourne's south-east and Bayside coast — including Mordialloc, Mentone, Cheltenham, Moorabbin, Parkdale, Highett and the southern coastal suburbs down to Chelsea and Carrum. Based in Mordialloc, Jetblack Painting is a truly local painter for the whole area — not a franchise dispatching from across town, but a team that works this territory every day.`,
+            `Every Kingston project comes with a clear written quote and thorough preparation from a reliable local team. From coastal exteriors to interior refreshes, commercial repaints and cabinetry, we deliver sharp lines, durable coatings and a clean, professional result close to home.`,
+          ],
+        },
+        {
+          heading: `Coastal and Suburban Painting Across Kingston`,
+          body: [
+            `Kingston's Bayside pockets face salt air and strong UV, so coastal homes need proper salt washing, flexible primers and premium weather-resistant topcoats to keep their finish protected and lasting. Along the foreshore from Mentone to Carrum, we see what poorly prepared paint does to coastal homes — and we know exactly how to prevent it.`,
+            `Further inland, Kingston's established brick family homes in Cheltenham, Moorabbin, Clarinda and Heatherton benefit from careful render and timber preparation and durable exterior coatings suited to Melbourne's variable climate. Whatever the suburb, the approach is the same: proper preparation, premium product and a finish built to last.`,
+          ],
+        },
+      ]}
     />
   );
 }

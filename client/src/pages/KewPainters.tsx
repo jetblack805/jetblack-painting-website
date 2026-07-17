@@ -52,10 +52,10 @@ export default function KewPainters() {
       description="Expert house painters in Kew. Specializing in heritage restoration, Victorian, and Edwardian home painting. 5-star rated, premium finishes, free quotes."
       neighbouringSuburbs={[
         { name: "Hawthorn", link: "/painter-hawthorn" },
-        { name: "Balwyn", link: "/painter-balwyn" },
-        { name: "Abbotsford", link: "/painter-abbotsford" },
-        { name: "Fairfield", link: "/painter-fairfield" },
-        { name: "Deepdene", link: "/painter-deepdene" }
+        { name: "Camberwell", link: "/painter-camberwell" },
+        { name: "Toorak", link: "/painter-toorak" },
+        { name: "Malvern", link: "/painter-malvern" },
+        { name: "Templestowe", link: "/painter-templestowe" }
       ]}
       localExpertise={`As local painting experts serving Kew and the City of Boroondara, we understand the prestige and history of the area. Our team specializes in the meticulous restoration of heritage Victorian and Edwardian homes, ensuring every detail is preserved while using modern, durable paints for a long-lasting finish.`}
       propertyTypes={`Kew's architectural landscape is defined by its grand Victorian and Edwardian mansions, particularly in the Sackville Ward, alongside stunning contemporary residences. We adapt our techniques to suit both historic preservation and modern architectural requirements.`}

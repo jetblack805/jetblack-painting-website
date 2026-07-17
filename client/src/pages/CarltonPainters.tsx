@@ -51,11 +51,11 @@ export default function CarltonPainters() {
       title="Carlton Painters | Heritage & Victorian Painting Experts | Jetblack Painting"
       description="Premium house painters in Carlton. Specialists in Victorian terrace restoration and heritage-listed property painting. 5-star rated, free quotes."
       neighbouringSuburbs={[
-        { name: "Fitzroy", link: "/painter-fitzroy" },
-        { name: "Parkville", link: "/painter-parkville" },
-        { name: "North Melbourne", link: "/painter-north-melbourne" },
-        { name: "East Melbourne", link: "/painter-east-melbourne" },
-        { name: "Collingwood", link: "/painter-collingwood" }
+        { name: "South Yarra", link: "/painter-south-yarra" },
+        { name: "Kew", link: "/painter-kew" },
+        { name: "Hawthorn", link: "/painter-hawthorn" },
+        { name: "Toorak", link: "/painter-toorak" },
+        { name: "Armadale", link: "/painter-armadale" }
       ]}
       localExpertise={`Serving the vibrant Carlton community, we are experts in the restoration of iconic Victorian terrace houses. We understand the intricacies of Carlton's heritage architecture and the specific requirements for maintaining these historic properties within the City of Melbourne.`}
       propertyTypes={`Carlton is famous for its 19th-century Victorian architecture, including ornate terraced houses and heritage public buildings. We specialize in the detailed painting and restoration required for these unique property types.`}

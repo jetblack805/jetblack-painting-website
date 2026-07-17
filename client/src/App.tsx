@@ -62,6 +62,17 @@ const AspendalePainters = lazy(() => import("./pages/AspendalePainters"));
 const ChelseaPainters = lazy(() => import("./pages/ChelseaPainters"));
 const SouthYarraPainters = lazy(() => import("./pages/SouthYarraPainters"));
 const ElsternwickPainters = lazy(() => import("./pages/ElsternwickPainters"));
+const BeaumarisPainters = lazy(() => import("./pages/BeaumarisPainters"));
+const BlackRockPainters = lazy(() => import("./pages/BlackRockPainters"));
+const BrightonEastPainters = lazy(() => import("./pages/BrightonEastPainters"));
+const HighettPainters = lazy(() => import("./pages/HighettPainters"));
+const HeathertonPainters = lazy(() => import("./pages/HeathertonPainters"));
+const EdithvalePainters = lazy(() => import("./pages/EdithvalePainters"));
+const BonbeachPainters = lazy(() => import("./pages/BonbeachPainters"));
+const CarrumPainters = lazy(() => import("./pages/CarrumPainters"));
+const OakleighPainters = lazy(() => import("./pages/OakleighPainters"));
+const ClarindaPainters = lazy(() => import("./pages/ClarindaPainters"));
+const ChadsonePainters = lazy(() => import("./pages/ChadstonePainters"));
 
 function Router() {
   return (
@@ -159,6 +170,28 @@ function Router() {
       <Route path={"/painters-south-yarra"} component={SouthYarraPainters} />
       <Route path={"/painter-elsternwick"} component={ElsternwickPainters} />
       <Route path={"/painters-elsternwick"} component={ElsternwickPainters} />
+      <Route path={"/painter-beaumaris"} component={BeaumarisPainters} />
+      <Route path={"/painters-beaumaris"} component={BeaumarisPainters} />
+      <Route path={"/painter-black-rock"} component={BlackRockPainters} />
+      <Route path={"/painters-black-rock"} component={BlackRockPainters} />
+      <Route path={"/painter-brighton-east"} component={BrightonEastPainters} />
+      <Route path={"/painters-brighton-east"} component={BrightonEastPainters} />
+      <Route path={"/painter-highett"} component={HighettPainters} />
+      <Route path={"/painters-highett"} component={HighettPainters} />
+      <Route path={"/painter-heatherton"} component={HeathertonPainters} />
+      <Route path={"/painters-heatherton"} component={HeathertonPainters} />
+      <Route path={"/painter-edithvale"} component={EdithvalePainters} />
+      <Route path={"/painters-edithvale"} component={EdithvalePainters} />
+      <Route path={"/painter-bonbeach"} component={BonbeachPainters} />
+      <Route path={"/painters-bonbeach"} component={BonbeachPainters} />
+      <Route path={"/painter-carrum"} component={CarrumPainters} />
+      <Route path={"/painters-carrum"} component={CarrumPainters} />
+      <Route path={"/painter-oakleigh"} component={OakleighPainters} />
+      <Route path={"/painters-oakleigh"} component={OakleighPainters} />
+      <Route path={"/painter-clarinda"} component={ClarindaPainters} />
+      <Route path={"/painters-clarinda"} component={ClarindaPainters} />
+      <Route path={"/painter-chadstone"} component={ChadsonePainters} />
+      <Route path={"/painters-chadstone"} component={ChadsonePainters} />
       {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />

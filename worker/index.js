@@ -67,6 +67,17 @@ const PATH_REDIRECTS = {
   "/painters-chelsea":              "/painter-chelsea/",
   "/painters-south-yarra":          "/painter-south-yarra/",
   "/painters-elsternwick":          "/painter-elsternwick/",
+  "/painters-beaumaris":            "/painter-beaumaris/",
+  "/painters-black-rock":           "/painter-black-rock/",
+  "/painters-brighton-east":        "/painter-brighton-east/",
+  "/painters-highett":              "/painter-highett/",
+  "/painters-heatherton":           "/painter-heatherton/",
+  "/painters-edithvale":            "/painter-edithvale/",
+  "/painters-bonbeach":             "/painter-bonbeach/",
+  "/painters-carrum":               "/painter-carrum/",
+  "/painters-oakleigh":             "/painter-oakleigh/",
+  "/painters-clarinda":             "/painter-clarinda/",
+  "/painters-chadstone":            "/painter-chadstone/",
 
   // Legacy hash-anchor routes (rendered Home, treated as duplicate by Google)
   "/about":                         "/",

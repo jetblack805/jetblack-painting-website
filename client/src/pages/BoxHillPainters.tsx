@@ -2,41 +2,52 @@ import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function BoxHillPainters() {
   const suburb = "Box Hill";
-
   const faqs = [
     {
-      question: "Do you paint weatherboard and rendered homes in Box Hill?",
-      answer:
-        "Yes. We handle complete preparation and repaint systems for weatherboard, brick, and rendered homes across Box Hill.",
+      question: `Do you paint weatherboard, brick and rendered homes in ${suburb}?`,
+      answer: `Yes. ${suburb} has a good mix of weatherboard, brick veneer and rendered homes, and we tailor our preparation to each substrate — proper timber priming for weatherboard, crack filling and sealing on render, and the right primer system for brick so the topcoat bonds correctly and lasts.`
     },
     {
-      question: "Can you complete interior and exterior painting in one project?",
-      answer:
-        "Yes. We can stage both interior and exterior works to reduce disruption and deliver a consistent finish across the property.",
+      question: `Can you complete interior and exterior painting in one project in ${suburb}?`,
+      answer: `Yes. We regularly stage interior and exterior works together for ${suburb} homeowners — sequenced to reduce disruption and keep your home functional while we work through the full scope.`
     },
     {
-      question: "Do you provide free painting quotes in Box Hill?",
-      answer:
-        "Yes. We provide free written quotes for residential and commercial painting projects in Box Hill.",
-    },
+      question: `Do you offer free quotes in ${suburb}?`,
+      answer: `Yes. We provide free, no-obligation written quotes across ${suburb}, Box Hill North and Box Hill South, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 to arrange a site visit.`
+    }
   ];
 
   return (
     <SuburbPageTemplate
       suburb={suburb}
       title="Box Hill Painters | Interior, Exterior & Commercial | Jetblack Painting"
-      description="Professional painters in Box Hill for interior, exterior, roof and commercial painting. Fully insured with free written quotes."
+      description={`Professional painters in ${suburb}. Interior, exterior, roof and commercial painting for weatherboard, brick and modern homes across Box Hill, Box Hill North and Box Hill South. Fully insured, free written quotes.`}
       neighbouringSuburbs={[
+        { name: "Doncaster", link: "/painter-doncaster" },
         { name: "Donvale", link: "/painter-donvale" },
         { name: "Templestowe", link: "/painter-templestowe" },
         { name: "Camberwell", link: "/painter-camberwell" },
-        { name: "Doncaster", link: "/painter-doncaster" },
-        { name: "Glen Waverley", link: "/painter-glen-waverley" },
+        { name: "Croydon", link: "/painter-croydon" },
       ]}
-      localExpertise="Jetblack Painting supports Box Hill homeowners, landlords and local businesses with preparation-first repainting and durable finishes suited to Melbourne conditions."
-      propertyTypes="Box Hill includes established family homes, modern townhouses, apartments and commercial properties that require tailored prep and coating systems."
+      localExpertise={`Jetblack Painting understands ${suburb}'s diverse housing mix — from Californian bungalows and interwar homes around the heritage streetscapes to the modern apartment developments around ${suburb} Central and the large family homes spreading through Box Hill North. We tailor our preparation and coating system to the property type every time.`}
+      propertyTypes={`${suburb}'s Californian bungalows, interwar homes, brick veneer family residences, modern apartment buildings and commercial properties across Box Hill, Box Hill North and Box Hill South.`}
+      localContent={[
+        {
+          heading: `House Painters Serving Box Hill, Box Hill North and Box Hill South`,
+          body: [
+            `${suburb} is a thriving suburb in the City of Whitehorse, home to a vibrant multicultural community, a busy central hub around ${suburb} Central, and a diverse mix of established bungalows, family residences and modern apartment developments. Jetblack Painting provides premium interior and exterior painting across all three Box Hill postcodes, tailoring the approach to each property's age and materials.`,
+            `Every ${suburb} project comes with a clear written quote and thorough preparation from a reliable, tidy team. From full house repaints and cabinetry to strata and commercial repaints, we deliver sharp lines, durable coatings and a clean result with minimal disruption to your home or business.`,
+          ],
+        },
+        {
+          heading: `Period Home and Modern Apartment Painting in ${suburb}`,
+          body: [
+            `${suburb}'s established bungalows and interwar homes have rendered surfaces, feature brickwork and original timber that benefit from proper preparation — filling, priming and quality topcoats that keep these classic homes looking sharp and protected.`,
+            `For ${suburb}'s newer townhouses, apartments and commercial buildings, we deliver smooth, contemporary finishes using premium Dulux and Taubmans systems built for Melbourne conditions. Whatever the property, you get meticulous preparation and a finish designed to last for years.`,
+          ],
+        },
+      ]}
       faqs={faqs}
-      localContent={[{"heading":"Trusted House Painters Serving Box Hill","body":["Box Hill is a thriving suburb in the City of Whitehorse, home to a busy central hub, a vibrant multicultural community and a mix of established period homes, family residences and modern apartment developments. Jetblack Painting provides premium interior and exterior painting across Box Hill, Box Hill North and Box Hill South, tailoring our approach to each property type.","Every Box Hill project comes with a clear written quote and thorough preparation from a reliable, tidy team. From full house repaints and cabinetry to unit and commercial repaints, we deliver sharp lines, durable coatings and a clean result with minimal disruption to your home or business."]},{"heading":"Period and Modern Home Painting in Box Hill","body":["Box Hill's established homes include Californian bungalows, interwar and post-war properties with rendered and weatherboard surfaces that benefit from proper preparation — filling, priming and durable topcoats. We keep these homes looking their best with premium coatings and careful, tidy work.","For Box Hill's newer townhouses, apartments and rebuilt family homes, we deliver smooth, contemporary finishes using premium Dulux and Taubmans systems built for Melbourne conditions. Whatever the property, you get considered preparation and a finish designed to last."]}]}
     />
   );
 }

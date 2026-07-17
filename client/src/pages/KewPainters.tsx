@@ -13,7 +13,8 @@ export default function KewPainters() {
       "url": "https://jetblackpainting.com",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Melbourne",
+        "addressLocality": "Mordialloc",
+        "postalCode": "3195",
         "addressRegion": "VIC",
         "addressCountry": "AU"
       }

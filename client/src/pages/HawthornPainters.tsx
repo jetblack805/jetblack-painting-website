@@ -1,36 +1,53 @@
 import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function HawthornPainters() {
+  const suburb = "Hawthorn";
+  const faqs = [
+    {
+      question: `Do you specialise in ${suburb}'s Victorian and Federation homes?`,
+      answer: `Yes. ${suburb} is renowned for its grand Victorian terraces and Federation homes, and we're experienced with their ornate detailing — lead-paint-safe preparation, timber and cast-iron lacework restoration, and heritage-appropriate colour schemes that suit the era and the streetscape. We treat these homes with the care they require.`
+    },
+    {
+      question: `How long does a house repaint take in ${suburb}?`,
+      answer: `Most ${suburb} homes are completed within 5 to 10 working days depending on size and the amount of preparation and period detailing involved. We provide a detailed timeline with every quote so there's no guesswork and minimal disruption to your household.`
+    },
+    {
+      question: `Do you offer free quotes in ${suburb}?`,
+      answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and Hawthorn East, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a site visit.`
+    }
+  ];
+
   return (
     <SuburbPageTemplate
-      suburb="Hawthorn"
-      description="Professional house painters in Hawthorn, Melbourne. Interior, exterior & commercial painting for period homes. 5-star rated, fully licensed. Free quotes."
+      suburb={suburb}
+      title="Hawthorn Painters | Victorian & Federation Home Specialists | Jetblack Painting"
+      description={`Expert house painters in ${suburb}. Heritage specialists for Victorian terraces, Federation homes and modern renovations across ${suburb} and Hawthorn East. 5-star rated, fully licensed, free quotes.`}
       neighbouringSuburbs={[
         { name: "Camberwell", link: "/painter-camberwell" },
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Malvern", link: "/painter-malvern" },
-        { name: "Brighton", link: "/painter-brighton" },
-        { name: "Caulfield", link: "/painter-caulfield" },
+        { name: "Kew", link: "/painter-kew" },
+        { name: "Armadale", link: "/painter-armadale" },
       ]}
-      localExpertise="We understand Hawthorn's stunning period architecture, from grand Victorian terraces to Federation homes and modern apartments. Our team has extensive experience with heritage colour schemes and premium finishes that enhance Hawthorn's beautiful streetscapes."
-      propertyTypes="Hawthorn's Victorian terraces, Federation homes, and modern apartments"
+      localExpertise={`We understand ${suburb}'s stunning period architecture — from the grand Victorian terraces and Federation homes lining Grace Park and the Yarra-side streets to the contemporary townhouses and apartments around Glenferrie Road and Burwood Road. Our team has deep experience with heritage preparation, period colour schemes and premium finishes that enhance ${suburb}'s beautiful streetscapes.`}
+      propertyTypes={`${suburb}'s Victorian terraces, Federation homes, Edwardian residences, renovated period properties, modern townhouses and apartment buildings across ${suburb} and Hawthorn East.`}
       localContent={[
         {
-          heading: "Expert House Painters Serving Hawthorn",
+          heading: `House Painters Serving Hawthorn and Hawthorn East`,
           body: [
-            "Hawthorn is one of Melbourne's most beautiful inner-eastern suburbs, famous for its grand Victorian terraces, Federation homes and tree-lined streets around Grace Park, Glenferrie Road and the Yarra. Jetblack Painting provides the detailed, high-quality painting these period homes deserve, alongside modern finishes for Hawthorn's contemporary townhouses and apartments.",
-            "Every Hawthorn project starts with proper preparation and a clear, honest quote. Whether you're restoring an ornate terrace façade or refreshing a modern interior, our team delivers sharp lines, durable coatings and a clean, professional result with minimal disruption to your home.",
+            `${suburb} is one of Melbourne's most beautiful inner-eastern suburbs, famous for its grand Victorian terraces, Federation homes and leafy streets running down to the Yarra. Jetblack Painting provides the detailed, high-quality painting these historic homes deserve — alongside sharp modern finishes for ${suburb}'s contemporary townhouses and apartments.`,
+            `Every ${suburb} project starts with proper preparation and a clear, honest quote. Whether you're restoring an ornate terrace façade on a Grace Park street, refreshing a modern interior in Hawthorn East or updating a classic bungalow, our team delivers sharp lines, durable coatings and a professional result with minimal disruption to your home.`,
           ],
         },
         {
-          heading: "Heritage and Period Home Painting in Hawthorn",
+          heading: `Heritage Restoration and Period Home Painting in ${suburb}`,
           body: [
-            "Hawthorn's period architecture rewards careful work. We handle the specifics of Victorian and Federation homes — lead-paint-safe preparation, detailed timber and cast-iron lacework restoration, and heritage-appropriate colour schemes that suit the era and the streetscape. The finish protects the home's character and its considerable value.",
-            "For Hawthorn's modern properties, we use premium Dulux and Taubmans systems for crisp, long-lasting interiors and weather-resistant exteriors built for Melbourne conditions. Whatever the era, the standard stays the same: meticulous prep and a finish that lasts.",
+            `${suburb}'s period architecture rewards careful, experienced work. We handle the specifics of Victorian and Federation homes — lead-paint-safe preparation, detailed restoration of timber fretwork and cast-iron lacework, and heritage-appropriate colour schemes that suit both the property's era and any local heritage overlay. Done properly, the finish protects the home's character and its considerable value.`,
+            `For ${suburb}'s modern properties and renovations, we use premium Dulux and Taubmans systems for crisp, long-lasting interiors and weather-resistant exteriors built for Melbourne's conditions. Whatever the era, the standard stays the same: meticulous preparation, premium coatings, and a finish applied by a team that respects your property.`,
           ],
         },
       ]}
-      faqs={[{"question":"Do you specialise in Hawthorn's Victorian and Federation homes?","answer":"Yes. Hawthorn is known for its grand Victorian terraces and Federation homes, and we're experienced with their ornate detailing — lead-paint-safe preparation, timber and cast-iron lacework restoration, and heritage-appropriate colour schemes that suit the era and streetscape."},{"question":"How long does a house repaint take in Hawthorn?","answer":"Most Hawthorn homes are completed within 5 to 10 working days depending on size and the amount of preparation and detailing required. We provide a detailed timeline with every quote."},{"question":"Do you offer free quotes in Hawthorn?","answer":"Yes. We provide free, no-obligation written quotes across Hawthorn and Hawthorn East, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a visit."}]}
+      faqs={faqs}
     />
   );
 }

@@ -94,23 +94,91 @@ function localBusinessSchema() {
     },
     "areaServed": [
       { "@type": "City", "name": "Mordialloc" },
-      { "@type": "City", "name": "Parkdale" },
-      { "@type": "City", "name": "Mentone" },
+      { "@type": "City", "name": "Armadale" },
       { "@type": "City", "name": "Aspendale" },
+      { "@type": "City", "name": "Bayside" },
+      { "@type": "City", "name": "Beaumaris" },
+      { "@type": "City", "name": "Bentleigh" },
+      { "@type": "City", "name": "Berwick" },
+      { "@type": "City", "name": "Black Rock" },
+      { "@type": "City", "name": "Bonbeach" },
+      { "@type": "City", "name": "Box Hill" },
+      { "@type": "City", "name": "Brighton" },
+      { "@type": "City", "name": "Brighton East" },
+      { "@type": "City", "name": "Camberwell" },
+      { "@type": "City", "name": "Carlton" },
+      { "@type": "City", "name": "Carrum" },
+      { "@type": "City", "name": "Caulfield" },
+      { "@type": "City", "name": "Chadstone" },
       { "@type": "City", "name": "Chelsea" },
       { "@type": "City", "name": "Cheltenham" },
+      { "@type": "City", "name": "Clarinda" },
+      { "@type": "City", "name": "Croydon" },
+      { "@type": "City", "name": "Dandenong" },
+      { "@type": "City", "name": "Doncaster" },
+      { "@type": "City", "name": "Donvale" },
+      { "@type": "City", "name": "Edithvale" },
+      { "@type": "City", "name": "Elsternwick" },
+      { "@type": "City", "name": "Glen Waverley" },
+      { "@type": "City", "name": "Greater Dandenong" },
       { "@type": "City", "name": "Hampton" },
+      { "@type": "City", "name": "Hawthorn" },
+      { "@type": "City", "name": "Heatherton" },
+      { "@type": "City", "name": "Highett" },
+      { "@type": "City", "name": "Keysborough" },
+      { "@type": "City", "name": "Kew" },
+      { "@type": "City", "name": "Kingston" },
+      { "@type": "City", "name": "Malvern" },
+      { "@type": "City", "name": "McKinnon" },
+      { "@type": "City", "name": "Mentone" },
+      { "@type": "City", "name": "Moorabbin" },
+      { "@type": "City", "name": "Mornington Peninsula" },
+      { "@type": "City", "name": "Murrumbeena" },
+      { "@type": "City", "name": "Oakleigh" },
+      { "@type": "City", "name": "Ormond" },
+      { "@type": "City", "name": "Parkdale" },
+      { "@type": "City", "name": "Ringwood" },
       { "@type": "City", "name": "Sandringham" },
-      { "@type": "City", "name": "Beaumaris" },
-      { "@type": "City", "name": "Black Rock" }
+      { "@type": "City", "name": "South Yarra" },
+      { "@type": "City", "name": "Stonnington" },
+      { "@type": "City", "name": "Templestowe" },
+      { "@type": "City", "name": "Toorak" },
+      { "@type": "City", "name": "Wheelers Hill" }
     ],
-    "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across Melbourne's Bayside and Kingston suburbs.",
+    "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 50+ Melbourne suburbs.",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       "opens": "07:00",
       "closes": "18:00"
     }
+  };
+}
+
+function breadcrumbSchema({ suburb, canonical }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL + "/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Service Areas",
+        "item": SITE_URL + "/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": `Painters ${suburb}`,
+        "item": canonical
+      }
+    ]
   };
 }
 
@@ -316,7 +384,8 @@ function generateSuburbPage(route, sourceFile) {
       heroTitle: title,
       heroBody: description,
       schema: [
-        ...(suburb.toLowerCase() === "mordialloc" ? [localBusinessSchema()] : []),
+        localBusinessSchema(),
+        breadcrumbSchema({ suburb, canonical }),
         ...suburbSchema({ suburb, title, description, canonical }),
         ...(faqs.length ? [faqSchema(faqs)] : []),
       ],

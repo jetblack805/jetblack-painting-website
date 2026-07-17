@@ -14,6 +14,60 @@ import SEOHead from "@/components/SEOHead";
 
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
+const homeSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://jetblackpainting.com/#business",
+    "name": "Jetblack Painting",
+    "image": "https://jetblackpainting.com/og-image.jpg",
+    "telephone": "0432 077 782",
+    "email": "jimmy@jetblackpainting.com",
+    "url": "https://jetblackpainting.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mordialloc",
+      "addressRegion": "VIC",
+      "postalCode": "3195",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -38.0131,
+      "longitude": 145.0965
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Mordialloc" },
+      { "@type": "City", "name": "Brighton" },
+      { "@type": "City", "name": "Toorak" },
+      { "@type": "City", "name": "Camberwell" },
+      { "@type": "City", "name": "Hawthorn" },
+      { "@type": "City", "name": "Hampton" },
+      { "@type": "City", "name": "Sandringham" },
+      { "@type": "City", "name": "Cheltenham" },
+      { "@type": "City", "name": "Keysborough" },
+      { "@type": "City", "name": "Dandenong" },
+      { "@type": "City", "name": "Glen Waverley" },
+      { "@type": "City", "name": "Bentleigh" }
+    ],
+    "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 30+ Melbourne suburbs.",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Jetblack Painting",
+    "url": "https://jetblackpainting.com",
+    "description": "Professional house painters in Melbourne. Interior, exterior, commercial and roof painting across 30+ suburbs."
+  }
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -21,6 +75,7 @@ export default function Home() {
         title="Best Painters Melbourne | Local Painters Near Me | Free Quotes | Jetblack Painting"
         description="Best painters Melbourne — 5-star rated, fully insured, local painters near me. Interior, exterior, commercial, roof & cabinet painting across 30+ Melbourne suburbs. Servicing Brighton, Toorak, Keysborough, Mordialloc, Dandenong & more. Free quotes: 0432 077 782."
         canonical="https://jetblackpainting.com/"
+        schema={homeSchema}
       />
       <Navbar />
       <main>

@@ -114,6 +114,33 @@ function localBusinessSchema() {
   };
 }
 
+function breadcrumbSchema({ suburb, canonical }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL + "/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Service Areas",
+        "item": SITE_URL + "/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": `Painters ${suburb}`,
+        "item": canonical
+      }
+    ]
+  };
+}
+
 function extractNeighbours(source) {
   const block = source.match(/neighbouringSuburbs=\{\[(.*?)\]\}/s)?.[1] ?? "";
   const regex = /\{\s*name:\s*"([^"]+)"\s*,\s*link:\s*"([^"]+)"\s*\}/g;
@@ -316,7 +343,8 @@ function generateSuburbPage(route, sourceFile) {
       heroTitle: title,
       heroBody: description,
       schema: [
-        ...(suburb.toLowerCase() === "mordialloc" ? [localBusinessSchema()] : []),
+        localBusinessSchema(),
+        breadcrumbSchema({ suburb, canonical }),
         ...suburbSchema({ suburb, title, description, canonical }),
         ...(faqs.length ? [faqSchema(faqs)] : []),
       ],

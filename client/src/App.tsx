@@ -40,6 +40,7 @@ const BestPaintColours2025 = lazy(() => import("./pages/blog/BestPaintColours202
 const HousePaintingCostMelbourne = lazy(() => import("./pages/blog/HousePaintingCostMelbourne"));
 const PrepareHomePainting = lazy(() => import("./pages/blog/PrepareHomePainting"));
 const KitchenCabinetResurfacingBlog = lazy(() => import("./pages/blog/KitchenCabinetResurfacing"));
+const MouldRemediationPainting = lazy(() => import("./pages/blog/MouldRemediationPainting"));
 const ArmadalePainters = lazy(() => import("./pages/ArmadalePainters"));
 const BerwickPainters = lazy(() => import("./pages/BerwickPainters"));
 const DandenongPainters = lazy(() => import("./pages/DandenongPainters"));
@@ -73,6 +74,9 @@ const CarrumPainters = lazy(() => import("./pages/CarrumPainters"));
 const OakleighPainters = lazy(() => import("./pages/OakleighPainters"));
 const ClarindaPainters = lazy(() => import("./pages/ClarindaPainters"));
 const ChadsonePainters = lazy(() => import("./pages/ChadstonePainters"));
+const FrankstonPainters = lazy(() => import("./pages/FrankstonPainters"));
+const MorningtonPainters = lazy(() => import("./pages/MorningtonPainters"));
+const MountElizaPainters = lazy(() => import("./pages/MountElizaPainters"));
 
 function Router() {
   return (
@@ -192,12 +196,19 @@ function Router() {
       <Route path={"/painters-clarinda"} component={ClarindaPainters} />
       <Route path={"/painter-chadstone"} component={ChadsonePainters} />
       <Route path={"/painters-chadstone"} component={ChadsonePainters} />
+      <Route path={"/painter-frankston"} component={FrankstonPainters} />
+      <Route path={"/painters-frankston"} component={FrankstonPainters} />
+      <Route path={"/painter-mornington"} component={MorningtonPainters} />
+      <Route path={"/painters-mornington"} component={MorningtonPainters} />
+      <Route path={"/painter-mount-eliza"} component={MountElizaPainters} />
+      <Route path={"/painters-mount-eliza"} component={MountElizaPainters} />
       {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />
       <Route path={"/blog/house-painting-cost-melbourne"} component={HousePaintingCostMelbourne} />
       <Route path={"/blog/prepare-home-for-painting"} component={PrepareHomePainting} />
       <Route path={"/blog/kitchen-cabinet-resurfacing-vs-replacement"} component={KitchenCabinetResurfacingBlog} />
+      <Route path={"/blog/mould-remediation-painting-melbourne"} component={MouldRemediationPainting} />
       <Route path={"/blog/best-paint-colors-melbourne"} component={BestPaintColours2025} />
       <Route path={"/blog/brighton-painters-guide"} component={BrightonPainters} />
       <Route path={"/blog/camberwell-painters-guide"} component={CamberwellPainters} />

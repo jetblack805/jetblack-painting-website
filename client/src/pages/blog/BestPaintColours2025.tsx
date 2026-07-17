@@ -8,8 +8,8 @@ export default function BestPaintColours2025() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Best Paint Colours for Melbourne Homes in 2025 | Jetblack Painting"
-        description="Discover the best paint colours for Melbourne homes in 2025, with expert advice from Jetblack Painting on interior and exterior colour selection."
+        title="Best Paint Colours for Melbourne Homes in 2026 | Jetblack Painting"
+        description="Discover the best paint colours for Melbourne homes in 2026, with expert advice from Jetblack Painting on interior and exterior colour selection."
         canonical="https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025/"
       />
       <Navbar />
@@ -26,11 +26,11 @@ export default function BestPaintColours2025() {
           {/* Article Header */}
           <header className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-[#0D0D0D] mb-4 leading-tight">
-              Best Paint Colours for Melbourne Homes in 2025
+              Best Paint Colours for Melbourne Homes in 2026
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
               <span className="flex items-center gap-1"><User className="w-4 h-4" /> Jimmy Demirci</span>
-              <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> May 2025</span>
+              <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> July 2026</span>
               <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 6 min read</span>
             </div>
           </header>
@@ -43,7 +43,7 @@ export default function BestPaintColours2025() {
               and what doesn't in our unique climate and architectural styles.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Interior Paint Colours Trending in Melbourne 2025</h2>
+            <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Interior Paint Colours Trending in Melbourne 2026</h2>
             
             <p className="text-gray-700 mb-4">
               Melbourne homeowners are embracing warm, earthy tones that create a sense of calm and sophistication. 
@@ -80,7 +80,7 @@ export default function BestPaintColours2025() {
             <p className="text-gray-700 mb-4">
               Melbourne's variable weather — from scorching summers to cold, wet winters — means your 
               <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline"> exterior paint</Link> needs 
-              to withstand UV exposure, moisture, and temperature fluctuations. Here's what's working in 2025:
+              to withstand UV exposure, moisture, and temperature fluctuations. Here's what's working in 2026:
             </p>
 
             <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">4. Warm Greys & Greige</h3>

@@ -244,6 +244,27 @@ export const SUBURBS_DATA = {
     postcode: "3148",
     description: "Well-connected Monash council suburb with post-war brick homes and modern infill development",
     areasServed: ["Chadstone", "Oakleigh North"]
+  },
+  frankston: {
+    name: "Frankston",
+    coordinates: { lat: -38.1452, lng: 145.1219 },
+    postcode: "3199",
+    description: "Gateway suburb to the Mornington Peninsula with coastal foreshore and diverse residential housing",
+    areasServed: ["Frankston", "Frankston South", "Frankston North"]
+  },
+  mornington: {
+    name: "Mornington",
+    coordinates: { lat: -38.2208, lng: 145.0378 },
+    postcode: "3931",
+    description: "Mornington Peninsula residential town with heritage Main Street precinct and coastal holiday homes",
+    areasServed: ["Mornington", "Moorooduc", "Mount Martha"]
+  },
+  mountEliza: {
+    name: "Mount Eliza",
+    coordinates: { lat: -38.1844, lng: 145.0856 },
+    postcode: "3930",
+    description: "Exclusive semi-rural suburb at the northern tip of the Mornington Peninsula with prestige homes on large blocks",
+    areasServed: ["Mount Eliza", "Canadian Bay"]
   }
 };
 

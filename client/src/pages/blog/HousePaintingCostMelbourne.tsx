@@ -8,8 +8,8 @@ export default function HousePaintingCostMelbourne() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="House Painting Cost Melbourne (2025 Price Guide) | Jetblack Painting"
-        description="Learn how much house painting costs in Melbourne with Jetblack Painting’s 2025 pricing guide for interior, exterior and commercial projects."
+        title="House Painting Cost Melbourne (2026 Price Guide) | Jetblack Painting"
+        description="Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects."
         canonical="https://jetblackpainting.com/blog/house-painting-cost-melbourne/"
       />
       <Navbar />
@@ -26,11 +26,11 @@ export default function HousePaintingCostMelbourne() {
           {/* Article Header */}
           <header className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-[#0D0D0D] mb-4 leading-tight">
-              How Much Does House Painting Cost in Melbourne? (2025 Price Guide)
+              How Much Does House Painting Cost in Melbourne? (2026 Price Guide)
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
               <span className="flex items-center gap-1"><User className="w-4 h-4" /> Jimmy Demirci</span>
-              <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> May 2025</span>
+              <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> July 2026</span>
               <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 8 min read</span>
             </div>
           </header>
@@ -39,7 +39,7 @@ export default function HousePaintingCostMelbourne() {
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 mb-8">
               One of the most common questions we get asked as <strong>professional painters in Melbourne</strong> is 
-              "How much will it cost to paint my house?" Here's our comprehensive 2025 price guide based on 
+              "How much will it cost to paint my house?" Here's our comprehensive 2026 price guide based on 
               real projects we've completed across Melbourne.
             </p>
 

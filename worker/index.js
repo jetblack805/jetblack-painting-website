@@ -65,6 +65,13 @@ const PATH_REDIRECTS = {
   "/painters-parkdale":             "/painter-parkdale/",
   "/painters-aspendale":            "/painter-aspendale/",
   "/painters-chelsea":              "/painter-chelsea/",
+  "/painters-south-yarra":          "/painter-south-yarra/",
+  "/painters-elsternwick":          "/painter-elsternwick/",
+
+  // Legacy hash-anchor routes (rendered Home, treated as duplicate by Google)
+  "/about":                         "/",
+  "/contact":                       "/",
+  "/our-work":                      "/",
 };
 
 export default {

@@ -2,32 +2,77 @@ import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function MordiallocPainters() {
   const suburb = "Mordialloc";
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": `Professional House Painting Services in ${suburb}`,
-    "provider": {
-      "@type": "HomeAndConstructionBusiness",
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://jetblackpainting.com/#business",
       "name": "Jetblack Painting",
+      "image": "https://jetblackpainting.com/og-image.jpg",
       "telephone": "0432 077 782",
+      "email": "jimmy@jetblackpainting.com",
       "url": "https://jetblackpainting.com",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Melbourne",
+        "addressLocality": "Mordialloc",
         "addressRegion": "VIC",
+        "postalCode": "3195",
         "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -38.0131,
+        "longitude": 145.0965
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Mordialloc" },
+        { "@type": "City", "name": "Parkdale" },
+        { "@type": "City", "name": "Mentone" },
+        { "@type": "City", "name": "Aspendale" },
+        { "@type": "City", "name": "Chelsea" },
+        { "@type": "City", "name": "Cheltenham" },
+        { "@type": "City", "name": "Hampton" },
+        { "@type": "City", "name": "Sandringham" },
+        { "@type": "City", "name": "Beaumaris" },
+        { "@type": "City", "name": "Black Rock" }
+      ],
+      "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across Melbourne's Bayside and Kingston suburbs.",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "18:00"
       }
     },
-    "areaServed": {
-      "@type": "City",
-      "name": suburb
-    },
-    "description": `Jetblack Painting provides premium interior, exterior, and commercial painting services in ${suburb}. Specializing in coastal home protection and heritage property restoration.`,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}`
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": `Professional House Painting Services in ${suburb}`,
+      "provider": {
+        "@type": "HomeAndConstructionBusiness",
+        "name": "Jetblack Painting",
+        "telephone": "0432 077 782",
+        "url": "https://jetblackpainting.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mordialloc",
+          "addressRegion": "VIC",
+          "postalCode": "3195",
+          "addressCountry": "AU"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": suburb
+      },
+      "description": `Jetblack Painting provides premium interior, exterior, and commercial painting services in ${suburb}. Specializing in coastal home protection and heritage property restoration.`,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}/`
+      }
     }
-  };
+  ];
 
   const faqs = [
     {
@@ -50,11 +95,11 @@ export default function MordiallocPainters() {
       title="Mordialloc Painters | Coastal House Painting Specialists | Jetblack Painting"
       description={`Expert house painters in ${suburb}. Specializing in interior, exterior, and commercial painting for coastal and heritage homes. 5-star rated, fully licensed, free quotes.`}
       neighbouringSuburbs={[
-        { name: "Hampton", link: "/painter-hampton" },
-        { name: "Bentleigh", link: "/painter-bentleigh" },
-        { name: "Brighton", link: "/painter-brighton" },
-        { name: "Keysborough", link: "/keysborough-painters" },
-        { name: "Caulfield", link: "/painter-caulfield" },
+        { name: "Parkdale", link: "/painter-parkdale" },
+        { name: "Mentone", link: "/painter-mentone" },
+        { name: "Aspendale", link: "/painter-aspendale" },
+        { name: "Chelsea", link: "/painter-chelsea" },
+        { name: "Cheltenham", link: "/painter-cheltenham" },
       ]}
       localExpertise={`As local painting experts serving ${suburb} and the wider Bayside area, we understand the unique challenges of coastal living. Our team has extensive experience with ${suburb}'s distinctive coastal environment, including protection against salt air corrosion, UV rays, and Melbourne's unpredictable climate.`}
       propertyTypes={`${suburb}'s diverse range of properties includes classic weatherboard beach houses, contemporary bayside residences, and period homes. We adapt our techniques to suit each unique architectural style, ensuring a flawless and durable finish.`}

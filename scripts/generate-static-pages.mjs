@@ -69,6 +69,51 @@ function extractFaqs(source, suburb) {
   return faqs;
 }
 
+function localBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${SITE_URL}/#business`,
+    "name": "Jetblack Painting",
+    "image": `${SITE_URL}/og-image.jpg`,
+    "telephone": PHONE_DISPLAY,
+    "email": EMAIL,
+    "url": SITE_URL,
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mordialloc",
+      "addressRegion": "VIC",
+      "postalCode": "3195",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -38.0131,
+      "longitude": 145.0965
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Mordialloc" },
+      { "@type": "City", "name": "Parkdale" },
+      { "@type": "City", "name": "Mentone" },
+      { "@type": "City", "name": "Aspendale" },
+      { "@type": "City", "name": "Chelsea" },
+      { "@type": "City", "name": "Cheltenham" },
+      { "@type": "City", "name": "Hampton" },
+      { "@type": "City", "name": "Sandringham" },
+      { "@type": "City", "name": "Beaumaris" },
+      { "@type": "City", "name": "Black Rock" }
+    ],
+    "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across Melbourne's Bayside and Kingston suburbs.",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  };
+}
+
 function extractNeighbours(source) {
   const block = source.match(/neighbouringSuburbs=\{\[(.*?)\]\}/s)?.[1] ?? "";
   const regex = /\{\s*name:\s*"([^"]+)"\s*,\s*link:\s*"([^"]+)"\s*\}/g;
@@ -270,7 +315,11 @@ function generateSuburbPage(route, sourceFile) {
       canonical,
       heroTitle: title,
       heroBody: description,
-      schema: [...suburbSchema({ suburb, title, description, canonical }), ...(faqs.length ? [faqSchema(faqs)] : [])],
+      schema: [
+        ...(suburb.toLowerCase() === "mordialloc" ? [localBusinessSchema()] : []),
+        ...suburbSchema({ suburb, title, description, canonical }),
+        ...(faqs.length ? [faqSchema(faqs)] : []),
+      ],
       sections: [
         {
           heading: `Local painting services in ${suburb}`,

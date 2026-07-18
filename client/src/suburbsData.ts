@@ -294,6 +294,13 @@ export const SUBURBS_DATA = {
     description: "Coastal Mornington Peninsula suburb with foreshore properties, hillside homes and a large holiday property stock",
     areasServed: ["Mount Martha", "Balcombe"]
   },
+  fitzroy: {
+    name: "Fitzroy",
+    coordinates: { lat: -37.7982, lng: 144.9782 },
+    postcode: "3065",
+    description: "Inner-north Melbourne suburb with one of the city's densest concentrations of Victorian terrace houses, heritage streetscapes, and a large rental and investment property market",
+    areasServed: ["Fitzroy", "Fitzroy North", "Collingwood"]
+  },
   albertPark: {
     name: "Albert Park",
     coordinates: { lat: -37.8453, lng: 144.9603 },

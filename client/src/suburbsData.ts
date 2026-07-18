@@ -294,6 +294,13 @@ export const SUBURBS_DATA = {
     description: "Coastal Mornington Peninsula suburb with foreshore properties, hillside homes and a large holiday property stock",
     areasServed: ["Mount Martha", "Balcombe"]
   },
+  albertPark: {
+    name: "Albert Park",
+    coordinates: { lat: -37.8453, lng: 144.9603 },
+    postcode: "3206",
+    description: "Prestigious inner-south suburb surrounding Albert Park Lake with Victorian terraces, heritage streetscapes, and the Formula 1 Grand Prix circuit",
+    areasServed: ["Albert Park", "Middle Park", "South Melbourne"]
+  },
   portMelbourne: {
     name: "Port Melbourne",
     coordinates: { lat: -37.8321, lng: 144.9378 },

@@ -92,6 +92,7 @@ const PATH_REDIRECTS = {
   "/painters-fitzroy":              "/painter-fitzroy/",
   "/painters-collingwood":          "/painter-collingwood/",
   "/painters-richmond":             "/painter-richmond/",
+  "/painters-northcote":            "/painter-northcote/",
 
   // Legacy hash-anchor routes (rendered Home, treated as duplicate by Google)
   "/about":                         "/",

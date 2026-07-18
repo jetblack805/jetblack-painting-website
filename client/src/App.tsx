@@ -77,6 +77,11 @@ const ChadsonePainters = lazy(() => import("./pages/ChadstonePainters"));
 const FrankstonPainters = lazy(() => import("./pages/FrankstonPainters"));
 const MorningtonPainters = lazy(() => import("./pages/MorningtonPainters"));
 const MountElizaPainters = lazy(() => import("./pages/MountElizaPainters"));
+const GlenIrisPainters = lazy(() => import("./pages/GlenIrisPainters"));
+const PrahranPainters = lazy(() => import("./pages/PrahranPainters"));
+const BalwynPainters = lazy(() => import("./pages/BalwynPainters"));
+const MountMarthaPainters = lazy(() => import("./pages/MountMarthaPainters"));
+const ElwoodPainters = lazy(() => import("./pages/ElwoodPainters"));
 
 function Router() {
   return (
@@ -202,6 +207,16 @@ function Router() {
       <Route path={"/painters-mornington"} component={MorningtonPainters} />
       <Route path={"/painter-mount-eliza"} component={MountElizaPainters} />
       <Route path={"/painters-mount-eliza"} component={MountElizaPainters} />
+      <Route path={"/painter-glen-iris"} component={GlenIrisPainters} />
+      <Route path={"/painters-glen-iris"} component={GlenIrisPainters} />
+      <Route path={"/painter-prahran"} component={PrahranPainters} />
+      <Route path={"/painters-prahran"} component={PrahranPainters} />
+      <Route path={"/painter-balwyn"} component={BalwynPainters} />
+      <Route path={"/painters-balwyn"} component={BalwynPainters} />
+      <Route path={"/painter-mount-martha"} component={MountMarthaPainters} />
+      <Route path={"/painters-mount-martha"} component={MountMarthaPainters} />
+      <Route path={"/painter-elwood"} component={ElwoodPainters} />
+      <Route path={"/painters-elwood"} component={ElwoodPainters} />
       {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />

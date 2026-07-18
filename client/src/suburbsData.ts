@@ -265,6 +265,41 @@ export const SUBURBS_DATA = {
     postcode: "3930",
     description: "Exclusive semi-rural suburb at the northern tip of the Mornington Peninsula with prestige homes on large blocks",
     areasServed: ["Mount Eliza", "Canadian Bay"]
+  },
+  glenIris: {
+    name: "Glen Iris",
+    coordinates: { lat: -37.8608, lng: 145.0572 },
+    postcode: "3146",
+    description: "Large inner-east Boroondara suburb with a dense concentration of Edwardian and interwar period homes",
+    areasServed: ["Glen Iris", "Gardiner", "Tooronga"]
+  },
+  prahran: {
+    name: "Prahran",
+    coordinates: { lat: -37.8490, lng: 144.9926 },
+    postcode: "3181",
+    description: "Densely housed inner-south suburb with Victorian terraces, Art Deco apartments and modern infill development",
+    areasServed: ["Prahran", "Windsor"]
+  },
+  balwyn: {
+    name: "Balwyn",
+    coordinates: { lat: -37.8094, lng: 145.0884 },
+    postcode: "3103",
+    description: "Leafy inner-east Boroondara suburb with interwar period homes and generous post-war properties in Balwyn North",
+    areasServed: ["Balwyn", "Balwyn North"]
+  },
+  mountMartha: {
+    name: "Mount Martha",
+    coordinates: { lat: -38.2765, lng: 145.0236 },
+    postcode: "3934",
+    description: "Coastal Mornington Peninsula suburb with foreshore properties, hillside homes and a large holiday property stock",
+    areasServed: ["Mount Martha", "Balcombe"]
+  },
+  elwood: {
+    name: "Elwood",
+    coordinates: { lat: -37.8749, lng: 144.9842 },
+    postcode: "3184",
+    description: "Affluent coastal inner-south suburb with Victorian cottages, Edwardian homes and Art Deco apartments on Port Phillip Bay",
+    areasServed: ["Elwood", "St Kilda South"]
   }
 };
 

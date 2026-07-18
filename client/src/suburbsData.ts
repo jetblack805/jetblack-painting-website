@@ -329,6 +329,13 @@ export const SUBURBS_DATA = {
     description: "Iconic inner-south suburb on Port Phillip Bay with Art Deco apartment blocks, Victorian terraces and a high-density rental market",
     areasServed: ["St Kilda", "St Kilda West", "St Kilda East"]
   },
+  northcote: {
+    name: "Northcote",
+    coordinates: { lat: -37.7742, lng: 145.0008 },
+    postcode: "3070",
+    description: "Character-rich inner-north Melbourne suburb with Victorian terraces, Edwardian cottages, Californian bungalows and the vibrant High Street cafe precinct",
+    areasServed: ["Northcote", "Westgarth", "Thornbury South"]
+  },
   richmond: {
     name: "Richmond",
     coordinates: { lat: -37.8182, lng: 145.0003 },

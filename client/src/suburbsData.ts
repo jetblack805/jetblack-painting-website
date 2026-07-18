@@ -329,6 +329,13 @@ export const SUBURBS_DATA = {
     description: "Iconic inner-south suburb on Port Phillip Bay with Art Deco apartment blocks, Victorian terraces and a high-density rental market",
     areasServed: ["St Kilda", "St Kilda West", "St Kilda East"]
   },
+  richmond: {
+    name: "Richmond",
+    coordinates: { lat: -37.8182, lng: 145.0003 },
+    postcode: "3121",
+    description: "Inner-east Melbourne suburb with Victorian terraces, heritage streetscapes, and famous commercial strips along Bridge Road, Church Street and Swan Street",
+    areasServed: ["Richmond", "Cremorne", "Burnley"]
+  },
   elwood: {
     name: "Elwood",
     coordinates: { lat: -37.8749, lng: 144.9842 },

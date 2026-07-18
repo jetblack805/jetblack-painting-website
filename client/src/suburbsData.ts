@@ -294,6 +294,13 @@ export const SUBURBS_DATA = {
     description: "Coastal Mornington Peninsula suburb with foreshore properties, hillside homes and a large holiday property stock",
     areasServed: ["Mount Martha", "Balcombe"]
   },
+  stKilda: {
+    name: "St Kilda",
+    coordinates: { lat: -37.8672, lng: 144.9814 },
+    postcode: "3182",
+    description: "Iconic inner-south suburb on Port Phillip Bay with Art Deco apartment blocks, Victorian terraces and a high-density rental market",
+    areasServed: ["St Kilda", "St Kilda West", "St Kilda East"]
+  },
   elwood: {
     name: "Elwood",
     coordinates: { lat: -37.8749, lng: 144.9842 },

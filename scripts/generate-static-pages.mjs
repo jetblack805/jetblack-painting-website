@@ -152,7 +152,8 @@ function localBusinessSchema() {
       { "@type": "City", "name": "Balwyn" },
       { "@type": "City", "name": "Mount Martha" },
       { "@type": "City", "name": "Elwood" },
-      { "@type": "City", "name": "St Kilda" }
+      { "@type": "City", "name": "St Kilda" },
+      { "@type": "City", "name": "Port Melbourne" }
     ],
     "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 50+ Melbourne suburbs.",
     "openingHoursSpecification": {
@@ -522,6 +523,7 @@ const allSuburbPages = [
   { route: "/painter-mount-martha", source: "MountMarthaPainters.tsx" },
   { route: "/painter-elwood", source: "ElwoodPainters.tsx" },
   { route: "/painter-st-kilda", source: "StKildaPainters.tsx" },
+  { route: "/painter-port-melbourne", source: "PortMelbournePainters.tsx" },
 ];
 
 for (const page of allSuburbPages) {

@@ -294,6 +294,13 @@ export const SUBURBS_DATA = {
     description: "Coastal Mornington Peninsula suburb with foreshore properties, hillside homes and a large holiday property stock",
     areasServed: ["Mount Martha", "Balcombe"]
   },
+  portMelbourne: {
+    name: "Port Melbourne",
+    coordinates: { lat: -37.8321, lng: 144.9378 },
+    postcode: "3207",
+    description: "Historic inner-bayside suburb on Port Phillip Bay with Victorian cottages, converted warehouses, and waterfront apartments",
+    areasServed: ["Port Melbourne", "Garden City", "Fishermans Bend"]
+  },
   stKilda: {
     name: "St Kilda",
     coordinates: { lat: -37.8672, lng: 144.9814 },

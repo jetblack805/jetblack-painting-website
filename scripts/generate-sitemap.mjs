@@ -74,6 +74,7 @@ const ROUTES = [
   { path: "/painter-mount-martha/",                          priority: "0.9", changefreq: "monthly" },
   { path: "/painter-elwood/",                                priority: "0.9", changefreq: "monthly" },
   { path: "/painter-st-kilda/",                              priority: "0.9", changefreq: "monthly" },
+  { path: "/painter-port-melbourne/",                        priority: "0.9", changefreq: "monthly" },
   { path: "/blog/",                                             priority: "0.6", changefreq: "weekly"  },
   { path: "/blog/best-paint-colours-melbourne-2025/",           priority: "0.5", changefreq: "yearly"  },
   { path: "/blog/house-painting-cost-melbourne/",               priority: "0.5", changefreq: "yearly"  },

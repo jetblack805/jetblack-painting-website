@@ -45,14 +45,14 @@ export default function About() {
                 alt="Jimmy Demirci, owner of Jetblack Painting, on the job in Melbourne"
                 className="w-full rounded-lg shadow-2xl"
               />
-              <div className="absolute -bottom-8 -right-4 lg:-right-8 w-40 sm:w-52 rounded-lg overflow-hidden shadow-xl border-4 border-[#0D0D0D]">
+              <div className="absolute -bottom-8 -right-4 lg:-right-8 w-40 sm:w-52 rounded-lg overflow-hidden shadow-xl border-4 border-[#12100C]">
                 <img loading="lazy" decoding="async"
                   src={ABOUT_IMG}
                   alt="Jetblack Painting team on site in Melbourne"
                   className="w-full h-32 sm:h-40 object-cover"
                 />
               </div>
-              <div className="absolute -top-4 -left-4 bg-[#007A99] text-white rounded-lg px-5 py-3 shadow-lg">
+              <div className="absolute -top-4 -left-4 bg-[#C49826] text-[#0D0D0D] rounded-lg px-5 py-3 shadow-lg">
                 <div className="text-2xl font-bold" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>13+</div>
                 <div className="text-xs font-medium uppercase tracking-wider">Years Exp.</div>
               </div>
@@ -64,7 +64,7 @@ export default function About() {
             ref={content.ref}
             className={`reveal right ${content.visible ? "visible" : ""}`}
           >
-            <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
+            <span className="text-[#D4AB3A] font-semibold text-sm tracking-widest uppercase mb-3 block">
               Meet the Owner
             </span>
             <h2
@@ -72,7 +72,7 @@ export default function About() {
               style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
             >
               Hi, I'm Jimmy —{" "}
-              <span className="text-[#00AACC]">I'm on Every Job</span>
+              <span className="text-[#D4AB3A]">I'm on Every Job</span>
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-5">
               I'm Jimmy Demirci, founder and owner of Jetblack Painting. I started this
@@ -113,8 +113,8 @@ function ValueCard({ value, delay }: { value: (typeof values)[number]; delay: nu
       className={`reveal up flex gap-3 ${visible ? "visible" : ""}`}
       style={{ transitionDelay: visible ? `${delay}s` : "0s" }}
     >
-      <div className="w-10 h-10 rounded bg-[#007A99]/10 flex items-center justify-center shrink-0">
-        <value.icon className="w-5 h-5 text-[#00AACC]" />
+      <div className="w-10 h-10 rounded bg-[#C49826]/10 flex items-center justify-center shrink-0">
+        <value.icon className="w-5 h-5 text-[#D4AB3A]" />
       </div>
       <div>
         <h3 className="text-white font-semibold text-sm mb-1">{value.title}</h3>

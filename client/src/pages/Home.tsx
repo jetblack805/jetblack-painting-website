@@ -118,12 +118,12 @@ export default function Home() {
       />
       <Navbar />
       <main>
-      <section className="bg-[#F5F5F0] pt-28 pb-6 lg:pt-32">
+      <section className="bg-[#12100C] pt-28 pb-6 lg:pt-32">
         <div className="container max-w-4xl text-center">
-          <p className="text-2xl md:text-3xl font-bold text-[#0D0D0D] mb-2">
+          <p className="text-2xl md:text-3xl font-bold text-[#EDE6D8] mb-2">
             Melbourne's Best-Rated Local House Painters
           </p>
-          <p className="text-gray-600 text-sm md:text-base">
+          <p className="text-[#A39C90] text-sm md:text-base">
             5-star rated, fully insured, and servicing 30+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
             Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.
             Free quotes — call 0432 077 782.

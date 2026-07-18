@@ -129,7 +129,7 @@ export default function Gallery() {
           ref={header.ref}
           className={`reveal up max-w-2xl mb-12 ${header.visible ? "visible" : ""}`}
         >
-          <span className="text-[#00AACC] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#D4AB3A] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Our Portfolio
           </span>
           <h2
@@ -152,7 +152,7 @@ export default function Gallery() {
               onClick={() => setFilter(cat)}
               className={`px-5 py-2 rounded text-sm font-medium transition-all duration-200 ${
                 filter === cat
-                  ? "bg-[#007A99] text-white"
+                  ? "bg-[#C49826] text-[#0D0D0D]"
                   : "bg-white/10 text-white/60 hover:bg-white/15 hover:text-white"
               }`}
             >
@@ -188,7 +188,7 @@ export default function Gallery() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="text-[#00AACC] text-xs font-semibold uppercase tracking-wider">
+                      <span className="text-[#D4AB3A] text-xs font-semibold uppercase tracking-wider">
                         {project.category}
                       </span>
                       <p className="text-white text-sm mt-1 line-clamp-2">{project.alt}</p>

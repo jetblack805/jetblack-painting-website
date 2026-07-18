@@ -21,9 +21,9 @@ export default function Hero() {
       <div className="container relative z-10 pt-28 pb-20">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="hero-fade-in inline-flex items-center gap-2 border border-[#00AACC]/40 rounded-full px-4 py-1.5 mb-6" style={{ animationDelay: "0.1s" }}>
-            <span className="w-2 h-2 rounded-full bg-[#007A99] animate-pulse" />
-            <span className="text-[#00AACC] text-sm font-medium tracking-wide">
+          <div className="hero-fade-in inline-flex items-center gap-2 border border-[#D4AB3A]/40 rounded-full px-4 py-1.5 mb-6" style={{ animationDelay: "0.1s" }}>
+            <span className="w-2 h-2 rounded-full bg-[#C49826] animate-pulse" />
+            <span className="text-[#D4AB3A] text-sm font-medium tracking-wide">
               Melbourne's Trusted Painting Specialists
             </span>
           </div>
@@ -34,7 +34,7 @@ export default function Hero() {
             style={{ fontFamily: "'Outfit', system-ui, sans-serif", animationDelay: "0.25s" }}
           >
             Professional House Painting in Melbourne{" "}
-            <span className="text-[#00AACC]">Done Right</span>
+            <span className="text-[#D4AB3A]">Done Right</span>
           </h1>
 
           {/* Subtext */}
@@ -49,7 +49,7 @@ export default function Hero() {
           <div className="hero-fade-in flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.55s" }}>
             <a
               href="tel:0432077782"
-              className="flex items-center justify-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-base transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-4 rounded font-bold text-base transition-all duration-200 hover:shadow-lg hover:shadow-[#D4AB3A]/30 hover:-translate-y-0.5"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782
@@ -71,7 +71,7 @@ export default function Hero() {
               { value: "All", label: "Melbourne Suburbs" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl sm:text-3xl font-bold text-[#00AACC]" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>
+                <div className="text-2xl sm:text-3xl font-bold text-[#D4AB3A]" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>
                   {stat.value}
                 </div>
                 <div className="text-white/50 text-sm mt-1">{stat.label}</div>
@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="hero-fade-in absolute bottom-8 left-1/2 -translate-x-1/2 z-10" style={{ animationDelay: "1s" }}>
         <button
           onClick={() => scrollToSection("#services")}
-          className="text-white/40 hover:text-[#00AACC] transition-colors"
+          className="text-white/40 hover:text-[#D4AB3A] transition-colors"
           aria-label="Scroll down"
         >
           <ArrowDown className="w-6 h-6 animate-bounce" />

@@ -61,23 +61,23 @@ export default function Services() {
   const header = useInView("-100px");
 
   return (
-    <section id="services" className="py-24 bg-[#F5F5F0]">
+    <section id="services" className="py-24 bg-[#12100C]">
       <div className="container">
         {/* Section Header */}
         <div
           ref={header.ref}
           className={`reveal up max-w-2xl mb-16 ${header.visible ? "visible" : ""}`}
         >
-          <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#C49826] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Professional Painting Services
           </span>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D0D0D] leading-tight mb-5"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#EDE6D8] leading-tight mb-5"
             style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
           >
             Our Services
           </h2>
-          <p className="text-[#555] text-lg leading-relaxed">
+          <p className="text-[#B3ACA1] text-lg leading-relaxed">
             From residential repaints to large-scale commercial projects, Jetblack Painting
             delivers professional results across all aspects of painting in Melbourne.
           </p>
@@ -106,7 +106,7 @@ function ServiceCard({
     <Link href={service.link}>
       <div
         ref={ref}
-        className={`reveal up group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full ${visible ? "visible" : ""}`}
+        className={`reveal up group bg-[#1A1713] rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full ${visible ? "visible" : ""}`}
         style={{ transitionDelay: visible ? `${delay}s` : "0s" }}
       >
         {/* Image */}
@@ -118,7 +118,7 @@ function ServiceCard({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 to-transparent" />
           <div className="absolute bottom-4 left-4">
-            <div className="w-10 h-10 rounded bg-[#007A99] flex items-center justify-center">
+            <div className="w-10 h-10 rounded bg-[#C49826] flex items-center justify-center">
               <service.icon className="w-5 h-5 text-white" />
             </div>
           </div>
@@ -127,12 +127,12 @@ function ServiceCard({
         {/* Content */}
         <div className="p-6">
           <h3
-            className="text-xl font-bold text-[#0D0D0D] mb-3 group-hover:text-[#007A99] transition-colors"
+            className="text-xl font-bold text-[#EDE6D8] mb-3 group-hover:text-[#C49826] transition-colors"
             style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
           >
             {service.title}
           </h3>
-          <p className="text-[#666] text-sm leading-relaxed">
+          <p className="text-[#A39C90] text-sm leading-relaxed">
             {service.description}
           </p>
         </div>

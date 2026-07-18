@@ -170,7 +170,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#1A1713]">
       <SEOHead
         title="Painting FAQs Melbourne | Jetblack Painting"
         description="Frequently asked questions about Jetblack Painting services in Melbourne, including quotes, service areas, interior, exterior and commercial painting."
@@ -208,12 +208,12 @@ export default function FAQ() {
               viewport={{ once: true }}
               className="mb-12"
             >
-              <h2 className="text-2xl font-bold text-[#0D0D0D] mb-6">{category.category}</h2>
+              <h2 className="text-2xl font-bold text-[#EDE6D8] mb-6">{category.category}</h2>
               <div className="space-y-4">
                 {category.items.map((faq, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="border border-gray-200 rounded-lg overflow-hidden"
+                    className="border border-[#2A261F] rounded-lg overflow-hidden"
                   >
                     <button
                       onClick={() =>
@@ -223,18 +223,18 @@ export default function FAQ() {
                             : catIndex * 100 + itemIndex
                         )
                       }
-                      className="w-full flex items-center justify-between p-6 bg-gray-50 hover:bg-gray-100 transition-colors text-left"
+                      className="w-full flex items-center justify-between p-6 bg-[#17140F] hover:bg-[#1C1914] transition-colors text-left"
                     >
-                      <h3 className="font-bold text-[#0D0D0D] text-lg">{faq.q}</h3>
+                      <h3 className="font-bold text-[#EDE6D8] text-lg">{faq.q}</h3>
                       <ChevronDown
-                        className={`w-5 h-5 text-[#00AACC] transition-transform ${
+                        className={`w-5 h-5 text-[#D4AB3A] transition-transform ${
                           openIndex === catIndex * 100 + itemIndex ? "rotate-180" : ""
                         }`}
                       />
                     </button>
                     {openIndex === catIndex * 100 + itemIndex && (
-                      <div className="p-6 bg-white border-t border-gray-200">
-                        <p className="text-gray-700 leading-relaxed">{faq.a}</p>
+                      <div className="p-6 bg-[#1A1713] border-t border-[#2A261F]">
+                        <p className="text-[#B3ACA1] leading-relaxed">{faq.a}</p>
                       </div>
                     )}
                   </div>
@@ -256,7 +256,7 @@ export default function FAQ() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               Call 0432 077 782
             </a>

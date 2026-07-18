@@ -3,32 +3,32 @@ import { Shield, Award, CheckCircle, Star, Clock, Users } from "lucide-react";
 export default function TrustBadges() {
   const badges = [
     {
-      icon: <Shield className="w-10 h-10 text-[#00AACC]" />,
+      icon: <Shield className="w-10 h-10 text-[#D4AB3A]" />,
       title: "$10M Public Liability",
       description: "Fully insured for your peace of mind"
     },
     {
-      icon: <Award className="w-10 h-10 text-[#00AACC]" />,
+      icon: <Award className="w-10 h-10 text-[#D4AB3A]" />,
       title: "Licensed & Registered",
       description: "VIC registered painting contractor"
     },
     {
-      icon: <CheckCircle className="w-10 h-10 text-[#00AACC]" />,
+      icon: <CheckCircle className="w-10 h-10 text-[#D4AB3A]" />,
       title: "5-Year Written Guarantee",
       description: "Every project backed by our written guarantee"
     },
     {
-      icon: <Star className="w-10 h-10 text-[#00AACC]" />,
+      icon: <Star className="w-10 h-10 text-[#D4AB3A]" />,
       title: "5-Star Google Rating",
       description: "5-star Google reviews"
     },
     {
-      icon: <Clock className="w-10 h-10 text-[#00AACC]" />,
+      icon: <Clock className="w-10 h-10 text-[#D4AB3A]" />,
       title: "13+ Years Experience",
       description: "Trusted since 2011 across Melbourne"
     },
     {
-      icon: <Users className="w-10 h-10 text-[#00AACC]" />,
+      icon: <Users className="w-10 h-10 text-[#D4AB3A]" />,
       title: "2,500+ Projects Completed",
       description: "Residential & commercial painting"
     }
@@ -48,7 +48,7 @@ export default function TrustBadges() {
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-4 rounded-lg bg-[#1a1a1a] border border-gray-800 hover:border-[#00AACC] transition-colors"
+              className="flex flex-col items-center text-center p-4 rounded-lg bg-[#1a1a1a] border border-gray-800 hover:border-[#D4AB3A] transition-colors"
             >
               <div className="mb-3">{badge.icon}</div>
               <h3 className="text-white font-semibold text-sm mb-1">{badge.title}</h3>
@@ -68,13 +68,13 @@ export default function TrustBadges() {
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <a
               href="tel:0432077782"
-              className="inline-flex items-center px-6 py-3 bg-[#007A99] text-white font-bold rounded-lg hover:bg-[#006B85] transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-[#C49826] text-[#0D0D0D] font-bold rounded-lg hover:bg-[#A67F1E] transition-colors"
             >
               Call Now: 0432 077 782
             </a>
             <a
               href="mailto:jimmy@jetblackpainting.com"
-              className="inline-flex items-center px-6 py-3 border-2 border-[#00AACC] text-[#00AACC] font-bold rounded-lg hover:bg-[#007A99] hover:text-white transition-colors"
+              className="inline-flex items-center px-6 py-3 border-2 border-[#D4AB3A] text-[#D4AB3A] font-bold rounded-lg hover:bg-[#C49826] hover:text-[#0D0D0D] transition-colors"
             >
               Email for Free Quote
             </a>

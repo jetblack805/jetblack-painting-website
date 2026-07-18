@@ -70,24 +70,24 @@ function StarRating({ count }: { count: number }) {
 export default function Reviews() {
   const header = useInView("-100px");
   return (
-    <section id="reviews" className="py-24 bg-[#F5F5F0]">
+    <section id="reviews" className="py-24 bg-[#12100C]">
       <div className="container">
         {/* Section Header */}
         <div
           ref={header.ref}
           className={`reveal up text-center max-w-2xl mx-auto mb-16 ${header.visible ? "visible" : ""}`}
         >
-          <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#C49826] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Customer Reviews
           </span>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D0D0D] leading-tight mb-5"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#EDE6D8] leading-tight mb-5"
             style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
           >
             What Our Clients Say
           </h2>
           {/* Google Rating Badge */}
-          <div className="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-sm mt-4">
+          <div className="inline-flex items-center gap-3 bg-[#1A1713] rounded-full px-6 py-3 shadow-sm mt-4">
             <div className="flex items-center gap-1">
               <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
@@ -95,14 +95,14 @@ export default function Reviews() {
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
               </svg>
-              <span className="text-2xl font-bold text-[#0D0D0D]" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>5.0</span>
+              <span className="text-2xl font-bold text-[#EDE6D8]" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>5.0</span>
             </div>
             <div className="flex gap-0.5">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <span className="text-[#666] text-sm">on Google</span>
+            <span className="text-[#A39C90] text-sm">on Google</span>
           </div>
         </div>
 
@@ -118,9 +118,9 @@ export default function Reviews() {
             <CarouselContent className="-ml-4">
               {reviews.map((review) => (
                 <CarouselItem key={review.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative h-full flex flex-col">
+                  <div className="bg-[#1A1713] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative h-full flex flex-col">
                     {/* Quote icon */}
-                    <Quote className="w-8 h-8 text-[#00AACC]/15 absolute top-4 right-4" />
+                    <Quote className="w-8 h-8 text-[#D4AB3A]/15 absolute top-4 right-4" />
 
                     {/* Stars */}
                     <StarRating count={review.rating} />
@@ -131,17 +131,17 @@ export default function Reviews() {
                     </p>
 
                     {/* Reviewer info */}
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+                    <div className="flex items-center justify-between pt-4 border-t border-[#241F19] mt-auto">
                       <div className="flex items-center gap-3">
                         <div className="w-9 h-9 rounded-full bg-[#0D0D0D] flex items-center justify-center text-white text-sm font-bold">
                           {review.name[0]}
                         </div>
                         <div>
-                          <div className="text-[#0D0D0D] font-semibold text-sm">{review.name}</div>
-                          <div className="text-[#666] text-xs">{review.date}</div>
+                          <div className="text-[#EDE6D8] font-semibold text-sm">{review.name}</div>
+                          <div className="text-[#A39C90] text-xs">{review.date}</div>
                         </div>
                       </div>
-                      <span className="text-xs text-[#666] bg-gray-50 px-2 py-1 rounded">
+                      <span className="text-xs text-[#A39C90] bg-[#17140F] px-2 py-1 rounded">
                         {review.source}
                       </span>
                     </div>

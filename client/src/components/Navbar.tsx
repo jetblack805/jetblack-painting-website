@@ -139,7 +139,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-sm font-medium tracking-wide uppercase"
+              className="text-white/80 hover:text-[#D4AB3A] transition-colors duration-200 text-sm font-medium tracking-wide uppercase"
             >
               {link.label}
             </a>
@@ -149,7 +149,7 @@ export default function Navbar() {
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setAreasOpen((v) => !v)}
-              className="flex items-center gap-1 text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-sm font-medium tracking-wide uppercase"
+              className="flex items-center gap-1 text-white/80 hover:text-[#D4AB3A] transition-colors duration-200 text-sm font-medium tracking-wide uppercase"
             >
               Service Areas
               <ChevronDown
@@ -171,7 +171,7 @@ export default function Navbar() {
                         key={s.href}
                         href={s.href}
                         onClick={() => setAreasOpen(false)}
-                        className="text-white/70 hover:text-[#00AACC] hover:bg-white/5 text-sm px-3 py-1.5 rounded transition-colors duration-150"
+                        className="text-white/70 hover:text-[#D4AB3A] hover:bg-white/5 text-sm px-3 py-1.5 rounded transition-colors duration-150"
                       >
                         {s.name}
                       </a>
@@ -182,7 +182,7 @@ export default function Navbar() {
 
           <a
             href="tel:0432077782"
-            className="flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
+            className="flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
           >
             <Phone className="w-4 h-4" />
             Call Now
@@ -211,7 +211,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-base font-medium tracking-wide uppercase py-2"
+                  className="text-white/80 hover:text-[#D4AB3A] transition-colors duration-200 text-base font-medium tracking-wide uppercase py-2"
                 >
                   {link.label}
                 </a>
@@ -220,7 +220,7 @@ export default function Navbar() {
               {/* Mobile Service Areas toggle */}
               <button
                 onClick={() => setMobileAreas((v) => !v)}
-                className="flex items-center justify-between text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-base font-medium tracking-wide uppercase py-2 w-full"
+                className="flex items-center justify-between text-white/80 hover:text-[#D4AB3A] transition-colors duration-200 text-base font-medium tracking-wide uppercase py-2 w-full"
               >
                 Service Areas
                 <ChevronDown
@@ -239,7 +239,7 @@ export default function Navbar() {
                           key={s.href}
                           href={s.href}
                           onClick={() => setIsOpen(false)}
-                          className="text-white/60 hover:text-[#00AACC] text-sm py-1.5 px-2 rounded transition-colors"
+                          className="text-white/60 hover:text-[#D4AB3A] text-sm py-1.5 px-2 rounded transition-colors"
                         >
                           {s.name}
                         </a>
@@ -249,7 +249,7 @@ export default function Navbar() {
 
               <a
                 href="tel:0432077782"
-                className="flex items-center justify-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-5 py-3 rounded font-semibold text-sm transition-colors duration-200 mt-2"
+                className="flex items-center justify-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-5 py-3 rounded font-semibold text-sm transition-colors duration-200 mt-2"
               >
                 <Phone className="w-4 h-4" />
                 Call Now

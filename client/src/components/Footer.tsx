@@ -56,7 +56,7 @@ export default function Footer() {
             <img
               src={LOGO_URL}
               alt="Jetblack Painting"
-              className="h-12 w-48 rounded object-cover object-center mb-4 bg-white p-1"
+              className="h-12 w-48 rounded object-cover object-center mb-4 bg-[#1A1713] p-1"
             />
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Melbourne's trusted painting specialists. Commercial and residential
@@ -85,7 +85,7 @@ export default function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/50 hover:text-[#00AACC] transition-colors text-sm"
+                  className="text-white/50 hover:text-[#D4AB3A] transition-colors text-sm"
                 >
                   {link.label}
                 </a>
@@ -104,7 +104,7 @@ export default function Footer() {
             <div className="space-y-3">
               <a
                 href="tel:0432077782"
-                className="flex items-center gap-2 text-white/50 hover:text-[#00AACC] transition-colors text-sm"
+                className="flex items-center gap-2 text-white/50 hover:text-[#D4AB3A] transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
                 0432 077 782
@@ -113,7 +113,7 @@ export default function Footer() {
                 href="https://www.instagram.com/jetblack_painting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/50 hover:text-[#00AACC] transition-colors text-sm"
+                className="flex items-center gap-2 text-white/50 hover:text-[#D4AB3A] transition-colors text-sm"
               >
                 <Instagram className="w-4 h-4" />
                 @jetblack_painting
@@ -139,7 +139,7 @@ export default function Footer() {
               <a
                 key={s.href}
                 href={s.href}
-                className="text-white/60 hover:text-[#00AACC] transition-colors text-xs"
+                className="text-white/60 hover:text-[#D4AB3A] transition-colors text-xs"
               >
                 {s.name}
               </a>

@@ -329,6 +329,13 @@ export const SUBURBS_DATA = {
     description: "Iconic inner-south suburb on Port Phillip Bay with Art Deco apartment blocks, Victorian terraces and a high-density rental market",
     areasServed: ["St Kilda", "St Kilda West", "St Kilda East"]
   },
+  brunswick: {
+    name: "Brunswick",
+    coordinates: { lat: -37.7661, lng: 144.9614 },
+    postcode: "3056",
+    description: "Vibrant inner-north Melbourne suburb with Victorian terraces, Californian bungalows, converted warehouses and the iconic Sydney Road retail strip",
+    areasServed: ["Brunswick", "Brunswick East", "Brunswick West"]
+  },
   northcote: {
     name: "Northcote",
     coordinates: { lat: -37.7742, lng: 145.0008 },

@@ -2,6 +2,7 @@
  * Design: Bold Contrast — Footer on jet black background
  */
 import { Phone, Instagram, MapPin } from "lucide-react";
+import LOGO_URL from "@/assets/images/logo.webp";
 
 const SERVICE_AREAS = [
   { name: "Armadale",            href: "/painter-armadale/" },
@@ -52,16 +53,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3.5 mb-5">
-              <span className="flex items-center justify-center w-10 h-10 border border-[#C9A227] text-[#C9A227] text-[17px]" style={{ fontFamily: "Georgia, serif" }}>
-                JB
-              </span>
-              <span className="leading-tight">
-                <span className="block text-[13px] font-semibold tracking-[0.34em] uppercase text-[#EDE9E0]">Jetblack</span>
-                <span className="block text-[8px] font-medium tracking-[0.5em] uppercase text-[#C9A227]">Painting</span>
-              </span>
-            </div>
-            <p className="text-[#C9A227] lux-signature text-base mb-4">Perfection in every stroke.</p>
+            <img
+              src={LOGO_URL}
+              alt="Jetblack Painting"
+              className="h-12 w-48 rounded object-cover object-center mb-5"
+            />
+            <p className="text-[#C9A227] text-[11px] font-bold tracking-[0.36em] uppercase mb-4">Quality · Precision · Integrity</p>
             <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs">
               Melbourne's trusted painting specialists. Commercial and residential
               repaints delivered with superior workmanship.

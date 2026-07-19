@@ -5,6 +5,7 @@
  */
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import LOGO_URL from "@/assets/images/logo.webp";
 import { useLocation } from "wouter";
 
 const SUBURBS = [
@@ -123,14 +124,12 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-18 lg:h-20">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3.5 shrink-0" aria-label="Jetblack Painting — home">
-          <span className="flex items-center justify-center w-10 h-10 border border-[#C9A227] text-[#C9A227] text-[17px]" style={{ fontFamily: "Georgia, serif" }}>
-            JB
-          </span>
-          <span className="leading-tight">
-            <span className="block text-[13px] font-semibold tracking-[0.34em] uppercase text-[#EDE9E0]">Jetblack</span>
-            <span className="block text-[8px] font-medium tracking-[0.5em] uppercase text-[#C9A227]">Painting</span>
-          </span>
+        <a href="/" className="flex items-center gap-3 shrink-0">
+          <img
+            src={LOGO_URL}
+            alt="Jetblack Painting"
+            className="h-10 w-40 lg:h-12 lg:w-48 rounded object-cover object-center"
+          />
         </a>
 
         {/* Desktop Nav */}

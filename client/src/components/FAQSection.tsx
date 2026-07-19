@@ -26,23 +26,23 @@ export default function FAQSection() {
   const header = useInView("-100px");
 
   return (
-    <section id="faq" className="py-24 bg-[#1A1713]">
+    <section id="faq" className="py-24 bg-[#131316]">
       <div className="container">
         {/* Section Header */}
         <div
           ref={header.ref}
           className={`reveal up max-w-2xl mb-16 ${header.visible ? "visible" : ""}`}
         >
-          <span className="text-[#C9A227] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#D0A050] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Questions & Answers
           </span>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#EDE6D8] leading-tight mb-5"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#EDEDEF] leading-tight mb-5"
             style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
           >
             Frequently Asked Questions
           </h2>
-          <p className="text-[#B3ACA1] text-lg leading-relaxed">
+          <p className="text-[#B4B4B8] text-lg leading-relaxed">
             Find answers to common questions about our professional house painting services in Melbourne.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function FAQSection() {
           <div className="mt-12">
             <a
               href="/faq"
-              className="text-[#C9A227] font-semibold hover:underline flex items-center gap-2"
+              className="text-[#D0A050] font-semibold hover:underline flex items-center gap-2"
             >
               View all FAQs
               <ChevronDown className="w-4 h-4 -rotate-90" />
@@ -90,25 +90,25 @@ function FAQItem({
   return (
     <div
       ref={ref}
-      className={`reveal up border border-[#2A261F] rounded-lg overflow-hidden ${visible ? "visible" : ""}`}
+      className={`reveal up border border-[#222227] rounded-lg overflow-hidden ${visible ? "visible" : ""}`}
       style={{ transitionDelay: visible ? `${delay}s` : "0s" }}
     >
       <button
         onClick={onToggle}
-        className="w-full px-6 py-4 flex items-center justify-between hover:bg-[#12100C] transition-colors"
+        className="w-full px-6 py-4 flex items-center justify-between hover:bg-[#0C0C0E] transition-colors"
       >
-        <h3 className="text-lg font-semibold text-[#EDE6D8] text-left">
+        <h3 className="text-lg font-semibold text-[#EDEDEF] text-left">
           {faq.question}
         </h3>
         <ChevronDown
-          className={`w-5 h-5 text-[#E3C878] transition-transform flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
+          className={`w-5 h-5 text-[#E9BE6C] transition-transform flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96" : "max-h-0"}`}
       >
-        <div className="px-6 py-4 bg-[#12100C] border-t border-[#2A261F]">
-          <p className="text-[#B3ACA1] leading-relaxed">
+        <div className="px-6 py-4 bg-[#0C0C0E] border-t border-[#222227]">
+          <p className="text-[#B4B4B8] leading-relaxed">
             {faq.answer}
           </p>
         </div>

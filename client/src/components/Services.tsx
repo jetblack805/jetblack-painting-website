@@ -61,7 +61,7 @@ export default function Services() {
   const header = useInView("-100px");
 
   return (
-    <section id="services" className="py-24 bg-[#0A0A0A]">
+    <section id="services" className="py-24 bg-[#060607]">
       <div className="container">
         {/* Section Header */}
         <div
@@ -72,11 +72,11 @@ export default function Services() {
             Professional Painting Services
           </span>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl text-[#EDE6D8] leading-tight mb-5"
+            className="text-3xl sm:text-4xl lg:text-5xl text-[#EDEDEF] leading-tight mb-5"
           >
             Our Services
           </h2>
-          <p className="text-[#B3ACA1] text-lg leading-relaxed">
+          <p className="text-[#B4B4B8] text-lg leading-relaxed">
             From residential repaints to large-scale commercial projects, Jetblack Painting
             delivers professional results across all aspects of painting in Melbourne.
           </p>
@@ -105,7 +105,7 @@ function ServiceCard({
     <Link href={service.link}>
       <div
         ref={ref}
-        className={`reveal up group bg-[#1A1713] rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full ${visible ? "visible" : ""}`}
+        className={`reveal up group bg-[#131316] rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full ${visible ? "visible" : ""}`}
         style={{ transitionDelay: visible ? `${delay}s` : "0s" }}
       >
         {/* Image */}
@@ -115,9 +115,9 @@ function ServiceCard({
             alt={service.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B]/60 to-transparent" />
           <div className="absolute bottom-4 left-4">
-            <div className="w-10 h-10 rounded bg-[#C9A227] flex items-center justify-center">
+            <div className="w-10 h-10 rounded bg-[#D0A050] flex items-center justify-center">
               <service.icon className="w-5 h-5 text-white" />
             </div>
           </div>
@@ -126,11 +126,11 @@ function ServiceCard({
         {/* Content */}
         <div className="p-6">
           <h3
-            className="text-xl text-[#EDE6D8] mb-3 group-hover:text-[#C9A227] transition-colors"
+            className="text-xl text-[#EDEDEF] mb-3 group-hover:text-[#D0A050] transition-colors"
           >
             {service.title}
           </h3>
-          <p className="text-[#A39C90] text-sm leading-relaxed">
+          <p className="text-[#A3A3A8] text-sm leading-relaxed">
             {service.description}
           </p>
         </div>

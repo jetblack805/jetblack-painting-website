@@ -37,7 +37,7 @@ export default function Contact() {
   const right = useInView("-100px");
 
   return (
-    <section id="contact" className="py-24 bg-[#0A0A0A]">
+    <section id="contact" className="py-24 bg-[#060607]">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left: Info */}
@@ -49,12 +49,12 @@ export default function Contact() {
               Get In Touch
             </span>
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl text-[#EDE6D8] leading-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl text-[#EDEDEF] leading-tight mb-6"
             >
               Ready for a{" "}
-              <span className="text-[#C9A227]">Fresh Look?</span>
+              <span className="text-[#D0A050]">Fresh Look?</span>
             </h2>
-            <p className="text-[#B3ACA1] text-lg leading-relaxed mb-10">
+            <p className="text-[#B4B4B8] text-lg leading-relaxed mb-10">
               Get in touch for a free, no-obligation quote. We'll visit your property,
               discuss your needs, and provide a competitive price. No job is too big or
               too small.
@@ -64,22 +64,22 @@ export default function Contact() {
             <div className="space-y-5">
               {contactInfo.map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-lg bg-[#0D0D0D] flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-[#E3C878]" />
+                  <div className="w-11 h-11 rounded-lg bg-[#0A0A0B] flex items-center justify-center shrink-0">
+                    <item.icon className="w-5 h-5 text-[#E9BE6C]" />
                   </div>
                   <div>
-                    <div className="text-[#A39C90] text-xs uppercase tracking-wider mb-0.5">{item.label}</div>
+                    <div className="text-[#A3A3A8] text-xs uppercase tracking-wider mb-0.5">{item.label}</div>
                     {item.href ? (
                       <a
                         href={item.href}
                         target={item.href.startsWith("http") ? "_blank" : undefined}
                         rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-[#EDE6D8] font-semibold hover:text-[#C9A227] transition-colors"
+                        className="text-[#EDEDEF] font-semibold hover:text-[#D0A050] transition-colors"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <span className="text-[#EDE6D8] font-semibold">{item.value}</span>
+                      <span className="text-[#EDEDEF] font-semibold">{item.value}</span>
                     )}
                   </div>
                 </div>
@@ -92,10 +92,10 @@ export default function Contact() {
             ref={right.ref}
             className={`reveal right flex items-center ${right.visible ? "visible" : ""}`}
           >
-            <div className="w-full bg-[#0D0D0D] rounded-xl p-8 sm:p-10 relative overflow-hidden">
+            <div className="w-full bg-[#0A0A0B] rounded-xl p-8 sm:p-10 relative overflow-hidden">
               {/* Decorative accent */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A227]/10 rounded-bl-full" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#C9A227]/5 rounded-tr-full" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D0A050]/10 rounded-bl-full" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#D0A050]/5 rounded-tr-full" />
 
               <div className="relative z-10">
                 <h3
@@ -111,7 +111,7 @@ export default function Contact() {
                 {/* Big Phone CTA */}
                 <a
                   href="tel:0432077782"
-                  className="flex items-center justify-center gap-3 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] w-full py-5 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#E3C878]/30 hover:-translate-y-0.5 mb-4"
+                  className="flex items-center justify-center gap-3 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] w-full py-5 rounded-lg font-bold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#E9BE6C]/30 hover:-translate-y-0.5 mb-4"
                 >
                   <Phone className="w-6 h-6" />
                   0432 077 782
@@ -122,7 +122,7 @@ export default function Contact() {
                   href="https://www.instagram.com/jetblack_painting"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 border border-white/20 hover:border-[#E3C878]/50 text-white w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:bg-white/5"
+                  className="flex items-center justify-center gap-3 border border-white/20 hover:border-[#E9BE6C]/50 text-white w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:bg-white/5"
                 >
                   <Instagram className="w-5 h-5" />
                   Follow us on Instagram
@@ -131,17 +131,17 @@ export default function Contact() {
                 {/* Trust signals */}
                 <div className="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-white/10">
                   <div className="text-center">
-                    <div className="text-[#E3C878] font-bold text-lg" >5.0★</div>
+                    <div className="text-[#E9BE6C] font-bold text-lg" >5.0★</div>
                     <div className="text-white/60 text-xs">Google Rating</div>
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div className="text-center">
-                    <div className="text-[#E3C878] font-bold text-lg" >13+</div>
+                    <div className="text-[#E9BE6C] font-bold text-lg" >13+</div>
                     <div className="text-white/60 text-xs">Years Experience</div>
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div className="text-center">
-                    <div className="text-[#E3C878] font-bold text-lg" >100%</div>
+                    <div className="text-[#E9BE6C] font-bold text-lg" >100%</div>
                     <div className="text-white/60 text-xs">Insured</div>
                   </div>
                 </div>

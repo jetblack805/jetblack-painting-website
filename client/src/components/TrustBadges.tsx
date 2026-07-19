@@ -36,7 +36,7 @@ export default function TrustBadges() {
   return (
     <section className="py-24 lg:py-28 bg-[#F5F1E8]" aria-label="Trust and credentials">
       <div className="container max-w-6xl">
-        <span className="lux-eyebrow text-[#B8933D]">Why Jetblack</span>
+        <span className="lux-eyebrow text-[#B0863C]">Why Jetblack</span>
         <h2 className="text-3xl lg:text-4xl text-[#1A1A1A]">
           The difference is in the details
         </h2>
@@ -44,18 +44,18 @@ export default function TrustBadges() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-10 gap-y-10 mt-14">
           {badges.map((badge) => (
             <div key={badge.title} className="border-t border-[#1A1A1A]/[0.12] pt-6">
-              <div className="text-[#B8933D] text-xl mb-4" style={{ fontFamily: "Georgia, serif" }}>{badge.mark}</div>
+              <div className="text-[#B0863C] text-xl mb-4" style={{ fontFamily: "Georgia, serif" }}>{badge.mark}</div>
               <h3 className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#1A1A1A] mb-2.5 leading-relaxed" style={{ fontFamily: "system-ui, sans-serif" }}>
                 {badge.title}
               </h3>
-              <p className="text-[13px] text-[#5A564E] leading-relaxed">{badge.description}</p>
+              <p className="text-[13px] text-[#5C5C60] leading-relaxed">{badge.description}</p>
             </div>
           ))}
         </div>
 
         {/* Trust Statement — crawlable credential copy */}
         <div className="mt-16 border-t border-[#1A1A1A]/[0.12] pt-10">
-          <p className="text-[#5A564E] max-w-3xl leading-relaxed">
+          <p className="text-[#5C5C60] max-w-3xl leading-relaxed">
             Jetblack Painting is a <strong className="text-[#1A1A1A] font-semibold">fully licensed and insured</strong> painting company
             based in Mordialloc, Melbourne. All work is backed by a <strong className="text-[#1A1A1A] font-semibold">5-year written workmanship guarantee</strong> and
             covered by <strong className="text-[#1A1A1A] font-semibold">$10M public liability insurance</strong>.
@@ -64,7 +64,7 @@ export default function TrustBadges() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="tel:0432077782"
-              className="inline-flex items-center px-7 py-3.5 bg-[#C9A227] text-[#0A0A0A] text-[11px] font-bold tracking-[0.18em] uppercase hover:bg-[#E3C878] transition-colors"
+              className="inline-flex items-center px-7 py-3.5 bg-[#D0A050] text-[#060607] text-[11px] font-bold tracking-[0.18em] uppercase hover:bg-[#E9BE6C] transition-colors"
             >
               Call 0432 077 782
             </a>

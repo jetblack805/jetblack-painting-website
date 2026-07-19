@@ -53,9 +53,7 @@
 
   <!-- Preload LCP hero image so browser fetches it before JS runs -->
   <link rel="preload" as="image"
-    href="/hero-navy-900.webp"
-    imagesrcset="/hero-navy-900.webp 900w, /hero-navy.webp 1400w"
-    imagesizes="100vw"
+    href="/hero-poolhouse.jpg"
     fetchpriority="high" />
 
   <!-- GA loaded after page is interactive so it doesn't compete with LCP -->
@@ -316,19 +314,15 @@
     LCP image before any JavaScript runs. React's own Hero section (z-index:1
     via #root) naturally covers this once the app mounts.
   -->
-  <div id="hero-static" style="position:fixed;inset:0;z-index:0;background:#0A0A0A;overflow:hidden;">
-    <picture style="width:100%;height:100%;display:block;">
-      <source srcset="/hero-navy-900.webp 900w, /hero-navy.webp 1400w" sizes="100vw" type="image/webp">
-      <img src="/hero-navy.jpg" alt="" width="1050" height="1400"
-           fetchpriority="high" decoding="sync"
-           style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
-    </picture>
-    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,10,10,0.93) 15%,rgba(10,10,10,0.72) 45%,rgba(10,10,10,0.25) 75%)"></div>
-    <div style="position:absolute;bottom:0;left:0;right:0;height:10rem;background:linear-gradient(to top,#0A0A0A,transparent)"></div>
+  <div id="hero-static" style="position:fixed;inset:0;z-index:0;background:#060607;overflow:hidden;">
+    <img src="/hero-poolhouse.jpg" alt="" width="1206" height="500"
+         fetchpriority="high" decoding="sync"
+         style="width:100%;height:100%;object-fit:cover;object-position:center 55%;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,7,0.97) 0%,rgba(6,6,7,0.72) 22%,rgba(6,6,7,0.28) 48%,rgba(6,6,7,0.08) 70%,rgba(6,6,7,0.25) 100%)"></div>
   </div>
   <div id="root" style="position:relative;z-index:1;">
     <main style="padding:7rem 1.5rem 2rem;color:rgba(237,233,224,0.85);font-family:system-ui,sans-serif;">
-      <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:2.2rem;margin-bottom:0.75rem;line-height:1.15;letter-spacing:0.005em;color:#F4F0E7;">Premium Residential &amp; Commercial <span style="color:#C9A227">Painting in Melbourne</span></h1>
+      <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:2.2rem;margin-bottom:0.75rem;line-height:1.18;letter-spacing:0.01em;color:#FCFCFC;">Premium Painting. <span style="color:#D0A050">Exceptional Results.</span></h1>
       <p style="font-size:1rem;line-height:1.6;max-width:40rem;">
         Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 30+ suburbs.
         We offer interior, exterior, commercial, roof, and cabinet painting for homeowners, landlords, and businesses.

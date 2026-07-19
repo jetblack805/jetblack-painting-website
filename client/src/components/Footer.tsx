@@ -2,6 +2,7 @@
  * Design: Bold Contrast — Footer on jet black background
  */
 import { Phone, Instagram, MapPin } from "lucide-react";
+import LOGO_URL from "@/assets/images/logo-jb-monogram.png";
 
 const SERVICE_AREAS = [
   { name: "Armadale",            href: "/painter-armadale/" },
@@ -47,21 +48,26 @@ const SERVICE_AREAS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050505] border-t border-white/[0.06]">
+    <footer className="bg-[#030304] border-t border-white/[0.06]">
       <div className="container py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3.5 mb-5">
-              <span className="flex items-center justify-center w-10 h-10 border border-[#C9A227] text-[#C9A227] text-[17px]" style={{ fontFamily: "Georgia, serif" }}>
-                JB
-              </span>
+              <img
+                src={LOGO_URL}
+                alt=""
+                width={470}
+                height={475}
+                className="h-12 w-auto"
+              />
               <span className="leading-tight">
-                <span className="block text-[13px] font-semibold tracking-[0.34em] uppercase text-[#EDE9E0]">Jetblack</span>
-                <span className="block text-[8px] font-medium tracking-[0.5em] uppercase text-[#C9A227]">Painting</span>
+                <span className="block text-[17px] tracking-[0.26em] uppercase text-[#FCFCFC]" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>Jetblack</span>
+                <span className="block text-[9.5px] font-medium tracking-[0.52em] uppercase text-[#D0A050]">Painting</span>
               </span>
             </div>
-            <p className="text-[#C9A227] lux-signature text-base mb-4">Perfection in every stroke.</p>
+            <div className="w-44 h-px bg-[#D0A050]/60 mb-4" aria-hidden="true" />
+            <p className="text-[#D0A050] text-[11px] font-bold tracking-[0.3em] uppercase mb-4">Quality. Precision. Integrity.</p>
             <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs">
               Melbourne's trusted painting specialists. Commercial and residential
               repaints delivered with superior workmanship.
@@ -71,7 +77,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h2
-              className="text-[#98938B] font-bold mb-5 text-[9.5px] uppercase tracking-[0.3em]"
+              className="text-[#98989D] font-bold mb-5 text-[9.5px] uppercase tracking-[0.3em]"
             >
               Quick Links
             </h2>
@@ -88,7 +94,7 @@ export default function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-white/50 hover:text-[#C9A227] transition-colors text-sm"
+                  className="text-white/50 hover:text-[#D0A050] transition-colors text-sm"
                 >
                   {link.label}
                 </a>
@@ -99,14 +105,14 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h2
-              className="text-[#98938B] font-bold mb-5 text-[9.5px] uppercase tracking-[0.3em]"
+              className="text-[#98989D] font-bold mb-5 text-[9.5px] uppercase tracking-[0.3em]"
             >
               Contact Us
             </h2>
             <div className="space-y-3">
               <a
                 href="tel:0432077782"
-                className="flex items-center gap-2 text-white/50 hover:text-[#C9A227] transition-colors text-sm"
+                className="flex items-center gap-2 text-white/50 hover:text-[#D0A050] transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
                 0432 077 782
@@ -115,7 +121,7 @@ export default function Footer() {
                 href="https://www.instagram.com/jetblack_painting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/50 hover:text-[#C9A227] transition-colors text-sm"
+                className="flex items-center gap-2 text-white/50 hover:text-[#D0A050] transition-colors text-sm"
               >
                 <Instagram className="w-4 h-4" />
                 @jetblack_painting
@@ -131,7 +137,7 @@ export default function Footer() {
         {/* Service Areas */}
         <div className="mt-10 pt-10 border-t border-white/5">
           <h2
-            className="text-[#98938B] font-bold mb-5 text-[9.5px] uppercase tracking-[0.3em]"
+            className="text-[#98989D] font-bold mb-5 text-[9.5px] uppercase tracking-[0.3em]"
           >
             Service Areas
           </h2>
@@ -140,7 +146,7 @@ export default function Footer() {
               <a
                 key={s.href}
                 href={s.href}
-                className="text-white/60 hover:text-[#C9A227] transition-colors text-xs"
+                className="text-white/60 hover:text-[#D0A050] transition-colors text-xs"
               >
                 {s.name}
               </a>
@@ -153,8 +159,8 @@ export default function Footer() {
           <p className="text-white/60 text-xs">
             &copy; {new Date().getFullYear()} Jetblack Painting. All rights reserved. ABN 50 548 669 474.
           </p>
-          <p className="text-[#98938B] text-[10px] tracking-[0.24em] uppercase">
-            Quality · Precision · Integrity
+          <p className="text-[#98989D] text-[10px] tracking-[0.24em] uppercase">
+            Quality. Precision. Integrity.
           </p>
         </div>
       </div>

@@ -170,7 +170,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1A1713]">
+    <div className="min-h-screen bg-[#131316]">
       <SEOHead
         title="Painting FAQs Melbourne | Jetblack Painting"
         description="Frequently asked questions about Jetblack Painting services in Melbourne, including quotes, service areas, interior, exterior and commercial painting."
@@ -179,7 +179,7 @@ export default function FAQ() {
       />
       <Navbar />
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -208,12 +208,12 @@ export default function FAQ() {
               viewport={{ once: true }}
               className="mb-12"
             >
-              <h2 className="text-2xl font-bold text-[#EDE6D8] mb-6">{category.category}</h2>
+              <h2 className="text-2xl font-bold text-[#EDEDEF] mb-6">{category.category}</h2>
               <div className="space-y-4">
                 {category.items.map((faq, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="border border-[#2A261F] rounded-lg overflow-hidden"
+                    className="border border-[#222227] rounded-lg overflow-hidden"
                   >
                     <button
                       onClick={() =>
@@ -223,18 +223,18 @@ export default function FAQ() {
                             : catIndex * 100 + itemIndex
                         )
                       }
-                      className="w-full flex items-center justify-between p-6 bg-[#17140F] hover:bg-[#1C1914] transition-colors text-left"
+                      className="w-full flex items-center justify-between p-6 bg-[#101013] hover:bg-[#141417] transition-colors text-left"
                     >
-                      <h3 className="font-bold text-[#EDE6D8] text-lg">{faq.q}</h3>
+                      <h3 className="font-bold text-[#EDEDEF] text-lg">{faq.q}</h3>
                       <ChevronDown
-                        className={`w-5 h-5 text-[#E3C878] transition-transform ${
+                        className={`w-5 h-5 text-[#E9BE6C] transition-transform ${
                           openIndex === catIndex * 100 + itemIndex ? "rotate-180" : ""
                         }`}
                       />
                     </button>
                     {openIndex === catIndex * 100 + itemIndex && (
-                      <div className="p-6 bg-[#1A1713] border-t border-[#2A261F]">
-                        <p className="text-[#B3ACA1] leading-relaxed">{faq.a}</p>
+                      <div className="p-6 bg-[#131316] border-t border-[#222227]">
+                        <p className="text-[#B4B4B8] leading-relaxed">{faq.a}</p>
                       </div>
                     )}
                   </div>
@@ -248,7 +248,7 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center mt-16"
+            className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white p-12 rounded-lg text-center mt-16"
           >
             <h3 className="text-3xl font-bold mb-4">Still Have Questions?</h3>
             <p className="text-xl mb-6 text-gray-300">
@@ -256,7 +256,7 @@ export default function FAQ() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               Call 0432 077 782
             </a>

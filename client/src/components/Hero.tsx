@@ -22,43 +22,43 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Eyebrow */}
           <div className="hero-fade-in flex items-center gap-4 mb-7" style={{ animationDelay: "0.1s" }}>
-            <span className="block w-8 h-px bg-[#C9A227]" />
-            <span className="text-[#C9A227] text-[10px] font-semibold tracking-[0.32em] uppercase">
+            <span className="block w-8 h-px bg-[#D0A050]" />
+            <span className="text-[#D0A050] text-[10px] font-semibold tracking-[0.32em] uppercase">
               Melbourne · Bayside &amp; Mornington Peninsula
             </span>
           </div>
 
-          {/* Headline — serif, premium positioning */}
+          {/* Headline — serif, flyer treatment */}
           <h1
-            className="hero-fade-in text-4xl sm:text-5xl lg:text-6xl text-[#F4F0E7] leading-[1.12] mb-7"
+            className="hero-fade-in text-4xl sm:text-5xl lg:text-[4.2rem] text-[#FCFCFC] leading-[1.14] mb-7"
             style={{ animationDelay: "0.25s" }}
           >
-            Premium Residential &amp; Commercial{" "}
-            <span className="text-[#C9A227]">Painting in Melbourne</span>
+            Premium Painting.{" "}
+            <span className="text-[#D0A050] block">Exceptional Results.</span>
           </h1>
 
-          <div className="hero-fade-in w-11 h-px bg-[#C9A227] mb-8" style={{ animationDelay: "0.3s" }} />
+          <div className="hero-fade-in w-11 h-px bg-[#D0A050] mb-8" style={{ animationDelay: "0.3s" }} />
 
           {/* Subtext */}
           <p
-            className="hero-fade-in text-[#EDE9E0]/70 text-base sm:text-lg font-light leading-relaxed mb-10 max-w-xl"
+            className="hero-fade-in text-[#EDEDEF]/70 text-base sm:text-lg font-light leading-relaxed mb-10 max-w-xl"
             style={{ animationDelay: "0.4s" }}
           >
-            Exceptional craftsmanship for Melbourne's finest homes. Interior, exterior &amp; commercial painting specialists serving Brighton, Toorak, Bayside, the Mornington Peninsula and all Melbourne suburbs. 5-star rated. Fully licensed &amp; insured.
+            Transforming Melbourne homes with flawless finishes. Interior, exterior &amp; commercial painting specialists serving Brighton, Toorak, Bayside, the Mornington Peninsula and all Melbourne suburbs. 5-star rated. Fully licensed &amp; insured.
           </p>
 
           {/* CTAs */}
           <div className="hero-fade-in flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.55s" }}>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center justify-center gap-3 bg-[#C9A227] hover:bg-[#E3C878] text-[#0A0A0A] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-200"
+              className="inline-flex items-center justify-center gap-3 bg-[#D0A050] hover:bg-[#E9BE6C] text-[#060607] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-200"
             >
               <Phone className="w-4 h-4" />
               Request a Free Quote
             </a>
             <button
               onClick={() => scrollToSection("#gallery")}
-              className="inline-flex items-center justify-center gap-2 border border-[#C9A227]/60 hover:bg-[#C9A227] hover:text-[#0A0A0A] text-[#C9A227] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 border border-[#D0A050]/60 hover:bg-[#D0A050] hover:text-[#060607] text-[#D0A050] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-200"
             >
               View Our Work
               <ChevronRight className="w-4 h-4" />
@@ -72,8 +72,8 @@ export default function Hero() {
               "5-year written guarantee",
               "5.0 Google rating",
             ].map((badge) => (
-              <span key={badge} className="flex items-center gap-2.5 text-[10.5px] tracking-[0.18em] uppercase text-[#EDE9E0]/60">
-                <span className="text-[#C9A227] text-[13px]">✓</span>
+              <span key={badge} className="flex items-center gap-2.5 text-[10.5px] tracking-[0.18em] uppercase text-[#EDEDEF]/60">
+                <span className="text-[#D0A050] text-[13px]">✓</span>
                 {badge}
               </span>
             ))}
@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="hero-fade-in absolute bottom-8 left-1/2 -translate-x-1/2 z-10" style={{ animationDelay: "1s" }}>
         <button
           onClick={() => scrollToSection("#services")}
-          className="text-white/40 hover:text-[#C9A227] transition-colors"
+          className="text-white/40 hover:text-[#D0A050] transition-colors"
           aria-label="Scroll down"
         >
           <ArrowDown className="w-6 h-6 animate-bounce" />

@@ -64,25 +64,25 @@
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(0.16 0.004 75);
-  --foreground: oklch(0.93 0.012 85);
-  --card: oklch(0.2 0.006 75);
-  --card-foreground: oklch(0.93 0.012 85);
-  --popover: oklch(0.2 0.006 75);
-  --popover-foreground: oklch(0.93 0.012 85);
-  --primary: oklch(0.72 0.12 88);
+  --background: oklch(0.13 0 0);
+  --foreground: oklch(0.94 0 0);
+  --card: oklch(0.17 0 0);
+  --card-foreground: oklch(0.94 0 0);
+  --popover: oklch(0.17 0 0);
+  --popover-foreground: oklch(0.94 0 0);
+  --primary: #D0A050;
   --primary-foreground: oklch(0.15 0.005 285);
-  --secondary: oklch(0.23 0.008 75);
-  --secondary-foreground: oklch(0.93 0.012 85);
-  --muted: oklch(0.23 0.008 75);
-  --muted-foreground: oklch(0.66 0.015 80);
-  --accent: oklch(0.72 0.12 88);
+  --secondary: oklch(0.2 0 0);
+  --secondary-foreground: oklch(0.94 0 0);
+  --muted: oklch(0.2 0 0);
+  --muted-foreground: oklch(0.68 0 0);
+  --accent: #D0A050;
   --accent-foreground: oklch(0.15 0.005 285);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.28 0.008 75);
-  --input: oklch(0.28 0.008 75);
-  --ring: oklch(0.72 0.12 88);
+  --border: oklch(0.25 0 0);
+  --input: oklch(0.25 0 0);
+  --ring: #D0A050;
   --chart-1: oklch(0.7 0.15 220);
   --chart-2: oklch(0.55 0.15 220);
   --chart-3: oklch(0.4 0.1 220);
@@ -190,18 +190,18 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.72 0.12 88);
+  background: #D0A050;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.62 0.11 88);
+  background: #B0863C;
 }
 
 /* Gold text selection */
 ::selection {
-  background: #C9A227;
-  color: #0A0A0A;
+  background: #D0A050;
+  color: #060607;
 }
 
 /* Luxury shared utilities */
@@ -212,7 +212,7 @@ html {
   font-weight: 600;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: #C9A227;
+  color: #D0A050;
   margin-bottom: 18px;
 }
 .lux-serif {

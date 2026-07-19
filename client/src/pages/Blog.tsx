@@ -73,7 +73,7 @@ export default function Blog() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1A1713]">
+    <div className="min-h-screen bg-[#131316]">
       <SEOHead
         title="Painting Tips & Guides Melbourne | Jetblack Painting Blog"
         description="Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting."
@@ -82,7 +82,7 @@ export default function Blog() {
       <Navbar />
       
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -112,34 +112,34 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-[#17140F] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                className="bg-[#101013] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="p-6">
-                  <div className="flex items-center gap-4 mb-4 text-sm text-[#A39C90]">
-                    <span className="bg-[#C9A227] text-[#0D0D0D] px-3 py-1 rounded-full text-xs font-bold">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-[#A3A3A8]">
+                    <span className="bg-[#D0A050] text-[#0A0A0B] px-3 py-1 rounded-full text-xs font-bold">
                       {post.category}
                     </span>
                     <span>{post.readTime}</span>
                   </div>
                   
                   <Link href={post.slug}>
-                    <h2 className="text-xl font-bold text-[#EDE6D8] mb-3 hover:text-[#E3C878] transition-colors cursor-pointer">
+                    <h2 className="text-xl font-bold text-[#EDEDEF] mb-3 hover:text-[#E9BE6C] transition-colors cursor-pointer">
                       {post.title}
                     </h2>
                   </Link>
                   
-                  <p className="text-[#A39C90] mb-4 line-clamp-3">
+                  <p className="text-[#A3A3A8] mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between pt-4 border-t border-[#2A261F]">
-                    <div className="flex items-center gap-4 text-sm text-[#A39C90]">
+                  <div className="flex items-center justify-between pt-4 border-t border-[#222227]">
+                    <div className="flex items-center gap-4 text-sm text-[#A3A3A8]">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         {post.date}
                       </div>
                     </div>
-                    <Link href={post.slug} className="text-[#E3C878] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
+                    <Link href={post.slug} className="text-[#E9BE6C] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -154,7 +154,7 @@ export default function Blog() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center mt-16"
+            className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white p-12 rounded-lg text-center mt-16"
           >
             <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Property?</h3>
             <p className="text-xl mb-6 text-gray-300">
@@ -162,7 +162,7 @@ export default function Blog() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               Call 0432 077 782
             </a>

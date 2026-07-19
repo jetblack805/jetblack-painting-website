@@ -2,7 +2,7 @@
  * Design: Bold Contrast — Footer on jet black background
  */
 import { Phone, Instagram, MapPin } from "lucide-react";
-import LOGO_URL from "@/assets/images/logo.webp";
+import LOGO_URL from "@/assets/images/logo-jb-monogram.png";
 
 const SERVICE_AREAS = [
   { name: "Armadale",            href: "/painter-armadale/" },
@@ -53,12 +53,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <img
-              src={LOGO_URL}
-              alt="Jetblack Painting"
-              className="h-12 w-48 rounded object-cover object-center mb-5"
-            />
-            <p className="text-[#C9A227] text-[11px] font-bold tracking-[0.36em] uppercase mb-4">Quality · Precision · Integrity</p>
+            <div className="flex items-center gap-3.5 mb-5">
+              <img
+                src={LOGO_URL}
+                alt=""
+                width={470}
+                height={475}
+                className="h-12 w-auto"
+              />
+              <span className="leading-tight">
+                <span className="block text-[17px] tracking-[0.26em] uppercase text-[#F4F0E7]" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>Jetblack</span>
+                <span className="block text-[9.5px] font-medium tracking-[0.52em] uppercase text-[#C9A227]">Painting</span>
+              </span>
+            </div>
+            <div className="w-44 h-px bg-[#C9A227]/60 mb-4" aria-hidden="true" />
+            <p className="text-[#C9A227] text-[11px] font-bold tracking-[0.3em] uppercase mb-4">Quality. Precision. Integrity.</p>
             <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs">
               Melbourne's trusted painting specialists. Commercial and residential
               repaints delivered with superior workmanship.
@@ -151,7 +160,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Jetblack Painting. All rights reserved. ABN 50 548 669 474.
           </p>
           <p className="text-[#98938B] text-[10px] tracking-[0.24em] uppercase">
-            Quality · Precision · Integrity
+            Quality. Precision. Integrity.
           </p>
         </div>
       </div>

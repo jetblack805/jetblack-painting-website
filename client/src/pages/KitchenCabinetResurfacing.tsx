@@ -54,7 +54,7 @@ export default function KitchenCabinetResurfacing() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1A1713]">
+    <div className="min-h-screen bg-[#131316]">
       <SEOHead
         title="Kitchen Cabinet Resurfacing Melbourne | 2-Pack Finishes | Jetblack Painting"
         description="Professional kitchen cabinet resurfacing Melbourne. Premium 2-pack finishes, fraction of renovation cost, 5-star rated. Transform your kitchen. Free quotes - Call 0432 077 782."
@@ -64,7 +64,7 @@ export default function KitchenCabinetResurfacing() {
       <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function KitchenCabinetResurfacing() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-3 rounded font-bold transition-all"
             >
               <Phone className="w-5 h-5" />
               Call for Free Quote
@@ -88,7 +88,7 @@ export default function KitchenCabinetResurfacing() {
         </div>
       </section>
 
-      <section className="py-12 bg-[#1A1713]">
+      <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
             src={imgService}
@@ -108,13 +108,13 @@ export default function KitchenCabinetResurfacing() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">
               Transform Your Kitchen Without Breaking the Bank
             </h2>
-            <p className="text-lg text-[#B3ACA1] mb-4 leading-relaxed">
+            <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               Kitchen cabinet resurfacing is one of the most cost-effective ways to transform your kitchen. Instead of a full renovation costing $15,000-$30,000+, cabinet resurfacing delivers a brand new look for a fraction of the price. Jetblack Painting specialises in premium 2-pack kitchen cabinet finishes that rival custom cabinetry.
             </p>
-            <p className="text-lg text-[#B3ACA1] mb-4 leading-relaxed">
+            <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               Our professional team handles the complete process: careful disassembly, thorough surface preparation, priming, and application of premium 2-pack finish. The result is a durable, high-gloss kitchen cabinet finish that looks and feels like new cabinetry, with the added benefit of a 5-year workmanship guarantee.
             </p>
           </motion.div>
@@ -126,20 +126,20 @@ export default function KitchenCabinetResurfacing() {
             viewport={{ once: true }}
             className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            <div className="bg-[#12100C] p-6 rounded-lg text-center">
-              <DollarSign className="w-12 h-12 text-[#E3C878] mx-auto mb-3" />
-              <h3 className="text-2xl font-bold text-[#EDE6D8] mb-2">30-50%</h3>
-              <p className="text-[#B3ACA1]">Less than full renovation</p>
+            <div className="bg-[#0C0C0E] p-6 rounded-lg text-center">
+              <DollarSign className="w-12 h-12 text-[#E9BE6C] mx-auto mb-3" />
+              <h3 className="text-2xl font-bold text-[#EDEDEF] mb-2">30-50%</h3>
+              <p className="text-[#B4B4B8]">Less than full renovation</p>
             </div>
-            <div className="bg-[#12100C] p-6 rounded-lg text-center">
-              <Zap className="w-12 h-12 text-[#E3C878] mx-auto mb-3" />
-              <h3 className="text-2xl font-bold text-[#EDE6D8] mb-2">5-10</h3>
-              <p className="text-[#B3ACA1]">Days to complete</p>
+            <div className="bg-[#0C0C0E] p-6 rounded-lg text-center">
+              <Zap className="w-12 h-12 text-[#E9BE6C] mx-auto mb-3" />
+              <h3 className="text-2xl font-bold text-[#EDEDEF] mb-2">5-10</h3>
+              <p className="text-[#B4B4B8]">Days to complete</p>
             </div>
-            <div className="bg-[#12100C] p-6 rounded-lg text-center">
-              <Home className="w-12 h-12 text-[#E3C878] mx-auto mb-3" />
-              <h3 className="text-2xl font-bold text-[#EDE6D8] mb-2">100+</h3>
-              <p className="text-[#B3ACA1]">Kitchens transformed</p>
+            <div className="bg-[#0C0C0E] p-6 rounded-lg text-center">
+              <Home className="w-12 h-12 text-[#E9BE6C] mx-auto mb-3" />
+              <h3 className="text-2xl font-bold text-[#EDEDEF] mb-2">100+</h3>
+              <p className="text-[#B4B4B8]">Kitchens transformed</p>
             </div>
           </motion.div>
 
@@ -150,12 +150,12 @@ export default function KitchenCabinetResurfacing() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Why Choose Our Kitchen Cabinet Resurfacing Service</h2>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Why Choose Our Kitchen Cabinet Resurfacing Service</h2>
             <div className="space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-[#E3C878] flex-shrink-0 mt-1" />
-                  <span className="text-[#B3ACA1] text-lg">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-[#E9BE6C] flex-shrink-0 mt-1" />
+                  <span className="text-[#B4B4B8] text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -168,43 +168,43 @@ export default function KitchenCabinetResurfacing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 bg-[#12100C] p-8 rounded-lg"
+            className="mb-12 bg-[#0C0C0E] p-8 rounded-lg"
           >
-            <h2 className="text-2xl font-bold text-[#EDE6D8] mb-6">Our Kitchen Cabinet Resurfacing Process</h2>
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mb-6">Our Kitchen Cabinet Resurfacing Process</h2>
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C9A227] text-[#0D0D0D] flex items-center justify-center font-bold">1</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#D0A050] text-[#0A0A0B] flex items-center justify-center font-bold">1</div>
                 <div>
-                  <h3 className="font-bold text-[#EDE6D8] mb-1">Consultation & Colour Selection</h3>
-                  <p className="text-[#B3ACA1]">We discuss your vision and help you choose the perfect colour and finish for your kitchen.</p>
+                  <h3 className="font-bold text-[#EDEDEF] mb-1">Consultation & Colour Selection</h3>
+                  <p className="text-[#B4B4B8]">We discuss your vision and help you choose the perfect colour and finish for your kitchen.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C9A227] text-[#0D0D0D] flex items-center justify-center font-bold">2</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#D0A050] text-[#0A0A0B] flex items-center justify-center font-bold">2</div>
                 <div>
-                  <h3 className="font-bold text-[#EDE6D8] mb-1">Cabinet Removal & Preparation</h3>
-                  <p className="text-[#B3ACA1]">We carefully remove cabinet doors and hardware, then thoroughly clean and sand all surfaces.</p>
+                  <h3 className="font-bold text-[#EDEDEF] mb-1">Cabinet Removal & Preparation</h3>
+                  <p className="text-[#B4B4B8]">We carefully remove cabinet doors and hardware, then thoroughly clean and sand all surfaces.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C9A227] text-[#0D0D0D] flex items-center justify-center font-bold">3</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#D0A050] text-[#0A0A0B] flex items-center justify-center font-bold">3</div>
                 <div>
-                  <h3 className="font-bold text-[#EDE6D8] mb-1">Priming & Base Coat</h3>
-                  <p className="text-[#B3ACA1]">We apply professional primer and base coat to ensure excellent adhesion and coverage.</p>
+                  <h3 className="font-bold text-[#EDEDEF] mb-1">Priming & Base Coat</h3>
+                  <p className="text-[#B4B4B8]">We apply professional primer and base coat to ensure excellent adhesion and coverage.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C9A227] text-[#0D0D0D] flex items-center justify-center font-bold">4</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#D0A050] text-[#0A0A0B] flex items-center justify-center font-bold">4</div>
                 <div>
-                  <h3 className="font-bold text-[#EDE6D8] mb-1">2-Pack Finish Application</h3>
-                  <p className="text-[#B3ACA1]">We apply premium 2-pack finish in multiple coats for a durable, high-gloss result.</p>
+                  <h3 className="font-bold text-[#EDEDEF] mb-1">2-Pack Finish Application</h3>
+                  <p className="text-[#B4B4B8]">We apply premium 2-pack finish in multiple coats for a durable, high-gloss result.</p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C9A227] text-[#0D0D0D] flex items-center justify-center font-bold">5</div>
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#D0A050] text-[#0A0A0B] flex items-center justify-center font-bold">5</div>
                 <div>
-                  <h3 className="font-bold text-[#EDE6D8] mb-1">Reassembly & Final Inspection</h3>
-                  <p className="text-[#B3ACA1]">We reinstall doors, hardware, and handles, then perform a final quality inspection.</p>
+                  <h3 className="font-bold text-[#EDEDEF] mb-1">Reassembly & Final Inspection</h3>
+                  <p className="text-[#B4B4B8]">We reinstall doors, hardware, and handles, then perform a final quality inspection.</p>
                 </div>
               </div>
             </div>
@@ -215,16 +215,16 @@ export default function KitchenCabinetResurfacing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 bg-[#1A1713] p-8 rounded-lg border border-[#2A261F]"
+            className="mb-12 bg-[#131316] p-8 rounded-lg border border-[#222227]"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Kitchen Cabinet Resurfacing Service Areas</h2>
-            <p className="text-[#B3ACA1] mb-4">We provide professional kitchen cabinet resurfacing services across all Melbourne suburbs including:</p>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Kitchen Cabinet Resurfacing Service Areas</h2>
+            <p className="text-[#B4B4B8] mb-4">We provide professional kitchen cabinet resurfacing services across all Melbourne suburbs including:</p>
             <div className="flex flex-wrap gap-3">
               {suburbs.map((s) => (
                 <Link
                   key={s.name}
                   href={s.link}
-                  className="bg-[#12100C] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#E3C878] hover:text-[#E3C878] transition-all font-medium"
+                  className="bg-[#0C0C0E] px-4 py-2 rounded-lg border border-[#222227] text-[#EDEDEF] hover:border-[#E9BE6C] hover:text-[#E9BE6C] transition-all font-medium"
                 >
                   {s.name}
                 </Link>
@@ -239,12 +239,12 @@ export default function KitchenCabinetResurfacing() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Kitchen Cabinet Resurfacing FAQs</h2>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Kitchen Cabinet Resurfacing FAQs</h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (
-                <div key={i} className="border-b border-[#2A261F] pb-4">
-                  <h3 className="text-lg font-bold text-[#EDE6D8] mb-2">{faq.question}</h3>
-                  <p className="text-[#B3ACA1]">{faq.answer}</p>
+                <div key={i} className="border-b border-[#222227] pb-4">
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <p className="text-[#B4B4B8]">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -255,17 +255,17 @@ export default function KitchenCabinetResurfacing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 bg-[#17140F] p-8 rounded-lg"
+            className="mb-12 bg-[#101013] p-8 rounded-lg"
           >
-            <h3 className="text-xl font-bold text-[#EDE6D8] mb-4">Our Other Services</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mb-4">Our Other Services</h3>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/interior-painting" className="text-[#C9A227] hover:underline font-medium">Interior Painting</Link>
+              <Link href="/services/interior-painting" className="text-[#D0A050] hover:underline font-medium">Interior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/exterior-painting" className="text-[#C9A227] hover:underline font-medium">Exterior Painting</Link>
+              <Link href="/services/exterior-painting" className="text-[#D0A050] hover:underline font-medium">Exterior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/commercial-painting" className="text-[#C9A227] hover:underline font-medium">Commercial Painting</Link>
+              <Link href="/services/commercial-painting" className="text-[#D0A050] hover:underline font-medium">Commercial Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/roof-painting" className="text-[#C9A227] hover:underline font-medium">Roof Painting</Link>
+              <Link href="/services/roof-painting" className="text-[#D0A050] hover:underline font-medium">Roof Painting</Link>
             </div>
           </motion.div>
 
@@ -274,7 +274,7 @@ export default function KitchenCabinetResurfacing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center"
+            className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white p-12 rounded-lg text-center"
           >
             <h2 className="text-3xl font-bold mb-4">Transform Your Kitchen Today</h2>
             <p className="text-xl mb-6 text-gray-300">
@@ -282,7 +282,7 @@ export default function KitchenCabinetResurfacing() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

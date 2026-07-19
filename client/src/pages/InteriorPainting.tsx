@@ -57,7 +57,7 @@ export default function InteriorPainting() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1A1713]">
+    <div className="min-h-screen bg-[#131316]">
       <SEOHead
         title="Interior Painting Melbourne | Professional House Painters | Jetblack Painting"
         description="Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
@@ -67,7 +67,7 @@ export default function InteriorPainting() {
       <Navbar />
 
       {/* Header */}
-      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
+      <section className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white pt-32 pb-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export default function InteriorPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-3 rounded font-bold transition-all"
             >
               <Phone className="w-5 h-5" />
               Call for Free Quote
@@ -91,7 +91,7 @@ export default function InteriorPainting() {
         </div>
       </section>
 
-      <section className="py-12 bg-[#1A1713]">
+      <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
             src={imgHallway}
@@ -157,13 +157,13 @@ export default function InteriorPainting() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">
               Melbourne's Trusted Interior Painting Specialists
             </h2>
-            <p className="text-lg text-[#B3ACA1] mb-4 leading-relaxed">
+            <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               Jetblack Painting delivers premium interior painting services across Melbourne. With 13+ years of experience and a 5-star Google rating, we transform homes with expert craftsmanship and premium materials. Our professional team handles everything from single rooms to complete home repaints.
             </p>
-            <p className="text-lg text-[#B3ACA1] mb-4 leading-relaxed">
+            <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               We specialise in residential interior painting including living rooms, bedrooms, kitchens, bathrooms, hallways, and ceilings. Every project includes thorough surface preparation, premium primers, and top-quality topcoats for a flawless, long-lasting finish.
             </p>
           </motion.div>
@@ -175,12 +175,12 @@ export default function InteriorPainting() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Why Choose Our Interior Painting Service</h2>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Why Choose Our Interior Painting Service</h2>
             <div className="space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-[#E3C878] flex-shrink-0 mt-1" />
-                  <span className="text-[#B3ACA1] text-lg">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-[#E9BE6C] flex-shrink-0 mt-1" />
+                  <span className="text-[#B4B4B8] text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -193,16 +193,16 @@ export default function InteriorPainting() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 bg-[#12100C] p-8 rounded-lg"
+            className="mb-12 bg-[#0C0C0E] p-8 rounded-lg"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Interior Painting Service Areas</h2>
-            <p className="text-[#B3ACA1] mb-4">We provide professional interior painting services across all Melbourne suburbs including:</p>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Interior Painting Service Areas</h2>
+            <p className="text-[#B4B4B8] mb-4">We provide professional interior painting services across all Melbourne suburbs including:</p>
             <div className="flex flex-wrap gap-3">
               {suburbs.map((s) => (
                 <Link
                   key={s.name}
                   href={s.link}
-                  className="bg-[#1A1713] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#E3C878] hover:text-[#E3C878] transition-all font-medium"
+                  className="bg-[#131316] px-4 py-2 rounded-lg border border-[#222227] text-[#EDEDEF] hover:border-[#E9BE6C] hover:text-[#E9BE6C] transition-all font-medium"
                 >
                   {s.name}
                 </Link>
@@ -217,12 +217,12 @@ export default function InteriorPainting() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Interior Painting FAQs</h2>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Interior Painting FAQs</h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (
-                <div key={i} className="border-b border-[#2A261F] pb-4">
-                  <h3 className="text-lg font-bold text-[#EDE6D8] mb-2">{faq.question}</h3>
-                  <p className="text-[#B3ACA1]">{faq.answer}</p>
+                <div key={i} className="border-b border-[#222227] pb-4">
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <p className="text-[#B4B4B8]">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -233,17 +233,17 @@ export default function InteriorPainting() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 bg-[#17140F] p-8 rounded-lg"
+            className="mb-12 bg-[#101013] p-8 rounded-lg"
           >
-            <h3 className="text-xl font-bold text-[#EDE6D8] mb-4">Our Other Services</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mb-4">Our Other Services</h3>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/exterior-painting" className="text-[#C9A227] hover:underline font-medium">Exterior Painting</Link>
+              <Link href="/services/exterior-painting" className="text-[#D0A050] hover:underline font-medium">Exterior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/commercial-painting" className="text-[#C9A227] hover:underline font-medium">Commercial Painting</Link>
+              <Link href="/services/commercial-painting" className="text-[#D0A050] hover:underline font-medium">Commercial Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/roof-painting" className="text-[#C9A227] hover:underline font-medium">Roof Painting</Link>
+              <Link href="/services/roof-painting" className="text-[#D0A050] hover:underline font-medium">Roof Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/blog" className="text-[#C9A227] hover:underline font-medium">Painting Blog</Link>
+              <Link href="/blog" className="text-[#D0A050] hover:underline font-medium">Painting Blog</Link>
             </div>
           </motion.div>
 
@@ -252,7 +252,7 @@ export default function InteriorPainting() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white p-12 rounded-lg text-center"
+            className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white p-12 rounded-lg text-center"
           >
             <h2 className="text-3xl font-bold mb-4">Get Your Free Interior Painting Quote</h2>
             <p className="text-xl mb-6 text-gray-300">
@@ -260,7 +260,7 @@ export default function InteriorPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

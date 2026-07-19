@@ -120,12 +120,12 @@ export default function Home() {
       <Navbar />
       <main>
       <Hero />
-      <section className="bg-[#0A0A0A] py-14 border-t border-white/[0.06]">
+      <section className="bg-[#060607] py-14 border-t border-white/[0.06]">
         <div className="container max-w-4xl text-center">
-          <p className="text-2xl md:text-3xl text-[#F4F0E7] mb-3" style={{ fontFamily: "Georgia, serif" }}>
+          <p className="text-2xl md:text-3xl text-[#FCFCFC] mb-3" style={{ fontFamily: "Georgia, serif" }}>
             Melbourne's Best-Rated Local House Painters
           </p>
-          <p className="text-[#98938B] text-sm md:text-base font-light leading-relaxed">
+          <p className="text-[#98989D] text-sm md:text-base font-light leading-relaxed">
             5-star rated, fully insured, and servicing 30+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
             Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.
             Free quotes — call 0432 077 782.

@@ -122,7 +122,7 @@ export default function Gallery() {
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="gallery" className="py-24 lg:py-28 bg-[#0A0A0A]">
+    <section id="gallery" className="py-24 lg:py-28 bg-[#060607]">
       <div className="container">
         {/* Section Header */}
         <div
@@ -130,10 +130,10 @@ export default function Gallery() {
           className={`reveal up max-w-2xl mb-12 ${header.visible ? "visible" : ""}`}
         >
           <span className="lux-eyebrow">Featured Projects</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[2.9rem] text-[#F4F0E7] leading-[1.18] mb-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-[2.9rem] text-[#FCFCFC] leading-[1.18] mb-5">
             Recent work, no filters needed
           </h2>
-          <p className="text-[#EDE9E0]/60 text-base font-light leading-relaxed">
+          <p className="text-[#EDEDEF]/60 text-base font-light leading-relaxed">
             Browse our recent projects across Melbourne. Every job is completed with
             the same attention to detail and commitment to quality.
           </p>
@@ -147,8 +147,8 @@ export default function Gallery() {
               onClick={() => setFilter(cat)}
               className={`px-5 py-2.5 text-[10.5px] font-bold tracking-[0.18em] uppercase transition-all duration-200 ${
                 filter === cat
-                  ? "bg-[#C9A227] text-[#0A0A0A]"
-                  : "border border-white/15 text-white/55 hover:border-[#C9A227]/60 hover:text-[#C9A227]"
+                  ? "bg-[#D0A050] text-[#060607]"
+                  : "border border-white/15 text-white/55 hover:border-[#D0A050]/60 hover:text-[#D0A050]"
               }`}
             >
               {cat}
@@ -183,7 +183,7 @@ export default function Gallery() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="text-[#C9A227] text-[9.5px] font-semibold uppercase tracking-[0.3em]">
+                      <span className="text-[#D0A050] text-[9.5px] font-semibold uppercase tracking-[0.3em]">
                         {project.category}
                       </span>
                       <p className="text-white text-sm mt-1 line-clamp-2">{project.alt}</p>
@@ -192,8 +192,8 @@ export default function Gallery() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 lg:-left-12 text-[#C9A227] border-[#C9A227]/40 bg-transparent hover:bg-[#C9A227] hover:text-[#0A0A0A] rounded-none" />
-            <CarouselNext className="-right-4 lg:-right-12 text-[#C9A227] border-[#C9A227]/40 bg-transparent hover:bg-[#C9A227] hover:text-[#0A0A0A] rounded-none" />
+            <CarouselPrevious className="-left-4 lg:-left-12 text-[#D0A050] border-[#D0A050]/40 bg-transparent hover:bg-[#D0A050] hover:text-[#060607] rounded-none" />
+            <CarouselNext className="-right-4 lg:-right-12 text-[#D0A050] border-[#D0A050]/40 bg-transparent hover:bg-[#D0A050] hover:text-[#060607] rounded-none" />
           </Carousel>
         </div>
       </div>

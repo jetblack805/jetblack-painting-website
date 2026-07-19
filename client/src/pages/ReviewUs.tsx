@@ -54,7 +54,7 @@ export default function ReviewUs() {
               href={googleReviewLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C49826] text-[#0D0D0D] font-bold text-lg rounded-lg hover:bg-[#A67F1E] transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C9A227] text-[#0D0D0D] font-bold text-lg rounded-lg hover:bg-[#B8933D] transition-colors"
             >
               <Star className="w-5 h-5" />
               Leave a Google Review
@@ -67,28 +67,28 @@ export default function ReviewUs() {
             <h2 className="text-2xl font-bold text-white mb-6">How to Leave a Review</h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-8 h-8 bg-[#C49826] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">1</span>
+                <span className="flex-shrink-0 w-8 h-8 bg-[#C9A227] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">1</span>
                 <div>
                   <h3 className="text-white font-semibold">Click the button above</h3>
                   <p className="text-gray-400">This will take you directly to our Google Business Profile review page.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-8 h-8 bg-[#C49826] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">2</span>
+                <span className="flex-shrink-0 w-8 h-8 bg-[#C9A227] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">2</span>
                 <div>
                   <h3 className="text-white font-semibold">Select your star rating</h3>
                   <p className="text-gray-400">Tap the stars to rate your experience (1-5 stars).</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-8 h-8 bg-[#C49826] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">3</span>
+                <span className="flex-shrink-0 w-8 h-8 bg-[#C9A227] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">3</span>
                 <div>
                   <h3 className="text-white font-semibold">Write a few words about your experience</h3>
                   <p className="text-gray-400">Mention the service you received (e.g., interior painting, exterior painting), your suburb, and what you liked most.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-8 h-8 bg-[#C49826] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">4</span>
+                <span className="flex-shrink-0 w-8 h-8 bg-[#C9A227] text-[#0D0D0D] rounded-full flex items-center justify-center font-bold">4</span>
                 <div>
                   <h3 className="text-white font-semibold">Submit your review</h3>
                   <p className="text-gray-400">Click "Post" and you're done! Thank you for supporting a local Melbourne business.</p>
@@ -112,7 +112,7 @@ export default function ReviewUs() {
               />
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1 px-4 py-2 bg-[#C49826] text-[#0D0D0D] rounded-md hover:bg-[#A67F1E] transition-colors text-sm font-medium"
+                className="flex items-center gap-1 px-4 py-2 bg-[#C9A227] text-[#0D0D0D] rounded-md hover:bg-[#B8933D] transition-colors text-sm font-medium"
               >
                 {copied ? (
                   <>

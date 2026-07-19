@@ -72,7 +72,7 @@ export default function RoofPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
             >
               <Phone className="w-5 h-5" />
               Call for Free Quote
@@ -138,7 +138,7 @@ export default function RoofPainting() {
             <div className="space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-[#D4AB3A] flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-[#E3C878] flex-shrink-0 mt-1" />
                   <span className="text-[#B3ACA1] text-lg">{benefit}</span>
                 </div>
               ))}
@@ -160,7 +160,7 @@ export default function RoofPainting() {
                 <Link
                   key={s.name}
                   href={s.link}
-                  className="bg-[#1A1713] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#D4AB3A] hover:text-[#D4AB3A] transition-all font-medium"
+                  className="bg-[#1A1713] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#E3C878] hover:text-[#E3C878] transition-all font-medium"
                 >
                   {s.name}
                 </Link>
@@ -195,13 +195,13 @@ export default function RoofPainting() {
           >
             <h3 className="text-xl font-bold text-[#EDE6D8] mb-4">Our Other Services</h3>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/interior-painting" className="text-[#C49826] hover:underline font-medium">Interior Painting</Link>
+              <Link href="/services/interior-painting" className="text-[#C9A227] hover:underline font-medium">Interior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/exterior-painting" className="text-[#C49826] hover:underline font-medium">Exterior Painting</Link>
+              <Link href="/services/exterior-painting" className="text-[#C9A227] hover:underline font-medium">Exterior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/commercial-painting" className="text-[#C49826] hover:underline font-medium">Commercial Painting</Link>
+              <Link href="/services/commercial-painting" className="text-[#C9A227] hover:underline font-medium">Commercial Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/blog" className="text-[#C49826] hover:underline font-medium">Painting Blog</Link>
+              <Link href="/blog" className="text-[#C9A227] hover:underline font-medium">Painting Blog</Link>
             </div>
           </motion.div>
 
@@ -218,7 +218,7 @@ export default function RoofPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

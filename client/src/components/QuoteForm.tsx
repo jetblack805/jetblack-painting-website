@@ -99,10 +99,10 @@ export default function QuoteForm() {
           className={`reveal up max-w-4xl mx-auto ${wrapper.visible ? "visible" : ""}`}
         >
           <div className="text-center mb-12">
-            <span className="text-[#C49826] font-semibold text-sm tracking-widest uppercase mb-3 block">
+            <span className="lux-eyebrow">
               Get Your Quote
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#EDE6D8] mb-4">
+            <h2 className="text-3xl sm:text-4xl text-[#EDE6D8] mb-4">
               Request a Free Painting Quote
             </h2>
             <p className="text-[#A39C90] text-lg max-w-2xl mx-auto">
@@ -110,7 +110,7 @@ export default function QuoteForm() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="bg-[#12100C] rounded-xl p-8 sm:p-12">
+          <form onSubmit={handleSubmit(onSubmit)} className="bg-[#0A0A0A] rounded-xl p-8 sm:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {/* Name */}
               <div>
@@ -122,7 +122,7 @@ export default function QuoteForm() {
                   placeholder="John Doe"
                   id="quote-name"
                   {...register("name")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -139,7 +139,7 @@ export default function QuoteForm() {
                   placeholder="john@example.com"
                   id="quote-email"
                   {...register("email")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -156,7 +156,7 @@ export default function QuoteForm() {
                   placeholder="0432 077 782"
                   id="quote-phone"
                   {...register("phone")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -171,7 +171,7 @@ export default function QuoteForm() {
                 <select
                   id="quote-suburb"
                   {...register("suburb")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 >
                   <option value="">Select a suburb</option>
                   {suburbs.map((suburb) => (
@@ -194,7 +194,7 @@ export default function QuoteForm() {
                 <select
                   id="quote-service"
                   {...register("serviceType")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 >
                   <option value="">Select a service</option>
                   {serviceTypes.map((service) => (
@@ -217,7 +217,7 @@ export default function QuoteForm() {
                   type="date"
                   id="quote-date"
                   {...register("preferredDate")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
               </div>
 
@@ -231,7 +231,7 @@ export default function QuoteForm() {
                   placeholder="e.g., $5,000 - $10,000"
                   id="quote-budget"
                   {...register("budget")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function QuoteForm() {
                 rows={5}
                 id="quote-description"
                 {...register("projectDescription")}
-                className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#D4AB3A] focus:border-transparent transition resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition resize-none"
               />
               {errors.projectDescription && (
                 <p className="text-red-500 text-sm mt-1">{errors.projectDescription.message}</p>
@@ -257,7 +257,7 @@ export default function QuoteForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] font-bold py-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-[#D4AB3A]/30"
+              className="w-full bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] font-bold py-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-[#E3C878]/30"
             >
               {isSubmitting ? "Submitting..." : "Request Free Quote"}
             </button>
@@ -271,7 +271,7 @@ export default function QuoteForm() {
           <div className="grid grid-cols-3 gap-6 mt-12">
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <Phone className="w-8 h-8 text-[#C49826]" />
+                <Phone className="w-8 h-8 text-[#C9A227]" />
               </div>
               <p className="text-[#EDE6D8] font-semibold">24-Hour Response</p>
               <p className="text-[#A39C90] text-sm">We'll call you within 24 hours</p>
@@ -279,7 +279,7 @@ export default function QuoteForm() {
 
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <Mail className="w-8 h-8 text-[#C49826]" />
+                <Mail className="w-8 h-8 text-[#C9A227]" />
               </div>
               <p className="text-[#EDE6D8] font-semibold">No Obligation</p>
               <p className="text-[#A39C90] text-sm">Free quote with no hidden costs</p>
@@ -287,7 +287,7 @@ export default function QuoteForm() {
 
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <MapPin className="w-8 h-8 text-[#C49826]" />
+                <MapPin className="w-8 h-8 text-[#C9A227]" />
               </div>
               <p className="text-[#EDE6D8] font-semibold">Local Experts</p>
               <p className="text-[#A39C90] text-sm">Serving all Melbourne suburbs</p>

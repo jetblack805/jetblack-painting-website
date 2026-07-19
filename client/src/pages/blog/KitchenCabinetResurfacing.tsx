@@ -18,7 +18,7 @@ export default function KitchenCabinetResurfacing() {
         <div className="container max-w-3xl">
           {/* Breadcrumb */}
           <nav className="mb-6" aria-label="Breadcrumb">
-            <Link href="/blog" className="inline-flex items-center text-[#C49826] hover:underline text-sm">
+            <Link href="/blog" className="inline-flex items-center text-[#C9A227] hover:underline text-sm">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Blog
             </Link>
           </nav>
@@ -118,9 +118,9 @@ export default function KitchenCabinetResurfacing() {
             
             <p className="text-[#B3ACA1] mb-4">
               The most requested cabinet colours across our projects in 
-              <Link href="/painter-toorak" className="text-[#C49826] hover:underline"> Toorak</Link>, 
-              <Link href="/painter-brighton" className="text-[#C49826] hover:underline"> Brighton</Link>, and 
-              <Link href="/painter-malvern" className="text-[#C49826] hover:underline"> Malvern</Link> are:
+              <Link href="/painter-toorak" className="text-[#C9A227] hover:underline"> Toorak</Link>, 
+              <Link href="/painter-brighton" className="text-[#C9A227] hover:underline"> Brighton</Link>, and 
+              <Link href="/painter-malvern" className="text-[#C9A227] hover:underline"> Malvern</Link> are:
             </p>
             <ul className="list-disc pl-6 text-[#B3ACA1] space-y-2 mb-6">
               <li><strong>White / Bright White</strong> — Timeless, clean, and makes kitchens feel larger</li>
@@ -138,7 +138,7 @@ export default function KitchenCabinetResurfacing() {
               </p>
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center px-6 py-3 bg-[#C49826] text-[#0D0D0D] font-bold rounded-lg hover:bg-[#A67F1E] transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-[#C9A227] text-[#0D0D0D] font-bold rounded-lg hover:bg-[#B8933D] transition-colors"
               >
                 Call Now: 0432 077 782
               </a>

@@ -273,7 +273,7 @@ export default function SuburbPageTemplate({
       <section className="bg-gradient-to-r from-[#0a0a0a] to-[#1a1a1a] text-white pt-32 pb-16">
         <div className="container">
           <div>
-            <p className="text-[#D4AB3A] font-semibold uppercase tracking-wide mb-3">
+            <p className="text-[#E3C878] font-semibold uppercase tracking-wide mb-3">
               Local {suburb} Painting Contractor
             </p>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">House Painters {suburb}</h1>
@@ -281,14 +281,14 @@ export default function SuburbPageTemplate({
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center justify-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
               >
                 <Phone className="w-5 h-5" />
                 Call 0432 077 782
               </a>
               <a
                 href="#quote"
-                className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-[#D4AB3A] text-white px-8 py-3 rounded font-bold transition-all"
+                className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-[#E3C878] text-white px-8 py-3 rounded font-bold transition-all"
               >
                 Get a Free Quote
               </a>
@@ -351,7 +351,7 @@ export default function SuburbPageTemplate({
             <p className="text-lg text-[#B3ACA1] mb-4 leading-relaxed">
               Whether you need a full interior repaint, a rental refresh, a pre-sale makeover or a feature wall, our {suburb} painting team focuses on preparation, sharp cutting-in and a durable finish that helps your property present properly.
             </p>
-            <Link href="/services/interior-painting" className="text-[#C49826] font-semibold hover:underline">
+            <Link href="/services/interior-painting" className="text-[#C9A227] font-semibold hover:underline">
               Learn more about our interior painting services →
             </Link>
           </div>
@@ -364,7 +364,7 @@ export default function SuburbPageTemplate({
             <p className="text-lg text-[#B3ACA1] mb-4 leading-relaxed">
               Every exterior project is quoted with the prep included, not hidden later. That means cleaner lines, stronger adhesion and a finish that suits Melbourne weather conditions.
             </p>
-            <Link href="/services/exterior-painting" className="text-[#C49826] font-semibold hover:underline">
+            <Link href="/services/exterior-painting" className="text-[#C9A227] font-semibold hover:underline">
               Learn more about our exterior painting services →
             </Link>
           </div>
@@ -383,7 +383,7 @@ export default function SuburbPageTemplate({
                 "Clean work areas and minimal disruption to your home",
               ].map((reason) => (
                 <div key={reason} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-[#D4AB3A] flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-[#E3C878] flex-shrink-0 mt-1" />
                   <span className="text-[#B3ACA1] text-lg">{reason}</span>
                 </div>
               ))}
@@ -399,7 +399,7 @@ export default function SuburbPageTemplate({
             <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Painting Services in {suburb}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {coreServices.map((service) => (
-                <Link key={service.name} href={service.link} className="bg-[#17140F] p-6 rounded-lg border-l-4 border-[#D4AB3A] hover:bg-[#1A1713] hover:shadow-md transition-all">
+                <Link key={service.name} href={service.link} className="bg-[#17140F] p-6 rounded-lg border-l-4 border-[#E3C878] hover:bg-[#1A1713] hover:shadow-md transition-all">
                   <p className="text-gray-900 text-lg font-semibold">{service.name} {suburb}</p>
                   <p className="text-[#A39C90] mt-2 text-sm">View service details and request a quote.</p>
                 </Link>
@@ -451,7 +451,7 @@ export default function SuburbPageTemplate({
                 href="https://www.google.com/maps/place/Jetblack+Painting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-6 py-3 rounded font-bold transition-all"
+                className="shrink-0 inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-6 py-3 rounded font-bold transition-all"
               >
                 Read our Google reviews
               </a>
@@ -482,7 +482,7 @@ export default function SuburbPageTemplate({
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-bold text-[#EDE6D8] mb-2 flex items-center gap-2">
-                      <MapPin className="w-5 h-5 text-[#D4AB3A]" />
+                      <MapPin className="w-5 h-5 text-[#E3C878]" />
                       Main Office
                     </h3>
                     <p className="text-[#B3ACA1]">Mordialloc VIC 3195</p>
@@ -490,16 +490,16 @@ export default function SuburbPageTemplate({
                   </div>
                   <div>
                     <h3 className="font-bold text-[#EDE6D8] mb-2 flex items-center gap-2">
-                      <Phone className="w-5 h-5 text-[#D4AB3A]" />
+                      <Phone className="w-5 h-5 text-[#E3C878]" />
                       Contact Us
                     </h3>
                     <p className="text-[#B3ACA1]">
-                      <a href="tel:0432077782" className="text-[#C49826] hover:underline font-bold">
+                      <a href="tel:0432077782" className="text-[#C9A227] hover:underline font-bold">
                         0432 077 782
                       </a>
                     </p>
                     <p className="text-[#B3ACA1]">
-                      <a href="mailto:jimmy@jetblackpainting.com" className="text-[#C49826] hover:underline">
+                      <a href="mailto:jimmy@jetblackpainting.com" className="text-[#C9A227] hover:underline">
                         jimmy@jetblackpainting.com
                       </a>
                     </p>
@@ -532,7 +532,7 @@ export default function SuburbPageTemplate({
               </p>
               <div className="flex flex-wrap gap-3">
                 {validNeighbouringSuburbs.map((s) => (
-                  <Link key={s.name} href={s.link} className="bg-[#1A1713] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#D4AB3A] hover:text-[#D4AB3A] transition-all font-medium">
+                  <Link key={s.name} href={s.link} className="bg-[#1A1713] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#E3C878] hover:text-[#E3C878] transition-all font-medium">
                     Painters {s.name}
                   </Link>
                 ))}
@@ -545,7 +545,7 @@ export default function SuburbPageTemplate({
             <p className="text-xl mb-6 text-gray-300">
               Contact Jetblack Painting for a free, no-obligation quote on your {suburb} painting project. Call now and speak directly with Jimmy.
             </p>
-            <a href="tel:0432077782" className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all">
+            <a href="tel:0432077782" className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all">
               <Phone className="w-5 h-5" />
               Call 0432 077 782
             </a>

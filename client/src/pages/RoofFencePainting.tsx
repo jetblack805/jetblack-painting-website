@@ -75,7 +75,7 @@ export default function RoofFencePainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
             >
               <Phone className="w-5 h-5" />
               Call for Free Quote
@@ -123,12 +123,12 @@ export default function RoofFencePainting() {
             className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6"
           >
             <div className="bg-[#12100C] p-6 rounded-lg">
-              <Shield className="w-12 h-12 text-[#D4AB3A] mb-3" />
+              <Shield className="w-12 h-12 text-[#E3C878] mb-3" />
               <h3 className="text-2xl font-bold text-[#EDE6D8] mb-2">10-15</h3>
               <p className="text-[#B3ACA1]">Years of roof life extension</p>
             </div>
             <div className="bg-[#12100C] p-6 rounded-lg">
-              <Zap className="w-12 h-12 text-[#D4AB3A] mb-3" />
+              <Zap className="w-12 h-12 text-[#E3C878] mb-3" />
               <h3 className="text-2xl font-bold text-[#EDE6D8] mb-2">All Types</h3>
               <p className="text-[#B3ACA1]">Metal, tile, concrete, asphalt</p>
             </div>
@@ -145,7 +145,7 @@ export default function RoofFencePainting() {
             <div className="space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-[#D4AB3A] flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-[#E3C878] flex-shrink-0 mt-1" />
                   <span className="text-[#B3ACA1] text-lg">{benefit}</span>
                 </div>
               ))}
@@ -167,19 +167,19 @@ export default function RoofFencePainting() {
             </p>
             <ul className="space-y-2 text-[#B3ACA1]">
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Metal roofing (Colorbond, Zincalume)
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Ceramic and concrete tiles
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Asphalt and slate roofs
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Flat roofs and membranes
               </li>
             </ul>
@@ -198,19 +198,19 @@ export default function RoofFencePainting() {
             </p>
             <ul className="space-y-2 text-[#B3ACA1]">
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Timber fence painting and staining
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Colorbond and metal fence painting
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Composite fence finishing
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C49826]" />
+                <span className="w-2 h-2 rounded-full bg-[#C9A227]" />
                 Deck and outdoor timber staining
               </li>
             </ul>
@@ -230,7 +230,7 @@ export default function RoofFencePainting() {
                 <Link
                   key={s.name}
                   href={s.link}
-                  className="bg-[#12100C] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#D4AB3A] hover:text-[#D4AB3A] transition-all font-medium"
+                  className="bg-[#12100C] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#E3C878] hover:text-[#E3C878] transition-all font-medium"
                 >
                   {s.name}
                 </Link>
@@ -265,13 +265,13 @@ export default function RoofFencePainting() {
           >
             <h3 className="text-xl font-bold text-[#EDE6D8] mb-4">Our Other Services</h3>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/interior-painting" className="text-[#C49826] hover:underline font-medium">Interior Painting</Link>
+              <Link href="/services/interior-painting" className="text-[#C9A227] hover:underline font-medium">Interior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/exterior-painting" className="text-[#C49826] hover:underline font-medium">Exterior Painting</Link>
+              <Link href="/services/exterior-painting" className="text-[#C9A227] hover:underline font-medium">Exterior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/commercial-painting" className="text-[#C49826] hover:underline font-medium">Commercial Painting</Link>
+              <Link href="/services/commercial-painting" className="text-[#C9A227] hover:underline font-medium">Commercial Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/roof-painting" className="text-[#C49826] hover:underline font-medium">Roof Painting</Link>
+              <Link href="/services/roof-painting" className="text-[#C9A227] hover:underline font-medium">Roof Painting</Link>
             </div>
           </motion.div>
 
@@ -288,7 +288,7 @@ export default function RoofFencePainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

@@ -227,7 +227,7 @@ export default function FAQ() {
                     >
                       <h3 className="font-bold text-[#EDE6D8] text-lg">{faq.q}</h3>
                       <ChevronDown
-                        className={`w-5 h-5 text-[#D4AB3A] transition-transform ${
+                        className={`w-5 h-5 text-[#E3C878] transition-transform ${
                           openIndex === catIndex * 100 + itemIndex ? "rotate-180" : ""
                         }`}
                       />
@@ -256,7 +256,7 @@ export default function FAQ() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               Call 0432 077 782
             </a>

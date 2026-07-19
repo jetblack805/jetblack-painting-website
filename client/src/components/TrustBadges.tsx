@@ -1,82 +1,78 @@
-import { Shield, Award, CheckCircle, Star, Clock, Users } from "lucide-react";
+/*
+ * Design: Luxury Black & Gold — cream trust section
+ * "The difference is in the details" — hairline-ruled columns, serif accents.
+ * All credential copy is real and crawlable (SEO/AEO).
+ */
 
 export default function TrustBadges() {
   const badges = [
     {
-      icon: <Shield className="w-10 h-10 text-[#D4AB3A]" />,
+      mark: "13+",
+      title: "Years Experience",
+      description: "Over a decade delivering high-quality finishes across Melbourne, trusted since 2011.",
+    },
+    {
+      mark: "✦",
       title: "$10M Public Liability",
-      description: "Fully insured for your peace of mind"
+      description: "Fully licensed and insured — a VIC registered painting contractor.",
     },
     {
-      icon: <Award className="w-10 h-10 text-[#D4AB3A]" />,
-      title: "Licensed & Registered",
-      description: "VIC registered painting contractor"
-    },
-    {
-      icon: <CheckCircle className="w-10 h-10 text-[#D4AB3A]" />,
+      mark: "✦",
       title: "5-Year Written Guarantee",
-      description: "Every project backed by our written guarantee"
+      description: "Every project backed by our written workmanship guarantee.",
     },
     {
-      icon: <Star className="w-10 h-10 text-[#D4AB3A]" />,
+      mark: "✦",
+      title: "Premium Products",
+      description: "We use trusted Dulux and Taubmans products for beautiful, long-lasting results.",
+    },
+    {
+      mark: "✦",
       title: "5-Star Google Rating",
-      description: "5-star Google reviews"
+      description: "2,500+ residential and commercial projects completed, 5.0-rated on Google.",
     },
-    {
-      icon: <Clock className="w-10 h-10 text-[#D4AB3A]" />,
-      title: "13+ Years Experience",
-      description: "Trusted since 2011 across Melbourne"
-    },
-    {
-      icon: <Users className="w-10 h-10 text-[#D4AB3A]" />,
-      title: "2,500+ Projects Completed",
-      description: "Residential & commercial painting"
-    }
   ];
 
   return (
-    <section className="py-16 bg-[#0D0D0D]" aria-label="Trust and credentials">
+    <section className="py-24 lg:py-28 bg-[#F5F1E8]" aria-label="Trust and credentials">
       <div className="container max-w-6xl">
-        <h2 className="text-3xl font-bold text-white text-center mb-3">
-          Why Melbourne Trusts Jetblack Painting
+        <span className="lux-eyebrow text-[#B8933D]">Why Jetblack</span>
+        <h2 className="text-3xl lg:text-4xl text-[#1A1A1A]">
+          The difference is in the details
         </h2>
-        <p className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
-          Fully licensed, insured, and accredited — we deliver quality you can trust on every project.
-        </p>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {badges.map((badge, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center p-4 rounded-lg bg-[#1a1a1a] border border-gray-800 hover:border-[#D4AB3A] transition-colors"
-            >
-              <div className="mb-3">{badge.icon}</div>
-              <h3 className="text-white font-semibold text-sm mb-1">{badge.title}</h3>
-              <p className="text-gray-400 text-xs">{badge.description}</p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-10 gap-y-10 mt-14">
+          {badges.map((badge) => (
+            <div key={badge.title} className="border-t border-[#1A1A1A]/[0.12] pt-6">
+              <div className="text-[#B8933D] text-xl mb-4" style={{ fontFamily: "Georgia, serif" }}>{badge.mark}</div>
+              <h3 className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#1A1A1A] mb-2.5 leading-relaxed" style={{ fontFamily: "system-ui, sans-serif" }}>
+                {badge.title}
+              </h3>
+              <p className="text-[13px] text-[#5A564E] leading-relaxed">{badge.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Trust Statement */}
-        <div className="mt-12 text-center border-t border-gray-800 pt-8">
-          <p className="text-gray-300 max-w-3xl mx-auto">
-            Jetblack Painting is a <strong className="text-white">fully licensed and insured</strong> painting company
-            based in Mordialloc, Melbourne. All work is backed by a <strong className="text-white">5-year written workmanship guarantee</strong> and
-            covered by <strong className="text-white">$10M public liability insurance</strong>.
-            We use only <strong className="text-white">premium Dulux and Taubmans paints</strong> and comply with all Australian Standards for painting and decorating.
+        {/* Trust Statement — crawlable credential copy */}
+        <div className="mt-16 border-t border-[#1A1A1A]/[0.12] pt-10">
+          <p className="text-[#5A564E] max-w-3xl leading-relaxed">
+            Jetblack Painting is a <strong className="text-[#1A1A1A] font-semibold">fully licensed and insured</strong> painting company
+            based in Mordialloc, Melbourne. All work is backed by a <strong className="text-[#1A1A1A] font-semibold">5-year written workmanship guarantee</strong> and
+            covered by <strong className="text-[#1A1A1A] font-semibold">$10M public liability insurance</strong>.
+            We use only <strong className="text-[#1A1A1A] font-semibold">premium Dulux and Taubmans paints</strong> and comply with all Australian Standards for painting and decorating.
           </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="tel:0432077782"
-              className="inline-flex items-center px-6 py-3 bg-[#C49826] text-[#0D0D0D] font-bold rounded-lg hover:bg-[#A67F1E] transition-colors"
+              className="inline-flex items-center px-7 py-3.5 bg-[#C9A227] text-[#0A0A0A] text-[11px] font-bold tracking-[0.18em] uppercase hover:bg-[#E3C878] transition-colors"
             >
-              Call Now: 0432 077 782
+              Call 0432 077 782
             </a>
             <a
               href="mailto:jimmy@jetblackpainting.com"
-              className="inline-flex items-center px-6 py-3 border-2 border-[#D4AB3A] text-[#D4AB3A] font-bold rounded-lg hover:bg-[#C49826] hover:text-[#0D0D0D] transition-colors"
+              className="inline-flex items-center px-7 py-3.5 border border-[#1A1A1A]/35 text-[#1A1A1A] text-[11px] font-bold tracking-[0.18em] uppercase hover:border-[#1A1A1A] transition-colors"
             >
-              Email for Free Quote
+              Email for a Free Quote
             </a>
           </div>
         </div>

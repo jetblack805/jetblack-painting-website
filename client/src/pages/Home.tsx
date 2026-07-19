@@ -6,6 +6,7 @@ import TrustBadges from "@/components/TrustBadges";
 import PremiumServices from "@/components/PremiumServices";
 import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
+import ProcessSection from "@/components/ProcessSection";
 import About from "@/components/About";
 import GoogleMap from "@/components/GoogleMap";
 import Contact from "@/components/Contact";
@@ -118,24 +119,25 @@ export default function Home() {
       />
       <Navbar />
       <main>
-      <section className="bg-[#12100C] pt-28 pb-6 lg:pt-32">
+      <Hero />
+      <section className="bg-[#0A0A0A] py-14 border-t border-white/[0.06]">
         <div className="container max-w-4xl text-center">
-          <p className="text-2xl md:text-3xl font-bold text-[#EDE6D8] mb-2">
+          <p className="text-2xl md:text-3xl text-[#F4F0E7] mb-3" style={{ fontFamily: "Georgia, serif" }}>
             Melbourne's Best-Rated Local House Painters
           </p>
-          <p className="text-[#A39C90] text-sm md:text-base">
+          <p className="text-[#98938B] text-sm md:text-base font-light leading-relaxed">
             5-star rated, fully insured, and servicing 30+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
             Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.
             Free quotes — call 0432 077 782.
           </p>
         </div>
       </section>
-      <Hero />
       <TrustBadges />
       <Services />
       <PremiumServices />
       <Gallery />
       <Reviews />
+      <ProcessSection />
       <About />
       <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
         <QuoteForm />

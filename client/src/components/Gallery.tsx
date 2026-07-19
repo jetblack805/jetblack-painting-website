@@ -122,23 +122,18 @@ export default function Gallery() {
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="gallery" className="py-24 bg-[#0D0D0D]">
+    <section id="gallery" className="py-24 lg:py-28 bg-[#0A0A0A]">
       <div className="container">
         {/* Section Header */}
         <div
           ref={header.ref}
           className={`reveal up max-w-2xl mb-12 ${header.visible ? "visible" : ""}`}
         >
-          <span className="text-[#D4AB3A] font-semibold text-sm tracking-widest uppercase mb-3 block">
-            Our Portfolio
-          </span>
-          <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5"
-            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
-          >
-            Our Work
+          <span className="lux-eyebrow">Featured Projects</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[2.9rem] text-[#F4F0E7] leading-[1.18] mb-5">
+            Recent work, no filters needed
           </h2>
-          <p className="text-white/60 text-lg leading-relaxed">
+          <p className="text-[#EDE9E0]/60 text-base font-light leading-relaxed">
             Browse our recent projects across Melbourne. Every job is completed with
             the same attention to detail and commitment to quality.
           </p>
@@ -150,10 +145,10 @@ export default function Gallery() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-5 py-2 rounded text-sm font-medium transition-all duration-200 ${
+              className={`px-5 py-2.5 text-[10.5px] font-bold tracking-[0.18em] uppercase transition-all duration-200 ${
                 filter === cat
-                  ? "bg-[#C49826] text-[#0D0D0D]"
-                  : "bg-white/10 text-white/60 hover:bg-white/15 hover:text-white"
+                  ? "bg-[#C9A227] text-[#0A0A0A]"
+                  : "border border-white/15 text-white/55 hover:border-[#C9A227]/60 hover:text-[#C9A227]"
               }`}
             >
               {cat}
@@ -174,7 +169,7 @@ export default function Gallery() {
               {filtered.map((project, idx) => (
                 <CarouselItem key={project.src} className="pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <div
-                    className="group relative overflow-hidden rounded-lg cursor-pointer h-64 transition-opacity duration-300"
+                    className="group relative overflow-hidden cursor-pointer h-72 transition-opacity duration-300"
                     onClick={() => setLightbox(idx)}
                   >
                     <img loading="lazy" decoding="async"
@@ -188,7 +183,7 @@ export default function Gallery() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="text-[#D4AB3A] text-xs font-semibold uppercase tracking-wider">
+                      <span className="text-[#C9A227] text-[9.5px] font-semibold uppercase tracking-[0.3em]">
                         {project.category}
                       </span>
                       <p className="text-white text-sm mt-1 line-clamp-2">{project.alt}</p>
@@ -197,8 +192,8 @@ export default function Gallery() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 lg:-left-12 text-white border-white/20 bg-white/10 hover:bg-white/20" />
-            <CarouselNext className="-right-4 lg:-right-12 text-white border-white/20 bg-white/10 hover:bg-white/20" />
+            <CarouselPrevious className="-left-4 lg:-left-12 text-[#C9A227] border-[#C9A227]/40 bg-transparent hover:bg-[#C9A227] hover:text-[#0A0A0A] rounded-none" />
+            <CarouselNext className="-right-4 lg:-right-12 text-[#C9A227] border-[#C9A227]/40 bg-transparent hover:bg-[#C9A227] hover:text-[#0A0A0A] rounded-none" />
           </Carousel>
         </div>
       </div>
@@ -221,7 +216,7 @@ export default function Gallery() {
           <img
             src={filtered[lightbox]?.src}
             alt={filtered[lightbox]?.alt}
-            className="max-w-full max-h-[85vh] object-contain rounded-lg"
+            className="max-w-full max-h-[85vh] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
         )}

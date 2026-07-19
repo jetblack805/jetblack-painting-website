@@ -33,7 +33,7 @@ export default function FAQSection() {
           ref={header.ref}
           className={`reveal up max-w-2xl mb-16 ${header.visible ? "visible" : ""}`}
         >
-          <span className="text-[#C49826] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="text-[#C9A227] font-semibold text-sm tracking-widest uppercase mb-3 block">
             Questions & Answers
           </span>
           <h2
@@ -63,7 +63,7 @@ export default function FAQSection() {
           <div className="mt-12">
             <a
               href="/faq"
-              className="text-[#C49826] font-semibold hover:underline flex items-center gap-2"
+              className="text-[#C9A227] font-semibold hover:underline flex items-center gap-2"
             >
               View all FAQs
               <ChevronDown className="w-4 h-4 -rotate-90" />
@@ -101,7 +101,7 @@ function FAQItem({
           {faq.question}
         </h3>
         <ChevronDown
-          className={`w-5 h-5 text-[#D4AB3A] transition-transform flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
+          className={`w-5 h-5 text-[#E3C878] transition-transform flex-shrink-0 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       <div

@@ -116,14 +116,14 @@ export default function Blog() {
               >
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-4 text-sm text-[#A39C90]">
-                    <span className="bg-[#C49826] text-[#0D0D0D] px-3 py-1 rounded-full text-xs font-bold">
+                    <span className="bg-[#C9A227] text-[#0D0D0D] px-3 py-1 rounded-full text-xs font-bold">
                       {post.category}
                     </span>
                     <span>{post.readTime}</span>
                   </div>
                   
                   <Link href={post.slug}>
-                    <h2 className="text-xl font-bold text-[#EDE6D8] mb-3 hover:text-[#D4AB3A] transition-colors cursor-pointer">
+                    <h2 className="text-xl font-bold text-[#EDE6D8] mb-3 hover:text-[#E3C878] transition-colors cursor-pointer">
                       {post.title}
                     </h2>
                   </Link>
@@ -139,7 +139,7 @@ export default function Blog() {
                         {post.date}
                       </div>
                     </div>
-                    <Link href={post.slug} className="text-[#D4AB3A] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
+                    <Link href={post.slug} className="text-[#E3C878] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -162,7 +162,7 @@ export default function Blog() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#C49826] hover:bg-[#A67F1E] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               Call 0432 077 782
             </a>

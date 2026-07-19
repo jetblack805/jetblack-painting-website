@@ -61,19 +61,18 @@ export default function Services() {
   const header = useInView("-100px");
 
   return (
-    <section id="services" className="py-24 bg-[#12100C]">
+    <section id="services" className="py-24 bg-[#0A0A0A]">
       <div className="container">
         {/* Section Header */}
         <div
           ref={header.ref}
           className={`reveal up max-w-2xl mb-16 ${header.visible ? "visible" : ""}`}
         >
-          <span className="text-[#C49826] font-semibold text-sm tracking-widest uppercase mb-3 block">
+          <span className="lux-eyebrow">
             Professional Painting Services
           </span>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#EDE6D8] leading-tight mb-5"
-            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+            className="text-3xl sm:text-4xl lg:text-5xl text-[#EDE6D8] leading-tight mb-5"
           >
             Our Services
           </h2>
@@ -118,7 +117,7 @@ function ServiceCard({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 to-transparent" />
           <div className="absolute bottom-4 left-4">
-            <div className="w-10 h-10 rounded bg-[#C49826] flex items-center justify-center">
+            <div className="w-10 h-10 rounded bg-[#C9A227] flex items-center justify-center">
               <service.icon className="w-5 h-5 text-white" />
             </div>
           </div>
@@ -127,8 +126,7 @@ function ServiceCard({
         {/* Content */}
         <div className="p-6">
           <h3
-            className="text-xl font-bold text-[#EDE6D8] mb-3 group-hover:text-[#C49826] transition-colors"
-            style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}
+            className="text-xl text-[#EDE6D8] mb-3 group-hover:text-[#C9A227] transition-colors"
           >
             {service.title}
           </h3>

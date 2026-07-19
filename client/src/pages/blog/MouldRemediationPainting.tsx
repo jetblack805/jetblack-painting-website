@@ -17,7 +17,7 @@ export default function MouldRemediationPainting() {
       <article className="pt-32 pb-16 bg-[#1A1713]">
         <div className="container max-w-3xl">
           <nav className="mb-6" aria-label="Breadcrumb">
-            <Link href="/blog" className="inline-flex items-center text-[#C49826] hover:underline text-sm">
+            <Link href="/blog" className="inline-flex items-center text-[#C9A227] hover:underline text-sm">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Blog
             </Link>
           </nav>
@@ -45,13 +45,13 @@ export default function MouldRemediationPainting() {
             <p className="text-[#B3ACA1] mb-4">
               Melbourne's climate creates ideal conditions for mould — cool, damp winters with limited ventilation, followed by
               humid summers. The suburbs most affected are those with older housing stock: poorly ventilated weatherboards in
-              <Link href="/painter-mentone" className="text-[#C49826] hover:underline"> Mentone</Link>,
-              <Link href="/painter-sandringham" className="text-[#C49826] hover:underline"> Sandringham</Link> and
-              <Link href="/painter-mordialloc" className="text-[#C49826] hover:underline"> Mordialloc</Link> where salt air
+              <Link href="/painter-mentone" className="text-[#C9A227] hover:underline"> Mentone</Link>,
+              <Link href="/painter-sandringham" className="text-[#C9A227] hover:underline"> Sandringham</Link> and
+              <Link href="/painter-mordialloc" className="text-[#C9A227] hover:underline"> Mordialloc</Link> where salt air
               compounds moisture retention, and period homes in
-              <Link href="/painter-hawthorn" className="text-[#C49826] hover:underline"> Hawthorn</Link>,
-              <Link href="/painter-malvern" className="text-[#C49826] hover:underline"> Malvern</Link> and
-              <Link href="/painter-armadale" className="text-[#C49826] hover:underline"> Armadale</Link> with cold masonry walls
+              <Link href="/painter-hawthorn" className="text-[#C9A227] hover:underline"> Hawthorn</Link>,
+              <Link href="/painter-malvern" className="text-[#C9A227] hover:underline"> Malvern</Link> and
+              <Link href="/painter-armadale" className="text-[#C9A227] hover:underline"> Armadale</Link> with cold masonry walls
               that attract condensation.
             </p>
 
@@ -187,7 +187,7 @@ export default function MouldRemediationPainting() {
               </p>
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center px-6 py-3 bg-[#C49826] text-[#0D0D0D] font-bold rounded-lg hover:bg-[#A67F1E] transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-[#C9A227] text-[#0D0D0D] font-bold rounded-lg hover:bg-[#B8933D] transition-colors"
               >
                 Call Now: 0432 077 782
               </a>

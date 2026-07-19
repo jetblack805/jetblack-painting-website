@@ -1,7 +1,7 @@
 /*
- * Design: Bold Contrast — High-Impact Modern Trade
- * Hero: Full-viewport dark section with generated hero background,
- * bold headline, subtext, and dual CTAs.
+ * Design: Luxury Black & Gold — architect-studio aesthetic
+ * Hero: Full-viewport photographic hero (static <picture> in index.html owns
+ * the LCP image), serif headline, gold rule, dual CTAs, trust badges.
  */
 import { Phone, ChevronRight, ArrowDown } from "lucide-react";
 
@@ -12,70 +12,70 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative flex items-center overflow-hidden" style={{ minHeight: "clamp(620px, 92vh, 860px)" }}>
       {/* No background here — the fixed <picture> in index.html (#hero-static) provides
           the background image and gradients. Keeping this div absent means Chrome never
-          covers the static <img> and it remains the LCP element (preloaded, ~29KB). */}
+          covers the static <img> and it remains the LCP element (preloaded). */}
 
       {/* Content */}
-      <div className="container relative z-10 pt-28 pb-20">
+      <div className="container relative z-10 pt-32 pb-24">
         <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="hero-fade-in inline-flex items-center gap-2 border border-[#00AACC]/40 rounded-full px-4 py-1.5 mb-6" style={{ animationDelay: "0.1s" }}>
-            <span className="w-2 h-2 rounded-full bg-[#007A99] animate-pulse" />
-            <span className="text-[#00AACC] text-sm font-medium tracking-wide">
-              Melbourne's Trusted Painting Specialists
+          {/* Eyebrow */}
+          <div className="hero-fade-in flex items-center gap-4 mb-7" style={{ animationDelay: "0.1s" }}>
+            <span className="block w-8 h-px bg-[#C9A227]" />
+            <span className="text-[#C9A227] text-[10px] font-semibold tracking-[0.32em] uppercase">
+              Melbourne · Bayside &amp; Mornington Peninsula
             </span>
           </div>
 
-          {/* Headline — fade-in is fine now; the static <img> owns LCP, not this h1 */}
+          {/* Headline — serif, premium positioning */}
           <h1
-            className="hero-fade-in text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
-            style={{ fontFamily: "'Outfit', system-ui, sans-serif", animationDelay: "0.25s" }}
+            className="hero-fade-in text-4xl sm:text-5xl lg:text-6xl text-[#F4F0E7] leading-[1.12] mb-7"
+            style={{ animationDelay: "0.25s" }}
           >
-            Professional House Painting in Melbourne{" "}
-            <span className="text-[#00AACC]">Done Right</span>
+            Premium Residential &amp; Commercial{" "}
+            <span className="text-[#C9A227]">Painting in Melbourne</span>
           </h1>
+
+          <div className="hero-fade-in w-11 h-px bg-[#C9A227] mb-8" style={{ animationDelay: "0.3s" }} />
 
           {/* Subtext */}
           <p
-            className="hero-fade-in text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
+            className="hero-fade-in text-[#EDE9E0]/70 text-base sm:text-lg font-light leading-relaxed mb-10 max-w-xl"
             style={{ animationDelay: "0.4s" }}
           >
-            Melbourne's #1 rated house painters. Interior, exterior & commercial painting specialists. Serving Keysborough, Bayside, Mornington Peninsula & all Melbourne suburbs. 5-star rated. Fully licensed & insured.
+            Exceptional craftsmanship for Melbourne's finest homes. Interior, exterior &amp; commercial painting specialists serving Brighton, Toorak, Bayside, the Mornington Peninsula and all Melbourne suburbs. 5-star rated. Fully licensed &amp; insured.
           </p>
 
           {/* CTAs */}
           <div className="hero-fade-in flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.55s" }}>
             <a
               href="tel:0432077782"
-              className="flex items-center justify-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-base transition-all duration-200 hover:shadow-lg hover:shadow-[#00AACC]/30 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-3 bg-[#C9A227] hover:bg-[#E3C878] text-[#0A0A0A] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-200"
             >
-              <Phone className="w-5 h-5" />
-              Call 0432 077 782
+              <Phone className="w-4 h-4" />
+              Request a Free Quote
             </a>
             <button
               onClick={() => scrollToSection("#gallery")}
-              className="flex items-center justify-center gap-2 border border-white/25 hover:border-white/50 text-white px-8 py-4 rounded font-semibold text-base transition-all duration-200 hover:bg-white/5"
+              className="inline-flex items-center justify-center gap-2 border border-[#C9A227]/60 hover:bg-[#C9A227] hover:text-[#0A0A0A] text-[#C9A227] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-200"
             >
               View Our Work
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4" />
             </button>
           </div>
 
-          {/* Stats */}
-          <div className="hero-fade-in flex gap-8 sm:gap-12 mt-14 pt-8 border-t border-white/10" style={{ animationDelay: "0.7s" }}>
+          {/* Trust badges */}
+          <div className="hero-fade-in flex flex-wrap gap-x-7 gap-y-3 mt-14 pt-8 border-t border-white/10" style={{ animationDelay: "0.7s" }}>
             {[
-              { value: "13+", label: "Years Experience" },
-              { value: "5.0★", label: "Google Rating" },
-              { value: "All", label: "Melbourne Suburbs" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-2xl sm:text-3xl font-bold text-[#00AACC]" style={{ fontFamily: "'Outfit', system-ui, sans-serif" }}>
-                  {stat.value}
-                </div>
-                <div className="text-white/50 text-sm mt-1">{stat.label}</div>
-              </div>
+              "Fully qualified & insured",
+              "5-year written guarantee",
+              "5.0 Google rating",
+            ].map((badge) => (
+              <span key={badge} className="flex items-center gap-2.5 text-[10.5px] tracking-[0.18em] uppercase text-[#EDE9E0]/60">
+                <span className="text-[#C9A227] text-[13px]">✓</span>
+                {badge}
+              </span>
             ))}
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="hero-fade-in absolute bottom-8 left-1/2 -translate-x-1/2 z-10" style={{ animationDelay: "1s" }}>
         <button
           onClick={() => scrollToSection("#services")}
-          className="text-white/40 hover:text-[#00AACC] transition-colors"
+          className="text-white/40 hover:text-[#C9A227] transition-colors"
           aria-label="Scroll down"
         >
           <ArrowDown className="w-6 h-6 animate-bounce" />

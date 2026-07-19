@@ -6,7 +6,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { useLocation } from "wouter";
-import LOGO_URL from "@/assets/images/logo.webp";
 
 const SUBURBS = [
   { name: "Armadale",           href: "/painter-armadale/" },
@@ -118,18 +117,20 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[oklch(0.12_0.005_285/0.97)] shadow-lg shadow-black/20 backdrop-blur-md"
-          : "bg-[oklch(0.12_0.005_285/0.97)]"
+          ? "bg-[#0A0A0A]/95 shadow-lg shadow-black/30 backdrop-blur-md border-b border-white/[0.06]"
+          : "bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/[0.06]"
       }`}
     >
       <div className="container flex items-center justify-between h-18 lg:h-20">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-3 shrink-0">
-          <img
-            src={LOGO_URL}
-            alt="Jetblack Painting"
-            className="h-10 w-40 lg:h-12 lg:w-48 rounded object-cover object-center"
-          />
+        <a href="/" className="flex items-center gap-3.5 shrink-0" aria-label="Jetblack Painting — home">
+          <span className="flex items-center justify-center w-10 h-10 border border-[#C9A227] text-[#C9A227] text-[17px]" style={{ fontFamily: "Georgia, serif" }}>
+            JB
+          </span>
+          <span className="leading-tight">
+            <span className="block text-[13px] font-semibold tracking-[0.34em] uppercase text-[#EDE9E0]">Jetblack</span>
+            <span className="block text-[8px] font-medium tracking-[0.5em] uppercase text-[#C9A227]">Painting</span>
+          </span>
         </a>
 
         {/* Desktop Nav */}
@@ -139,7 +140,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-sm font-medium tracking-wide uppercase"
+              className="text-[#EDE9E0]/75 hover:text-[#C9A227] transition-colors duration-200 text-[10.5px] font-semibold tracking-[0.2em] uppercase"
             >
               {link.label}
             </a>
@@ -149,7 +150,7 @@ export default function Navbar() {
           <div ref={dropdownRef} className="relative">
             <button
               onClick={() => setAreasOpen((v) => !v)}
-              className="flex items-center gap-1 text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-sm font-medium tracking-wide uppercase"
+              className="flex items-center gap-1 text-[#EDE9E0]/75 hover:text-[#C9A227] transition-colors duration-200 text-[10.5px] font-semibold tracking-[0.2em] uppercase"
             >
               Service Areas
               <ChevronDown
@@ -158,7 +159,7 @@ export default function Navbar() {
             </button>
 
             <div
-              className={`absolute right-0 top-full mt-3 w-[560px] bg-[oklch(0.12_0.005_285/0.98)] border border-white/10 rounded-lg shadow-2xl shadow-black/40 backdrop-blur-md overflow-hidden transition-all duration-200 origin-top ${
+              className={`absolute right-0 top-full mt-3 w-[560px] bg-[#0A0A0A]/[0.98] border border-white/10 rounded-lg shadow-2xl shadow-black/40 backdrop-blur-md overflow-hidden transition-all duration-200 origin-top ${
                 areasOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
               }`}
             >
@@ -171,7 +172,7 @@ export default function Navbar() {
                         key={s.href}
                         href={s.href}
                         onClick={() => setAreasOpen(false)}
-                        className="text-white/70 hover:text-[#00AACC] hover:bg-white/5 text-sm px-3 py-1.5 rounded transition-colors duration-150"
+                        className="text-white/70 hover:text-[#C9A227] hover:bg-white/5 text-sm px-3 py-1.5 rounded transition-colors duration-150"
                       >
                         {s.name}
                       </a>
@@ -182,10 +183,10 @@ export default function Navbar() {
 
           <a
             href="tel:0432077782"
-            className="flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-5 py-2.5 rounded font-semibold text-sm transition-colors duration-200"
+            className="flex items-center gap-2 border border-[#C9A227] text-[#C9A227] hover:bg-[#C9A227] hover:text-[#0A0A0A] px-5 py-2.5 text-[10.5px] font-bold tracking-[0.18em] uppercase transition-colors duration-200"
           >
-            <Phone className="w-4 h-4" />
-            Call Now
+            <Phone className="w-3.5 h-3.5" />
+            Request a Quote
           </a>
         </div>
 
@@ -201,7 +202,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden bg-[oklch(0.12_0.005_285/0.98)] backdrop-blur-md border-t border-white/10 overflow-hidden transition-all duration-300 ${
+        className={`lg:hidden bg-[#0A0A0A]/[0.98] backdrop-blur-md border-t border-white/10 overflow-hidden transition-all duration-300 ${
           isOpen ? "max-h-[100vh] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -211,7 +212,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-base font-medium tracking-wide uppercase py-2"
+                  className="text-[#EDE9E0]/80 hover:text-[#C9A227] transition-colors duration-200 text-sm font-semibold tracking-[0.18em] uppercase py-2"
                 >
                   {link.label}
                 </a>
@@ -220,7 +221,7 @@ export default function Navbar() {
               {/* Mobile Service Areas toggle */}
               <button
                 onClick={() => setMobileAreas((v) => !v)}
-                className="flex items-center justify-between text-white/80 hover:text-[oklch(0.7_0.15_220)] transition-colors duration-200 text-base font-medium tracking-wide uppercase py-2 w-full"
+                className="flex items-center justify-between text-[#EDE9E0]/80 hover:text-[#C9A227] transition-colors duration-200 text-sm font-semibold tracking-[0.18em] uppercase py-2 w-full"
               >
                 Service Areas
                 <ChevronDown
@@ -239,7 +240,7 @@ export default function Navbar() {
                           key={s.href}
                           href={s.href}
                           onClick={() => setIsOpen(false)}
-                          className="text-white/60 hover:text-[#00AACC] text-sm py-1.5 px-2 rounded transition-colors"
+                          className="text-white/60 hover:text-[#C9A227] text-sm py-1.5 px-2 rounded transition-colors"
                         >
                           {s.name}
                         </a>
@@ -249,7 +250,7 @@ export default function Navbar() {
 
               <a
                 href="tel:0432077782"
-                className="flex items-center justify-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-5 py-3 rounded font-semibold text-sm transition-colors duration-200 mt-2"
+                className="flex items-center justify-center gap-2 bg-[#C9A227] hover:bg-[#E3C878] text-[#0A0A0A] px-5 py-3.5 text-[11px] font-bold tracking-[0.18em] uppercase transition-colors duration-200 mt-2"
               >
                 <Phone className="w-4 h-4" />
                 Call Now

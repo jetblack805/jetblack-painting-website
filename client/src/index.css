@@ -63,26 +63,26 @@
 }
 
 :root {
-  --radius: 0.5rem;
-  --background: oklch(0.98 0.002 80);
-  --foreground: oklch(0.15 0.005 285);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.005 285);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.005 285);
-  --primary: oklch(0.7 0.15 220);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.005 80);
-  --secondary-foreground: oklch(0.2 0.005 285);
-  --muted: oklch(0.94 0.005 80);
-  --muted-foreground: oklch(0.45 0.01 285);
-  --accent: oklch(0.15 0.005 285);
-  --accent-foreground: oklch(1 0 0);
+  --radius: 0.25rem;
+  --background: oklch(0.16 0.004 75);
+  --foreground: oklch(0.93 0.012 85);
+  --card: oklch(0.2 0.006 75);
+  --card-foreground: oklch(0.93 0.012 85);
+  --popover: oklch(0.2 0.006 75);
+  --popover-foreground: oklch(0.93 0.012 85);
+  --primary: oklch(0.72 0.12 88);
+  --primary-foreground: oklch(0.15 0.005 285);
+  --secondary: oklch(0.23 0.008 75);
+  --secondary-foreground: oklch(0.93 0.012 85);
+  --muted: oklch(0.23 0.008 75);
+  --muted-foreground: oklch(0.66 0.015 80);
+  --accent: oklch(0.72 0.12 88);
+  --accent-foreground: oklch(0.15 0.005 285);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.9 0.005 80);
-  --input: oklch(0.9 0.005 80);
-  --ring: oklch(0.7 0.15 220);
+  --border: oklch(0.28 0.008 75);
+  --input: oklch(0.28 0.008 75);
+  --ring: oklch(0.72 0.12 88);
   --chart-1: oklch(0.7 0.15 220);
   --chart-2: oklch(0.55 0.15 220);
   --chart-3: oklch(0.4 0.1 220);
@@ -118,7 +118,9 @@
     @apply cursor-pointer;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', system-ui, sans-serif;
+    font-family: Georgia, 'Times New Roman', 'Palatino Linotype', serif;
+    font-weight: 400;
+    letter-spacing: 0.005em;
   }
 }
 
@@ -188,10 +190,36 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.7 0.15 220);
+  background: oklch(0.72 0.12 88);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.6 0.15 220);
+  background: oklch(0.62 0.11 88);
+}
+
+/* Gold text selection */
+::selection {
+  background: #C9A227;
+  color: #0A0A0A;
+}
+
+/* Luxury shared utilities */
+.lux-eyebrow {
+  display: block;
+  font-family: system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #C9A227;
+  margin-bottom: 18px;
+}
+.lux-serif {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+.lux-signature {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
 }

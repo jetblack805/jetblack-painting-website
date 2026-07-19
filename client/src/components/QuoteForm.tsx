@@ -92,29 +92,29 @@ export default function QuoteForm() {
 
   const wrapper = useInView("-100px");
   return (
-    <section id="quote" className="py-20 bg-white">
+    <section id="quote" className="py-20 bg-[#1A1713]">
       <div className="container">
         <div
           ref={wrapper.ref}
           className={`reveal up max-w-4xl mx-auto ${wrapper.visible ? "visible" : ""}`}
         >
           <div className="text-center mb-12">
-            <span className="text-[#007A99] font-semibold text-sm tracking-widest uppercase mb-3 block">
+            <span className="lux-eyebrow">
               Get Your Quote
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0D0D0D] mb-4">
+            <h2 className="text-3xl sm:text-4xl text-[#EDE6D8] mb-4">
               Request a Free Painting Quote
             </h2>
-            <p className="text-[#666] text-lg max-w-2xl mx-auto">
+            <p className="text-[#A39C90] text-lg max-w-2xl mx-auto">
               Fill out the form below and we'll provide you with a detailed, no-obligation quote within 24 hours.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="bg-[#F5F5F0] rounded-xl p-8 sm:p-12">
+          <form onSubmit={handleSubmit(onSubmit)} className="bg-[#0A0A0A] rounded-xl p-8 sm:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {/* Name */}
               <div>
-                <label htmlFor="quote-name" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+                <label htmlFor="quote-name" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                   Full Name *
                 </label>
                 <input
@@ -122,7 +122,7 @@ export default function QuoteForm() {
                   placeholder="John Doe"
                   id="quote-name"
                   {...register("name")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
@@ -131,7 +131,7 @@ export default function QuoteForm() {
 
               {/* Email */}
               <div>
-                <label htmlFor="quote-email" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+                <label htmlFor="quote-email" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                   Email Address (optional)
                 </label>
                 <input
@@ -139,7 +139,7 @@ export default function QuoteForm() {
                   placeholder="john@example.com"
                   id="quote-email"
                   {...register("email")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
@@ -148,7 +148,7 @@ export default function QuoteForm() {
 
               {/* Phone */}
               <div>
-                <label htmlFor="quote-phone" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+                <label htmlFor="quote-phone" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                   Phone Number *
                 </label>
                 <input
@@ -156,7 +156,7 @@ export default function QuoteForm() {
                   placeholder="0432 077 782"
                   id="quote-phone"
                   {...register("phone")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
                 {errors.phone && (
                   <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
@@ -165,13 +165,13 @@ export default function QuoteForm() {
 
               {/* Suburb */}
               <div>
-                <label htmlFor="quote-suburb" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+                <label htmlFor="quote-suburb" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                   Suburb/Area *
                 </label>
                 <select
                   id="quote-suburb"
                   {...register("suburb")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 >
                   <option value="">Select a suburb</option>
                   {suburbs.map((suburb) => (
@@ -188,13 +188,13 @@ export default function QuoteForm() {
 
               {/* Service Type */}
               <div>
-                <label htmlFor="quote-service" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+                <label htmlFor="quote-service" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                   Service Type *
                 </label>
                 <select
                   id="quote-service"
                   {...register("serviceType")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 >
                   <option value="">Select a service</option>
                   {serviceTypes.map((service) => (
@@ -210,20 +210,20 @@ export default function QuoteForm() {
 
               {/* Preferred Date */}
               <div>
-                <label htmlFor="quote-date" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+                <label htmlFor="quote-date" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                   Preferred Quote Date
                 </label>
                 <input
                   type="date"
                   id="quote-date"
                   {...register("preferredDate")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
               </div>
 
               {/* Budget */}
               <div>
-                <label htmlFor="quote-budget" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+                <label htmlFor="quote-budget" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                   Budget Range (Optional)
                 </label>
                 <input
@@ -231,14 +231,14 @@ export default function QuoteForm() {
                   placeholder="e.g., $5,000 - $10,000"
                   id="quote-budget"
                   {...register("budget")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition"
                 />
               </div>
             </div>
 
             {/* Project Description */}
             <div className="mb-6">
-              <label htmlFor="quote-description" className="block text-sm font-semibold text-[#0D0D0D] mb-2">
+              <label htmlFor="quote-description" className="block text-sm font-semibold text-[#EDE6D8] mb-2">
                 Project Description (optional)
               </label>
               <textarea
@@ -246,7 +246,7 @@ export default function QuoteForm() {
                 rows={5}
                 id="quote-description"
                 {...register("projectDescription")}
-                className="w-full px-4 py-3 rounded-lg border border-[#DDD] bg-white text-[#0D0D0D] placeholder-[#767676] focus:outline-none focus:ring-2 focus:ring-[#00AACC] focus:border-transparent transition resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-[#332E26] bg-[#1A1713] text-[#EDE6D8] placeholder-[#8B857A] focus:outline-none focus:ring-2 focus:ring-[#E3C878] focus:border-transparent transition resize-none"
               />
               {errors.projectDescription && (
                 <p className="text-red-500 text-sm mt-1">{errors.projectDescription.message}</p>
@@ -257,12 +257,12 @@ export default function QuoteForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#007A99] hover:bg-[#006B85] text-white font-bold py-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-[#00AACC]/30"
+              className="w-full bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] font-bold py-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-[#E3C878]/30"
             >
               {isSubmitting ? "Submitting..." : "Request Free Quote"}
             </button>
 
-            <p className="text-center text-[#666] text-sm mt-4">
+            <p className="text-center text-[#A39C90] text-sm mt-4">
               We respect your privacy. Your information will only be used to provide your quote.
             </p>
           </form>
@@ -271,26 +271,26 @@ export default function QuoteForm() {
           <div className="grid grid-cols-3 gap-6 mt-12">
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <Phone className="w-8 h-8 text-[#007A99]" />
+                <Phone className="w-8 h-8 text-[#C9A227]" />
               </div>
-              <p className="text-[#0D0D0D] font-semibold">24-Hour Response</p>
-              <p className="text-[#666] text-sm">We'll call you within 24 hours</p>
+              <p className="text-[#EDE6D8] font-semibold">24-Hour Response</p>
+              <p className="text-[#A39C90] text-sm">We'll call you within 24 hours</p>
             </div>
 
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <Mail className="w-8 h-8 text-[#007A99]" />
+                <Mail className="w-8 h-8 text-[#C9A227]" />
               </div>
-              <p className="text-[#0D0D0D] font-semibold">No Obligation</p>
-              <p className="text-[#666] text-sm">Free quote with no hidden costs</p>
+              <p className="text-[#EDE6D8] font-semibold">No Obligation</p>
+              <p className="text-[#A39C90] text-sm">Free quote with no hidden costs</p>
             </div>
 
             <div className="text-center">
               <div className="flex justify-center mb-3">
-                <MapPin className="w-8 h-8 text-[#007A99]" />
+                <MapPin className="w-8 h-8 text-[#C9A227]" />
               </div>
-              <p className="text-[#0D0D0D] font-semibold">Local Experts</p>
-              <p className="text-[#666] text-sm">Serving all Melbourne suburbs</p>
+              <p className="text-[#EDE6D8] font-semibold">Local Experts</p>
+              <p className="text-[#A39C90] text-sm">Serving all Melbourne suburbs</p>
             </div>
           </div>
         </div>

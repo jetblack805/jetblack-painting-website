@@ -73,7 +73,7 @@ export default function Blog() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#1A1713]">
       <SEOHead
         title="Painting Tips & Guides Melbourne | Jetblack Painting Blog"
         description="Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting."
@@ -112,34 +112,34 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                className="bg-[#17140F] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="p-6">
-                  <div className="flex items-center gap-4 mb-4 text-sm text-gray-600">
-                    <span className="bg-[#007A99] text-white px-3 py-1 rounded-full text-xs font-bold">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-[#A39C90]">
+                    <span className="bg-[#C9A227] text-[#0D0D0D] px-3 py-1 rounded-full text-xs font-bold">
                       {post.category}
                     </span>
                     <span>{post.readTime}</span>
                   </div>
                   
                   <Link href={post.slug}>
-                    <h2 className="text-xl font-bold text-[#0D0D0D] mb-3 hover:text-[#00AACC] transition-colors cursor-pointer">
+                    <h2 className="text-xl font-bold text-[#EDE6D8] mb-3 hover:text-[#E3C878] transition-colors cursor-pointer">
                       {post.title}
                     </h2>
                   </Link>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-[#A39C90] mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                  <div className="flex items-center justify-between pt-4 border-t border-[#2A261F]">
+                    <div className="flex items-center gap-4 text-sm text-[#A39C90]">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         {post.date}
                       </div>
                     </div>
-                    <Link href={post.slug} className="text-[#00AACC] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
+                    <Link href={post.slug} className="text-[#E3C878] hover:text-[#0099BB] font-bold flex items-center gap-2 transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -162,7 +162,7 @@ export default function Blog() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               Call 0432 077 782
             </a>

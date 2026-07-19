@@ -14,19 +14,19 @@ export default function MouldRemediationPainting() {
       />
       <Navbar />
 
-      <article className="pt-32 pb-16 bg-white">
+      <article className="pt-32 pb-16 bg-[#1A1713]">
         <div className="container max-w-3xl">
           <nav className="mb-6" aria-label="Breadcrumb">
-            <Link href="/blog" className="inline-flex items-center text-[#007A99] hover:underline text-sm">
+            <Link href="/blog" className="inline-flex items-center text-[#C9A227] hover:underline text-sm">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Blog
             </Link>
           </nav>
 
           <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0D0D0D] mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#EDE6D8] mb-4 leading-tight">
               Mould Remediation & Painting Guide for Melbourne Homes
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
+            <div className="flex flex-wrap items-center gap-4 text-[#8B857A] text-sm">
               <span className="flex items-center gap-1"><User className="w-4 h-4" /> Jimmy Demirci</span>
               <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> July 2026</span>
               <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 7 min read</span>
@@ -34,32 +34,32 @@ export default function MouldRemediationPainting() {
           </header>
 
           <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-[#A39C90] mb-8">
               Mould is one of the most common problems we encounter on Melbourne painting jobs — and one of the most mishandled.
               Painting over mould without proper treatment guarantees it comes back within months. Here's how to do it right,
               from a team that's dealt with it on hundreds of Melbourne homes.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Why Mould Appears on Melbourne Homes</h2>
+            <h2 className="text-2xl font-bold text-[#EDE6D8] mt-10 mb-4">Why Mould Appears on Melbourne Homes</h2>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#B3ACA1] mb-4">
               Melbourne's climate creates ideal conditions for mould — cool, damp winters with limited ventilation, followed by
               humid summers. The suburbs most affected are those with older housing stock: poorly ventilated weatherboards in
-              <Link href="/painter-mentone" className="text-[#007A99] hover:underline"> Mentone</Link>,
-              <Link href="/painter-sandringham" className="text-[#007A99] hover:underline"> Sandringham</Link> and
-              <Link href="/painter-mordialloc" className="text-[#007A99] hover:underline"> Mordialloc</Link> where salt air
+              <Link href="/painter-mentone" className="text-[#C9A227] hover:underline"> Mentone</Link>,
+              <Link href="/painter-sandringham" className="text-[#C9A227] hover:underline"> Sandringham</Link> and
+              <Link href="/painter-mordialloc" className="text-[#C9A227] hover:underline"> Mordialloc</Link> where salt air
               compounds moisture retention, and period homes in
-              <Link href="/painter-hawthorn" className="text-[#007A99] hover:underline"> Hawthorn</Link>,
-              <Link href="/painter-malvern" className="text-[#007A99] hover:underline"> Malvern</Link> and
-              <Link href="/painter-armadale" className="text-[#007A99] hover:underline"> Armadale</Link> with cold masonry walls
+              <Link href="/painter-hawthorn" className="text-[#C9A227] hover:underline"> Hawthorn</Link>,
+              <Link href="/painter-malvern" className="text-[#C9A227] hover:underline"> Malvern</Link> and
+              <Link href="/painter-armadale" className="text-[#C9A227] hover:underline"> Armadale</Link> with cold masonry walls
               that attract condensation.
             </p>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#B3ACA1] mb-4">
               Common locations for mould growth on Melbourne homes:
             </p>
 
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <ul className="list-disc pl-6 text-[#B3ACA1] space-y-2 mb-6">
               <li><strong>Bathroom and laundry ceilings</strong> — steam and condensation with insufficient ventilation</li>
               <li><strong>External render</strong> — especially south-facing walls that stay damp and don't get afternoon sun</li>
               <li><strong>Under eaves and fascias</strong> — pooling water from blocked gutters</li>
@@ -67,104 +67,104 @@ export default function MouldRemediationPainting() {
               <li><strong>Weatherboard cladding</strong> — moisture trapped under failing paint</li>
             </ul>
 
-            <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">The Right Way to Treat Mould Before Painting</h2>
+            <h2 className="text-2xl font-bold text-[#EDE6D8] mt-10 mb-4">The Right Way to Treat Mould Before Painting</h2>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#B3ACA1] mb-4">
               The single biggest mistake homeowners make is painting over mould without killing it first. Even if you can't see
               the mould spores after painting, they're there — and they'll push through within 3–12 months, turning a fresh
               paint job into a blotchy, failed surface.
             </p>
 
-            <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">Step 1: Identify the moisture source</h3>
-            <p className="text-gray-700 mb-4">
+            <h3 className="text-xl font-bold text-[#EDE6D8] mt-8 mb-3">Step 1: Identify the moisture source</h3>
+            <p className="text-[#B3ACA1] mb-4">
               Mould is a symptom, not the problem. Before any treatment, find out why the area is damp: a leaking roof,
               inadequate bathroom ventilation, rising damp, blocked gutters or condensation from a cold wall. If you don't
               fix the moisture source, the mould will return no matter how well you treat and paint it.
             </p>
 
-            <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">Step 2: Kill the mould</h3>
-            <p className="text-gray-700 mb-4">
+            <h3 className="text-xl font-bold text-[#EDE6D8] mt-8 mb-3">Step 2: Kill the mould</h3>
+            <p className="text-[#B3ACA1] mb-4">
               For surface mould (not deep into the substrate), a solution of one part bleach to four parts water, applied
               with a brush and left to dwell for 10–15 minutes before scrubbing and rinsing, kills the spores effectively.
               Commercial mould killers like Zinsser Mold Killing Primer's pre-treatment or Dulux Mouldshield work similarly
               and are easier to apply on larger areas.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#B3ACA1] mb-4">
               For heavy mould on render, plaster or timber — where it has penetrated the substrate — the affected material
               usually needs to be cut out and replaced. Painting over deeply embedded mould, even with anti-mould primer,
               is not a permanent fix.
             </p>
 
-            <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">Step 3: Allow complete drying</h3>
-            <p className="text-gray-700 mb-4">
+            <h3 className="text-xl font-bold text-[#EDE6D8] mt-8 mb-3">Step 3: Allow complete drying</h3>
+            <p className="text-[#B3ACA1] mb-4">
               After cleaning, the surface must dry completely before priming — typically 24–48 hours in Melbourne's conditions.
               Rushing this step traps moisture under the coating, which promotes mould recurrence and causes the paint to blister.
             </p>
 
-            <h3 className="text-xl font-bold text-[#0D0D0D] mt-8 mb-3">Step 4: Prime with an anti-mould primer</h3>
-            <p className="text-gray-700 mb-4">
+            <h3 className="text-xl font-bold text-[#EDE6D8] mt-8 mb-3">Step 4: Prime with an anti-mould primer</h3>
+            <p className="text-[#B3ACA1] mb-4">
               Standard primers won't prevent mould from returning. Use a dedicated anti-mould primer — Zinsser BIN Shellac
               Primer or Dulux Mouldshield Primer are the products we use most. These seal the surface and include fungicides
               that inhibit regrowth. This step is non-negotiable on bathroom ceilings and external render with a history of mould.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">Which Paint to Use on Mould-Prone Surfaces</h2>
+            <h2 className="text-2xl font-bold text-[#EDE6D8] mt-10 mb-4">Which Paint to Use on Mould-Prone Surfaces</h2>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#B3ACA1] mb-4">
               Not all paint is equal for mould-prone environments. Here's what we specify by area:
             </p>
 
             <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-gray-200 text-sm">
+              <table className="w-full border-collapse border border-[#2A261F] text-sm">
                 <thead>
                   <tr className="bg-[#0D0D0D] text-white">
-                    <th className="border border-gray-300 p-3 text-left">Area</th>
-                    <th className="border border-gray-300 p-3 text-left">Recommended Product</th>
-                    <th className="border border-gray-300 p-3 text-left">Why</th>
+                    <th className="border border-[#332E26] p-3 text-left">Area</th>
+                    <th className="border border-[#332E26] p-3 text-left">Recommended Product</th>
+                    <th className="border border-[#332E26] p-3 text-left">Why</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="bg-white">
-                    <td className="border border-gray-200 p-3">Bathroom ceiling</td>
-                    <td className="border border-gray-200 p-3">Dulux Mouldshield or Taubmans Bathroom & Kitchen</td>
-                    <td className="border border-gray-200 p-3">Steam-rated, mould-inhibiting, washable</td>
+                  <tr className="bg-[#1A1713]">
+                    <td className="border border-[#2A261F] p-3">Bathroom ceiling</td>
+                    <td className="border border-[#2A261F] p-3">Dulux Mouldshield or Taubmans Bathroom & Kitchen</td>
+                    <td className="border border-[#2A261F] p-3">Steam-rated, mould-inhibiting, washable</td>
                   </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 p-3">External render (south-facing)</td>
-                    <td className="border border-gray-200 p-3">Dulux Weathershield Maximum</td>
-                    <td className="border border-gray-200 p-3">Flexible, breathable, mould-resistant topcoat</td>
+                  <tr className="bg-[#17140F]">
+                    <td className="border border-[#2A261F] p-3">External render (south-facing)</td>
+                    <td className="border border-[#2A261F] p-3">Dulux Weathershield Maximum</td>
+                    <td className="border border-[#2A261F] p-3">Flexible, breathable, mould-resistant topcoat</td>
                   </tr>
-                  <tr className="bg-white">
-                    <td className="border border-gray-200 p-3">Weatherboard exterior</td>
-                    <td className="border border-gray-200 p-3">Dulux Weathershield or Taubmans All Weather</td>
-                    <td className="border border-gray-200 p-3">Breathable, flexible, UV and moisture resistant</td>
+                  <tr className="bg-[#1A1713]">
+                    <td className="border border-[#2A261F] p-3">Weatherboard exterior</td>
+                    <td className="border border-[#2A261F] p-3">Dulux Weathershield or Taubmans All Weather</td>
+                    <td className="border border-[#2A261F] p-3">Breathable, flexible, UV and moisture resistant</td>
                   </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 p-3">Bedroom wall (condensation)</td>
-                    <td className="border border-gray-200 p-3">Dulux Mouldshield Interior</td>
-                    <td className="border border-gray-200 p-3">Washable, mould-inhibiting, low sheen</td>
+                  <tr className="bg-[#17140F]">
+                    <td className="border border-[#2A261F] p-3">Bedroom wall (condensation)</td>
+                    <td className="border border-[#2A261F] p-3">Dulux Mouldshield Interior</td>
+                    <td className="border border-[#2A261F] p-3">Washable, mould-inhibiting, low sheen</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">How Long Does Anti-Mould Paint Last?</h2>
+            <h2 className="text-2xl font-bold text-[#EDE6D8] mt-10 mb-4">How Long Does Anti-Mould Paint Last?</h2>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#B3ACA1] mb-4">
               Properly treated and painted surfaces — where the moisture source has been fixed — typically remain mould-free
               for 5–10 years. In high-moisture environments like bathrooms with poor ventilation, expect 3–5 years before
               retreatment is needed. Adding an exhaust fan rated for the room size makes the most difference to long-term
               bathroom mould control.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#0D0D0D] mt-10 mb-4">When to Call a Professional</h2>
+            <h2 className="text-2xl font-bold text-[#EDE6D8] mt-10 mb-4">When to Call a Professional</h2>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#B3ACA1] mb-4">
               DIY mould treatment is manageable for surface mould in a single bathroom or a small external patch.
               Call a professional painter when:
             </p>
 
-            <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <ul className="list-disc pl-6 text-[#B3ACA1] space-y-2 mb-6">
               <li>Mould covers more than 1 square metre of surface</li>
               <li>The affected area is on external render or masonry</li>
               <li>Mould has returned after previous DIY treatment</li>
@@ -172,22 +172,22 @@ export default function MouldRemediationPainting() {
               <li>The source of moisture is unclear or may involve structural issues</li>
             </ul>
 
-            <p className="text-gray-700 mb-6">
+            <p className="text-[#B3ACA1] mb-6">
               Jetblack Painting handles mould remediation and repainting across Melbourne's southeast, Bayside, inner east
               and Mornington Peninsula. We assess the moisture source, carry out the correct treatment, apply anti-mould
               primer, and finish with the appropriate product for the surface and environment. Every job is backed by our
               5-year written workmanship guarantee.
             </p>
 
-            <div className="bg-[#F5F5F0] rounded-xl p-6 mt-8">
-              <h3 className="text-xl font-bold text-[#0D0D0D] mb-3">Mould on Your Walls or Ceilings? Get a Free Quote.</h3>
-              <p className="text-gray-700 mb-4">
+            <div className="bg-[#12100C] rounded-xl p-6 mt-8">
+              <h3 className="text-xl font-bold text-[#EDE6D8] mb-3">Mould on Your Walls or Ceilings? Get a Free Quote.</h3>
+              <p className="text-[#B3ACA1] mb-4">
                 Call Jimmy on 0432 077 782 for a free, no-obligation assessment and written quote.
                 We'll tell you exactly what's needed — no upselling, no surprises.
               </p>
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center px-6 py-3 bg-[#007A99] text-white font-bold rounded-lg hover:bg-[#006B85] transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-[#C9A227] text-[#0D0D0D] font-bold rounded-lg hover:bg-[#B8933D] transition-colors"
               >
                 Call Now: 0432 077 782
               </a>

@@ -47,7 +47,7 @@ export default function RoofPainting() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#1A1713]">
       <SEOHead
         title="Roof Painting Melbourne | Roof Restoration & Coating | Jetblack Painting"
         description="Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes."
@@ -72,7 +72,7 @@ export default function RoofPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-3 rounded font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-3 rounded font-bold transition-all"
             >
               <Phone className="w-5 h-5" />
               Call for Free Quote
@@ -81,7 +81,7 @@ export default function RoofPainting() {
         </div>
       </section>
 
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-[#1A1713]">
         <div className="container">
           <img
             src={imgService}
@@ -121,8 +121,8 @@ export default function RoofPainting() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Melbourne's Roof Painting Specialists</h2>
-            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Melbourne's Roof Painting Specialists</h2>
+            <p className="text-lg text-[#B3ACA1] mb-4 leading-relaxed">
               Jetblack Painting provides professional roof painting and restoration services across Melbourne. A quality roof paint job not only transforms the look of your home but also protects against UV damage, moisture, and extends the life of your roof by 10-15 years.
             </p>
           </motion.div>
@@ -134,12 +134,12 @@ export default function RoofPainting() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Why Choose Our Roof Painting Service</h2>
+            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Why Choose Our Roof Painting Service</h2>
             <div className="space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-[#00AACC] flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-[#E3C878] flex-shrink-0 mt-1" />
+                  <span className="text-[#B3ACA1] text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -152,15 +152,15 @@ export default function RoofPainting() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 bg-[#F5F5F0] p-8 rounded-lg"
+            className="mb-12 bg-[#12100C] p-8 rounded-lg"
           >
-            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Roof Painting Service Areas</h2>
+            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Roof Painting Service Areas</h2>
             <div className="flex flex-wrap gap-3">
               {suburbs.map((s) => (
                 <Link
                   key={s.name}
                   href={s.link}
-                  className="bg-white px-4 py-2 rounded-lg border border-gray-200 text-[#0D0D0D] hover:border-[#00AACC] hover:text-[#00AACC] transition-all font-medium"
+                  className="bg-[#1A1713] px-4 py-2 rounded-lg border border-[#2A261F] text-[#EDE6D8] hover:border-[#E3C878] hover:text-[#E3C878] transition-all font-medium"
                 >
                   {s.name}
                 </Link>
@@ -175,12 +175,12 @@ export default function RoofPainting() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#0D0D0D] mb-6">Roof Painting FAQs</h2>
+            <h2 className="text-3xl font-bold text-[#EDE6D8] mb-6">Roof Painting FAQs</h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (
-                <div key={i} className="border-b border-gray-200 pb-4">
-                  <h3 className="text-lg font-bold text-[#0D0D0D] mb-2">{faq.question}</h3>
-                  <p className="text-gray-700">{faq.answer}</p>
+                <div key={i} className="border-b border-[#2A261F] pb-4">
+                  <h3 className="text-lg font-bold text-[#EDE6D8] mb-2">{faq.question}</h3>
+                  <p className="text-[#B3ACA1]">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -191,17 +191,17 @@ export default function RoofPainting() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 bg-gray-50 p-8 rounded-lg"
+            className="mb-12 bg-[#17140F] p-8 rounded-lg"
           >
-            <h3 className="text-xl font-bold text-[#0D0D0D] mb-4">Our Other Services</h3>
+            <h3 className="text-xl font-bold text-[#EDE6D8] mb-4">Our Other Services</h3>
             <div className="flex flex-wrap gap-3">
-              <Link href="/services/interior-painting" className="text-[#007A99] hover:underline font-medium">Interior Painting</Link>
+              <Link href="/services/interior-painting" className="text-[#C9A227] hover:underline font-medium">Interior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/exterior-painting" className="text-[#007A99] hover:underline font-medium">Exterior Painting</Link>
+              <Link href="/services/exterior-painting" className="text-[#C9A227] hover:underline font-medium">Exterior Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/services/commercial-painting" className="text-[#007A99] hover:underline font-medium">Commercial Painting</Link>
+              <Link href="/services/commercial-painting" className="text-[#C9A227] hover:underline font-medium">Commercial Painting</Link>
               <span className="text-gray-300">|</span>
-              <Link href="/blog" className="text-[#007A99] hover:underline font-medium">Painting Blog</Link>
+              <Link href="/blog" className="text-[#C9A227] hover:underline font-medium">Painting Blog</Link>
             </div>
           </motion.div>
 
@@ -218,7 +218,7 @@ export default function RoofPainting() {
             </p>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center gap-2 bg-[#007A99] hover:bg-[#006B85] text-white px-8 py-4 rounded font-bold text-lg transition-all"
+              className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#B8933D] text-[#0D0D0D] px-8 py-4 rounded font-bold text-lg transition-all"
             >
               <Phone className="w-5 h-5" />
               Call 0432 077 782

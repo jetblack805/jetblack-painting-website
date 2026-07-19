@@ -1,9 +1,9 @@
 export default function GoogleMap() {
   return (
-    <section className="py-16 bg-[#F5F5F0]">
+    <section className="py-16 bg-[#0A0A0A]">
       <div className="container max-w-6xl">
-        <h2 className="text-3xl font-bold text-[#0D0D0D] text-center mb-4">Find Us on Google Maps</h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+        <h2 className="text-3xl text-[#EDE6D8] text-center mb-4">Find Us on Google Maps</h2>
+        <p className="text-center text-[#A39C90] mb-8 max-w-2xl mx-auto">
           Jetblack Painting is based in Mordialloc, Melbourne and services all suburbs across the greater Melbourne area. Call for a free quote.
         </p>
         <div className="rounded-xl overflow-hidden shadow-lg">
@@ -19,14 +19,14 @@ export default function GoogleMap() {
           ></iframe>
         </div>
         <div className="mt-6 text-center">
-          <p className="text-gray-700 font-medium">
+          <p className="text-[#B3ACA1] font-medium">
             <strong>Jetblack Painting</strong> | Mordialloc VIC 3195
           </p>
-          <p className="text-gray-600 mt-1">
-            <a href="tel:0432077782" className="text-[#007A99] hover:underline font-bold">0432 077 782</a> |
-            <a href="mailto:jimmy@jetblackpainting.com" className="text-[#007A99] hover:underline ml-2">jimmy@jetblackpainting.com</a>
+          <p className="text-[#A39C90] mt-1">
+            <a href="tel:0432077782" className="text-[#C9A227] hover:underline font-bold">0432 077 782</a> |
+            <a href="mailto:jimmy@jetblackpainting.com" className="text-[#C9A227] hover:underline ml-2">jimmy@jetblackpainting.com</a>
           </p>
-          <p className="text-gray-600 text-sm mt-2">Mon-Fri: 7am-5pm | Sat-Sun: 9am-5pm</p>
+          <p className="text-[#A39C90] text-sm mt-2">Mon-Fri: 7am-5pm | Sat-Sun: 9am-5pm</p>
         </div>
       </div>
     </section>

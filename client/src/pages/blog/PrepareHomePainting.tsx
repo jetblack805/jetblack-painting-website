@@ -4,6 +4,31 @@ import SEOHead from "@/components/SEOHead";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Prepare Your Melbourne Home for Professional Painting",
+  description: "A practical checklist for preparing your Melbourne home before professional painters arrive, from clearing rooms to exterior access.",
+  totalTime: "PT1H",
+  step: [
+    {
+      "@type": "HowToStep",
+      name: "Clear the Rooms",
+      text: "Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers so painters have full access to work efficiently.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Identify Problem Areas",
+      text: "Walk through your home and note any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Point these out to your painter at the quote stage.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Exterior Preparation",
+      text: "Trim garden beds back 30cm from walls, move outdoor furniture and pot plants away, park cars away from the house, unlock gates for access, and secure pets inside or in a separate area.",
+    },
+  ],
+};
+
 export default function PrepareHomePainting() {
   return (
     <div className="min-h-screen">
@@ -11,6 +36,7 @@ export default function PrepareHomePainting() {
         title="How to Prepare Your Home for Painting | Melbourne Guide | Jetblack Painting"
         description="Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results."
         canonical="https://jetblackpainting.com/blog/prepare-home-for-painting/"
+        schema={howToSchema}
       />
       <Navbar />
       

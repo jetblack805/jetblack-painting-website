@@ -1005,6 +1005,15 @@ const articlePages = [
       "Prepare your Melbourne home for a smooth painting project with expert tips on access, furniture protection, colour decisions, and scheduling.",
     intro:
       "A little preparation before your painters arrive can make the job faster, safer, and easier for everyone in the home.",
+    howTo: {
+      name: "How to Prepare Your Home for a Painting Project",
+      totalTime: "PT1H",
+      steps: [
+        { name: "Get the space ready before work starts", text: "Clear smaller décor items, fragile pieces, and loose furniture wherever possible so the team can protect and access surfaces efficiently. Confirm room access, entry times, body corporate rules, or alarm instructions before the project begins." },
+        { name: "Make key decisions early", text: "Confirm colours, sheen levels, and any accent walls before work starts to prevent delays. If repairs, timber rot, water damage, or additional surfaces are discovered, agree on the updated scope before the painter proceeds." },
+        { name: "Plan around the project timeline", text: "Interior painting often requires some rooms to be unusable for short periods, while exterior projects can affect vehicle access, outdoor furniture, and drying times." },
+      ],
+    },
     sections: [
       {
         heading: "Get the space ready before work starts",
@@ -1064,6 +1073,35 @@ const articlePages = [
 
 for (const article of articlePages) {
   const canonical = canonicalForRoute(article.route);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title.replace(" | Jetblack Painting", ""),
+    description: article.description,
+    author: {
+      "@type": "Organization",
+      name: "Jetblack Painting",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Jetblack Painting",
+    },
+    mainEntityOfPage: canonical,
+  };
+  const howToSchema = article.howTo
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: article.howTo.name,
+        description: article.intro,
+        totalTime: article.howTo.totalTime,
+        step: article.howTo.steps.map((s) => ({
+          "@type": "HowToStep",
+          name: s.name,
+          text: s.text,
+        })),
+      }
+    : null;
   writePage(
     article.route,
     pageHtml({
@@ -1072,21 +1110,7 @@ for (const article of articlePages) {
       canonical,
       heroTitle: article.title.replace(" | Jetblack Painting", ""),
       heroBody: article.intro,
-      schema: {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: article.title.replace(" | Jetblack Painting", ""),
-        description: article.description,
-        author: {
-          "@type": "Organization",
-          name: "Jetblack Painting",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Jetblack Painting",
-        },
-        mainEntityOfPage: canonical,
-      },
+      schema: howToSchema ? [articleSchema, howToSchema] : articleSchema,
       sections: article.sections,
       footerLinks: [
         { label: "Blog", href: "/blog/" },

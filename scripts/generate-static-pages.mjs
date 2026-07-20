@@ -76,6 +76,7 @@ function localBusinessSchema() {
     "@id": `${SITE_URL}/#business`,
     "name": "Jetblack Painting",
     "image": `${SITE_URL}/og-image.jpg`,
+    "logo": `${SITE_URL}/logo.jpg`,
     "telephone": PHONE_DISPLAY,
     "email": EMAIL,
     "url": SITE_URL,
@@ -209,8 +210,21 @@ function extractNeighbours(source) {
   return neighbours;
 }
 
+function speakableSchema(canonical) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonical}#webpage-speakable`,
+    "url": canonical,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".hero p"]
+    }
+  };
+}
+
 function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema }) {
-  const schemaScripts = (Array.isArray(schema) ? schema : [schema])
+  const schemaScripts = (Array.isArray(schema) ? [...schema, speakableSchema(canonical)] : [schema, speakableSchema(canonical)])
     .filter(Boolean)
     .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
     .join("\n");
@@ -278,6 +292,8 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="canonical" href="${escapeHtml(canonical)}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${escapeHtml(title)}">

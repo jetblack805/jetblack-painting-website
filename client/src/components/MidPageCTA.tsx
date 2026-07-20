@@ -7,8 +7,8 @@ interface MidPageCTAProps {
 export default function MidPageCTA({ heading = "Ready to get started?" }: MidPageCTAProps) {
   return (
     <div className="my-12 bg-[#D0A050] rounded-lg p-8 text-center">
-      <h3 className="text-2xl text-white mb-3">{heading}</h3>
-      <p className="text-white mb-5">
+      <h3 className="text-2xl text-[#0A0A0B] mb-3 font-bold">{heading}</h3>
+      <p className="text-[#0A0A0B]/80 mb-5">
         Call now for a free, no-obligation quote — most calls answered within minutes.
       </p>
       <a

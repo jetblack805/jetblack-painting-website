@@ -401,7 +401,7 @@ export default function SuburbPageTemplate({
             <div className="grid md:grid-cols-2 gap-6">
               {coreServices.map((service) => (
                 <Link key={service.name} href={service.link} className="bg-[#101013] p-6 rounded-lg border-l-4 border-[#E9BE6C] hover:bg-[#131316] hover:shadow-md transition-all">
-                  <p className="text-gray-900 text-lg font-semibold">{service.name} {suburb}</p>
+                  <p className="text-[#EDEDEF] text-lg font-semibold">{service.name} {suburb}</p>
                   <p className="text-[#A3A3A8] mt-2 text-sm">View service details and request a quote.</p>
                 </Link>
               ))}

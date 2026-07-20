@@ -894,6 +894,11 @@ const blogIndexArticles = [
     href: "/blog/mould-remediation-painting-melbourne/",
     body: "How to identify, treat and paint over mould in Melbourne homes, including bathroom mould, render mould, preparation steps and the right anti-mould paints.",
   },
+  {
+    title: "How to Choose a Painter in Melbourne: A Homeowner's Guide",
+    href: "/blog/how-to-choose-a-painter-melbourne/",
+    body: "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees, reviews and red flags to avoid.",
+  },
 ];
 
 writePage(
@@ -1130,6 +1135,75 @@ const articlePages = [
       },
     ],
   },
+  {
+    route: "/blog/how-to-choose-a-painter-melbourne",
+    title: "How to Choose a Painter in Melbourne: A Homeowner's Guide | Jetblack Painting",
+    description:
+      "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees, reviews and red flags to avoid. A practical checklist from a local painting business.",
+    intro:
+      "Melbourne has thousands of people offering painting work, and the gap between the best and worst of them is enormous — in preparation quality, in what happens if something goes wrong, and in whether the job is still holding up in five years. Here's what actually matters when you're comparing painters.",
+    sections: [
+      {
+        heading: "Check Insurance and Business Registration First",
+        paragraphs: [
+          "Victoria doesn't issue a specific trade licence for painting, so the checks that matter are a registered ABN and public liability insurance that actually covers the value of your property. Ask to see proof of insurance before work starts — a legitimate painting business will have this ready to send. Jetblack Painting carries $10M public liability insurance and provides certificates on request.",
+        ],
+      },
+      {
+        heading: "Get a Written, Itemised Quote",
+        paragraphs: [
+          "A trustworthy quote spells out the preparation work included (sanding, filling, priming), the number of coats, the specific paint brand and product line, and what's explicitly excluded. A single lump-sum figure with no scope is where most disputes start.",
+          "Get at least two or three quotes so you have something to compare scope against, not just price.",
+        ],
+      },
+      {
+        heading: "Ask About the Guarantee",
+        paragraphs: [
+          "A painter confident in their preparation and materials will back the job with a written guarantee. Jetblack Painting backs every job with a 5-year written workmanship guarantee — ask any painter you're considering what theirs covers, and get it in writing rather than a verbal promise.",
+        ],
+      },
+      {
+        heading: "Look Past the Star Rating",
+        paragraphs: [
+          "A 5.0 rating with 3 reviews tells you less than a 4.8 with 100. Read a handful of the actual review text, not just the score, and look for detail — mentions of tidiness, communication, and whether the painter returned for touch-ups if needed.",
+        ],
+      },
+      {
+        heading: "Red Flags to Watch For",
+        paragraphs: [
+          "Asking for full payment upfront before any work starts, no fixed address or ABN listed anywhere, reluctance to put the quote or guarantee in writing, a quote significantly below every other one with no explanation, and no examples of previous work or contactable references.",
+        ],
+      },
+      {
+        heading: "Questions to Ask Before You Book",
+        paragraphs: [
+          "What preparation is included, specifically, for my surfaces? Which paint brand and product line will you use, and why? How many coats are included in the price? What does your guarantee cover, and for how long? Can I see proof of public liability insurance?",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Do painters in Melbourne need a licence?",
+        answer:
+          "Victoria doesn't require a separate trade licence for painting the way it does for plumbing or electrical work, so anyone can call themselves a painter. That makes insurance, a registered ABN, and a track record of finished jobs far more important checks than a licence number.",
+      },
+      {
+        question: "How much should I pay upfront?",
+        answer:
+          "Be cautious of any painter asking for full payment before work starts. A reasonable deposit to secure materials and a start date is normal; the balance should be tied to progress or completion, not paid entirely in advance.",
+      },
+      {
+        question: "What's a fair amount of detail in a quote?",
+        answer:
+          "A proper quote itemises surface preparation, the number of coats, the specific paint brand and product line, and what's excluded. A one-line price with no scope is the most common source of disputes later.",
+      },
+      {
+        question: "Should I choose the cheapest quote?",
+        answer:
+          "Not automatically. The cheapest quotes often cut preparation time — sanding, filling, priming — which is where paint failure starts. Compare scope first, then price.",
+      },
+    ],
+  },
 ];
 
 for (const article of articlePages) {
@@ -1163,6 +1237,8 @@ for (const article of articlePages) {
         })),
       }
     : null;
+  const articleFaqSchema = article.faqs ? faqSchema(article.faqs) : null;
+  const schemaList = [articleSchema, howToSchema, articleFaqSchema].filter(Boolean);
   writePage(
     article.route,
     pageHtml({
@@ -1171,7 +1247,7 @@ for (const article of articlePages) {
       canonical,
       heroTitle: article.title.replace(" | Jetblack Painting", ""),
       heroBody: article.intro,
-      schema: howToSchema ? [articleSchema, howToSchema] : articleSchema,
+      schema: schemaList.length > 1 ? schemaList : schemaList[0],
       sections: article.sections,
       footerLinks: [
         { label: "Blog", href: "/blog/" },

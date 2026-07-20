@@ -54,6 +54,15 @@ export default function Blog() {
     },
     {
       id: 6,
+      title: "How to Choose a Painter in Melbourne: A Homeowner's Guide",
+      excerpt: "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees, reviews and red flags to avoid.",
+      date: "July 2026",
+      category: "Guide",
+      readTime: "6 min read",
+      slug: "/blog/how-to-choose-a-painter-melbourne"
+    },
+    {
+      id: 7,
       title: "Roof Painting Guide: Protection & Aesthetics for Melbourne Homes",
       excerpt: "Learn everything about roof painting - from the benefits of roof protection to choosing the right colours for your Melbourne home.",
       date: "July 2026",
@@ -62,7 +71,7 @@ export default function Blog() {
       slug: "/services/roof-painting"
     },
     {
-      id: 7,
+      id: 8,
       title: "Exterior Paint Protection: Surviving Melbourne's Weather",
       excerpt: "Melbourne's unpredictable weather requires special exterior paint protection. Learn how to protect your home's exterior from UV, moisture, and temperature changes.",
       date: "July 2026",

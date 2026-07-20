@@ -889,6 +889,11 @@ const blogIndexArticles = [
     href: "/blog/kitchen-cabinet-resurfacing-vs-replacement/",
     body: "When resurfacing is the smart option, when replacement makes sense, and how to compare cost, downtime, and finish quality.",
   },
+  {
+    title: "Mould Remediation & Painting Guide for Melbourne Homes",
+    href: "/blog/mould-remediation-painting-melbourne/",
+    body: "How to identify, treat and paint over mould in Melbourne homes, including bathroom mould, render mould, preparation steps and the right anti-mould paints.",
+  },
 ];
 
 writePage(
@@ -1065,6 +1070,62 @@ const articlePages = [
         paragraphs: [
           "High-quality resurfacing can deliver a premium finish when the prep and coating system are done properly, especially with 2-pack or hard-wearing cabinet coatings.",
           "The best choice comes down to the condition of the existing kitchen, the renovation budget, and how quickly you need the space back in service.",
+        ],
+      },
+    ],
+  },
+  {
+    route: "/blog/mould-remediation-painting-melbourne",
+    title: "Mould Remediation & Painting Guide for Melbourne Homes | Jetblack Painting",
+    description:
+      "How to identify, treat and paint over mould in Melbourne homes. Expert guide covering bathroom mould, render mould, preparation steps and the right anti-mould paints.",
+    intro:
+      "Mould is one of the most common problems we encounter on Melbourne painting jobs — and one of the most mishandled. Painting over mould without proper treatment guarantees it comes back within months. Here's how to do it right, from a team that's dealt with it on hundreds of Melbourne homes.",
+    howTo: {
+      name: "How to Treat Mould Before Painting",
+      totalTime: "PT2D",
+      steps: [
+        { name: "Identify the moisture source", text: "Mould only grows where there is a persistent moisture source, so find and fix the cause — poor ventilation, a leak, or rising damp — before treating the surface, or the mould will return." },
+        { name: "Kill the mould", text: "Treat the affected surface with a bleach solution diluted 1:4 with water, or a purpose-made product such as Zinsser Mold Killing Primer or Dulux Mouldshield. Heavy or deeply embedded mould may require substrate replacement rather than surface treatment." },
+        { name: "Allow complete drying", text: "Let the treated surface dry completely for 24-48 hours before priming or painting. Painting over a damp surface will trap moisture and cause the mould to return underneath the new coating." },
+        { name: "Prime with an anti-mould primer", text: "Seal the surface with an anti-mould primer such as Zinsser BIN Shellac Primer or Dulux Mouldshield Primer before applying the topcoat, to stop staining bleeding through and inhibit future mould growth." },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why Mould Appears on Melbourne Homes",
+        paragraphs: [
+          "Melbourne's mix of coastal salt air and older housing stock creates ideal conditions for mould. In bayside suburbs like Mentone, Sandringham, and Mordialloc, salt-laden air combines with weatherboard cladding to trap moisture. In leafier, older pockets like Hawthorn, Malvern, and Armadale, period homes with cold masonry walls and limited ventilation are especially prone to condensation-driven mould.",
+          "The most common places we find mould are bathroom and laundry ceilings, external render on shaded or south-facing walls, eaves and fascias, bedroom corners with poor airflow, and weatherboard cladding exposed to persistent damp.",
+        ],
+      },
+      {
+        heading: "The Right Way to Treat Mould Before Painting",
+        paragraphs: [
+          "Skipping proper treatment is the single biggest reason mould returns after a repaint. The process below is what we follow on every mould-affected job, from a single bathroom ceiling to a full exterior repaint.",
+          "Step 1: Identify the moisture source — mould only grows where there is a persistent moisture source, so find and fix the cause before treating the surface.",
+          "Step 2: Kill the mould — treat with a bleach solution diluted 1:4 with water, or a purpose-made product such as Zinsser Mold Killing Primer or Dulux Mouldshield. Heavy mould may need substrate replacement.",
+          "Step 3: Allow complete drying — 24-48 hours before priming or painting, so moisture isn't trapped under the new coating.",
+          "Step 4: Prime with an anti-mould primer — Zinsser BIN Shellac Primer or Dulux Mouldshield Primer seals staining and inhibits future growth before the topcoat goes on.",
+        ],
+      },
+      {
+        heading: "Which Paint to Use on Mould-Prone Surfaces",
+        paragraphs: [
+          "The right topcoat depends on the surface and its exposure. Bathroom ceilings do best with Dulux Mouldshield or Taubmans Bathroom & Kitchen. South-facing external render should use Dulux Weathershield Maximum. Weatherboard exteriors hold up well with Dulux Weathershield or Taubmans All Weather. Bedroom walls prone to condensation are best treated with Dulux Mouldshield Interior.",
+        ],
+      },
+      {
+        heading: "How Long Does Anti-Mould Paint Last?",
+        paragraphs: [
+          "Properly treated and painted surfaces typically resist mould for 5-10 years. High-moisture areas like bathrooms with poor ventilation tend to need attention again after 3-5 years, even with the right products, simply because of how much moisture the space handles daily.",
+        ],
+      },
+      {
+        heading: "When to Call a Professional",
+        paragraphs: [
+          "Mould covering a large area, mould that returns quickly after cleaning, staining that keeps bleeding through fresh paint, or any suspicion of a hidden leak or structural moisture problem are all signs it's time to bring in a professional rather than treat it yourself.",
+          "Jetblack Painting services Melbourne's southeast, Bayside, inner east, and Mornington Peninsula, and every job comes with a 5-year written workmanship guarantee.",
         ],
       },
     ],

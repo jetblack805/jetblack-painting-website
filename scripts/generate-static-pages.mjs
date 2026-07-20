@@ -159,7 +159,8 @@ function localBusinessSchema() {
       { "@type": "City", "name": "Collingwood" },
       { "@type": "City", "name": "Richmond" },
       { "@type": "City", "name": "Northcote" },
-      { "@type": "City", "name": "Brunswick" }
+      { "@type": "City", "name": "Brunswick" },
+      { "@type": "City", "name": "South Melbourne" }
     ],
     "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 50+ Melbourne suburbs.",
     "openingHoursSpecification": {
@@ -537,6 +538,7 @@ const allSuburbPages = [
   { route: "/painter-richmond", source: "RichmondPainters.tsx" },
   { route: "/painter-northcote", source: "NorthcotePainters.tsx" },
   { route: "/painter-brunswick", source: "BrunswickPainters.tsx" },
+  { route: "/painter-south-melbourne", source: "SouthMelbournePainters.tsx" },
 ];
 
 for (const page of allSuburbPages) {

@@ -350,6 +350,13 @@ export const SUBURBS_DATA = {
     description: "Inner-east Melbourne suburb with Victorian terraces, heritage streetscapes, and famous commercial strips along Bridge Road, Church Street and Swan Street",
     areasServed: ["Richmond", "Cremorne", "Burnley"]
   },
+  southMelbourne: {
+    name: "South Melbourne",
+    coordinates: { lat: -37.8316, lng: 144.9580 },
+    postcode: "3205",
+    description: "Historic inner-south suburb built around the Emerald Hill heritage precinct, with Victorian terraces, workers' cottages, the South Melbourne Market and the Clarendon Street retail strip",
+    areasServed: ["South Melbourne", "Emerald Hill", "Albert Park"]
+  },
   elwood: {
     name: "Elwood",
     coordinates: { lat: -37.8749, lng: 144.9842 },

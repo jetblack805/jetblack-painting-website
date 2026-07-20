@@ -99,6 +99,7 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-richmond",
   "/painter-northcote",
   "/painter-brunswick",
+  "/painter-south-melbourne",
 ]);
 
 function suburbSlug(suburb: string) {

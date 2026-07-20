@@ -2,7 +2,7 @@
  * Design: Bold Contrast — Footer on jet black background
  */
 import { Phone, Instagram, MapPin } from "lucide-react";
-import LOGO_URL from "@/assets/images/logo-jb-monogram.png";
+import LOGO_URL from "@/assets/images/logo.webp";
 
 const SERVICE_AREAS = [
   { name: "Armadale",            href: "/painter-armadale/" },
@@ -53,19 +53,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3.5 mb-5">
-              <img
-                src={LOGO_URL}
-                alt=""
-                width={470}
-                height={475}
-                className="h-12 w-auto"
-              />
-              <span className="leading-tight">
-                <span className="block text-[17px] tracking-[0.26em] uppercase text-[#FCFCFC]" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>Jetblack</span>
-                <span className="block text-[9.5px] font-medium tracking-[0.52em] uppercase text-[#D0A050]">Painting</span>
-              </span>
-            </div>
+            <img
+              src={LOGO_URL}
+              alt="Jetblack Painting"
+              className="h-12 w-48 rounded object-cover object-center mb-5"
+            />
             <div className="w-44 h-px bg-[#D0A050]/60 mb-4" aria-hidden="true" />
             <p className="text-[#D0A050] text-[11px] font-bold tracking-[0.3em] uppercase mb-4">Quality. Precision. Integrity.</p>
             <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs">

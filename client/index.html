@@ -30,6 +30,9 @@
   <meta name="ICBM" content="-38.0131, 145.0965" />
   <meta name="google-site-verification" content="googlebc9e38933d2233a8" />
 
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
   <link rel="canonical" href="https://jetblackpainting.com/" />
   <link rel="alternate" hreflang="en-au" href="https://jetblackpainting.com/" />
   <link rel="alternate" hreflang="en" href="https://jetblackpainting.com/" />
@@ -95,11 +98,23 @@
         "publisher": { "@id": "https://jetblackpainting.com/#business" }
       },
       {
+        "@type": "WebPage",
+        "@id": "https://jetblackpainting.com/#webpage",
+        "url": "https://jetblackpainting.com/",
+        "isPartOf": { "@id": "https://jetblackpainting.com/#website" },
+        "about": { "@id": "https://jetblackpainting.com/#business" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "#home p"]
+        }
+      },
+      {
         "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
         "@id": "https://jetblackpainting.com/#business",
         "name": "Jetblack Painting",
         "alternateName": ["Jet Black Painting", "Jetblack Painting Melbourne", "Best Painters Melbourne"],
         "image": "https://jetblackpainting.com/og-image.jpg",
+        "logo": "https://jetblackpainting.com/logo.jpg",
         "url": "https://jetblackpainting.com/",
         "telephone": "+61432077782",
         "email": "jimmy@jetblackpainting.com",

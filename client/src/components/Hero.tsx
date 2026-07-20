@@ -85,7 +85,7 @@ export default function Hero() {
       <div className="hero-fade-in absolute bottom-8 left-1/2 -translate-x-1/2 z-10" style={{ animationDelay: "1s" }}>
         <button
           onClick={() => scrollToSection("#services")}
-          className="text-white/40 hover:text-[#D0A050] transition-colors"
+          className="text-white/60 hover:text-[#D0A050] transition-colors"
           aria-label="Scroll down"
         >
           <ArrowDown className="w-6 h-6 animate-bounce" />

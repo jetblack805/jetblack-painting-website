@@ -287,7 +287,8 @@ export default function SuburbPageTemplate({
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:0432077782"
-                className="inline-flex items-center justify-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-3 rounded font-bold transition-all"
+                style={{ color: "#0A0A0B", WebkitTextFillColor: "#0A0A0B" }}
+                className="inline-flex items-center justify-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-3 rounded font-bold transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 Call 0432 077 782
@@ -457,7 +458,8 @@ export default function SuburbPageTemplate({
                 href="https://www.google.com/maps/place/Jetblack+Painting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-6 py-3 rounded font-bold transition-all"
+                style={{ color: "#0A0A0B", WebkitTextFillColor: "#0A0A0B" }}
+                className="shrink-0 inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-6 py-3 rounded font-bold transition-colors"
               >
                 Read our Google reviews
               </a>
@@ -551,7 +553,7 @@ export default function SuburbPageTemplate({
             <p className="text-xl mb-6 text-gray-300">
               Contact Jetblack Painting for a free, no-obligation quote on your {suburb} painting project. Call now and speak directly with Jimmy.
             </p>
-            <a href="tel:0432077782" className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-4 rounded font-bold text-lg transition-all">
+            <a href="tel:0432077782" style={{ color: "#0A0A0B", WebkitTextFillColor: "#0A0A0B" }} className="inline-flex items-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-4 rounded font-bold text-lg transition-colors">
               <Phone className="w-5 h-5" />
               Call 0432 077 782
             </a>

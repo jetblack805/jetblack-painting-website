@@ -987,6 +987,20 @@ const articlePages = [
         ],
       },
     ],
+    faqs: [
+      {
+        question: "What are the best interior paint colours for Melbourne homes?",
+        answer: "Warm whites and soft off-whites remain reliable choices for open-plan homes because they reflect light well and pair easily with timber floors, stone and contemporary joinery. Muted greens, eucalyptus tones and sophisticated charcoals add personality without overwhelming bedrooms, studies or living areas.",
+      },
+      {
+        question: "What exterior paint colours suit Melbourne conditions?",
+        answer: "Greige, warm grey and light neutral schemes stay popular because they handle Melbourne's changing daylight well and look balanced on weatherboard, brick and rendered homes. Darker feature trims and contrasting front doors add definition when paired with proper preparation and premium UV- and moisture-resistant coatings.",
+      },
+      {
+        question: "How do I choose a paint colour with confidence?",
+        answer: "Always test sample pots on multiple walls or elevations before committing, because light changes dramatically through the day and between seasons. For heritage or higher-value pockets, choose colours that complement the home's fixed elements and streetscape rather than chasing short-lived trends.",
+      },
+    ],
   },
   {
     route: "/blog/house-painting-cost-melbourne",
@@ -1016,6 +1030,20 @@ const articlePages = [
           "When comparing quotes, check whether materials are included, whether surface repairs are allowed for, and how many coats are specified for the finish.",
           "Ask for a written scope so you can compare the real level of workmanship — not just the headline price.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How much does house painting cost in Melbourne?",
+        answer: "Painting prices in Melbourne vary with the size of the job, access, the paint system and — most importantly — how much preparation is needed before the first coat. The biggest pricing factors are surface condition, the amount of repair or sanding required, the number of colours, and how accessible the work is for ladders, scaffolding and setup.",
+      },
+      {
+        question: "Why does preparation affect the value of a painting quote?",
+        answer: "Cheaper quotes often cut preparation time, which can lead to poor adhesion, flashing, visible repairs or early failure. A better-value quote spells out the included preparation, the paint brand and system, and the full scope for trims, doors, ceilings, walls, fences, roofs or specialty finishes.",
+      },
+      {
+        question: "How do I compare painting quotes properly?",
+        answer: "Check whether materials are included, whether surface repairs are allowed for, and how many coats are specified for the finish. Ask for a written scope so you can compare the real level of workmanship rather than just the headline price.",
       },
     ],
   },
@@ -1058,6 +1086,20 @@ const articlePages = [
         ],
       },
     ],
+    faqs: [
+      {
+        question: "How should I prepare my home before the painters arrive?",
+        answer: "Clear smaller décor items, fragile pieces and loose furniture wherever possible so the team can protect and access surfaces efficiently, and confirm room access, entry times, body corporate rules or alarm instructions before the project begins.",
+      },
+      {
+        question: "What decisions should I make before painting starts?",
+        answer: "Confirm colours, sheen levels and any accent walls before work starts to prevent delays. If repairs, timber rot, water damage or additional surfaces are discovered, agree on the updated scope before the painter proceeds.",
+      },
+      {
+        question: "How will a painting project affect daily life at home?",
+        answer: "Interior painting often makes some rooms unusable for short periods, while exterior projects can affect vehicle access, outdoor furniture and drying times. Good planning helps the painter keep momentum and helps you avoid unnecessary disruption.",
+      },
+    ],
   },
   {
     route: "/blog/kitchen-cabinet-resurfacing-vs-replacement",
@@ -1087,6 +1129,20 @@ const articlePages = [
           "High-quality resurfacing can deliver a premium finish when the prep and coating system are done properly, especially with 2-pack or hard-wearing cabinet coatings.",
           "The best choice comes down to the condition of the existing kitchen, the renovation budget, and how quickly you need the space back in service.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "When does kitchen cabinet resurfacing make sense?",
+        answer: "Resurfacing is ideal when the cabinet boxes are structurally sound and the goal is to modernise the finish, colour or overall presentation. It is typically faster, less disruptive and more cost-effective than a full replacement, especially for rental refreshes or value-focused improvements.",
+      },
+      {
+        question: "When is replacing kitchen cabinets the better option?",
+        answer: "Replacement may be necessary if the cabinetry has water damage, a poor layout, failing hinges or hardware throughout, or a storage design that no longer suits how the kitchen is used. It also makes more sense when major plumbing, electrical or benchtop changes are already planned.",
+      },
+      {
+        question: "Does resurfacing give a durable, high-quality finish?",
+        answer: "Yes. High-quality resurfacing delivers a premium, hard-wearing finish when the preparation and coating system are done properly, especially with 2-pack or hard-wearing cabinet coatings.",
       },
     ],
   },
@@ -1143,6 +1199,20 @@ const articlePages = [
           "Mould covering a large area, mould that returns quickly after cleaning, staining that keeps bleeding through fresh paint, or any suspicion of a hidden leak or structural moisture problem are all signs it's time to bring in a professional rather than treat it yourself.",
           "Jetblack Painting services Melbourne's southeast, Bayside, inner east, and Mornington Peninsula, and every job comes with a 5-year written workmanship guarantee.",
         ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Can you just paint over mould?",
+        answer: "No. Painting over mould without killing it first guarantees it returns within months and pushes through the new coating. You need to fix the moisture source, kill the mould, let the surface dry completely, and prime with an anti-mould primer before painting.",
+      },
+      {
+        question: "How long does anti-mould paint last?",
+        answer: "Properly treated and painted surfaces typically resist mould for 5 to 10 years. High-moisture areas such as poorly ventilated bathrooms usually need attention again after 3 to 5 years because of how much moisture the space handles daily.",
+      },
+      {
+        question: "When should I call a professional for mould?",
+        answer: "Call a professional when mould covers a large area, keeps returning after cleaning, causes staining that bleeds through fresh paint, or where there may be a hidden leak or structural moisture problem.",
       },
     ],
   },
@@ -1250,6 +1320,18 @@ for (const article of articlePages) {
     : null;
   const articleFaqSchema = article.faqs ? faqSchema(article.faqs) : null;
   const schemaList = [articleSchema, howToSchema, articleFaqSchema].filter(Boolean);
+  // Render FAQs as a visible section too, so the FAQPage schema has matching
+  // on-page content (Google requires FAQ Q&A to be visible on the source page).
+  const articleSections = article.faqs
+    ? [
+        ...article.sections,
+        {
+          type: "faqs",
+          heading: "Frequently Asked Questions",
+          items: article.faqs,
+        },
+      ]
+    : article.sections;
   writePage(
     article.route,
     pageHtml({
@@ -1259,7 +1341,7 @@ for (const article of articlePages) {
       heroTitle: article.title.replace(" | Jetblack Painting", ""),
       heroBody: article.intro,
       schema: schemaList.length > 1 ? schemaList : schemaList[0],
-      sections: article.sections,
+      sections: articleSections,
       footerLinks: [
         { label: "Blog", href: "/blog/" },
         { label: "Interior Painting", href: "/services/interior-painting/" },

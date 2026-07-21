@@ -51,7 +51,8 @@ export default function Hero() {
           <div className="hero-fade-in flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.55s" }}>
             <a
               href="tel:0432077782"
-              className="inline-flex items-center justify-center gap-3 bg-[#D0A050] hover:bg-[#E9BE6C] text-[#060607] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-all duration-200"
+              style={{ color: "#060607", WebkitTextFillColor: "#060607" }}
+              className="inline-flex items-center justify-center gap-3 bg-[#D0A050] hover:bg-[#E9BE6C] text-[#060607] px-8 py-4 text-xs font-bold tracking-[0.18em] uppercase transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />
               Request a Free Quote

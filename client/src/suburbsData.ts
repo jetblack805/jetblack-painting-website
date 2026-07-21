@@ -56,6 +56,13 @@ export const SUBURBS_DATA = {
     description: "Bayside suburb with beaches and parks",
     areasServed: ["Hampton", "Beaumaris"]
   },
+  hamptonEast: {
+    name: "Hampton East",
+    coordinates: { lat: -37.9370, lng: 145.0400 },
+    postcode: "3188",
+    description: "Family Bayside suburb with post-war brick homes and californian bungalows",
+    areasServed: ["Hampton East", "Moorabbin"]
+  },
   mordialloc: {
     name: "Mordialloc",
     coordinates: { lat: -38.0131, lng: 145.0965 },

@@ -1,8 +1,24 @@
 /*
  * Design: Bold Contrast — Footer on jet black background
  */
-import { Phone, Instagram, MapPin } from "lucide-react";
+import { Phone, Instagram, MapPin, Youtube, Facebook } from "lucide-react";
 import LOGO_URL from "@/assets/images/logo.webp";
+
+// lucide-react has no TikTok glyph, so provide one inline.
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5 2.6 2.6 0 0 1-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3a4.79 4.79 0 0 1-3.24-1.48z" />
+    </svg>
+  );
+}
+
+const SOCIALS = [
+  { label: "Instagram", href: "https://www.instagram.com/jetblack_painting", Icon: Instagram },
+  { label: "YouTube",   href: "https://www.youtube.com/@jetblackpaint",       Icon: Youtube },
+  { label: "Facebook",  href: "https://www.facebook.com/jetblackpainting",    Icon: Facebook },
+  { label: "TikTok",    href: "https://www.tiktok.com/@jetblack_painting",    Icon: TikTokIcon },
+];
 
 const SERVICE_AREAS = [
   { name: "Armadale",            href: "/painter-armadale/" },
@@ -60,10 +76,24 @@ export default function Footer() {
             />
             <div className="w-44 h-px bg-[#D0A050]/60 mb-4" aria-hidden="true" />
             <p className="text-[#D0A050] text-[11px] font-bold tracking-[0.3em] uppercase mb-4">Quality. Precision. Integrity.</p>
-            <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs">
+            <p className="text-white/50 text-sm font-light leading-relaxed max-w-xs mb-6">
               Melbourne's trusted painting specialists. Commercial and residential
               repaints delivered with superior workmanship.
             </p>
+            <div className="flex items-center gap-3">
+              {SOCIALS.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Jetblack Painting on ${label}`}
+                  className="flex items-center justify-center w-9 h-9 rounded-full border border-white/10 text-white/50 hover:text-[#0A0A0B] hover:bg-[#D0A050] hover:border-[#D0A050] transition-colors"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -108,15 +138,6 @@ export default function Footer() {
               >
                 <Phone className="w-4 h-4" />
                 0432 077 782
-              </a>
-              <a
-                href="https://www.instagram.com/jetblack_painting"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/50 hover:text-[#D0A050] transition-colors text-sm"
-              >
-                <Instagram className="w-4 h-4" />
-                @jetblack_painting
               </a>
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <MapPin className="w-4 h-4" />

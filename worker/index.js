@@ -34,6 +34,7 @@ const PATH_REDIRECTS = {
   "/painters-bentleigh":            "/painter-bentleigh/",
   "/painters-caulfield":            "/painter-caulfield/",
   "/painters-hampton":              "/painter-hampton/",
+  "/painters-hampton-east":         "/painter-hampton-east/",
   "/painters-mordialloc":           "/painter-mordialloc/",
   "/painters-keysborough":          "/keysborough-painters/",
   "/painter-keysborough":           "/keysborough-painters/",

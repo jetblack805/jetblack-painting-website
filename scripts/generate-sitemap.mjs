@@ -23,6 +23,7 @@ const ROUTES = [
   { path: "/painter-bentleigh/",                               priority: "0.9", changefreq: "monthly" },
   { path: "/painter-caulfield/",                               priority: "0.9", changefreq: "monthly" },
   { path: "/painter-hampton/",                                 priority: "0.9", changefreq: "monthly" },
+  { path: "/painter-hampton-east/",                            priority: "0.9", changefreq: "monthly" },
   { path: "/painter-mordialloc/",                              priority: "0.9", changefreq: "monthly" },
   { path: "/painter-kew/",                                     priority: "0.9", changefreq: "monthly" },
   { path: "/painter-sandringham/",                             priority: "0.9", changefreq: "monthly" },

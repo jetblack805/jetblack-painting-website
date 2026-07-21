@@ -44,6 +44,7 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-donvale",
   "/painter-greater-dandenong",
   "/painter-hampton",
+  "/painter-hampton-east",
   "/painter-hawthorn",
   "/painter-kingston",
   "/painter-kew",

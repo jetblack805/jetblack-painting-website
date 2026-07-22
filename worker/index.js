@@ -61,6 +61,7 @@ const PATH_REDIRECTS = {
   "/painters-ormond":               "/painter-ormond/",
   "/painters-ringwood":             "/painter-ringwood/",
   "/painters-templestowe":          "/painter-templestowe/",
+  "/painters-thornbury":            "/painter-thornbury/",
   "/painters-wheelers-hill":        "/painter-wheelers-hill/",
   "/painters-cheltenham":           "/painter-cheltenham/",
   "/painters-parkdale":             "/painter-parkdale/",

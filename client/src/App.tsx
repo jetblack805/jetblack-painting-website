@@ -58,6 +58,7 @@ const MurrumbeenaPainters = lazy(() => import("./pages/MurrumbeenaPainters"));
 const OrmondPainters = lazy(() => import("./pages/OrmondPainters"));
 const RingwoodPainters = lazy(() => import("./pages/RingwoodPainters"));
 const TemplestowePainters = lazy(() => import("./pages/TemplestowePainters"));
+const ThornburyPainters = lazy(() => import("./pages/ThornburyPainters"));
 const WheelersHillPainters = lazy(() => import("./pages/WheelersHillPainters"));
 const CheltenhamPainters = lazy(() => import("./pages/CheltenhamPainters"));
 const ParkdalePainters = lazy(() => import("./pages/ParkdalePainters"));
@@ -178,6 +179,8 @@ function Router() {
       <Route path={"/painters-ringwood"} component={RingwoodPainters} />
       <Route path={"/painter-templestowe"} component={TemplestowePainters} />
       <Route path={"/painters-templestowe"} component={TemplestowePainters} />
+      <Route path={"/painter-thornbury"} component={ThornburyPainters} />
+      <Route path={"/painters-thornbury"} component={ThornburyPainters} />
       <Route path={"/painter-wheelers-hill"} component={WheelersHillPainters} />
       <Route path={"/painters-wheelers-hill"} component={WheelersHillPainters} />
       <Route path={"/painter-cheltenham"} component={CheltenhamPainters} />

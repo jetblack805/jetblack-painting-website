@@ -350,6 +350,13 @@ export const SUBURBS_DATA = {
     description: "Character-rich inner-north Melbourne suburb with Victorian terraces, Edwardian cottages, Californian bungalows and the vibrant High Street cafe precinct",
     areasServed: ["Northcote", "Westgarth", "Thornbury South"]
   },
+  thornbury: {
+    name: "Thornbury",
+    coordinates: { lat: -37.7566, lng: 145.0009 },
+    postcode: "3071",
+    description: "Inner-north Darebin suburb known for Californian bungalows, interwar homes and the High Street and Station Street precincts",
+    areasServed: ["Thornbury", "Northcote", "Preston South"]
+  },
   richmond: {
     name: "Richmond",
     coordinates: { lat: -37.8182, lng: 145.0003 },

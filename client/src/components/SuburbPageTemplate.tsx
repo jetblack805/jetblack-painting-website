@@ -66,6 +66,7 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-ormond",
   "/painter-ringwood",
   "/painter-templestowe",
+  "/painter-thornbury",
   "/painter-wheelers-hill",
   "/painter-cheltenham",
   "/painter-parkdale",

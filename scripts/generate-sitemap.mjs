@@ -48,6 +48,7 @@ const ROUTES = [
   { path: "/painter-ormond/",                                  priority: "0.9", changefreq: "monthly" },
   { path: "/painter-ringwood/",                                priority: "0.9", changefreq: "monthly" },
   { path: "/painter-templestowe/",                             priority: "0.9", changefreq: "monthly" },
+  { path: "/painter-thornbury/",                               priority: "0.9", changefreq: "monthly" },
   { path: "/painter-wheelers-hill/",                           priority: "0.9", changefreq: "monthly" },
   { path: "/painter-cheltenham/",                              priority: "0.9", changefreq: "monthly" },
   { path: "/painter-parkdale/",                                priority: "0.9", changefreq: "monthly" },

@@ -28,6 +28,7 @@ const PATH_REDIRECTS = {
   // Plural suburb aliases → canonical singular URLs
   "/painters-toorak":               "/painter-toorak/",
   "/painters-malvern":              "/painter-malvern/",
+  "/painters-malvern-east":         "/painter-malvern-east/",
   "/painters-brighton":             "/painter-brighton/",
   "/painters-camberwell":           "/painter-camberwell/",
   "/painters-hawthorn":             "/painter-hawthorn/",
@@ -79,6 +80,7 @@ const PATH_REDIRECTS = {
   "/painters-carrum":               "/painter-carrum/",
   "/painters-oakleigh":             "/painter-oakleigh/",
   "/painters-clarinda":             "/painter-clarinda/",
+  "/painters-dingley-village":      "/painter-dingley-village/",
   "/painters-chadstone":            "/painter-chadstone/",
   "/painters-frankston":            "/painter-frankston/",
   "/painters-mornington":           "/painter-mornington/",

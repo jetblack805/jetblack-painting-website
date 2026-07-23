@@ -19,6 +19,7 @@ const KeysboroughPainters = lazy(() => import("./pages/KeysboroughPainters"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const ToorakPainters = lazy(() => import("./pages/ToorakPainters"));
 const MalvernPainters = lazy(() => import("./pages/MalvernPainters"));
+const MalvernEastPainters = lazy(() => import("./pages/MalvernEastPainters"));
 const BrightonPainters = lazy(() => import("./pages/BrightonPainters"));
 const CamberwellPainters = lazy(() => import("./pages/CamberwellPainters"));
 const HawthornPainters = lazy(() => import("./pages/HawthornPainters"));
@@ -76,6 +77,7 @@ const BonbeachPainters = lazy(() => import("./pages/BonbeachPainters"));
 const CarrumPainters = lazy(() => import("./pages/CarrumPainters"));
 const OakleighPainters = lazy(() => import("./pages/OakleighPainters"));
 const ClarindaPainters = lazy(() => import("./pages/ClarindaPainters"));
+const DingleyVillagePainters = lazy(() => import("./pages/DingleyVillagePainters"));
 const ChadsonePainters = lazy(() => import("./pages/ChadstonePainters"));
 const FrankstonPainters = lazy(() => import("./pages/FrankstonPainters"));
 const MorningtonPainters = lazy(() => import("./pages/MorningtonPainters"));
@@ -114,6 +116,8 @@ function Router() {
       <Route path={"/painters-toorak"} component={ToorakPainters} />
       <Route path={"/painter-malvern"} component={MalvernPainters} />
       <Route path={"/painters-malvern"} component={MalvernPainters} />
+      <Route path={"/painter-malvern-east"} component={MalvernEastPainters} />
+      <Route path={"/painters-malvern-east"} component={MalvernEastPainters} />
       <Route path={"/painter-brighton"} component={BrightonPainters} />
       <Route path={"/painters-brighton"} component={BrightonPainters} />
       <Route path={"/painter-camberwell"} component={CamberwellPainters} />
@@ -214,6 +218,8 @@ function Router() {
       <Route path={"/painter-oakleigh"} component={OakleighPainters} />
       <Route path={"/painters-oakleigh"} component={OakleighPainters} />
       <Route path={"/painter-clarinda"} component={ClarindaPainters} />
+      <Route path={"/painter-dingley-village"} component={DingleyVillagePainters} />
+      <Route path={"/painters-dingley-village"} component={DingleyVillagePainters} />
       <Route path={"/painters-clarinda"} component={ClarindaPainters} />
       <Route path={"/painter-chadstone"} component={ChadsonePainters} />
       <Route path={"/painters-chadstone"} component={ChadsonePainters} />

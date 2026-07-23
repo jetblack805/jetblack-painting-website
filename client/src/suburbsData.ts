@@ -21,6 +21,20 @@ export const SUBURBS_DATA = {
     description: "Inner Melbourne suburb with character homes",
     areasServed: ["Malvern", "South Malvern"]
   },
+  malvernEast: {
+    name: "Malvern East",
+    coordinates: { lat: -37.8760, lng: 145.0560 },
+    postcode: "3145",
+    description: "Leafy Stonnington suburb with Edwardian homes, Californian bungalows and the heritage Gascoigne Estate",
+    areasServed: ["Malvern East", "Chadstone"]
+  },
+  dingleyVillage: {
+    name: "Dingley Village",
+    coordinates: { lat: -37.9789, lng: 145.1120 },
+    postcode: "3172",
+    description: "Family-oriented City of Kingston suburb with brick-veneer homes and parkland",
+    areasServed: ["Dingley Village", "Heatherton"]
+  },
   camberwell: {
     name: "Camberwell",
     coordinates: { lat: -37.8286, lng: 145.0631 },

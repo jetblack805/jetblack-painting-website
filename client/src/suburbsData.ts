@@ -168,6 +168,27 @@ export const SUBURBS_DATA = {
     description: "Quiet coastal suburb bordering Mordialloc with beachside properties",
     areasServed: ["Aspendale", "Aspendale Gardens"]
   },
+  aspendaleGardens: {
+    name: "Aspendale Gardens",
+    coordinates: { lat: -38.0227, lng: 145.1170 },
+    postcode: "3195",
+    description: "Modern family estate in the City of Kingston beside the Waterways wetlands",
+    areasServed: ["Aspendale Gardens", "Waterways"]
+  },
+  pattersonLakes: {
+    name: "Patterson Lakes",
+    coordinates: { lat: -38.0730, lng: 145.1330 },
+    postcode: "3197",
+    description: "Waterfront canal estate on the Patterson River with a marina and modern homes",
+    areasServed: ["Patterson Lakes", "Carrum"]
+  },
+  chelseaHeights: {
+    name: "Chelsea Heights",
+    coordinates: { lat: -38.0300, lng: 145.1230 },
+    postcode: "3196",
+    description: "Family City of Kingston suburb near the Edithvale-Seaford wetlands with brick-veneer homes",
+    areasServed: ["Chelsea Heights", "Chelsea"]
+  },
   chelsea: {
     name: "Chelsea",
     coordinates: { lat: -38.0497, lng: 145.1208 },

@@ -364,6 +364,27 @@ export const SUBURBS_DATA = {
     description: "Vibrant inner-north Melbourne suburb with dense Victorian terrace houses, converted warehouses, and one of Melbourne's highest rental property concentrations",
     areasServed: ["Collingwood", "Abbotsford", "Smith Street precinct"]
   },
+  cranbourne: {
+    name: "Cranbourne",
+    coordinates: { lat: -38.0996, lng: 145.2834 },
+    postcode: "3977",
+    description: "Major City of Casey growth suburb with established and new-estate family homes",
+    areasServed: ["Cranbourne", "Cranbourne North"]
+  },
+  narreWarren: {
+    name: "Narre Warren",
+    coordinates: { lat: -38.0266, lng: 145.3050 },
+    postcode: "3805",
+    description: "Large family City of Casey suburb around the Fountain Gate precinct",
+    areasServed: ["Narre Warren", "Narre Warren South"]
+  },
+  clydeNorth: {
+    name: "Clyde North",
+    coordinates: { lat: -38.1050, lng: 145.3350 },
+    postcode: "3978",
+    description: "Fast-growing City of Casey estate suburb of modern brick and rendered family homes",
+    areasServed: ["Clyde North", "Clyde"]
+  },
   fitzroy: {
     name: "Fitzroy",
     coordinates: { lat: -37.7982, lng: 144.9782 },

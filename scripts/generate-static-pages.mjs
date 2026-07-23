@@ -438,8 +438,8 @@ function generateSuburbPage(route, sourceFile) {
       title,
       description,
       canonical,
-      heroTitle: title,
-      heroBody: description,
+      heroTitle: `House Painters ${suburb}`,
+      heroBody: `${description} Searching for painters near you in ${suburb}? Jetblack Painting are your trusted local ${suburb} painters, servicing ${suburb} and the surrounding suburbs.`,
       schema: [
         localBusinessSchema(),
         breadcrumbSchema({ suburb, canonical }),

@@ -54,10 +54,12 @@ const MoorabbinPainters = lazy(() => import("./pages/MoorabbinPainters"));
 const StonningtonPainters = lazy(() => import("./pages/StonningtonPainters"));
 const BoxHillPainters = lazy(() => import("./pages/BoxHillPainters"));
 const CroydonPainters = lazy(() => import("./pages/CroydonPainters"));
+const CranbournePainters = lazy(() => import("./pages/CranbournePainters"));
 const DoncasterPainters = lazy(() => import("./pages/DoncasterPainters"));
 const GlenWaverleyPainters = lazy(() => import("./pages/GlenWaverleyPainters"));
 const McKinnonPainters = lazy(() => import("./pages/McKinnonPainters"));
 const MurrumbeenaPainters = lazy(() => import("./pages/MurrumbeenaPainters"));
+const NarreWarrenPainters = lazy(() => import("./pages/NarreWarrenPainters"));
 const OrmondPainters = lazy(() => import("./pages/OrmondPainters"));
 const RingwoodPainters = lazy(() => import("./pages/RingwoodPainters"));
 const TemplestowePainters = lazy(() => import("./pages/TemplestowePainters"));
@@ -98,6 +100,7 @@ const PortMelbournePainters = lazy(() => import("./pages/PortMelbournePainters")
 const AlbertParkPainters = lazy(() => import("./pages/AlbertParkPainters"));
 const FitzroyPainters = lazy(() => import("./pages/FitzroyPainters"));
 const CollingwoodPainters = lazy(() => import("./pages/CollingwoodPainters"));
+const ClydeNorthPainters = lazy(() => import("./pages/ClydeNorthPainters"));
 const RichmondPainters = lazy(() => import("./pages/RichmondPainters"));
 const NorthcotePainters = lazy(() => import("./pages/NorthcotePainters"));
 const BrunswickPainters = lazy(() => import("./pages/BrunswickPainters"));
@@ -178,6 +181,8 @@ function Router() {
       <Route path={"/painter-box-hill"} component={BoxHillPainters} />
       <Route path={"/painters-box-hill"} component={BoxHillPainters} />
       <Route path={"/painter-croydon"} component={CroydonPainters} />
+      <Route path={"/painter-cranbourne"} component={CranbournePainters} />
+      <Route path={"/painters-cranbourne"} component={CranbournePainters} />
       <Route path={"/painters-croydon"} component={CroydonPainters} />
       <Route path={"/painter-doncaster"} component={DoncasterPainters} />
       <Route path={"/painters-doncaster"} component={DoncasterPainters} />
@@ -186,6 +191,8 @@ function Router() {
       <Route path={"/painter-mckinnon"} component={McKinnonPainters} />
       <Route path={"/painters-mckinnon"} component={McKinnonPainters} />
       <Route path={"/painter-murrumbeena"} component={MurrumbeenaPainters} />
+      <Route path={"/painter-narre-warren"} component={NarreWarrenPainters} />
+      <Route path={"/painters-narre-warren"} component={NarreWarrenPainters} />
       <Route path={"/painters-murrumbeena"} component={MurrumbeenaPainters} />
       <Route path={"/painter-ormond"} component={OrmondPainters} />
       <Route path={"/painters-ormond"} component={OrmondPainters} />
@@ -266,6 +273,8 @@ function Router() {
       <Route path={"/painter-fitzroy"} component={FitzroyPainters} />
       <Route path={"/painters-fitzroy"} component={FitzroyPainters} />
       <Route path={"/painter-collingwood"} component={CollingwoodPainters} />
+      <Route path={"/painter-clyde-north"} component={ClydeNorthPainters} />
+      <Route path={"/painters-clyde-north"} component={ClydeNorthPainters} />
       <Route path={"/painters-collingwood"} component={CollingwoodPainters} />
       <Route path={"/painter-richmond"} component={RichmondPainters} />
       <Route path={"/painters-richmond"} component={RichmondPainters} />

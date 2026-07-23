@@ -56,6 +56,13 @@ export const SUBURBS_DATA = {
     description: "Bayside suburb with family-friendly properties",
     areasServed: ["Bentleigh", "Bentleigh East"]
   },
+  bentleighEast: {
+    name: "Bentleigh East",
+    coordinates: { lat: -37.9200, lng: 145.0560 },
+    postcode: "3165",
+    description: "Large family Glen Eira suburb with post-war brick homes and californian bungalows",
+    areasServed: ["Bentleigh East", "Bentleigh"]
+  },
   caulfield: {
     name: "Caulfield",
     coordinates: { lat: -37.8767, lng: 145.0653 },
@@ -104,6 +111,20 @@ export const SUBURBS_DATA = {
     postcode: "3191",
     description: "Bayside suburb with family homes and local charm",
     areasServed: ["Sandringham", "Gardenvale"]
+  },
+  seaford: {
+    name: "Seaford",
+    coordinates: { lat: -38.1030, lng: 145.1290 },
+    postcode: "3198",
+    description: "Beachside City of Frankston suburb with weatherboard cottages and coastal homes",
+    areasServed: ["Seaford", "Carrum"]
+  },
+  windsor: {
+    name: "Windsor",
+    coordinates: { lat: -37.8556, lng: 144.9920 },
+    postcode: "3181",
+    description: "Inner Stonnington suburb of Victorian terraces and cottages by the Chapel Street precinct",
+    areasServed: ["Windsor", "Prahran"]
   },
   mentone: {
     name: "Mentone",

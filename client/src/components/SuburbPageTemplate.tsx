@@ -35,6 +35,7 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-armadale",
   "/painter-bayside",
   "/painter-bentleigh",
+  "/painter-bentleigh-east",
   "/painter-berwick",
   "/painter-brighton",
   "/painter-camberwell",
@@ -55,6 +56,7 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-mordialloc",
   "/painter-mornington-peninsula",
   "/painter-sandringham",
+  "/painter-seaford",
   "/painter-stonnington",
   "/painter-toorak",
   // Additional suburbs
@@ -69,6 +71,7 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-templestowe",
   "/painter-thornbury",
   "/painter-wheelers-hill",
+  "/painter-windsor",
   "/painter-cheltenham",
   "/painter-parkdale",
   "/painter-patterson-lakes",

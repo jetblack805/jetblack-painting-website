@@ -315,6 +315,27 @@ export const SUBURBS_DATA = {
     description: "Gateway suburb to the Mornington Peninsula with coastal foreshore and diverse residential housing",
     areasServed: ["Frankston", "Frankston South", "Frankston North"]
   },
+  frankstonSouth: {
+    name: "Frankston South",
+    coordinates: { lat: -38.1690, lng: 145.1330 },
+    postcode: "3199",
+    description: "Leafy, upscale peninsula-gateway suburb with larger homes on treed blocks near the bay and bushland",
+    areasServed: ["Frankston South", "Mount Eliza"]
+  },
+  dromana: {
+    name: "Dromana",
+    coordinates: { lat: -38.3340, lng: 144.9660 },
+    postcode: "3936",
+    description: "Bayside Mornington Peninsula town with beach houses and coastal homes beneath Arthurs Seat",
+    areasServed: ["Dromana", "Safety Beach"]
+  },
+  rosebud: {
+    name: "Rosebud",
+    coordinates: { lat: -38.3580, lng: 144.9060 },
+    postcode: "3939",
+    description: "Popular bayside Mornington Peninsula town with beach houses, permanent homes and holiday properties",
+    areasServed: ["Rosebud", "McCrae"]
+  },
   mornington: {
     name: "Mornington",
     coordinates: { lat: -38.2208, lng: 145.0378 },

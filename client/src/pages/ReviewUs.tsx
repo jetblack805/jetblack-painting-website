@@ -8,7 +8,7 @@ export default function ReviewUs() {
   const [copied, setCopied] = useState(false);
   
   // Replace this with your actual Google review link from GBP
-  const googleReviewLink = "https://www.google.com/maps/place/Jetblack+Painting";
+  const googleReviewLink = "https://g.page/r/CVqwwFTLEReDEBM/review";
   
   const handleCopy = () => {
     navigator.clipboard.writeText(googleReviewLink);

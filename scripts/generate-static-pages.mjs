@@ -5,7 +5,7 @@ const SITE_URL = "https://jetblackpainting.com";
 const PHONE_DISPLAY = "0432 077 782";
 const PHONE_HREF = "0432077782";
 const EMAIL = "jimmy@jetblackpainting.com";
-const GOOGLE_REVIEW_LINK = "https://g.page/r/jetblackpainting/review";
+const GOOGLE_REVIEW_LINK = "https://g.page/r/CVqwwFTLEReDEBM/review";
 const PUBLIC_DIR = path.resolve("public");
 const PAGE_DIR = path.resolve("client/src/pages");
 

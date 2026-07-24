@@ -163,6 +163,14 @@ export default function Footer() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="https://g.page/r/CVqwwFTLEReDEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-flex items-center gap-1.5 text-[#D0A050] hover:text-[#E9BE6C] transition-colors text-sm font-semibold"
+              >
+                ★ Leave a Google Review
+              </a>
             </nav>
           </div>
 

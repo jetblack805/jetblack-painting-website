@@ -37,7 +37,15 @@ export default function Hero() {
             <span className="text-[#D0A050] block">Exceptional Results.</span>
           </h1>
 
-          <div className="hero-fade-in w-11 h-px bg-[#D0A050] mb-8" style={{ animationDelay: "0.3s" }} />
+          <div className="hero-fade-in w-11 h-px bg-[#D0A050] mb-6" style={{ animationDelay: "0.3s" }} />
+
+          {/* Brand slogan */}
+          <p
+            className="hero-fade-in text-[#D0A050] text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase mb-8"
+            style={{ animationDelay: "0.35s" }}
+          >
+            Quality. Precision. Integrity.
+          </p>
 
           {/* Subtext */}
           <p

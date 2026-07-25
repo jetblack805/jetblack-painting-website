@@ -63,6 +63,15 @@ export default function Blog() {
     },
     {
       id: 7,
+      title: "How to Paint a Weatherboard House: A Melbourne Guide",
+      excerpt: "Preparation, priming bare timber, caulking and the right exterior paints — how weatherboard is painted so it lasts 7-10 years, not one season.",
+      date: "July 2026",
+      category: "Guide",
+      readTime: "8 min read",
+      slug: "/blog/how-to-paint-a-weatherboard-house-melbourne"
+    },
+    {
+      id: 8,
       title: "Roof Painting Guide: Protection & Aesthetics for Melbourne Homes",
       excerpt: "Learn everything about roof painting - from the benefits of roof protection to choosing the right colours for your Melbourne home.",
       date: "July 2026",
@@ -71,7 +80,7 @@ export default function Blog() {
       slug: "/services/roof-painting"
     },
     {
-      id: 8,
+      id: 9,
       title: "Exterior Paint Protection: Surviving Melbourne's Weather",
       excerpt: "Melbourne's unpredictable weather requires special exterior paint protection. Learn how to protect your home's exterior from UV, moisture, and temperature changes.",
       date: "July 2026",

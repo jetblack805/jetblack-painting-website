@@ -105,6 +105,7 @@ const ROUTES = [
   { path: "/blog/kitchen-cabinet-resurfacing-vs-replacement/",  priority: "0.5", changefreq: "yearly"  },
   { path: "/blog/mould-remediation-painting-melbourne/",         priority: "0.5", changefreq: "yearly"  },
   { path: "/blog/how-to-choose-a-painter-melbourne/",            priority: "0.5", changefreq: "yearly"  },
+  { path: "/blog/how-to-paint-a-weatherboard-house-melbourne/", priority: "0.5", changefreq: "yearly"  },
   { path: "/faq/",                                              priority: "0.5", changefreq: "monthly" },
   { path: "/review-us/",                                        priority: "0.4", changefreq: "monthly" },
 ];

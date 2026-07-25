@@ -45,8 +45,8 @@ export default function CarrumPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Carrum Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Carrum's coastal homes and beach houses. Fully licensed, 5-year guarantee, free written quotes.`}
+      title="Carrum Painters | Coastal House Painting | Jetblack Painting"
+      description="Coastal house painters in Carrum — weatherboard homes alongside brick family residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Bonbeach", link: "/painter-bonbeach" },
         { name: "Chelsea", link: "/painter-chelsea" },

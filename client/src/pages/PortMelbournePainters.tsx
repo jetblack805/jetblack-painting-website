@@ -51,8 +51,8 @@ export default function PortMelbournePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title={`${suburb} Painters | Coastal, Heritage & Warehouse Conversion Specialists | Jetblack Painting`}
-      description={`Expert painting services in ${suburb}. Specialists in Victorian cottages, converted warehouses, and coastal bayside properties. Free quotes — call 0432 077 782.`}
+      title="Port Melbourne Painters | Waterfront House Painting"
+      description="Waterfront and coastal house painters in Port Melbourne — Edwardian terrace houses. Free quotes, 5-year guarantee. Call 0432 077 782."
       localExpertise={`${suburb} sits on the inner edge of Port Phillip Bay — one of Melbourne's most historically rich inner suburbs, transitioning from its working-class waterfront origins into a sought-after residential address. The suburb blends Victorian-era worker's cottages on streets like Nott Street and Esplanade East with converted industrial buildings, terrace houses, and modern apartment towers near the bay. Jetblack Painting works across the full range of ${suburb} property types, bringing the surface preparation knowledge and premium coating systems that coastal and period properties demand.`}
       propertyTypes={`${suburb}'s housing stock spans Victorian worker's cottages, Edwardian terrace houses, converted warehouses and loft apartments, and contemporary high-rise buildings along the waterfront. Many period homes are in heritage overlay zones requiring careful colour selection. We handle interior and exterior repaints across all of these property types, with particular expertise in the prep and primer work that coastal salt air and heritage masonry construction require.`}
       localContent={[

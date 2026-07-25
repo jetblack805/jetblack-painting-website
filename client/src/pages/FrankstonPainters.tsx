@@ -48,8 +48,8 @@ export default function FrankstonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Frankston Painters | House & Coastal Painting Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for brick, weatherboard and coastal homes across Frankston and Frankston South. Free quotes.`}
+      title="Frankston Painters | Waterfront Painting | Jetblack Painting"
+      description="Waterfront and coastal house painters in Frankston — weatherboard homes in the established central. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },
         { name: "Mount Eliza", link: "/painter-mount-eliza" },

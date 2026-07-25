@@ -20,8 +20,8 @@ export default function CroydonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Croydon Painters | House Painting Services | Jetblack Painting"
-      description={`Trusted painters in ${suburb}. Interior, exterior, roof and commercial painting for weatherboard, brick and modern homes across ${suburb}, Croydon North and Croydon Hills. 5-star rated, fully licensed, free quotes.`}
+      title="Croydon Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Croydon — weatherboard cottages and brick-veneer family homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Ringwood", link: "/painter-ringwood" },
         { name: "Templestowe", link: "/painter-templestowe" },

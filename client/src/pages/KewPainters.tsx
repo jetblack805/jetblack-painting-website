@@ -48,8 +48,8 @@ export default function KewPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Kew Painters | Heritage & Modern House Painting | Jetblack Painting"
-      description="Expert house painters in Kew. Specializing in heritage restoration, Victorian, and Edwardian home painting. 5-star rated, premium finishes, free quotes."
+      title="Kew Painters | Heritage & Period Homes | Jetblack Painting"
+      description="Heritage and period home painters in Kew — Edwardian mansions and modern architectural requirements. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Hawthorn", link: "/painter-hawthorn" },
         { name: "Camberwell", link: "/painter-camberwell" },

@@ -20,8 +20,8 @@ export default function DoncasterPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Doncaster Painters | Interior & Exterior House Repaints | Jetblack Painting"
-      description={`Professional painters in ${suburb}. Interior, exterior, roof and commercial painting for large family homes, brick residences and apartments across ${suburb} and ${suburb} East. Fully licensed, free quotes.`}
+      title="Doncaster Painters | Luxury Painting | Jetblack Painting"
+      description="Luxury house painters in Doncaster — large established brick homes and modern rebuilt residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Templestowe", link: "/painter-templestowe" },
         { name: "Donvale", link: "/painter-donvale" },

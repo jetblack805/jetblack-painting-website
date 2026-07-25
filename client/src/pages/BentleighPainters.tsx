@@ -20,8 +20,8 @@ export default function BentleighPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Bentleigh Painters | Bungalow & Family Home Specialists | Jetblack Painting"
-      description={`Trusted house painters in ${suburb}. Specialists in interwar bungalows, family homes and unit repaints across Bentleigh and Bentleigh East. 5-star rated, fully licensed, free quotes.`}
+      title="Bentleigh Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Bentleigh — interwar Californian bungalows and post-war brick homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Caulfield", link: "/painter-caulfield" },
         { name: "Brighton", link: "/painter-brighton" },

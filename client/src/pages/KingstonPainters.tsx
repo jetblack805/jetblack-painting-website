@@ -48,8 +48,8 @@ export default function KingstonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Kingston Painters | Local House Painting Across City of Kingston | Jetblack Painting"
-      description={`Local house painters across the City of ${suburb}. Based in Mordialloc — covering Mentone, Cheltenham, Moorabbin, Parkdale, Chelsea, Aspendale and all Kingston suburbs. Free quotes.`}
+      title="Kingston Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Kingston — coastal cottages along the foreshore suburbs and coating selection. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Moorabbin", link: "/painter-moorabbin" },
         { name: "Cheltenham", link: "/painter-cheltenham" },

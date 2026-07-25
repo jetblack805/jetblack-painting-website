@@ -48,8 +48,8 @@ export default function ParkdalePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Parkdale Painters | Coastal House Painting Specialists | Jetblack Painting"
-      description={`Trusted house painters in ${suburb}. Specialist interior, exterior and coastal painting for Bayside homes. Locally based, fully insured, 5-year guarantee. Free quotes — call 0432 077 782.`}
+      title="Parkdale Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Parkdale — weatherboard beach houses and brick veneer family homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mentone", link: "/painter-mentone" },
         { name: "Mordialloc", link: "/painter-mordialloc" },

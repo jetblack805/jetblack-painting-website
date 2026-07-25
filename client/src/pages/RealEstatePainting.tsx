@@ -59,8 +59,8 @@ export default function RealEstatePainting() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Real Estate Painting Melbourne | Pre-Sale & Agent Painters | Jetblack Painting"
-        description="Real estate painting in Melbourne for agents, vendors and investors. Fast pre-sale and pre-lease repaints, neutral colours, agent coordination. 5-star rated. Free quotes."
+        title="Real Estate Painting Melbourne | Jetblack Painting"
+        description="Pre-sale and pre-lease painting in Melbourne for agents, vendors and investors. Fast turnarounds, neutral colours. Free quotes — 0432 077 782."
         canonical="https://jetblackpainting.com/services/real-estate-painting/"
         schema={serviceSchema({ serviceType: "Real Estate Painting", name: "Real Estate Painting Melbourne", description: "Real estate painting in Melbourne for agents, vendors and investors. Fast pre-sale and pre-lease repaints, neutral colours, agent coordination. 5-star rated. Free quotes.", canonical: "https://jetblackpainting.com/services/real-estate-painting/", faqs })}
       />

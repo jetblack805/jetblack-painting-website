@@ -48,8 +48,8 @@ export default function GlenIrisPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Glen Iris Painters | Edwardian & Period Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for Edwardian, interwar and period homes across Glen Iris. Pre-sale and full repaints. Free quotes.`}
+      title="Glen Iris Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Glen Iris — California bungalow-era homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Malvern", link: "/painter-malvern" },
         { name: "Hawthorn", link: "/painter-hawthorn" },

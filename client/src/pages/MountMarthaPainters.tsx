@@ -48,8 +48,8 @@ export default function MountMarthaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Mount Martha Painters | Coastal & Holiday Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for coastal homes, holiday properties and bay-view residences across Mount Martha. Free quotes.`}
+      title="Mount Martha Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Mount Martha — fibro cottages near the lower foreshore. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mornington", link: "/painter-mornington" },
         { name: "Mount Eliza", link: "/painter-mount-eliza" },

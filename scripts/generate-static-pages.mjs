@@ -663,9 +663,10 @@ const servicePages = [
   {
     route: "/services/interior-painting",
     name: "Interior Painting",
-    title: "Interior Painting Melbourne | Professional House Painters | Jetblack Painting",
+    title:
+      "Interior Painting Melbourne | Jetblack Painting",
     description:
-      "Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.",
+      "Professional interior painting in Melbourne. Premium Dulux paints, expert colour advice, 5-star rated. All Melbourne suburbs. Free quotes.",
     heroTitle: "Interior Painting Melbourne",
     heroBody:
       "Professional interior house painting across Melbourne — walls, ceilings, trims, doors, and full home repaints finished with premium Dulux and Taubmans systems and meticulous preparation.",
@@ -688,7 +689,8 @@ const servicePages = [
   {
     route: "/services/exterior-painting",
     name: "Exterior Painting",
-    title: "Exterior Painting Melbourne | Weather-Resistant House Painters | Jetblack Painting",
+    title:
+      "Exterior Painting Melbourne | Jetblack Painting",
     description:
       "Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.",
     heroTitle: "Exterior Painting Melbourne",
@@ -713,7 +715,8 @@ const servicePages = [
   {
     route: "/services/roof-painting",
     name: "Roof Painting",
-    title: "Roof Painting Melbourne | Roof Restoration & Coating | Jetblack Painting",
+    title:
+      "Roof Painting Melbourne | Jetblack Painting",
     description:
       "Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes.",
     heroTitle: "Roof Painting Melbourne",
@@ -738,7 +741,8 @@ const servicePages = [
   {
     route: "/services/commercial-painting",
     name: "Commercial Painting",
-    title: "Commercial Painting Melbourne | Office & Retail Painters | Jetblack Painting",
+    title:
+      "Commercial Painting Melbourne | Jetblack Painting",
     description:
       "Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes.",
     heroTitle: "Commercial Painting Melbourne",
@@ -763,9 +767,10 @@ const servicePages = [
   {
     route: "/services/roof-fence-painting",
     name: "Roof & Fence Painting",
-    title: "Roof & Fence Painting Melbourne | Professional Restoration | Jetblack Painting",
+    title:
+      "Roof & Fence Painting Melbourne | Jetblack Painting",
     description:
-      "Professional roof painting and fence painting Melbourne. Extends roof life 10-15 years, weather-resistant coatings, 5-star rated. Free quotes - Call 0432 077 782.",
+      "Roof and fence painting in Melbourne. Extends roof life 10-15 years with weather-resistant coatings. Free quotes — call 0432 077 782.",
     heroTitle: "Roof & Fence Painting Melbourne",
     heroBody:
       "Roof restoration and fence painting across Melbourne — weather-resistant coating systems that protect the biggest exposed surfaces on your property and lift its street appeal.",
@@ -788,9 +793,10 @@ const servicePages = [
   {
     route: "/services/kitchen-cabinet-resurfacing",
     name: "Kitchen Cabinet Resurfacing",
-    title: "Kitchen Cabinet Resurfacing Melbourne | 2-Pack Finishes | Jetblack Painting",
+    title:
+      "Kitchen Cabinet Resurfacing Melbourne | Jetblack Painting",
     description:
-      "Professional kitchen cabinet resurfacing Melbourne. Premium 2-pack finishes, fraction of renovation cost, 5-star rated. Transform your kitchen. Free quotes - Call 0432 077 782.",
+      "Kitchen cabinet resurfacing in Melbourne. Premium 2-pack finishes at a fraction of renovation cost. Free quotes — call 0432 077 782.",
     heroTitle: "Kitchen Cabinet Resurfacing Melbourne",
     heroBody:
       "Transform your kitchen for a fraction of renovation cost — premium 2-pack finishes applied to existing cabinetry for a factory-quality result without demolition.",
@@ -813,9 +819,10 @@ const servicePages = [
   {
     route: "/services/real-estate-painting",
     name: "Real Estate Painting",
-    title: "Real Estate Painting Melbourne | Pre-Sale & Agent Painters | Jetblack Painting",
+    title:
+      "Real Estate Painting Melbourne | Jetblack Painting",
     description:
-      "Real estate painting in Melbourne for agents, vendors and investors. Fast pre-sale and pre-lease repaints, neutral colours, agent coordination. 5-star rated. Free quotes.",
+      "Pre-sale and pre-lease painting in Melbourne for agents, vendors and investors. Fast turnarounds, neutral colours. Free quotes — 0432 077 782.",
     heroTitle: "Real Estate Painting Melbourne",
     heroBody:
       "Presentation-ready repaints for agents, vendors and investors — fast, sale-ready interior and exterior painting that lifts value and buyer appeal, scheduled around your campaign.",
@@ -838,9 +845,10 @@ const servicePages = [
   {
     route: "/services/body-corporate-painting",
     name: "Body Corporate Painting",
-    title: "Body Corporate Painting Melbourne | Strata & Owners Corporation Painters | Jetblack Painting",
+    title:
+      "Body Corporate Painting Melbourne | Jetblack Painting",
     description:
-      "Body corporate and strata painting in Melbourne. Common areas, façades and maintenance programs for owners corporations. Fully insured, minimal disruption. Free quotes.",
+      "Body corporate and strata painting in Melbourne. Common areas, facades and maintenance programs. Fully insured. Free quotes — 0432 077 782.",
     heroTitle: "Body Corporate Painting Melbourne",
     heroBody:
       "Professional painting for owners corporations and strata-managed properties — common areas and façades repainted with minimal disruption to residents, fully insured and on schedule.",
@@ -996,9 +1004,10 @@ writePage(
 const articlePages = [
   {
     route: "/blog/best-paint-colours-melbourne-2025",
-    title: "Best Paint Colours for Melbourne Homes in 2025 | Jetblack Painting",
+    title:
+      "Best Paint Colours for Melbourne Homes 2026 | Jetblack",
     description:
-      "Discover the best paint colours for Melbourne homes in 2025, with expert advice from Jetblack Painting on interior and exterior colour selection.",
+      "Discover the best paint colours for Melbourne homes in 2026, with expert advice from Jetblack Painting on interior and exterior colour selection.",
     intro:
       "Choosing paint colours for a Melbourne home means balancing natural light, neighbourhood character, resale appeal, and the durability you need for changing weather conditions.",
     sections: [
@@ -1041,7 +1050,8 @@ const articlePages = [
   },
   {
     route: "/blog/house-painting-cost-melbourne",
-    title: "How Much Does House Painting Cost in Melbourne? | Jetblack Painting",
+    title:
+      "House Painting Cost Melbourne 2026 | Jetblack Painting",
     description:
       "Learn what affects house painting costs in Melbourne, including surface prep, property size, access, paint systems, and project scope.",
     intro:
@@ -1086,7 +1096,8 @@ const articlePages = [
   },
   {
     route: "/blog/prepare-home-for-painting",
-    title: "How to Prepare Your Home for a Painting Project | Jetblack Painting",
+    title:
+      "How to Prepare Your Home for Painting | Jetblack Painting",
     description:
       "Prepare your Melbourne home for a smooth painting project with expert tips on access, furniture protection, colour decisions, and scheduling.",
     intro:
@@ -1140,7 +1151,8 @@ const articlePages = [
   },
   {
     route: "/blog/kitchen-cabinet-resurfacing-vs-replacement",
-    title: "Kitchen Cabinet Resurfacing vs Replacement | Jetblack Painting",
+    title:
+      "Kitchen Cabinet Resurfacing vs Replacement | Jetblack",
     description:
       "Compare kitchen cabinet resurfacing and replacement to understand cost, turnaround, finish quality, and which option suits your Melbourne renovation.",
     intro:
@@ -1185,9 +1197,10 @@ const articlePages = [
   },
   {
     route: "/blog/mould-remediation-painting-melbourne",
-    title: "Mould Remediation & Painting Guide for Melbourne Homes | Jetblack Painting",
+    title:
+      "Mould Remediation & Painting Guide Melbourne | Jetblack",
     description:
-      "How to identify, treat and paint over mould in Melbourne homes. Expert guide covering bathroom mould, render mould, preparation steps and the right anti-mould paints.",
+      "How to identify, treat and paint over mould in Melbourne homes — bathroom mould, render mould, prep steps and anti-mould paints.",
     intro:
       "Mould is one of the most common problems we encounter on Melbourne painting jobs — and one of the most mishandled. Painting over mould without proper treatment guarantees it comes back within months. Here's how to do it right, from a team that's dealt with it on hundreds of Melbourne homes.",
     howTo: {
@@ -1255,9 +1268,10 @@ const articlePages = [
   },
   {
     route: "/blog/how-to-choose-a-painter-melbourne",
-    title: "How to Choose a Painter in Melbourne: A Homeowner's Guide | Jetblack Painting",
+    title:
+      "How to Choose a Painter in Melbourne | Jetblack Painting",
     description:
-      "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees, reviews and red flags to avoid. A practical checklist from a local painting business.",
+      "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees and red flags to avoid. A practical checklist.",
     intro:
       "Melbourne has thousands of people offering painting work, and the gap between the best and worst of them is enormous — in preparation quality, in what happens if something goes wrong, and in whether the job is still holding up in five years. Here's what actually matters when you're comparing painters.",
     sections: [

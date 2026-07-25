@@ -20,8 +20,8 @@ export default function KeysboroughPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Keysborough Painters | Local House Painting Services | Jetblack Painting"
-      description={`Local house painters in ${suburb}. Based in nearby Mordialloc — fast quotes, reliable service and premium results for ${suburb}'s estate homes, family homes and commercial properties. Free quotes.`}
+      title="Keysborough Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Keysborough — established brick family homes and commercial buildings. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Dandenong", link: "/painter-dandenong" },

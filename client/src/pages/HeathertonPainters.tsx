@@ -45,8 +45,8 @@ export default function HeathertonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Heatherton Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Quality interior and exterior painting for Heatherton homes in Kingston council. Fully licensed, free written quotes, 5-year guarantee.`}
+      title="Heatherton Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Heatherton — 1970s–1980s residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Cheltenham", link: "/painter-cheltenham" },
         { name: "Moorabbin", link: "/painter-moorabbin" },

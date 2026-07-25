@@ -20,8 +20,8 @@ export default function HamptonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Hampton Painters | Coastal House Painting Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Coastal painting specialists for weatherboard cottages, period homes and bayside residences across ${suburb} and Hampton East. 5-star rated, fully licensed, free quotes.`}
+      title="Hampton Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Hampton — weatherboard cottages, period homes and modern beach residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Sandringham", link: "/painter-sandringham" },

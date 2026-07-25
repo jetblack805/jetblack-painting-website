@@ -20,8 +20,8 @@ export default function ArmadalePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Armadale Painters | Heritage Terrace & Period Home Specialists | Jetblack Painting"
-      description={`Premium house painters in ${suburb}. Specialists in Victorian terraces, Edwardian homes and heritage preparation across ${suburb} and the Stonnington area. 5-star rated, fully licensed, free quotes.`}
+      title="Armadale Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Armadale — Victorian, Edwardian terraces and renovated period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Malvern", link: "/painter-malvern" },

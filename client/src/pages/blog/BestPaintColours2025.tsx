@@ -8,7 +8,7 @@ export default function BestPaintColours2025() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Best Paint Colours for Melbourne Homes in 2026 | Jetblack Painting"
+        title="Best Paint Colours for Melbourne Homes 2026 | Jetblack"
         description="Discover the best paint colours for Melbourne homes in 2026, with expert advice from Jetblack Painting on interior and exterior colour selection."
         canonical="https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025/"
       />

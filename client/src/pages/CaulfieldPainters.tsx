@@ -20,8 +20,8 @@ export default function CaulfieldPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Caulfield Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior, exterior and heritage home painting across Caulfield, Caulfield North and Caulfield South. 5-star rated, fully licensed, free quotes.`}
+      title="Caulfield Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Caulfield — Edwardian terraces and interwar homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Malvern", link: "/painter-malvern" },

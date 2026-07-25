@@ -20,8 +20,8 @@ export default function OrmondPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Ormond Painters | House & Investment Property Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior, exterior and rental property repaints for homes and units across ${suburb} and Glen Eira. Thorough preparation, premium finishes, free quotes.`}
+      title="Ormond Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Ormond — interwar homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "McKinnon", link: "/painter-mckinnon" },
         { name: "Murrumbeena", link: "/painter-murrumbeena" },

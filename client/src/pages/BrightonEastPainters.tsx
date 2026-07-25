@@ -45,8 +45,8 @@ export default function BrightonEastPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Brighton East Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Brighton East's large family homes and quality renovations. Fully licensed, 5-star rated, free written quotes.`}
+      title="Brighton East Painters | Coastal Homes | Jetblack Painting"
+      description="Coastal house painters in Brighton East — quality renovations on generous blocks. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Bentleigh", link: "/painter-bentleigh" },

@@ -20,8 +20,8 @@ export default function RingwoodPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Ringwood Painters | House & Weatherboard Painting Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in weatherboard homes, family homes and commercial properties across ${suburb}, Ringwood East, Ringwood North and the City of Maroondah. Free quotes.`}
+      title="Ringwood Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Ringwood — weatherboard, brick-veneer family homes and modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Croydon", link: "/painter-croydon" },
         { name: "Donvale", link: "/painter-donvale" },

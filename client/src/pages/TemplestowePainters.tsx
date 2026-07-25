@@ -20,8 +20,8 @@ export default function TemplestowePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Templestowe Painters | Large Home & Premium Painting Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in large family homes, multi-level residences and premium finishes across ${suburb}, Templestowe Lower and the City of Manningham. Free quotes.`}
+      title="Templestowe Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Templestowe — large two-storey family homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Doncaster", link: "/painter-doncaster" },
         { name: "Box Hill", link: "/painter-box-hill" },

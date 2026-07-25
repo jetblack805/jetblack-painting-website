@@ -45,8 +45,8 @@ export default function HighettPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Highett Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Highett's brick homes, townhouses and renovations. Fully licensed, free quotes, 5-year guarantee.`}
+      title="Highett Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Highett — 1960s–1980s residences to modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Cheltenham", link: "/painter-cheltenham" },
         { name: "Moorabbin", link: "/painter-moorabbin" },

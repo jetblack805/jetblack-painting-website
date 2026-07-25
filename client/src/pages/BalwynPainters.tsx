@@ -48,8 +48,8 @@ export default function BalwynPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Balwyn Painters | Period & Prestige Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb} and Balwyn North. Interior and exterior painting for interwar, post-war and prestige homes across Balwyn's leafy Boroondara streets. Free quotes.`}
+      title="Balwyn Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Balwyn. Interior, exterior and roof painting. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Camberwell", link: "/painter-camberwell" },
         { name: "Kew", link: "/painter-kew" },

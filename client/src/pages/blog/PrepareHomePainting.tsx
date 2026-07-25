@@ -33,7 +33,7 @@ export default function PrepareHomePainting() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="How to Prepare Your Home for Painting | Melbourne Guide | Jetblack Painting"
+        title="How to Prepare Your Home for Painting | Jetblack Painting"
         description="Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results."
         canonical="https://jetblackpainting.com/blog/prepare-home-for-painting/"
         schema={howToSchema}

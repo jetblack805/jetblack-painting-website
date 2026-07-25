@@ -48,8 +48,8 @@ export default function ElwoodPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Elwood Painters | Victorian, Edwardian & Art Deco Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for Victorian terraces, Edwardian homes and Art Deco apartments in coastal Elwood. Free quotes.`}
+      title="Elwood Painters | Coastal House Painting | Jetblack Painting"
+      description="Coastal house painters in Elwood — a notable concentration of Art Deco apartments. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Elsternwick", link: "/painter-elsternwick" },
         { name: "Brighton", link: "/painter-brighton" },

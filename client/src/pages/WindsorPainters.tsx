@@ -24,8 +24,8 @@ export default function WindsorPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Windsor Painters | Victorian Terrace & Heritage Home Specialists | Jetblack Painting"
-      description={`Expert painters in ${suburb} — Victorian terraces, period cottages, apartments and warehouse conversions around Chapel Street and Stonnington. Free quotes, 5-year guarantee, $10M insurance.`}
+      title="Windsor Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Windsor — single-fronted Victorian terraces. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Prahran", link: "/painter-prahran" },
         { name: "St Kilda", link: "/painter-st-kilda" },

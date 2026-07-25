@@ -45,8 +45,8 @@ export default function OakleighPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Oakleigh Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Oakleigh's brick homes, townhouses and renovations. Fully licensed, 5-year guarantee, free written quotes.`}
+      title="Oakleigh Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Oakleigh — post-war brick homes and 1960s–1980s residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Chadstone", link: "/painter-chadstone" },
         { name: "Murrumbeena", link: "/painter-murrumbeena" },

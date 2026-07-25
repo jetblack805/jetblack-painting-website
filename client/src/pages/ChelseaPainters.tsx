@@ -48,8 +48,8 @@ export default function ChelseaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Chelsea Painters | Coastal House Painting Specialists | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Interior, exterior and coastal painting for Bayside homes. Locally based in Mordialloc. 5-star rated, $10M insured, 5-year guarantee. Free quotes.`}
+      title="Chelsea Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Chelsea — Californian bungalows to mid-century brick veneer. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Aspendale", link: "/painter-aspendale" },
         { name: "Mordialloc", link: "/painter-mordialloc" },

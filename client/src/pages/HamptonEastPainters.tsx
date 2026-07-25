@@ -20,8 +20,8 @@ export default function HamptonEastPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Hampton East Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for post-war brick homes, californian bungalows and family residences across ${suburb}. 5-star rated, fully licensed, free quotes.`}
+      title="Hampton East Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Hampton East — post-war brick veneer homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Highett", link: "/painter-highett" },

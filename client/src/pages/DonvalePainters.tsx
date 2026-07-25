@@ -20,8 +20,8 @@ export default function DonvalePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Donvale Painters | Large Home & Timber Painting Experts | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in large family homes, timber and rendered façades across ${suburb} and the City of Manningham. Thorough preparation, premium coatings, free quotes.`}
+      title="Donvale Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Donvale — large established family homes on generous blocks and rendered façades. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Doncaster", link: "/painter-doncaster" },
         { name: "Templestowe", link: "/painter-templestowe" },

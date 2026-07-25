@@ -48,8 +48,8 @@ export default function AspendalePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Aspendale Painters | Local House Painting Specialists | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Interior, exterior, roof and fence painting for Bayside homes. Based in Mordialloc. 5-star rated, $10M insured. Free written quotes.`}
+      title="Aspendale Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Aspendale — mid-century brick veneer and contemporary townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Mentone", link: "/painter-mentone" },

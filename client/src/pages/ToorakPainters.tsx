@@ -48,8 +48,8 @@ export default function ToorakPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Toorak Painters | Luxury House Painting Specialists | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Specializing in high-end interior and exterior painting for luxury mansions and modern residences. 5-star rated, fully licensed, free quotes.`}
+      title="Toorak Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Toorak — grand Victorian mansions and period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Hawthorn", link: "/painter-hawthorn" },
         { name: "Malvern", link: "/painter-malvern" },

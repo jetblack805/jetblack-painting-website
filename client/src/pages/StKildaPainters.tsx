@@ -51,8 +51,8 @@ export default function StKildaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title={`${suburb} Painters | Art Deco, Victorian & Coastal Property Specialists | Jetblack Painting`}
-      description={`Expert painting services in ${suburb}. Specialists in Art Deco apartments, Victorian terraces, and coastal investment properties. Free quotes — call 0432 077 782.`}
+      title="St Kilda Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in St Kilda — Edwardian terraces and weatherboard cottages. Free quotes, 5-year guarantee. Call 0432 077 782."
       localExpertise={`${suburb} is one of Melbourne's most iconic inner-south suburbs — famous for its Art Deco apartment blocks, Victorian terraces, Acland Street café strip, and the Port Phillip Bay foreshore. The suburb's housing stock spans everything from single-fronted Victorian cottages on side streets to grand multi-storey Art Deco buildings facing the bay, along with a large share of modern and converted apartments. Jetblack Painting works across the full range of ${suburb} property types, with particular expertise in the surface preparation and heritage-compatible finishes that period buildings demand.`}
       propertyTypes={`${suburb} is dominated by Art Deco apartment blocks — many heritage-listed or in heritage overlay zones — alongside Victorian and Edwardian terraces, weatherboard cottages, and a growing number of modern apartments. The suburb also has a high proportion of investor-owned and rental properties. Our work here covers interior and exterior repaints of all building types, from single apartments to entire apartment block exteriors, with finishes that respect the character of each building.`}
       localContent={[

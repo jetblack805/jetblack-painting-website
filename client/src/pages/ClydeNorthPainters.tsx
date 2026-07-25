@@ -24,8 +24,8 @@ export default function ClydeNorthPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Clyde North Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for modern brick and rendered estate homes across ${suburb}, City of Casey. 5-star rated, fully licensed, free quotes.`}
+      title="Clyde North Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Clyde North — double-storey family houses and metal roofs. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Cranbourne", link: "/painter-cranbourne" },
         { name: "Berwick", link: "/painter-berwick" },

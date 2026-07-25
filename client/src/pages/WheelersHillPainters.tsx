@@ -20,8 +20,8 @@ export default function WheelersHillPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Wheelers Hill Painters | Family Home Painting Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in large family homes, brick and rendered properties near Jells Park and across the City of Monash. Thorough preparation, premium finishes, free quotes.`}
+      title="Wheelers Hill Painters | Premium Homes | Jetblack Painting"
+      description="Premium house painters in Wheelers Hill — rendered family homes on elevated blocks. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Glen Waverley", link: "/painter-glen-waverley" },
         { name: "Keysborough", link: "/painter-keysborough" },

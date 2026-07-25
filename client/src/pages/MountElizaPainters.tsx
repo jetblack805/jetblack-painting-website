@@ -48,8 +48,8 @@ export default function MountElizaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Mount Eliza Painters | Prestige & Coastal Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for prestige homes, large blocks and bay-view properties across Mount Eliza. Free quotes.`}
+      title="Mount Eliza Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Mount Eliza — rendered homes to contemporary architect-designed builds. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Frankston", link: "/painter-frankston" },
         { name: "Mornington", link: "/painter-mornington" },

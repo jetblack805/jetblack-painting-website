@@ -59,8 +59,8 @@ export default function InteriorPainting() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Interior Painting Melbourne | Professional House Painters | Jetblack Painting"
-        description="Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
+        title="Interior Painting Melbourne | Jetblack Painting"
+        description="Professional interior painting in Melbourne. Premium Dulux paints, expert colour advice, 5-star rated. All Melbourne suburbs. Free quotes."
         canonical="https://jetblackpainting.com/services/interior-painting/"
       schema={serviceSchema({ serviceType: "Interior Painting", name: "Interior Painting Melbourne", description: "Professional interior painting services in Melbourne. Premium Dulux paints, expert colour consultation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.", canonical: "https://jetblackpainting.com/services/interior-painting/", faqs })}
       />

@@ -31,8 +31,8 @@ export default function ChoosingAPainterMelbourne() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="How to Choose a Painter in Melbourne: A Homeowner's Guide | Jetblack Painting"
-        description="What to check before hiring a Melbourne painter — insurance, written quotes, guarantees, reviews and red flags to avoid. A practical checklist from a local painting business."
+        title="How to Choose a Painter in Melbourne | Jetblack Painting"
+        description="What to check before hiring a Melbourne painter — insurance, written quotes, guarantees and red flags to avoid. A practical checklist."
         canonical="https://jetblackpainting.com/blog/how-to-choose-a-painter-melbourne/"
         schema={{
           "@context": "https://schema.org",

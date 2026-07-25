@@ -24,8 +24,8 @@ export default function AspendaleGardensPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Aspendale Gardens Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for modern brick and rendered family homes across ${suburb}, Kingston. 5-star rated, fully licensed, free quotes.`}
+      title="Aspendale Gardens Painters | Coastal House Painting"
+      description="Coastal house painters in Aspendale Gardens — rendered family homes and 1980s–2000s builds. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Aspendale", link: "/painter-aspendale" },
         { name: "Mordialloc", link: "/painter-mordialloc" },

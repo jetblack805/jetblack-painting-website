@@ -48,7 +48,7 @@ export default function ExteriorPainting() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Exterior Painting Melbourne | Weather-Resistant House Painters | Jetblack Painting"
+        title="Exterior Painting Melbourne | Jetblack Painting"
         description="Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes."
         canonical="https://jetblackpainting.com/services/exterior-painting/"
       schema={serviceSchema({ serviceType: "Exterior Painting", name: "Exterior Painting Melbourne", description: "Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.", canonical: "https://jetblackpainting.com/services/exterior-painting/", faqs })}

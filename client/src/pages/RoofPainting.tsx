@@ -49,7 +49,7 @@ export default function RoofPainting() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Roof Painting Melbourne | Roof Restoration & Coating | Jetblack Painting"
+        title="Roof Painting Melbourne | Jetblack Painting"
         description="Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes."
         canonical="https://jetblackpainting.com/services/roof-painting/"
       schema={serviceSchema({ serviceType: "Roof Painting", name: "Roof Painting Melbourne", description: "Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes.", canonical: "https://jetblackpainting.com/services/roof-painting/", faqs })}

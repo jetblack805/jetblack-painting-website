@@ -20,8 +20,8 @@ export default function DandenongPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Dandenong Painters | House & Commercial Painting | Jetblack Painting"
-      description={`Experienced painters in ${suburb}. Interior, exterior and commercial painting for homes, rentals and businesses across ${suburb} and ${suburb} North. Fully insured, 5-star rated, free written quotes.`}
+      title="Dandenong Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Dandenong — weatherboard family homes, unit developments and retail shopfronts. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Keysborough", link: "/keysborough-painters" },
         { name: "Greater Dandenong", link: "/painter-greater-dandenong" },

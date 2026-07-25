@@ -20,8 +20,8 @@ export default function MoorabbinPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Moorabbin Painters | Residential & Commercial Painting | Jetblack Painting"
-      description={`Professional painters in ${suburb}. Interior, exterior and commercial painting for homes and businesses across ${suburb} and the City of Kingston. Based nearby in Mordialloc, fully licensed, free quotes.`}
+      title="Moorabbin Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Moorabbin — interwar, weatherboard family homes and renovated residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mentone", link: "/painter-mentone" },
         { name: "Mordialloc", link: "/painter-mordialloc" },

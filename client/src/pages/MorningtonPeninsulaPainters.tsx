@@ -48,8 +48,8 @@ export default function MorningtonPeninsulaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Mornington Peninsula Painters | Coastal & Rural Painting | Jetblack Painting"
-      description="Expert painters serving the Mornington Peninsula. Specializing in coastal home protection, rural properties, and holiday homes. Free quotes."
+      title="Mornington Peninsula Painters | Coastal House Painting"
+      description="Coastal house painters across the Mornington Peninsula — beach houses, coastal homes and rural properties. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Berwick", link: "/painter-berwick" },
         { name: "Dandenong", link: "/painter-dandenong" },

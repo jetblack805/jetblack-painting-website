@@ -45,8 +45,8 @@ export default function ChadsonePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Chadstone Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Chadstone's brick homes, townhouses and renovations. Fully licensed, 5-year guarantee, free written quotes.`}
+      title="Chadstone Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Chadstone — post-war brick homes and 1960s–1980s residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Oakleigh", link: "/painter-oakleigh" },
         { name: "Murrumbeena", link: "/painter-murrumbeena" },

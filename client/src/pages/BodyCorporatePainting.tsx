@@ -60,8 +60,8 @@ export default function BodyCorporatePainting() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Body Corporate Painting Melbourne | Strata & Owners Corporation Painters | Jetblack Painting"
-        description="Body corporate and strata painting in Melbourne. Common areas, façades and maintenance programs for owners corporations. Fully insured, minimal disruption. Free quotes."
+        title="Body Corporate Painting Melbourne | Jetblack Painting"
+        description="Body corporate and strata painting in Melbourne. Common areas, facades and maintenance programs. Fully insured. Free quotes — 0432 077 782."
         canonical="https://jetblackpainting.com/services/body-corporate-painting/"
         schema={serviceSchema({ serviceType: "Body Corporate Painting", name: "Body Corporate Painting Melbourne", description: "Body corporate and strata painting in Melbourne. Common areas, façades and maintenance programs for owners corporations. Fully insured, minimal disruption. Free quotes.", canonical: "https://jetblackpainting.com/services/body-corporate-painting/", faqs })}
       />

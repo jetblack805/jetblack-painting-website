@@ -48,8 +48,8 @@ export default function SouthYarraPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="South Yarra Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for period terraces, luxury apartments and modern homes. 5-star rated, fully licensed, free quotes.`}
+      title="South Yarra Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in South Yarra — Victorian terraces, apartments and townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Malvern", link: "/painter-malvern" },

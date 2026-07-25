@@ -20,8 +20,8 @@ export default function CamberwellPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Camberwell Painters | Period Home & Heritage Specialists | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Specialists in Edwardian homes, Californian bungalows and modern renovations across ${suburb} and Canterbury. 5-star rated, fully licensed, free quotes.`}
+      title="Camberwell Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Camberwell — Edwardian homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Hawthorn", link: "/painter-hawthorn" },
         { name: "Malvern", link: "/painter-malvern" },

@@ -48,8 +48,8 @@ export default function CarltonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Carlton Painters | Heritage & Victorian Painting Experts | Jetblack Painting"
-      description="Premium house painters in Carlton. Specialists in Victorian terrace restoration and heritage-listed property painting. 5-star rated, free quotes."
+      title="Carlton Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Carlton — restoration required for these unique property types. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "South Yarra", link: "/painter-south-yarra" },
         { name: "Kew", link: "/painter-kew" },

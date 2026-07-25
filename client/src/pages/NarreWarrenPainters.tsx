@@ -24,8 +24,8 @@ export default function NarreWarrenPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Narre Warren Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for brick-veneer family homes and estate houses across ${suburb}, City of Casey. 5-star rated, fully licensed, free quotes.`}
+      title="Narre Warren Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Narre Warren — brick-veneer family homes, double-storey homes and metal roofs. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Berwick", link: "/painter-berwick" },
         { name: "Dandenong", link: "/painter-dandenong" },

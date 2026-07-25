@@ -24,8 +24,8 @@ export default function MalvernEastPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Malvern East Painters | Period, Bungalow & Heritage Home Specialists | Jetblack Painting"
-      description={`Expert painters in ${suburb} — Edwardian homes, Californian bungalows, interwar houses and period residences across the Gascoigne Estate and Stonnington. Free quotes, 5-year guarantee, $10M insurance.`}
+      title="Malvern East Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Malvern East — Edwardian, Federation homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Malvern", link: "/painter-malvern" },
         { name: "Glen Iris", link: "/painter-glen-iris" },

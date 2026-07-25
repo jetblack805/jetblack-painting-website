@@ -48,8 +48,8 @@ export default function MentonePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Mentone Painters | Coastal & Period Home Specialists | Jetblack Painting"
-      description={`Local house painters in ${suburb}. Specialists in Edwardian and interwar homes, coastal salt-air protection and exterior repaints. Based in Mordialloc. Free quotes.`}
+      title="Mentone Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Mentone — California bungalow-style period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Parkdale", link: "/painter-parkdale" },

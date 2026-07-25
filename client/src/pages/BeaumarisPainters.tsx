@@ -45,8 +45,8 @@ export default function BeaumarisPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Beaumaris Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Beaumaris's architect homes, coastal residences and family properties. 5-star rated, fully licensed, free quotes.`}
+      title="Beaumaris Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Beaumaris — generous suburban residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Sandringham", link: "/painter-sandringham" },

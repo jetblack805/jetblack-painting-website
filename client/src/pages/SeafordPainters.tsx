@@ -24,8 +24,8 @@ export default function SeafordPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Seaford Painters | Coastal House Painting Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Coastal painting specialists for weatherboard beach houses, brick homes and beachside properties across ${suburb}. 5-star rated, fully licensed, free quotes.`}
+      title="Seaford Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Seaford — weatherboard beach cottages and post-war brick homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Carrum", link: "/painter-carrum" },
         { name: "Bonbeach", link: "/painter-bonbeach" },

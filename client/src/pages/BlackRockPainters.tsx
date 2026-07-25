@@ -45,8 +45,8 @@ export default function BlackRockPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Black Rock Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Black Rock's prestige residences, period homes and coastal properties. Fully licensed, 5-star rated, free quotes.`}
+      title="Black Rock Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Black Rock — architect-designed contemporary homes to high-end renovations on. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Beaumaris", link: "/painter-beaumaris" },
         { name: "Sandringham", link: "/painter-sandringham" },

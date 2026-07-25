@@ -20,8 +20,8 @@ export default function HawthornPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Hawthorn Painters | Victorian & Federation Home Specialists | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Heritage specialists for Victorian terraces, Federation homes and modern renovations across ${suburb} and Hawthorn East. 5-star rated, fully licensed, free quotes.`}
+      title="Hawthorn Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Hawthorn — Victorian terraces and Federation homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Camberwell", link: "/painter-camberwell" },
         { name: "Toorak", link: "/painter-toorak" },

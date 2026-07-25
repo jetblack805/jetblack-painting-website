@@ -20,8 +20,8 @@ export default function BerwickPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Berwick Painters | Estate & Family Home Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior, exterior and commercial painting for estate homes, established family properties and rental repaints across ${suburb} and Casey. 5-star rated, fully licensed, free quotes.`}
+      title="Berwick Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Berwick — established family houses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Dandenong", link: "/painter-dandenong" },
         { name: "Keysborough", link: "/keysborough-painters" },

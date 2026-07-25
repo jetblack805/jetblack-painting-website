@@ -24,8 +24,8 @@ export default function PattersonLakesPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Patterson Lakes Painters | Waterfront & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for waterfront and canal-estate homes, modern brick and rendered residences across ${suburb}, Kingston. 5-star rated, fully licensed, free quotes.`}
+      title="Patterson Lakes Painters | Waterfront House Painting"
+      description="Waterfront and coastal house painters in Patterson Lakes — canal-front homes and rendered residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Carrum", link: "/painter-carrum" },
         { name: "Bonbeach", link: "/painter-bonbeach" },

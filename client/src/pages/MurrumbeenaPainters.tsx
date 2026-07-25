@@ -20,8 +20,8 @@ export default function MurrumbeenaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Murrumbeena Painters | Bungalow & Family Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in Californian bungalows, interwar homes and family properties across ${suburb} and Glen Eira. Thorough prep, premium finishes, free quotes.`}
+      title="Murrumbeena Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Murrumbeena — Californian bungalows and interwar. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "McKinnon", link: "/painter-mckinnon" },
         { name: "Ormond", link: "/painter-ormond" },

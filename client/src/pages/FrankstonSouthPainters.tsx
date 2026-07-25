@@ -24,8 +24,8 @@ export default function FrankstonSouthPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Frankston South Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for larger leafy homes, architect-designed houses and coastal properties across ${suburb}. 5-star rated, fully licensed, free quotes.`}
+      title="Frankston South Painters | Coastal Homes | Jetblack Painting"
+      description="Coastal house painters in Frankston South — larger family homes, architect-designed and split-level houses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Frankston", link: "/painter-frankston" },
         { name: "Mount Eliza", link: "/painter-mount-eliza" },

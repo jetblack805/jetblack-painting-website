@@ -20,8 +20,8 @@ export default function GlenWaverleyPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Glen Waverley Painters | Family Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in large family homes, brick veneer, rendered façades and modern interiors across ${suburb} and the City of Monash. 5-star rated, fully licensed, free quotes.`}
+      title="Glen Waverley Painters | Premium Homes | Jetblack Painting"
+      description="Premium house painters in Glen Waverley — large rebuilt family homes with rendered façades. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Wheelers Hill", link: "/painter-wheelers-hill" },
         { name: "Doncaster", link: "/painter-doncaster" },

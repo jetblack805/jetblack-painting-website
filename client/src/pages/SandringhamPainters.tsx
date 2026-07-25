@@ -48,8 +48,8 @@ export default function SandringhamPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Sandringham Painters | Coastal & Weatherboard Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in weatherboard beach cottages and coastal salt-air protection. Based in Mordialloc. Free quotes.`}
+      title="Sandringham Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Sandringham — Edwardian and interwar homes along Royal Avenue. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Black Rock", link: "/painter-black-rock" },

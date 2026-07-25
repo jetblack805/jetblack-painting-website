@@ -48,8 +48,8 @@ export default function CheltenhamPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Cheltenham Painters | Professional House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Interior, exterior and commercial painting for Bayside homes. Locally based in Mordialloc. 5-star rated, fully insured. Free quotes.`}
+      title="Cheltenham Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Cheltenham — weatherboard cottages near the foreshore and newer townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mentone", link: "/painter-mentone" },
         { name: "Moorabbin", link: "/painter-moorabbin" },

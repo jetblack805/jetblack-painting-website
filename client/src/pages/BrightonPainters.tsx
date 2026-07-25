@@ -48,8 +48,8 @@ export default function BrightonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Brighton Painters | Luxury House Painting Services | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Specializing in heritage restoration, luxury interior painting, and coastal exterior protection. 5-star rated, fully licensed, free quotes.`}
+      title="Brighton Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Brighton — heritage homes, modern beachside residences and premium materials. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Bentleigh", link: "/painter-bentleigh" },

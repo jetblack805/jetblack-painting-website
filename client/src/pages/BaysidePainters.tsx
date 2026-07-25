@@ -48,8 +48,8 @@ export default function BaysidePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Bayside Painters | Coastal House Painting Experts | Jetblack Painting"
-      description={`Professional house painters across the Bayside region. Coastal painting specialists for Brighton, Hampton, Sandringham, Beaumaris and Black Rock. Based in Mordialloc, 5-star rated, free quotes.`}
+      title="Bayside Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Bayside — Edwardian period homes in Brighton. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Hampton", link: "/painter-hampton" },

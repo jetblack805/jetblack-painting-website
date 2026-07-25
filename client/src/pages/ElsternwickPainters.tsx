@@ -48,8 +48,8 @@ export default function ElsternwickPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Elsternwick Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for period terraces, Art Deco apartments and modern homes. 5-star rated, fully licensed, free quotes.`}
+      title="Elsternwick Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Elsternwick — inter-war bungalows and Art Deco apartment blocks. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Caulfield", link: "/painter-caulfield" },
         { name: "Brighton", link: "/painter-brighton" },

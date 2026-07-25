@@ -24,8 +24,8 @@ export default function DromanaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Dromana Painters | Coastal House Painting Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Coastal painting specialists for beach houses, weatherboard homes and holiday properties across ${suburb} on the Mornington Peninsula. 5-star rated, fully licensed, free quotes.`}
+      title="Dromana Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Dromana — weatherboard, fibro beach houses and rendered permanent homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mount Martha", link: "/painter-mount-martha" },
         { name: "Mornington", link: "/painter-mornington" },

@@ -50,7 +50,7 @@ export default function CommercialPainting() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Commercial Painting Melbourne | Office & Retail Painters | Jetblack Painting"
+        title="Commercial Painting Melbourne | Jetblack Painting"
         description="Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes."
         canonical="https://jetblackpainting.com/services/commercial-painting/"
       schema={serviceSchema({ serviceType: "Commercial Painting", name: "Commercial Painting Melbourne", description: "Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes.", canonical: "https://jetblackpainting.com/services/commercial-painting/", faqs })}

@@ -8,7 +8,7 @@ export default function KitchenCabinetResurfacing() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Kitchen Cabinet Resurfacing vs Replacement | Melbourne Guide | Jetblack Painting"
+        title="Kitchen Cabinet Resurfacing vs Replacement | Jetblack"
         description="Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting."
         canonical="https://jetblackpainting.com/blog/kitchen-cabinet-resurfacing-vs-replacement/"
       />

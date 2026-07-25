@@ -24,8 +24,8 @@ export default function BentleighEastPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Bentleigh East Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for post-war brick homes, californian bungalows and family residences across ${suburb}. 5-star rated, fully licensed, free quotes.`}
+      title="Bentleigh East Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Bentleigh East — post-war brick-veneer homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "McKinnon", link: "/painter-mckinnon" },

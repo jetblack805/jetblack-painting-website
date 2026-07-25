@@ -51,8 +51,8 @@ export default function FitzroyPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title={`${suburb} Painters | Victorian Terrace & Heritage Property Specialists | Jetblack Painting`}
-      description={`Expert painting services in ${suburb}. Specialists in Victorian terraces, heritage overlay homes, and rental and investment properties. Free quotes — call 0432 077 782.`}
+      title="Fitzroy Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Fitzroy — Edwardian — single-fronted. Free quotes, 5-year guarantee. Call 0432 077 782."
       localExpertise={`${suburb} sits immediately north of the CBD — one of Melbourne's oldest and most characterful inner suburbs, with Brunswick Street and Smith Street at its heart and a dense grid of Victorian terrace houses, workers' cottages, and converted warehouse spaces throughout. The suburb's housing stock is almost entirely Victorian and Edwardian-era, with a high proportion of heritage overlay protection, and a very active rental and investment property market. Jetblack Painting works throughout ${suburb} and neighbouring Collingwood, Carlton, and Northcote, with extensive experience in the preparation and coating systems that period masonry and timber buildings require.`}
       propertyTypes={`${suburb}'s housing stock is predominantly Victorian and Edwardian — single-fronted and double-fronted terrace houses, workers' cottages, and the occasional converted warehouse or commercial building. Many properties are rental or investment-owned, with a strong market for quality interior repaints during tenancy changeovers. Heritage overlay zones cover much of the suburb, governing exterior colour choices. We handle interior and exterior repaints across the full range of ${suburb} property types.`}
       localContent={[

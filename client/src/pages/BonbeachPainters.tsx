@@ -45,8 +45,8 @@ export default function BonbeachPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Bonbeach Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Bonbeach's coastal homes and beach houses. Fully licensed, 5-year guarantee, free written quotes.`}
+      title="Bonbeach Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Bonbeach — brick family homes and modern renovations — all in a coastal. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Edithvale", link: "/painter-edithvale" },
         { name: "Chelsea", link: "/painter-chelsea" },

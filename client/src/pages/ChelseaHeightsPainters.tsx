@@ -24,8 +24,8 @@ export default function ChelseaHeightsPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Chelsea Heights Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for brick-veneer family homes and established houses across ${suburb}, Kingston. 5-star rated, fully licensed, free quotes.`}
+      title="Chelsea Heights Painters | Coastal Homes | Jetblack Painting"
+      description="Coastal house painters in Chelsea Heights — brick-veneer family homes, later houses and clad exteriors. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Chelsea", link: "/painter-chelsea" },
         { name: "Edithvale", link: "/painter-edithvale" },

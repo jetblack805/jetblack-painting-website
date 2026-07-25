@@ -20,8 +20,8 @@ export default function StonningtonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Stonnington Painters | Premium Heritage & Luxury Home Painting | Jetblack Painting"
-      description={`Premium painters across the City of ${suburb}. Heritage home specialists for Victorian mansions, Edwardian terraces and luxury apartments in Toorak, Malvern, Armadale, South Yarra and Prahran. 5-star rated, free quotes.`}
+      title="Stonnington Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Stonnington — Victorian, Edwardian mansions and Federation homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Malvern", link: "/painter-malvern" },

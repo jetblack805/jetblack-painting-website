@@ -48,8 +48,8 @@ export default function PrahranPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Prahran Painters | Victorian Terrace & Period Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb} and Windsor. Interior and exterior painting for Victorian terraces, Art Deco apartments and period homes across Prahran. Free quotes.`}
+      title="Prahran Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Prahran — Art Deco flats and apartment blocks from the 1930s–1940s. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "South Yarra", link: "/painter-south-yarra" },
         { name: "Armadale", link: "/painter-armadale" },

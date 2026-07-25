@@ -51,8 +51,8 @@ export default function AlbertParkPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title={`${suburb} Painters | Victorian Terrace & Heritage Home Specialists | Jetblack Painting`}
-      description={`Expert painting services in ${suburb}. Specialists in Victorian terraces, heritage overlay homes, and pre-sale painting. Free quotes — call 0432 077 782.`}
+      title="Albert Park Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Albert Park — Edwardian — single-fronted. Free quotes, 5-year guarantee. Call 0432 077 782."
       localExpertise={`${suburb} is one of Melbourne's most sought-after inner-south suburbs — a beautifully preserved Victorian streetscape wrapping around Albert Park Lake, home to the Formula 1 Grand Prix circuit and a thriving café and restaurant precinct. The suburb's tight grid of streets is lined almost entirely with Victorian and Edwardian terrace houses, cottages, and row houses, many with original ornate iron lacework, tessellated tile paths, and stucco or brick facades. Jetblack Painting has worked extensively throughout ${suburb} and neighbouring Middle Park, South Melbourne, and St Kilda, with a deep understanding of the preparation, primers, and heritage-compatible finishes these properties demand.`}
       propertyTypes={`${suburb}'s housing stock is predominantly Victorian and Edwardian — single-fronted and double-fronted terrace houses, workers' cottages, and the occasional interwar bungalow. Many properties sit within heritage overlay zones that govern exterior colour choices. The suburb also has a high proportion of pre-sale and investment-driven painting projects, given its strong property market and auction-driven culture. We work across interior and exterior repaints of all these property types.`}
       localContent={[

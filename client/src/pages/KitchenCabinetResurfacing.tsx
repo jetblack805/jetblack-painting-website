@@ -56,8 +56,8 @@ export default function KitchenCabinetResurfacing() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Kitchen Cabinet Resurfacing Melbourne | 2-Pack Finishes | Jetblack Painting"
-        description="Professional kitchen cabinet resurfacing Melbourne. Premium 2-pack finishes, fraction of renovation cost, 5-star rated. Transform your kitchen. Free quotes - Call 0432 077 782."
+        title="Kitchen Cabinet Resurfacing Melbourne | Jetblack Painting"
+        description="Kitchen cabinet resurfacing in Melbourne. Premium 2-pack finishes at a fraction of renovation cost. Free quotes — call 0432 077 782."
         canonical="https://jetblackpainting.com/services/kitchen-cabinet-resurfacing/"
       schema={serviceSchema({ serviceType: "Kitchen Cabinet Resurfacing", name: "Kitchen Cabinet Resurfacing Melbourne", description: "Professional kitchen cabinet resurfacing Melbourne. Premium 2-pack finishes, fraction of renovation cost, 5-star rated. Transform your kitchen. Free quotes - Call 0432 077 782.", canonical: "https://jetblackpainting.com/services/kitchen-cabinet-resurfacing/", faqs })}
       />

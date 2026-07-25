@@ -8,8 +8,8 @@ export default function MouldRemediationPainting() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Mould Remediation & Painting Guide for Melbourne Homes | Jetblack Painting"
-        description="How to identify, treat and paint over mould in Melbourne homes. Expert guide covering bathroom mould, render mould, preparation steps and the right anti-mould paints."
+        title="Mould Remediation & Painting Guide Melbourne | Jetblack"
+        description="How to identify, treat and paint over mould in Melbourne homes — bathroom mould, render mould, prep steps and anti-mould paints."
         canonical="https://jetblackpainting.com/blog/mould-remediation-painting-melbourne/"
       />
       <Navbar />

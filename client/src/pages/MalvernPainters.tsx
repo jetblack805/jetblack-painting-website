@@ -20,8 +20,8 @@ export default function MalvernPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Malvern Painters | Premium Period Home Specialists | Jetblack Painting"
-      description={`Premium house painters in ${suburb}. Specialists in Edwardian and Victorian homes, heritage colour work and luxury interior painting across ${suburb} and Malvern East. 5-star rated, fully licensed, free quotes.`}
+      title="Malvern Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in Malvern — Edwardian residences and Victorian terraces. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Camberwell", link: "/painter-camberwell" },

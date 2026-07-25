@@ -20,8 +20,8 @@ export default function McKinnonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="McKinnon Painters | Bungalow & Period Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Specialists in interwar homes, Californian bungalows and period properties across ${suburb} and Glen Eira. Thorough preparation, premium finishes, free quotes.`}
+      title="McKinnon Painters | Period Home Painting | Jetblack Painting"
+      description="Heritage and period home painters in McKinnon — Californian bungalows and interwar homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Ormond", link: "/painter-ormond" },

@@ -24,8 +24,8 @@ export default function DingleyVillagePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Dingley Village Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for brick-veneer family homes, established houses and modern townhouses across ${suburb}, Kingston. 5-star rated, fully licensed, free quotes.`}
+      title="Dingley Village Painters | Premium Homes | Jetblack Painting"
+      description="Premium house painters in Dingley Village — brick-veneer family homes, 1970s–80s houses and clad exteriors. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Heatherton", link: "/painter-heatherton" },
         { name: "Clarinda", link: "/painter-clarinda" },

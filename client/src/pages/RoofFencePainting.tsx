@@ -52,8 +52,8 @@ export default function RoofFencePainting() {
   return (
     <div className="min-h-screen bg-[#131316]">
       <SEOHead
-        title="Roof & Fence Painting Melbourne | Professional Restoration | Jetblack Painting"
-        description="Professional roof painting and fence painting Melbourne. Extends roof life 10-15 years, weather-resistant coatings, 5-star rated. Free quotes - Call 0432 077 782."
+        title="Roof & Fence Painting Melbourne | Jetblack Painting"
+        description="Roof and fence painting in Melbourne. Extends roof life 10-15 years with weather-resistant coatings. Free quotes — call 0432 077 782."
         canonical="https://jetblackpainting.com/services/roof-fence-painting/"
       schema={serviceSchema({ serviceType: "Roof & Fence Painting", name: "Roof & Fence Painting Melbourne", description: "Professional roof painting and fence painting Melbourne. Extends roof life 10-15 years, weather-resistant coatings, 5-star rated. Free quotes - Call 0432 077 782.", canonical: "https://jetblackpainting.com/services/roof-fence-painting/", faqs })}
       />

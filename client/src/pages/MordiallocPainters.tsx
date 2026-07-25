@@ -133,8 +133,8 @@ export default function MordiallocPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Mordialloc Painters | Coastal House Painting Specialists | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Specializing in interior, exterior, and commercial painting for coastal and heritage homes. 5-star rated, fully licensed, free quotes.`}
+      title="Mordialloc Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Mordialloc — contemporary bayside residences and ensuring a flawless. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Parkdale", link: "/painter-parkdale" },
         { name: "Mentone", link: "/painter-mentone" },

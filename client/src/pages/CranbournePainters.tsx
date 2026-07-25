@@ -24,8 +24,8 @@ export default function CranbournePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Cranbourne Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for brick-veneer family homes and new estate houses across ${suburb}, City of Casey. 5-star rated, fully licensed, free quotes.`}
+      title="Cranbourne Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Cranbourne — brick-veneer family homes, double-storey homes and metal roofs. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Berwick", link: "/painter-berwick" },
         { name: "Dandenong", link: "/painter-dandenong" },

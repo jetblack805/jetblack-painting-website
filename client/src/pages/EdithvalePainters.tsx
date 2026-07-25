@@ -45,8 +45,8 @@ export default function EdithvalePainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Edithvale Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Premium interior and exterior painting for Edithvale's coastal homes and family properties. Fully licensed, 5-year guarantee, free written quotes.`}
+      title="Edithvale Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Edithvale — brick family residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Chelsea", link: "/painter-chelsea" },
         { name: "Aspendale", link: "/painter-aspendale" },

@@ -45,8 +45,8 @@ export default function ClarindaPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Clarinda Painters | Interior & Exterior House Painting | Jetblack Painting"
-      description={`Expert house painters in ${suburb}. Quality interior and exterior painting for Clarinda homes in Kingston council. Fully licensed, 5-year guarantee, free written quotes.`}
+      title="Clarinda Painters | Premium Painting | Jetblack Painting"
+      description="Premium house painters in Clarinda — correct primer selection before repainting. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Heatherton", link: "/painter-heatherton" },
         { name: "Cheltenham", link: "/painter-cheltenham" },

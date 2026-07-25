@@ -51,8 +51,8 @@ export default function CollingwoodPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title={`${suburb} Painters | Victorian Terrace & Warehouse Specialists | Jetblack Painting`}
-      description={`Expert painting services in ${suburb}. Specialists in Victorian terraces, converted warehouses, and rental and investment properties. Free quotes — call 0432 077 782.`}
+      title="Collingwood Painters | Heritage Homes | Jetblack Painting"
+      description="Heritage and period home painters in Collingwood — Edwardian — single-fronted terraces. Free quotes, 5-year guarantee. Call 0432 077 782."
       localExpertise={`${suburb} sits immediately east of the CBD, bordering Fitzroy to the north — one of Melbourne's most historically dense working-class suburbs, now one of its most sought-after inner-city addresses. Smith Street and Johnston Street anchor a vibrant commercial precinct, while the surrounding residential streets are packed with Victorian terrace houses, workers' cottages, and converted warehouses that have been transformed into loft apartments and creative workspaces. Jetblack Painting works throughout ${suburb} and neighbouring Fitzroy, Abbotsford, and Richmond, with deep familiarity with the heritage properties, heritage overlay guidelines, and rental-market dynamics of the area.`}
       propertyTypes={`${suburb}'s housing stock is predominantly Victorian and Edwardian — single-fronted terraces, double-fronted cottages, and row houses — alongside a significant share of converted warehouse apartments and modern infill developments. The suburb has a very high rental density and a strong investment property market. Many properties sit within heritage overlay zones. We handle interior and exterior repaints across all property types.`}
       localContent={[

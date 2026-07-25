@@ -48,8 +48,8 @@ export default function MorningtonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Mornington Painters | Coastal & Period Home Specialists | Jetblack Painting"
-      description={`Professional house painters in ${suburb}. Interior and exterior painting for weatherboard, brick veneer and coastal homes across Mornington and the Mornington Peninsula. Free quotes.`}
+      title="Mornington Painters | Coastal Painting | Jetblack Painting"
+      description="Coastal house painters in Mornington — beach houses, weatherboard cottages and modern coastal homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },
         { name: "Frankston", link: "/painter-frankston" },

@@ -955,6 +955,11 @@ const blogIndexArticles = [
     href: "/blog/how-to-choose-a-painter-melbourne/",
     body: "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees, reviews and red flags to avoid.",
   },
+  {
+    title: "How to Paint a Weatherboard House: A Melbourne Guide",
+    href: "/blog/how-to-paint-a-weatherboard-house-melbourne/",
+    body: "Preparation, priming bare timber, caulking and the right exterior paints — how weatherboard is painted so it lasts 7-10 years.",
+  },
 ];
 
 writePage(
@@ -1263,6 +1268,78 @@ const articlePages = [
       {
         question: "When should I call a professional for mould?",
         answer: "Call a professional when mould covers a large area, keeps returning after cleaning, causes staining that bleeds through fresh paint, or where there may be a hidden leak or structural moisture problem.",
+      },
+    ],
+  },
+  {
+    route: "/blog/how-to-paint-a-weatherboard-house-melbourne",
+    title: "How to Paint a Weatherboard House | Jetblack Painting",
+    description:
+      "Melbourne weatherboard painting guide — preparation, priming bare timber, caulking, the right exterior paints and how often to repaint. Call 0432 077 782.",
+    intro:
+      "Weatherboard is everywhere in Melbourne, from bayside beach cottages to inner-suburb period homes — and it fails faster than any other exterior surface when it's painted badly. Here's how the job is done properly, and why preparation is roughly 70% of the work.",
+    howTo: {
+      name: "How to Paint a Weatherboard House",
+      totalTime: "P5D",
+      steps: [
+        { name: "Wash the surface", text: "Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber." },
+        { name: "Scrape and sand back failing paint", text: "Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it." },
+        { name: "Repair damaged timber", text: "Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two." },
+        { name: "Prime all bare timber", text: "Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes." },
+        { name: "Fill and caulk", text: "Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves." },
+        { name: "Apply two topcoats", text: "Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain." },
+      ],
+    },
+    sections: [
+      {
+        heading: "Why weatherboard is different",
+        paragraphs: [
+          "Timber moves — it swells when damp and shrinks when dry, and in Melbourne it often does both in the same week. That movement is why weatherboard needs a flexible coating system, and why rigid, cheap paint cracks along the board edges within a couple of seasons.",
+          "Water is the second difference. Every board overlap, joint, nail hole and window reveal is a potential entry point, and once water gets behind the paint film it lifts the coating from underneath. That is why weatherboard peels in sheets rather than fading evenly.",
+        ],
+      },
+      {
+        heading: "Choosing the right paint for Melbourne weatherboards",
+        paragraphs: [
+          "For most Melbourne weatherboards a flexible water-based acrylic exterior system — such as Dulux Weathershield or Taubmans All Weather — over the appropriate primer is the right choice. Coastal homes benefit from the more heavily weather-resistant options in those ranges, because salt air and reflected UV are harsher than inland conditions.",
+          "On colour, mid-tones and lighter shades hold up better on weatherboard than very dark colours, which absorb more heat, move the timber more and fade faster on north and west-facing walls.",
+        ],
+      },
+      {
+        heading: "How often to repaint weatherboard in Melbourne",
+        paragraphs: [
+          "A properly prepared and painted weatherboard exterior in Melbourne typically lasts 7 to 10 years. Bayside and coastal homes exposed to salt and full sun sit at the shorter end of that range, while sheltered walls last longer.",
+          "Repaint when you see chalking, flaking, bare timber or gaps opening at the joints — not after the timber has started to rot, which turns a straightforward repaint into a repair job.",
+        ],
+      },
+      {
+        heading: "When to call a professional",
+        paragraphs: [
+          "Call a professional when the home was built before 1970 and may contain lead paint, when there is visible rot or boards need replacing, when the house is two storeys or needs scaffolding, or when previous paint is peeling in large sheets — which usually signals an underlying moisture problem.",
+          "Jetblack Painting has painted weatherboard homes across Melbourne's bayside, southeast, inner east and the Mornington Peninsula for over 13 years. Every exterior job is quoted in writing with the preparation itemised, and backed by $10M public liability insurance and a 5-year written workmanship guarantee.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How often should a weatherboard house be repainted in Melbourne?",
+        answer: "Most Melbourne weatherboard homes need repainting every 7 to 10 years. Bayside and coastal homes exposed to salt air and full sun often sit at the shorter end of that range, while sheltered south-facing walls can last longer. Flaking, chalking, bare timber and gaps opening at the joints are the signs it is due.",
+      },
+      {
+        question: "Do I need to prime bare timber on weatherboards?",
+        answer: "Yes. Any bare or newly exposed timber must be spot-primed before topcoats, using an oil-based or alkyd primer that penetrates the grain. Skipping this is the most common cause of early peeling on weatherboard homes, because water gets behind the paint film through the unsealed timber.",
+      },
+      {
+        question: "What paint is best for weatherboard houses in Melbourne?",
+        answer: "A flexible, water-based acrylic exterior system such as Dulux Weathershield or Taubmans All Weather suits most Melbourne weatherboards. Flexibility matters because timber expands and contracts with temperature and moisture, and a brittle coating cracks at the board edges.",
+      },
+      {
+        question: "Can weatherboards be painted in winter?",
+        answer: "Exterior painting needs dry timber and moderate temperatures, so Melbourne winter work is weather-dependent. Most exterior acrylics need above roughly 10 degrees Celsius and a dry surface to cure properly. Jetblack Painting schedules exterior weatherboard work around the forecast rather than pushing on in unsuitable conditions.",
+      },
+      {
+        question: "Should I paint over lead paint on an older weatherboard home?",
+        answer: "Homes built before 1970 may have lead-based paint. It should not be dry-sanded or power-sanded, as that releases lead dust. Testing first and using safe preparation methods is essential — this is a job for an experienced painter rather than a DIY sander.",
       },
     ],
   },

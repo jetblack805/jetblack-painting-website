@@ -4,13 +4,36 @@ import SEOHead from "@/components/SEOHead";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
-export default function BestPaintColours2025() {
+export default function BestPaintColours2026() {
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Best Paint Colours for Melbourne Homes in 2026",
+    "description": "Discover the best paint colours trending in Melbourne for 2026, with expert advice from Jetblack Painting on interior and exterior colour selection.",
+    "image": "https://jetblackpainting.com/og-image.jpg",
+    "datePublished": "2026-07-25",
+    "dateModified": "2026-07-25",
+    "author": {
+      "@type": "Person",
+      "name": "Jimmy Demirci",
+      "url": "https://jetblackpainting.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jetblack Painting",
+      "url": "https://jetblackpainting.com"
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Best Paint Colours for Melbourne Homes in 2026 | Jetblack Painting"
-        description="Discover the best paint colours for Melbourne homes in 2026, with expert advice from Jetblack Painting on interior and exterior colour selection."
+        title="Best Paint Colours for Melbourne Homes 2026 | Jetblack Painting"
+        description="Discover trending paint colours for Melbourne homes in 2026. Interior & exterior colour trends, expert tips, and colour consultation from Jetblack Painting."
         canonical="https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025/"
+        keywords="paint colours 2026, best paint colors Melbourne, interior paint colours, exterior paint colours, trending colours, paint color trends"
+        author="Jimmy Demirci"
+        schema={blogSchema}
       />
       <Navbar />
       
@@ -31,7 +54,7 @@ export default function BestPaintColours2025() {
             <div className="flex flex-wrap items-center gap-4 text-[#8B8B90] text-sm">
               <span className="flex items-center gap-1"><User className="w-4 h-4" /> Jimmy Demirci</span>
               <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> July 2026</span>
-              <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 6 min read</span>
+              <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 8 min read</span>
             </div>
           </header>
 
@@ -40,86 +63,136 @@ export default function BestPaintColours2025() {
             <p className="text-xl text-[#A3A3A8] mb-8">
               Choosing the right paint colour for your Melbourne home can feel overwhelming with thousands of options available. 
               As professional <strong>house painters in Melbourne</strong> with over 13 years of experience, we've seen what works 
-              and what doesn't in our unique climate and architectural styles.
+              and what doesn't in our unique climate and architectural styles. Here's our guide to the best paint colours trending in 2026.
             </p>
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Interior Paint Colours Trending in Melbourne 2026</h2>
             
             <p className="text-[#B4B4B8] mb-4">
-              Melbourne homeowners are embracing warm, earthy tones that create a sense of calm and sophistication. 
+              Melbourne homeowners are moving beyond neutrals and embracing bold, expressive colour palettes that create distinct moods in each room. 
               Here are the top interior colours we're painting across <Link href="/painter-brighton" className="text-[#D0A050] hover:underline">Brighton</Link>, 
               <Link href="/painter-toorak" className="text-[#D0A050] hover:underline"> Toorak</Link>, and 
-              <Link href="/painter-malvern" className="text-[#D0A050] hover:underline"> Malvern</Link> homes this year:
+              <Link href="/painter-malvern" className="text-[#D0A050] hover:underline"> Malvern</Link> homes in 2026:
             </p>
 
-            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">1. Warm Whites & Off-Whites</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">1. Warm Terracotta & Burnt Orange</h3>
             <p className="text-[#B4B4B8] mb-4">
-              Dulux Lexicon Quarter and Natural White remain the most popular choices for Melbourne interiors. 
-              These warm whites work beautifully with natural light and complement both modern and period homes. 
-              Our <Link href="/services/interior-painting" className="text-[#D0A050] hover:underline">interior painting team</Link> recommends 
-              these for open-plan living areas where you want a bright, airy feel.
+              Terracotta and burnt orange tones are making a major comeback in 2026. These earthy, warm hues create a sense of comfort and sophistication, 
+              perfect for feature walls in living rooms or dining areas. Dulux Autumn Blaze and Colorbond Burnished are excellent choices that work beautifully 
+              with natural light in Melbourne homes.
             </p>
 
-            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">2. Sage Green & Eucalyptus Tones</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">2. Deep Forest Green & Moody Botanicals</h3>
             <p className="text-[#B4B4B8] mb-4">
-              Inspired by Melbourne's leafy suburbs, sage green has become the accent colour of choice for feature walls, 
-              bedrooms, and bathrooms. Dulux Tranquil Retreat and Haymes Sage are particularly popular in 
-              <Link href="/painter-hawthorn" className="text-[#D0A050] hover:underline"> Hawthorn</Link> and 
-              <Link href="/painter-camberwell" className="text-[#D0A050] hover:underline"> Camberwell</Link> homes.
+              Deep forest greens and moody botanical shades are dominating interior design in 2026. These rich, nature-inspired colours work brilliantly in bedrooms, 
+              studies, and feature walls. Dulux Forest Greens and Taubmans Rainforest are popular with our clients in heritage homes across Hawthorn, Armadale, and Camberwell.
             </p>
 
-            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">3. Deep Navy & Charcoal</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">3. Soft Blush & Warm Mauve</h3>
             <p className="text-[#B4B4B8] mb-4">
-              For statement walls and home offices, deep navy and charcoal create a dramatic, sophisticated look. 
-              These darker tones work especially well in rooms with high ceilings and plenty of natural light — 
-              common in Melbourne's heritage homes.
+              Soft blush and warm mauve tones are trending as sophisticated alternatives to stark whites. These muted, warm pinks create an elegant, 
+              calming atmosphere perfect for bedrooms and living spaces. Dulux Dusky Pink and Taubmans Dusty Mauve are beautifully sophisticated choices.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Exterior Paint Colours for Melbourne's Climate</h2>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">4. Charcoal Black & Moody Greys</h3>
+            <p className="text-[#B4B4B8] mb-4">
+              Dark, moody charcoal and black walls are having a major moment in 2026. These bold, dramatic colours create striking feature walls and work 
+              beautifully in modern homes. Our <Link href="/services/interior-painting" className="text-[#D0A050] hover:underline">interior painting team</Link> frequently 
+              recommends Colorbond Monument or Dulux Cavern Black for statement walls.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">5. Creamy Whites & Natural Off-Whites</h3>
+            <p className="text-[#B4B4B8] mb-4">
+              While bold colours are trending, creamy whites and natural off-whites remain timeless for main living areas. Dulux Lexicon Quarter, 
+              Natural White, and Taubmans Ceiling White create a fresh, bright foundation that works with any design style.
+            </p>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Exterior Paint Colours for Melbourne's Climate in 2026</h2>
             
             <p className="text-[#B4B4B8] mb-4">
               Melbourne's variable weather — from scorching summers to cold, wet winters — means your 
               <Link href="/services/exterior-painting" className="text-[#D0A050] hover:underline"> exterior paint</Link> needs 
-              to withstand UV exposure, moisture, and temperature fluctuations. Here's what's working in 2026:
+              to withstand UV exposure, moisture, and temperature fluctuations. Here's what's working beautifully in 2026:
             </p>
 
-            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">4. Warm Greys & Greige</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">6. Charcoal & Dark Grey Exteriors</h3>
             <p className="text-[#B4B4B8] mb-4">
-              The grey-beige hybrid ("greige") continues to dominate Melbourne exteriors. Colours like Dulux Limed White 
-              and Colorbond Surfmist provide a modern, timeless look that complements both brick and rendered homes.
+              Dark charcoal and sophisticated grey exteriors are dominating Melbourne's architectural landscape in 2026. 
+              Colorbond Monument, Graphite, and Dulux Charcoal Black create a modern, premium aesthetic that appeals to contemporary homes. 
+              These colours pair beautifully with white or cream trim.
             </p>
 
-            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">5. Dark Exteriors with Light Trim</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">7. Warm Terracotta & Earthy Reds</h3>
             <p className="text-[#B4B4B8] mb-4">
-              A bold trend gaining traction in Melbourne's inner suburbs is dark charcoal or black exteriors paired 
-              with crisp white window frames and doors. This creates a striking, contemporary look that's particularly 
-              popular in <Link href="/painter-toorak" className="text-[#D0A050] hover:underline">Toorak</Link> and 
-              <Link href="/painter-brighton" className="text-[#D0A050] hover:underline"> Brighton</Link>.
+              Heritage homes across <Link href="/painter-toorak" className="text-[#D0A050] hover:underline">Toorak</Link> and 
+              <Link href="/painter-brighton" className="text-[#D0A050] hover:underline"> Brighton</Link> are embracing warm terracotta 
+              and earthy red exterior tones in 2026. These colours honour period architecture while feeling contemporary. 
+              Dulux Autumn Blaze and Colorbond Burnished are excellent exterior choices.
             </p>
 
-            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Tips for Choosing the Right Colour</h2>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">8. Sophisticated Greige & Warm Grey-Beige</h3>
+            <p className="text-[#B4B4B8] mb-4">
+              Greige (grey-beige hybrid) continues to dominate exterior choices in 2026. Colorbond Surfmist, Dulux Limed White, 
+              and similar warm greys create a timeless, sophisticated look that complements both brick and rendered homes. 
+              These colours remain popular in Malvern, Camberwell, and surrounding suburbs.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">9. Cool Whites with Striking Contrast Trim</h3>
+            <p className="text-[#B4B4B8] mb-4">
+              Cool whites paired with contrasting timber or dark trim are trending in 2026. White exteriors with bold charcoal doors 
+              and window frames create striking visual interest. Dulux Pure White with Colorbond Monument trim is a popular combination 
+              in contemporary Melbourne homes.
+            </p>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">2026 Colour Trends by Melbourne Suburb</h2>
+            
+            <p className="text-[#B4B4B8] mb-4">
+              Different Melbourne suburbs have distinct architectural styles and colour preferences:
+            </p>
+
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">Prestige Inner East (Toorak, Malvern, Armadale)</h3>
+            <p className="text-[#B4B4B8] mb-4">
+              Heritage homes favour warm terracottas, deep forest greens, and sophisticated greys. 
+              Exterior colours respect period aesthetics while interior spaces embrace bold feature walls.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">Bayside (Brighton, Sandringham, Hampton)</h3>
+            <p className="text-[#B4B4B8] mb-4">
+              Coastal weatherboards trend toward cool whites, soft creams, and bold charcoal exteriors. 
+              Interiors embrace light, airy colours with occasional moody feature walls.
+            </p>
+
+            <h3 className="text-xl font-bold text-[#EDEDEF] mt-8 mb-3">Modern & Contemporary (Toorak, South Yarra)</h3>
+            <p className="text-[#B4B4B8] mb-4">
+              Contemporary homes embrace bold blacks, deep charcoals, and striking colour blocking. 
+              Interiors feature dramatic statement walls and sophisticated colour palettes.
+            </p>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Expert Tips for Choosing 2026 Colours</h2>
             
             <ul className="list-disc pl-6 text-[#B4B4B8] space-y-2 mb-6">
-              <li><strong>Always test with sample pots</strong> — colours look different under Melbourne's natural light vs. artificial light</li>
-              <li><strong>Consider your surroundings</strong> — leafy streets suit different colours than coastal areas</li>
-              <li><strong>Check council regulations</strong> — heritage overlays may restrict your colour choices</li>
-              <li><strong>Think about resale value</strong> — neutral tones appeal to the broadest range of buyers</li>
-              <li><strong>Use quality paint</strong> — we use Dulux and Taubmans for superior coverage and longevity</li>
+              <li><strong>Test with large sample patches</strong> — colours look dramatically different under Melbourne's natural light vs. artificial light</li>
+              <li><strong>Consider your home's architecture</strong> — heritage homes suit warm, earthy tones; modern homes suit bold, dramatic colours</li>
+              <li><strong>Account for seasonal light changes</strong> — Melbourne's angle of sun changes significantly between summer and winter</li>
+              <li><strong>Check council heritage overlays</strong> — restricted colour palettes may apply to your property</li>
+              <li><strong>Think about resale value</strong> — while bold colours trend, neutral backdrops appeal to broader buyer bases</li>
+              <li><strong>Use premium quality paint</strong> — we use Dulux and Taubmans for superior coverage, durability, and colour consistency</li>
+              <li><strong>Pair colours thoughtfully</strong> — complementary trim colours amplify your main colour choice</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Free Colour Consultation with Jetblack Painting</h2>
             
             <p className="text-[#B4B4B8] mb-6">
-              Not sure which colour is right for your home? Jetblack Painting offers <strong>free colour consultations</strong> with 
-              every painting quote. Our experienced team can recommend colours that suit your home's architecture, 
-              natural light, and personal style.
+              Overwhelmed by colour choices? Jetblack Painting offers <strong>free, in-home colour consultations</strong> with 
+              every painting quote. Our 13+ years of Melbourne experience means we can recommend colours that suit your home's 
+              architecture, natural light, and personal style — while considering 2026 trends.
             </p>
 
             <div className="bg-[#0C0C0E] rounded-xl p-6 mt-8">
-              <h3 className="text-xl font-bold text-[#EDEDEF] mb-3">Ready to Transform Your Home?</h3>
+              <h3 className="text-xl font-bold text-[#EDEDEF] mb-3">Ready to Transform Your Home with 2026 Colour Trends?</h3>
               <p className="text-[#B4B4B8] mb-4">
                 Get a free, no-obligation quote from Melbourne's #1 rated painters. We'll help you choose the perfect 
-                colours and deliver a flawless finish.
+                2026 colours and deliver a flawless finish.
               </p>
               <a
                 href="tel:0432077782"

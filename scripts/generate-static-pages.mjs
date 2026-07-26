@@ -996,31 +996,36 @@ for (const service of servicePages) {
   );
 }
 
+// Titles and bodies must match the `posts` array in client/src/pages/Blog.tsx
+// verbatim. The static index is what crawlers read and the React index is what
+// Google's rendered pass reads; when they drift, the two passes disagree about
+// the same URL — and the headlines here also feed the Blog page's `blogPost`
+// structured data.
 const blogIndexArticles = [
   {
-    title: "Best Paint Colours for Melbourne Homes in 2025",
+    title: "Best Paint Colours for Melbourne Homes in 2026",
     href: "/blog/best-paint-colours-melbourne-2025/",
-    body: "A practical guide to warm whites, eucalyptus greens, charcoals, and exterior colours that suit Melbourne light and architecture.",
+    body: "Discover the trending paint colours that are transforming Melbourne homes. From warm neutrals to bold statement colours, find the perfect palette for your property.",
   },
   {
-    title: "How Much Does House Painting Cost in Melbourne?",
+    title: "How Much Does House Painting Cost in Melbourne? (2026 Price Guide)",
     href: "/blog/house-painting-cost-melbourne/",
-    body: "A breakdown of interior, exterior, and repaint cost factors so homeowners can budget for a quality painting project.",
+    body: "Get a comprehensive breakdown of painting costs across Melbourne. Interior, exterior, and commercial pricing with real examples from our recent projects.",
   },
   {
-    title: "How to Prepare Your Home for a Painting Project",
+    title: "How to Prepare Your Melbourne Home for Professional Painting",
     href: "/blog/prepare-home-for-painting/",
-    body: "Preparation tips to make your painting project smoother, faster, and less disruptive for your household or tenants.",
+    body: "Proper preparation is key to a successful painting project. Learn our expert tips for preparing your home to ensure the best results.",
   },
   {
-    title: "Kitchen Cabinet Resurfacing vs Replacement",
+    title: "Kitchen Cabinet Resurfacing vs Replacement: What Melbourne Homeowners Need to Know",
     href: "/blog/kitchen-cabinet-resurfacing-vs-replacement/",
-    body: "When resurfacing is the smart option, when replacement makes sense, and how to compare cost, downtime, and finish quality.",
+    body: "Transform your kitchen for a fraction of the cost of a full renovation. Learn about 2-pack cabinet resurfacing and when it's the right choice.",
   },
   {
     title: "Mould Remediation & Painting Guide for Melbourne Homes",
     href: "/blog/mould-remediation-painting-melbourne/",
-    body: "How to identify, treat and paint over mould in Melbourne homes, including bathroom mould, render mould, preparation steps and the right anti-mould paints.",
+    body: "How to correctly identify, treat and paint over mould in Melbourne homes. Covers bathroom mould, external render, anti-mould primers and which paints to use by surface type.",
   },
   {
     title: "How to Choose a Painter in Melbourne: A Homeowner's Guide",
@@ -1030,15 +1035,15 @@ const blogIndexArticles = [
   {
     title: "How to Paint a Weatherboard House: A Melbourne Guide",
     href: "/blog/how-to-paint-a-weatherboard-house-melbourne/",
-    body: "Preparation, priming bare timber, caulking and the right exterior paints — how weatherboard is painted so it lasts 7-10 years.",
+    body: "Preparation, priming bare timber, caulking and the right exterior paints — how weatherboard is painted so it lasts 7-10 years, not one season.",
   },
 ];
 
 writePage(
   "/blog",
   pageHtml({
-    title: "Painting Blog Melbourne | Jetblack Painting",
-    description: "Helpful painting articles from Jetblack Painting covering colour selection, project preparation, budgeting, and cabinet resurfacing across Melbourne.",
+    title: "Painting Tips & Guides Melbourne | Jetblack Painting Blog",
+    description: "Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting.",
     canonical: canonicalForRoute("/blog"),
     heroTitle: "Jetblack Painting Blog",
     heroBody: "Read practical painting advice for Melbourne homeowners, landlords, and businesses — from colour ideas and cost guides to preparation tips and cabinet resurfacing insights.",
@@ -1050,7 +1055,7 @@ writePage(
         url: canonicalForRoute("/blog"),
         inLanguage: "en-AU",
         description:
-          "Helpful painting articles from Jetblack Painting covering colour selection, project preparation, budgeting, and cabinet resurfacing across Melbourne.",
+          "Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting.",
         publisher: {
           "@type": "Organization",
           name: "Jetblack Painting",

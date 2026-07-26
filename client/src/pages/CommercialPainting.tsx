@@ -23,18 +23,68 @@ export default function CommercialPainting() {
     "After-hours and weekend work available"
   ];
 
+  // Kept in step with the commercial entry in scripts/generate-static-pages.mjs:
+  // the FAQPage schema has to match the questions visible on the page, and the
+  // crawler layer and rendered layer must describe the same page.
   const faqs = [
     {
       question: "Can you paint outside business hours to avoid disruption?",
-      answer: "Yes. We regularly work after hours, overnight and on weekends for commercial clients so your business keeps running with minimal disruption. We plan the job around your operating hours, staging areas so staff and customers stay safe and productive throughout.",
+      answer: "Yes. We regularly work after hours, overnight and on weekends for commercial clients so your business keeps running with minimal disruption. The staging is agreed before we start, so you know which areas are affected and when they're back in use.",
     },
     {
       question: "What types of commercial premises do you paint?",
-      answer: "We paint offices, retail and hospitality fit-outs, warehouses and industrial units, strata and body-corporate common areas, medical and childcare facilities, and owners-corporation buildings across Melbourne. Whatever the site, we tailor the coatings and access approach to suit.",
+      answer: "We paint offices, retail and hospitality fit-outs, warehouses and industrial units, strata and body-corporate common areas, and owners-corporation buildings across Melbourne. Coatings and access are matched to the building rather than applied from a standard template.",
     },
     {
       question: "Are you licensed and insured for commercial work?",
       answer: "Absolutely. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and we follow proper site safety and access procedures. We're happy to provide documentation for building managers and owners corporations before work begins.",
+    },
+    {
+      question: "How much does commercial painting cost in Melbourne?",
+      answer: "It depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.",
+    },
+    {
+      question: "How long will a commercial repaint take?",
+      answer: "A single office suite or shopfront is usually a few days; a warehouse or a staged multi-area repaint runs longer, and after-hours work spreads the same hours across more calendar days. You get a schedule with the quote, including which zones are affected on which days.",
+    },
+    {
+      question: "Can you paint while staff and customers are still on site?",
+      answer: "Yes, and much of our commercial work is done in occupied premises. We zone the work so only one area is affected at a time, keep access ways safe and clear, use low-odour water-based products where the specification allows, and leave each area clean at the end of every shift.",
+    },
+    {
+      question: "What paint do you use on commercial buildings?",
+      answer: "Premium Dulux and Taubmans commercial systems, specified to the surface and the traffic it takes — washable low-sheen for corridors and offices, hard-wearing enamels or two-pack on doors, frames and handrails, and appropriate primers for steel, block and previously unsealed substrates. The products are named in your written quote.",
+    },
+    {
+      question: "Do you work with owners corporations and strata managers?",
+      answer: "Yes. We provide detailed scopes, transparent pricing, insurance documentation and clear schedules for owners corporations, body corporate committees and strata managers, and can run repaints as a staged maintenance program across a building or portfolio.",
+    },
+  ];
+
+  const projectSteps = [
+    {
+      title: "Site walk-through and scope",
+      body: "We walk the site with you, measure the areas, check the condition of every substrate and note the practical constraints — access, height, trading hours, tenant impact. That's what the written quote is built from, rather than a rate applied blind to a floor plan.",
+    },
+    {
+      title: "Written scope and product specification",
+      body: "You get an itemised quote listing the surfaces included, the preparation, the number of coats and the specific products. Naming the product matters commercially: a washable low-sheen in a corridor and a two-pack on a handrail are very different costs and very different service lives.",
+    },
+    {
+      title: "Scheduling around your trading hours",
+      body: "We agree the staging up front — which areas are painted when, what stays open, and whether the work runs after hours or over a weekend. Multi-area sites are split into zones so only one part of the premises is affected at a time.",
+    },
+    {
+      title: "Site setup and preparation",
+      body: "Floors, fittings and stock are protected before anything is opened. Preparation is where a commercial repaint is won or lost: washing down, filling and sanding, spot-priming bare or patched substrate, and masking to a clean line.",
+    },
+    {
+      title: "Application",
+      body: "Coats go on to the specified film build, with drying and recoat times respected rather than compressed to finish early. Areas are returned to use progressively as they're completed and cured enough to take normal traffic.",
+    },
+    {
+      title: "Walk-through and sign-off",
+      body: "We walk the finished work with you, list and complete any touch-ups, remove all protection and rubbish, and hand back a clean site. The 5-year written workmanship guarantee applies from completion.",
     },
   ];
 
@@ -167,6 +217,46 @@ export default function CommercialPainting() {
                 </Link>
               ))}
             </div>
+          </motion.div>
+
+          {/* How a project runs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">How a Commercial Painting Project Runs</h2>
+            <div className="space-y-6">
+              {projectSteps.map((step, i) => (
+                <div key={i} className="border-b border-[#222227] pb-4">
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{step.title}</h3>
+                  <p className="text-[#B4B4B8]">{step.body}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Cost drivers */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">What Drives the Cost of a Commercial Repaint</h2>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              Area is the obvious factor, but it's rarely the one that moves a commercial quote most. Substrate condition matters more: sound painted plasterboard is quick, while flaking render, water-damaged ceilings, rusted steel or previously unsealed block all add preparation hours before a single topcoat goes on.
+            </p>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              Access is the second driver. Ground-floor office suites are straightforward; warehouse walls and ceilings at height, atriums, stairwells and external facades need scaffold, boom lifts or rope access, and that equipment is a real line in the quote rather than an afterthought.
+            </p>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              The third is downtime. Painting a premises that stays open — staged zones, after-hours shifts, faster-drying low-odour systems — costs more per square metre than an empty tenancy handed over for a week, but it's usually far cheaper than closing. Product specification is the fourth: a hard-wearing washable system in a high-traffic corridor costs more to supply than a builder's-grade wall paint and lasts several times longer, which is the calculation worth making on a building you'll still own in ten years.
+            </p>
+            <p className="text-[#B4B4B8] leading-relaxed">
+              We don't publish a rate per square metre for commercial work, because a number quoted without seeing the substrate is a number that changes later. The site walk-through and written quote are free — call Jimmy on 0432 077 782.
+            </p>
           </motion.div>
 
           {/* FAQ */}

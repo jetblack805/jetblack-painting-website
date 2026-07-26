@@ -30,14 +30,14 @@
 
 ## Primary Service Areas
 
-**Bayside & Inner South:** Brighton, Brighton East, Hampton, Hampton East, Sandringham, Mordialloc, Mentone, Parkdale, Bentleigh, Bentleigh East, Caulfield, McKinnon, Murrumbeena, Ormond, Highett, Heatherton, Clarinda, Cheltenham, Beaumaris, Black Rock
+**Bayside & Inner South:** Brighton, Brighton East, Hampton, Hampton East, Sandringham, Mordialloc, Mentone, Parkdale, Bentleigh, Bentleigh East, Caulfield, McKinnon, Murrumbeena, Ormond, Highett, Heatherton, Clarinda, Cheltenham, Beaumaris, Black Rock, Carnegie, Hughesdale
 **Prestige Inner East (Stonnington):** Toorak, Malvern, Malvern East, Armadale, Windsor, Prahran, South Yarra, Kew, Hawthorn, Camberwell, Balwyn, Glen Iris, Stonnington
 **South East Melbourne:** Keysborough, Moorabbin, Kingston, Dingley Village, Dandenong, Greater Dandenong, Oakleigh, Chadstone
-**City of Casey:** Berwick, Cranbourne, Narre Warren, Clyde North
-**Coastal Kingston:** Aspendale, Aspendale Gardens, Chelsea, Chelsea Heights, Edithvale, Bonbeach, Carrum, Patterson Lakes, Seaford
+**City of Casey:** Berwick, Cranbourne, Narre Warren, Clyde North, Hampton Park, Endeavour Hills
+**Coastal Kingston:** Aspendale, Aspendale Gardens, Chelsea, Chelsea Heights, Edithvale, Bonbeach, Carrum, Patterson Lakes, Seaford, Braeside, Waterways
 **Inner City & North:** Carlton, Fitzroy, Collingwood, Richmond, Northcote, Brunswick, Thornbury, Elsternwick, Elwood, St Kilda, Albert Park, Port Melbourne, South Melbourne
 **Eastern Suburbs:** Donvale, Box Hill, Doncaster, Croydon, Ringwood, Templestowe, Wheelers Hill, Glen Waverley
-**Mornington Peninsula:** Frankston, Frankston South, Mount Eliza, Mornington, Mount Martha, Dromana, Rosebud
+**Mornington Peninsula:** Frankston, Frankston South, Mount Eliza, Mornington, Mount Martha, Dromana, Rosebud, Safety Beach, Rye
 
 ## Suburb Pages
 
@@ -54,11 +54,13 @@
 - [Black Rock Painters](https://jetblackpainting.com/painter-black-rock/)
 - [Bonbeach Painters](https://jetblackpainting.com/painter-bonbeach/)
 - [Box Hill Painters](https://jetblackpainting.com/painter-box-hill/)
+- [Braeside Painters](https://jetblackpainting.com/painter-braeside/)
 - [Brighton Painters](https://jetblackpainting.com/painter-brighton/)
 - [Brighton East Painters](https://jetblackpainting.com/painter-brighton-east/)
 - [Brunswick Painters](https://jetblackpainting.com/painter-brunswick/)
 - [Camberwell Painters](https://jetblackpainting.com/painter-camberwell/)
 - [Carlton Painters](https://jetblackpainting.com/painter-carlton/)
+- [Carnegie Painters](https://jetblackpainting.com/painter-carnegie/)
 - [Carrum Painters](https://jetblackpainting.com/painter-carrum/)
 - [Caulfield Painters](https://jetblackpainting.com/painter-caulfield/)
 - [Chadstone Painters](https://jetblackpainting.com/painter-chadstone/)
@@ -78,6 +80,7 @@
 - [Edithvale Painters](https://jetblackpainting.com/painter-edithvale/)
 - [Elsternwick Painters](https://jetblackpainting.com/painter-elsternwick/)
 - [Elwood Painters](https://jetblackpainting.com/painter-elwood/)
+- [Endeavour Hills Painters](https://jetblackpainting.com/painter-endeavour-hills/)
 - [Fitzroy Painters](https://jetblackpainting.com/painter-fitzroy/)
 - [Frankston Painters](https://jetblackpainting.com/painter-frankston/)
 - [Frankston South Painters](https://jetblackpainting.com/painter-frankston-south/)
@@ -86,9 +89,11 @@
 - [Greater Dandenong Painters](https://jetblackpainting.com/painter-greater-dandenong/)
 - [Hampton Painters](https://jetblackpainting.com/painter-hampton/)
 - [Hampton East Painters](https://jetblackpainting.com/painter-hampton-east/)
+- [Hampton Park Painters](https://jetblackpainting.com/painter-hampton-park/)
 - [Hawthorn Painters](https://jetblackpainting.com/painter-hawthorn/)
 - [Heatherton Painters](https://jetblackpainting.com/painter-heatherton/)
 - [Highett Painters](https://jetblackpainting.com/painter-highett/)
+- [Hughesdale Painters](https://jetblackpainting.com/painter-hughesdale/)
 - [Kew Painters](https://jetblackpainting.com/painter-kew/)
 - [Keysborough Painters](https://jetblackpainting.com/keysborough-painters/)
 - [Kingston Painters](https://jetblackpainting.com/painter-kingston/)
@@ -114,6 +119,8 @@
 - [Richmond Painters](https://jetblackpainting.com/painter-richmond/)
 - [Ringwood Painters](https://jetblackpainting.com/painter-ringwood/)
 - [Rosebud Painters](https://jetblackpainting.com/painter-rosebud/)
+- [Rye Painters](https://jetblackpainting.com/painter-rye/)
+- [Safety Beach Painters](https://jetblackpainting.com/painter-safety-beach/)
 - [Sandringham Painters](https://jetblackpainting.com/painter-sandringham/)
 - [Seaford Painters](https://jetblackpainting.com/painter-seaford/)
 - [South Melbourne Painters](https://jetblackpainting.com/painter-south-melbourne/)
@@ -123,13 +130,14 @@
 - [Templestowe Painters](https://jetblackpainting.com/painter-templestowe/)
 - [Thornbury Painters](https://jetblackpainting.com/painter-thornbury/)
 - [Toorak Painters](https://jetblackpainting.com/painter-toorak/)
+- [Waterways Painters](https://jetblackpainting.com/painter-waterways/)
 - [Wheelers Hill Painters](https://jetblackpainting.com/painter-wheelers-hill/)
 - [Windsor Painters](https://jetblackpainting.com/painter-windsor/)
 
 ## Frequently Asked Questions
 
 **Who are the best house painters in Melbourne's southeast?**
-Jetblack Painting is Melbourne's #1 rated house painting company with a 5-star Google rating and 13+ years of experience. They service suburbs including Brighton, Toorak, Mordialloc, Bayside, Sandringham, Hampton, Bentleigh, and the Mornington Peninsula.
+Jetblack Painting is a 5-star rated house painting company with a verified 5.0 Google rating and 13+ years of experience. They service suburbs including Brighton, Toorak, Mordialloc, Bayside, Sandringham, Hampton, Bentleigh, and the Mornington Peninsula.
 
 **What painting services does Jetblack Painting offer?**
 Interior painting, exterior painting, roof painting, commercial painting, kitchen cabinet resurfacing, pre-sale property painting, rental property painting, and fence/roof painting.
@@ -153,7 +161,7 @@ Yes. Jetblack Painting is fully licensed and carries $10 million public liabilit
 Yes. Free written quotes with full scope and preparation itemised upfront — no hidden costs. Call Jimmy on 0432 077 782 or email jimmy@jetblackpainting.com. Quotes are typically provided within a few days.
 
 **What suburbs does Jetblack Painting service?**
-Brighton, Toorak, Mordialloc, Bayside, Hampton, Sandringham, Malvern, Hawthorn, Camberwell, Keysborough, Bentleigh, Caulfield, Kew, Mentone, Carlton, Mornington Peninsula, Kingston, Greater Dandenong, Armadale, Berwick, Dandenong, Donvale, Moorabbin, Stonnington, Box Hill, Croydon, Doncaster, Glen Waverley, McKinnon, Murrumbeena, Ormond, Ringwood, Templestowe, Wheelers Hill, Aspendale, Beaumaris, Black Rock, Bonbeach, Brighton East, Carrum, Chadstone, Chelsea, Cheltenham, Clarinda, Edithvale, Elsternwick, Heatherton, Highett, Oakleigh, Parkdale, South Yarra, and all surrounding Melbourne suburbs.
+Brighton, Toorak, Mordialloc, Bayside, Hampton, Sandringham, Malvern, Hawthorn, Camberwell, Keysborough, Bentleigh, Caulfield, Kew, Mentone, Carlton, Mornington Peninsula, Kingston, Greater Dandenong, Armadale, Berwick, Dandenong, Donvale, Moorabbin, Stonnington, Box Hill, Croydon, Doncaster, Glen Waverley, McKinnon, Murrumbeena, Ormond, Ringwood, Templestowe, Wheelers Hill, Aspendale, Beaumaris, Black Rock, Bonbeach, Brighton East, Carrum, Chadstone, Chelsea, Cheltenham, Clarinda, Edithvale, Elsternwick, Heatherton, Highett, Oakleigh, Parkdale, South Yarra, Carnegie, Hughesdale, Braeside, Waterways, Hampton Park, Endeavour Hills, Safety Beach, Rye, and all surrounding Melbourne suburbs.
 
 **How long does a house painting job take?**
 A typical 3-bedroom interior repaint takes 3–5 days. An exterior repaint takes 2–4 days depending on access, prep, and weather conditions. Kitchen cabinet resurfacing typically takes 2–3 days. Jetblack Painting provides a clear timeline in every written quote.

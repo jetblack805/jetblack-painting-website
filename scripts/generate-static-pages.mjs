@@ -193,9 +193,17 @@ function localBusinessSchema() {
       { "@type": "City", "name": "Richmond" },
       { "@type": "City", "name": "Northcote" },
       { "@type": "City", "name": "Brunswick" },
-      { "@type": "City", "name": "South Melbourne" }
+      { "@type": "City", "name": "South Melbourne" },
+      { "@type": "City", "name": "Carnegie" },
+      { "@type": "City", "name": "Hughesdale" },
+      { "@type": "City", "name": "Braeside" },
+      { "@type": "City", "name": "Waterways" },
+      { "@type": "City", "name": "Safety Beach" },
+      { "@type": "City", "name": "Rye" },
+      { "@type": "City", "name": "Hampton Park" },
+      { "@type": "City", "name": "Endeavour Hills" }
     ],
-    "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 50+ Melbourne suburbs.",
+    "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -250,6 +258,19 @@ function speakableSchema(canonical) {
       "cssSelector": ["h1", ".hero p"]
     }
   };
+}
+
+// Every crawler-facing page ends with the full suburb directory. The React app
+// replaces #root on mount, so this is seen only by crawlers — and it matters
+// most for the AI crawlers, which don't execute JS and so never reach the
+// React footer's suburb list. Without it each suburb page is reachable from
+// only its handful of neighbour links.
+function suburbDirectoryHtml(currentCanonical) {
+  const links = suburbDirectory
+    .filter((entry) => canonicalForRoute(entry.route) !== currentCanonical)
+    .map((entry) => `<a href="${entry.route}/">Painters ${escapeHtml(entry.name)}</a>`)
+    .join(" | ");
+  return links ? `    <p class="suburb-directory">Suburbs we service: ${links}</p>\n` : "";
 }
 
 function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema }) {
@@ -365,7 +386,7 @@ ${sectionHtml}
   <footer>
     <p><strong>Jetblack Painting</strong> — ${escapeHtml(heroTitle)} | Phone: <a href="tel:${PHONE_HREF}">${PHONE_DISPLAY}</a> | Email: <a href="mailto:${EMAIL}">${EMAIL}</a></p>
     <p>${footerLinks.map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join(" | ")}</p>
-  </footer>
+${suburbDirectoryHtml(canonical)}  </footer>
   </div>
 </body>
 </html>
@@ -600,7 +621,26 @@ const allSuburbPages = [
   { route: "/painter-northcote", source: "NorthcotePainters.tsx" },
   { route: "/painter-brunswick", source: "BrunswickPainters.tsx" },
   { route: "/painter-south-melbourne", source: "SouthMelbournePainters.tsx" },
+  { route: "/painter-carnegie", source: "CarnegiePainters.tsx" },
+  { route: "/painter-hughesdale", source: "HughesdalePainters.tsx" },
+  { route: "/painter-braeside", source: "BraesidePainters.tsx" },
+  { route: "/painter-waterways", source: "WaterwaysPainters.tsx" },
+  { route: "/painter-safety-beach", source: "SafetyBeachPainters.tsx" },
+  { route: "/painter-rye", source: "RyePainters.tsx" },
+  { route: "/painter-hampton-park", source: "HamptonParkPainters.tsx" },
+  { route: "/painter-endeavour-hills", source: "EndeavourHillsPainters.tsx" },
 ];
+
+// Built before any page is written, because every page's footer links to the
+// whole set. Names come from each page component's `const suburb = "..."`.
+const suburbDirectory = allSuburbPages
+  .map((page) => ({
+    route: page.route,
+    name:
+      extractQuotedValue(fs.readFileSync(path.join(PAGE_DIR, page.source), "utf8"), "suburb") ||
+      titleCaseFromSlug(page.route.replace("/painter-", "").replace("-painters", "")),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 for (const page of allSuburbPages) {
   generateSuburbPage(page.route, path.join(PAGE_DIR, page.source));

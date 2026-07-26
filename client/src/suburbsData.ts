@@ -475,7 +475,63 @@ export const SUBURBS_DATA = {
     postcode: "3184",
     description: "Affluent coastal inner-south suburb with Victorian cottages, Edwardian homes and Art Deco apartments on Port Phillip Bay",
     areasServed: ["Elwood", "St Kilda South"]
-  }
+  },
+  carnegie: {
+    name: "Carnegie",
+    coordinates: { lat: -37.8875, lng: 145.0561 },
+    postcode: "3163",
+    description: "Glen Eira suburb of Californian bungalows, interwar homes and newer townhouses around Koornang Road",
+    areasServed: ["Carnegie"]
+  },
+  hughesdale: {
+    name: "Hughesdale",
+    coordinates: { lat: -37.9006, lng: 145.0836 },
+    postcode: "3166",
+    description: "Settled residential pocket between Oakleigh and Chadstone with post-war brick veneer homes and townhouses",
+    areasServed: ["Hughesdale"]
+  },
+  braeside: {
+    name: "Braeside",
+    coordinates: { lat: -37.9906, lng: 145.1189 },
+    postcode: "3195",
+    description: "Kingston suburb combining a light-industrial business precinct with homes beside Braeside Park",
+    areasServed: ["Braeside"]
+  },
+  waterways: {
+    name: "Waterways",
+    coordinates: { lat: -38.0003, lng: 145.1153 },
+    postcode: "3195",
+    description: "Modern master-planned Kingston estate of rendered and brick homes built around lakes and wetlands",
+    areasServed: ["Waterways"]
+  },
+  safetyBeach: {
+    name: "Safety Beach",
+    coordinates: { lat: -38.3222, lng: 145.0011 },
+    postcode: "3936",
+    description: "Mornington Peninsula bayside town with beach houses, permanent homes and the Martha Cove marina precinct",
+    areasServed: ["Safety Beach"]
+  },
+  rye: {
+    name: "Rye",
+    coordinates: { lat: -38.3717, lng: 144.8244 },
+    postcode: "3941",
+    description: "Busy Mornington Peninsula holiday town spanning the front beach and back beach with shacks and rebuilds",
+    areasServed: ["Rye"]
+  },
+  hamptonPark: {
+    name: "Hampton Park",
+    coordinates: { lat: -38.0292, lng: 145.2617 },
+    postcode: "3976",
+    description: "Established City of Casey family suburb of 1980s to 2000s brick veneer homes and investment properties",
+    areasServed: ["Hampton Park"]
+  },
+  endeavourHills: {
+    name: "Endeavour Hills",
+    coordinates: { lat: -37.9686, lng: 145.2578 },
+    postcode: "3802",
+    description: "Hilly City of Casey suburb of 1980s and 90s brick veneer and split-level homes on generous blocks",
+    areasServed: ["Endeavour Hills"]
+  },
 };
 
 export type SuburbKey = keyof typeof SUBURBS_DATA;

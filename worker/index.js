@@ -111,6 +111,14 @@ const PATH_REDIRECTS = {
   "/painters-northcote":            "/painter-northcote/",
   "/painters-brunswick":            "/painter-brunswick/",
   "/painters-south-melbourne":      "/painter-south-melbourne/",
+  "/painters-carnegie":             "/painter-carnegie/",
+  "/painters-hughesdale":           "/painter-hughesdale/",
+  "/painters-braeside":             "/painter-braeside/",
+  "/painters-waterways":            "/painter-waterways/",
+  "/painters-safety-beach":         "/painter-safety-beach/",
+  "/painters-rye":                  "/painter-rye/",
+  "/painters-hampton-park":         "/painter-hampton-park/",
+  "/painters-endeavour-hills":      "/painter-endeavour-hills/",
 
   // Legacy hash-anchor routes (rendered Home, treated as duplicate by Google)
   "/about":                         "/",

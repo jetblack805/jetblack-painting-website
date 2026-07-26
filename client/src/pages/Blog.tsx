@@ -111,12 +111,17 @@ export default function Blog() {
               name: "Jetblack Painting",
               url: "https://jetblackpainting.com",
             },
-            blogPost: posts.map((post) => ({
-              "@type": "BlogPosting",
-              headline: post.title,
-              description: post.excerpt,
-              url: `https://jetblackpainting.com${post.slug}/`,
-            })),
+            // Only genuine /blog/ articles. Two cards below link to service
+            // pages, which are Service/WebPage entities on their own URLs —
+            // declaring them BlogPosting here would contradict their own schema.
+            blogPost: posts
+              .filter((post) => post.slug.startsWith("/blog/"))
+              .map((post) => ({
+                "@type": "BlogPosting",
+                headline: post.title,
+                description: post.excerpt,
+                url: `https://jetblackpainting.com${post.slug}/`,
+              })),
           },
           breadcrumbSchema([
             { name: "Home", url: "/" },

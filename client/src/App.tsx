@@ -69,6 +69,14 @@ const TemplestowePainters = lazy(() => import("./pages/TemplestowePainters"));
 const ThornburyPainters = lazy(() => import("./pages/ThornburyPainters"));
 const WheelersHillPainters = lazy(() => import("./pages/WheelersHillPainters"));
 const WindsorPainters = lazy(() => import("./pages/WindsorPainters"));
+const CarnegiePainters = lazy(() => import("./pages/CarnegiePainters"));
+const HughesdalePainters = lazy(() => import("./pages/HughesdalePainters"));
+const BraesidePainters = lazy(() => import("./pages/BraesidePainters"));
+const WaterwaysPainters = lazy(() => import("./pages/WaterwaysPainters"));
+const SafetyBeachPainters = lazy(() => import("./pages/SafetyBeachPainters"));
+const RyePainters = lazy(() => import("./pages/RyePainters"));
+const HamptonParkPainters = lazy(() => import("./pages/HamptonParkPainters"));
+const EndeavourHillsPainters = lazy(() => import("./pages/EndeavourHillsPainters"));
 const CheltenhamPainters = lazy(() => import("./pages/CheltenhamPainters"));
 const ParkdalePainters = lazy(() => import("./pages/ParkdalePainters"));
 const PattersonLakesPainters = lazy(() => import("./pages/PattersonLakesPainters"));
@@ -213,6 +221,22 @@ function Router() {
       <Route path={"/painter-wheelers-hill"} component={WheelersHillPainters} />
       <Route path={"/painter-windsor"} component={WindsorPainters} />
       <Route path={"/painters-windsor"} component={WindsorPainters} />
+      <Route path={"/painter-carnegie"} component={CarnegiePainters} />
+      <Route path={"/painters-carnegie"} component={CarnegiePainters} />
+      <Route path={"/painter-hughesdale"} component={HughesdalePainters} />
+      <Route path={"/painters-hughesdale"} component={HughesdalePainters} />
+      <Route path={"/painter-braeside"} component={BraesidePainters} />
+      <Route path={"/painters-braeside"} component={BraesidePainters} />
+      <Route path={"/painter-waterways"} component={WaterwaysPainters} />
+      <Route path={"/painters-waterways"} component={WaterwaysPainters} />
+      <Route path={"/painter-safety-beach"} component={SafetyBeachPainters} />
+      <Route path={"/painters-safety-beach"} component={SafetyBeachPainters} />
+      <Route path={"/painter-rye"} component={RyePainters} />
+      <Route path={"/painters-rye"} component={RyePainters} />
+      <Route path={"/painter-hampton-park"} component={HamptonParkPainters} />
+      <Route path={"/painters-hampton-park"} component={HamptonParkPainters} />
+      <Route path={"/painter-endeavour-hills"} component={EndeavourHillsPainters} />
+      <Route path={"/painters-endeavour-hills"} component={EndeavourHillsPainters} />
       <Route path={"/painters-wheelers-hill"} component={WheelersHillPainters} />
       <Route path={"/painter-cheltenham"} component={CheltenhamPainters} />
       <Route path={"/painters-cheltenham"} component={CheltenhamPainters} />

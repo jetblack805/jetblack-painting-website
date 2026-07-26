@@ -116,6 +116,14 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-northcote",
   "/painter-brunswick",
   "/painter-south-melbourne",
+  "/painter-carnegie",
+  "/painter-hughesdale",
+  "/painter-braeside",
+  "/painter-waterways",
+  "/painter-safety-beach",
+  "/painter-rye",
+  "/painter-hampton-park",
+  "/painter-endeavour-hills",
 ]);
 
 function suburbSlug(suburb: string) {

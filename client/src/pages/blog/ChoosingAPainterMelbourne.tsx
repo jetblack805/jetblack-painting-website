@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
@@ -34,18 +35,16 @@ export default function ChoosingAPainterMelbourne() {
         title="How to Choose a Painter in Melbourne | Jetblack Painting"
         description="What to check before hiring a Melbourne painter — insurance, written quotes, guarantees and red flags to avoid. A practical checklist."
         canonical="https://jetblackpainting.com/blog/how-to-choose-a-painter-melbourne/"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
-            },
-          })),
-        }}
+        schema={articleSchema({
+          headline: "How to Choose a Painter in Melbourne: A Homeowner's Guide",
+          description:
+            "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees and red flags to avoid. A practical checklist.",
+          canonical: "https://jetblackpainting.com/blog/how-to-choose-a-painter-melbourne/",
+          datePublished: "2026-07-21",
+          dateModified: "2026-07-26",
+          articleSection: "Guide",
+          faqs,
+        })}
       />
       <Navbar />
 

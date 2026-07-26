@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 export default function Blog() {
   const posts = [
@@ -96,6 +97,32 @@ export default function Blog() {
         title="Painting Tips & Guides Melbourne | Jetblack Painting Blog"
         description="Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting."
         canonical="https://jetblackpainting.com/blog/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "Jetblack Painting Blog",
+            url: "https://jetblackpainting.com/blog/",
+            inLanguage: "en-AU",
+            description:
+              "Painting advice, colour guides and cost tips from Jetblack Painting for Melbourne homes and businesses.",
+            publisher: {
+              "@type": "Organization",
+              name: "Jetblack Painting",
+              url: "https://jetblackpainting.com",
+            },
+            blogPost: posts.map((post) => ({
+              "@type": "BlogPosting",
+              headline: post.title,
+              description: post.excerpt,
+              url: `https://jetblackpainting.com${post.slug}/`,
+            })),
+          },
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Blog", url: "https://jetblackpainting.com/blog/" },
+          ]),
+        ]}
       />
       <Navbar />
       

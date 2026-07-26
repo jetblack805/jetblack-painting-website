@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 export default function ReviewUs() {
   const [copied, setCopied] = useState(false);
@@ -22,6 +23,20 @@ export default function ReviewUs() {
         title="Leave a Review | Jetblack Painting Melbourne"
         description="Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters."
         canonical="https://jetblackpainting.com/review-us/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Leave a Review | Jetblack Painting Melbourne",
+            description:
+              "Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters.",
+            url: "https://jetblackpainting.com/review-us/",
+          },
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Leave a Review", url: "https://jetblackpainting.com/review-us/" },
+          ]),
+        ]}
       />
       <Navbar />
       

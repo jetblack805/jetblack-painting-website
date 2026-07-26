@@ -205,31 +205,28 @@ function localBusinessSchema() {
   };
 }
 
-function breadcrumbSchema({ suburb, canonical }) {
+// Generic BreadcrumbList builder. `item` may be an absolute URL or a
+// site-relative path. Every crawler-facing page gets one so Google and the AI
+// crawlers can place the page inside the site hierarchy.
+function breadcrumbTrail(trail) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": SITE_URL + "/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Service Areas",
-        "item": SITE_URL + "/#services"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": `Painters ${suburb}`,
-        "item": canonical
-      }
-    ]
+    "itemListElement": trail.map((entry, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": entry.name,
+      "item": entry.item.startsWith("http") ? entry.item : SITE_URL + entry.item,
+    })),
   };
+}
+
+function breadcrumbSchema({ suburb, canonical }) {
+  return breadcrumbTrail([
+    { name: "Home", item: "/" },
+    { name: "Service Areas", item: "/#services" },
+    { name: `Painters ${suburb}`, item: canonical },
+  ]);
 }
 
 function extractNeighbours(source) {
@@ -883,6 +880,11 @@ for (const service of servicePages) {
       schema: [
         ...serviceSchema({ name: service.name, title: service.title, description: service.description, canonical }),
         faqSchema(service.faqs),
+        breadcrumbTrail([
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/#services" },
+          { name: service.name, item: canonical },
+        ]),
       ],
       sections: [
         {
@@ -970,14 +972,34 @@ writePage(
     canonical: canonicalForRoute("/blog"),
     heroTitle: "Jetblack Painting Blog",
     heroBody: "Read practical painting advice for Melbourne homeowners, landlords, and businesses — from colour ideas and cost guides to preparation tips and cabinet resurfacing insights.",
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      name: "Jetblack Painting Blog",
-      url: canonicalForRoute("/blog"),
-      description:
-        "Helpful painting articles from Jetblack Painting covering colour selection, project preparation, budgeting, and cabinet resurfacing across Melbourne.",
-    },
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        name: "Jetblack Painting Blog",
+        url: canonicalForRoute("/blog"),
+        inLanguage: "en-AU",
+        description:
+          "Helpful painting articles from Jetblack Painting covering colour selection, project preparation, budgeting, and cabinet resurfacing across Melbourne.",
+        publisher: {
+          "@type": "Organization",
+          name: "Jetblack Painting",
+          url: SITE_URL,
+        },
+        // Enumerating the posts lets AI assistants see the full guide list from
+        // the index page alone, without crawling each article first.
+        blogPost: blogIndexArticles.map((article) => ({
+          "@type": "BlogPosting",
+          headline: article.title,
+          description: article.body,
+          url: `${SITE_URL}${article.href}`,
+        })),
+      },
+      breadcrumbTrail([
+        { name: "Home", item: "/" },
+        { name: "Blog", item: canonicalForRoute("/blog") },
+      ]),
+    ],
     sections: [
       {
         heading: "What you'll find in our painting blog",
@@ -1429,22 +1451,49 @@ const articlePages = [
   },
 ];
 
+// Publication metadata for the blog articles. Dates track when each guide was
+// first published and last substantively revised — keep `modified` in step when
+// an article's content is rewritten. Categories match the labels shown on /blog/.
+const articleMeta = {
+  "/blog/best-paint-colours-melbourne-2025": { published: "2026-06-23", modified: "2026-07-26", section: "Design Tips" },
+  "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-07-26", section: "Price Guide" },
+  "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-07-26", section: "Guide" },
+  "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-07-26", section: "Kitchen" },
+  "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
+  "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
+  "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-07-26", section: "Guide" },
+};
+
 for (const article of articlePages) {
   const canonical = canonicalForRoute(article.route);
+  const meta = articleMeta[article.route];
+  const headline = article.title.replace(/\s*\|\s*Jetblack(?: Painting)?$/, "");
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title.replace(" | Jetblack Painting", ""),
+    "@type": "BlogPosting",
+    headline,
     description: article.description,
+    inLanguage: "en-AU",
+    ...(meta ? { datePublished: meta.published, dateModified: meta.modified, articleSection: meta.section } : {}),
+    image: `${SITE_URL}/og-image.jpg`,
     author: {
       "@type": "Organization",
       name: "Jetblack Painting",
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: "Jetblack Painting",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.jpg`,
+      },
     },
-    mainEntityOfPage: canonical,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonical,
+    },
   };
   const howToSchema = article.howTo
     ? {
@@ -1461,7 +1510,12 @@ for (const article of articlePages) {
       }
     : null;
   const articleFaqSchema = article.faqs ? faqSchema(article.faqs) : null;
-  const schemaList = [articleSchema, howToSchema, articleFaqSchema].filter(Boolean);
+  const articleBreadcrumb = breadcrumbTrail([
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog/" },
+    { name: headline, item: canonical },
+  ]);
+  const schemaList = [articleSchema, howToSchema, articleFaqSchema, articleBreadcrumb].filter(Boolean);
   // Render FAQs as a visible section too, so the FAQPage schema has matching
   // on-page content (Google requires FAQ Q&A to be visible on the source page).
   const articleSections = article.faqs
@@ -1480,7 +1534,7 @@ for (const article of articlePages) {
       title: article.title,
       description: article.description,
       canonical,
-      heroTitle: article.title.replace(" | Jetblack Painting", ""),
+      heroTitle: headline,
       heroBody: article.intro,
       schema: schemaList.length > 1 ? schemaList : schemaList[0],
       sections: articleSections,
@@ -1529,7 +1583,13 @@ writePage(
     canonical: canonicalForRoute("/faq"),
     heroTitle: "Frequently Asked Questions",
     heroBody: "Get answers to the common questions Melbourne homeowners, landlords, and businesses ask before booking a painting project.",
-    schema: faqSchema(faqItems),
+    schema: [
+      faqSchema(faqItems),
+      breadcrumbTrail([
+        { name: "Home", item: "/" },
+        { name: "FAQ", item: canonicalForRoute("/faq") },
+      ]),
+    ],
     sections: [
       {
         heading: "What clients ask us most often",
@@ -1561,14 +1621,20 @@ writePage(
     canonical: canonicalForRoute("/review-us"),
     heroTitle: "Leave a Review for Jetblack Painting",
     heroBody: "Your feedback helps other Melbourne homeowners and businesses find a painter they can trust for quality preparation, clear communication, and durable finishes.",
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: "Leave a Review | Jetblack Painting Melbourne",
-      description:
-        "Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters.",
-      url: canonicalForRoute("/review-us"),
-    },
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Leave a Review | Jetblack Painting Melbourne",
+        description:
+          "Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters.",
+        url: canonicalForRoute("/review-us"),
+      },
+      breadcrumbTrail([
+        { name: "Home", item: "/" },
+        { name: "Leave a Review", item: canonicalForRoute("/review-us") },
+      ]),
+    ],
     sections: [
       {
         heading: "Why reviews matter",

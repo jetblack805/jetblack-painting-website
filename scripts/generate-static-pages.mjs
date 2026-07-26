@@ -1009,47 +1009,61 @@ writePage(
 const articlePages = [
   {
     route: "/blog/best-paint-colours-melbourne-2025",
-    title:
-      "Best Paint Colours for Melbourne Homes 2026 | Jetblack",
+    title: "Best Paint Colours for Melbourne Homes 2026 | Jetblack",
     description:
-      "Discover the best paint colours for Melbourne homes in 2026, with expert advice from Jetblack Painting on interior and exterior colour selection.",
+      "Discover trending paint colours for Melbourne homes in 2026. Interior & exterior colour trends, expert tips, and colour consultation from Jetblack Painting.",
     intro:
-      "Choosing paint colours for a Melbourne home means balancing natural light, neighbourhood character, resale appeal, and the durability you need for changing weather conditions.",
+      "Melbourne homeowners are moving beyond neutrals in 2026 and embracing bolder, more expressive palettes — while exteriors still have to survive scorching summers, cold wet winters and constant UV. Here are the interior and exterior colours we're actually painting across Melbourne this year, and how to choose between them.",
     sections: [
       {
-        heading: "Interior colours that continue to work well",
+        heading: "Interior paint colours trending in Melbourne in 2026",
         paragraphs: [
-          "Warm whites and soft off-whites remain reliable choices for open-plan homes because they reflect light well and pair easily with timber floors, stone, and contemporary joinery.",
-          "Muted greens, eucalyptus tones, and sophisticated charcoals are also popular when homeowners want more personality without overwhelming bedrooms, studies, or living areas.",
+          "Warm terracotta and burnt orange are back. These earthy tones create comfort and sophistication on feature walls in living and dining rooms, and shades such as Dulux Autumn Blaze work well with Melbourne's natural light.",
+          "Deep forest greens and moody botanicals suit bedrooms, studies and feature walls, and are popular in heritage homes across Hawthorn, Armadale and Camberwell. Soft blush and warm mauve tones are the sophisticated alternative to stark white, giving bedrooms a calm, elegant feel.",
+          "At the bolder end, charcoal black and moody greys such as Colorbond Monument or Dulux Cavern Black make dramatic statement walls in modern homes. For main living areas, creamy whites and natural off-whites like Dulux Lexicon Quarter and Natural White remain the timeless foundation.",
         ],
       },
       {
-        heading: "Exterior colours suited to Melbourne conditions",
+        heading: "Exterior paint colours for Melbourne's climate in 2026",
         paragraphs: [
-          "Greige, warm grey, and light neutral schemes stay popular for exteriors because they handle changing daylight well and look balanced on weatherboard, brick, and rendered homes.",
-          "Darker feature trims and contrasting front doors can add definition, but they work best when paired with proper preparation and premium coating systems that resist UV and moisture.",
+          "Charcoal and dark grey exteriors continue to dominate, with Colorbond Monument, Graphite and Dulux Charcoal Black giving contemporary homes a modern, premium look that pairs well with white or cream trim.",
+          "Warm terracotta and earthy reds are being used on heritage homes across Toorak and Brighton, honouring period architecture while still feeling current. Greige and warm grey-beige — Colorbond Surfmist, Dulux Limed White and similar — remain the safe, timeless choice on both brick and rendered homes.",
+          "Cool whites with contrasting trim are also trending: a white exterior with bold charcoal doors and window frames, such as Dulux Pure White with Colorbond Monument trim, is a common combination on contemporary Melbourne homes.",
         ],
       },
       {
-        heading: "How to choose colours with confidence",
+        heading: "2026 colour trends by Melbourne suburb",
         paragraphs: [
-          "Always test sample pots on multiple elevations or walls before committing. Light changes dramatically through the day and between seasons.",
-          "If your property sits in a heritage or higher-value pocket, choose colours that complement the fixed elements of the home and streetscape rather than chasing short-lived trends.",
+          "Prestige inner east (Toorak, Malvern, Armadale): heritage homes favour warm terracottas, deep forest greens and sophisticated greys, with exteriors respecting period aesthetics while interiors take the bolder feature walls.",
+          "Bayside (Brighton, Sandringham, Hampton): coastal weatherboards trend toward cool whites, soft creams and bold charcoal exteriors, with light, airy interiors and the occasional moody feature wall.",
+          "Modern and contemporary homes (Toorak, South Yarra): bold blacks, deep charcoals and striking colour blocking outside, with dramatic statement walls inside.",
+        ],
+      },
+      {
+        heading: "How to choose 2026 colours with confidence",
+        paragraphs: [
+          "Test with large sample patches rather than small chips — colour looks dramatically different under Melbourne's natural light compared with artificial light, and changes again between seasons as the angle of the sun shifts.",
+          "Let the architecture guide you: heritage homes suit warm, earthy tones, while modern homes carry bold, dramatic colours well. If the property sits in a heritage precinct, check any overlay requirements before committing to an exterior scheme.",
+          "Jetblack Painting offers a free colour consultation with every painting quote, drawing on 13+ years of Melbourne experience to match colours to your home's architecture, natural light and style.",
         ],
       },
     ],
     faqs: [
       {
-        question: "What are the best interior paint colours for Melbourne homes?",
-        answer: "Warm whites and soft off-whites remain reliable choices for open-plan homes because they reflect light well and pair easily with timber floors, stone and contemporary joinery. Muted greens, eucalyptus tones and sophisticated charcoals add personality without overwhelming bedrooms, studies or living areas.",
+        question: "What are the best interior paint colours for Melbourne homes in 2026?",
+        answer: "Warm terracotta and burnt orange, deep forest green, soft blush and warm mauve, and charcoal black are the standout 2026 interior trends, while creamy whites and natural off-whites remain the timeless choice for main living areas.",
       },
       {
-        question: "What exterior paint colours suit Melbourne conditions?",
-        answer: "Greige, warm grey and light neutral schemes stay popular because they handle Melbourne's changing daylight well and look balanced on weatherboard, brick and rendered homes. Darker feature trims and contrasting front doors add definition when paired with proper preparation and premium UV- and moisture-resistant coatings.",
+        question: "What exterior paint colours suit Melbourne conditions in 2026?",
+        answer: "Charcoal and dark greys, warm terracotta and earthy reds on heritage homes, greige and warm grey-beige, and cool whites with contrasting dark trim all perform well. Melbourne exteriors face strong UV, moisture and temperature swings, so the coating system matters as much as the colour.",
       },
       {
         question: "How do I choose a paint colour with confidence?",
-        answer: "Always test sample pots on multiple walls or elevations before committing, because light changes dramatically through the day and between seasons. For heritage or higher-value pockets, choose colours that complement the home's fixed elements and streetscape rather than chasing short-lived trends.",
+        answer: "Test large sample patches on more than one wall or elevation and look at them at different times of day, because Melbourne light changes dramatically through the day and between seasons. Let the home's architecture guide the palette, and check heritage overlay requirements before committing to an exterior scheme.",
+      },
+      {
+        question: "Does Jetblack Painting help with colour selection?",
+        answer: "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 13+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
       },
     ],
   },

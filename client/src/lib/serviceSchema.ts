@@ -1,10 +1,13 @@
+import { breadcrumbSchema } from "@/lib/breadcrumbSchema";
+
 // Builds Schema.org structured data for a service page.
 // Deliberately omits aggregateRating — the business rating lives once in the
 // LocalBusiness schema (suburb pages / homepage) to avoid Google's
 // "multiple aggregate ratings" error.
 //
-// When `faqs` are supplied, a FAQPage schema is returned alongside the Service
-// schema (as an array) so the page is eligible for FAQ rich results.
+// Always returns an array: the Service schema, a FAQPage schema when `faqs` are
+// supplied (so the page is eligible for FAQ rich results), and a BreadcrumbList
+// matching the one the static generator emits for the same route.
 export function serviceSchema(opts: {
   serviceType: string;
   name: string;
@@ -37,7 +40,13 @@ export function serviceSchema(opts: {
     },
   };
 
-  if (!opts.faqs || opts.faqs.length === 0) return service;
+  const breadcrumb = breadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/#services" },
+    { name: opts.serviceType, url: opts.canonical },
+  ]);
+
+  if (!opts.faqs || opts.faqs.length === 0) return [service, breadcrumb];
 
   const faqPage = {
     "@context": "https://schema.org",
@@ -49,5 +58,5 @@ export function serviceSchema(opts: {
     })),
   };
 
-  return [service, faqPage];
+  return [service, faqPage, breadcrumb];
 }

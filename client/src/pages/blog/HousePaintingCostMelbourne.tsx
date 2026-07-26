@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
@@ -11,6 +12,15 @@ export default function HousePaintingCostMelbourne() {
         title="House Painting Cost Melbourne 2026 | Jetblack Painting"
         description="Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects."
         canonical="https://jetblackpainting.com/blog/house-painting-cost-melbourne/"
+        schema={articleSchema({
+          headline: "How Much Does House Painting Cost in Melbourne? (2026 Price Guide)",
+          description:
+            "Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects.",
+          canonical: "https://jetblackpainting.com/blog/house-painting-cost-melbourne/",
+          datePublished: "2026-06-23",
+          dateModified: "2026-07-26",
+          articleSection: "Price Guide",
+        })}
       />
       <Navbar />
       

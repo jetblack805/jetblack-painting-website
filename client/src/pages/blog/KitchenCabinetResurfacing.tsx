@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
@@ -11,6 +12,15 @@ export default function KitchenCabinetResurfacing() {
         title="Kitchen Cabinet Resurfacing vs Replacement | Jetblack"
         description="Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting."
         canonical="https://jetblackpainting.com/blog/kitchen-cabinet-resurfacing-vs-replacement/"
+        schema={articleSchema({
+          headline: "Kitchen Cabinet Resurfacing vs Replacement: What Melbourne Homeowners Need to Know",
+          description:
+            "Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting.",
+          canonical: "https://jetblackpainting.com/blog/kitchen-cabinet-resurfacing-vs-replacement/",
+          datePublished: "2026-06-23",
+          dateModified: "2026-07-26",
+          articleSection: "Kitchen",
+        })}
       />
       <Navbar />
       

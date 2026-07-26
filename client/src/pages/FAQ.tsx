@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/breadcrumbSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -175,7 +176,13 @@ export default function FAQ() {
         title="Painting FAQs Melbourne | Jetblack Painting"
         description="Frequently asked questions about Jetblack Painting services in Melbourne, including quotes, service areas, interior, exterior and commercial painting."
         canonical="https://jetblackpainting.com/faq/"
-        schema={faqSchema}
+        schema={[
+          faqSchema,
+          breadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "FAQ", url: "https://jetblackpainting.com/faq/" },
+          ]),
+        ]}
       />
       <Navbar />
       {/* Header */}

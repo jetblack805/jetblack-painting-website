@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
@@ -36,7 +37,16 @@ export default function PrepareHomePainting() {
         title="How to Prepare Your Home for Painting | Jetblack Painting"
         description="Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results."
         canonical="https://jetblackpainting.com/blog/prepare-home-for-painting/"
-        schema={howToSchema}
+        schema={articleSchema({
+          headline: "How to Prepare Your Melbourne Home for Professional Painting",
+          description:
+            "Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.",
+          canonical: "https://jetblackpainting.com/blog/prepare-home-for-painting/",
+          datePublished: "2026-06-23",
+          dateModified: "2026-07-26",
+          articleSection: "Guide",
+          extra: [howToSchema],
+        })}
       />
       <Navbar />
       

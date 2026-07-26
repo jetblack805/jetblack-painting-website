@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
@@ -11,6 +12,15 @@ export default function MouldRemediationPainting() {
         title="Mould Remediation & Painting Guide Melbourne | Jetblack"
         description="How to identify, treat and paint over mould in Melbourne homes — bathroom mould, render mould, prep steps and anti-mould paints."
         canonical="https://jetblackpainting.com/blog/mould-remediation-painting-melbourne/"
+        schema={articleSchema({
+          headline: "Mould Remediation & Painting Guide for Melbourne Homes",
+          description:
+            "How to identify, treat and paint over mould in Melbourne homes — bathroom mould, render mould, prep steps and anti-mould paints.",
+          canonical: "https://jetblackpainting.com/blog/mould-remediation-painting-melbourne/",
+          datePublished: "2026-07-17",
+          dateModified: "2026-07-26",
+          articleSection: "Guide",
+        })}
       />
       <Navbar />
 

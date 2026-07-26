@@ -1,29 +1,20 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
 export default function BestPaintColours2026() {
-  const blogSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Best Paint Colours for Melbourne Homes in 2026",
-    "description": "Discover the best paint colours trending in Melbourne for 2026, with expert advice from Jetblack Painting on interior and exterior colour selection.",
-    "image": "https://jetblackpainting.com/og-image.jpg",
-    "datePublished": "2026-07-25",
-    "dateModified": "2026-07-25",
-    "author": {
-      "@type": "Person",
-      "name": "Jimmy Demirci",
-      "url": "https://jetblackpainting.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Jetblack Painting",
-      "url": "https://jetblackpainting.com"
-    }
-  };
+  const blogSchema = articleSchema({
+    headline: "Best Paint Colours for Melbourne Homes in 2026",
+    description:
+      "Discover the best paint colours trending in Melbourne for 2026, with expert advice from Jetblack Painting on interior and exterior colour selection.",
+    canonical: "https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025/",
+    datePublished: "2026-06-23",
+    dateModified: "2026-07-26",
+    articleSection: "Design Tips",
+  });
 
   return (
     <div className="min-h-screen">

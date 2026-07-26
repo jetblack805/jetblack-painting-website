@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
@@ -32,6 +33,48 @@ const faqs = [
   },
 ];
 
+// Mirrors the six numbered steps shown in the article body below.
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Paint a Weatherboard House",
+  description:
+    "How a Melbourne weatherboard house is prepared and painted so the finish lasts 7 to 10 years, from washing through to the second topcoat.",
+  totalTime: "P5D",
+  step: [
+    {
+      "@type": "HowToStep",
+      name: "Wash the surface",
+      text: "Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Scrape and sand back failing paint",
+      text: "Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Repair damaged timber",
+      text: "Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Prime all bare timber",
+      text: "Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Fill and caulk",
+      text: "Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves.",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Apply two topcoats",
+      text: "Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain.",
+    },
+  ],
+};
+
 export default function WeatherboardPaintingGuide() {
   return (
     <div className="min-h-screen">
@@ -39,18 +82,17 @@ export default function WeatherboardPaintingGuide() {
         title="How to Paint a Weatherboard House | Jetblack Painting"
         description="Melbourne weatherboard painting guide — preparation, priming bare timber, caulking, the right exterior paints and how often to repaint. Call 0432 077 782."
         canonical="https://jetblackpainting.com/blog/how-to-paint-a-weatherboard-house-melbourne/"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
-            },
-          })),
-        }}
+        schema={articleSchema({
+          headline: "How to Paint a Weatherboard House: A Melbourne Guide",
+          description:
+            "Melbourne weatherboard painting guide — preparation, priming bare timber, caulking, the right exterior paints and how often to repaint.",
+          canonical: "https://jetblackpainting.com/blog/how-to-paint-a-weatherboard-house-melbourne/",
+          datePublished: "2026-07-26",
+          dateModified: "2026-07-26",
+          articleSection: "Guide",
+          faqs,
+          extra: [howToSchema],
+        })}
       />
       <Navbar />
 

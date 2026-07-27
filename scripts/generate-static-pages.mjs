@@ -1622,32 +1622,157 @@ for (const article of articlePages) {
   );
 }
 
-const faqItems = [
+// Mirrors the `faqs` array in client/src/pages/FAQ.tsx. The /faq/ page is the
+// page AI assistants are most likely to quote, and they don't execute JS — so
+// every answer visible in the React page has to exist in the pre-rendered HTML
+// and in the FAQPage schema. These two lists must be kept in step.
+const faqCategories = [
   {
-    question: "Do you offer free painting quotes?",
-    answer: "Yes. Jetblack Painting provides free, no-obligation painting quotes across Melbourne.",
+    category: "General Questions",
+    items: [
+      {
+        question: "Do you offer free quotes?",
+        answer: "Yes. We provide completely free, no-obligation quotes. We'll visit your property, assess your needs, and provide a competitive written price estimate. Call Jimmy on 0432 077 782 or email jimmy@jetblackpainting.com.",
+      },
+      {
+        question: "Are you licensed and insured?",
+        answer: "Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and every job is backed by a 5-year written workmanship guarantee. We're happy to provide documentation before work begins.",
+      },
+      {
+        question: "How long have you been in business?",
+        answer: "We've been serving Melbourne for over 13 years, building a reputation for quality workmanship and customer satisfaction.",
+      },
+      {
+        question: "Do you provide references?",
+        answer: "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 14 Google reviews.",
+      },
+    ],
   },
   {
-    question: "Are you licensed and insured?",
-    answer: "Yes. Jetblack Painting is fully licensed and insured for residential and commercial painting work.",
+    category: "Service Areas",
+    items: [
+      {
+        question: "What areas do you serve?",
+        answer: "We serve all Melbourne suburbs including Keysborough, Brighton, Toorak, Mordialloc, Hawthorn, Mentone, Sandringham, Camberwell, Bentleigh, and the Mornington Peninsula.",
+      },
+      {
+        question: "Do you travel outside Melbourne?",
+        answer: "We primarily serve the Melbourne metropolitan area. For projects outside our usual service area, please contact us to discuss availability.",
+      },
+      {
+        question: "Is there a minimum project size?",
+        answer: "No, we welcome projects of all sizes, from small room touch-ups to large commercial projects.",
+      },
+      {
+        question: "Do you offer painting services specifically for Mordialloc's coastal homes?",
+        answer: "Yes, we specialise in painting homes in coastal areas like Mordialloc. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and harsh UV rays, ensuring a durable and beautiful finish for your bayside property.",
+      },
+      {
+        question: "What types of homes do you paint in Mordialloc?",
+        answer: "In Mordialloc, we paint a variety of homes, including classic weatherboard houses, modern residences, and period homes. Our team is experienced with the diverse architectural styles found in the area, providing tailored painting solutions for each.",
+      },
+      {
+        question: "How do you protect homes from coastal conditions in Mordialloc?",
+        answer: "We protect Mordialloc homes from coastal conditions through meticulous surface preparation, high-quality flexible and breathable paints, and specialised techniques. Our approach prevents cracking, peeling, and fading caused by salt spray, strong winds, and sun exposure.",
+      },
+    ],
   },
   {
-    question: "What Melbourne areas do you service?",
-    answer: "We service Melbourne suburbs including Mordialloc, Brighton, Toorak, Bentleigh, Mentone, Kingston, Bayside, Greater Dandenong, and surrounding areas.",
+    category: "Interior Painting",
+    items: [
+      {
+        question: "How long does interior painting take?",
+        answer: "Most interior painting projects take 3-7 days depending on the size and complexity. We'll provide a detailed timeline during your free quote.",
+      },
+      {
+        question: "Do you move furniture?",
+        answer: "Yes, we move and protect your furniture as part of our service. We use drop cloths and plastic sheeting to protect floors and belongings.",
+      },
+      {
+        question: "Can you help with colour selection?",
+        answer: "Absolutely! Our team has extensive experience with colour trends and can help you choose colours that complement your home's style.",
+      },
+      {
+        question: "What paint do you use?",
+        answer: "We use premium quality paints from leading brands like Dulux and Taubmans. We can recommend the best products for your specific needs.",
+      },
+    ],
   },
   {
-    question: "How long does interior painting usually take?",
-    answer: "Most interior painting projects take a few days to a week depending on the size, access, and preparation required.",
+    category: "Exterior Painting",
+    items: [
+      {
+        question: "How often should I repaint my exterior?",
+        answer: "Most exterior paint jobs last 5-10 years depending on weather conditions and paint quality. We can assess your home and recommend a timeline.",
+      },
+      {
+        question: "Can you paint in all weather conditions?",
+        answer: "We can paint in most conditions, but avoid extreme heat, cold, or rain. We'll schedule your project during optimal weather windows.",
+      },
+      {
+        question: "Do you prepare surfaces before painting?",
+        answer: "Yes, proper preparation is essential. We clean, sand, and prime surfaces to ensure long-lasting, professional results.",
+      },
+      {
+        question: "What's included in exterior painting?",
+        answer: "Our exterior service includes surface preparation, priming, painting, and cleanup. We can also paint gutters, fascia, and trim.",
+      },
+    ],
   },
   {
-    question: "Do you handle exterior and commercial painting too?",
-    answer: "Yes. We complete interior, exterior, roof, cabinet, pre-sale, rental, and commercial painting projects.",
+    category: "Commercial Painting",
+    items: [
+      {
+        question: "Can you handle large commercial projects?",
+        answer: "Yes! We have experience with commercial painting projects of all sizes, from small offices to large retail spaces.",
+      },
+      {
+        question: "Can you work after hours?",
+        answer: "We can arrange after-hours or weekend work to minimise disruption to your business operations.",
+      },
+      {
+        question: "Do you provide project management?",
+        answer: "Yes, we handle all aspects of your commercial painting project, including scheduling, coordination, and quality control.",
+      },
+    ],
   },
   {
-    question: "Can you help with colour selection?",
-    answer: "Yes. We can help narrow down colour and sheen choices that suit the property, light, and desired finish.",
+    category: "Pricing & Payment",
+    items: [
+      {
+        question: "How much does painting cost?",
+        answer: "Pricing depends on project size, surface condition, paint quality, and location. We provide free quotes with no hidden costs.",
+      },
+      {
+        question: "Do you offer payment plans?",
+        answer: "We accept various payment methods. For large projects, we can discuss payment arrangements during your quote.",
+      },
+      {
+        question: "What if I need additional work?",
+        answer: "We'll discuss any additional work and provide updated pricing before proceeding. No surprises!",
+      },
+    ],
+  },
+  {
+    category: "Special Services",
+    items: [
+      {
+        question: "Do you offer kitchen cabinet resurfacing?",
+        answer: "Yes! We specialise in luxury kitchen cabinet resurfacing with 2-pack finishes that look brand new.",
+      },
+      {
+        question: "Can you paint roofs?",
+        answer: "Yes, we provide professional roof painting and restoration services to protect and enhance your home.",
+      },
+      {
+        question: "Do you do pre-sale property painting?",
+        answer: "Absolutely! We specialise in pre-sale painting to maximise your property's appeal and value.",
+      },
+    ],
   },
 ];
+
+const faqItems = faqCategories.flatMap((group) => group.items);
 
 writePage(
   "/faq",
@@ -1673,11 +1798,14 @@ writePage(
           "If your project has unique requirements, contact us directly and we can talk through the best scope, timeline, and coating system for the property.",
         ],
       },
-      {
+      // One section per category, matching the React page's grouping. Grouped
+      // headings give an assistant a topic to anchor each answer to instead of
+      // one undifferentiated list.
+      ...faqCategories.map((group) => ({
         type: "faqs",
-        heading: "Jetblack Painting FAQs",
-        items: faqItems,
-      },
+        heading: group.category,
+        items: group.items,
+      })),
     ],
     footerLinks: [
       { label: "Home", href: "/" },

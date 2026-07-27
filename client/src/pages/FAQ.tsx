@@ -15,11 +15,11 @@ export default function FAQ() {
       items: [
         {
           q: "Do you offer free quotes?",
-          a: "Yes! We provide completely free, no-obligation quotes. We'll visit your property, assess your needs, and provide a competitive price estimate."
+          a: "Yes. We provide completely free, no-obligation quotes. We'll visit your property, assess your needs, and provide a competitive written price estimate. Call Jimmy on 0432 077 782 or email jimmy@jetblackpainting.com."
         },
         {
           q: "Are you licensed and insured?",
-          a: "Yes, Jetblack Painting is fully licensed and insured. We're committed to providing safe, professional service with complete peace of mind."
+          a: "Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and every job is backed by a 5-year written workmanship guarantee. We're happy to provide documentation before work begins."
         },
         {
           q: "How long have you been in business?",
@@ -27,7 +27,7 @@ export default function FAQ() {
         },
         {
           q: "Do you provide references?",
-          a: "Absolutely! We're happy to provide references from previous customers. We also have a 5-star Google rating with hundreds of satisfied clients."
+          a: "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 14 Google reviews."
         }
       ]
     },
@@ -48,7 +48,7 @@ export default function FAQ() {
         },
         {
           q: "Do you offer painting services specifically for Mordialloc's coastal homes?",
-          a: "Yes, we specialize in painting homes in coastal areas like Mordialloc. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and harsh UV rays, ensuring a durable and beautiful finish for your bayside property."
+          a: "Yes, we specialise in painting homes in coastal areas like Mordialloc. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and harsh UV rays, ensuring a durable and beautiful finish for your bayside property."
         },
         {
           q: "What types of homes do you paint in Mordialloc?",
@@ -56,7 +56,7 @@ export default function FAQ() {
         },
         {
           q: "How do you protect homes from coastal conditions in Mordialloc?",
-          a: "We protect Mordialloc homes from coastal conditions through meticulous surface preparation, high-quality flexible and breathable paints, and specialized techniques. Our approach prevents cracking, peeling, and fading caused by salt spray, strong winds, and sun exposure."
+          a: "We protect Mordialloc homes from coastal conditions through meticulous surface preparation, high-quality flexible and breathable paints, and specialised techniques. Our approach prevents cracking, peeling, and fading caused by salt spray, strong winds, and sun exposure."
         }
       ]
     },
@@ -72,8 +72,8 @@ export default function FAQ() {
           a: "Yes, we move and protect your furniture as part of our service. We use drop cloths and plastic sheeting to protect floors and belongings."
         },
         {
-          q: "Can you help with color selection?",
-          a: "Absolutely! Our team has extensive experience with color trends and can help you choose colors that complement your home's style."
+          q: "Can you help with colour selection?",
+          a: "Absolutely! Our team has extensive experience with colour trends and can help you choose colours that complement your home's style."
         },
         {
           q: "What paint do you use?",
@@ -111,7 +111,7 @@ export default function FAQ() {
         },
         {
           q: "Can you work after hours?",
-          a: "We can arrange after-hours or weekend work to minimize disruption to your business operations."
+          a: "We can arrange after-hours or weekend work to minimise disruption to your business operations."
         },
         {
           q: "Do you provide project management?",
@@ -141,15 +141,15 @@ export default function FAQ() {
       items: [
         {
           q: "Do you offer kitchen cabinet resurfacing?",
-          a: "Yes! We specialize in luxury kitchen cabinet resurfacing with 2-pack finishes that look brand new."
+          a: "Yes! We specialise in luxury kitchen cabinet resurfacing with 2-pack finishes that look brand new."
         },
         {
-          q: "Can you paint roof?",
+          q: "Can you paint roofs?",
           a: "Yes, we provide professional roof painting and restoration services to protect and enhance your home."
         },
         {
           q: "Do you do pre-sale property painting?",
-          a: "Absolutely! We specialize in pre-sale painting to maximize your property's appeal and value."
+          a: "Absolutely! We specialise in pre-sale painting to maximise your property's appeal and value."
         }
       ]
     }

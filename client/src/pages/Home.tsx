@@ -104,7 +104,7 @@ const homeSchema = [
     "@type": "WebSite",
     "name": "Jetblack Painting",
     "url": "https://jetblackpainting.com",
-    "description": "Professional house painters in Melbourne. Interior, exterior, commercial and roof painting across 30+ suburbs."
+    "description": "Professional house painters in Melbourne. Interior, exterior, commercial and roof painting across 90+ suburbs."
   }
 ];
 
@@ -112,8 +112,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Best Painters Melbourne | Local Painters Near Me | Free Quotes | Jetblack Painting"
-        description="Best painters Melbourne — 5-star rated, fully insured, local painters near me. Interior, exterior, commercial, roof & cabinet painting across 30+ Melbourne suburbs. Servicing Brighton, Toorak, Keysborough, Mordialloc, Dandenong & more. Free quotes: 0432 077 782."
+        title="Painters Melbourne | Painters Near Me | Jetblack Painting"
+        description="Melbourne painters for interior, exterior, commercial and roof work. Servicing 90+ suburbs from Mordialloc. $10M insured, 5-year guarantee. Call 0432 077 782."
         canonical="https://jetblackpainting.com/"
         schema={homeSchema}
       />
@@ -126,7 +126,7 @@ export default function Home() {
             Melbourne's Best-Rated Local House Painters
           </p>
           <p className="text-[#98989D] text-sm md:text-base font-light leading-relaxed">
-            5-star rated, fully insured, and servicing 30+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
+            5-star rated, fully insured, and servicing 90+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
             Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.
             Free quotes — call 0432 077 782.
           </p>

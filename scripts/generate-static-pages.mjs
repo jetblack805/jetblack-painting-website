@@ -1169,7 +1169,7 @@ const articlePages = [
     title:
       "House Painting Cost Melbourne 2026 | Jetblack Painting",
     description:
-      "Learn what affects house painting costs in Melbourne, including surface prep, property size, access, paint systems, and project scope.",
+      "Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects.",
     intro:
       "Painting prices in Melbourne vary according to size, access, paint system, and — most importantly — how much preparation is required before the first coat goes on.",
     sections: [
@@ -1215,7 +1215,7 @@ const articlePages = [
     title:
       "How to Prepare Your Home for Painting | Jetblack Painting",
     description:
-      "Prepare your Melbourne home for a smooth painting project with expert tips on access, furniture protection, colour decisions, and scheduling.",
+      "Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.",
     intro:
       "A little preparation before your painters arrive can make the job faster, safer, and easier for everyone in the home.",
     howTo: {
@@ -1270,7 +1270,7 @@ const articlePages = [
     title:
       "Kitchen Cabinet Resurfacing vs Replacement | Jetblack",
     description:
-      "Compare kitchen cabinet resurfacing and replacement to understand cost, turnaround, finish quality, and which option suits your Melbourne renovation.",
+      "Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting.",
     intro:
       "If your kitchen layout still works, resurfacing cabinet doors and panels can often deliver the visual impact of a renovation without the cost and downtime of full replacement.",
     sections: [

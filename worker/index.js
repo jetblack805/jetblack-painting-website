@@ -1,3 +1,5 @@
+import { KNOWN_PATHS } from "./known-paths.js";
+
 // Redirect www.jetblackpainting.com → jetblackpainting.com, apply path
 // redirects, then serve static assets.
 
@@ -155,6 +157,29 @@ export default {
       headers.set("Cache-Control", "public, max-age=31536000, immutable");
     } else if (isStaticImage) {
       headers.set("Cache-Control", "public, max-age=2592000");
+    }
+
+    // Cloudflare's SPA fallback answers *every* unmatched path with index.html
+    // and HTTP 200. That turns any bad URL pointing at this domain — old Manus
+    // paths, /au/, typos, scraper noise — into something Google treats as a real
+    // page, then files under "Soft 404" in Search Console while it burns crawl
+    // budget re-checking them.
+    //
+    // Real pages keep their 200. Unknown paths still render the app (so a human
+    // who mistypes a URL gets the site, not a bare error) but carry a 404 status,
+    // which is what tells Google the URL does not exist.
+    //
+    // Deliberately fails open: if KNOWN_PATHS is ever empty — a broken or skipped
+    // generator run — every path stays 200 rather than 404-ing the whole site.
+    const hasFileExtension = /\.[a-z0-9]+$/i.test(pathname);
+    const asPage = pathname.endsWith("/") ? pathname : `${pathname}/`;
+    if (
+      KNOWN_PATHS.size > 0 &&
+      response.status === 200 &&
+      !hasFileExtension &&
+      !KNOWN_PATHS.has(asPage)
+    ) {
+      return new Response(response.body, { status: 404, statusText: "Not Found", headers });
     }
 
     return new Response(response.body, { status: response.status, statusText: response.statusText, headers });

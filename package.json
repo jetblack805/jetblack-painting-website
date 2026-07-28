@@ -5,14 +5,15 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "node scripts/generate-static-pages.mjs && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "node scripts/generate-static-pages.mjs && node scripts/generate-known-paths.mjs && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "test": "vitest run",
     "format": "prettier --write .",
     "generate-static-pages": "node scripts/generate-static-pages.mjs",
-    "generate-sitemap": "node scripts/generate-sitemap.mjs"
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "generate-known-paths": "node scripts/generate-known-paths.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

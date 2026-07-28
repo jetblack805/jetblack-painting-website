@@ -18,7 +18,7 @@ interface SuburbPageProps {
   propertyTypes: string;
   faqs?: { question: string; answer: string }[];
   schema?: object | object[];
-  localContent?: { heading: string; body: string[] }[];
+  localContent?: { heading: string; body: string | string[] }[];
 }
 
 const coreServices = [
@@ -364,7 +364,10 @@ export default function SuburbPageTemplate({
               {localContent.map((block) => (
                 <div key={block.heading} className="mb-10">
                   <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">{block.heading}</h2>
-                  {block.body.map((para, i) => (
+                  {/* `body` is written as a single template-literal string on most suburb
+                      pages and as a string[] on others — normalise so either shape renders
+                      instead of throwing ("<string>.map is not a function") during hydration. */}
+                  {(Array.isArray(block.body) ? block.body : [block.body]).map((para, i) => (
                     <p key={i} className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
                       {para}
                     </p>

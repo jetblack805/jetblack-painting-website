@@ -19,8 +19,20 @@ const OUT_PATH = path.resolve("worker/known-paths.js");
 function collect(dir, prefix = "") {
   const found = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
     const route = `${prefix}/${entry.name}`;
+
+    // Standalone .html files — the Search Console verification file, and
+    // anything like it. Cloudflare's asset handler redirects /foo.html to the
+    // extensionless /foo, and that redirected path is what the worker sees, so
+    // it has to be known or the file 404s after the hop. Both forms are
+    // recorded because the worker's page check appends a trailing slash.
+    if (entry.isFile() && entry.name.endsWith(".html") && entry.name !== "index.html") {
+      const bare = route.slice(0, -".html".length);
+      found.push(`${bare}/`);
+      continue;
+    }
+
+    if (!entry.isDirectory()) continue;
     if (fs.existsSync(path.join(dir, entry.name, "index.html"))) {
       found.push(`${route}/`);
     }

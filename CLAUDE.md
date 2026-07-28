@@ -13,13 +13,14 @@ Package manager is **pnpm** (pinned via `packageManager` in package.json).
 ```bash
 pnpm install
 pnpm dev                     # Vite dev server (port 3000, --host)
-pnpm build                   # generate static pages → vite build → esbuild server bundle, all into dist/
+pnpm build                   # generate static pages → known paths → vite build → esbuild server bundle, all into dist/
 pnpm check                   # TypeScript typecheck (tsc --noEmit) — no lint config; this is the CI-style gate
 pnpm test                    # vitest run
 pnpm vitest run <file>       # run a single test file, e.g. client/src/lib/utils.test.ts
 pnpm format                  # prettier --write .
 pnpm generate-static-pages   # regenerate public/**/index.html from page components
 pnpm generate-sitemap        # regenerate public/sitemap.xml
+pnpm generate-known-paths    # regenerate worker/known-paths.js (runs inside pnpm build)
 ```
 
 There is no CI; run `pnpm check` and `pnpm build` before pushing.

@@ -532,6 +532,20 @@ export const SUBURBS_DATA = {
     description: "Hilly City of Casey suburb of 1980s and 90s brick veneer and split-level homes on generous blocks",
     areasServed: ["Endeavour Hills"]
   },
+  sorrento: {
+    name: "Sorrento",
+    coordinates: { lat: -38.3417, lng: 144.7300 },
+    postcode: "3943",
+    description: "Mornington Peninsula tip town of limestone cottages, heritage buildings and premium holiday homes between the front and back beach",
+    areasServed: ["Sorrento"]
+  },
+  somerville: {
+    name: "Somerville",
+    coordinates: { lat: -38.2267, lng: 145.1827 },
+    postcode: "3912",
+    description: "Fast-growing southern Mornington Peninsula corridor suburb of brick veneer family homes, new estates and acreage properties",
+    areasServed: ["Somerville"]
+  },
 };
 
 export type SuburbKey = keyof typeof SUBURBS_DATA;

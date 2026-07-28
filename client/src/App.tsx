@@ -77,6 +77,8 @@ const SafetyBeachPainters = lazy(() => import("./pages/SafetyBeachPainters"));
 const RyePainters = lazy(() => import("./pages/RyePainters"));
 const HamptonParkPainters = lazy(() => import("./pages/HamptonParkPainters"));
 const EndeavourHillsPainters = lazy(() => import("./pages/EndeavourHillsPainters"));
+const SorrentoPainters = lazy(() => import("./pages/SorrentoPainters"));
+const SomervillePainters = lazy(() => import("./pages/SomervillePainters"));
 const CheltenhamPainters = lazy(() => import("./pages/CheltenhamPainters"));
 const ParkdalePainters = lazy(() => import("./pages/ParkdalePainters"));
 const PattersonLakesPainters = lazy(() => import("./pages/PattersonLakesPainters"));
@@ -237,6 +239,10 @@ function Router() {
       <Route path={"/painters-hampton-park"} component={HamptonParkPainters} />
       <Route path={"/painter-endeavour-hills"} component={EndeavourHillsPainters} />
       <Route path={"/painters-endeavour-hills"} component={EndeavourHillsPainters} />
+      <Route path={"/painter-sorrento"} component={SorrentoPainters} />
+      <Route path={"/painters-sorrento"} component={SorrentoPainters} />
+      <Route path={"/painter-somerville"} component={SomervillePainters} />
+      <Route path={"/painters-somerville"} component={SomervillePainters} />
       <Route path={"/painters-wheelers-hill"} component={WheelersHillPainters} />
       <Route path={"/painter-cheltenham"} component={CheltenhamPainters} />
       <Route path={"/painters-cheltenham"} component={CheltenhamPainters} />

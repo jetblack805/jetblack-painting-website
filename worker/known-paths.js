@@ -95,6 +95,8 @@ export const KNOWN_PATHS = new Set([
   "/painter-safety-beach/",
   "/painter-sandringham/",
   "/painter-seaford/",
+  "/painter-somerville/",
+  "/painter-sorrento/",
   "/painter-south-melbourne/",
   "/painter-south-yarra/",
   "/painter-st-kilda/",

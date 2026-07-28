@@ -103,6 +103,8 @@ const SERVICE_AREAS = [
   { name: "Safety Beach", href: "/painter-safety-beach/" },
   { name: "Sandringham", href: "/painter-sandringham/" },
   { name: "Seaford", href: "/painter-seaford/" },
+  { name: "Somerville", href: "/painter-somerville/" },
+  { name: "Sorrento", href: "/painter-sorrento/" },
   { name: "South Melbourne", href: "/painter-south-melbourne/" },
   { name: "South Yarra", href: "/painter-south-yarra/" },
   { name: "St Kilda", href: "/painter-st-kilda/" },

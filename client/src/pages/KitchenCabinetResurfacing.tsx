@@ -32,24 +32,16 @@ export default function KitchenCabinetResurfacing() {
 
   const faqs = [
     {
-      question: "How much does kitchen cabinet resurfacing cost?",
-      answer: "Kitchen cabinet resurfacing typically costs 30-50% less than a full kitchen renovation. The exact price depends on cabinet size, current condition, and finish type. We provide free quotes with no obligation."
+      question: "How much cheaper is resurfacing than a new kitchen?",
+      answer: "Cabinet resurfacing typically costs a fraction of a full kitchen renovation because the layout, carcasses, and benchtops stay in place."
     },
     {
-      question: "How long does kitchen cabinet resurfacing take?",
-      answer: "Most kitchen cabinet resurfacing projects take 5-10 days depending on the number of cabinets and complexity. We work efficiently to minimise disruption to your kitchen use."
+      question: "How long does cabinet resurfacing take?",
+      answer: "Most kitchens are completed within about a week, including preparation, priming, and 2-pack topcoats."
     },
     {
-      question: "What is 2-pack finish?",
-      answer: "2-pack finish (or two-pack paint) is a premium coating system consisting of a base coat and hardener that creates an extremely durable, high-gloss finish. It's more durable than standard paint and resistant to scratches, moisture, and daily wear."
-    },
-    {
-      question: "Can you change cabinet hardware?",
-      answer: "Yes! We can replace cabinet handles and hinges as part of the resurfacing project. New hardware can dramatically transform your kitchen's appearance at a minimal additional cost."
-    },
-    {
-      question: "What colours are available?",
-      answer: "We can match virtually any colour you desire. Popular choices include classic whites, soft greys, deep blacks, and natural wood tones. Our colour consultants will help you choose the perfect finish for your kitchen style."
+      question: "Is a 2-pack finish durable in a kitchen?",
+      answer: "Yes. 2-pack polyurethane is a hard-wearing, wipeable finish designed for high-use surfaces like kitchen cabinetry."
     }
   ];
 

@@ -37,7 +37,7 @@
 **Coastal Kingston:** Aspendale, Aspendale Gardens, Chelsea, Chelsea Heights, Edithvale, Bonbeach, Carrum, Patterson Lakes, Seaford, Braeside, Waterways
 **Inner City & North:** Carlton, Fitzroy, Collingwood, Richmond, Northcote, Brunswick, Thornbury, Elsternwick, Elwood, St Kilda, Albert Park, Port Melbourne, South Melbourne
 **Eastern Suburbs:** Donvale, Box Hill, Doncaster, Croydon, Ringwood, Templestowe, Wheelers Hill, Glen Waverley
-**Mornington Peninsula:** Frankston, Frankston South, Mount Eliza, Mornington, Mount Martha, Dromana, Rosebud, Safety Beach, Rye
+**Mornington Peninsula:** Frankston, Frankston South, Mount Eliza, Mornington, Mount Martha, Dromana, Rosebud, Safety Beach, Rye, Sorrento, Somerville
 
 ## Suburb Pages
 
@@ -123,6 +123,8 @@
 - [Safety Beach Painters](https://jetblackpainting.com/painter-safety-beach/)
 - [Sandringham Painters](https://jetblackpainting.com/painter-sandringham/)
 - [Seaford Painters](https://jetblackpainting.com/painter-seaford/)
+- [Somerville Painters](https://jetblackpainting.com/painter-somerville/)
+- [Sorrento Painters](https://jetblackpainting.com/painter-sorrento/)
 - [South Melbourne Painters](https://jetblackpainting.com/painter-south-melbourne/)
 - [South Yarra Painters](https://jetblackpainting.com/painter-south-yarra/)
 - [St Kilda Painters](https://jetblackpainting.com/painter-st-kilda/)

@@ -121,6 +121,8 @@ const PATH_REDIRECTS = {
   "/painters-rye":                  "/painter-rye/",
   "/painters-hampton-park":         "/painter-hampton-park/",
   "/painters-endeavour-hills":      "/painter-endeavour-hills/",
+  "/painters-sorrento":             "/painter-sorrento/",
+  "/painters-somerville":           "/painter-somerville/",
 
   // Legacy hash-anchor routes (rendered Home, treated as duplicate by Google)
   "/about":                         "/",

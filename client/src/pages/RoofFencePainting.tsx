@@ -32,20 +32,16 @@ export default function RoofFencePainting() {
 
   const faqs = [
     {
-      question: "How long does roof painting take?",
-      answer: "Most roof painting projects take 2-5 days depending on roof size and complexity. We work efficiently while maintaining safety standards and quality finishes."
+      question: "Can you do the roof and fences in one project?",
+      answer: "Yes. We regularly quote roof and fence painting together as a combined exterior refresh."
     },
     {
-      question: "What types of roofs can you paint?",
-      answer: "We paint all roof types including metal roofing, ceramic tiles, concrete tiles, asphalt shingles, and flat roofs. Our team has experience with heritage roofs and modern materials."
+      question: "Do you stain fences as well as paint them?",
+      answer: "Yes. Depending on the timber and the look you want, we can apply paint systems or exterior stains."
     },
     {
-      question: "How long will roof paint last?",
-      answer: "Quality roof paint typically lasts 10-15 years depending on weather exposure and maintenance. Our premium coatings provide excellent UV protection and weather resistance."
-    },
-    {
-      question: "Do you paint fences too?",
-      answer: "Yes! We provide complete fence painting and staining services. We can paint timber, colorbond, and composite fences with durable finishes that withstand Melbourne's weather."
+      question: "How long does fence painting last?",
+      answer: "With proper preparation and exterior-grade products, fence coatings typically last 5–10 years depending on exposure."
     }
   ];
 

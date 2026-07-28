@@ -776,9 +776,9 @@ const servicePages = [
       "We use exterior-grade Dulux and Taubmans systems selected for the substrate and exposure, backed by a 5-year workmanship guarantee and $10 million public liability insurance.",
     ],
     faqs: [
-      { question: "What time of year is best for exterior painting in Melbourne?", answer: "Exterior painting is possible most of the year in Melbourne. We schedule around weather and use coatings suited to the season's temperature and humidity." },
-      { question: "How long does an exterior repaint last?", answer: "With proper preparation and premium coatings, a Melbourne exterior repaint typically lasts 10 years or more." },
-      { question: "Do you paint two-storey homes?", answer: "Yes. We paint single and multi-storey homes using ladders, scaffolding, or elevated work platforms as required." },
+      { question: "How often should I repaint my home's exterior in Melbourne?", answer: "Most Melbourne homes need an exterior repaint every 7 to 10 years, though coastal and heavily sun-exposed properties can need it sooner. Weatherboard and timber usually need attention before rendered or brick surfaces. During your free quote we'll assess the current condition and give you an honest recommendation." },
+      { question: "What preparation is included in your exterior painting?", answer: "Proper preparation is where a lasting exterior finish is won or lost, so it's always included in our quote — never added later. That means pressure washing, scraping and sanding back flaking paint, filling and repairing surfaces, spot-priming bare timber and metal, and caulking gaps before any topcoats go on." },
+      { question: "What time of year is best for exterior painting in Melbourne?", answer: "Spring and autumn are ideal, but with Melbourne's variable weather we paint year-round by working to the conditions — applying coatings in suitable temperatures and humidity and allowing proper drying between coats. We simply schedule around wet spells so your finish cures correctly." },
     ],
   },
   {
@@ -802,9 +802,9 @@ const servicePages = [
       "All roof work is completed safely and is covered by our 5-year workmanship guarantee and $10 million public liability insurance.",
     ],
     faqs: [
-      { question: "How much longer will my roof last after painting?", answer: "A properly prepared and coated roof typically gains 10–15 years of life compared with an untreated roof." },
-      { question: "Can you change my roof colour?", answer: "Yes. Roof painting is an opportunity to update the roof colour, including modern heat-reflective options." },
-      { question: "Do you paint both tile and metal roofs?", answer: "Yes. We restore and paint concrete tile, terracotta (where suitable), metal, and Colorbond roofs across Melbourne." },
+      { question: "How long does a professional roof painting last?", answer: "A properly prepared and coated roof typically lasts 10 to 15 years before it needs redoing. The key is preparation — cleaning, rust treatment, repairs and the right primer — followed by quality membrane or roof coatings applied at the correct thickness. We include all of that in every roof painting quote." },
+      { question: "What roof types can you paint?", answer: "We paint and restore all common Melbourne roof types, including Colorbond and Zincalume metal roofing, concrete and terracotta tiles, and cement sheet. Each surface needs a specific preparation and coating system, and we match the right one to your roof so the finish bonds properly and lasts." },
+      { question: "Can roof painting help keep my home cooler?", answer: "Yes. Lighter colours and modern heat-reflective roof coatings can reduce how much heat your roof absorbs, helping keep the home more comfortable in Melbourne summers and easing the load on cooling. We're happy to recommend suitable heat-reflective options during your quote." },
     ],
   },
   {
@@ -934,9 +934,10 @@ const servicePages = [
       "We understand real estate timelines and work to your campaign and settlement dates, coordinating with agents and stylists so the property is ready for photography and the first open home — backed by a 5-year workmanship guarantee and $10 million public liability insurance.",
     ],
     faqs: [
-      { question: "Do you work directly with real estate agents and vendors?", answer: "Yes. We coordinate directly with agents, vendors and stylists on quotes, access, scheduling and invoicing so the repaint is finished on time for photography and the first open home." },
-      { question: "How quickly can you paint a property before it goes on the market?", answer: "Most pre-sale and pre-lease repaints are completed within a few days to a week, scheduled around your campaign dates and settlement deadlines." },
-      { question: "What colours work best for selling or leasing a property?", answer: "Warm whites and soft, broad-appeal neutrals photograph well and help the widest range of buyers and tenants. We provide colour consultation to suit the property." },
+      { question: "Do you work directly with real estate agents and vendors?", answer: "Yes. We regularly coordinate directly with real estate agents, vendors and property stylists across Melbourne — handling quotes, access, scheduling and invoicing so the repaint is finished on time for photography, styling and the first open home." },
+      { question: "How quickly can you paint a property before it goes on the market?", answer: "Most pre-sale and pre-lease repaints are completed within a few days to a week, depending on the size and scope. We build the schedule around your campaign dates and settlement deadlines so the property is ready when it needs to be." },
+      { question: "What colours work best for selling or leasing a property?", answer: "Warm whites and soft, broad-appeal neutrals photograph well and help the widest range of buyers and tenants picture themselves in the home. We provide colour consultation to choose a scheme that suits the property and maximises presentation." },
+      { question: "Is painting worth it before selling a property?", answer: "In most cases yes. A professional repaint is one of the highest-return improvements before a sale — it addresses scuffs, dated colours and tired façades that buyers otherwise price against you, and lifts the quality of listing photography and inspections." },
     ],
   },
   {
@@ -960,9 +961,10 @@ const servicePages = [
       "Committees and managers need clarity and confidence, so every project comes with a detailed written scope, transparent pricing, $10 million public liability insurance and a clear schedule — delivered with minimal disruption to residents and backed by a 5-year workmanship guarantee.",
     ],
     faqs: [
-      { question: "Do you work with owners corporations and strata managers?", answer: "Yes. We work directly with owners corporations, body corporate committees and strata managers, providing detailed quotes, scopes, insurance documentation and clear schedules." },
-      { question: "What areas of a unit complex do you paint?", answer: "All common property — entry lobbies, hallways, stairwells, car parks, external façades, balconies, eaves and shared amenities — as a full repaint or a staged maintenance program." },
-      { question: "How do you minimise disruption to residents?", answer: "We plan works around residents, keep access ways safe and open, use low-odour products in occupied buildings, and communicate the schedule clearly in advance." },
+      { question: "Do you work with owners corporations and strata managers?", answer: "Yes. We regularly work directly with owners corporations, body corporate committees and strata managers across Melbourne — providing detailed quotes, scopes of work, insurance documentation and clear schedules so committees can approve and plan the works with confidence." },
+      { question: "What areas of an apartment or unit complex do you paint?", answer: "We paint all common property, including entry lobbies, hallways and corridors, stairwells, car parks, external façades and rendered walls, balconies, eaves and shared amenities. We can quote a full repaint or a staged maintenance program across multiple buildings." },
+      { question: "How do you minimise disruption to residents?", answer: "We plan the work around residents and tenants — keeping access ways safe and open, staging areas so entries and stairwells remain usable, using low-odour products in occupied buildings, and communicating the schedule clearly in advance so everyone knows what to expect." },
+      { question: "Are you insured for body corporate and strata work?", answer: "Absolutely. Jetblack Painting carries $10 million public liability insurance and follows proper site safety and access procedures. We're happy to provide insurance certificates, safe work documentation and detailed scopes for committees and building managers before work begins." },
     ],
   },
 ];

@@ -150,33 +150,6 @@ export default {
     // target and to keep re-checking the old URL. That is what fills the "Page
     // with redirect" and "Redirect error" buckets in Search Console. Issue the
     // 301 ourselves, before the assets binding gets a chance to 307.
-    // Cloudflare injects a "Managed content" block into robots.txt that carries
-    // Disallow: / for GPTBot, ClaudeBot, Google-Extended, CCBot, Bytespider,
-    // Amazonbot, Applebot-Extended and meta-externalagent — the exact crawlers
-    // this site's own robots.txt and llms.txt go out of their way to welcome.
-    //
-    // If the injection happens before the worker sees the response, stripping it
-    // here restores the file we actually ship. If it happens after, this is a
-    // no-op and the block has to be turned off in the Cloudflare dashboard
-    // (Security -> Bots / AI Crawl Control). Serving our own file either way
-    // means the deployed robots.txt is never worse than the one in the repo.
-    if (url.pathname === "/robots.txt") {
-      const assetResponse = await env.ASSETS.fetch(new URL("/robots.txt", url.origin));
-      const body = await assetResponse.text();
-      const cleaned = body
-        .replace(/#+\s*BEGIN Cloudflare Managed content[\s\S]*?#+\s*END Cloudflare Managed Content\s*/i, "")
-        .replace(/^Content-Signal:.*$\n?/gim, "")
-        .trimStart();
-      return new Response(cleaned, {
-        status: 200,
-        headers: {
-          "Content-Type": "text/plain; charset=utf-8",
-          "Cache-Control": "public, max-age=300",
-          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
-        },
-      });
-    }
-
     const isFileRequest = /\.[a-z0-9]+$/i.test(url.pathname);
     const slashed = url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`;
     // Exact match covers extensionless files such as the Search Console

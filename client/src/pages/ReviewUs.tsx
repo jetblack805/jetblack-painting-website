@@ -9,7 +9,7 @@ export default function ReviewUs() {
   const [copied, setCopied] = useState(false);
   
   // Replace this with your actual Google review link from GBP
-  const googleReviewLink = "https://g.page/r/CVqwwFTLEReDEBM/review";
+  const googleReviewLink = "https://g.page/r/CS0L-iKiqJlHEBM/review";
   
   const handleCopy = () => {
     navigator.clipboard.writeText(googleReviewLink);

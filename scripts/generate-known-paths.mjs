@@ -27,8 +27,11 @@ function collect(dir, prefix = "") {
     // it has to be known or the file 404s after the hop. Both forms are
     // recorded because the worker's page check appends a trailing slash.
     if (entry.isFile() && entry.name.endsWith(".html") && entry.name !== "index.html") {
-      const bare = route.slice(0, -".html".length);
-      found.push(`${bare}/`);
+      // Recorded WITHOUT a trailing slash: this is a file, not a directory, and
+      // the extensionless form is the URL it is actually served at. Adding the
+      // slash form here would make the worker 301 /foo to /foo/, which the
+      // assets binding then redirects back to /foo — a redirect loop.
+      found.push(route.slice(0, -".html".length));
       continue;
     }
 

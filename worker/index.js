@@ -144,6 +144,24 @@ export default {
       return Response.redirect(`${url.origin}${target}`, 301);
     }
 
+    // Canonical URLs on this site all end in a slash. Left to itself, the assets
+    // binding normalises /painter-x to /painter-x/ with a 307 — a *temporary*
+    // redirect, which tells Google not to consolidate ranking signals onto the
+    // target and to keep re-checking the old URL. That is what fills the "Page
+    // with redirect" and "Redirect error" buckets in Search Console. Issue the
+    // 301 ourselves, before the assets binding gets a chance to 307.
+    const isFileRequest = /\.[a-z0-9]+$/i.test(url.pathname);
+    const slashed = url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`;
+    // Exact match covers extensionless files such as the Search Console
+    // verification file, which is served at /googlebc9e... with no trailing
+    // slash. Those must never be redirected to a slash form.
+    const isKnownExact = KNOWN_PATHS.has(url.pathname);
+    const isKnownPage = isKnownExact || KNOWN_PATHS.has(slashed);
+
+    if (!isFileRequest && !isKnownExact && KNOWN_PATHS.has(slashed) && !url.pathname.endsWith("/")) {
+      return Response.redirect(`${url.origin}${slashed}${url.search}${url.hash}`, 301);
+    }
+
     const response = await env.ASSETS.fetch(request);
     const headers = new Headers(response.headers);
     headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
@@ -171,14 +189,7 @@ export default {
     //
     // Deliberately fails open: if KNOWN_PATHS is ever empty — a broken or skipped
     // generator run — every path stays 200 rather than 404-ing the whole site.
-    const hasFileExtension = /\.[a-z0-9]+$/i.test(pathname);
-    const asPage = pathname.endsWith("/") ? pathname : `${pathname}/`;
-    if (
-      KNOWN_PATHS.size > 0 &&
-      response.status === 200 &&
-      !hasFileExtension &&
-      !KNOWN_PATHS.has(asPage)
-    ) {
+    if (KNOWN_PATHS.size > 0 && response.status === 200 && !isFileRequest && !isKnownPage) {
       return new Response(response.body, { status: 404, statusText: "Not Found", headers });
     }
 

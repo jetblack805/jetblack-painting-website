@@ -12,7 +12,7 @@ export const KNOWN_PATHS = new Set([
   "/blog/mould-remediation-painting-melbourne/",
   "/blog/prepare-home-for-painting/",
   "/faq/",
-  "/googlebc9e38933d2233a8/",
+  "/googlebc9e38933d2233a8",
   "/keysborough-painters/",
   "/painter-albert-park/",
   "/painter-armadale/",

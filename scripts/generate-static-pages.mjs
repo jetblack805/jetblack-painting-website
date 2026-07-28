@@ -721,10 +721,38 @@ const servicePages = [
       "Every interior project starts with thorough preparation: furniture protection, filling and sanding, gap sealing, and priming where needed, so the final coats look sharp and last longer.",
       "Jetblack Painting is a 5-star rated Melbourne painting business with 13+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every interior project.",
     ],
+    extraSections: [
+      {
+        type: "steps",
+        heading: "How an interior painting project runs",
+        items: [
+          { title: "Quote and colour consultation", body: "We walk through the home with you, note the condition of every wall and ceiling, and talk through colours, sheens and any feature walls. The written quote itemises rooms, surfaces, prep and the specific products, so there's no guessing later." },
+          { title: "Furniture protection and setup", body: "Furniture is moved to the centre of the room or covered in place, floors and fixtures are protected with drop sheets, and the work area is sealed off from the rest of the house to control dust." },
+          { title: "Patching, sanding and priming", body: "Nail holes, cracks, water stains and old repairs are filled and sanded back smooth. Bare plaster, water-stained patches and any repaired sections are spot-primed so they don't flash through the topcoats." },
+          { title: "Cutting-in and trim work", body: "Edges, corners, cornices and trims are cut in by hand before rolling the broad areas — this is what separates a sharp finish from a messy one, and it's where an experienced painter earns their keep." },
+          { title: "Topcoats", body: "Two full coats go on to the specified sheen — low-sheen or matt for most walls, semi-gloss or gloss enamel for trims and doors — with proper drying time between coats rather than rushing to finish early." },
+          { title: "Walkthrough and handover", body: "We walk the finished rooms with you, touch up anything that needs it, remove all protection and clean up thoroughly. The 5-year written workmanship guarantee applies from this point." },
+        ],
+      },
+      {
+        heading: "What drives the cost of interior painting in Melbourne",
+        paragraphs: [
+          "Room count and size are the obvious factors, but wall and ceiling condition usually matters more. A recently painted, sound surface is quick to prepare; a home with cracked cornices, water stains, old wallpaper or years of nail holes and patch repairs needs significant preparation before a topcoat goes anywhere near it — and that preparation is what makes the difference between a repaint that looks factory-fresh and one that shows every flaw underneath.",
+          "Colour change matters more than most homeowners expect. Going from a dark feature wall to a light colour, or covering a strong existing colour, often needs an extra coat or a tinted primer to get even coverage — that's more product and more labour than repainting a similar colour over itself.",
+          "Ceiling height and access change the job too: standard 2.4m ceilings are straightforward, while raked ceilings, stairwells and double-height living areas need scaffolding or specialised access equipment. Paint quality and finish level are the fourth factor — a washable low-sheen in a high-traffic hallway costs more to supply than a basic flat finish, and two-pack enamel on kitchen cabinetry or trims costs more again, but both last considerably longer.",
+          "We quote after seeing the property rather than publishing a rate per square metre, because none of this shows up in a number quoted sight-unseen. The site visit and written quote are free — call Jimmy on 0432 077 782.",
+        ],
+      },
+    ],
     faqs: [
-      { question: "How long does interior painting take?", answer: "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required." },
-      { question: "Do I need to move out during interior painting?", answer: "No. We stage the work room by room, use low-odour premium paints, and keep living areas usable throughout the project." },
-      { question: "Which paint brands do you use for interiors?", answer: "We use premium Australian brands including Dulux and Taubmans, matched to each surface and traffic level." },
+      { question: "How long does interior painting take?", answer: "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required. A single room is usually a day or two; a full home repaint is staged across a working week or more." },
+      { question: "Do I need to move out during interior painting?", answer: "No. We stage the work room by room, use low-odour premium paints, and keep living areas usable throughout the project. Most households stay in the home for the full job." },
+      { question: "Which paint brands do you use for interiors?", answer: "We use premium Australian brands including Dulux and Taubmans, matched to each surface and traffic level — washable low-sheen for living areas, durable enamels for trims and doors." },
+      { question: "How much does interior painting cost in Melbourne?", answer: "It depends on the number of rooms, the condition of the walls and ceilings, whether you're changing colour significantly, and the finish level you choose. Those factors move the price more than room size alone, so we quote after a site visit rather than a rate sight-unseen. Quotes are free — call 0432 077 782." },
+      { question: "Do you paint ceilings as well as walls?", answer: "Yes. Ceiling painting is included where specified — flat or low-sheen finishes are standard, and we address any cracking, water staining or previous patch repairs as part of the preparation." },
+      { question: "Can you match or change to a completely different colour?", answer: "Yes. Significant colour changes — especially dark to light — sometimes need a tinted primer or an extra coat for even coverage. We account for this in the quote so there are no surprises once the job starts." },
+      { question: "Do you paint rental properties between tenants?", answer: "Yes. We regularly repaint rental properties for landlords and property managers between tenancies, working to a fixed turnaround with durable, easy-clean finishes in neutral colours that suit the widest range of tenants." },
+      { question: "Can you help if I don't know what colours to choose?", answer: "Yes. Colour consultation is included with every quote — we look at the room's natural light, existing furniture and finishes, and talk through options rather than leaving you to guess from a paint chart." },
     ],
   },
   {

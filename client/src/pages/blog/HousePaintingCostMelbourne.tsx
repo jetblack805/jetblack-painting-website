@@ -5,6 +5,29 @@ import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
+const faqs = [
+  {
+    question: "How much does it cost to paint an average 3-bedroom house in Melbourne?",
+    answer:
+      "A whole-house interior repaint for a 3-bedroom home typically runs $5,000 to $12,000, depending on wall and ceiling condition, trim work, and the finish level chosen. That's for interior only — exterior painting is quoted separately based on the home's size and access.",
+  },
+  {
+    question: "Why do quotes vary so much between painters?",
+    answer:
+      "Surface condition, the number of coats needed, height and access requirements, and paint quality all move the price more than floor area alone. A quote that looks cheap often has less preparation built in, which is where paint failure usually starts.",
+  },
+  {
+    question: "Is a written, itemised quote necessary?",
+    answer:
+      "Yes. A proper quote should include a detailed written breakdown of costs, the paint brand and product specifications, a timeline, and warranty information. A one-line price with no scope makes it hard to compare against other quotes fairly.",
+  },
+  {
+    question: "Do you charge extra for scaffolding on multi-storey homes?",
+    answer:
+      "Yes, multi-storey homes that need scaffolding for safe access typically add $500 to $2,000 to the job, depending on the height and complexity of the property. This is itemised in your written quote rather than hidden in the total.",
+  },
+];
+
 export default function HousePaintingCostMelbourne() {
   return (
     <div className="min-h-screen">
@@ -20,6 +43,7 @@ export default function HousePaintingCostMelbourne() {
           datePublished: "2026-06-23",
           dateModified: "2026-07-26",
           articleSection: "Price Guide",
+          faqs,
         })}
       />
       <Navbar />
@@ -161,6 +185,16 @@ export default function HousePaintingCostMelbourne() {
               <li>Paint brand and product specifications</li>
               <li>Warranty information (5-year workmanship guarantee)</li>
             </ul>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Common Questions</h2>
+            <div className="space-y-6 mb-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <p className="text-[#B4B4B8]">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Why Choose Jetblack Painting?</h2>
             

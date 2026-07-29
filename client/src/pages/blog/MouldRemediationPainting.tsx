@@ -5,6 +5,29 @@ import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
+const faqs = [
+  {
+    question: "Can I just paint over mould instead of treating it?",
+    answer:
+      "No. Painting over mould without killing it first guarantees it comes back — usually within 3 to 12 months — turning a fresh paint job into a blotchy, failed surface. The mould spores are still there under the paint even if you can't see them.",
+  },
+  {
+    question: "How long does anti-mould paint last?",
+    answer:
+      "Properly treated and painted surfaces, where the moisture source has been fixed, typically stay mould-free for 5 to 10 years. High-moisture environments like poorly ventilated bathrooms may need retreatment sooner, around 3 to 5 years.",
+  },
+  {
+    question: "When should I call a professional instead of treating mould myself?",
+    answer:
+      "Call a professional when mould covers more than 1 square metre, it's on external render or masonry, it has returned after previous DIY treatment, there's visible substrate damage like soft plaster or rotted timber, or the moisture source is unclear.",
+  },
+  {
+    question: "What primer actually stops mould coming back?",
+    answer:
+      "Standard primers won't prevent regrowth. A dedicated anti-mould primer — we use Zinsser BIN Shellac Primer or Dulux Mouldshield Primer most often — seals the surface and includes fungicides that inhibit mould, which is essential on bathroom ceilings and external render with a history of mould.",
+  },
+];
+
 export default function MouldRemediationPainting() {
   return (
     <div className="min-h-screen">
@@ -20,6 +43,7 @@ export default function MouldRemediationPainting() {
           datePublished: "2026-07-17",
           dateModified: "2026-07-26",
           articleSection: "Guide",
+          faqs,
         })}
       />
       <Navbar />
@@ -188,6 +212,16 @@ export default function MouldRemediationPainting() {
               primer, and finish with the appropriate product for the surface and environment. Every job is backed by our
               5-year written workmanship guarantee.
             </p>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Common Questions</h2>
+            <div className="space-y-6 mb-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <p className="text-[#B4B4B8]">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="bg-[#0C0C0E] rounded-xl p-6 mt-8">
               <h3 className="text-xl font-bold text-[#EDEDEF] mb-3">Mould on Your Walls or Ceilings? Get a Free Quote.</h3>

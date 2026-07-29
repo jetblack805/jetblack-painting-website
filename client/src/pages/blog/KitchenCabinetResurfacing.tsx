@@ -5,6 +5,29 @@ import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
+const faqs = [
+  {
+    question: "How much can I save by resurfacing instead of replacing my kitchen?",
+    answer:
+      "Cabinet resurfacing typically costs $3,500 to $8,000 compared to $25,000 to $60,000+ for a full kitchen renovation — a saving of up to 85% — because your cabinet boxes, layout and benchtops stay in place.",
+  },
+  {
+    question: "Can any kitchen cabinets be resurfaced?",
+    answer:
+      "Resurfacing works well when the cabinet boxes are structurally sound, you're happy with the layout, and the cabinets are solid timber or quality MDF. If the boxes are water-damaged, warped, or made from deteriorating particleboard, replacement is the better option.",
+  },
+  {
+    question: "How long does cabinet resurfacing take?",
+    answer:
+      "Most kitchen cabinet resurfacing projects take 3 to 5 days, compared to 4 to 8 weeks for a full renovation, with far less disruption to your household in the meantime.",
+  },
+  {
+    question: "What finish do you use for cabinet resurfacing?",
+    answer:
+      "We use 2-pack polyurethane, the same professional-grade finish used on luxury new kitchens, sprayed on in a controlled environment after thorough sanding, cleaning and priming for a factory-quality result.",
+  },
+];
+
 export default function KitchenCabinetResurfacing() {
   return (
     <div className="min-h-screen">
@@ -20,6 +43,7 @@ export default function KitchenCabinetResurfacing() {
           datePublished: "2026-06-23",
           dateModified: "2026-07-26",
           articleSection: "Kitchen",
+          faqs,
         })}
       />
       <Navbar />
@@ -139,6 +163,16 @@ export default function KitchenCabinetResurfacing() {
               <li><strong>Sage Green</strong> — On-trend and pairs beautifully with timber benchtops</li>
               <li><strong>Two-tone</strong> — Light uppers with dark lowers for visual interest</li>
             </ul>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Common Questions</h2>
+            <div className="space-y-6 mb-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <p className="text-[#B4B4B8]">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="bg-[#0C0C0E] rounded-xl p-6 mt-8">
               <h3 className="text-xl font-bold text-[#EDEDEF] mb-3">Transform Your Kitchen Today</h3>

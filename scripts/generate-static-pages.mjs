@@ -1261,16 +1261,20 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "How much does house painting cost in Melbourne?",
-        answer: "Painting prices in Melbourne vary with the size of the job, access, the paint system and — most importantly — how much preparation is needed before the first coat. The biggest pricing factors are surface condition, the amount of repair or sanding required, the number of colours, and how accessible the work is for ladders, scaffolding and setup.",
+        question: "How much does it cost to paint an average 3-bedroom house in Melbourne?",
+        answer: "A whole-house interior repaint for a 3-bedroom home typically runs $5,000 to $12,000, depending on wall and ceiling condition, trim work, and the finish level chosen. That's for interior only — exterior painting is quoted separately based on the home's size and access.",
       },
       {
-        question: "Why does preparation affect the value of a painting quote?",
-        answer: "Cheaper quotes often cut preparation time, which can lead to poor adhesion, flashing, visible repairs or early failure. A better-value quote spells out the included preparation, the paint brand and system, and the full scope for trims, doors, ceilings, walls, fences, roofs or specialty finishes.",
+        question: "Why do quotes vary so much between painters?",
+        answer: "Surface condition, the number of coats needed, height and access requirements, and paint quality all move the price more than floor area alone. A quote that looks cheap often has less preparation built in, which is where paint failure usually starts.",
       },
       {
-        question: "How do I compare painting quotes properly?",
-        answer: "Check whether materials are included, whether surface repairs are allowed for, and how many coats are specified for the finish. Ask for a written scope so you can compare the real level of workmanship rather than just the headline price.",
+        question: "Is a written, itemised quote necessary?",
+        answer: "Yes. A proper quote should include a detailed written breakdown of costs, the paint brand and product specifications, a timeline, and warranty information. A one-line price with no scope makes it hard to compare against other quotes fairly.",
+      },
+      {
+        question: "Do you charge extra for scaffolding on multi-storey homes?",
+        answer: "Yes, multi-storey homes that need scaffolding for safe access typically add $500 to $2,000 to the job, depending on the height and complexity of the property. This is itemised in your written quote rather than hidden in the total.",
       },
     ],
   },
@@ -1316,16 +1320,20 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "How should I prepare my home before the painters arrive?",
-        answer: "Clear smaller décor items, fragile pieces and loose furniture wherever possible so the team can protect and access surfaces efficiently, and confirm room access, entry times, body corporate rules or alarm instructions before the project begins.",
+        question: "What's the best time of year to paint the exterior of a home in Melbourne?",
+        answer: "Exterior painting is best done between October and April when conditions are drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days, since they affect how the paint cures.",
       },
       {
-        question: "What decisions should I make before painting starts?",
-        answer: "Confirm colours, sheen levels and any accent walls before work starts to prevent delays. If repairs, timber rot, water damage or additional surfaces are discovered, agree on the updated scope before the painter proceeds.",
+        question: "Do I need to move all my furniture out before painting?",
+        answer: "No. Furniture just needs to be moved away from walls or into the centre of the room — we cover it with drop sheets along with the flooring. Most households stay in the home throughout an interior repaint.",
       },
       {
-        question: "How will a painting project affect daily life at home?",
-        answer: "Interior painting often makes some rooms unusable for short periods, while exterior projects can affect vehicle access, outdoor furniture and drying times. Good planning helps the painter keep momentum and helps you avoid unnecessary disruption.",
+        question: "How far back should garden beds be trimmed before exterior painting?",
+        answer: "About 30cm clearance from the walls gives our painters safe, unobstructed access to weatherboards, render or brick. It's worth doing this along with moving outdoor furniture and pot plants before we arrive.",
+      },
+      {
+        question: "What should I point out to the painter during the quote?",
+        answer: "Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Flagging these at the quote stage means the preparation work is accounted for in the price from the start.",
       },
     ],
   },
@@ -1362,16 +1370,20 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "When does kitchen cabinet resurfacing make sense?",
-        answer: "Resurfacing is ideal when the cabinet boxes are structurally sound and the goal is to modernise the finish, colour or overall presentation. It is typically faster, less disruptive and more cost-effective than a full replacement, especially for rental refreshes or value-focused improvements.",
+        question: "How much can I save by resurfacing instead of replacing my kitchen?",
+        answer: "Cabinet resurfacing typically costs $3,500 to $8,000 compared to $25,000 to $60,000+ for a full kitchen renovation — a saving of up to 85% — because your cabinet boxes, layout and benchtops stay in place.",
       },
       {
-        question: "When is replacing kitchen cabinets the better option?",
-        answer: "Replacement may be necessary if the cabinetry has water damage, a poor layout, failing hinges or hardware throughout, or a storage design that no longer suits how the kitchen is used. It also makes more sense when major plumbing, electrical or benchtop changes are already planned.",
+        question: "Can any kitchen cabinets be resurfaced?",
+        answer: "Resurfacing works well when the cabinet boxes are structurally sound, you're happy with the layout, and the cabinets are solid timber or quality MDF. If the boxes are water-damaged, warped, or made from deteriorating particleboard, replacement is the better option.",
       },
       {
-        question: "Does resurfacing give a durable, high-quality finish?",
-        answer: "Yes. High-quality resurfacing delivers a premium, hard-wearing finish when the preparation and coating system are done properly, especially with 2-pack or hard-wearing cabinet coatings.",
+        question: "How long does cabinet resurfacing take?",
+        answer: "Most kitchen cabinet resurfacing projects take 3 to 5 days, compared to 4 to 8 weeks for a full renovation, with far less disruption to your household in the meantime.",
+      },
+      {
+        question: "What finish do you use for cabinet resurfacing?",
+        answer: "We use 2-pack polyurethane, the same professional-grade finish used on luxury new kitchens, sprayed on in a controlled environment after thorough sanding, cleaning and priming for a factory-quality result.",
       },
     ],
   },
@@ -1433,16 +1445,20 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "Can you just paint over mould?",
-        answer: "No. Painting over mould without killing it first guarantees it returns within months and pushes through the new coating. You need to fix the moisture source, kill the mould, let the surface dry completely, and prime with an anti-mould primer before painting.",
+        question: "Can I just paint over mould instead of treating it?",
+        answer: "No. Painting over mould without killing it first guarantees it comes back — usually within 3 to 12 months — turning a fresh paint job into a blotchy, failed surface. The mould spores are still there under the paint even if you can't see them.",
       },
       {
         question: "How long does anti-mould paint last?",
-        answer: "Properly treated and painted surfaces typically resist mould for 5 to 10 years. High-moisture areas such as poorly ventilated bathrooms usually need attention again after 3 to 5 years because of how much moisture the space handles daily.",
+        answer: "Properly treated and painted surfaces, where the moisture source has been fixed, typically stay mould-free for 5 to 10 years. High-moisture environments like poorly ventilated bathrooms may need retreatment sooner, around 3 to 5 years.",
       },
       {
-        question: "When should I call a professional for mould?",
-        answer: "Call a professional when mould covers a large area, keeps returning after cleaning, causes staining that bleeds through fresh paint, or where there may be a hidden leak or structural moisture problem.",
+        question: "When should I call a professional instead of treating mould myself?",
+        answer: "Call a professional when mould covers more than 1 square metre, it's on external render or masonry, it has returned after previous DIY treatment, there's visible substrate damage like soft plaster or rotted timber, or the moisture source is unclear.",
+      },
+      {
+        question: "What primer actually stops mould coming back?",
+        answer: "Standard primers won't prevent regrowth. A dedicated anti-mould primer — we use Zinsser BIN Shellac Primer or Dulux Mouldshield Primer most often — seals the surface and includes fungicides that inhibit mould, which is essential on bathroom ceilings and external render with a history of mould.",
       },
     ],
   },

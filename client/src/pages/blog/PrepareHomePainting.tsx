@@ -30,6 +30,29 @@ const howToSchema = {
   ],
 };
 
+const faqs = [
+  {
+    question: "What's the best time of year to paint the exterior of a home in Melbourne?",
+    answer:
+      "Exterior painting is best done between October and April when conditions are drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days, since they affect how the paint cures.",
+  },
+  {
+    question: "Do I need to move all my furniture out before painting?",
+    answer:
+      "No. Furniture just needs to be moved away from walls or into the centre of the room — we cover it with drop sheets along with the flooring. Most households stay in the home throughout an interior repaint.",
+  },
+  {
+    question: "How far back should garden beds be trimmed before exterior painting?",
+    answer:
+      "About 30cm clearance from the walls gives our painters safe, unobstructed access to weatherboards, render or brick. It's worth doing this along with moving outdoor furniture and pot plants before we arrive.",
+  },
+  {
+    question: "What should I point out to the painter during the quote?",
+    answer:
+      "Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Flagging these at the quote stage means the preparation work is accounted for in the price from the start.",
+  },
+];
+
 export default function PrepareHomePainting() {
   return (
     <div className="min-h-screen">
@@ -46,6 +69,7 @@ export default function PrepareHomePainting() {
           dateModified: "2026-07-26",
           articleSection: "Guide",
           extra: [howToSchema],
+          faqs,
         })}
       />
       <Navbar />
@@ -144,6 +168,16 @@ export default function PrepareHomePainting() {
               for homes in coastal areas like <Link href="/painter-brighton" className="text-[#D0A050] hover:underline">Brighton</Link> and 
               <Link href="/painter-hampton" className="text-[#D0A050] hover:underline"> Hampton</Link> where salt air can affect drying times.
             </p>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Common Questions</h2>
+            <div className="space-y-6 mb-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <p className="text-[#B4B4B8]">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="bg-[#0C0C0E] rounded-xl p-6 mt-8">
               <h3 className="text-xl font-bold text-[#EDEDEF] mb-3">Book Your Free Quote</h3>

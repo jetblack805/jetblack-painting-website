@@ -5,6 +5,29 @@ import { articleSchema } from "@/lib/articleSchema";
 import { Link } from "wouter";
 import { Calendar, User, Clock, ArrowLeft } from "lucide-react";
 
+const faqs = [
+  {
+    question: "What are the best interior paint colours for Melbourne homes in 2026?",
+    answer:
+      "Warm terracotta and burnt orange, deep forest green, soft blush and warm mauve, and charcoal black are the standout 2026 interior trends, while creamy whites and natural off-whites remain the timeless choice for main living areas.",
+  },
+  {
+    question: "What exterior paint colours suit Melbourne conditions in 2026?",
+    answer:
+      "Charcoal and dark greys, warm terracotta and earthy reds on heritage homes, greige and warm grey-beige, and cool whites with contrasting dark trim all perform well. Melbourne exteriors face strong UV, moisture and temperature swings, so the coating system matters as much as the colour.",
+  },
+  {
+    question: "How do I choose a paint colour with confidence?",
+    answer:
+      "Test large sample patches on more than one wall or elevation and look at them at different times of day, because Melbourne light changes dramatically through the day and between seasons. Let the home's architecture guide the palette, and check heritage overlay requirements before committing to an exterior scheme.",
+  },
+  {
+    question: "Does Jetblack Painting help with colour selection?",
+    answer:
+      "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 13+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
+  },
+];
+
 export default function BestPaintColours2026() {
   const blogSchema = articleSchema({
     headline: "Best Paint Colours for Melbourne Homes in 2026",
@@ -14,6 +37,7 @@ export default function BestPaintColours2026() {
     datePublished: "2026-06-23",
     dateModified: "2026-07-26",
     articleSection: "Design Tips",
+    faqs,
   });
 
   return (
@@ -170,6 +194,16 @@ export default function BestPaintColours2026() {
               <li><strong>Use premium quality paint</strong> — we use Dulux and Taubmans for superior coverage, durability, and colour consistency</li>
               <li><strong>Pair colours thoughtfully</strong> — complementary trim colours amplify your main colour choice</li>
             </ul>
+
+            <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Common Questions</h2>
+            <div className="space-y-6 mb-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <p className="text-[#B4B4B8]">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Free Colour Consultation with Jetblack Painting</h2>
             

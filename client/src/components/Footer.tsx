@@ -2,7 +2,7 @@
  * Design: Bold Contrast — Footer on jet black background
  */
 import { Phone, Instagram, MapPin, Youtube, Facebook } from "lucide-react";
-import LOGO_URL from "@/assets/images/logo.webp";
+import LOGO_URL from "@/assets/images/logo-dark-bg.png";
 
 // lucide-react has no TikTok glyph, so provide one inline.
 function TikTokIcon({ className }: { className?: string }) {
@@ -127,7 +127,7 @@ export default function Footer() {
             <img
               src={LOGO_URL}
               alt="Jetblack Painting"
-              className="h-12 w-48 rounded object-cover object-center mb-5"
+              className="h-12 w-auto mb-5"
             />
             <div className="w-44 h-px bg-[#D0A050]/60 mb-4" aria-hidden="true" />
             <p className="text-[#D0A050] text-[11px] font-bold tracking-[0.3em] uppercase mb-4">Quality. Precision. Integrity.</p>

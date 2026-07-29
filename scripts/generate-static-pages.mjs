@@ -203,7 +203,9 @@ function localBusinessSchema() {
       { "@type": "City", "name": "Hampton Park" },
       { "@type": "City", "name": "Endeavour Hills" },
       { "@type": "City", "name": "Sorrento" },
-      { "@type": "City", "name": "Somerville" }
+      { "@type": "City", "name": "Somerville" },
+      { "@type": "City", "name": "Clyde" },
+      { "@type": "City", "name": "Hastings" }
     ],
     "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
     "openingHoursSpecification": {
@@ -633,6 +635,8 @@ const allSuburbPages = [
   { route: "/painter-endeavour-hills", source: "EndeavourHillsPainters.tsx" },
   { route: "/painter-sorrento", source: "SorrentoPainters.tsx" },
   { route: "/painter-somerville", source: "SomervillePainters.tsx" },
+  { route: "/painter-clyde", source: "ClydePainters.tsx" },
+  { route: "/painter-hastings", source: "HastingsPainters.tsx" },
 ];
 
 // Built before any page is written, because every page's footer links to the

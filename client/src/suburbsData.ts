@@ -546,6 +546,20 @@ export const SUBURBS_DATA = {
     description: "Fast-growing southern Mornington Peninsula corridor suburb of brick veneer family homes, new estates and acreage properties",
     areasServed: ["Somerville"]
   },
+  clyde: {
+    name: "Clyde",
+    coordinates: { lat: -38.1706, lng: 145.3336 },
+    postcode: "3978",
+    description: "One of Melbourne's fastest-growing City of Casey suburbs, dominated by brand-new estate homes and handover-stage builds",
+    areasServed: ["Clyde"]
+  },
+  hastings: {
+    name: "Hastings",
+    coordinates: { lat: -38.3050, lng: 145.1860 },
+    postcode: "3915",
+    description: "Western Port coastal town on the Mornington Peninsula with weatherboard cottages, brick veneer homes and a working port heritage",
+    areasServed: ["Hastings"]
+  },
 };
 
 export type SuburbKey = keyof typeof SUBURBS_DATA;

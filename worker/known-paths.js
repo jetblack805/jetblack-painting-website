@@ -3,6 +3,9 @@
 // instead of Cloudflare's SPA fallback 200 for URLs that do not exist.
 export const KNOWN_PATHS = new Set([
   "/",
+  "/.htaccess",
+  "/BingSiteAuth.xml",
+  "/apple-touch-icon.png",
   "/blog/",
   "/blog/best-paint-colours-melbourne-2025/",
   "/blog/house-painting-cost-melbourne/",
@@ -12,8 +15,18 @@ export const KNOWN_PATHS = new Set([
   "/blog/mould-remediation-painting-melbourne/",
   "/blog/prepare-home-for-painting/",
   "/faq/",
+  "/favicon.png",
   "/googlebc9e38933d2233a8",
+  "/hero-navy-900.webp",
+  "/hero-navy.jpg",
+  "/hero-navy.webp",
+  "/hero-poolhouse.jpg",
+  "/jetblack_sitemap_fix.zip",
   "/keysborough-painters/",
+  "/llms.txt",
+  "/local-seo.json",
+  "/logo.jpg",
+  "/og-image.jpg",
   "/painter-albert-park/",
   "/painter-armadale/",
   "/painter-aspendale-gardens/",
@@ -108,6 +121,7 @@ export const KNOWN_PATHS = new Set([
   "/painter-wheelers-hill/",
   "/painter-windsor/",
   "/review-us/",
+  "/robots.txt",
   "/services/body-corporate-painting/",
   "/services/commercial-painting/",
   "/services/exterior-painting/",
@@ -115,5 +129,6 @@ export const KNOWN_PATHS = new Set([
   "/services/kitchen-cabinet-resurfacing/",
   "/services/real-estate-painting/",
   "/services/roof-fence-painting/",
-  "/services/roof-painting/"
+  "/services/roof-painting/",
+  "/sitemap.xml"
 ]);

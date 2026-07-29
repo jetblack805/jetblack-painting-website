@@ -152,7 +152,14 @@ export default {
     // target and to keep re-checking the old URL. That is what fills the "Page
     // with redirect" and "Redirect error" buckets in Search Console. Issue the
     // 301 ourselves, before the assets binding gets a chance to 307.
-    const isFileRequest = /\.[a-z0-9]+$/i.test(url.pathname);
+    // Vite's hashed JS/CSS/font bundles live under /assets/ with a content
+    // hash in the filename that isn't known until `vite build` runs — which
+    // happens *after* generate-known-paths.mjs, so these can't be enumerated
+    // ahead of time the way every other static file can. This is the only
+    // path prefix exempted from the known-paths check below; every other
+    // extensioned path (including ones that only look like real files, e.g.
+    // /openapi.json, /.well-known/mcp.json) is checked like any other URL.
+    const isBuildAsset = url.pathname.startsWith("/assets/");
     const slashed = url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`;
     // Exact match covers extensionless files such as the Search Console
     // verification file, which is served at /googlebc9e... with no trailing
@@ -160,7 +167,7 @@ export default {
     const isKnownExact = KNOWN_PATHS.has(url.pathname);
     const isKnownPage = isKnownExact || KNOWN_PATHS.has(slashed);
 
-    if (!isFileRequest && !isKnownExact && KNOWN_PATHS.has(slashed) && !url.pathname.endsWith("/")) {
+    if (!isBuildAsset && !isKnownExact && KNOWN_PATHS.has(slashed) && !url.pathname.endsWith("/")) {
       return Response.redirect(`${url.origin}${slashed}${url.search}${url.hash}`, 301);
     }
 
@@ -191,7 +198,7 @@ export default {
     //
     // Deliberately fails open: if KNOWN_PATHS is ever empty — a broken or skipped
     // generator run — every path stays 200 rather than 404-ing the whole site.
-    if (KNOWN_PATHS.size > 0 && response.status === 200 && !isFileRequest && !isKnownPage) {
+    if (KNOWN_PATHS.size > 0 && response.status === 200 && !isBuildAsset && !isKnownPage) {
       return new Response(response.body, { status: 404, statusText: "Not Found", headers });
     }
 

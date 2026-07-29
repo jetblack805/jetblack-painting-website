@@ -43,6 +43,45 @@ export default function ExteriorPainting() {
       question: "What time of year is best for exterior painting in Melbourne?",
       answer: "Spring and autumn are ideal, but with Melbourne's variable weather we paint year-round by working to the conditions — applying coatings in suitable temperatures and humidity and allowing proper drying between coats. We simply schedule around wet spells so your finish cures correctly.",
     },
+    {
+      question: "How much does exterior painting cost in Melbourne?",
+      answer: "The size of the house is only part of it — substrate condition, the number of storeys, and how much timber repair or colour change is needed all move the price more than square metreage alone. A single-storey weatherboard in good condition costs far less to repaint than a two-storey render job with cracked and flaking paint. We quote after a free site visit rather than a rate sight-unseen — call 0432 077 782.",
+    },
+    {
+      question: "What paint brands do you use for exterior painting?",
+      answer: "Premium exterior-grade Dulux and Taubmans systems, matched to the substrate and its exposure — weatherproof acrylics for weatherboard and render, and appropriate primers for bare timber, previously unpainted brick, and metal fascias and gutters. The specific products are named in your written quote.",
+    },
+    {
+      question: "Do you paint weatherboard homes differently to rendered or brick homes?",
+      answer: "Yes. Weatherboard needs more preparation — sanding back flaking coatings, replacing or filling damaged boards, and priming bare timber — because timber moves with moisture and needs a flexible, well-adhered system. Render and brick are usually more stable but can chalk or crack over time, and previously unpainted masonry needs a specific sealer. We assess the actual substrate during the quote rather than treating every exterior the same.",
+    },
+  ];
+
+  const projectSteps = [
+    {
+      title: "Quote and assessment",
+      body: "We walk the exterior with you, checking the condition of weatherboard, render, brick and trim, noting access and height requirements, and talking through colour options. The written quote itemises the surfaces, preparation and specific products before any work begins.",
+    },
+    {
+      title: "Pressure washing",
+      body: "Every surface is pressure washed to remove dirt, mould, chalking paint and loose debris — a critical first step, since a new coat applied over a dirty or chalky surface never bonds properly no matter how good the paint is.",
+    },
+    {
+      title: "Scraping, sanding and repairs",
+      body: "Failing paint is scraped and sanded back to a sound edge so the new coating doesn't telegraph old cracks. Damaged weatherboards are repaired or replaced, and cracks in render are filled before anything else happens.",
+    },
+    {
+      title: "Priming and caulking",
+      body: "Bare timber, repaired sections and any previously unpainted metal are spot-primed, and gaps and joints are caulked to keep water out. This step is what stops a repaint failing early at the edges and joins.",
+    },
+    {
+      title: "Topcoats",
+      body: "Two full coats of exterior-grade Dulux or Taubmans product go on to the specified sheen, with proper drying time between coats and around Melbourne's weather rather than rushing to finish early.",
+    },
+    {
+      title: "Walkthrough and handover",
+      body: "We walk the finished exterior with you, touch up anything that needs it, and clean up the site completely. The 5-year written workmanship guarantee applies from this point.",
+    },
   ];
 
   return (
@@ -151,6 +190,46 @@ export default function ExteriorPainting() {
                 </Link>
               ))}
             </div>
+          </motion.div>
+
+          {/* How a project runs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">How an Exterior Painting Project Runs</h2>
+            <div className="space-y-6">
+              {projectSteps.map((step, i) => (
+                <div key={i} className="border-b border-[#222227] pb-4">
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{step.title}</h3>
+                  <p className="text-[#B4B4B8]">{step.body}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Cost drivers */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">What Drives the Cost of Exterior Painting in Melbourne</h2>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              Substrate condition is usually the biggest factor. A weatherboard home with sound, well-adhered paint is quick to prepare; one with flaking coatings, rotten or damaged boards, and years of moisture damage needs significant repair and priming before a single topcoat goes on. Rendered and brick homes are generally more stable but can need crack repair, chalk removal, or a sealer if they've never been painted before.
+            </p>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              Height and access are the second driver. A single-storey home with clear ground access is straightforward; a two-storey house, steep gables, or a home on a slope needs scaffolding or elevated access equipment, and that adds real cost and time.
+            </p>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              Colour change and the number of coats needed matter too — going from a dark colour to a light one, or covering chalky, faded paint, sometimes needs an extra coat for even coverage. Coastal and heavily sun-exposed properties also benefit from a higher-grade weather-resistant system, which costs more to supply but holds up considerably longer against Melbourne's UV and salt exposure.
+            </p>
+            <p className="text-[#B4B4B8] leading-relaxed">
+              We don't publish a rate per square metre, because a number quoted without seeing the substrate is a number that changes later. The site visit and written quote are free — call Jimmy on 0432 077 782.
+            </p>
           </motion.div>
 
           {/* FAQ */}

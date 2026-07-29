@@ -1,6 +1,17 @@
 # Jetblack Painting — robots.txt
 # https://jetblackpainting.com
 
+# Content Signals (https://contentsignals.org/) — explicit preferences for how
+# AI systems may use this content, separate from crawl permission below.
+# search:   included in AI-powered search results — yes, that is the goal.
+# ai-input: used for real-time grounding/citation when an assistant answers a
+#           direct question (e.g. "who are good painters in Melbourne?") — yes,
+#           this is the actual mechanism by which the site gets recommended.
+# ai-train: baked into a future model's weights during training — no. This is
+#           a separate, much longer-horizon use from being cited in an answer
+#           today, and opting out of it doesn't affect real-time visibility.
+Content-Signal: search=yes, ai-train=no, ai-input=yes
+
 # ── Default: allow all crawlers everywhere except the API ─────────────────────
 User-agent: *
 Allow: /

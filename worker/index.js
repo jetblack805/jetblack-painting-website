@@ -186,6 +186,21 @@ export default {
       headers.set("Cache-Control", "public, max-age=2592000");
     }
 
+    // RFC 8288 Link headers on real HTML pages, pointing agents at resources
+    // that actually exist: the canonical URL (same value as the in-page meta
+    // tag, exposed here too for agents that read headers without parsing
+    // HTML), llms.txt (the AI-guidance document this site publishes), and the
+    // FAQ page (registered "help" relation). Deliberately does not advertise
+    // an api-catalog, service-desc, or similar RFC 9727 relation — this site
+    // has no public API for those to describe.
+    if (response.status === 200 && (response.headers.get("content-type") || "").includes("text/html")) {
+      const canonicalUrl = `${url.origin}${slashed}`;
+      headers.set(
+        "Link",
+        `<${canonicalUrl}>; rel="canonical", <${url.origin}/llms.txt>; rel="describedby", <${url.origin}/faq/>; rel="help"`,
+      );
+    }
+
     // Cloudflare's SPA fallback answers *every* unmatched path with index.html
     // and HTTP 200. That turns any bad URL pointing at this domain — old Manus
     // paths, /au/, typos, scraper noise — into something Google treats as a real

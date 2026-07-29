@@ -35,6 +35,23 @@ function collect(dir, prefix = "") {
       continue;
     }
 
+    // Every other standalone file (images, robots.txt, sitemap.xml, llms.txt,
+    // local-seo.json, favicons, etc.) — recorded at its exact path, extension
+    // included. Without this, the worker's file-extension check let ANY
+    // extensioned path through as an unverified 200, including ones that were
+    // never real files — /openapi.json, /.well-known/mcp.json and similar
+    // agent-discovery paths all returned the homepage mislabelled as 200
+    // "success" under whatever extension was requested.
+    //
+    // index.html itself is skipped here: the directory it lives in is already
+    // recorded (with a trailing slash) by the parent iteration below, and
+    // recursing into the directory to reach this file is only done to find
+    // OTHER files or subdirectories alongside it.
+    if (entry.isFile() && entry.name !== "index.html") {
+      found.push(route);
+      continue;
+    }
+
     if (!entry.isDirectory()) continue;
     if (fs.existsSync(path.join(dir, entry.name, "index.html"))) {
       found.push(`${route}/`);

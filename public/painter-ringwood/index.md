@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Ringwoo
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Ringwood.
+Walls, ceilings, trims and doors across Ringwood houses, apartments and townhouses. Furniture protected and the work staged room by room, with low-odour products so the home stays liveable throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboard exteriors in Ringwood are scraped back, damaged boards repaired and bare timber spot-primed, so the new coating holds at the board edges instead of lifting there first.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Ringwood.
+Strata and owners-corporation work across Ringwood — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Ringwood properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 

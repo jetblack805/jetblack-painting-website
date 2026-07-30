@@ -8,16 +8,20 @@ export default function DromanaPainters() {
       answer: `Yes — ${suburb} is a bayside peninsula town with a mix of permanent homes, beach houses and holiday properties, and they're core to our work here. Weatherboard and fibro beach homes near the foreshore need coastal-grade care — salt washing, flexible primers and salt-resistant topcoats — so the finish holds up against salt air, UV and damp.`
     },
     {
-      question: `How do you protect ${suburb} homes from the coastal environment?`,
-      answer: `Homes near the bay in ${suburb} face constant salt air, strong UV and damp. We use flexible, salt-resistant exterior systems and thorough preparation — washing, priming and sealing bare timber — so your home's finish lasts far longer than a standard repaint would in this seaside environment.`
+      question: `Can you paint homes on the sloping blocks below Arthurs Seat?`,
+      answer: `Yes. A lot of ${suburb} sits on the rise between the foreshore and Arthurs Seat, and sloping blocks change how a job is set up — a single-storey house can still be two storeys of working height at the downhill end. We assess access at the quote and price in the right scaffold or elevated equipment rather than discovering it on day one.`
     },
     {
-      question: `Can you repaint before we sell or lease a ${suburb} property?`,
-      answer: `Absolutely. A clean, fresh repaint is one of the best-value ways to lift a ${suburb} beach house or home before sale, a new tenancy or the holiday-rental season. We work to your timeline, keep the site tidy, and focus on the surfaces that most affect presentation.`
+      question: `How do you handle older fibro sheeting on ${suburb} beach houses?`,
+      answer: `Carefully. Fibro sheeting on older ${suburb} beach houses can date from the era when asbestos cement was in common use, so we never dry-sand or power-sand fibro of unknown age. It's washed down and hand-prepared using low-disturbance methods, and where there's any doubt about the material we recommend having it tested before work starts.`
+    },
+    {
+      question: `Can you work around a holiday-rental booking schedule?`,
+      answer: `Yes. Plenty of ${suburb} properties are holiday lets, so we're used to working to a fixed window between bookings or through the quieter months. Give us your booking calendar with the quote and we'll stage the work to fit it, rather than you losing peak-season nights to a repaint.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. We service the Mornington Peninsula and provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. We service the Mornington Peninsula and provide free written quotes across ${suburb}, itemising the coastal preparation, primers and topcoats so you can see exactly what the salt-air protection involves. Call Jimmy on 0432 077 782.`
     }
   ];
 

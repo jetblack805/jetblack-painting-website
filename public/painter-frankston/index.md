@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Frankst
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Frankston.
+Walls, ceilings, trims and doors in Frankston, including open-plan living areas where a consistent finish across one large space is what gives it away. Surfaces patched and sanded, premium low-sheen and enamel throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Salt air and full sun are hard on Frankston weatherboards. Boards are washed down, scraped and sanded back to a sound edge, and bare timber spot-primed before exterior-grade topcoats go on.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Frankston.
+Shops, offices, and maintenance repainting across Frankston, scheduled around your trading hours with after-hours and weekend work available.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Frankston properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 

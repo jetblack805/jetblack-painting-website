@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Chelsea
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Chelsea.
+Walls, ceilings, trims and doors in Chelsea, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Salt air and full sun are hard on Chelsea weatherboards. Boards are washed down, scraped and sanded back to a sound edge, and bare timber spot-primed before exterior-grade topcoats go on.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Chelsea.
+Strata and owners-corporation work across Chelsea — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Chelsea sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 

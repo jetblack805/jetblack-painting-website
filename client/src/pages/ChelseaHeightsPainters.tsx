@@ -4,20 +4,20 @@ export default function ChelseaHeightsPainters() {
   const suburb = "Chelsea Heights";
   const faqs = [
     {
-      question: `Do you paint family homes and brick-veneer houses in ${suburb}?`,
-      answer: `Yes — brick-veneer and clad family homes are the mainstay of our ${suburb} work. We prepare and repaint rendered and brick facades, eaves, fascias and garage doors, and refresh interiors room by room with premium low-sheen and enamel systems, all with proper preparation so the finish stays even and lasts.`
+      question: `Does being near the Edithvale-Seaford wetlands affect paintwork?`,
+      answer: `It can. Ground-level humidity sits higher around the wetlands, and ${suburb} homes on shaded or south-facing walls tend to show mould and that grey-green film sooner than drier pockets of Kingston. Painting over it just traps it, so those walls are treated and primed with a mould-inhibiting system rather than simply recoated.`
     },
     {
-      question: `Can you repaint before we sell or lease a ${suburb} home?`,
-      answer: `Absolutely. A clean, neutral repaint is one of the best-value ways to lift a ${suburb} property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.`
+      question: `Do you paint brick-veneer family homes in ${suburb}?`,
+      answer: `Yes — brick-veneer and clad family homes are the mainstay of our ${suburb} work. Rendered and painted brick facades, eaves, fascias and garage doors outside; walls, ceilings, trims and doors inside, staged room by room so the house stays liveable while the work runs.`
+    },
+    {
+      question: `Do you paint the newer townhouse developments in ${suburb}?`,
+      answer: `Yes. ${suburb} has a growing number of townhouse developments, and we handle both individual owners and full-complex work. Where there's an owners corporation involved we provide the written scope and insurance documentation the committee needs before anything is approved.`
     },
     {
       question: `Do you do roof painting in ${suburb}?`,
-      answer: `Yes. Many ${suburb} homes have tile or metal roofs that benefit from cleaning, repairs and a fresh membrane coating. We pressure wash, repair and prime before coating, which restores the look and adds years of protection. Roof work is covered by our 5-year written workmanship guarantee.`
-    },
-    {
-      question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. Many ${suburb} homes have tile or metal roofs, and in a damp pocket like this they collect moss and lichen faster than most. We pressure wash, repair and prime before coating — the cleaning stage matters more here than the coating itself. Roof work carries the same 5-year written workmanship guarantee.`
     }
   ];
 

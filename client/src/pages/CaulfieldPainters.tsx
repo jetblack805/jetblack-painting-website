@@ -4,18 +4,23 @@ export default function CaulfieldPainters() {
   const suburb = "Caulfield";
   const faqs = [
     {
-      question: `Do you paint period homes in ${suburb}?`,
-      answer: `Yes. ${suburb} has a strong mix of Edwardian terraces, interwar homes and post-war brick properties, and we're experienced with each. We use heritage-sympathetic colour choices, proper surface preparation and lead-paint-safe methods on older homes so the result looks right and holds up well.`
+      question: `Do you paint Edwardian and interwar homes in ${suburb}?`,
+      answer: `Yes — those are a signature of ${suburb}. Edwardian and interwar houses carry leadlight surrounds, deep timber fascias, fretwork and wide verandah beams, which is careful hand-cut preparation and cutting-in rather than roller work. We price on that detail rather than on square metres.`
     },
     {
-      question: `How long does a house repaint take in ${suburb}?`,
-      answer: `Most ${suburb} homes are completed within 5 to 10 working days depending on size and the preparation involved. We provide a clear timeline with every quote so you can plan around the work with minimal disruption.`
+      question: `Does traffic grime on Hawthorn Road or Glen Huntly Road affect paintwork?`,
+      answer: `It does. Facades fronting the busier ${suburb} arterials pick up a film of traffic grime and exhaust residue that ordinary rain does not shift. Painting over it stops the new coating bonding properly, so those elevations get a proper wash-down and, where needed, a sugar-soap clean before any primer goes on.`
+    },
+    {
+      question: `Do you paint apartment blocks and common areas in ${suburb}?`,
+      answer: `Yes. ${suburb} has a large number of apartment and unit developments, and we handle owners-corporation work — lobbies, corridors, stairwells, car parks and facades — with detailed written scopes, insurance certificates and staging that keeps resident access open throughout.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Absolutely. We provide free, no-obligation written quotes across ${suburb}, Caulfield North and Caulfield South, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 to arrange a visit.`
+      answer: `Yes. We provide free written quotes across ${suburb}, with the preparation, products and number of coats itemised so you can compare against other quotes properly. Call Jimmy on 0432 077 782.`
     }
   ];
+
 
   return (
     <SuburbPageTemplate

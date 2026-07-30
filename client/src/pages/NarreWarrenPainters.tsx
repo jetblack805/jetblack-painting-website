@@ -4,22 +4,23 @@ export default function NarreWarrenPainters() {
   const suburb = "Narre Warren";
   const faqs = [
     {
-      question: `Do you paint estate and brick-veneer family homes in ${suburb}?`,
-      answer: `Yes — ${suburb} is largely made up of brick-veneer and rendered family homes across established streets and estate developments, and they're the core of our work here. We prepare and repaint rendered and brick facades, eaves, fascias and garage doors, and refresh interiors room by room with premium low-sheen and enamel systems, all with proper preparation so the finish stays even and lasts.`
+      question: `Do you paint brick-veneer family homes in ${suburb}?`,
+      answer: `Yes — brick veneer is the bulk of ${suburb} housing and the mainstay of our work here. Rendered and painted brick facades, eaves, fascias and garage doors outside; walls, ceilings, trims and doors inside, all over proper preparation rather than a coat straight over the top.`
     },
     {
-      question: `Can you repaint a newer ${suburb} home for the first time?`,
-      answer: `Absolutely. Many ${suburb} estate homes are due for their first repaint after 8–12 years, when the builder's coating fades or chalks. We wash, prepare and recoat with premium exterior systems that restore the colour and add years of protection, backed by our 5-year written workmanship guarantee.`
+      question: `Do you take on commercial work around the Fountain Gate precinct?`,
+      answer: `Yes. Alongside the residential streets, ${suburb} has a substantial retail and commercial precinct, and we paint shops, offices and tenancies there. That work is scheduled around trading hours, with after-hours and weekend shifts available so the premises keeps operating.`
     },
     {
-      question: `Can you repaint before we sell or lease a ${suburb} home?`,
-      answer: `Yes. A clean, neutral repaint is one of the best-value ways to lift a ${suburb} property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.`
+      question: `How long does a full exterior repaint take in ${suburb}?`,
+      answer: `A typical single-storey brick-veneer home runs about three to five working days, depending on the condition of the render and how much repair the eaves and fascias need. Weather is the main variable — we schedule around wet spells rather than pushing coats on in unsuitable conditions.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. We service the City of Casey and provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. We service ${suburb} and the wider City of Casey with free written quotes covering the full scope, preparation and the specific products used. Call Jimmy on 0432 077 782.`
     }
   ];
+
 
   return (
     <SuburbPageTemplate

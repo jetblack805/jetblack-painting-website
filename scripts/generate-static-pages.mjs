@@ -452,6 +452,70 @@ function faqSchema(items) {
   };
 }
 
+// The four "What we paint in X" cards used to be one hardcoded block repeated
+// verbatim on every suburb page — two of the four did not even mention the
+// suburb. Across 96 pages that made ~40% of all suburb-page sentences
+// duplicates of each other, which is the shape Google treats as doorway pages.
+//
+// The copy below is instead assembled from housing-stock traits detected in the
+// page's OWN localExpertise/propertyTypes text. That matters: every trait
+// referenced here is already asserted in the visible copy of that same page, so
+// this varies the wording without inventing a single new claim about a suburb.
+const SUBURB_TRAITS = {
+  coastal: /coastal|bayside|salt air|beach|seaside|foreshore|waterfront/i,
+  heritage: /heritage|period home|victorian|edwardian|federation|californian bungalow|art deco/i,
+  weatherboard: /weatherboard/i,
+  modern: /contemporary|modern home|new build|newly built|new estate|new-build/i,
+  strata: /apartment|unit block|townhouse|strata|body corporate/i,
+  render: /render|brick veneer|masonry/i,
+};
+
+function suburbServiceCards({ suburb, localExpertise, propertyTypes }) {
+  const text = `${localExpertise} ${propertyTypes}`;
+  const has = Object.fromEntries(
+    Object.entries(SUBURB_TRAITS).map(([trait, pattern]) => [trait, pattern.test(text)])
+  );
+
+  let interior;
+  if (has.heritage) {
+    interior = `Walls, ceilings, trims and doors in ${suburb}, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.`;
+  } else if (has.strata) {
+    interior = `Walls, ceilings, trims and doors across ${suburb} houses, apartments and townhouses. Furniture protected and the work staged room by room, with low-odour products so the home stays liveable throughout.`;
+  } else if (has.modern) {
+    interior = `Walls, ceilings, trims and doors in ${suburb}, including open-plan living areas where a consistent finish across one large space is what gives it away. Surfaces patched and sanded, premium low-sheen and enamel throughout.`;
+  } else {
+    interior = `Walls, ceilings, trims, doors and full home repaints in ${suburb}. Furniture protected, surfaces filled and sanded, and premium low-sheen and enamel finishes applied over proper preparation.`;
+  }
+
+  let exterior;
+  if (has.coastal && has.weatherboard) {
+    exterior = `Salt air and full sun are hard on ${suburb} weatherboards. Boards are washed down, scraped and sanded back to a sound edge, and bare timber spot-primed before exterior-grade topcoats go on.`;
+  } else if (has.coastal) {
+    exterior = `Coastal exposure in ${suburb} attacks coatings early, so exteriors are pressure washed, chalking and flaking paint taken back, and surfaces primed before weather-resistant topcoats are applied.`;
+  } else if (has.weatherboard) {
+    exterior = `Weatherboard exteriors in ${suburb} are scraped back, damaged boards repaired and bare timber spot-primed, so the new coating holds at the board edges instead of lifting there first.`;
+  } else if (has.render) {
+    exterior = `Rendered, brick and masonry exteriors in ${suburb} are washed of chalking, cracks filled and the surface sealed before exterior-grade topcoats — including eaves, fascias and fences.`;
+  } else {
+    exterior = `Weatherboards, render, brick, fences, eaves and fascias in ${suburb}, prepared properly so the finish lasts through Melbourne's weather rather than failing at the edges.`;
+  }
+
+  const commercial = has.strata
+    ? `Strata and owners-corporation work across ${suburb} — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.`
+    : `Shops, offices, and maintenance repainting across ${suburb}, scheduled around your trading hours with after-hours and weekend work available.`;
+
+  const presale = has.heritage
+    ? `Fast-turnaround repainting for ${suburb} sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.`
+    : `Fast-turnaround repainting to get ${suburb} properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.`;
+
+  return [
+    { title: "Interior painting", body: interior },
+    { title: "Exterior painting", body: exterior },
+    { title: "Commercial painting", body: commercial },
+    { title: "Pre-sale and rental refreshes", body: presale },
+  ];
+}
+
 function generateSuburbPage(route, sourceFile) {
   const source = fs.readFileSync(sourceFile, "utf8");
   const suburb = extractQuotedValue(source, "suburb") || titleCaseFromSlug(route.replace("/painter-", ""));
@@ -489,24 +553,7 @@ function generateSuburbPage(route, sourceFile) {
         {
           type: "cards",
           heading: `What we paint in ${suburb}`,
-          items: [
-            {
-              title: "Interior painting",
-              body: `Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in ${suburb}.`,
-            },
-            {
-              title: "Exterior painting",
-              body: `Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.`,
-            },
-            {
-              title: "Commercial painting",
-              body: `Flexible repainting support for shops, offices, strata, and maintenance projects across ${suburb}.`,
-            },
-            {
-              title: "Pre-sale and rental refreshes",
-              body: `Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.`,
-            },
-          ],
+          items: suburbServiceCards({ suburb, localExpertise, propertyTypes }),
         },
         {
           type: "links",

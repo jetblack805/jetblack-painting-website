@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Aspenda
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Aspendale Gardens.
+Walls, ceilings, trims and doors across Aspendale Gardens houses, apartments and townhouses. Furniture protected and the work staged room by room, with low-odour products so the home stays liveable throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Coastal exposure in Aspendale Gardens attacks coatings early, so exteriors are pressure washed, chalking and flaking paint taken back, and surfaces primed before weather-resistant topcoats are applied.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Aspendale Gardens.
+Strata and owners-corporation work across Aspendale Gardens — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Aspendale Gardens properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 

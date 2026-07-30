@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Rosebud
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Rosebud.
+Walls, ceilings, trims, doors and full home repaints in Rosebud. Furniture protected, surfaces filled and sanded, and premium low-sheen and enamel finishes applied over proper preparation.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Salt air and full sun are hard on Rosebud weatherboards. Boards are washed down, scraped and sanded back to a sound edge, and bare timber spot-primed before exterior-grade topcoats go on.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Rosebud.
+Shops, offices, and maintenance repainting across Rosebud, scheduled around your trading hours with after-hours and weekend work available.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Rosebud properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 
@@ -45,21 +45,21 @@ Explore nearby suburb pages for neighbouring areas around Rosebud.
 
 ## Frequently asked questions about painters in Rosebud
 
-### Do you paint beach houses and holiday homes in Rosebud?
+### When is the best time of year to repaint in Rosebud?
 
-Yes — Rosebud is a bayside peninsula town with a big mix of permanent homes, beach houses and holiday properties, and they're core to our work here. Weatherboard and fibro beach homes near the foreshore need coastal-grade care — salt washing, flexible primers and salt-resistant topcoats — so the finish holds up against salt air, UV and damp.
+Outside the summer peak, if the property is a holiday let. Rosebud fills up over summer, so most owners want the work done between about March and November — which also happens to suit exterior painting better, since coatings need moderate temperatures and a dry surface to cure properly. We book around the season rather than against it.
 
-### How do you protect Rosebud homes from the coastal environment?
+### How far back from the beach does salt air still affect paintwork?
 
-Homes near the bay in Rosebud face constant salt air, strong UV and damp. We use flexible, salt-resistant exterior systems and thorough preparation — washing, priming and sealing bare timber — so your home's finish lasts far longer than a standard repaint would in this seaside environment.
+Further than most people expect. Salt carries well inland on the prevailing weather across Rosebud, so streets several blocks back from the foreshore still see the chalking and early coating failure that front-row properties get. We assess exposure at the quote rather than assuming only the beachfront needs the coastal-grade system.
 
-### Can you repaint before we sell, lease or holiday-let a Rosebud property?
+### Can you paint a Rosebud holiday rental between bookings?
 
-Absolutely. A clean, fresh repaint is one of the best-value ways to lift a Rosebud beach house or home before sale, a new tenancy or the holiday-rental season. We work to your timeline, keep the site tidy, and focus on the surfaces that most affect presentation.
+Yes, and we do it regularly. Send your booking calendar with the quote and we'll stage the work into the gaps — interiors room by room if the window is tight, exteriors in a single block when the weather allows. The aim is a finished job without you blocking out revenue nights.
 
 ### Do you offer free quotes in Rosebud?
 
-Yes. We service the Mornington Peninsula and provide free written quotes across Rosebud with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.
+Yes. We service the Mornington Peninsula and provide free written quotes across Rosebud, with the exposure assessment and coating system itemised so you can see what you're paying for. Call Jimmy on 0432 077 782.
 
 **Jetblack Painting** — House Painters Rosebud | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

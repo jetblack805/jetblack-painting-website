@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Hampton
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Hampton East.
+Walls, ceilings, trims and doors in Hampton East, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboard exteriors in Hampton East are scraped back, damaged boards repaired and bare timber spot-primed, so the new coating holds at the board edges instead of lifting there first.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Hampton East.
+Strata and owners-corporation work across Hampton East — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Hampton East sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 
@@ -46,17 +46,17 @@ Explore nearby suburb pages for neighbouring areas around Hampton East.
 
 ## Frequently asked questions about painters in Hampton East
 
-### Do you paint post-war brick and californian bungalow homes in Hampton East?
+### Do you paint weatherboard cottages in Hampton East?
 
-Yes. Hampton East is full of post-war brick veneer homes and californian bungalows, and each needs the right approach — masonry-appropriate preparation and coatings for rendered and brick surfaces, and careful timber priming and caulking on bungalow eaves, windows and weatherboard sections. We match the paint system to the surface for a durable, even finish.
+Yes. Hampton East still has a good number of weatherboard cottages among the brick-veneer streets, and timber needs a different approach — boards scraped back to a sound edge, splits and damaged sections repaired, and bare timber spot-primed before topcoats, because timber moves and a brittle coating cracks at the board joins.
+
+### How is painting a post-war brick veneer different from a weatherboard home?
+
+Mostly in the preparation. Brick veneer and rendered surfaces in Hampton East are stable, so the work is washing off chalking, filling cracks and sealing before topcoats. Weatherboard moves with moisture and temperature, so it needs a flexible system and far more attention to bare timber and joins. The two are quoted differently for that reason.
 
 ### Can you repaint a Hampton East home before we sell or lease it?
 
-Absolutely. A clean, neutral repaint is one of the best-value ways to lift a Hampton East property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.
-
-### Do you offer free quotes in Hampton East?
-
-Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across Hampton East with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.
+Yes, and it's common work for us here given how tightly Hampton East sits between Hampton and Moorabbin. We work to agent timelines with durable, neutral, easy-clean finishes, concentrating on the surfaces that carry a photograph and an inspection — facade, front door, walls, ceilings and trims.
 
 **Jetblack Painting** — House Painters Hampton East | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

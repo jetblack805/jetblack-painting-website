@@ -4,20 +4,20 @@ export default function DingleyVillagePainters() {
   const suburb = "Dingley Village";
   const faqs = [
     {
-      question: `Do you paint family homes and brick-veneer houses in ${suburb}?`,
-      answer: `Yes — brick-veneer and clad family homes are the mainstay of our ${suburb} work. We prepare and repaint rendered and brick facades, eaves, fascias and garage doors, and refresh interiors room by room with premium low-sheen and enamel systems. Every job includes proper preparation so the finish stays even and lasts.`
+      question: `Do you paint homes backing onto Braeside Park or the golf courses?`,
+      answer: `Yes, and those blocks need a bit more thought. Mature tree cover on the parkland and golf-course edges of ${suburb} keeps walls shaded and damp for longer, drops leaf litter into gutters, and brings moss and mould on the south side. We clear and treat those surfaces properly and use a mould-inhibiting system where the shade warrants it.`
     },
     {
-      question: `Can you repaint before we sell or lease a ${suburb} home?`,
-      answer: `Absolutely. A clean, neutral repaint is one of the best-value ways to lift a ${suburb} property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.`
+      question: `Do you repaint 1970s and 80s homes in ${suburb}?`,
+      answer: `Constantly — that era makes up much of ${suburb}. Homes of that vintage usually carry several previous repaints, so the work is in sanding back the built-up edges and failing patches to something sound before recoating. Original stained timber trims are common too, and those need the right primer or the new colour bleeds through.`
+    },
+    {
+      question: `Do you paint the newer estate and townhouse developments in ${suburb}?`,
+      answer: `Yes. ${suburb} has a mix of established streets and newer estate and townhouse builds, and we work across both. For body-corporate or owners-corporation properties we provide the written scope, pricing and insurance documentation the committee needs before work is approved.`
     },
     {
       question: `Do you do roof painting in ${suburb}?`,
-      answer: `Yes. Many ${suburb} homes have tile or metal roofs that benefit from cleaning, repairs and a fresh membrane coating. We pressure wash, repair and prime before coating, which restores the look and adds years of protection. Roof work is covered by our 5-year written workmanship guarantee.`
-    },
-    {
-      question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. Tile and metal roofs are common across ${suburb}, and the tree cover around the parkland fringe means they collect debris, moss and lichen faster than open streets do. We pressure wash, repair and prime before coating, and roof work carries our 5-year written workmanship guarantee.`
     }
   ];
 

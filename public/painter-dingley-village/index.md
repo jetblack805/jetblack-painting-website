@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Dingley
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Dingley Village.
+Walls, ceilings, trims and doors across Dingley Village houses, apartments and townhouses. Furniture protected and the work staged room by room, with low-odour products so the home stays liveable throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Rendered, brick and masonry exteriors in Dingley Village are washed of chalking, cracks filled and the surface sealed before exterior-grade topcoats — including eaves, fascias and fences.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Dingley Village.
+Strata and owners-corporation work across Dingley Village — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Dingley Village properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 
@@ -46,21 +46,21 @@ Explore nearby suburb pages for neighbouring areas around Dingley Village.
 
 ## Frequently asked questions about painters in Dingley Village
 
-### Do you paint family homes and brick-veneer houses in Dingley Village?
+### Do you paint homes backing onto Braeside Park or the golf courses?
 
-Yes — brick-veneer and clad family homes are the mainstay of our Dingley Village work. We prepare and repaint rendered and brick facades, eaves, fascias and garage doors, and refresh interiors room by room with premium low-sheen and enamel systems. Every job includes proper preparation so the finish stays even and lasts.
+Yes, and those blocks need a bit more thought. Mature tree cover on the parkland and golf-course edges of Dingley Village keeps walls shaded and damp for longer, drops leaf litter into gutters, and brings moss and mould on the south side. We clear and treat those surfaces properly and use a mould-inhibiting system where the shade warrants it.
 
-### Can you repaint before we sell or lease a Dingley Village home?
+### Do you repaint 1970s and 80s homes in Dingley Village?
 
-Absolutely. A clean, neutral repaint is one of the best-value ways to lift a Dingley Village property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.
+Constantly — that era makes up much of Dingley Village. Homes of that vintage usually carry several previous repaints, so the work is in sanding back the built-up edges and failing patches to something sound before recoating. Original stained timber trims are common too, and those need the right primer or the new colour bleeds through.
+
+### Do you paint the newer estate and townhouse developments in Dingley Village?
+
+Yes. Dingley Village has a mix of established streets and newer estate and townhouse builds, and we work across both. For body-corporate or owners-corporation properties we provide the written scope, pricing and insurance documentation the committee needs before work is approved.
 
 ### Do you do roof painting in Dingley Village?
 
-Yes. Many Dingley Village homes have tile or metal roofs that benefit from cleaning, repairs and a fresh membrane coating. We pressure wash, repair and prime before coating, which restores the look and adds years of protection. Roof work is covered by our 5-year written workmanship guarantee.
-
-### Do you offer free quotes in Dingley Village?
-
-Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across Dingley Village with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.
+Yes. Tile and metal roofs are common across Dingley Village, and the tree cover around the parkland fringe means they collect debris, moss and lichen faster than open streets do. We pressure wash, repair and prime before coating, and roof work carries our 5-year written workmanship guarantee.
 
 **Jetblack Painting** — House Painters Dingley Village | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

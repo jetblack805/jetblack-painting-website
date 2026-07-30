@@ -4,18 +4,23 @@ export default function HawthornPainters() {
   const suburb = "Hawthorn";
   const faqs = [
     {
-      question: `Do you specialise in ${suburb}'s Victorian and Federation homes?`,
-      answer: `Yes. ${suburb} is renowned for its grand Victorian terraces and Federation homes, and we're experienced with their ornate detailing — lead-paint-safe preparation, timber and cast-iron lacework restoration, and heritage-appropriate colour schemes that suit the era and the streetscape. We treat these homes with the care they require.`
+      question: `Do you paint Victorian terraces and Federation homes in ${suburb}?`,
+      answer: `Yes — the period stock around Grace Park and the Yarra-side streets is core to our work in ${suburb}. Terraces bring cast-iron lacework, rendered parapets, tessellated verandah detail and tall double-hung sashes, all of which are slow hand work. We quote on the detail involved, not on floor area.`
     },
     {
-      question: `How long does a house repaint take in ${suburb}?`,
-      answer: `Most ${suburb} homes are completed within 5 to 10 working days depending on size and the amount of preparation and period detailing involved. We provide a detailed timeline with every quote so there's no guesswork and minimal disruption to your household.`
+      question: `Does a heritage overlay affect what colours I can use in ${suburb}?`,
+      answer: `It can. Parts of ${suburb} sit within heritage overlays that place conditions on external colour schemes, particularly on street-facing elevations. We recommend checking with Boroondara before committing to an exterior scheme, and we are happy to work to a heritage-appropriate palette.`
     },
     {
-      question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and Hawthorn East, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a site visit.`
+      question: `Can you paint the render and ironwork on a ${suburb} terrace?`,
+      answer: `Yes. Rendered parapets and facades need cracks cut out and filled, and chalking washed back before a breathable exterior system goes on. Cast-iron lacework and railings are a separate job again — rust treated back to sound metal and primed before enamel, or it lifts within a couple of seasons.`
+    },
+    {
+      question: `Do you also paint the newer townhouses and apartments in ${suburb}?`,
+      answer: `Yes. ${suburb} pairs its period streets with contemporary townhouses and apartment developments, and we work across both — including owners-corporation common areas, with the written scope and insurance documentation committees need up front.`
     }
   ];
+
 
   return (
     <SuburbPageTemplate

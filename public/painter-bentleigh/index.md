@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Bentlei
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Bentleigh.
+Walls, ceilings, trims and doors in Bentleigh, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboards, render, brick, fences, eaves and fascias in Bentleigh, prepared properly so the finish lasts through Melbourne's weather rather than failing at the edges.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Bentleigh.
+Strata and owners-corporation work across Bentleigh — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Bentleigh sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 
@@ -46,17 +46,21 @@ Explore nearby suburb pages for neighbouring areas around Bentleigh.
 
 ## Frequently asked questions about painters in Bentleigh
 
-### Do you paint Bentleigh's interwar homes and Californian bungalows?
+### Do you paint Bentleigh interwar bungalows and post-war brick homes?
 
-Yes. Bentleigh has a large concentration of interwar and Californian bungalow homes, and we're experienced with their rendered façades, feature brickwork and timber detailing. We use proper crack filling, bare timber priming and period-sympathetic colours to keep these classic homes looking their best for years.
+Yes — that mix is most of Bentleigh. Interwar bungalows bring detailed timber fascias, bracketed eaves and porch beams that are hand-cut rather than rolled, while post-war brick is more straightforward render and masonry prep. The two are quoted differently because the labour is genuinely different.
 
-### How long does a house repaint take in Bentleigh?
+### Do you work with owners corporations on Bentleigh unit blocks?
 
-Most Bentleigh homes are completed within 5 to 10 working days depending on size and the amount of preparation required. We provide a detailed timeline with every quote so you know exactly what to expect before work begins.
+Yes. Bentleigh has a lot of unit and townhouse developments, and we provide the written scope, itemised pricing and insurance certificates a committee needs before approving works. Common areas, stairwells, entries and facades can be staged so residents keep access throughout.
+
+### Is lead paint a concern on older Bentleigh homes?
+
+It can be. Anything built before 1970 may carry lead-based paint under later coats, so we do not dry-sand or power-sand original timberwork of that age. Preparation uses low-dust methods, and where the age is uncertain we recommend testing before sanding begins.
 
 ### Do you offer free quotes in Bentleigh?
 
-Absolutely. We provide free, no-obligation written quotes across Bentleigh and Bentleigh East, with the full scope and preparation included up front so there are no surprises. Call Jimmy on 0432 077 782 to arrange a visit.
+Yes. We are based nearby in Mordialloc and provide free written quotes across Bentleigh, itemising the preparation each surface needs. Call Jimmy on 0432 077 782.
 
 **Jetblack Painting** — House Painters Bentleigh | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

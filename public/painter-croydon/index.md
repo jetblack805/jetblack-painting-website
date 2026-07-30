@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Croydon
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Croydon.
+Walls, ceilings, trims, doors and full home repaints in Croydon. Furniture protected, surfaces filled and sanded, and premium low-sheen and enamel finishes applied over proper preparation.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboard exteriors in Croydon are scraped back, damaged boards repaired and bare timber spot-primed, so the new coating holds at the board edges instead of lifting there first.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Croydon.
+Shops, offices, and maintenance repainting across Croydon, scheduled around your trading hours with after-hours and weekend work available.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Croydon properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 

@@ -94,7 +94,7 @@ function localBusinessSchema() {
       "https://www.youtube.com/@jetblackpaint",
       "https://www.tiktok.com/@jetblack_painting",
       "https://www.patreon.com/jetblack_painting",
-      "https://pin.it/7f3uTghY1",
+      "https://au.pinterest.com/jetblackpainting/",
       "https://www.google.com/maps/place/Jetblack+Painting"
     ],
     "address": {

@@ -132,6 +132,16 @@ const PATH_REDIRECTS = {
   "/our-work":                      "/",
 };
 
+// True when the client explicitly asked for Markdown. Matches `text/markdown`
+// as a whole media type in the Accept list — a plain substring test would also
+// fire on something like `text/markdown-foo`, and `text/*` is deliberately not
+// treated as a request for Markdown since browsers send it alongside text/html.
+function acceptsMarkdown(request) {
+  return (request.headers.get("Accept") || "")
+    .split(",")
+    .some((part) => part.trim().split(";")[0].toLowerCase() === "text/markdown");
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -173,6 +183,40 @@ export default {
       return Response.redirect(`${url.origin}${slashed}${url.search}${url.hash}`, 301);
     }
 
+    // Markdown content negotiation ("Markdown for Agents").
+    //
+    // AI agents that send `Accept: text/markdown` get the Markdown twin of the
+    // page (generated at build time by scripts/generate-markdown.mjs), which is
+    // the same content without the markup, styling and script tags — far fewer
+    // tokens to read. Browsers never send that Accept value, so they are
+    // unaffected and still get the HTML.
+    //
+    // Only real pages qualify: `slashed` is the directory form, so this can
+    // never fire for build assets or for extensionless standalone files such as
+    // the Search Console verification file.
+    if (!isBuildAsset && KNOWN_PATHS.has(slashed) && acceptsMarkdown(request)) {
+      const markdownUrl = new URL(url);
+      markdownUrl.pathname = `${slashed}index.md`;
+      const markdown = await env.ASSETS.fetch(new Request(markdownUrl, { method: "GET" }));
+
+      // Falls through to the normal HTML response if the twin is missing, so a
+      // page that somehow lacks one still serves rather than 404-ing.
+      if (markdown.status === 200) {
+        const markdownHeaders = new Headers();
+        markdownHeaders.set("Content-Type", "text/markdown; charset=utf-8");
+        markdownHeaders.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+        // Two representations live at one URL, so caches must key on Accept.
+        markdownHeaders.set("Vary", "Accept");
+        // Belt and braces on top of Vary: never let a Markdown response sit in
+        // a shared cache where a browser could be handed it instead of HTML.
+        markdownHeaders.set("Cache-Control", "no-store");
+        // The .md twin duplicates page content. Nothing links to it and it is
+        // not in the sitemap, but keep it out of the index regardless.
+        markdownHeaders.set("X-Robots-Tag", "noindex");
+        return new Response(markdown.body, { status: 200, headers: markdownHeaders });
+      }
+    }
+
     const response = await env.ASSETS.fetch(request);
     const headers = new Headers(response.headers);
     headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
@@ -186,6 +230,14 @@ export default {
       headers.set("Cache-Control", "public, max-age=31536000, immutable");
     } else if (isStaticImage) {
       headers.set("Cache-Control", "public, max-age=2592000");
+    }
+
+    // The Markdown twins are also reachable at their literal /…/index.md path,
+    // not just through Accept negotiation above. Nothing links to them and they
+    // are not in the sitemap, but they duplicate page content, so make sure a
+    // crawler that finds one anyway does not index it.
+    if (pathname.endsWith(".md")) {
+      headers.set("X-Robots-Tag", "noindex");
     }
 
     // RFC 8288 Link headers on real HTML pages, pointing agents at resources

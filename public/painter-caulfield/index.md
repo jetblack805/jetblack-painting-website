@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Caulfie
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Caulfield.
+Walls, ceilings, trims and doors in Caulfield, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboards, render, brick, fences, eaves and fascias in Caulfield, prepared properly so the finish lasts through Melbourne's weather rather than failing at the edges.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Caulfield.
+Strata and owners-corporation work across Caulfield — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Caulfield sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 
@@ -46,17 +46,21 @@ Explore nearby suburb pages for neighbouring areas around Caulfield.
 
 ## Frequently asked questions about painters in Caulfield
 
-### Do you paint period homes in Caulfield?
+### Do you paint Edwardian and interwar homes in Caulfield?
 
-Yes. Caulfield has a strong mix of Edwardian terraces, interwar homes and post-war brick properties, and we're experienced with each. We use heritage-sympathetic colour choices, proper surface preparation and lead-paint-safe methods on older homes so the result looks right and holds up well.
+Yes — those are a signature of Caulfield. Edwardian and interwar houses carry leadlight surrounds, deep timber fascias, fretwork and wide verandah beams, which is careful hand-cut preparation and cutting-in rather than roller work. We price on that detail rather than on square metres.
 
-### How long does a house repaint take in Caulfield?
+### Does traffic grime on Hawthorn Road or Glen Huntly Road affect paintwork?
 
-Most Caulfield homes are completed within 5 to 10 working days depending on size and the preparation involved. We provide a clear timeline with every quote so you can plan around the work with minimal disruption.
+It does. Facades fronting the busier Caulfield arterials pick up a film of traffic grime and exhaust residue that ordinary rain does not shift. Painting over it stops the new coating bonding properly, so those elevations get a proper wash-down and, where needed, a sugar-soap clean before any primer goes on.
+
+### Do you paint apartment blocks and common areas in Caulfield?
+
+Yes. Caulfield has a large number of apartment and unit developments, and we handle owners-corporation work — lobbies, corridors, stairwells, car parks and facades — with detailed written scopes, insurance certificates and staging that keeps resident access open throughout.
 
 ### Do you offer free quotes in Caulfield?
 
-Absolutely. We provide free, no-obligation written quotes across Caulfield, Caulfield North and Caulfield South, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 to arrange a visit.
+Yes. We provide free written quotes across Caulfield, with the preparation, products and number of coats itemised so you can compare against other quotes properly. Call Jimmy on 0432 077 782.
 
 **Jetblack Painting** — House Painters Caulfield | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

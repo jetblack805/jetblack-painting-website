@@ -4,18 +4,23 @@ export default function BentleighPainters() {
   const suburb = "Bentleigh";
   const faqs = [
     {
-      question: `Do you paint Bentleigh's interwar homes and Californian bungalows?`,
-      answer: `Yes. Bentleigh has a large concentration of interwar and Californian bungalow homes, and we're experienced with their rendered façades, feature brickwork and timber detailing. We use proper crack filling, bare timber priming and period-sympathetic colours to keep these classic homes looking their best for years.`
+      question: `Do you paint ${suburb} interwar bungalows and post-war brick homes?`,
+      answer: `Yes — that mix is most of ${suburb}. Interwar bungalows bring detailed timber fascias, bracketed eaves and porch beams that are hand-cut rather than rolled, while post-war brick is more straightforward render and masonry prep. The two are quoted differently because the labour is genuinely different.`
     },
     {
-      question: `How long does a house repaint take in ${suburb}?`,
-      answer: `Most ${suburb} homes are completed within 5 to 10 working days depending on size and the amount of preparation required. We provide a detailed timeline with every quote so you know exactly what to expect before work begins.`
+      question: `Do you work with owners corporations on ${suburb} unit blocks?`,
+      answer: `Yes. ${suburb} has a lot of unit and townhouse developments, and we provide the written scope, itemised pricing and insurance certificates a committee needs before approving works. Common areas, stairwells, entries and facades can be staged so residents keep access throughout.`
+    },
+    {
+      question: `Is lead paint a concern on older ${suburb} homes?`,
+      answer: `It can be. Anything built before 1970 may carry lead-based paint under later coats, so we do not dry-sand or power-sand original timberwork of that age. Preparation uses low-dust methods, and where the age is uncertain we recommend testing before sanding begins.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Absolutely. We provide free, no-obligation written quotes across ${suburb} and Bentleigh East, with the full scope and preparation included up front so there are no surprises. Call Jimmy on 0432 077 782 to arrange a visit.`
+      answer: `Yes. We are based nearby in Mordialloc and provide free written quotes across ${suburb}, itemising the preparation each surface needs. Call Jimmy on 0432 077 782.`
     }
   ];
+
 
   return (
     <SuburbPageTemplate

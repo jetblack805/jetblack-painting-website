@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Braesid
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Braeside.
+Walls, ceilings, trims, doors and full home repaints in Braeside. Furniture protected, surfaces filled and sanded, and premium low-sheen and enamel finishes applied over proper preparation.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Rendered, brick and masonry exteriors in Braeside are washed of chalking, cracks filled and the surface sealed before exterior-grade topcoats — including eaves, fascias and fences.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Braeside.
+Shops, offices, and maintenance repainting across Braeside, scheduled around your trading hours with after-hours and weekend work available.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Braeside properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 

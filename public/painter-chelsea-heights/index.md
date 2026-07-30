@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Chelsea
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Chelsea Heights.
+Walls, ceilings, trims and doors across Chelsea Heights houses, apartments and townhouses. Furniture protected and the work staged room by room, with low-odour products so the home stays liveable throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Rendered, brick and masonry exteriors in Chelsea Heights are washed of chalking, cracks filled and the surface sealed before exterior-grade topcoats — including eaves, fascias and fences.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Chelsea Heights.
+Strata and owners-corporation work across Chelsea Heights — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Chelsea Heights properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 
@@ -46,21 +46,21 @@ Explore nearby suburb pages for neighbouring areas around Chelsea Heights.
 
 ## Frequently asked questions about painters in Chelsea Heights
 
-### Do you paint family homes and brick-veneer houses in Chelsea Heights?
+### Does being near the Edithvale-Seaford wetlands affect paintwork?
 
-Yes — brick-veneer and clad family homes are the mainstay of our Chelsea Heights work. We prepare and repaint rendered and brick facades, eaves, fascias and garage doors, and refresh interiors room by room with premium low-sheen and enamel systems, all with proper preparation so the finish stays even and lasts.
+It can. Ground-level humidity sits higher around the wetlands, and Chelsea Heights homes on shaded or south-facing walls tend to show mould and that grey-green film sooner than drier pockets of Kingston. Painting over it just traps it, so those walls are treated and primed with a mould-inhibiting system rather than simply recoated.
 
-### Can you repaint before we sell or lease a Chelsea Heights home?
+### Do you paint brick-veneer family homes in Chelsea Heights?
 
-Absolutely. A clean, neutral repaint is one of the best-value ways to lift a Chelsea Heights property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.
+Yes — brick-veneer and clad family homes are the mainstay of our Chelsea Heights work. Rendered and painted brick facades, eaves, fascias and garage doors outside; walls, ceilings, trims and doors inside, staged room by room so the house stays liveable while the work runs.
+
+### Do you paint the newer townhouse developments in Chelsea Heights?
+
+Yes. Chelsea Heights has a growing number of townhouse developments, and we handle both individual owners and full-complex work. Where there's an owners corporation involved we provide the written scope and insurance documentation the committee needs before anything is approved.
 
 ### Do you do roof painting in Chelsea Heights?
 
-Yes. Many Chelsea Heights homes have tile or metal roofs that benefit from cleaning, repairs and a fresh membrane coating. We pressure wash, repair and prime before coating, which restores the look and adds years of protection. Roof work is covered by our 5-year written workmanship guarantee.
-
-### Do you offer free quotes in Chelsea Heights?
-
-Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across Chelsea Heights with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.
+Yes. Many Chelsea Heights homes have tile or metal roofs, and in a damp pocket like this they collect moss and lichen faster than most. We pressure wash, repair and prime before coating — the cleaning stage matters more here than the coating itself. Roof work carries the same 5-year written workmanship guarantee.
 
 **Jetblack Painting** — House Painters Chelsea Heights | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

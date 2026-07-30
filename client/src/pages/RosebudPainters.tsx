@@ -4,20 +4,20 @@ export default function RosebudPainters() {
   const suburb = "Rosebud";
   const faqs = [
     {
-      question: `Do you paint beach houses and holiday homes in ${suburb}?`,
-      answer: `Yes — ${suburb} is a bayside peninsula town with a big mix of permanent homes, beach houses and holiday properties, and they're core to our work here. Weatherboard and fibro beach homes near the foreshore need coastal-grade care — salt washing, flexible primers and salt-resistant topcoats — so the finish holds up against salt air, UV and damp.`
+      question: `When is the best time of year to repaint in ${suburb}?`,
+      answer: `Outside the summer peak, if the property is a holiday let. ${suburb} fills up over summer, so most owners want the work done between about March and November — which also happens to suit exterior painting better, since coatings need moderate temperatures and a dry surface to cure properly. We book around the season rather than against it.`
     },
     {
-      question: `How do you protect ${suburb} homes from the coastal environment?`,
-      answer: `Homes near the bay in ${suburb} face constant salt air, strong UV and damp. We use flexible, salt-resistant exterior systems and thorough preparation — washing, priming and sealing bare timber — so your home's finish lasts far longer than a standard repaint would in this seaside environment.`
+      question: `How far back from the beach does salt air still affect paintwork?`,
+      answer: `Further than most people expect. Salt carries well inland on the prevailing weather across ${suburb}, so streets several blocks back from the foreshore still see the chalking and early coating failure that front-row properties get. We assess exposure at the quote rather than assuming only the beachfront needs the coastal-grade system.`
     },
     {
-      question: `Can you repaint before we sell, lease or holiday-let a ${suburb} property?`,
-      answer: `Absolutely. A clean, fresh repaint is one of the best-value ways to lift a ${suburb} beach house or home before sale, a new tenancy or the holiday-rental season. We work to your timeline, keep the site tidy, and focus on the surfaces that most affect presentation.`
+      question: `Can you paint a ${suburb} holiday rental between bookings?`,
+      answer: `Yes, and we do it regularly. Send your booking calendar with the quote and we'll stage the work into the gaps — interiors room by room if the window is tight, exteriors in a single block when the weather allows. The aim is a finished job without you blocking out revenue nights.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. We service the Mornington Peninsula and provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. We service the Mornington Peninsula and provide free written quotes across ${suburb}, with the exposure assessment and coating system itemised so you can see what you're paying for. Call Jimmy on 0432 077 782.`
     }
   ];
 

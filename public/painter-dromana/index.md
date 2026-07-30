@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Dromana
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Dromana.
+Walls, ceilings, trims, doors and full home repaints in Dromana. Furniture protected, surfaces filled and sanded, and premium low-sheen and enamel finishes applied over proper preparation.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Salt air and full sun are hard on Dromana weatherboards. Boards are washed down, scraped and sanded back to a sound edge, and bare timber spot-primed before exterior-grade topcoats go on.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Dromana.
+Shops, offices, and maintenance repainting across Dromana, scheduled around your trading hours with after-hours and weekend work available.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Dromana properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 
@@ -49,17 +49,21 @@ Explore nearby suburb pages for neighbouring areas around Dromana.
 
 Yes — Dromana is a bayside peninsula town with a mix of permanent homes, beach houses and holiday properties, and they're core to our work here. Weatherboard and fibro beach homes near the foreshore need coastal-grade care — salt washing, flexible primers and salt-resistant topcoats — so the finish holds up against salt air, UV and damp.
 
-### How do you protect Dromana homes from the coastal environment?
+### Can you paint homes on the sloping blocks below Arthurs Seat?
 
-Homes near the bay in Dromana face constant salt air, strong UV and damp. We use flexible, salt-resistant exterior systems and thorough preparation — washing, priming and sealing bare timber — so your home's finish lasts far longer than a standard repaint would in this seaside environment.
+Yes. A lot of Dromana sits on the rise between the foreshore and Arthurs Seat, and sloping blocks change how a job is set up — a single-storey house can still be two storeys of working height at the downhill end. We assess access at the quote and price in the right scaffold or elevated equipment rather than discovering it on day one.
 
-### Can you repaint before we sell or lease a Dromana property?
+### How do you handle older fibro sheeting on Dromana beach houses?
 
-Absolutely. A clean, fresh repaint is one of the best-value ways to lift a Dromana beach house or home before sale, a new tenancy or the holiday-rental season. We work to your timeline, keep the site tidy, and focus on the surfaces that most affect presentation.
+Carefully. Fibro sheeting on older Dromana beach houses can date from the era when asbestos cement was in common use, so we never dry-sand or power-sand fibro of unknown age. It's washed down and hand-prepared using low-disturbance methods, and where there's any doubt about the material we recommend having it tested before work starts.
+
+### Can you work around a holiday-rental booking schedule?
+
+Yes. Plenty of Dromana properties are holiday lets, so we're used to working to a fixed window between bookings or through the quieter months. Give us your booking calendar with the quote and we'll stage the work to fit it, rather than you losing peak-season nights to a repaint.
 
 ### Do you offer free quotes in Dromana?
 
-Yes. We service the Mornington Peninsula and provide free written quotes across Dromana with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.
+Yes. We service the Mornington Peninsula and provide free written quotes across Dromana, itemising the coastal preparation, primers and topcoats so you can see exactly what the salt-air protection involves. Call Jimmy on 0432 077 782.
 
 **Jetblack Painting** — House Painters Dromana | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Keysbor
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Keysborough.
+Walls, ceilings, trims and doors across Keysborough houses, apartments and townhouses. Furniture protected and the work staged room by room, with low-odour products so the home stays liveable throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Rendered, brick and masonry exteriors in Keysborough are washed of chalking, cracks filled and the surface sealed before exterior-grade topcoats — including eaves, fascias and fences.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Keysborough.
+Strata and owners-corporation work across Keysborough — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Keysborough properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 

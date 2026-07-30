@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Bentlei
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Bentleigh East.
+Walls, ceilings, trims and doors in Bentleigh East, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboard exteriors in Bentleigh East are scraped back, damaged boards repaired and bare timber spot-primed, so the new coating holds at the board edges instead of lifting there first.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Bentleigh East.
+Strata and owners-corporation work across Bentleigh East — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Bentleigh East sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 
@@ -46,21 +46,21 @@ Explore nearby suburb pages for neighbouring areas around Bentleigh East.
 
 ## Frequently asked questions about painters in Bentleigh East
 
-### Do you paint post-war brick and californian bungalow homes in Bentleigh East?
+### Do you paint californian bungalows in Bentleigh East?
 
-Yes — Bentleigh East is full of post-war brick-veneer homes, californian bungalows and interwar houses, and each needs the right approach: masonry-appropriate preparation and coatings for rendered and brick surfaces, and careful timber priming and caulking on bungalow eaves, windows and weatherboard sections. We match the paint system to the surface for a durable, even finish.
+Yes — they're one of the signatures of Bentleigh East. Bungalows of that era carry detail a modern build doesn't: deep timber fascias, bracketed eaves, leadlight surrounds and wide front-porch beams. That's slow, hand-cut work rather than roller work, and we quote it on the detail involved rather than on floor area.
 
-### What types of properties do you paint in Bentleigh East?
+### Can you match the original interwar colours on a Bentleigh East home?
 
-Bentleigh East has a broad mix — post-war brick-veneer family homes, californian bungalows, interwar houses, renovated period homes and newer townhouse developments. We handle all of them with substrate-matched preparation and premium Dulux or Taubmans systems, from full exterior repaints to interior colour refreshes.
+Usually, yes. Interwar and post-war homes in Bentleigh East often have an original scheme still readable in a sheltered spot — under an eave, behind a downpipe or inside a cupboard. We can colour-match from a sound sample, or suggest a heritage-appropriate palette if you'd rather update it while keeping the period feel.
 
-### Can you repaint a Bentleigh East home before we sell or lease it?
+### Is lead paint a concern on older Bentleigh East homes?
 
-Absolutely. A clean, neutral repaint is one of the best-value ways to lift a Bentleigh East property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.
+It can be. Homes built before 1970 may carry lead-based paint under later coats, which is why we don't dry-sand or power-sand original timberwork of that age. Preparation is done with low-dust methods, and where the age is uncertain we recommend testing before any sanding starts.
 
 ### Do you offer free quotes in Bentleigh East?
 
-Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across Bentleigh East with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.
+Yes. We're a short drive away in Mordialloc and provide free written quotes across Bentleigh East, itemising the preparation each surface needs — which on a period home is usually where the real difference between quotes sits. Call Jimmy on 0432 077 782.
 
 **Jetblack Painting** — House Painters Bentleigh East | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

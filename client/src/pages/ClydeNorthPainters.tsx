@@ -4,22 +4,23 @@ export default function ClydeNorthPainters() {
   const suburb = "Clyde North";
   const faqs = [
     {
-      question: `Do you paint new estate homes in ${suburb}?`,
-      answer: `Yes — ${suburb} is one of Melbourne's fastest-growing suburbs, made up largely of near-new estate homes, and they're the core of our work here. Many are reaching the point where the builder's coating has started to fade or chalk and a professional repaint restores and protects them. We wash, prepare and recoat rendered and brick facades with premium exterior systems, backed by our 5-year written workmanship guarantee.`
+      question: `When does a new ${suburb} home need its first repaint?`,
+      answer: `Usually five to ten years after handover. ${suburb} is almost entirely new estate housing, so nearly every property here is still wearing builder-grade paint — a thin, cost-driven system that fades and chalks early, particularly on the elevations taking full afternoon sun.`
     },
     {
-      question: `What types of properties do you paint in ${suburb}?`,
-      answer: `${suburb} is dominated by modern brick and rendered family homes — single and double-storey estate builds — along with townhouses. We handle exterior repaints, interior colour refreshes, eaves, fascias and garage doors, matching the paint system to each surface for a durable, even finish.`
+      question: `Is a first repaint different from repainting an older home?`,
+      answer: `Yes, and it is often simpler. There are no decades of built-up coats or old repairs to sand back, so more of the budget goes into the coating itself rather than the preparation. What does matter is priming any bare or patched plaster properly, since new-build walls often have settlement cracks that were only filled once.`
     },
     {
-      question: `Can you repaint before we sell or lease a ${suburb} home?`,
-      answer: `Yes. A clean, fresh repaint is one of the best-value ways to lift a ${suburb} property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.`
+      question: `Can you work on the narrow side access typical of estate blocks?`,
+      answer: `Yes. Estate blocks in ${suburb} are tight, and side access between houses is often under a metre. We plan the setup at the quote — smaller platforms where a full scaffold will not fit, and agreement with you on where equipment stands — rather than turning up and improvising.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. We service the City of Casey and provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. We service ${suburb} and the wider City of Casey with free written quotes. Call Jimmy on 0432 077 782.`
     }
   ];
+
 
   return (
     <SuburbPageTemplate

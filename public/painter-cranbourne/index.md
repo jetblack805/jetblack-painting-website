@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Cranbou
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Cranbourne.
+Walls, ceilings, trims and doors across Cranbourne houses, apartments and townhouses. Furniture protected and the work staged room by room, with low-odour products so the home stays liveable throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Rendered, brick and masonry exteriors in Cranbourne are washed of chalking, cracks filled and the surface sealed before exterior-grade topcoats — including eaves, fascias and fences.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Cranbourne.
+Strata and owners-corporation work across Cranbourne — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Cranbourne properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 
@@ -45,21 +45,21 @@ Explore nearby suburb pages for neighbouring areas around Cranbourne.
 
 ## Frequently asked questions about painters in Cranbourne
 
-### Do you paint estate and brick-veneer family homes in Cranbourne?
+### Do you paint both the older homes and the newer estates in Cranbourne?
 
-Yes — Cranbourne is a mix of established brick-veneer homes and large newer estates, and both are core to our work here. We prepare and repaint rendered and brick facades, eaves, fascias and garage doors, and refresh interiors room by room with premium low-sheen and enamel systems, all with proper preparation so the finish stays even and lasts.
+Yes, and they are genuinely different jobs. The established brick-veneer homes around the Cranbourne town centre are usually onto their second or third repaint, so the work is sanding back built-up edges and failing patches. Newer estate homes are still on builder-grade paint and need a proper first repaint rather than a touch-up.
 
-### Can you repaint a newer Cranbourne home for the first time?
+### When does a newer Cranbourne estate home need its first repaint?
 
-Absolutely. Many newer Cranbourne estate homes are due for their first repaint after 8–12 years, when the builder's coating starts to fade or chalk. We wash, prepare and recoat with premium exterior systems that restore the colour and add years of protection, all backed by our 5-year written workmanship guarantee.
+Typically somewhere between five and ten years. Builder-grade paint on a new build is usually a thin two-coat system chosen for cost, and it tends to give up first on the north and west elevations that take the afternoon sun. Chalking, patchy colour or a surface that marks easily are the signs it is due.
 
-### Can you repaint before we sell or lease a Cranbourne home?
+### Can you paint while we stay living in the house?
 
-Yes. A clean, neutral repaint is one of the best-value ways to lift a Cranbourne property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.
+Yes. Most Cranbourne repaints are done with the family still in the home. We stage interiors room by room, use low-odour water-based products where the specification allows, and keep the work area sealed off so the rest of the house stays usable.
 
 ### Do you offer free quotes in Cranbourne?
 
-Yes. We service the City of Casey and provide free written quotes across Cranbourne with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.
+Yes. We service Cranbourne and the wider City of Casey with free written quotes, itemising the preparation each surface needs — which on a first repaint of an estate home is most of the value. Call Jimmy on 0432 077 782.
 
 **Jetblack Painting** — House Painters Cranbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

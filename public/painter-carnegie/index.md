@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Carnegi
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Carnegie.
+Walls, ceilings, trims and doors in Carnegie, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Rendered, brick and masonry exteriors in Carnegie are washed of chalking, cracks filled and the surface sealed before exterior-grade topcoats — including eaves, fascias and fences.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Carnegie.
+Strata and owners-corporation work across Carnegie — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Carnegie sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 

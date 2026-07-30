@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Hawthor
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Hawthorn.
+Walls, ceilings, trims and doors in Hawthorn, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboards, render, brick, fences, eaves and fascias in Hawthorn, prepared properly so the finish lasts through Melbourne's weather rather than failing at the edges.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Hawthorn.
+Strata and owners-corporation work across Hawthorn — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Hawthorn sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 
@@ -46,17 +46,21 @@ Explore nearby suburb pages for neighbouring areas around Hawthorn.
 
 ## Frequently asked questions about painters in Hawthorn
 
-### Do you specialise in Hawthorn's Victorian and Federation homes?
+### Do you paint Victorian terraces and Federation homes in Hawthorn?
 
-Yes. Hawthorn is renowned for its grand Victorian terraces and Federation homes, and we're experienced with their ornate detailing — lead-paint-safe preparation, timber and cast-iron lacework restoration, and heritage-appropriate colour schemes that suit the era and the streetscape. We treat these homes with the care they require.
+Yes — the period stock around Grace Park and the Yarra-side streets is core to our work in Hawthorn. Terraces bring cast-iron lacework, rendered parapets, tessellated verandah detail and tall double-hung sashes, all of which are slow hand work. We quote on the detail involved, not on floor area.
 
-### How long does a house repaint take in Hawthorn?
+### Does a heritage overlay affect what colours I can use in Hawthorn?
 
-Most Hawthorn homes are completed within 5 to 10 working days depending on size and the amount of preparation and period detailing involved. We provide a detailed timeline with every quote so there's no guesswork and minimal disruption to your household.
+It can. Parts of Hawthorn sit within heritage overlays that place conditions on external colour schemes, particularly on street-facing elevations. We recommend checking with Boroondara before committing to an exterior scheme, and we are happy to work to a heritage-appropriate palette.
 
-### Do you offer free quotes in Hawthorn?
+### Can you paint the render and ironwork on a Hawthorn terrace?
 
-Yes. We provide free, no-obligation written quotes across Hawthorn and Hawthorn East, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a site visit.
+Yes. Rendered parapets and facades need cracks cut out and filled, and chalking washed back before a breathable exterior system goes on. Cast-iron lacework and railings are a separate job again — rust treated back to sound metal and primed before enamel, or it lifts within a couple of seasons.
+
+### Do you also paint the newer townhouses and apartments in Hawthorn?
+
+Yes. Hawthorn pairs its period streets with contemporary townhouses and apartment developments, and we work across both — including owners-corporation common areas, with the written scope and insurance documentation committees need up front.
 
 **Jetblack Painting** — House Painters Hawthorn | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

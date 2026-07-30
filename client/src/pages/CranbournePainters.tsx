@@ -4,22 +4,23 @@ export default function CranbournePainters() {
   const suburb = "Cranbourne";
   const faqs = [
     {
-      question: `Do you paint estate and brick-veneer family homes in ${suburb}?`,
-      answer: `Yes — ${suburb} is a mix of established brick-veneer homes and large newer estates, and both are core to our work here. We prepare and repaint rendered and brick facades, eaves, fascias and garage doors, and refresh interiors room by room with premium low-sheen and enamel systems, all with proper preparation so the finish stays even and lasts.`
+      question: `Do you paint both the older homes and the newer estates in ${suburb}?`,
+      answer: `Yes, and they are genuinely different jobs. The established brick-veneer homes around the ${suburb} town centre are usually onto their second or third repaint, so the work is sanding back built-up edges and failing patches. Newer estate homes are still on builder-grade paint and need a proper first repaint rather than a touch-up.`
     },
     {
-      question: `Can you repaint a newer ${suburb} home for the first time?`,
-      answer: `Absolutely. Many newer ${suburb} estate homes are due for their first repaint after 8–12 years, when the builder's coating starts to fade or chalk. We wash, prepare and recoat with premium exterior systems that restore the colour and add years of protection, all backed by our 5-year written workmanship guarantee.`
+      question: `When does a newer ${suburb} estate home need its first repaint?`,
+      answer: `Typically somewhere between five and ten years. Builder-grade paint on a new build is usually a thin two-coat system chosen for cost, and it tends to give up first on the north and west elevations that take the afternoon sun. Chalking, patchy colour or a surface that marks easily are the signs it is due.`
     },
     {
-      question: `Can you repaint before we sell or lease a ${suburb} home?`,
-      answer: `Yes. A clean, neutral repaint is one of the best-value ways to lift a ${suburb} property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.`
+      question: `Can you paint while we stay living in the house?`,
+      answer: `Yes. Most ${suburb} repaints are done with the family still in the home. We stage interiors room by room, use low-odour water-based products where the specification allows, and keep the work area sealed off so the rest of the house stays usable.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. We service the City of Casey and provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. We service ${suburb} and the wider City of Casey with free written quotes, itemising the preparation each surface needs — which on a first repaint of an estate home is most of the value. Call Jimmy on 0432 077 782.`
     }
   ];
+
 
   return (
     <SuburbPageTemplate

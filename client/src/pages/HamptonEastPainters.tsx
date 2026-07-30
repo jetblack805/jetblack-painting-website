@@ -4,16 +4,16 @@ export default function HamptonEastPainters() {
   const suburb = "Hampton East";
   const faqs = [
     {
-      question: `Do you paint post-war brick and californian bungalow homes in ${suburb}?`,
-      answer: `Yes. ${suburb} is full of post-war brick veneer homes and californian bungalows, and each needs the right approach — masonry-appropriate preparation and coatings for rendered and brick surfaces, and careful timber priming and caulking on bungalow eaves, windows and weatherboard sections. We match the paint system to the surface for a durable, even finish.`
+      question: `Do you paint weatherboard cottages in ${suburb}?`,
+      answer: `Yes. ${suburb} still has a good number of weatherboard cottages among the brick-veneer streets, and timber needs a different approach — boards scraped back to a sound edge, splits and damaged sections repaired, and bare timber spot-primed before topcoats, because timber moves and a brittle coating cracks at the board joins.`
+    },
+    {
+      question: `How is painting a post-war brick veneer different from a weatherboard home?`,
+      answer: `Mostly in the preparation. Brick veneer and rendered surfaces in ${suburb} are stable, so the work is washing off chalking, filling cracks and sealing before topcoats. Weatherboard moves with moisture and temperature, so it needs a flexible system and far more attention to bare timber and joins. The two are quoted differently for that reason.`
     },
     {
       question: `Can you repaint a ${suburb} home before we sell or lease it?`,
-      answer: `Absolutely. A clean, neutral repaint is one of the best-value ways to lift a ${suburb} property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.`
-    },
-    {
-      question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes, and it's common work for us here given how tightly ${suburb} sits between Hampton and Moorabbin. We work to agent timelines with durable, neutral, easy-clean finishes, concentrating on the surfaces that carry a photograph and an inspection — facade, front door, walls, ceilings and trims.`
     }
   ];
 

@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Prahran
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Prahran.
+Walls, ceilings, trims and doors in Prahran, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Weatherboards, render, brick, fences, eaves and fascias in Prahran, prepared properly so the finish lasts through Melbourne's weather rather than failing at the edges.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Prahran.
+Strata and owners-corporation work across Prahran — common areas, stairwells, entries and facades — alongside shops and offices, staged around residents and trading hours.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting for Prahran sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
 ## Nearby suburbs we also service
 

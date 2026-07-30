@@ -20,19 +20,19 @@ Jetblack Painting helps homeowners, landlords, and commercial clients in Brighto
 
 ### Interior painting
 
-Walls, ceilings, trims, doors, and full home repaints completed with clean protection and durable finishes in Brighton East.
+Walls, ceilings, trims and doors in Brighton East, including open-plan living areas where a consistent finish across one large space is what gives it away. Surfaces patched and sanded, premium low-sheen and enamel throughout.
 
 ### Exterior painting
 
-Weatherboards, render, brick, fences, eaves, and fascias prepared properly for a longer-lasting exterior finish.
+Coastal exposure in Brighton East attacks coatings early, so exteriors are pressure washed, chalking and flaking paint taken back, and surfaces primed before weather-resistant topcoats are applied.
 
 ### Commercial painting
 
-Flexible repainting support for shops, offices, strata, and maintenance projects across Brighton East.
+Shops, offices, and maintenance repainting across Brighton East, scheduled around your trading hours with after-hours and weekend work available.
 
 ### Pre-sale and rental refreshes
 
-Fast-turnaround repainting to improve presentation, protect assets, and get properties market-ready.
+Fast-turnaround repainting to get Brighton East properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
 ## Nearby suburbs we also service
 

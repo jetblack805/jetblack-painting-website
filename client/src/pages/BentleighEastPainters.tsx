@@ -4,20 +4,20 @@ export default function BentleighEastPainters() {
   const suburb = "Bentleigh East";
   const faqs = [
     {
-      question: `Do you paint post-war brick and californian bungalow homes in ${suburb}?`,
-      answer: `Yes — ${suburb} is full of post-war brick-veneer homes, californian bungalows and interwar houses, and each needs the right approach: masonry-appropriate preparation and coatings for rendered and brick surfaces, and careful timber priming and caulking on bungalow eaves, windows and weatherboard sections. We match the paint system to the surface for a durable, even finish.`
+      question: `Do you paint californian bungalows in ${suburb}?`,
+      answer: `Yes — they're one of the signatures of ${suburb}. Bungalows of that era carry detail a modern build doesn't: deep timber fascias, bracketed eaves, leadlight surrounds and wide front-porch beams. That's slow, hand-cut work rather than roller work, and we quote it on the detail involved rather than on floor area.`
     },
     {
-      question: `What types of properties do you paint in ${suburb}?`,
-      answer: `${suburb} has a broad mix — post-war brick-veneer family homes, californian bungalows, interwar houses, renovated period homes and newer townhouse developments. We handle all of them with substrate-matched preparation and premium Dulux or Taubmans systems, from full exterior repaints to interior colour refreshes.`
+      question: `Can you match the original interwar colours on a ${suburb} home?`,
+      answer: `Usually, yes. Interwar and post-war homes in ${suburb} often have an original scheme still readable in a sheltered spot — under an eave, behind a downpipe or inside a cupboard. We can colour-match from a sound sample, or suggest a heritage-appropriate palette if you'd rather update it while keeping the period feel.`
     },
     {
-      question: `Can you repaint a ${suburb} home before we sell or lease it?`,
-      answer: `Absolutely. A clean, neutral repaint is one of the best-value ways to lift a ${suburb} property before sale or a new tenancy. We work to agent timelines, keep the site tidy, and focus on the surfaces that most affect presentation — walls, ceilings, trims, doors and the facade.`
+      question: `Is lead paint a concern on older ${suburb} homes?`,
+      answer: `It can be. Homes built before 1970 may carry lead-based paint under later coats, which is why we don't dry-sand or power-sand original timberwork of that age. Preparation is done with low-dust methods, and where the age is uncertain we recommend testing before any sanding starts.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. As a local painter based nearby in Mordialloc, we provide free written quotes across ${suburb} with the full scope and preparation clearly included. Call Jimmy on 0432 077 782 or request a quote online.`
+      answer: `Yes. We're a short drive away in Mordialloc and provide free written quotes across ${suburb}, itemising the preparation each surface needs — which on a period home is usually where the real difference between quotes sits. Call Jimmy on 0432 077 782.`
     }
   ];
 

@@ -8,5 +8,17 @@
     "not_found_handling": "single-page-application",
     "binding": "ASSETS",
     "run_worker_first": true
+  },
+  // Plain-text vars live here rather than only in the dashboard, because a
+  // deploy takes its vars from this file. A value set only in the dashboard can
+  // be dropped by the next deploy, and worker/quote.js silently falls back to
+  // Resend's shared sender when QUOTE_FROM_EMAIL is missing — so losing it
+  // would quietly change who quote emails come from without anything failing.
+  //
+  // Not a secret: this is the public From address on outgoing mail. The Resend
+  // API key is a real secret and is deliberately NOT here — it is set in the
+  // dashboard as an encrypted secret, which deploys do not touch.
+  "vars": {
+    "QUOTE_FROM_EMAIL": "Jetblack Painting <quotes@jetblackpainting.com>"
   }
 }

@@ -6,7 +6,12 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/about-team-at-work.webp";
+import imgSprayBooth from "@/assets/images/gallery-cabinet-doors-spray-booth.webp";
+import imgSprayBooth900 from "@/assets/images/gallery-cabinet-doors-spray-booth-900.webp";
+import imgSprayDetail from "@/assets/images/gallery-cabinet-spray-finish-detail.webp";
+import imgSprayDetail900 from "@/assets/images/gallery-cabinet-spray-finish-detail-900.webp";
+import imgFinishedKitchen from "@/assets/images/gallery-cabinet-finished-white-kitchen.webp";
+import imgFinishedKitchen900 from "@/assets/images/gallery-cabinet-finished-white-kitchen-900.webp";
 
 export default function KitchenCabinetResurfacing() {
   const benefits = [
@@ -82,12 +87,46 @@ export default function KitchenCabinetResurfacing() {
 
       <section className="py-12 bg-[#131316]">
         <div className="container">
+          {/* Finished result runs full width: it is the only landscape shot of
+              the three, and the one a visitor deciding on the service wants to
+              see first. */}
           <img
-            src={imgService}
-            alt="Jetblack Painting team completing a premium finish project"
+            src={imgFinishedKitchen}
+            srcSet={`${imgFinishedKitchen900} 900w, ${imgFinishedKitchen} 1170w`}
+            sizes="(max-width: 1024px) 100vw, 1152px"
+            width={1170}
+            height={798}
+            alt="Kitchen with white resurfaced cabinetry, stone island bench and stainless steel appliances"
             className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
             loading="lazy"
+            decoding="async"
           />
+          {/* The two spray-booth shots are portrait, so they sit side by side in
+              a taller box rather than being cropped into a wide strip. */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <img
+              src={imgSprayBooth}
+              srcSet={`${imgSprayBooth900} 675w, ${imgSprayBooth} 1200w`}
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1200}
+              height={1600}
+              alt="Kitchen cabinet doors being spray painted in Jetblack Painting's spray booth"
+              className="rounded-lg shadow-md w-full h-80 sm:h-96 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={imgSprayDetail}
+              srcSet={`${imgSprayDetail900} 675w, ${imgSprayDetail} 1200w`}
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1200}
+              height={1600}
+              alt="Spray gun laying an even coat across a kitchen cabinet door in the booth"
+              className="rounded-lg shadow-md w-full h-80 sm:h-96 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </section>
 

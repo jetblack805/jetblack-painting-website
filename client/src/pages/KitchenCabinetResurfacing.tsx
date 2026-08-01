@@ -87,6 +87,14 @@ export default function KitchenCabinetResurfacing() {
 
       <section className="py-12 bg-[#131316]">
         <div className="container">
+          {/* Deliberately plural: the finished white kitchen and the grey doors
+              in the booth are different jobs, not one project photographed at
+              two stages. Without this heading three photos in a row read as a
+              single before-and-after sequence, which would be untrue. */}
+          <h2 className="text-2xl font-bold text-[#EDEDEF] mb-2">Recent cabinet projects</h2>
+          <p className="text-[#B4B4B8] mb-6">
+            A selection of separate kitchen cabinet jobs — finished kitchens, and doors being sprayed in our booth.
+          </p>
           {/* Finished result runs full width: it is the only landscape shot of
               the three, and the one a visitor deciding on the service wants to
               see first. */}

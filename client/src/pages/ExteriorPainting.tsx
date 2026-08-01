@@ -123,7 +123,7 @@ export default function ExteriorPainting() {
         <div className="container">
           <img
             src={imgService}
-            alt="Exterior painting example by Jetblack Painting"
+            alt="Navy weatherboard home with white picket fence and window trim painted by Jetblack Painting"
             className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
             loading="lazy"
           />

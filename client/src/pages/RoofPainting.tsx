@@ -104,7 +104,7 @@ export default function RoofPainting() {
             />
             <img
               src={imgVictorianRoof}
-              alt="Restored Victorian tile roof by Jetblack Painting"
+              alt="Roof restoration in progress on a weatherboard home, with a Jetblack Painting painter working from the ridge"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />

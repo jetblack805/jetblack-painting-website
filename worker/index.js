@@ -1,4 +1,5 @@
 import { KNOWN_PATHS } from "./known-paths.js";
+import { handleQuoteRequest } from "./quote.js";
 
 // Redirect www.jetblackpainting.com → jetblackpainting.com, apply path
 // redirects, then serve static assets.
@@ -150,6 +151,13 @@ export default {
       url.hostname = url.hostname.slice(4);
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
+    }
+
+    // Handled before any redirect or known-path logic: /api/quote is not a page
+    // and must never be trailing-slash redirected or 404'd by the SPA rules
+    // below. robots.txt already disallows /api/.
+    if (url.pathname === "/api/quote") {
+      return handleQuoteRequest(request, env);
     }
 
     const path = url.pathname.replace(/\/$/, "") || "/";

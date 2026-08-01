@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -81,7 +81,12 @@ export default function QuoteForm() {
   // details now stay on screen with call / text / email options, so there is
   // always a way through even when mailto: does nothing.
   const [submitted, setSubmitted] = useState<QuoteFormData | null>(null);
+  const [delivered, setDelivered] = useState(false);
   const [copied, setCopied] = useState(false);
+  // Honeypot: hidden from real users, so anything that fills it is a bot.
+  const [honeypot, setHoneypot] = useState("");
+  // Used to reject submissions that arrive impossibly fast (bots).
+  const startedAt = useRef(Date.now());
   const {
     register,
     handleSubmit,
@@ -93,14 +98,44 @@ export default function QuoteForm() {
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
-    setSubmitted(data);
     setCopied(false);
+
+    // Post to the endpoint first. If it confirms delivery, the visitor is done
+    // and needs no further action. If it cannot deliver — no channel configured
+    // yet, provider outage, or the request never made it — we say so plainly
+    // and fall back to call/text/email rather than claiming it was sent.
+    let confirmed = false;
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...data,
+          company: honeypot,
+          elapsedMs: Date.now() - startedAt.current,
+          page: typeof window !== "undefined" ? window.location.pathname : "",
+        }),
+      });
+      if (response.ok) {
+        const result = (await response.json()) as { delivered?: boolean };
+        confirmed = result.delivered === true;
+      }
+    } catch {
+      // Offline, blocked, or the request failed — fall through to the manual
+      // options, which is the whole point of keeping them.
+    }
+
+    setDelivered(confirmed);
+    setSubmitted(data);
     setIsSubmitting(false);
   };
 
   const startOver = () => {
     setSubmitted(null);
+    setDelivered(false);
     setCopied(false);
+    setHoneypot("");
+    startedAt.current = Date.now();
     reset();
   };
 
@@ -143,11 +178,14 @@ export default function QuoteForm() {
               return (
                 <div className="bg-[#060607] rounded-xl p-8 sm:p-12">
                   <h3 className="text-2xl text-[#EDEDEF] mb-3">
-                    Almost there, {submitted.name.split(" ")[0]} — send it through
+                    {delivered
+                      ? `Thanks ${submitted.name.split(" ")[0]} — we've got your request`
+                      : `Almost there, ${submitted.name.split(" ")[0]} — send it through`}
                   </h3>
                   <p className="text-[#A3A3A8] mb-8">
-                    Pick whichever suits you. Calling gets the fastest answer — Jimmy usually
-                    picks up, and you can have a rough idea on the spot.
+                    {delivered
+                      ? "Jimmy will be in touch within 24 hours. If you'd rather not wait, call or text and you'll usually get an answer on the spot."
+                      : "Pick whichever suits you. Calling gets the fastest answer — Jimmy usually picks up, and you can have a rough idea on the spot."}
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
@@ -202,6 +240,26 @@ export default function QuoteForm() {
             })()
           ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="bg-[#060607] rounded-xl p-8 sm:p-12">
+            {/*
+              Honeypot. Hidden from people (and from screen readers via
+              aria-hidden + tabIndex -1) but visible to naive bots, which fill
+              every field they find. Anything arriving with this set is dropped
+              server-side. Cheaper and less hostile to real customers than a
+              CAPTCHA.
+            */}
+            <div className="absolute w-px h-px -m-px overflow-hidden" aria-hidden="true">
+              <label htmlFor="quote-company">Company (leave blank)</label>
+              <input
+                type="text"
+                id="quote-company"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+              />
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {/* Name */}
               <div>

@@ -84,7 +84,7 @@ export default function RoofFencePainting() {
         <div className="container">
           <img
             src={imgService}
-            alt="Roof and fence painting example by Jetblack Painting"
+            alt="Charcoal tiled roof resprayed by Jetblack Painting in Melbourne"
             className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
             loading="lazy"
           />

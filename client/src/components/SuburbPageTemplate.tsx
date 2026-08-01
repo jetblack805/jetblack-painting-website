@@ -6,7 +6,11 @@ import Footer from "./Footer";
 import MidPageCTA from "./MidPageCTA";
 import { getSuburbData, getEmbedMapSrc } from "../suburbsData";
 import imgExteriorWork from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
-import imgCommercialWork from "@/assets/images/gallery-commercial-epoxy-floor.webp";
+// Was gallery-commercial-epoxy-floor.webp — an empty room's floor, which read as
+// a vacant room rather than painting work on all 95 suburb pages. The epoxy shot
+// is still shown in the main gallery, where it sits among other commercial jobs
+// and has context. Here it needed to be recognisably a painted building.
+import imgCommercialWork from "@/assets/images/gallery-commercial-comfortel-building.webp";
 import imgRoofWork from "@/assets/images/gallery-roof-victorian-restoration.webp";
 
 interface SuburbPageProps {
@@ -459,7 +463,7 @@ export default function SuburbPageTemplate({
               />
               <img
                 src={imgCommercialWork}
-                alt={`Commercial painting example by Jetblack Painting, servicing ${suburb}`}
+                alt={`Commercial building exterior repainted by Jetblack Painting, servicing ${suburb}`}
                 className="rounded-lg shadow-sm w-full h-56 object-cover"
                 loading="lazy"
               />

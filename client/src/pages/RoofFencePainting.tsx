@@ -6,7 +6,19 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgService from "@/assets/images/service-roof-fence-painting.webp";
+// service-roof-fence-painting.webp was a byte-identical copy of this file under a
+// second name, so the same photo shipped twice. Points at the canonical one.
+// No -900 variant: the source is only 640x480, so a "900" file would be the same
+// pixels under a misleading name.
+import imgRoof from "@/assets/images/gallery-roof-charcoal-tiles.webp";
+import imgFenceBefore from "@/assets/images/gallery-fence-picket-before.webp";
+import imgFenceBefore900 from "@/assets/images/gallery-fence-picket-before-900.webp";
+import imgFenceAfter from "@/assets/images/gallery-fence-picket-after.webp";
+import imgFenceAfter900 from "@/assets/images/gallery-fence-picket-after-900.webp";
+import imgFenceBlackDeck from "@/assets/images/gallery-fence-black-deck.webp";
+import imgFenceBlackDeck900 from "@/assets/images/gallery-fence-black-deck-900.webp";
+import imgFenceMerbau from "@/assets/images/gallery-fence-merbau-oiled.webp";
+import imgFenceMerbau900 from "@/assets/images/gallery-fence-merbau-oiled-900.webp";
 
 export default function RoofFencePainting() {
   const benefits = [
@@ -83,11 +95,78 @@ export default function RoofFencePainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgService}
+            src={imgRoof}
+            width={640}
+            height={480}
             alt="Charcoal tiled roof resprayed by Jetblack Painting in Melbourne"
             className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
             loading="lazy"
+            decoding="async"
           />
+
+          {/* Both frames are the same fence on the same job — the masked-off
+              rectangle in the "before" is the letterbox that reads 27 in the
+              "after". Labelled explicitly, because an unlabelled pair of fence
+              photos just looks like two fences. */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <figure className="relative m-0">
+              <img
+                src={imgFenceBefore}
+                srcSet={`${imgFenceBefore900} 900w, ${imgFenceBefore} 1200w`}
+                sizes="(max-width: 640px) 100vw, 50vw"
+                width={1200}
+                height={900}
+                alt="Bare timber picket fence masked up and prepared before painting by Jetblack Painting"
+                className="rounded-lg shadow-md w-full h-72 sm:h-96 object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption className="absolute top-3 left-3 rounded bg-black/70 px-3 py-1.5 text-[9.5px] font-semibold uppercase tracking-[0.3em] text-[#D0A050]">
+                Before
+              </figcaption>
+            </figure>
+            <figure className="relative m-0">
+              <img
+                src={imgFenceAfter}
+                srcSet={`${imgFenceAfter900} 675w, ${imgFenceAfter} 1125w`}
+                sizes="(max-width: 640px) 100vw, 50vw"
+                width={1125}
+                height={1500}
+                alt="The same picket fence finished in white by Jetblack Painting"
+                className="rounded-lg shadow-md w-full h-72 sm:h-96 object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption className="absolute top-3 left-3 rounded bg-black/70 px-3 py-1.5 text-[9.5px] font-semibold uppercase tracking-[0.3em] text-[#D0A050]">
+                After
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <img
+              src={imgFenceBlackDeck}
+              srcSet={`${imgFenceBlackDeck900} 900w, ${imgFenceBlackDeck} 1206w`}
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1206}
+              height={1056}
+              alt="Paling fence painted charcoal black beside a freshly oiled timber deck"
+              className="rounded-lg shadow-md w-full h-72 sm:h-96 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={imgFenceMerbau}
+              srcSet={`${imgFenceMerbau900} 900w, ${imgFenceMerbau} 1206w`}
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1206}
+              height={505}
+              alt="Merbau front fence finished with oil, bringing out the grain in the timber"
+              className="rounded-lg shadow-md w-full h-72 sm:h-96 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </section>
 

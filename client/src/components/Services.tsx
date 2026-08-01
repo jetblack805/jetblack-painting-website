@@ -8,7 +8,8 @@ import { useInView } from "@/lib/useInView";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.webp";
 import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
 import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building.webp";
-import imgRoofFencePainting from "@/assets/images/service-roof-fence-painting.webp";
+// Was service-roof-fence-painting.webp, a byte-identical duplicate of this file.
+import imgRoofFencePainting from "@/assets/images/gallery-roof-charcoal-tiles.webp";
 import imgOpenPlanLiving from "@/assets/images/gallery-interior-staged-living.webp";
 import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.webp";
 

@@ -3,7 +3,6 @@
 // instead of Cloudflare's SPA fallback 200 for URLs that do not exist.
 export const KNOWN_PATHS = new Set([
   "/",
-  "/.htaccess",
   "/BingSiteAuth.xml",
   "/apple-touch-icon.png",
   "/blog/",
@@ -31,7 +30,6 @@ export const KNOWN_PATHS = new Set([
   "/hero-navy.webp",
   "/hero-poolhouse.jpg",
   "/index.md",
-  "/jetblack_sitemap_fix.zip",
   "/keysborough-painters/",
   "/keysborough-painters/index.md",
   "/llms.txt",

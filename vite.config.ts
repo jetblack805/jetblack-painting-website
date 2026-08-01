@@ -111,7 +111,11 @@ function vitePluginCopyStaticFiles(): Plugin {
     async writeBundle() {
       const sourceDir = path.join(PROJECT_ROOT, "public");
       const destDir = path.join(PROJECT_ROOT, "dist/public");
-      const skipTopLevel = new Set(["index.html", ".htaccess", "jetblack_sitemap_fix.zip"]);
+      // Anything added here must also be skipped by SKIP_TOP_LEVEL in
+      // scripts/generate-known-paths.mjs. A file that is excluded here but
+      // still listed in KNOWN_PATHS makes the worker serve the homepage at
+      // HTTP 200 for that URL instead of a real 404.
+      const skipTopLevel = new Set(["index.html"]);
       copyDirRecursive(sourceDir, destDir, skipTopLevel);
 
       // Pull the real built script/stylesheet tags out of Vite's own

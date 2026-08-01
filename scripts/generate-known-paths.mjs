@@ -16,10 +16,28 @@ import path from "node:path";
 const PUBLIC_DIR = path.resolve("public");
 const OUT_PATH = path.resolve("worker/known-paths.js");
 
+// Top-level entries in public/ that the build does NOT copy into dist/public.
+// MUST stay in sync with `skipTopLevel` in vite.config.ts.
+//
+// Listing a path here that the build never deploys is worse than omitting it:
+// the worker trusts KNOWN_PATHS and stops short of returning 404, the assets
+// binding then finds nothing, and Cloudflare's SPA fallback answers with the
+// homepage under HTTP 200 — a soft 404 on a URL that does not exist. That is
+// exactly what /.htaccess and /jetblack_sitemap_fix.zip were doing: both were
+// build-excluded, both were in KNOWN_PATHS, and both served the full homepage
+// with the homepage's own <title> at 200.
+const SKIP_TOP_LEVEL = new Set(["index.html"]);
+
 function collect(dir, prefix = "") {
   const found = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const route = `${prefix}/${entry.name}`;
+
+    // Dotfiles are never web content and are not served; listing one would
+    // create the soft 404 described above.
+    if (prefix === "" && (SKIP_TOP_LEVEL.has(entry.name) || entry.name.startsWith("."))) {
+      continue;
+    }
 
     // Standalone .html files — the Search Console verification file, and
     // anything like it. Cloudflare's asset handler redirects /foo.html to the

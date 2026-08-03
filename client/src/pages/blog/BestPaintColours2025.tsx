@@ -46,7 +46,6 @@ export default function BestPaintColours2026() {
         title="Best Paint Colours for Melbourne Homes 2026 | Jetblack"
         description="Discover trending paint colours for Melbourne homes in 2026. Interior & exterior colour trends, expert tips, and colour consultation from Jetblack Painting."
         canonical="https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025/"
-        keywords="paint colours 2026, best paint colors Melbourne, interior paint colours, exterior paint colours, trending colours, paint color trends"
         author="Jimmy Demirci"
         schema={blogSchema}
       />

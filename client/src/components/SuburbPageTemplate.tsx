@@ -5,13 +5,20 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MidPageCTA from "./MidPageCTA";
 import { getSuburbData, getEmbedMapSrc } from "../suburbsData";
+// Each gallery image is paired with a 900px variant. These three render on all
+// 95 suburb pages, so serving the full-size file to a phone for a 224px-tall
+// thumbnail was the single largest avoidable payload on the site's main landing
+// pages. srcSet lets the browser take the smaller file; the image is unchanged.
 import imgExteriorWork from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
+import imgExteriorWork900 from "@/assets/images/gallery-exterior-navy-weatherboard-900.webp";
 // Was gallery-commercial-epoxy-floor.webp — an empty room's floor, which read as
 // a vacant room rather than painting work on all 95 suburb pages. The epoxy shot
 // is still shown in the main gallery, where it sits among other commercial jobs
 // and has context. Here it needed to be recognisably a painted building.
 import imgCommercialWork from "@/assets/images/gallery-commercial-comfortel-building.webp";
+import imgCommercialWork900 from "@/assets/images/gallery-commercial-comfortel-building-900.webp";
 import imgRoofWork from "@/assets/images/gallery-roof-victorian-restoration.webp";
+import imgRoofWork900 from "@/assets/images/gallery-roof-victorian-restoration-900.webp";
 
 interface SuburbPageProps {
   title: string;
@@ -457,18 +464,30 @@ export default function SuburbPageTemplate({
             <div className="grid md:grid-cols-3 gap-6">
               <img
                 src={imgExteriorWork}
+                srcSet={`${imgExteriorWork900} 900w, ${imgExteriorWork} 1050w`}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                width={1050}
+                height={1400}
                 alt={`Exterior house painting example by Jetblack Painting, servicing ${suburb}`}
                 className="rounded-lg shadow-sm w-full h-56 object-cover"
                 loading="lazy"
               />
               <img
                 src={imgCommercialWork}
+                srcSet={`${imgCommercialWork900} 900w, ${imgCommercialWork} 1400w`}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                width={1400}
+                height={1050}
                 alt={`Commercial building exterior repainted by Jetblack Painting, servicing ${suburb}`}
                 className="rounded-lg shadow-sm w-full h-56 object-cover"
                 loading="lazy"
               />
               <img
                 src={imgRoofWork}
+                srcSet={`${imgRoofWork900} 900w, ${imgRoofWork} 1050w`}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                width={1050}
+                height={1400}
                 alt={`Roof painting example by Jetblack Painting, servicing ${suburb}`}
                 className="rounded-lg shadow-sm w-full h-56 object-cover"
                 loading="lazy"

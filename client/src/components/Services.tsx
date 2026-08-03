@@ -7,13 +7,28 @@ import { Link } from "wouter";
 import { useInView } from "@/lib/useInView";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.webp";
 import imgNavyWeatherboard from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
+import imgNavyWeatherboard900 from "@/assets/images/gallery-exterior-navy-weatherboard-900.webp";
 import imgEpoxyFloor from "@/assets/images/gallery-commercial-comfortel-building.webp";
+import imgEpoxyFloor900 from "@/assets/images/gallery-commercial-comfortel-building-900.webp";
 // Was service-roof-fence-painting.webp, a byte-identical duplicate of this file.
 import imgRoofFencePainting from "@/assets/images/gallery-roof-charcoal-tiles.webp";
 import imgOpenPlanLiving from "@/assets/images/gallery-interior-staged-living.webp";
 import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.webp";
+import imgCommercialBuilding900 from "@/assets/images/gallery-commercial-heritage-white-900.webp";
 
-const services = [
+type Service = {
+  icon: typeof Home;
+  title: string;
+  description: string;
+  image: string;
+  /* Present only where a 900px variant exists; images already under ~90KB do
+     not get one, since a second file would add a request without saving bytes. */
+  imageSmall?: string;
+  imageWidth?: number;
+  link: string;
+};
+
+const services: Service[] = [
   {
     icon: Home,
     title: "Interior House Painting Melbourne",
@@ -26,6 +41,8 @@ const services = [
     title: "Exterior House Painting Melbourne",
     description: "Boost your property's curb appeal with our expert exterior painting Melbourne services. We specialise in high-quality repaints for weatherboards, render, fascias, and gutters, using durable paints built to withstand Melbourne's varied weather. Our exterior house painters ensure long-lasting protection and a beautiful finish for homes in Mordialloc and Bayside.",
     image: imgNavyWeatherboard,
+    imageSmall: imgNavyWeatherboard900,
+    imageWidth: 1050,
     link: "/services/exterior-painting",
   },
   {
@@ -33,6 +50,8 @@ const services = [
     title: "Commercial Painting Melbourne",
     description: "Jetblack Painting provides professional commercial painting Melbourne services to keep your business premises looking their best. Our commercial painting contractors work with offices, retail shops, warehouses, and factories across Melbourne, ensuring high-quality results while minimising disruption to your daily operations.",
     image: imgEpoxyFloor,
+    imageSmall: imgEpoxyFloor900,
+    imageWidth: 1400,
     link: "/services/commercial-painting",
   },
   {
@@ -54,6 +73,8 @@ const services = [
     title: "Body Corporate Painting Melbourne",
     description: "Jetblack Painting provides professional body corporate and strata painting Melbourne services for owners corporations and strata managers. We repaint common areas, hallways, stairwells and external façades with minimal disruption to residents — fully insured, with detailed scopes and clear schedules for committee approval.",
     image: imgCommercialBuilding,
+    imageSmall: imgCommercialBuilding900,
+    imageWidth: 1400,
     link: "/services/body-corporate-painting",
   },
 ];
@@ -113,6 +134,12 @@ function ServiceCard({
         <div className="relative h-52 overflow-hidden">
           <img loading="lazy" decoding="async"
             src={service.image}
+            {...("imageSmall" in service
+              ? {
+                  srcSet: `${service.imageSmall} 900w, ${service.image} ${service.imageWidth}w`,
+                  sizes: "(max-width: 768px) 100vw, 33vw",
+                }
+              : {})}
             alt={service.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />

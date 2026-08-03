@@ -6,7 +6,6 @@ interface SEOHeadProps {
   canonical: string;
   ogImage?: string;
   schema?: object | object[];
-  keywords?: string;
   author?: string;
 }
 
@@ -36,7 +35,7 @@ function upsertLink(selector: string, attributes: Record<string, string>) {
   Object.entries(attributes).forEach(([key, value]) => tag?.setAttribute(key, value));
 }
 
-export default function SEOHead({ title, description, canonical, ogImage, schema, keywords, author }: SEOHeadProps) {
+export default function SEOHead({ title, description, canonical, ogImage, schema, author }: SEOHeadProps) {
   const schemaJson = schema ? JSON.stringify(schema) : "";
 
   useEffect(() => {
@@ -45,11 +44,6 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
     // Core SEO Meta Tags
     upsertMeta('meta[name="title"]', { name: "title", content: title });
     upsertMeta('meta[name="description"]', { name: "description", content: description });
-    
-    // Keywords (if provided)
-    if (keywords) {
-      upsertMeta('meta[name="keywords"]', { name: "keywords", content: keywords });
-    }
     
     // Author (if provided)
     if (author) {
@@ -138,7 +132,7 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
     return () => {
       document.getElementById(managedSchemaId)?.remove();
     };
-  }, [title, description, canonical, ogImage, schemaJson, keywords, author]);
+  }, [title, description, canonical, ogImage, schemaJson, author]);
 
   return null;
 }

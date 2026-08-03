@@ -9,7 +9,9 @@ import MidPageCTA from "@/components/MidPageCTA";
 import imgService from "@/assets/images/gallery-roof-charcoal-tiles.webp";
 import imgMetalRoof from "@/assets/images/gallery-roof-metal-colorbond.webp";
 import imgRoofCleaning from "@/assets/images/gallery-roof-cleaning.webp";
+import imgRoofCleaning900 from "@/assets/images/gallery-roof-cleaning-900.webp";
 import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.webp";
+import imgVictorianRoof900 from "@/assets/images/gallery-roof-victorian-restoration-900.webp";
 
 export default function RoofPainting() {
   const benefits = [
@@ -98,12 +100,20 @@ export default function RoofPainting() {
             />
             <img
               src={imgRoofCleaning}
+              srcSet={`${imgRoofCleaning900} 900w, ${imgRoofCleaning} 1123w`}
+              sizes="(max-width: 1024px) 100vw, 1152px"
+              width={1123}
+              height={1400}
               alt="High-pressure roof cleaning and preparation by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />
             <img
               src={imgVictorianRoof}
+              srcSet={`${imgVictorianRoof900} 900w, ${imgVictorianRoof} 1050w`}
+              sizes="(max-width: 1024px) 100vw, 1152px"
+              width={1050}
+              height={1400}
               alt="Roof restoration in progress on a weatherboard home, with a Jetblack Painting painter working from the ridge"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"

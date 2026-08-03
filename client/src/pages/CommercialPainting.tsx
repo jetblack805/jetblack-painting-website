@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
 import imgService from "@/assets/images/gallery-commercial-comfortel-building.webp";
 import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.webp";
+import imgBeforeAfter900 from "@/assets/images/gallery-commercial-before-after-900.webp";
 import imgComfortelFront from "@/assets/images/gallery-commercial-comfortel-front.webp";
 import imgIndustrialLift from "@/assets/images/gallery-commercial-industrial-lift.webp";
 
@@ -143,6 +144,10 @@ export default function CommercialPainting() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
               src={imgBeforeAfter}
+              srcSet={`${imgBeforeAfter900} 900w, ${imgBeforeAfter} 1400w`}
+              sizes="(max-width: 1024px) 100vw, 1152px"
+              width={1400}
+              height={1400}
               alt="Before and after of a commercial building repaint by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"

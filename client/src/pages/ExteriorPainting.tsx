@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
 import imgService from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
+import imgService900 from "@/assets/images/gallery-exterior-navy-weatherboard-900.webp";
 
 export default function ExteriorPainting() {
   const benefits = [
@@ -123,6 +124,10 @@ export default function ExteriorPainting() {
         <div className="container">
           <img
             src={imgService}
+            srcSet={`${imgService900} 900w, ${imgService} 1050w`}
+            sizes="(max-width: 1024px) 100vw, 1152px"
+            width={1050}
+            height={1400}
             alt="Navy weatherboard home with white picket fence and window trim painted by Jetblack Painting"
             className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
             loading="lazy"

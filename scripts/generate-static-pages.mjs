@@ -958,10 +958,48 @@ const servicePages = [
       "Roofs and fences take the most weather of any surface on a property. The right preparation and exterior-grade coatings protect them for years and transform how the property presents from the street.",
       "All work is completed by insured professionals and covered by our 5-year workmanship guarantee.",
     ],
+    extraSections: [
+      {
+        heading: "Timber and Colorbond are different jobs",
+        paragraphs: [
+          "A timber paling fence and a Colorbond fence look like the same job from the driveway and behave nothing alike once you start. Timber moves. It swells in winter, shrinks in summer, greys off under UV and eventually cups if only one face is sealed. That movement is what breaks a coating, which is why preparation on timber is mostly about giving the surface something stable to hold onto before anything is applied.",
+          "Colorbond doesn't fail that way. The factory finish is durable and long-lived, and when it finally goes it chalks — the surface turns dusty and the colour flattens rather than flaking. That chalk is the whole problem: paint applied straight over it sticks to loose powder instead of steel, and peels off in sheets within a year. Colorbond needs a proper wash to strip the chalk back, a scuff to key the surface, and a primer formulated for metal. Done that way it holds colour for years and lets you change a dated green or cream fence to something current without replacing a single panel.",
+          "Hardwoods sit in a third category. Merbau, spotted gum and similar dense timbers are naturally oily, and paint struggles to bond to them at all. They're better oiled — the finish soaks in rather than sitting on top, keeps the grain visible, and weathers back gradually instead of peeling. It needs recoating more often than paint does, but it never reaches the point of having to be stripped.",
+        ],
+      },
+      {
+        heading: "What preparation actually involves",
+        paragraphs: [
+          "Fences collect everything the weather throws at them, plus what grows on them. Mould, lichen and algae on the shaded southern side all have to come off, and washing alone doesn't kill the spores — left underneath a fresh coat they keep growing and push it away from the timber. Dirt, cobwebs and old flaking coating come off in the same pass.",
+          "Then the repairs. Loose palings get refixed, popped nails punched and filled, and anything rotted through gets replaced before a brush is opened — a coating doesn't hold a failing fence together, it just hides the failure for a season. The bottom of a timber fence is always the first thing we look at, because ground moisture wicks straight up into the exposed end grain of each paling and rots it from underneath while the top three-quarters still looks fine.",
+          "Access is the last thing to sort out, and it's the one that catches people. A boundary fence has two sides and one of them belongs to next door. Coating only your side leaves the other face raw, which weathers unevenly and encourages the palings to cup toward the wet side. It's worth asking your neighbour before the quote rather than discovering on the day that half the fence is off limits.",
+        ],
+      },
+      {
+        heading: "Roof coatings depend on what the roof is made of",
+        paragraphs: [
+          "Concrete tiles are porous. As the original surface treatment wears away they start absorbing water, which makes them heavier, slower to dry and a comfortable home for moss. Restoring them means cleaning the growth off, replacing anything cracked or slipped, repointing the ridge capping where the mortar has failed, then sealing the tile before the colour coats go on. Skip the sealer and the tile drinks the topcoat straight in.",
+          "Metal roofs fail somewhere else entirely. Colorbond and Zincalume sheeting is stable across its face and vulnerable at the edges — around fixings, at cut ends, in valleys where water sits and leaves collect. Rust gets treated at those points specifically before an etch primer and topcoats go on, because a beautifully coated sheet with untreated rust under a screw head will bloom through within a year.",
+          "The judgement that matters most is whether a roof should be coated at all. Cracked or slipped tiles, failed capping, rusted-through sheeting and blocked valleys are repairs, not paint problems — coat over a leak and you've sealed the fault in where nobody can see it. We assess that at the quote and say plainly if repair work needs to happen first. Where the roof is sound, a proper coating system extends its life by 10–15 years and stops the slow moisture damage that ages a roof faster than sun ever does.",
+        ],
+      },
+      {
+        heading: "Why we quote roof and fence together",
+        paragraphs: [
+          "These two get bundled for practical reasons, not as an upsell. Both need the same run of dry weather, both need the site set up once, and roof work needs height access that is already paid for whether the fence is done in the same visit or three months later. Splitting them means paying to mobilise twice.",
+          "There's a presentation argument too. A restored roof above a grey, splitting fence draws the eye straight to the fence — the improvement makes the untouched part look worse than it did before. Done together, with colours chosen to work against each other rather than in isolation, the whole exterior lifts at once. That matters most before a sale or a rental listing, where the first impression is a photograph taken from the kerb.",
+        ],
+      },
+    ],
     faqs: [
-      { question: "Can you do the roof and fences in one project?", answer: "Yes. We regularly quote roof and fence painting together as a combined exterior refresh." },
-      { question: "Do you stain fences as well as paint them?", answer: "Yes. Depending on the timber and the look you want, we can apply paint systems or exterior stains." },
-      { question: "How long does fence painting last?", answer: "With proper preparation and exterior-grade products, fence coatings typically last 5–10 years depending on exposure." },
+      { question: "Can you do the roof and fences in one project?", answer: "Yes, and it's usually the cheaper way to do it. The access equipment, the site setup and the weather window are shared across both, so quoting them together costs less than booking two separate jobs — and the exterior reads as one finished thing from the street rather than a new roof above a tired fence." },
+      { question: "Should timber be painted, stained or oiled?", answer: "It depends on the timber and how much upkeep you want. Paint gives the longest protection and full colour control, but once timber is painted it stays painted — stripping it back later is a big job. Stain lets the grain show and weathers back gradually rather than peeling. Hardwoods like merbau are usually oiled instead, because paint struggles to hold on their dense, oily surface." },
+      { question: "Can Colorbond fences and roofs be painted?", answer: "Yes. Colorbond and Zincalume take a new colour well, but they need different preparation from timber — a thorough wash to remove chalked factory coating, a scuff to give the surface a key, and a primer made for metal. Skipping any of that is why repainted Colorbond sometimes peels in sheets a year later." },
+      { question: "Does my fence need repairs before painting?", answer: "Often, yes. Loose or rotted palings, popped nails and posts that have shifted all get dealt with before any coating goes on — paint doesn't hold a failing fence together. The bottom of a timber fence fails first because ground moisture wicks up into the end grain, so that's the first place we check at the quote." },
+      { question: "Do you paint both sides of the fence?", answer: "Where we can get access, yes — and it's worth doing, because a fence coated on one side only weathers unevenly and can cup. A boundary fence needs your neighbour's agreement for us to work on their side, so it's worth asking them before the quote rather than after we're booked in." },
+      { question: "How long does fence painting last?", answer: "With proper preparation and exterior-grade products, fence coatings typically last 5–10 years depending on exposure. A north or west-facing fence takes far more UV than a shaded one and will always be first to need attention." },
+      { question: "When does a roof need repairs rather than painting?", answer: "When the problem is structural rather than cosmetic. Cracked or slipped tiles, failed ridge capping, rusted-through sheeting and blocked valleys all need fixing before a coating goes near them — paint over a leak and you've sealed the problem in. We assess this at the quote and tell you plainly if the roof needs repair work first." },
+      { question: "What does roof painting actually protect against?", answer: "UV, moisture absorption and moss regrowth. Concrete tiles are porous and soak up water as they age, which makes them heavier and slower to dry; a sealed, coated roof sheds water instead. On metal roofs the coating protects the fixings and cut edges where rust starts. Done properly it extends roof life by 10–15 years." },
     ],
   },
   {

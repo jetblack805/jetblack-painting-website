@@ -13,6 +13,13 @@ const PATH_REDIRECTS = {
   "/interior-painting":           "/services/interior-painting/",
   "/kitchen-cabinet-resurfacing": "/services/kitchen-cabinet-resurfacing/",
 
+  // A country-code path from an older version of the site. It still carries the
+  // only genuine editorial backlink pointing at this domain — an article on
+  // transportation-industry.com links to www.jetblackpainting.com/au/ — and it
+  // was landing on a hard 404, so that link passed nothing.
+  "/au":  "/",
+  "/au/": "/",
+
   // Ghost blog routes (duplicate suburb/service content) → canonical pages
   "/blog/toorak-painting-guide":        "/painter-toorak/",
   "/blog/brighton-painters-guide":      "/painter-brighton/",

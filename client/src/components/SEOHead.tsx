@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import siteConfig from "@/site-config.json";
 
 interface SEOHeadProps {
   title: string;
@@ -60,31 +61,13 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
       content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     });
     
-    // AEO (AI Engine Optimization) meta tags - explicit AI-friendly markup
-    upsertMeta('meta[name="aeo"]', {
-      name: "aeo",
-      content: "enabled",
-    });
-    upsertMeta('meta[name="ai-content-api"]', {
-      name: "ai-content-api",
-      content: "enabled",
-    });
-    
-    // Additional AI crawlers metadata
-    upsertMeta('meta[name="claude-ai"]', {
-      name: "claude-ai",
-      content: "enabled",
-    });
-    upsertMeta('meta[name="chatgpt-ai"]', {
-      name: "chatgpt-ai",
-      content: "enabled",
-    });
+    // Nonstandard AEO meta tags deliberately removed. Rely on robust JSON-LD and visible content signals instead.
 
     // Canonical URL (critical for SEO)
     upsertLink('link[rel="canonical"]', { rel: "canonical", href: canonical });
 
     // Open Graph (Social Media & Sharing)
-    const image = ogImage || "https://jetblackpainting.com/og-image.jpg";
+    const image = ogImage || `${siteConfig.siteUrl}/og-image.jpg`;
     upsertMeta('meta[property="og:type"]', { property: "og:type", content: "website" });
     upsertMeta('meta[property="og:title"]', { property: "og:title", content: title });
     upsertMeta('meta[property="og:description"]', { property: "og:description", content: description });

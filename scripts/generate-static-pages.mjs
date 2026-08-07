@@ -1,11 +1,24 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE_URL = "https://jetblackpainting.com";
-const PHONE_DISPLAY = "0432 077 782";
-const PHONE_HREF = "0432077782";
-const EMAIL = "jimmy@jetblackpainting.com";
-const GOOGLE_REVIEW_LINK = "https://g.page/r/CS0L-iKiqJlHEBM/review";
+// Load site-wide constants from client/src/site-config.json so the same
+// values can be used by both the static generator and the client app.
+const CONFIG_PATH = path.resolve("client/src/site-config.json");
+let SITE_URL = "https://jetblackpainting.com";
+let PHONE_DISPLAY = "0432 077 782";
+let PHONE_HREF = "0432077782";
+let EMAIL = "jimmy@jetblackpainting.com";
+let GOOGLE_REVIEW_LINK = "https://g.page/r/CS0L-iKiqJlHEBM/review";
+try {
+  const cfg = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
+  SITE_URL = cfg.siteUrl || SITE_URL;
+  PHONE_DISPLAY = cfg.phoneDisplay || PHONE_DISPLAY;
+  PHONE_HREF = cfg.phoneHref || PHONE_HREF;
+  EMAIL = cfg.email || EMAIL;
+  GOOGLE_REVIEW_LINK = cfg.googleReviewLink || GOOGLE_REVIEW_LINK;
+} catch (e) {
+  // If the JSON file is missing or invalid, fall back to hardcoded defaults.
+}
 const PUBLIC_DIR = path.resolve("public");
 const PAGE_DIR = path.resolve("client/src/pages");
 

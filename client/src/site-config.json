@@ -1,0 +1,15 @@
+{
+  "siteUrl": "https://jetblackpainting.com",
+  "businessName": "Jetblack Painting",
+  "phoneDisplay": "0432 077 782",
+  "phoneHref": "0432077782",
+  "email": "jimmy@jetblackpainting.com",
+  "googleReviewLink": "https://g.page/r/CS0L-iKiqJlHEBM/review",
+  "address": {
+    "locality": "Mordialloc",
+    "region": "VIC",
+    "postalCode": "3195",
+    "country": "AU"
+  },
+  "geo": { "latitude": -38.0131, "longitude": 145.0965 }
+}

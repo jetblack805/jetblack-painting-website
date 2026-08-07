@@ -5,13 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "node scripts/generate-static-pages.mjs && node scripts/generate-markdown.mjs && node scripts/generate-known-paths.mjs && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "node scripts/generate-images.mjs && node scripts/generate-static-pages.mjs && node scripts/generate-markdown.mjs && node scripts/generate-known-paths.mjs && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "test": "vitest run",
     "format": "prettier --write .",
     "generate-static-pages": "node scripts/generate-static-pages.mjs",
+    "generate-images": "node scripts/generate-images.mjs",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "generate-markdown": "node scripts/generate-markdown.mjs",
     "generate-known-paths": "node scripts/generate-known-paths.mjs"
@@ -95,7 +96,8 @@
     "typescript": "5.6.3",
     "vite": "^7.1.7",
     "vite-plugin-manus-runtime": "^0.0.57",
-    "vitest": "^2.1.4"
+    "vitest": "^2.1.4",
+    "sharp": "^0.32.1"
   },
   "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
   "pnpm": {

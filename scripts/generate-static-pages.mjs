@@ -10,6 +10,7 @@ let PHONE_HREF = "0432077782";
 let EMAIL = "jimmy@jetblackpainting.com";
 let GOOGLE_REVIEW_LINK = "https://g.page/r/CS0L-iKiqJlHEBM/review";
 let AGGREGATE_RATING = { ratingValue: "5.0", reviewCount: "14" };
+let REVIEWS = null;
 try {
   const cfg = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
   SITE_URL = cfg.siteUrl || SITE_URL;
@@ -20,6 +21,9 @@ try {
   // Optional aggregate rating from config
   if (cfg.aggregateRating) {
     AGGREGATE_RATING = cfg.aggregateRating;
+  }
+  if (cfg.reviews) {
+    REVIEWS = cfg.reviews;
   }
 } catch (e) {
   // If the JSON file is missing or invalid, fall back to hardcoded defaults.
@@ -471,6 +475,23 @@ function faqSchema(items) {
   };
 }
 
+function reviewSchema(reviews) {
+  // Expects reviews as [{ author: string, datePublished: 'YYYY-MM-DD', reviewBody: string, rating: number }]
+  if (!reviews || !reviews.length) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewBody: reviews[0].reviewBody || "",
+    author: { "@type": "Person", name: reviews[0].author || "" },
+    datePublished: reviews[0].datePublished || undefined,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: String(reviews[0].rating || (AGGREGATE_RATING.ratingValue || "5")),
+      bestRating: "5",
+    },
+  };
+}
+
 // The four "What we paint in X" cards used to be one hardcoded block repeated
 // verbatim on every suburb page — two of the four did not even mention the
 // suburb. Across 96 pages that made ~40% of all suburb-page sentences
@@ -561,6 +582,7 @@ function generateSuburbPage(route, sourceFile) {
         breadcrumbSchema({ suburb, canonical }),
         ...suburbSchema({ suburb, title, description, canonical }),
         ...(faqs.length ? [faqSchema(faqs)] : []),
+        ...(REVIEWS ? [reviewSchema(REVIEWS)] : []),
       ],
       sections: [
         {

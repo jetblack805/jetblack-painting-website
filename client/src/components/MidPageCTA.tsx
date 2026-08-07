@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import siteConfig from "@/site-config.json";
 
 interface MidPageCTAProps {
   heading?: string;
@@ -12,11 +13,11 @@ export default function MidPageCTA({ heading = "Ready to get started?" }: MidPag
         Call now for a free, no-obligation quote — most calls answered within minutes.
       </p>
       <a
-        href="tel:0432077782"
+        href={`tel:${siteConfig.phoneHref}`}
         className="inline-flex items-center gap-2 bg-[#131316] text-[#EDEDEF] px-8 py-3 rounded font-bold hover:bg-[#141417] transition-all"
       >
         <Phone className="w-5 h-5" />
-        Call 0432 077 782
+        Call {siteConfig.phoneDisplay}
       </a>
     </div>
   );

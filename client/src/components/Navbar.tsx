@@ -5,6 +5,7 @@
  */
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import siteConfig from "@/site-config.json";
 import LOGO_URL from "@/assets/images/logo-dark-bg.png";
 import { useLocation } from "wouter";
 
@@ -181,7 +182,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="tel:0432077782"
+            href={`tel:${siteConfig.phoneHref}`}
             className="flex items-center gap-2 border border-[#D0A050] text-[#D0A050] hover:bg-[#D0A050] hover:text-[#060607] px-5 py-2.5 text-[10.5px] font-bold tracking-[0.18em] uppercase transition-colors duration-200"
           >
             <Phone className="w-3.5 h-3.5" />

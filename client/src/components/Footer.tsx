@@ -3,6 +3,7 @@
  */
 import { Phone, Instagram, MapPin, Youtube, Facebook } from "lucide-react";
 import LOGO_URL from "@/assets/images/logo-dark-bg.png";
+import siteConfig from "@/site-config.json";
 
 // lucide-react has no TikTok glyph, so provide one inline.
 function TikTokIcon({ className }: { className?: string }) {
@@ -179,7 +180,7 @@ export default function Footer() {
                 </a>
               ))}
               <a
-                href="https://g.page/r/CS0L-iKiqJlHEBM/review"
+                            href={siteConfig.googleReviewLink || "https://g.page/r/CS0L-iKiqJlHEBM/review"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-1 inline-flex items-center gap-1.5 text-[#D0A050] hover:text-[#E9BE6C] transition-colors text-sm font-semibold"
@@ -198,11 +199,11 @@ export default function Footer() {
             </h2>
             <div className="space-y-3">
               <a
-                href="tel:0432077782"
+                href={`tel:${siteConfig.phoneHref}`}
                 className="flex items-center gap-2 text-white/50 hover:text-[#D0A050] transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" />
-                0432 077 782
+                {siteConfig.phoneDisplay}
               </a>
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <MapPin className="w-4 h-4" />

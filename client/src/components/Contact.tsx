@@ -5,12 +5,14 @@
 import { Phone, MapPin, Clock, Instagram } from "lucide-react";
 import { useInView } from "@/lib/useInView";
 
+import siteConfig from "@/site-config.json";
+
 const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "0432 077 782",
-    href: "tel:0432077782",
+    value: siteConfig.phoneDisplay || "0432 077 782",
+    href: `tel:${siteConfig.phoneHref || "0432077782"}`,
   },
   {
     icon: Instagram,

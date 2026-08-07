@@ -1,3 +1,5 @@
+import siteConfig from "@/site-config.json";
+
 export default function GoogleMap() {
   return (
     <section className="py-16 bg-[#060607]">
@@ -23,8 +25,8 @@ export default function GoogleMap() {
             <strong>Jetblack Painting</strong> | Mordialloc VIC 3195
           </p>
           <p className="text-[#A3A3A8] mt-1">
-            <a href="tel:0432077782" className="text-[#D0A050] hover:underline font-bold">0432 077 782</a> |
-            <a href="mailto:jimmy@jetblackpainting.com" className="text-[#D0A050] hover:underline ml-2">jimmy@jetblackpainting.com</a>
+                      <a href={`tel:${siteConfig.phoneHref}`} className="text-[#D0A050] hover:underline font-bold">{siteConfig.phoneDisplay}</a> |
+                      <a href={`mailto:${siteConfig.email}`} className="text-[#D0A050] hover:underline ml-2">{siteConfig.email}</a>
           </p>
           <p className="text-[#A3A3A8] text-sm mt-2">Mon-Fri: 7am-5pm | Sat-Sun: 9am-5pm</p>
         </div>

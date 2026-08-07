@@ -49,12 +49,13 @@ const serviceTypes = [
   "Other",
 ];
 
-const QUOTE_DESTINATION_EMAIL = "jimmy@jetblackpainting.com";
-const PHONE_DISPLAY = "0432 077 782";
-const PHONE_TEL = "0432077782";
-// International form for the SMS link: some handsets will not prefill a message
-// body when the number is in local format.
-const PHONE_SMS = "+61432077782";
+import siteConfig from "@/site-config.json";
+
+const QUOTE_DESTINATION_EMAIL = siteConfig.email || "jimmy@jetblackpainting.com";
+const PHONE_DISPLAY = siteConfig.phoneDisplay || "0432 077 782";
+const PHONE_TEL = siteConfig.phoneHref || "0432077782";
+// International form for the SMS link
+const PHONE_SMS = siteConfig.phoneSms || "+61432077782";
 
 function summariseRequest(data: QuoteFormData) {
   return [

@@ -9,6 +9,7 @@ let PHONE_DISPLAY = "0432 077 782";
 let PHONE_HREF = "0432077782";
 let EMAIL = "jimmy@jetblackpainting.com";
 let GOOGLE_REVIEW_LINK = "https://g.page/r/CS0L-iKiqJlHEBM/review";
+let AGGREGATE_RATING = { ratingValue: "5.0", reviewCount: "14" };
 try {
   const cfg = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
   SITE_URL = cfg.siteUrl || SITE_URL;
@@ -16,6 +17,10 @@ try {
   PHONE_HREF = cfg.phoneHref || PHONE_HREF;
   EMAIL = cfg.email || EMAIL;
   GOOGLE_REVIEW_LINK = cfg.googleReviewLink || GOOGLE_REVIEW_LINK;
+  // Optional aggregate rating from config
+  if (cfg.aggregateRating) {
+    AGGREGATE_RATING = cfg.aggregateRating;
+  }
 } catch (e) {
   // If the JSON file is missing or invalid, fall back to hardcoded defaults.
 }
@@ -96,8 +101,8 @@ function localBusinessSchema() {
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "14",
+      "ratingValue": AGGREGATE_RATING.ratingValue?.toString() || "5.0",
+      "reviewCount": AGGREGATE_RATING.reviewCount?.toString() || "14",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -290,7 +295,7 @@ function suburbDirectoryHtml(currentCanonical) {
   return links ? `    <p class="suburb-directory">Suburbs we service: ${links}</p>\n` : "";
 }
 
-function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema }) {
+function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage }) {
   const schemaScripts = (Array.isArray(schema) ? [...schema, speakableSchema(canonical)] : [schema, speakableSchema(canonical)])
     .filter(Boolean)
     .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
@@ -366,11 +371,12 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(canonical)}">
-  <meta property="og:image" content="${SITE_URL}/og-image.jpg">
+  <meta property="og:image" content="${escapeHtml(ogImage || SITE_URL + "/og-image.jpg")}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:url" content="${escapeHtml(canonical)}">
+  <meta name="twitter:image" content="${escapeHtml(ogImage || SITE_URL + "/og-image.jpg")}">
 ${schemaScripts}
   <style>
     body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#EDEDEF;background:#060607;line-height:1.6}
@@ -539,13 +545,15 @@ function generateSuburbPage(route, sourceFile) {
   const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
   const faqs = extractFaqs(source, suburb);
   const canonical = canonicalForRoute(route);
-
+  const ogImage = `${SITE_URL}/og${route}.jpg`;
+ 
   writePage(
     route,
     pageHtml({
       title,
       description,
       canonical,
+      ogImage,
       heroTitle: `House Painters ${suburb}`,
       heroBody: `${description} Searching for painters near you in ${suburb}? Jetblack Painting are your trusted local ${suburb} painters, servicing ${suburb} and the surrounding suburbs.`,
       schema: [

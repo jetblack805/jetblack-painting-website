@@ -4,6 +4,8 @@
  * All credential copy is real and crawlable (SEO/AEO).
  */
 
+import siteConfig from "@/site-config.json";
+
 export default function TrustBadges() {
   const badges = [
     {
@@ -63,13 +65,13 @@ export default function TrustBadges() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="tel:0432077782"
+                          href={`tel:${siteConfig.phoneHref}`}
               className="inline-flex items-center px-7 py-3.5 bg-[#D0A050] text-[#060607] text-[11px] font-bold tracking-[0.18em] uppercase hover:bg-[#E9BE6C] transition-colors"
             >
-              Call 0432 077 782
+                          Call {siteConfig.phoneDisplay}
             </a>
             <a
-              href="mailto:jimmy@jetblackpainting.com"
+                          href={`mailto:${siteConfig.email}`}
               className="inline-flex items-center px-7 py-3.5 border border-[#1A1A1A]/35 text-[#1A1A1A] text-[11px] font-bold tracking-[0.18em] uppercase hover:border-[#1A1A1A] transition-colors"
             >
               Email for a Free Quote

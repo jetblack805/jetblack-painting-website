@@ -173,6 +173,14 @@ export default {
       return Response.redirect(`${url.origin}${target}`, 301);
     }
 
+    // Fallback: canonicalise common plural suburb aliases. If a /painters-<slug>
+    // path was not explicitly mapped above, redirect it to the singular
+    // /painter-<slug>/ form so ranking signals consolidate onto the canonical.
+    if (path.startsWith("/painters-")) {
+      const singular = path.replace("/painters-", "/painter-");
+      return Response.redirect(`${url.origin}${singular}/`, 301);
+    }
+
     // Canonical URLs on this site all end in a slash. Left to itself, the assets
     // binding normalises /painter-x to /painter-x/ with a 307 — a *temporary*
     // redirect, which tells Google not to consolidate ranking signals onto the

@@ -1,4 +1,5 @@
 import { Star, Phone, MapPin, CheckCircle } from "lucide-react";
+import siteConfig from "@/site-config.json";
 import { Link } from "wouter";
 import SEOHead from "./SEOHead";
 import Navbar from "./Navbar";
@@ -160,7 +161,7 @@ export default function SuburbPageTemplate({
   schema,
   localContent = [],
 }: SuburbPageProps) {
-  const canonical = `https://jetblackpainting.com${primarySuburbPath(suburb)}/`;
+  const canonical = `${siteConfig.siteUrl}${primarySuburbPath(suburb)}/`;
   const validNeighbouringSuburbs = neighbouringSuburbs.filter((s) => KNOWN_LANDING_PATHS.has(s.link));
   const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   const breadcrumbId = `${canonical}#breadcrumb`;
@@ -171,12 +172,12 @@ export default function SuburbPageTemplate({
     "@id": "https://jetblackpainting.com/#business",
     name: "Jetblack Painting",
     alternateName: ["Jet Black Painting", "Jetblack Painting Melbourne"],
-    url: "https://jetblackpainting.com",
-    image: "https://jetblackpainting.com/og-image.jpg",
-    telephone: "+61432077782",
-    email: "jimmy@jetblackpainting.com",
+    url: siteConfig.siteUrl || "https://jetblackpainting.com",
+    image: `${siteConfig.siteUrl || "https://jetblackpainting.com"}/og-image.jpg`,
+    telephone: siteConfig.phoneSms || "+61432077782",
+    email: siteConfig.email || "jimmy@jetblackpainting.com",
     priceRange: "$$",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "14", bestRating: "5" },
+    aggregateRating: siteConfig.aggregateRating ? { "@type": "AggregateRating", ratingValue: String(siteConfig.aggregateRating.ratingValue), reviewCount: String(siteConfig.aggregateRating.reviewCount), bestRating: "5" } : { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "14", bestRating: "5" } ,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Mordialloc",
@@ -325,12 +326,12 @@ export default function SuburbPageTemplate({
             <p className="text-xl text-gray-300 mb-6 max-w-3xl">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:0432077782"
+                              href={`tel:${siteConfig.phoneHref}`}
                 style={{ color: "#0A0A0B", WebkitTextFillColor: "#0A0A0B" }}
                 className="inline-flex items-center justify-center gap-2 bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] px-8 py-3 rounded font-bold transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Call 0432 077 782
+                              Call {siteConfig.phoneDisplay}
               </a>
               <a
                 href="#quote"

@@ -1,11 +1,33 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const SITE_URL = "https://jetblackpainting.com";
-const PHONE_DISPLAY = "0432 077 782";
-const PHONE_HREF = "0432077782";
-const EMAIL = "jimmy@jetblackpainting.com";
-const GOOGLE_REVIEW_LINK = "https://g.page/r/CS0L-iKiqJlHEBM/review";
+// Load site-wide constants from client/src/site-config.json so the same
+// values can be used by both the static generator and the client app.
+const CONFIG_PATH = path.resolve("client/src/site-config.json");
+let SITE_URL = "https://jetblackpainting.com";
+let PHONE_DISPLAY = "0432 077 782";
+let PHONE_HREF = "0432077782";
+let EMAIL = "jimmy@jetblackpainting.com";
+let GOOGLE_REVIEW_LINK = "https://g.page/r/CS0L-iKiqJlHEBM/review";
+let AGGREGATE_RATING = { ratingValue: "5.0", reviewCount: "14" };
+let REVIEWS = null;
+try {
+  const cfg = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
+  SITE_URL = cfg.siteUrl || SITE_URL;
+  PHONE_DISPLAY = cfg.phoneDisplay || PHONE_DISPLAY;
+  PHONE_HREF = cfg.phoneHref || PHONE_HREF;
+  EMAIL = cfg.email || EMAIL;
+  GOOGLE_REVIEW_LINK = cfg.googleReviewLink || GOOGLE_REVIEW_LINK;
+  // Optional aggregate rating from config
+  if (cfg.aggregateRating) {
+    AGGREGATE_RATING = cfg.aggregateRating;
+  }
+  if (cfg.reviews) {
+    REVIEWS = cfg.reviews;
+  }
+} catch (e) {
+  // If the JSON file is missing or invalid, fall back to hardcoded defaults.
+}
 const PUBLIC_DIR = path.resolve("public");
 const PAGE_DIR = path.resolve("client/src/pages");
 
@@ -83,8 +105,8 @@ function localBusinessSchema() {
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "14",
+      "ratingValue": AGGREGATE_RATING.ratingValue?.toString() || "5.0",
+      "reviewCount": AGGREGATE_RATING.reviewCount?.toString() || "14",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -277,7 +299,7 @@ function suburbDirectoryHtml(currentCanonical) {
   return links ? `    <p class="suburb-directory">Suburbs we service: ${links}</p>\n` : "";
 }
 
-function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema }) {
+function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage }) {
   const schemaScripts = (Array.isArray(schema) ? [...schema, speakableSchema(canonical)] : [schema, speakableSchema(canonical)])
     .filter(Boolean)
     .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
@@ -353,11 +375,12 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(canonical)}">
-  <meta property="og:image" content="${SITE_URL}/og-image.jpg">
+  <meta property="og:image" content="${escapeHtml(ogImage || SITE_URL + "/og-image.jpg")}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:url" content="${escapeHtml(canonical)}">
+  <meta name="twitter:image" content="${escapeHtml(ogImage || SITE_URL + "/og-image.jpg")}">
 ${schemaScripts}
   <style>
     body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#EDEDEF;background:#060607;line-height:1.6}
@@ -452,6 +475,23 @@ function faqSchema(items) {
   };
 }
 
+function reviewSchema(reviews) {
+  // Expects reviews as [{ author: string, datePublished: 'YYYY-MM-DD', reviewBody: string, rating: number }]
+  if (!reviews || !reviews.length) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewBody: reviews[0].reviewBody || "",
+    author: { "@type": "Person", name: reviews[0].author || "" },
+    datePublished: reviews[0].datePublished || undefined,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: String(reviews[0].rating || (AGGREGATE_RATING.ratingValue || "5")),
+      bestRating: "5",
+    },
+  };
+}
+
 // The four "What we paint in X" cards used to be one hardcoded block repeated
 // verbatim on every suburb page — two of the four did not even mention the
 // suburb. Across 96 pages that made ~40% of all suburb-page sentences
@@ -526,13 +566,15 @@ function generateSuburbPage(route, sourceFile) {
   const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
   const faqs = extractFaqs(source, suburb);
   const canonical = canonicalForRoute(route);
-
+  const ogImage = `${SITE_URL}/og${route}.jpg`;
+ 
   writePage(
     route,
     pageHtml({
       title,
       description,
       canonical,
+      ogImage,
       heroTitle: `House Painters ${suburb}`,
       heroBody: `${description} Searching for painters near you in ${suburb}? Jetblack Painting are your trusted local ${suburb} painters, servicing ${suburb} and the surrounding suburbs.`,
       schema: [
@@ -540,6 +582,7 @@ function generateSuburbPage(route, sourceFile) {
         breadcrumbSchema({ suburb, canonical }),
         ...suburbSchema({ suburb, title, description, canonical }),
         ...(faqs.length ? [faqSchema(faqs)] : []),
+        ...(REVIEWS ? [reviewSchema(REVIEWS)] : []),
       ],
       sections: [
         {

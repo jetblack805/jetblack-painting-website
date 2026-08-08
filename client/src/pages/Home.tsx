@@ -92,6 +92,13 @@ const homeSchema = [
       { "@type": "City", "name": "Wheelers Hill" }
     ],
     "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "14",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -122,9 +129,9 @@ export default function Home() {
       <Hero />
       <section className="bg-[#060607] py-14 border-t border-white/[0.06]">
         <div className="container max-w-4xl text-center">
-          <p className="text-2xl md:text-3xl text-[#FCFCFC] mb-3" style={{ fontFamily: "Georgia, serif" }}>
+          <h1 className="text-2xl md:text-3xl text-[#FCFCFC] mb-3" style={{ fontFamily: "Georgia, serif" }}>
             Melbourne's Best-Rated Local House Painters
-          </p>
+          </h1>
           <p className="text-[#98989D] text-sm md:text-base font-light leading-relaxed">
             5-star rated, fully insured, and servicing 90+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
             Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.

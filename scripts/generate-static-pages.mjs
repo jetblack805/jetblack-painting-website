@@ -566,7 +566,13 @@ function generateSuburbPage(route, sourceFile) {
   const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
   const faqs = extractFaqs(source, suburb);
   const canonical = canonicalForRoute(route);
-  const ogImage = `${SITE_URL}/og${route}.jpg`;
+  // Only advertise a per-route OG image when the file actually exists. The
+  // generator that produces these (scripts/generate-images.mjs) is opt-in and
+  // needs sharp, so on any build where it hasn't run this would otherwise point
+  // every suburb page at a 404 and break its social preview. Undefined falls
+  // back to the site-wide og-image.jpg in pageHtml().
+  const ogImageFile = path.join(PUBLIC_DIR, "og", `${route.replace(/^\//, "")}.jpg`);
+  const ogImage = fs.existsSync(ogImageFile) ? `${SITE_URL}/og${route}.jpg` : undefined;
  
   writePage(
     route,
@@ -823,7 +829,7 @@ const servicePages = [
           { title: "Quote and colour consultation", body: "We walk through the home with you, note the condition of every wall and ceiling, and talk through colours, sheens and any feature walls. The written quote itemises rooms, surfaces, prep and the specific products, so there's no guessing later." },
           { title: "Furniture protection and setup", body: "Furniture is moved to the centre of the room or covered in place, floors and fixtures are protected with drop sheets, and the work area is sealed off from the rest of the house to control dust." },
           { title: "Patching, sanding and priming", body: "Nail holes, cracks, water stains and old repairs are filled and sanded back smooth. Bare plaster, water-stained patches and any repaired sections are spot-primed so they don't flash through the topcoats." },
-          { title: "Cutting-in and trim work", body: "Edges, corners, cornices and trims are cut in by hand before rolling the broad areas — this is what separates a sharp finish from a messy one, and it's where an experienced painter earns their keep." },
+          { title: "Edges, trims and doors — sprayed or cut in by hand", body: "How the detail work goes on depends on the room. Where a space can be properly masked and sealed off — empty rooms, and doors, trims and built-in joinery in particular — we spray, which lays the finish down dead flat with no brush marks and no roller texture on surfaces where every stroke would otherwise show. Where spraying isn't practical, because you're living in the room or an adjacent finish can't be masked cleanly, edges, corners and cornices are cut in by hand before the broad areas are rolled. Either way this is the step that separates a sharp finish from a messy one, and it's where an experienced painter earns their keep." },
           { title: "Topcoats", body: "Two full coats go on to the specified sheen — low-sheen or matt for most walls, semi-gloss or gloss enamel for trims and doors — with proper drying time between coats rather than rushing to finish early." },
           { title: "Walkthrough and handover", body: "We walk the finished rooms with you, touch up anything that needs it, remove all protection and clean up thoroughly. The 5-year written workmanship guarantee applies from this point." },
         ],

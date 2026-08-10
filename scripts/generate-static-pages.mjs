@@ -566,7 +566,13 @@ function generateSuburbPage(route, sourceFile) {
   const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
   const faqs = extractFaqs(source, suburb);
   const canonical = canonicalForRoute(route);
-  const ogImage = `${SITE_URL}/og${route}.jpg`;
+  // Only advertise a per-route OG image when the file actually exists. The
+  // generator that produces these (scripts/generate-images.mjs) is opt-in and
+  // needs sharp, so on any build where it hasn't run this would otherwise point
+  // every suburb page at a 404 and break its social preview. Undefined falls
+  // back to the site-wide og-image.jpg in pageHtml().
+  const ogImageFile = path.join(PUBLIC_DIR, "og", `${route.replace(/^\//, "")}.jpg`);
+  const ogImage = fs.existsSync(ogImageFile) ? `${SITE_URL}/og${route}.jpg` : undefined;
  
   writePage(
     route,

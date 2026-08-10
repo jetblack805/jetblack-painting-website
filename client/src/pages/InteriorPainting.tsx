@@ -89,8 +89,8 @@ export default function InteriorPainting() {
       body: "Nail holes, cracks, water stains and old repairs are filled and sanded back smooth. Bare plaster, water-stained patches and any repaired sections are spot-primed so they don't flash through the topcoats.",
     },
     {
-      title: "Cutting-in and trim work",
-      body: "Edges, corners, cornices and trims are cut in by hand before rolling the broad areas — this is what separates a sharp finish from a messy one, and it's where an experienced painter earns their keep.",
+      title: "Edges, trims and doors — sprayed or cut in by hand",
+      body: "How the detail work goes on depends on the room. Where a space can be properly masked and sealed off — empty rooms, and doors, trims and built-in joinery in particular — we spray, which lays the finish down dead flat with no brush marks and no roller texture on surfaces where every stroke would otherwise show. Where spraying isn't practical, because you're living in the room or an adjacent finish can't be masked cleanly, edges, corners and cornices are cut in by hand before the broad areas are rolled. Either way this is the step that separates a sharp finish from a messy one, and it's where an experienced painter earns their keep.",
     },
     {
       title: "Topcoats",

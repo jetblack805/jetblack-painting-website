@@ -19,7 +19,13 @@ export default function ReviewUs() {
 
   return (
     <div className="min-h-screen">
+      {/* noindex: this page exists so customers we hand the link to can leave a
+          review. Nobody searches for it, and at ~165 words of crawler-visible
+          copy an indexable page like this reads to Google as a soft 404 — the
+          bucket that held 7 of our pages in the 2026-08-11 Coverage export.
+          "follow" is retained so the outbound links still count. */}
       <SEOHead
+        noindex
         title="Leave a Review | Jetblack Painting Melbourne"
         description="Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters."
         canonical="https://jetblackpainting.com/review-us/"

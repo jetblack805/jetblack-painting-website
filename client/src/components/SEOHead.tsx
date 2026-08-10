@@ -8,6 +8,9 @@ interface SEOHeadProps {
   ogImage?: string;
   schema?: object | object[];
   author?: string;
+  /* Utility pages (e.g. the review link) that exist for people we send them
+     to, not for search. Emits noindex, follow. */
+  noindex?: boolean;
 }
 
 function upsertMeta(selector: string, attributes: Record<string, string>) {
@@ -36,7 +39,7 @@ function upsertLink(selector: string, attributes: Record<string, string>) {
   Object.entries(attributes).forEach(([key, value]) => tag?.setAttribute(key, value));
 }
 
-export default function SEOHead({ title, description, canonical, ogImage, schema, author }: SEOHeadProps) {
+export default function SEOHead({ title, description, canonical, ogImage, schema, author, noindex }: SEOHeadProps) {
   const schemaJson = schema ? JSON.stringify(schema) : "";
 
   useEffect(() => {
@@ -51,15 +54,15 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
       upsertMeta('meta[name="author"]', { name: "author", content: author });
     }
 
-    // Robots & Crawling Directives
-    upsertMeta('meta[name="robots"]', {
-      name: "robots",
-      content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    });
-    upsertMeta('meta[name="googlebot"]', {
-      name: "googlebot",
-      content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    });
+    // Robots & Crawling Directives. `noindex` is for utility pages that exist
+    // for people we send the link to, not for search — a thin page left
+    // indexable reads to Google as a soft 404 and drags on site quality.
+    // "follow" is kept either way so link equity still flows through.
+    const robotsContent = noindex
+      ? "noindex, follow"
+      : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
+    upsertMeta('meta[name="robots"]', { name: "robots", content: robotsContent });
+    upsertMeta('meta[name="googlebot"]', { name: "googlebot", content: robotsContent });
     
     // Nonstandard AEO meta tags deliberately removed. Rely on robust JSON-LD and visible content signals instead.
 
@@ -115,7 +118,7 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
     return () => {
       document.getElementById(managedSchemaId)?.remove();
     };
-  }, [title, description, canonical, ogImage, schemaJson, author]);
+  }, [title, description, canonical, ogImage, schemaJson, author, noindex]);
 
   return null;
 }

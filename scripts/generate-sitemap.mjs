@@ -119,7 +119,8 @@ const ROUTES = [
   { path: "/blog/how-to-choose-a-painter-melbourne/",            priority: "0.5", changefreq: "yearly"  },
   { path: "/blog/how-to-paint-a-weatherboard-house-melbourne/", priority: "0.5", changefreq: "yearly"  },
   { path: "/faq/",                                              priority: "0.5", changefreq: "monthly" },
-  { path: "/review-us/",                                        priority: "0.4", changefreq: "monthly" },
+  // /review-us/ is deliberately absent: it is noindex (a thin utility page),
+  // and listing a noindex URL in the sitemap sends Google contradictory signals.
 ];
 
 const today = new Date().toISOString().split("T")[0];

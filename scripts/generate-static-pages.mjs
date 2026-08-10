@@ -299,7 +299,11 @@ function suburbDirectoryHtml(currentCanonical) {
   return links ? `    <p class="suburb-directory">Suburbs we service: ${links}</p>\n` : "";
 }
 
-function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage }) {
+function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots }) {
+  // Utility pages pass robots: "noindex, follow". A thin page left indexable
+  // reads to Google as a soft 404; "follow" keeps link equity flowing.
+  const robotsContent =
+    robots || "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
   const schemaScripts = (Array.isArray(schema) ? [...schema, speakableSchema(canonical)] : [schema, speakableSchema(canonical)])
     .filter(Boolean)
     .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
@@ -366,8 +370,8 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="robots" content="${robotsContent}">
+  <meta name="googlebot" content="${robotsContent}">
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="canonical" href="${escapeHtml(canonical)}">
@@ -2073,6 +2077,7 @@ writePage(
     description:
       "Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters.",
     canonical: canonicalForRoute("/review-us"),
+    robots: "noindex, follow",
     heroTitle: "Leave a Review for Jetblack Painting",
     heroBody: "Your feedback helps other Melbourne homeowners and businesses find a painter they can trust for quality preparation, clear communication, and durable finishes.",
     schema: [

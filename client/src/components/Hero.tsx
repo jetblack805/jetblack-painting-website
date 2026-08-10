@@ -25,7 +25,13 @@ export default function Hero() {
           <div className="hero-fade-in flex items-center gap-4 mb-7" style={{ animationDelay: "0.1s" }}>
             <span className="block w-8 h-px bg-[#D0A050]" />
             <span className="text-[#D0A050] text-[10px] font-semibold tracking-[0.32em] uppercase">
-              Melbourne · Bayside &amp; Mornington Peninsula
+              {/* Kept short on purpose: at this letter-spacing anything longer
+                  wraps onto a second row on a phone. Toorak stands in for the
+                  higher-value end of the work; both it and Bayside have real
+                  suburb pages and are listed as GBP service areas. Mornington
+                  Peninsula work is still covered by its own suburb pages —
+                  it just no longer leads the homepage. */}
+              Melbourne · Bayside &amp; Toorak
             </span>
           </div>
 

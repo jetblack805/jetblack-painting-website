@@ -16,6 +16,18 @@ Croydon's weatherboard cottages, brick-veneer family homes, modern rebuilt resid
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Croydon with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Croydon, Croydon North and Croydon Hills
+
+Croydon is an established family suburb in the City of Maroondah, known for its relaxed outer-eastern character, generous blocks and a mix of weatherboard, brick-veneer and modern family homes across its leafy streets. Jetblack Painting provides premium interior and exterior painting across all parts of Croydon — careful preparation, clean execution and a durable finish.
+
+Every Croydon project comes with a clear written quote and thorough preparation from a reliable team. Whether it's a full exterior repaint, a fresh interior colour scheme or a pre-sale refresh, we deliver sharp lines, premium coatings and a professional result with minimal disruption to your family.
+
+## Weatherboard and Family Home Painting in Croydon
+
+Croydon has a high proportion of weatherboard and brick-veneer family homes, and timber exteriors in particular need proper care to last — bare timber priming, careful filling, sharp caulking and weather-resistant topcoats that hold up against the outer east's sun and rain exposure. We treat this preparation as standard, not an extra.
+
+For Croydon's renovated and modern homes, we deliver smooth interior and exterior finishes using premium Dulux and Taubmans systems designed for Melbourne's climate. Whatever the property type, the preparation comes first — and the finish is built to last.
+
 ## What we paint in Croydon
 
 ### Interior painting

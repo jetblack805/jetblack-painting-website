@@ -16,6 +16,18 @@ Bayside's property mix spans Victorian and Edwardian period homes in Brighton, c
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Bayside with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Premium House Painters Across the Bayside Region
+
+The City of Bayside takes in some of Melbourne's most desirable coastal suburbs — Brighton, Sandringham, Hampton, Beaumaris and Black Rock — where prized homes sit close to Port Phillip Bay. Based nearby in Mordialloc, Jetblack Painting is a genuinely local painter providing premium interior and exterior work built specifically for these seaside conditions.
+
+Every Bayside project comes with a clear written quote and thorough preparation from a tidy, professional team. From heritage homes to modern beachside residences, we deliver sharp lines, durable coatings and a clean result that protects your property against the coastal environment for years.
+
+## Coastal Protection Expertise Across Bayside
+
+Homes across the Bayside coast are exposed to relentless salt air, strong UV and damp winters that quickly break down paintwork that hasn't been prepared properly. We use thorough salt washing, flexible primers and premium salt-resistant topcoats so your home's finish stays protected and looks sharp — not just in the first year, but year after year.
+
+Weatherboard and rendered coastal homes need particular care — bare timber priming, careful filling and sharp caulking to lock out moisture. From heritage beach houses to contemporary builds, we match the paint system to the surface for a durable, flawless result right across Bayside.
+
 ## What we paint in Bayside
 
 ### Interior painting

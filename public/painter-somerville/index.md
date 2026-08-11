@@ -16,6 +16,18 @@ Somerville's brick veneer family homes, newer rendered estate builds, older town
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Somerville with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Somerville
+
+Somerville is a fast-growing suburb on the southern Mornington Peninsula corridor, with new housing estates sitting alongside older township streets and a belt of larger rural-residential properties on the fringes. Jetblack Painting provides premium interior and exterior painting across all of it — brick veneer family homes, rendered estate builds and larger acreage properties — with a clear written quote and thorough preparation on every job.
+
+Whether it's a full exterior repaint on an established Somerville home, an interior refresh on a newly completed estate build, or exterior work across a larger rural-residential property, we deliver durable coatings and a clean, respectful site from start to finish. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
+## Brick Veneer, Estate Builds and Acreage Painting in Somerville
+
+On a typical Somerville brick veneer home, the paintwork that fails first is almost always the eaves, fascias, gutters and window frames — the surfaces taking the most sun and rain. We scrape these back to a sound edge, treat and prime bare timber with a penetrating primer, and replace any rotten sections rather than filling over them, then finish with exterior systems built for Melbourne's heat, UV and winter damp.
+
+Newer rendered homes on Somerville's estates need flexible coatings that move with the substrate instead of cracking at the joints, while the acreage and rural-residential properties on the suburb's outskirts often mean more exterior area, sheds and outbuildings, and different access requirements — all of which we scope into the quote up front rather than adding as surprises later.
+
 ## What we paint in Somerville
 
 ### Interior painting

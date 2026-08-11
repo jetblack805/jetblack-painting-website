@@ -16,6 +16,18 @@ Clarinda is predominantly post-war brick housing from the 1950s to 1980s, with s
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Clarinda with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Clarinda Covering Kingston Council
+
+Clarinda's housing stock is solid and well-maintained — brick homes from the post-war era that represent some of Melbourne's most durable residential construction. Exterior painting on these homes requires the right approach: testing adhesion on previously painted surfaces, treating any efflorescence, patching cracks in render or mortar joints, and applying the correct primer before topcoating. Skipping the preparation leads to adhesion failure within a few years, even with a premium topcoat.
+
+Jetblack Painting services Clarinda alongside Heatherton, Cheltenham, Moorabbin and the wider Kingston council area. We're fully licensed for residential painting in Victoria, carry $10M public liability insurance, and back every job with a 5-year written guarantee. Call Jimmy on 0432 077 782 to arrange a free inspection.
+
+## Interior and Exterior Painting for Clarinda Homes
+
+Interior painting in Clarinda covers all residential surfaces — ceilings, walls, timber joinery, doors, trims and built-ins. We use premium Dulux and Taubmans products in the correct finish levels for each room and surface type. We schedule around your household and leave the property clean on completion.
+
+For exterior repaints, we conduct a thorough inspection before quoting, identify exactly what preparation is required, and specify the correct product system for the substrates on the home. The preparation — washing, patching, priming — is the foundation of a finish that holds. Every exterior job is backed by our 5-year written guarantee.
+
 ## What we paint in Clarinda
 
 ### Interior painting

@@ -16,6 +16,18 @@ Hastings' original weatherboard cottages, established brick veneer family homes,
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Hastings with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Hastings
+
+Hastings is a Western Port coastal town with genuine working-port heritage, and its housing reflects that history — original weatherboard cottages, established brick veneer homes from past decades, and newer infill development sitting alongside each other. Jetblack Painting provides premium interior and exterior painting across Hastings, with preparation and coatings matched to both the age of the property and its exposure to the port.
+
+Every Hastings project starts with a clear written quote and thorough preparation. Whether it's a full exterior repaint on a weatherboard cottage, an interior refresh on an established brick veneer home, or exterior work on a newer build closer to the foreshore, we deliver a durable finish and a clean, respectful site. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
+## Coastal and Weatherboard Painting in Hastings
+
+Properties nearer Western Port take real salt air and weathering, so we wash every exterior thoroughly to remove salt deposits before any coating goes on, and finish with flexible, salt-resistant systems built for genuine coastal exposure. Hastings' original weatherboard cottages need particular care in preparation — checking for existing coatings, scraping back and priming bare or exposed timber with a penetrating oil-based primer, and replacing any rotten boards rather than filling over them.
+
+On established brick veneer homes further from the foreshore, the eaves, fascias, gutters and window frames are typically what fails first, and we focus preparation there before finishing with exterior coatings built for Melbourne's heat, UV and winter damp. Newer infill builds get the same standard of preparation regardless of size, backed by the same guarantee.
+
 ## What we paint in Hastings
 
 ### Interior painting

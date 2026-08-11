@@ -16,6 +16,18 @@ Mount Eliza's housing stock is dominated by prestige owner-occupied homes on gen
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Mount Eliza with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Mount Eliza
+
+Mount Eliza is one of the Mornington Peninsula's most exclusive suburbs — a semi-rural setting with prestige homes on generous blocks, bay views from the foreshore escarpment, and a resident population that expects a high standard of finish. Jetblack Painting provides premium interior and exterior painting across Mount Eliza, with a team that knows the suburb's property types, coating requirements and the care needed around established gardens and high-value finishes.
+
+Every Mount Eliza project comes with a detailed written quote, thorough preparation and a professional, tidy team. Whether it's a full exterior repaint on a large prestige home, a heritage-style colour scheme for an established property, or a contemporary interior refresh, we deliver sharp lines, durable coatings and a clean result backed by our 5-year written workmanship guarantee.
+
+## Prestige and Coastal Painting in Mount Eliza
+
+Large homes in Mount Eliza often have complex exterior profiles — rendered feature facades, timber detailing, extensive eaves, and multi-level sections — that require proper preparation and the right products at every stage. We don't skip steps: high-pressure washing, filling and flexing cracks, priming bare render, and applying the correct topcoat for each surface type are all included in every quote.
+
+Bay-facing and foreshore-adjacent properties in Mount Eliza are exposed to salt air from Port Phillip Bay, which accelerates paint failure without the right preparation and products. We use the same approach as we do for our coastal Bayside and Kingston work — thorough salt washing, flexible primers, and premium salt-resistant topcoats — ensuring the paint system performs as long as it should in a coastal environment.
+
 ## What we paint in Mount Eliza
 
 ### Interior painting

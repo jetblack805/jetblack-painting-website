@@ -16,6 +16,18 @@ Berwick's modern estate homes, established family houses, character homes near B
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Berwick with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Berwick and the Casey Area
+
+Berwick is a thriving family suburb in the City of Casey, known for its historic village precinct, leafy established streets and a strong mix of modern estate housing and period character homes. Jetblack Painting provides premium interior and exterior painting across Berwick — from the heritage character homes near Berwick Village to the contemporary family homes in the growing estates to the south.
+
+Every Berwick project comes with a clear written quote and thorough preparation from a reliable team. Whether it's a full exterior repaint, a fresh interior scheme before a sale, or cabinetry and trims, we deliver sharp lines, durable coatings and a professional result with minimal disruption to your household.
+
+## Estate Home and Investment Property Painting in Berwick
+
+Berwick's modern estate homes typically feature rendered façades, feature walls and large open-plan interiors. We deliver crisp, seamless finishes using premium Dulux and Taubmans systems and proper render priming so the result holds up through Melbourne's variable weather year after year.
+
+For Berwick's established and investment properties, we provide efficient repaint programs with durable coatings, practical scheduling around tenancies and clear, upfront quotes. Rental refreshes and pre-sale repaints are a regular part of what we do — fast, tidy and built to last.
+
 ## What we paint in Berwick
 
 ### Interior painting

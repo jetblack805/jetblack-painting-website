@@ -16,6 +16,14 @@ Braeside's brick veneer and rendered family homes near the parkland, plus the wa
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Braeside with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House & Commercial Painters Serving Braeside
+
+Braeside sits directly alongside our Mordialloc base — same postcode, a few minutes' drive — so we're on site quickly for quotes and jobs alike. The suburb combines a large business and light-industrial precinct with residential streets and the wetlands of Braeside Park, and Jetblack Painting works across both sides of it: warehouse, office and showroom repaints as well as full interior and exterior work on family homes. Every project comes with a clear written quote covering scope, preparation and products.
+
+## Warehouse Repaints & Mould-Resistant Exteriors in Braeside
+
+Commercial painting in Braeside is usually about durability and timing. We use hard-wearing systems built for high-traffic and industrial surfaces, and schedule work after hours or across weekends so your business keeps trading. On the residential side, homes near Braeside Park sit in a damper microclimate where shaded walls, eaves and fences pick up mould and mildew faster than usual — so we wash and treat those surfaces properly before painting and finish with mould-resistant exterior coatings. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Braeside
 
 ### Interior painting

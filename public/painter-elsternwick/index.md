@@ -16,6 +16,18 @@ Elsternwick's property mix includes Victorian and Edwardian terraces on tree-lin
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Elsternwick with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Elsternwick for Heritage and Contemporary Properties
+
+Elsternwick sits between Caulfield to the east and Brighton to the southwest, with Ripponlea and Gardenvale forming its inner ring. The suburb's streetscapes are a genuine architectural record — Victorian brick terraces sit beside inter-war bungalows, and the Ripponlea precinct is home to some of Melbourne's best-preserved Art Deco apartment buildings. Jetblack Painting works across all of these, bringing the same standard of careful preparation and premium finish to heritage and contemporary properties alike.
+
+For Elsternwick's older homes and flats, that means surface preparation that respects the original fabric — appropriate primers for aged render, careful caulking around timber windows and doors, and colour choices that complement rather than fight against the architecture. For renovations and new builds, it means crisp lines, zero visible joins and a durable finish suited to Melbourne's climate.
+
+## Interior and Exterior Painting for Elsternwick Homes
+
+Our interior painting service in Elsternwick covers single-room refreshes through to full whole-house repaints, using premium Dulux and Taubmans products in the correct sheen level for each surface. We prepare every surface properly — filling, sanding and priming — before the topcoat goes on, because preparation is what separates a finish that looks good for one year from one that looks good for ten.
+
+Exterior painting in Elsternwick demands even more attention to preparation, especially on the rendered brick and solid masonry homes common to the area. We pressure-wash, strip loose paint, treat any mould or efflorescence, and apply the right primer system before any topcoat. The result is a finish that protects the home and holds its appearance well beyond the industry average — backed by our 5-year written guarantee.
+
 ## What we paint in Elsternwick
 
 ### Interior painting

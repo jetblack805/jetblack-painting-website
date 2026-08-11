@@ -16,6 +16,14 @@ Chelsea Heights's brick-veneer family homes, post-war and later houses, rendered
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Chelsea Heights with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Chelsea Heights
+
+Chelsea Heights is a quiet, family-focused suburb in the City of Kingston, built largely around comfortable brick-veneer and clad homes near the Edithvale-Seaford wetlands. Jetblack Painting provides premium interior and exterior painting suited to this housing — refreshing tired facades, brightening interiors and getting homes presentation-ready for sale or lease. As a local painter based nearby in Mordialloc, we know the area's streets and homes well, and every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site.
+
+## Exterior, Interior and Roof Repaints in Chelsea Heights
+
+Exterior repaints in Chelsea Heights start with real preparation — pressure washing, scraping and sanding back failing coatings, priming bare timber, and sealing gaps — before durable, weather-resistant topcoats go on, which matters given the damp conditions near the wetlands. Inside, we stage the work room by room with low-odour premium paints so the home stays livable. For the suburb's tile and metal roofs, we clean, repair and prime before applying a fresh membrane coating. All work across Chelsea Heights is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Chelsea Heights
 
 ### Interior painting

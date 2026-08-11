@@ -16,6 +16,14 @@ Rye's weatherboard and fibro beach shacks, brick and rendered permanent homes, h
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Rye with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Coastal House Painters Serving Rye
+
+Rye runs from the calm front beach on Port Phillip across to the exposed back beach, and the housing changes as you go — original beach shacks, permanent family homes, holiday rentals and modern rebuilds. Jetblack Painting provides premium interior and exterior painting across all of it, with coastal preparation that suits the exposure of each property. Every Rye project comes with a clear written quote covering scope, preparation and paint products.
+
+## Beach Shack Restoration & Rental Repaints in Rye
+
+A lot of Rye beach houses have been through years of salt and sun with only patch repairs, so the honest starting point is preparation rather than paint. We scrape back failing paint to a sound edge, cut out and replace rotten weatherboard instead of filling over it, spot-prime every patch of bare timber with a penetrating primer, then caulk the joints, window frames and corner trims with a flexible sealant before two full topcoats go on. For holiday rentals we work around the letting calendar so the property is ready before the season. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Rye
 
 ### Interior painting

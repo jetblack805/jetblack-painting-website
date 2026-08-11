@@ -16,6 +16,14 @@ St Kilda is dominated by Art Deco apartment blocks — many heritage-listed or i
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in St Kilda with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Art Deco & Period Building Specialists
+
+Many of St Kilda's most-loved buildings are heritage Art Deco apartment blocks along Marine Parade, Barkly Street, and Grey Street. These buildings require careful colour selection — often working within heritage overlay guidelines — and surface preparation suited to the original render and masonry construction. We have extensive experience with these properties and can advise on appropriate period-compatible palettes and durable exterior coating systems.
+
+## Investment & Rental Property Painting
+
+With St Kilda's high rental density and active property market, many of our clients are landlords, property managers, and investors preparing properties for lease or sale. We offer fast, professionally finished interior repaints with low-VOC paints, neutral palettes that photograph well for listings, and scheduling that accommodates tenancy changeovers. We also carry $10M public liability insurance and provide a 5-year written workmanship guarantee on all painting work.
+
 ## What we paint in St Kilda
 
 ### Interior painting

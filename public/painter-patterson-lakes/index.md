@@ -16,6 +16,14 @@ Patterson Lakes's waterfront and canal-front homes, larger modern brick and rend
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Patterson Lakes with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Patterson Lakes
+
+Patterson Lakes is one of Melbourne's most distinctive waterfront communities — a canal estate in the City of Kingston with a marina, riverfront reserves and homes built to make the most of the water. Jetblack Painting provides premium interior and exterior painting suited to these properties, protecting facades, balconies and eaves against the harsh waterside environment while delivering a beautiful, lasting finish. As a local painter based nearby in Mordialloc, we know the area well, and every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site.
+
+## Waterfront Protection & Interior Repaints in Patterson Lakes
+
+Homes on the water in Patterson Lakes face salt air, humidity and reflected UV that punish poorly prepared paintwork. We counter that with proper washing, flexible primers and premium salt-resistant topcoats on renders, masonry and timber, so your home's finish holds up far longer than a standard repaint would in this environment. Inside, we deliver flawless interior repaints staged room by room with low-odour premium paints. All work across Patterson Lakes is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Patterson Lakes
 
 ### Interior painting

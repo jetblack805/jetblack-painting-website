@@ -16,6 +16,18 @@ Elwood's housing spans Victorian cottages and terraces in the older residential 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Elwood with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Elwood
+
+Elwood is one of Melbourne's most architecturally rich inner suburbs — a bay-side enclave between Elsternwick and St Kilda with a dense mix of Victorian cottages, Edwardian homes, Federation houses and Art Deco apartments. The suburb attracts owner-occupiers who care about maintaining the character of their properties, and the combination of period architecture and coastal exposure makes proper paint preparation and product selection critical. Jetblack Painting provides premium interior and exterior painting across Elwood, with a team experienced in both period home requirements and coastal conditions.
+
+Every Elwood project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's an exterior repaint on a Victorian terrace, a period-sensitive interior refresh on an Edwardian home with original cornicing, or an Art Deco apartment requiring careful attention to the rendered facade and period detailing, we deliver sharp lines, durable coatings and a clean result backed by our 5-year written workmanship guarantee.
+
+## Period Home and Coastal Painting in Elwood
+
+Elwood's Art Deco apartment buildings — concentrated particularly in the streets near Elwood Beach and the canal — have rendered exteriors that need thorough preparation before any topcoat: cleaning, crack filling, flexible primer, then a breathable topcoat that allows the render to move without cracking or trapping moisture. The same applies to rendered Victorian homes throughout the suburb. We include full preparation in every quote with no hidden extras.
+
+Foreshore and canal-adjacent properties in Elwood are in direct contact with salt air from Port Phillip Bay. We use the same coastal preparation protocol as our work in Brighton, Sandringham and along the full Bayside coastline: pressure washing to remove salt deposits, flexible coastal-rated primers, and salt-resistant topcoats that perform in the marine environment. Getting this right is what separates a coastal repaint that lasts from one that starts failing within two years.
+
 ## What we paint in Elwood
 
 ### Interior painting

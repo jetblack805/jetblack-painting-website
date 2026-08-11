@@ -16,6 +16,18 @@ Sandringham features classic weatherboard beach cottages near the foreshore, Edw
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Sandringham with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Bayside House Painters Serving Sandringham
+
+Sandringham is a prized Bayside suburb where classic weatherboard beach cottages, Edwardian homes and modern coastal residences overlook Port Phillip Bay around Sandringham Beach, the yacht club and Royal Avenue. Jetblack Painting provides premium interior and exterior painting built for this seaside setting — protecting Sandringham homes against salt air and sun while delivering a clean, lasting finish.
+
+Based nearby in Mordialloc, we're a genuinely local Bayside painter who knows Sandringham's homes and coastal conditions. Every project comes with a clear written quote, thorough preparation and a tidy, respectful team, whether it's a full exterior repaint or a refreshed interior scheme.
+
+## Coastal Painting and Weatherboard Care in Sandringham
+
+Homes near the water in Sandringham are exposed to relentless salt air, UV and damp winters that quickly break down paintwork that hasn't been prepared properly. We use thorough salt washing, flexible primers and premium salt-resistant topcoats so your Sandringham home's finish stays protected and looks sharp for years.
+
+Weatherboard is everywhere along the Sandringham coastline, and coastal timber needs particular attention — bare timber priming, careful filling and sharp caulking to lock out moisture. From heritage beach cottages to rendered modern homes, we match the paint system to the surface for a durable, flawless result.
+
 ## What we paint in Sandringham
 
 ### Interior painting

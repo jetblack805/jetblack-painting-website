@@ -16,6 +16,18 @@ Clyde's brand-new estate homes at handover and early-ownership stage, rendered f
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Clyde with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Clyde
+
+Clyde is at the centre of Melbourne's south-east growth corridor, with new housing estates being built and handed over at a pace few other suburbs match. Jetblack Painting provides premium interior and exterior painting across Clyde, from handover-stage touch-ups on newly settled homes to full repaints as the suburb's earliest estate homes reach their first repaint cycle.
+
+Every Clyde project starts with a clear written quote and preparation matched to the property's age and condition. Whether it's a two-coat upgrade over a builder's flat white finish, defect touch-ups picked up during a pre-settlement inspection, or an exterior repaint on an established home, we deliver a durable finish and a clean, respectful site. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
+## New-Build and Estate Painting in Clyde
+
+Builder-grade paint on a new home is usually a single coat, flat white finish designed to look presentable at handover rather than perform long-term — it marks, scuffs and shows roller lines quickly, especially in hallways, kitchens and bathrooms. We recommend a proper two-coat upgrade in high-traffic areas and wet zones early on, before daily wear makes the job bigger than it needs to be.
+
+On the exterior, Clyde's newer estates use a consistent palette of rendered walls and Colorbond-matched fascias, gutters and garage doors, and we colour-match any repainted trims, fence replacements or extensions to the original specification. We also work around estate access conditions and nearby construction, protecting new driveways and landscaping and timing work so it doesn't clash with other trades still finishing neighbouring builds.
+
 ## What we paint in Clyde
 
 ### Interior painting

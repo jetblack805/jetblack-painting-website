@@ -16,6 +16,18 @@ Armadale's Victorian and Edwardian terraces, renovated period homes, architect-d
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Armadale with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Premium House Painters Serving Armadale
+
+Armadale is a refined inner-eastern suburb known for its elegant Victorian and Edwardian terraces, the antique dealers and boutiques of High Street, and quiet, prestigious residential streets. Jetblack Painting delivers the detailed, high-quality painting these homes deserve — from ornate period façades to updated family homes and architect-designed residences throughout Armadale.
+
+Every Armadale project begins with careful preparation and a clear, honest quote. Whether you're restoring a heritage terrace or refreshing a modern interior, our team delivers sharp lines, premium coatings and a clean, professional result with respect for your home and street.
+
+## Heritage Detail and Premium Finishes in Armadale
+
+Armadale's period homes carry fine detailing — decorative render, timber fretwork and cast-iron lacework — that rewards meticulous work. We handle lead-paint-safe preparation, careful restoration of original features and heritage-sympathetic colour schemes so these valuable homes keep their character intact. Done properly, the work protects both the aesthetic and the long-term value of the property.
+
+For Armadale's renovated and contemporary properties, we deliver smooth, hard-wearing modern finishes using premium Dulux and Taubmans systems built for Melbourne's climate. Whatever the era, you get considered preparation and a finish designed to last for years.
+
 ## What we paint in Armadale
 
 ### Interior painting

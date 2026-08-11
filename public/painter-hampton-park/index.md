@@ -16,6 +16,14 @@ Hampton Park's 1980s to 2000s brick veneer family homes, rendered newer builds, 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Hampton Park with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Hampton Park
+
+Hampton Park is an established family suburb in the City of Casey, built out largely between the 1980s and 2000s and made up mostly of brick veneer homes on standard suburban blocks. Much of that housing is now due for its first or second proper repaint. Jetblack Painting provides premium interior and exterior painting across Hampton Park for owner-occupiers, landlords and property managers alike — with a clear written quote up front and a clean, tidy site throughout.
+
+## Exterior Repaints & Rental Turnarounds in Hampton Park
+
+On a Hampton Park brick veneer home, the paint that fails first is on the timber: eaves, fascias, barge boards and window frames, all taking full sun and rain. We scrape those back to a sound edge, treat and prime bare timber, replace rotten sections instead of filling over them, and finish with exterior systems built for Melbourne's heat, UV and winter damp. For rentals and investment properties we work to your vacancy window with hard-wearing washable interior finishes in neutral colours that let the property to the widest market. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Hampton Park
 
 ### Interior painting

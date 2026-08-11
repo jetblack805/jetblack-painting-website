@@ -16,6 +16,14 @@ Narre Warren's brick-veneer family homes, rendered estate houses, double-storey 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Narre Warren with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Narre Warren
+
+Narre Warren is one of the southeast's largest family suburbs, spanning established neighbourhoods and estate developments around Fountain Gate. Jetblack Painting provides premium interior and exterior painting suited to this housing — refreshing tired facades, giving newer estate homes their first professional repaint, brightening interiors and getting homes presentation-ready for sale or lease. Every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site.
+
+## Exterior, Interior and Roof Repaints in Narre Warren
+
+Exterior repaints in Narre Warren start with real preparation — pressure washing, sanding back failing or chalking coatings, priming, and sealing gaps — before durable, weather-resistant topcoats go on. Inside, we stage the work room by room with low-odour premium paints so the home stays livable. For the suburb's tile and metal roofs, we clean, repair and prime before applying a fresh membrane coating. All work across Narre Warren is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Narre Warren
 
 ### Interior painting

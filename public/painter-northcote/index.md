@@ -16,6 +16,14 @@ Northcote's residential stock spans several distinct eras of Melbourne architect
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Northcote with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Heritage & Period Home Specialists
+
+Period homes in Northcote require a paint system that's appropriate for the substrate — whether render, masonry, weatherboard, or a combination — and surface preparation that actually addresses the underlying condition rather than painting over problems. On Victorian and Edwardian properties we carry out detailed inspections for render cracks, rising damp staining, failed paint films, and lead-based coatings before specifying a preparation and paint system. Californian bungalows present their own set of challenges: the roughcast render used on many bungalows requires different preparation to smooth-rendered or brick facades, and the deep verandah timbers need oil-based or alkyd primers to penetrate properly. We match paint colours to the period of the home and can advise on heritage overlay requirements for any property in a Darebin heritage precinct.
+
+## Rental Properties & High Street Commercial
+
+Northcote's vibrant High Street precinct — one of Melbourne's best-known café and lifestyle strips — brings us regular commercial painting enquiries from shopfronts, restaurants, and hospitality businesses that need professional results with minimal disruption to trading. For the suburb's large rental property stock, we offer scheduled repaint programs for landlords, fast vacancy turnarounds coordinated with property managers, and durable interior finishes that stand up to high-turnover tenancy use. All work across Northcote is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Northcote
 
 ### Interior painting

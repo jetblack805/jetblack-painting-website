@@ -16,6 +16,14 @@ Safety Beach's weatherboard and fibro beach houses, modern rendered and brick pe
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Safety Beach with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Coastal House Painters Serving Safety Beach
+
+Safety Beach sits on one of the peninsula's most exposed stretches of bay, with beach houses, permanent homes and the marina precinct at Martha Cove all facing constant salt air and sun. Jetblack Painting provides premium interior and exterior painting built for that setting — protecting Safety Beach homes against salt, UV and damp while delivering a finish that still looks sharp years later. Every project comes with a clear written quote and a clean, respectful site.
+
+## Salt-Resistant Exteriors & Beach House Repaints in Safety Beach
+
+A coastal repaint fails early for one of two reasons: the salt film wasn't washed off first, or bare timber wasn't primed properly. We deal with both before a topcoat goes anywhere near the house. Weatherboard and fibro beach homes need careful bare-timber priming, filling and tight caulking to keep moisture out of the joints; rendered and brick permanent homes need flexible coatings that cope with the temperature swings. Metal gutters, balustrades and fixings close to the water get treated for corrosion rather than painted over. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Safety Beach
 
 ### Interior painting

@@ -16,6 +16,18 @@ Hampton East's post-war brick veneer homes, californian bungalows, weatherboard 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Hampton East with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Hampton East
+
+Hampton East is a settled, family-friendly Bayside suburb where post-war brick veneer homes, californian bungalows and renovated family residences sit between Hampton, Highett and Moorabbin. Jetblack Painting provides premium interior and exterior painting built for this housing mix — refreshing tired facades, brightening interiors and getting homes presentation-ready for sale or lease.
+
+As a local painter based nearby in Mordialloc, we know Hampton East's homes and streets well. Every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site — whether it's a full exterior repaint, an interior colour update or a pre-sale refresh.
+
+## Brick, Render and Bungalow Expertise in Hampton East
+
+Hampton East's post-war homes are typically brick veneer or rendered masonry, which need the right preparation — sound crack repair, masonry-appropriate primers and flexible, weather-resistant topcoats — so the finish stays even and lasts through Melbourne's temperature swings and damp winters.
+
+The suburb's californian bungalows and weatherboard homes need particular care on timber — bare timber priming, careful filling and sharp caulking around eaves, windows and fascias to keep moisture out. Whether it's a heritage bungalow, a post-war brick home or a newer townhouse, we tailor the paint system to the surface for a durable, flawless result.
+
 ## What we paint in Hampton East
 
 ### Interior painting

@@ -16,6 +16,18 @@ Edithvale features a mix of older coastal homes, brick family residences and ren
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Edithvale with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Edithvale for Coastal Homes
+
+Edithvale's location on Port Phillip Bay means exterior painting here requires more than a standard approach. Salt air deposits on surfaces, moisture levels are higher near the foreshore, and UV load is significant through Melbourne's summer months. Paint systems that perform well inland can fail prematurely in coastal locations if they're not specified for the exposure. We assess every surface, treat contamination before priming, and specify topcoat systems with a verified track record in coastal conditions.
+
+Jetblack Painting services Edithvale as part of our Kingston council coverage. We carry $10M public liability insurance, are fully registered for residential painting work in Victoria, and back every job with a 5-year written guarantee. Call Jimmy on 0432 077 782 to arrange an inspection.
+
+## Interior and Exterior Painting for Edithvale Homes
+
+For Edithvale interiors, we work with all surface types — plaster and gyprock ceilings and walls, timber joinery, doors, trims and built-ins. We use premium Dulux and Taubmans products in the appropriate finish levels for each area, keep the work schedule around your household, and leave the property clean on completion.
+
+Exterior repaints in Edithvale start with a thorough wash-down and surface inspection. We identify any adhesion failure, efflorescence, surface contamination or substrate defects before we prepare and prime. After the correct preparation phase, we apply a premium exterior acrylic topcoat rated for Melbourne's coastal conditions — backed by our 5-year written guarantee.
+
 ## What we paint in Edithvale
 
 ### Interior painting

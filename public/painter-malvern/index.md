@@ -16,6 +16,18 @@ Malvern's Edwardian residences, Victorian terraces, renovated heritage homes and
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Malvern with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Premium House Painters Serving Malvern and Malvern East
+
+Malvern is one of Melbourne's most established and prestigious suburbs — known for leafy, tree-lined streets, grand period homes and the boutique shopping strips of Glenferrie Road and High Street. Jetblack Painting delivers refined interior and exterior painting that lives up to these homes' character and value — from stately Edwardian and Victorian residences to elegant contemporary renovations across Malvern and Malvern East.
+
+We treat every Malvern project with a focus on detail: careful preparation, sharp cutting-in around decorative features, and premium coatings that suit both heritage character and modern design. Our written quotes lay out the full scope clearly and completely — all preparation included up front, no scope creep once work begins.
+
+## Heritage Colour and Period Preparation in Malvern
+
+Many Malvern streetscapes carry heritage significance, and getting the colours and preparation right genuinely matters. We're experienced with period-appropriate palettes for Edwardian and Victorian façades — restoring timber mouldings, ornamental detailing and lead-paint-safe surfaces that make these homes look as they should. Protect the look and you protect the property's long-term value.
+
+For Malvern's renovated and architect-designed homes, we deliver the crisp, durable modern finishes that premium interiors require — using proven Dulux and Taubmans paint systems built to handle Melbourne's variable climate and maintain their look year after year.
+
 ## What we paint in Malvern
 
 ### Interior painting

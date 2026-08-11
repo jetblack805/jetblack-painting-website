@@ -16,6 +16,18 @@ Aspendale's housing stock is a mix of classic weatherboard homes, mid-century br
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Aspendale with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Aspendale Painting — Your Local Painter Is in Mordialloc
+
+When you hire Jetblack Painting in Aspendale, you're hiring a company that's genuinely local. Our base in Mordialloc is right on your doorstep, so we can respond quickly to quote requests, get on site promptly and deliver results without the delays you might get from a larger company based further away.
+
+Every job in Aspendale is personally managed by owner Jimmy Demirci. He visits the site to scope the work, stays in contact during the project and does the final walkthrough before we leave. You're dealing with the owner from first call to last brushstroke.
+
+## Quality Coastal Painting for Aspendale Homes
+
+Salt air, UV and coastal damp are hard on paintwork. We see the results of poor preparation and cheap paint on Aspendale homes regularly — peeling weatherboards, chalking render, rusting metal trim. Our process is built specifically to prevent this: thorough surface preparation, premium flexible primers and topcoats from Dulux and Taubmans, and careful caulking and sealing of all joints.
+
+Every job we do comes with a 5-year written workmanship guarantee and $10M public liability insurance. We treat your Aspendale home with the same care we'd want for our own. Call 0432 077 782 for a free written quote — we're usually on site within a few days.
+
 ## What we paint in Aspendale
 
 ### Interior painting

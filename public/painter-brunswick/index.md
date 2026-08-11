@@ -16,6 +16,14 @@ Brunswick's residential stock spans 150 years of Melbourne building history. Vic
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Brunswick with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Victorian Terraces & Heritage Homes
+
+Brunswick's Victorian and Edwardian streetscapes are among Melbourne's most intact — and most technically demanding to repaint. Correct substrate preparation is non-negotiable: render cracks, rising damp, failed paint films, and chalking lead-based coatings all need to be properly assessed and treated before any new product goes on. We carry out detailed inspections on every heritage property, specify the right primers and sealers for each substrate, and match colour palettes to Heritage Victoria guidance or council heritage overlay requirements. Our work on Brunswick period homes covers full exterior repaints, verandah ironwork, ornate timber fretwork and lacework, window sashes and frames, and interior walls, ceilings and cornices.
+
+## Rental Properties & Sydney Road Commercial
+
+Brunswick's Sydney Road is one of Melbourne's most active retail and hospitality strips, and we service shopfronts, cafés, restaurants and commercial tenancies throughout the precinct alongside our residential workload. For the suburb's large rental property stock, we offer scheduled repaint programs coordinated with property managers, fast vacancy turnarounds, and durable finishes suited to high-turnover tenancy use. We use low-odour interior products as standard in occupied rental properties. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Brunswick
 
 ### Interior painting

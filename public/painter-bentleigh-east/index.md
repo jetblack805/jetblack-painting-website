@@ -16,6 +16,14 @@ Bentleigh East's post-war brick-veneer homes, californian bungalows, interwar ho
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Bentleigh East with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Bentleigh East
+
+Bentleigh East is one of the southeast's larger family suburbs, filled with comfortable post-war brick homes, californian bungalows and interwar houses on generous blocks. Jetblack Painting provides premium interior and exterior painting suited to this housing mix — refreshing tired facades, brightening interiors and getting homes presentation-ready for sale or lease. As a local painter based nearby in Mordialloc, we know the area's streets and homes well, and every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site.
+
+## Brick, Render and Bungalow Expertise in Bentleigh East
+
+Bentleigh East's post-war homes are typically brick veneer or rendered masonry, which need the right preparation — sound crack repair, masonry-appropriate primers and flexible, weather-resistant topcoats — so the finish stays even and lasts through Melbourne's temperature swings and damp winters. The suburb's californian bungalows and weatherboard homes need particular care on timber — bare timber priming, careful filling and sharp caulking around eaves, windows and fascias. Whether it's a heritage bungalow, a post-war brick home or a newer townhouse, we tailor the paint system to the surface for a durable, flawless result. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Bentleigh East
 
 ### Interior painting

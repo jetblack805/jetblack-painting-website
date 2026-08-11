@@ -16,6 +16,18 @@ Bonbeach features older beach houses, brick family homes and modern renovations 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Bonbeach with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Bonbeach for Coastal and Foreshore Homes
+
+Bonbeach sits directly on Port Phillip Bay and the combination of salt air, moisture and UV exposure here means exterior paint systems need to be specified for the actual conditions the home faces. We've completed painting projects throughout the Kingston coastline — from Mordialloc down through Edithvale, Bonbeach and Carrum — and we understand what the coastal environment demands from a paint system.
+
+Jetblack Painting carries $10M public liability insurance, is fully licensed for residential work in Victoria, and backs every job with a 5-year written guarantee. We use premium Dulux and Taubmans products throughout. Call Jimmy on 0432 077 782 to arrange a free inspection and written quote.
+
+## Interior and Exterior Painting for Bonbeach Homes
+
+Interior painting in Bonbeach covers all residential surface types — plaster and gyprock ceilings and walls, timber joinery, built-ins, doors and trims. We use low-VOC premium products in the correct sheen levels for each room and work around your household schedule. Our jobs are clean, efficient and backed by clear pricing from the start.
+
+Exterior repaints in Bonbeach start with a thorough site inspection and surface assessment. We wash down, treat any contamination, fill and sand, and prime correctly before applying the topcoat. For coastal homes we specify premium exterior acrylic systems with a track record in high-exposure environments — and we back every exterior job with a 5-year written guarantee.
+
 ## What we paint in Bonbeach
 
 ### Interior painting

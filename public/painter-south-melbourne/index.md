@@ -16,6 +16,14 @@ South Melbourne's housing stock is dominated by Victorian-era buildings: single 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in South Melbourne with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Emerald Hill Heritage & Victorian Terraces
+
+The Emerald Hill precinct is one of the most significant Victorian streetscapes in Australia, and repainting properties here demands genuine heritage experience. We assess every substrate before quoting — render cracking, rising damp, failed paint films and older lead-based coatings all need proper treatment before new product goes on. Our heritage work in South Melbourne covers full exterior repaints, verandah ironwork and cast-iron lacework, ornate parapets and cornices, timber fretwork, and double-hung sash windows, with colour palettes matched to Heritage Victoria guidance and City of Port Phillip overlay requirements.
+
+## Clarendon Street Commercial & Apartments
+
+Alongside our residential work, we service South Melbourne's commercial heart — shopfronts, cafés and restaurants along Clarendon Street and around the South Melbourne Market — with after-hours and staged scheduling to keep businesses trading. For the suburb's apartment buildings and converted warehouses we handle interiors, common areas and full exterior repaints, working with owners corporations and property managers on detailed scopes and clear schedules. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in South Melbourne
 
 ### Interior painting

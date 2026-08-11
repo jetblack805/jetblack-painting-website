@@ -16,6 +16,14 @@ Hughesdale's post-war and 1960s brick veneer homes, Californian bungalows, weath
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Hughesdale with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Hughesdale
+
+Hughesdale is a settled residential suburb between Oakleigh and Chadstone, made up largely of post-war brick veneer family homes with newer townhouses filling in around them. Jetblack Painting provides premium interior and exterior painting across both — thorough preparation, premium Dulux and Taubmans systems and a tidy site from start to finish. Every Hughesdale project starts with a clear written quote so there are no surprises.
+
+## Brick Veneer & Townhouse Painting in Hughesdale
+
+On a typical Hughesdale brick veneer home, the paintwork that fails first is almost always the eaves, fascias, gutters and window frames — the surfaces taking the most sun and rain. We scrape back failing paint, treat and prime bare timber, replace any rotten sections rather than filling over them, and finish with durable exterior systems built for Melbourne's swings between heat and damp. Painted brick and rendered sections get their own preparation, and newer rendered townhouses get flexible coatings that won't crack at the joints. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Hughesdale
 
 ### Interior painting

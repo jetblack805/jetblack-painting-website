@@ -16,6 +16,18 @@ Camberwell's Edwardian homes, Californian bungalows, rendered period façades, m
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Camberwell with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Camberwell and Canterbury
+
+Camberwell is prized for its elegant Edwardian and Californian bungalow homes, tree-lined avenues and the busy shopping precinct around Camberwell Junction. Jetblack Painting provides premium interior and exterior painting that respects the character and the value of these classic homes — while delivering the durable, flawless finish that Camberwell homeowners expect.
+
+From full exterior repaints of period façades to interior colour refreshes, feature walls and cabinetry, we bring detailed preparation and a careful, tidy approach to every Camberwell project. Our quotes are clear and complete, with all preparation included up front — no scope creep, no surprises once work begins.
+
+## Period Home Painting and Heritage Colour in Camberwell
+
+Camberwell's Edwardian homes and Californian bungalows have distinctive timber detailing, rendered surfaces and fine roof lines that need the right preparation and paint systems to last. We handle proper crack filling on render, bare timber priming, meticulous cutting-in on decorative details and heritage-sympathetic colour choices — all standard in our approach, not extras.
+
+For Camberwell's renovated and modern properties, we deliver smooth contemporary finishes using premium Dulux and Taubmans coatings built to handle Melbourne's climate and stay looking sharp for years. Whichever era your home is, the standard stays the same: meticulous preparation and a finish applied by a team that treats your property with respect.
+
 ## What we paint in Camberwell
 
 ### Interior painting

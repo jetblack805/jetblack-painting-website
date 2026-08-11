@@ -16,6 +16,18 @@ Oakleigh's housing stock spans post-war brick homes, 1960s–1980s residences, t
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Oakleigh with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Oakleigh for Homes and Townhouses
+
+Oakleigh is a busy, connected suburb with a housing stock that ranges from well-maintained post-war brick homes to newer infill townhouse developments. These different property types need different approaches — older brick homes need proper assessment for surface condition before any coating, while rendered townhouses need the right primer system to ensure adhesion on new or previously painted render. We don't take a one-size approach: every property is inspected before we quote.
+
+Jetblack Painting works in Oakleigh and the surrounding Monash council suburbs. We use premium Dulux and Taubmans products, prepare every surface correctly, and back every job with a 5-year written guarantee. Call Jimmy on 0432 077 782 to arrange an inspection.
+
+## Interior and Exterior Painting for Oakleigh Homes
+
+Interior painting in Oakleigh covers the full range of residential surfaces — plaster and gyprock ceilings and walls, timber joinery, doors, built-ins and trims. We use premium low-VOC products in the correct finish levels, work efficiently to minimise disruption, and leave the property clean on completion. We work with both owner-occupiers and landlords managing rental properties.
+
+Exterior repaints in Oakleigh require proper preparation before any topcoat is applied. We wash, patch, prime and apply a premium exterior acrylic system rated for Melbourne conditions. Every exterior job is backed by a 5-year written guarantee and covered by $10M public liability insurance.
+
 ## What we paint in Oakleigh
 
 ### Interior painting

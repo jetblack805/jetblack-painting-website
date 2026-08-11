@@ -16,6 +16,18 @@ Beaumaris property is dominated by mid-century architect-designed homes, generou
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Beaumaris with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Beaumaris for Mid-Century and Coastal Homes
+
+Beaumaris has one of Melbourne's most cohesive mid-century residential streetscapes. Many of the homes along its tree-lined streets were designed by notable Melbourne architects during the 1960s and 70s — low-profile brick, strong horizontal lines, and generous garden settings. These homes require painters who understand how to work with the materials: face brick that can't be painted carelessly, rendered walls that need the right primer, cedar and hardwood joinery that demands preparation before any topcoat.
+
+Jetblack Painting works throughout Beaumaris and the surrounding Bayside council area. We assess every surface properly — filling gaps, sanding back any existing paint that's lifting or chalking, priming bare surfaces — before any colour goes on. The result is a finish that holds its appearance and protects the home long after the job is done.
+
+## Interior and Exterior Painting for Beaumaris Homes
+
+For Beaumaris interiors, we work with all surface types — original plaster ceilings, gyprock, feature walls, timber panelling and joinery. We use premium Dulux and Taubmans products in the correct sheen levels for each room and surface, and we prepare carefully so the finish stays consistent and clean. We work around your schedule to minimise disruption, and we leave the property cleaner than we found it.
+
+Beaumaris exteriors are exposed to salt air from the bay, strong UV in summer and Melbourne's wet winters. A paint system that looks fine at six months can start failing at two years if the prep and product selection aren't right. We use exterior acrylic systems with verified durability ratings, applied over the correct primer for each substrate. Every job is backed by our 5-year written guarantee.
+
 ## What we paint in Beaumaris
 
 ### Interior painting

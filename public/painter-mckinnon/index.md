@@ -16,6 +16,18 @@ McKinnon's Californian bungalows and interwar homes, renovated family residences
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in McKinnon with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving McKinnon
+
+McKinnon is one of Glen Eira's most tightly held family pockets — known for its leafy streets, well-presented interwar and bungalow homes, and the sought-after McKinnon Secondary College zone that keeps demand high. Jetblack Painting provides premium interior and exterior painting throughout McKinnon, with the careful preparation and clean finish these established, high-value homes deserve.
+
+As a local painter based nearby in Mordialloc, we make quoting and scheduling easy for McKinnon homeowners. Every project comes with a clear written quote, thorough preparation and a respectful, tidy team — whether it's a full exterior repaint, an interior colour update or kitchen cabinetry.
+
+## Period Home and Bungalow Painting in McKinnon
+
+McKinnon's interwar homes and Californian bungalows carry rendered surfaces, decorative brickwork and original timber that genuinely reward proper preparation — filling and sealing render cracks, priming bare timber, and choosing colours that suit the era and the streetscape. Skip the prep and the topcoat fails early; do it properly and the finish lasts for years.
+
+For updated and contemporary McKinnon homes, we deliver smooth, long-lasting interiors and durable exteriors using premium Dulux and Taubmans paint systems rated for Melbourne's conditions. Whatever the style, the standard is the same: meticulous prep, premium product and a result that holds up.
+
 ## What we paint in McKinnon
 
 ### Interior painting

@@ -16,6 +16,18 @@ Donvale's large established family homes on generous blocks, timber-clad and ren
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Donvale with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Donvale
+
+Donvale is a leafy, semi-rural suburb in the City of Manningham, known for its large blocks, established family homes and the green, treed feel that sets it apart from Melbourne's inner suburbs. Homes here often have substantial weatherboard or rendered façades, wide eaves, decking and generous outdoor areas that need experienced, careful paintwork to maintain their condition and street appeal.
+
+Jetblack Painting provides premium interior and exterior painting across Donvale, delivering the thorough preparation and durable finish these larger properties deserve. Every project comes with a clear written quote and a professional team that respects your property — whether it's a full exterior repaint, a new interior colour scheme or a deck restoration.
+
+## Large Home and Timber Preparation in Donvale
+
+Donvale's homes on big, treed blocks see significant weather exposure — UV, wind and Melbourne's damp winters can punish unprepared paintwork quickly. We use thorough surface preparation: proper timber priming on bare wood, careful filling and sanding, rust treatment on metal surfaces, and premium weather-resistant topcoats that hold up through seasons and years.
+
+For Donvale's rendered and modern homes, we deliver smooth, crisp interiors and durable exteriors using premium Dulux and Taubmans systems. Large homes mean more surface area to manage — we bring the right team size and access equipment to do it efficiently without compromising on quality.
+
 ## What we paint in Donvale
 
 ### Interior painting

@@ -16,6 +16,14 @@ Clyde North's modern brick and rendered estate homes, single and double-storey f
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Clyde North with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Clyde North
+
+Clyde North is one of Melbourne's newest and fastest-growing suburbs in the City of Casey, built almost entirely of modern estate homes. Jetblack Painting provides premium interior and exterior painting suited to this housing — giving near-new homes their first professional repaint, refreshing facades, brightening interiors and getting homes presentation-ready for sale or lease. Every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site.
+
+## Exterior, Interior and Roof Repaints in Clyde North
+
+Exterior repaints in Clyde North start with real preparation — pressure washing, sanding back failing or chalking builder's coatings, priming, and sealing gaps — before durable, weather-resistant topcoats go on. Inside, we stage the work room by room with low-odour premium paints so the home stays livable. For the suburb's tile and metal roofs, we clean, repair and prime before applying a fresh membrane coating. All work across Clyde North is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Clyde North
 
 ### Interior painting

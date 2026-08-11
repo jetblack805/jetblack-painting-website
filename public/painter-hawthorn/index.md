@@ -16,6 +16,18 @@ Hawthorn's Victorian terraces, Federation homes, Edwardian residences, renovated
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Hawthorn with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Hawthorn and Hawthorn East
+
+Hawthorn is one of Melbourne's most beautiful inner-eastern suburbs, famous for its grand Victorian terraces, Federation homes and leafy streets running down to the Yarra. Jetblack Painting provides the detailed, high-quality painting these historic homes deserve — alongside sharp modern finishes for Hawthorn's contemporary townhouses and apartments.
+
+Every Hawthorn project starts with proper preparation and a clear, honest quote. Whether you're restoring an ornate terrace façade on a Grace Park street, refreshing a modern interior in Hawthorn East or updating a classic bungalow, our team delivers sharp lines, durable coatings and a professional result with minimal disruption to your home.
+
+## Heritage Restoration and Period Home Painting in Hawthorn
+
+Hawthorn's period architecture rewards careful, experienced work. We handle the specifics of Victorian and Federation homes — lead-paint-safe preparation, detailed restoration of timber fretwork and cast-iron lacework, and heritage-appropriate colour schemes that suit both the property's era and any local heritage overlay. Done properly, the finish protects the home's character and its considerable value.
+
+For Hawthorn's modern properties and renovations, we use premium Dulux and Taubmans systems for crisp, long-lasting interiors and weather-resistant exteriors built for Melbourne's conditions. Whatever the era, the standard stays the same: meticulous preparation, premium coatings, and a finish applied by a team that respects your property.
+
 ## What we paint in Hawthorn
 
 ### Interior painting

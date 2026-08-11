@@ -16,6 +16,18 @@ Caulfield's Edwardian terraces, interwar homes, post-war brick properties, moder
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Caulfield with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Caulfield, Caulfield North and Caulfield South
+
+Caulfield is a well-connected inner-south-east suburb known for its mix of Edwardian and interwar streetscapes, the Caulfield Racecourse precinct and popular shopping strips along Glen Huntly Road and Hawthorn Road. Jetblack Painting delivers premium interior and exterior painting across Caulfield — careful preparation, sharp execution and durable results every time.
+
+Whether you're refreshing the exterior of a classic period home, repainting a modern townhouse interior or updating cabinetry in a Caulfield apartment, we bring the same detailed approach to every project. Our written quotes lay out the full scope and preparation clearly before work starts, and our team keeps your property clean and tidy throughout.
+
+## Period Home and Modern Apartment Painting in Caulfield
+
+Caulfield's Edwardian and interwar homes need proper preparation to maintain their character and protect their value — crack filling on rendered surfaces, bare timber priming, careful colour choices that suit the era and the street. We handle all of this as part of our standard approach, not as an afterthought.
+
+For Caulfield's modern townhouses and apartment buildings, including body corporate and strata repaints, we deliver clean contemporary finishes using premium Dulux and Taubmans systems rated for Melbourne's conditions. Projects are scoped clearly, communicated throughout and completed to a standard that lasts.
+
 ## What we paint in Caulfield
 
 ### Interior painting

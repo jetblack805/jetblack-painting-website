@@ -16,6 +16,18 @@ Carrum features older beach houses and weatherboard homes alongside brick family
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Carrum with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Carrum for Coastal and Waterway Homes
+
+Carrum's position at Patterson River mouth and Port Phillip Bay makes it one of Melbourne's most exposed suburban locations for exterior paint systems. The combination of salt air from the bay, moisture from the river, and Melbourne's UV intensity through summer means a paint system that isn't specified for coastal exposure will fail prematurely. We've worked throughout the Kingston coastline — from Mordialloc to Carrum — and we know what these conditions demand.
+
+Jetblack Painting carries $10M public liability insurance, is fully licensed for residential painting in Victoria, and backs every job with a 5-year written guarantee. We quote on-site after a proper inspection — no rough estimates over the phone. Call Jimmy on 0432 077 782 to arrange a time.
+
+## Interior and Exterior Painting for Carrum Homes
+
+Interior painting in Carrum covers all residential surface types — plaster and gyprock ceilings and walls, timber joinery, doors, trims and built-ins. We use premium low-VOC Dulux and Taubmans products in the correct sheen levels, schedule around the household, and clean up thoroughly on completion.
+
+Exterior repaints in Carrum require proper preparation as the foundation. We inspect every surface, wash down, treat salt or efflorescence deposits, prime correctly for the substrate, and apply a premium exterior topcoat rated for Melbourne's coastal conditions. The preparation is as important as the topcoat — skipping it leads to early adhesion failure. Every exterior job is backed by a 5-year written guarantee.
+
 ## What we paint in Carrum
 
 ### Interior painting

@@ -16,6 +16,14 @@ Windsor's single-fronted Victorian terraces and cottages, double-fronted period 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Windsor with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Victorian Terrace & Heritage Specialists
+
+Period homes in Windsor need a paint system appropriate to the substrate — render, masonry, or a combination — and preparation that addresses the underlying condition rather than painting over problems. On Victorian terraces we inspect for render cracks, rising damp, failed paint films and lead-based coatings before specifying a system, and we take care with the ornate details these homes are known for — parapets, verandah ironwork, cornices and window sashes. We match colours to the period of the home and can advise on Stonnington heritage overlay requirements for any property in a heritage precinct.
+
+## Apartments, Rentals & Chapel Street Commercial
+
+Windsor's Chapel Street precinct brings us regular commercial enquiries from shopfronts, cafés and hospitality venues that need professional results with minimal disruption to trading. For the suburb's apartments and large rental stock, we offer interior repaints, body-corporate and common-area work, scheduled repaint programs for landlords, and fast vacancy turnarounds coordinated with property managers. All work across Windsor is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Windsor
 
 ### Interior painting

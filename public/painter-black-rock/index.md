@@ -16,6 +16,18 @@ Black Rock property ranges from grand period residences and architect-designed c
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Black Rock with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Black Rock for Prestige and Coastal Homes
+
+Black Rock carries a reputation as one of Melbourne's premier bayside suburbs, and the homes reflect that — substantial, well-maintained properties where the quality of a paint finish is immediately apparent. Whether it's a heritage timber Queenslander, a rendered brick family home, or a contemporary architectural design with mixed cladding, we approach every surface correctly: identifying what's there, preparing it properly, and specifying a product system that performs.
+
+Jetblack Painting has worked on prestige properties throughout the Bayside area. We use premium Dulux and Taubmans products — not trade-grade filler products — and we back every job with a 5-year written guarantee. Call Jimmy on 0432 077 782 to arrange an inspection.
+
+## Interior and Exterior Painting for Black Rock Properties
+
+For Black Rock interiors, we handle all surface types: original plaster ceilings and cornices, gyprock walls, timber joinery, built-ins and feature walls. We use premium low-VOC products in the correct sheen levels for each space, work around your household schedule, and leave the property in excellent condition. We're experienced with the open-plan layouts and high-spec finishes common in renovated homes throughout the suburb.
+
+Black Rock exteriors face salt air from the bay, strong summer UV and Melbourne's variable winters. These conditions accelerate film failure if the paint system isn't specified correctly. We assess every surface for adhesion, contamination and defects before we touch a brush, apply the correct primer for the substrate, and topcoat with verified exterior acrylic systems. The result is a finish that looks good and protects the home.
+
 ## What we paint in Black Rock
 
 ### Interior painting

@@ -16,6 +16,14 @@ Thornbury's housing spans several eras of Melbourne architecture. The California
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Thornbury with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Bungalow, Heritage & Period Home Specialists
+
+Period and interwar homes in Thornbury need a paint system suited to the substrate — render, masonry, weatherboard or a mix — and preparation that addresses the underlying condition rather than painting over problems. On bungalows, the roughcast render used on many facades requires different preparation to smooth render or brick, and the deep verandah timbers need oil-based or alkyd primers to penetrate properly. On Victorian, Edwardian and Federation homes we inspect for render cracks, rising damp, failed paint films and lead-based coatings before specifying a system. We match colours to the period of the home and can advise on Darebin heritage overlay requirements for any property in a heritage precinct.
+
+## Rental Properties & High Street Commercial
+
+Thornbury's High Street and Station Street precincts bring us regular commercial painting enquiries from shopfronts, cafés and hospitality businesses that need professional results with minimal disruption to trading. For the suburb's large rental stock, we offer scheduled repaint programs for landlords, fast vacancy turnarounds coordinated with property managers, and durable interior finishes that stand up to high-turnover tenancy use. All work across Thornbury is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Thornbury
 
 ### Interior painting

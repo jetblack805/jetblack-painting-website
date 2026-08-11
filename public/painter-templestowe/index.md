@@ -16,6 +16,18 @@ Templestowe's large two-storey family homes, rendered and brick residences on ge
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Templestowe with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Premium House Painters Serving Templestowe and Templestowe Lower
+
+Templestowe is a prestigious, leafy suburb in the City of Manningham, known for its large blocks, elevated homes and the green surrounds near the Yarra and Westerfolds Park. Jetblack Painting provides premium interior and exterior painting across Templestowe and Templestowe Lower, delivering the meticulous preparation and refined finish these substantial homes deserve.
+
+Every Templestowe project comes with a detailed written quote and thorough preparation from a professional, tidy team. From full exterior repaints of large two-storey homes to premium interior colour schemes and cabinetry, we deliver sharp lines, durable coatings and a clean, respectful result.
+
+## Large Home and Premium Finish Painting in Templestowe
+
+Many Templestowe homes are substantial family residences with rendered façades, timber detailing, high ceilings and generous interiors that need an experienced team and proper access equipment. We handle these larger projects safely and efficiently, with careful preparation and premium, weather-resistant coatings that protect the investment and hold up through Melbourne's seasons.
+
+For Templestowe's modern and architect-designed homes, we deliver the seamless contemporary finishes premium interiors depend on, using Dulux and Taubmans systems built for Melbourne's climate. Whatever the size or style, you get considered preparation and a finish built to last.
+
 ## What we paint in Templestowe
 
 ### Interior painting

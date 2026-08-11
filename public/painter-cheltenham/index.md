@@ -16,6 +16,18 @@ Cheltenham has a strong mix of 1950s–1970s brick veneer homes, weatherboard co
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Cheltenham with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Local Painters in Cheltenham — Based in Mordialloc
+
+Jetblack Painting is a Mordialloc-based painting company, which means Cheltenham is practically on our doorstep. When you book a quote, owner Jimmy Demirci visits the site himself to assess the work, recommend the right paint system and give you a detailed written quote. There's no guesswork and no surprise costs.
+
+We've painted dozens of homes across Cheltenham and the surrounding Bayside area since 2011. Whether it's a full interior repaint before selling, a fresh exterior coat to protect against Melbourne's winters, or a detailed heritage restoration on a period home, we bring the same level of care and precision to every project.
+
+## Interior & Exterior Painting Built to Last in Cheltenham
+
+Surface preparation is the most important part of any paint job — and the part most painters rush. We never do. Every Cheltenham project starts with thorough preparation: washing surfaces, filling cracks, sanding rough areas, priming bare spots, and caulking gaps before a single drop of topcoat goes on. That prep work is what makes our finishes last.
+
+We use only premium Dulux and Taubmans paints — no budget alternatives. Combined with our 5-year written workmanship guarantee and $10M public liability insurance, you can be confident the job will be done right. Call 0432 077 782 for a free written quote.
+
 ## What we paint in Cheltenham
 
 ### Interior painting

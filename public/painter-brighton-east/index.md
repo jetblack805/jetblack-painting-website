@@ -16,6 +16,18 @@ Brighton East is dominated by large brick family homes and quality renovations o
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Brighton East with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Brighton East for Large Family Homes
+
+Brighton East's residential character is defined by its substantial housing stock — brick family homes on wide blocks, many of them well-maintained originals from the 1950s through to the 1980s, alongside a steady stream of quality renovation and extension projects. These homes require painters who understand how to prepare different substrates correctly: brick that's been previously painted, render that needs adhesion testing, timber joinery that has to be fully prepared before any topcoat goes on.
+
+Jetblack Painting works throughout Brighton East and the broader Bayside council area. We assess every surface properly before we quote and before we paint — filling gaps, sanding back chalking or flaking paint, priming bare surfaces — so the finish is consistent and the protection genuine. Every job is backed by a 5-year written guarantee.
+
+## Interior and Exterior Painting for Brighton East Homes
+
+For Brighton East interiors, we cover all surface types — plaster ceilings and cornices in older homes, gyprock in extensions and renovations, timber panelling, joinery and built-in cabinetry. We work in the correct sheen levels for each room using premium Dulux and Taubmans products, and plan the job to fit around your household rather than the other way around.
+
+For exteriors, Brighton East homes don't face the same salt air exposure as foreshore suburbs, but they still contend with Melbourne's UV intensity, variable rainfall and temperature cycling. We specify and apply exterior acrylic systems with verified durability ratings over the correct primer for each substrate. The result holds its appearance and protects the home long after the job is signed off.
+
 ## What we paint in Brighton East
 
 ### Interior painting

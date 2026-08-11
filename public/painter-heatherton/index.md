@@ -16,6 +16,18 @@ Heatherton's housing is primarily post-war brick and 1970s–1980s residences, w
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Heatherton with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Heatherton Covering Kingston Council
+
+Heatherton sits in the Kingston council area where we've completed painting projects across the spectrum — from straightforward interior repaints to full exterior restorations on homes that haven't been painted in fifteen years. The older brick homes in this part of Melbourne are generally in good structural condition, but exterior paint systems do degrade over time and need proper preparation before recoating, not just a fresh layer over a failing existing film.
+
+Jetblack Painting services Heatherton alongside Cheltenham, Moorabbin, Clarinda and the surrounding Kingston council suburbs. We carry $10M public liability insurance, are fully licensed for residential work in Victoria, and back every project with a 5-year written guarantee. Call 0432 077 782 to arrange an inspection.
+
+## Interior and Exterior Painting for Heatherton Homes
+
+Interior painting in Heatherton covers the standard range of residential surfaces: ceilings, walls, timber joinery, doors and built-ins. We use premium Dulux and Taubmans products in the correct finish levels, work efficiently to minimise disruption to the household, and clean up thoroughly on completion.
+
+For exterior repaints, we start with a detailed inspection to identify what preparation is genuinely needed — then we do the preparation properly rather than rushing to the topcoat. A correct primer on the right substrate is the difference between a finish that holds for ten years and one that starts peeling within two. Every exterior job comes with a 5-year written guarantee.
+
 ## What we paint in Heatherton
 
 ### Interior painting

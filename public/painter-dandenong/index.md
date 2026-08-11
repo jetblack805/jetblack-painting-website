@@ -16,6 +16,18 @@ Dandenong's brick and weatherboard family homes, unit developments, retail shopf
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Dandenong with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House and Commercial Painters Serving Dandenong
+
+Dandenong is a major, diverse hub in Melbourne's south-east, with a busy commercial centre and a broad mix of established homes, family residences and commercial premises. Jetblack Painting provides premium residential and commercial painting across Dandenong and Dandenong North — thorough preparation, premium coatings and a clean, durable result.
+
+Every Dandenong project comes with a clear written quote and thorough preparation from a reliable local team. From full house repaints to commercial and rental repaints and cabinetry, we deliver sharp lines, durable coatings and a professional result with minimal disruption to your home or business.
+
+## Residential and Commercial Painting in Dandenong
+
+Dandenong's established homes benefit from proper preparation before any topcoat is applied — render repair, bare timber priming and weather-resistant systems suited to Melbourne's conditions. We don't rush the prep, because that's what keeps the result looking good for years rather than months.
+
+For Dandenong's shops, offices and industrial premises, we offer flexible commercial painting scheduled around your trading hours, including after-hours work where needed. Projects are scoped clearly, carried out efficiently and finished to a durable commercial standard.
+
 ## What we paint in Dandenong
 
 ### Interior painting

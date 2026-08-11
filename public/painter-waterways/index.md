@@ -16,6 +16,14 @@ Waterways's modern rendered and brick family homes, waterfront properties on the
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Waterways with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Waterways
+
+Waterways is one of Kingston's newest residential pockets — a master-planned estate wrapped around lakes and wetlands, a few minutes from our Mordialloc base. The homes here are contemporary rendered and brick builds, many now old enough to be due for their first proper repaint. Jetblack Painting provides premium interior and exterior painting across the estate, with careful preparation and a clear written quote before any work begins.
+
+## Render Repaints & Waterfront Protection in Waterways
+
+Rendered homes are their own discipline. Render moves, and a rigid paint film cracks at the control joints, around window frames and along parapets — so we use flexible, breathable exterior systems designed for the substrate, after cutting out and patching any existing cracks rather than skimming over them. Properties fronting the wetlands in Waterways face damper air and more weathering on their south and west elevations, so those surfaces get washed, treated and finished with mould-resistant coatings. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Waterways
 
 ### Interior painting

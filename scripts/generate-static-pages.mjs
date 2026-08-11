@@ -91,6 +91,68 @@ function extractFaqs(source, suburb) {
   return faqs;
 }
 
+// Suburb pages carry a `localContent` prop — the genuinely suburb-specific
+// paragraphs (real streets, heritage overlays, housing stock) that make each
+// of the 96 pages distinct. generateSuburbPage previously never read this
+// prop at all, so it rendered fine client-side via React but was completely
+// absent from the pre-rendered HTML: invisible to any crawler that doesn't
+// execute JS, which includes several of the AI crawlers this site's own
+// robots.txt explicitly welcomes. Found 2026-08-11 while starting suburb
+// content work, and treated as the day's fix rather than proceeding to write
+// more content on top of a pipe that wasn't delivering the content already
+// there. `body` is authored inconsistently across pages — sometimes a single
+// string/template literal, sometimes an array of paragraphs, sometimes with
+// quoted JSON-style keys — so all three forms are handled.
+function extractLocalContent(source, suburb) {
+  const startMarker = "localContent={[";
+  const start = source.indexOf(startMarker);
+  if (start === -1) return [];
+  let depth = 0;
+  let end = -1;
+  for (let i = start + startMarker.length - 1; i < source.length; i++) {
+    if (source[i] === "[") depth++;
+    else if (source[i] === "]") {
+      depth--;
+      if (depth === 0) {
+        end = i;
+        break;
+      }
+    }
+  }
+  if (end === -1) return [];
+  const block = source.slice(start + startMarker.length - 1, end + 1);
+
+  const blocks = [];
+  const objRegex =
+    /"?heading"?:\s*(?:"([^"]*)"|`([^`]*)`)\s*,\s*"?body"?:\s*(\[[\s\S]*?\]|"(?:[^"\\]|\\.)*"|`(?:[^`\\]|\\.)*`)\s*,?\s*\}/g;
+  for (const match of block.matchAll(objRegex)) {
+    const heading = normalizeTemplate(match[1] ?? match[2] ?? "", { suburb });
+    const bodyRaw = match[3];
+    const paragraphs = [];
+    if (bodyRaw.startsWith("[")) {
+      const strRegex = /(?:"((?:[^"\\]|\\.)*)"|`((?:[^`\\]|\\.)*)`)\s*,?/g;
+      for (const strMatch of bodyRaw.matchAll(strRegex)) {
+        const text = normalizeTemplate(
+          (strMatch[1] ?? strMatch[2] ?? "").replace(/\\"/g, '"').replace(/\\`/g, "`"),
+          { suburb },
+        );
+        if (text) paragraphs.push(text);
+      }
+    } else {
+      const strMatch = bodyRaw.match(/^(?:"((?:[^"\\]|\\.)*)"|`((?:[^`\\]|\\.)*)`)$/);
+      if (strMatch) {
+        const text = normalizeTemplate(
+          (strMatch[1] ?? strMatch[2] ?? "").replace(/\\"/g, '"').replace(/\\`/g, "`"),
+          { suburb },
+        );
+        if (text) paragraphs.push(text);
+      }
+    }
+    if (heading && paragraphs.length) blocks.push({ heading, paragraphs });
+  }
+  return blocks;
+}
+
 function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
@@ -569,6 +631,7 @@ function generateSuburbPage(route, sourceFile) {
   const propertyTypes = normalizeTemplate(extractProp(source, "propertyTypes"), { suburb });
   const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
   const faqs = extractFaqs(source, suburb);
+  const localContent = extractLocalContent(source, suburb);
   const canonical = canonicalForRoute(route);
   // Only advertise a per-route OG image when the file actually exists. The
   // generator that produces these (scripts/generate-images.mjs) is opt-in and
@@ -603,6 +666,12 @@ function generateSuburbPage(route, sourceFile) {
             `Jetblack Painting helps homeowners, landlords, and commercial clients in ${suburb} with detailed preparation, premium coatings, and clear project communication from quote through completion.`,
           ],
         },
+        // The suburb-specific narrative — real streets, heritage overlays,
+        // housing stock — is the most distinctive content on the page and
+        // the reason two suburb pages don't read as near-duplicates of each
+        // other. Placed right after the generic intro and ahead of the
+        // templated cards/FAQ sections below.
+        ...localContent.map((block) => ({ heading: block.heading, paragraphs: block.paragraphs })),
         {
           type: "cards",
           heading: `What we paint in ${suburb}`,

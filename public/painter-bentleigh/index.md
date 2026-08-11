@@ -16,6 +16,18 @@ Bentleigh's interwar Californian bungalows, post-war brick homes, modern townhou
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Bentleigh with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Bentleigh and Bentleigh East
+
+Bentleigh is a popular family suburb in the City of Glen Eira, known for its solid stock of interwar and Californian bungalow homes, the busy Centre Road shopping strip and quiet, tree-lined residential streets. Jetblack Painting provides premium interior and exterior painting across Bentleigh and Bentleigh East, with preparation and coatings tailored to each home's era and materials — not a one-size-fits-all approach.
+
+Every Bentleigh project starts with a detailed written quote and thorough preparation carried out by a reliable, tidy local team. Whether it's a full exterior repaint to lift your home's street appeal, a fresh interior colour scheme before a sale, or cabinetry and trims, we deliver sharp lines, durable coatings and a clean result that respects your property and your time.
+
+## Bungalow Specialists and Family Home Repaints in Bentleigh
+
+Bentleigh's interwar homes and Californian bungalows have distinctive rendered surfaces, feature brickwork and timber detailing that need the right preparation to last. Cracks in render need proper filling and priming, bare timber needs sealed before topcoating, and colour choices for period homes benefit from experience. We handle all of this as standard — not as an extra.
+
+For Bentleigh's modern townhouses and unit developments, we deliver smooth contemporary finishes using premium Dulux and Taubmans systems suited to Melbourne's variable climate. Body corporate and strata repaints are also something we handle regularly — scoped clearly, carried out efficiently, and finished to a standard that holds up season after season.
+
 ## What we paint in Bentleigh
 
 ### Interior painting

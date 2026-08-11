@@ -16,6 +16,18 @@ Frankston's housing spans older brick veneer and weatherboard homes in the estab
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Frankston with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Frankston
+
+Frankston is the main hub at the gateway to the Mornington Peninsula, with a diverse housing stock that ranges from older weatherboard and brick veneer homes to modern builds in Frankston South and waterfront properties along the foreshore. Jetblack Painting provides premium interior and exterior painting across Frankston, with a team that knows the suburb's coastal conditions and property types.
+
+Every Frankston project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's a full exterior repaint on an established brick home or a fresh interior scheme in a contemporary build, we deliver sharp lines, durable coatings and a clean result.
+
+## Coastal and Residential Painting in Frankston
+
+Homes near the Frankston foreshore and the beach are exposed to salt air from Port Phillip Bay, which accelerates paint failure on any surface that hasn't been properly prepared. We counter this with thorough salt washing, flexible primers and premium salt-resistant topcoats — the same approach we use along the full Kingston and Bayside coastline.
+
+Frankston's established brick veneer homes need careful surface preparation — cleaning, filling cracks, priming bare render — before any topcoat goes on. We include full preparation in every quote with no hidden extras, so the finish lasts as long as it should.
+
 ## What we paint in Frankston
 
 ### Interior painting

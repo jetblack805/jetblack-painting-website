@@ -16,6 +16,18 @@ Greater Dandenong has a diverse range of properties, from established family hom
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Greater Dandenong with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Local House Painters Across Greater Dandenong
+
+The City of Greater Dandenong covers a diverse part of Melbourne's south-east — including Dandenong, Keysborough, Springvale, Noble Park and Keysborough's growing estates — with a broad mix of established homes, modern family housing and commercial premises. Based nearby in Mordialloc, Jetblack Painting provides premium residential and commercial painting right across the area.
+
+Every Greater Dandenong project comes with a clear written quote and thorough preparation from a reliable local team. From full house repaints to estate homes, commercial repaints and cabinetry, we deliver sharp lines, durable coatings and a professional result with minimal disruption.
+
+## Residential and Commercial Painting in Greater Dandenong
+
+Greater Dandenong's established homes benefit from proper preparation — render repair, bare timber priming and durable, weather-resistant topcoats suited to Melbourne conditions — while its many newer estate homes call for crisp, seamless modern finishes. We tailor the system to each property for a lasting result.
+
+For the area's shops, offices and industrial premises, we offer flexible commercial painting scheduled around your business, including after-hours work where needed. Whatever the project, you get considered preparation and a hard-wearing finish built to last.
+
 ## What we paint in Greater Dandenong
 
 ### Interior painting

@@ -16,6 +16,18 @@ Ormond's interwar homes, Californian bungalows, renovated family residences, inv
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Ormond with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Ormond
+
+Ormond is a well-established family suburb in the City of Glen Eira, known for its interwar homes, Californian bungalows and the convenient lifestyle around Ormond Station and North Road. Jetblack Painting provides premium interior and exterior painting across Ormond, matching our preparation and finish to each home's age and materials for a clean, lasting result.
+
+Every Ormond project comes with a clear written quote and thorough preparation from a tidy, local team. Whether you need a full exterior repaint, a fresh interior scheme, cabinetry work or a rental turnaround, we deliver sharp lines and durable coatings with minimal disruption to your home.
+
+## Period and Modern Home Painting in Ormond
+
+Ormond's period homes carry rendered façades, feature brickwork and timber detailing that need the right care — crack repair, bare timber priming and colours chosen to suit the era. We protect these homes with premium, hard-wearing paint systems that keep them looking sharp and extend the life of the paintwork.
+
+For Ormond's renovated and contemporary homes, we deliver smooth, durable interior and exterior finishes using premium Dulux and Taubmans coatings built for Melbourne's climate. Whatever the property type, you get considered preparation and a finish designed to hold up for years.
+
 ## What we paint in Ormond
 
 ### Interior painting

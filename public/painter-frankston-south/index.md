@@ -16,6 +16,14 @@ Frankston South's larger family homes, architect-designed and split-level houses
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Frankston South with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Frankston South
+
+Frankston South is a leafy, upscale suburb at the gateway to the Mornington Peninsula, known for its established homes on large, treed blocks close to both the bay and the bush. Jetblack Painting provides premium interior and exterior painting suited to these properties — protecting facades against salt air and damp while delivering a beautiful, lasting finish. We know the area well, and every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site.
+
+## Coastal & Bushland Protection in Frankston South
+
+Homes in Frankston South face a demanding mix — salt air off the bay, damp and mould-prone shade under heavy tree cover, and larger exterior areas to protect. We counter that with proper washing, flexible primers and premium weather-resistant topcoats on render, masonry and timber, and correct treatment of shaded, mould-prone surfaces before painting. From full exterior repaints on split-level homes to interior colour refreshes, we tailor the system to the surface. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Frankston South
 
 ### Interior painting

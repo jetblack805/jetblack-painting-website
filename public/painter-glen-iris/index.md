@@ -16,6 +16,18 @@ Glen Iris is dominated by Edwardian and California bungalow-era homes, particula
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Glen Iris with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Glen Iris
+
+Glen Iris is a large inner-east suburb with one of Melbourne's strongest concentrations of Edwardian and interwar period homes. The streets around Tooronga Road, Burke Road and the Gardiners Creek corridor are full of California bungalows and Edwardian cottages that are actively maintained and regularly repainted by owner-occupiers who care about the quality of finish. Jetblack Painting provides premium interior and exterior painting across Glen Iris, with a team experienced in the specific demands of period home preparation and coating.
+
+Every Glen Iris project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's a full exterior repaint on a period bungalow, a pre-sale interior refresh to maximise auction presentation, or a contemporary interior scheme for a newer build, we deliver sharp lines, durable coatings and a clean result backed by our 5-year written workmanship guarantee.
+
+## Period Home and Pre-Sale Painting in Glen Iris
+
+Edwardian and interwar homes in Glen Iris typically have older paint systems that need proper assessment before any new coating goes on. Where lead paint is present in older layers, we follow correct containment and preparation procedures. Timber weatherboards and window frames need thorough cleaning, filling and priming before topcoating, and original period features — cornicing, archways, decorative verge boards — need clean cut-in work to maintain the character of the property.
+
+Glen Iris has a very active pre-sale painting market. A well-executed interior refresh — neutral colours, clean lines, fresh doors and trims — can make a measurable difference to auction day presentation. We understand the timing pressures of campaign preparation and can scope and complete pre-sale work efficiently without compromising on finish quality.
+
 ## What we paint in Glen Iris
 
 ### Interior painting

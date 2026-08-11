@@ -16,6 +16,14 @@ Richmond is dominated by single-fronted and double-fronted Victorian terrace hou
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Richmond with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Victorian Terraces & Heritage Properties
+
+Richmond's Victorian and Edwardian terrace houses are some of Melbourne's most photographed streetscapes — and among the most technically demanding properties to repaint correctly. Correct surface preparation is non-negotiable on these buildings: render cracks, rising damp staining, failed previous paint films, and chalking lead-based coatings all need to be properly assessed and treated before any new product is applied. We carry out detailed substrate inspections on every heritage property, use appropriate primers and sealers for masonry and render, and match colour palettes to Heritage Victoria guidance or council heritage overlay requirements where applicable. Our work on Richmond terraces covers full exterior repaints, verandah ironwork (columns, brackets, balustrades), ornate timber fretwork, window frames and sashes, and interior walls and ceilings — including decorative cornice restoration where needed.
+
+## Rental Properties & Commercial Strips
+
+Richmond's three famous commercial strips — Bridge Road, Church Street, and Swan Street — are among Melbourne's most active retail and hospitality precincts, and we service shopfronts, restaurants, and commercial tenancies throughout these areas alongside our residential workload. For rental properties, we offer scheduled repaint programs for landlords with multiple Richmond properties, coordinating with tenants to minimise disruption and working efficiently to meet vacancy windows. We use low-odour interior products as standard in occupied rental properties, and can advise on durable wall and ceiling finishes that stand up to high-turnover tenancy use. All commercial and rental work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Richmond
 
 ### Interior painting

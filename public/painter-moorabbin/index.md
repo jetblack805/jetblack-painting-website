@@ -16,6 +16,18 @@ Moorabbin's interwar and post-war brick and weatherboard family homes, renovated
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Moorabbin with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Local Painters Serving Moorabbin
+
+Moorabbin is a practical, well-connected suburb in the City of Kingston, home to a mix of family residences, interwar homes and commercial and light industrial properties along South Road and around the DFO Moorabbin precinct. Based nearby in Mordialloc, Jetblack Painting is a genuinely local painter — we're on site fast and deliver the kind of personal service that larger operators can't.
+
+Every Moorabbin project comes with a clear written quote and thorough preparation from a reliable team. From full house repaints to commercial shopfront repaints and kitchen cabinetry, we deliver sharp lines, premium coatings and a professional result with minimal disruption to your home or business.
+
+## Residential and Commercial Painting in Moorabbin
+
+Moorabbin's family homes and interwar properties benefit from proper preparation — render repair, bare timber priming and durable, weather-resistant topcoats suited to Melbourne conditions. We keep these homes looking their best with premium coatings from Dulux and Taubmans, applied by an experienced team that doesn't rush the prep.
+
+For Moorabbin's shops, offices and industrial premises, we offer flexible commercial painting scheduled around your business — including early-morning or weekend work where needed. Commercial projects are scoped clearly, communicated throughout and completed to a professional standard that holds up.
+
 ## What we paint in Moorabbin
 
 ### Interior painting

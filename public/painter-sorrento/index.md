@@ -16,6 +16,18 @@ Sorrento's limestone and heritage cottages, weatherboard beach houses, premium a
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Sorrento with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Sorrento
+
+Sorrento is one of the Mornington Peninsula's most exposed and most prestigious towns, sitting where Port Phillip Bay meets Bass Strait. The housing stock reflects that history and standing — original limestone cottages, heritage weatherboard buildings, and a concentration of premium holiday homes that's among the highest on the Peninsula. Jetblack Painting provides premium interior and exterior painting across Sorrento, with preparation and coating systems matched to both the exposure and the standard property owners here expect.
+
+Every Sorrento project starts with a clear written quote and thorough preparation. Whether it's a full exterior repaint on a weatherboard beach house, a limestone cottage needing careful, breathable products, or an interior refresh on a premium holiday property between lettings, we deliver a finish that holds up to this coastline and a site that's left clean and respected throughout. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
+## Coastal Exposure and Heritage Painting in Sorrento
+
+Sorrento's position at the tip of the Peninsula means properties face salt air and weathering from two directions — the calmer bay side and the far harsher ocean side. We treat every exterior with a thorough wash to remove salt deposits before any coating, spot-prime bare or exposed timber with a penetrating oil-based primer, and finish with flexible, salt-resistant exterior systems built for genuinely exposed coastal conditions, not a standard suburban product.
+
+Sorrento's limestone cottages and older heritage buildings need their own approach — testing what's already on the surface, using breathable products that won't trap moisture behind the render or stonework, and taking care around original detail and pointing. For the town's premium holiday homes, we work around letting calendars and caretaker access, and use durable, low-maintenance finishes that hold their presentation between guest stays.
+
 ## What we paint in Sorrento
 
 ### Interior painting

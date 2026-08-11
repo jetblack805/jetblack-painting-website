@@ -16,6 +16,14 @@ Malvern East's Edwardian and Federation homes, Californian bungalows, interwar a
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Malvern East with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Heritage, Bungalow & Period Home Specialists
+
+Period homes in Malvern East need a paint system appropriate to the substrate — render, masonry, weatherboard or a combination — and preparation that addresses the underlying condition rather than painting over problems. On Edwardian and Federation homes we carry out detailed inspections for render cracks, rising damp, failed paint films and lead-based coatings before specifying a system. Californian bungalows present their own challenges: roughcast render needs different preparation to smooth render or brick, and deep verandah timbers need oil-based or alkyd primers to penetrate properly. We match colours to the period of the home and can advise on Stonnington heritage overlay requirements, including within the Gascoigne Estate.
+
+## Interior Repaints & Rental Properties in Malvern East
+
+Beyond heritage exteriors, we deliver flawless interior repaints across Malvern East — walls, ceilings, trims, doors and detailed cornice work — staged room by room with low-odour premium paints so the home stays livable. For the suburb's rental stock, we offer scheduled repaint programs for landlords, fast vacancy turnarounds coordinated with property managers, and durable finishes that stand up to tenancy use. All work across Malvern East is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Malvern East
 
 ### Interior painting

@@ -16,6 +16,18 @@ Mount Martha's housing spans older weatherboard beach houses and fibro cottages 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Mount Martha with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Mount Martha
+
+Mount Martha is a coastal Mornington Peninsula suburb that extends from the hillside residential areas above Nepean Highway down to the foreshore and Mount Martha Beach. The suburb has a diverse housing stock — older beach houses, established brick homes, and contemporary builds — alongside a large holiday property and investment sector. Jetblack Painting provides premium interior and exterior painting across Mount Martha, with a team experienced in coastal conditions, varied surface types and the practical requirements of Peninsula property owners.
+
+Every Mount Martha project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's a full exterior repaint on a foreshore weatherboard, a contemporary interior refresh for a holiday let, or a hillside home requiring scaffolding and salt-resistant topcoats, we deliver sharp lines, durable coatings and a clean result backed by our 5-year written workmanship guarantee.
+
+## Coastal and Holiday Home Painting in Mount Martha
+
+Homes near the Mount Martha foreshore and beach are exposed to salt air from Port Phillip Bay, which breaks down paint film faster than inland properties. We use the same approach as across our wider Peninsula and Bayside coastline work: thorough pressure washing to remove salt deposits before any coating, premium flexible primers, and salt-resistant topcoats rated for coastal conditions. Preparation is done properly before any product goes on, which is what determines whether the finish lasts 8 years or starts failing in three.
+
+Mount Martha's holiday property stock includes weatherboard beach houses that need periodic exterior maintenance and interior refreshes between letting seasons. We're experienced working around Peninsula letting schedules and can advise on durable, low-maintenance finishes suited to short-stay properties where resistance to cleaning, marking and general wear matters more than it does in an owner-occupied home.
+
 ## What we paint in Mount Martha
 
 ### Interior painting

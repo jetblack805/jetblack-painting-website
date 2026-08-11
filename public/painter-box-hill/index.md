@@ -16,6 +16,18 @@ Box Hill's Californian bungalows, interwar homes, brick veneer family residences
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Box Hill with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Box Hill, Box Hill North and Box Hill South
+
+Box Hill is a thriving suburb in the City of Whitehorse, home to a vibrant multicultural community, a busy central hub around Box Hill Central, and a diverse mix of established bungalows, family residences and modern apartment developments. Jetblack Painting provides premium interior and exterior painting across all three Box Hill postcodes, tailoring the approach to each property's age and materials.
+
+Every Box Hill project comes with a clear written quote and thorough preparation from a reliable, tidy team. From full house repaints and cabinetry to strata and commercial repaints, we deliver sharp lines, durable coatings and a clean result with minimal disruption to your home or business.
+
+## Period Home and Modern Apartment Painting in Box Hill
+
+Box Hill's established bungalows and interwar homes have rendered surfaces, feature brickwork and original timber that benefit from proper preparation — filling, priming and quality topcoats that keep these classic homes looking sharp and protected.
+
+For Box Hill's newer townhouses, apartments and commercial buildings, we deliver smooth, contemporary finishes using premium Dulux and Taubmans systems built for Melbourne conditions. Whatever the property, you get meticulous preparation and a finish designed to last for years.
+
 ## What we paint in Box Hill
 
 ### Interior painting

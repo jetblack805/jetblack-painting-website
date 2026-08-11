@@ -16,6 +16,18 @@ Mornington's housing ranges from Victorian and Edwardian weatherboard homes near
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Mornington with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Mornington
+
+Mornington is one of the Mornington Peninsula's main residential towns, with a housing stock that spans Victorian and Edwardian period homes near the heritage Main Street precinct, solid brick veneer homes throughout the established residential areas, and a large number of coastal holiday properties and newer builds closer to Mornington Beach and the foreshore. Jetblack Painting provides premium interior and exterior painting across Mornington, with a team that understands the suburb's coastal conditions and property diversity.
+
+Every Mornington project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's a full exterior repaint on a period weatherboard home, a fresh interior scheme for a holiday property, or a pre-sale repaint to maximise presentation, we deliver sharp lines, durable coatings and a clean result backed by our 5-year written workmanship guarantee.
+
+## Coastal and Period Home Painting in Mornington
+
+Mornington's proximity to Port Phillip Bay means foreshore and nearby properties are exposed to salt air that accelerates paint failure on surfaces that haven't been properly prepared. We counter this with thorough salt washing, flexible primers and premium salt-resistant topcoats — the same approach we use across the full Kingston and Bayside coastline through to Frankston and down the Peninsula.
+
+Mornington's heritage weatherboard homes near the Main Street precinct need careful attention: correct stripping or preparation of old paint layers, filling and flexing cracks, and the right primer for the timber substrate before any topcoat. We include full preparation in every quote with no hidden extras, so the finish lasts and the period character of the property is preserved.
+
 ## What we paint in Mornington
 
 ### Interior painting

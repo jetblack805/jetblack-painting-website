@@ -16,6 +16,18 @@ Doncaster's large established brick homes, modern rebuilt residences, rendered t
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Doncaster with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Doncaster and Doncaster East
+
+Doncaster is a popular family suburb in the City of Manningham, known for its elevated position, impressive family homes and the major Westfield Doncaster shopping precinct. Jetblack Painting provides premium interior and exterior painting across Doncaster and Doncaster East, from established brick family homes to the many modern rebuilds and architecturally-designed residences the area is known for.
+
+Every Doncaster project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's a full exterior repaint, a modern interior colour scheme or kitchen cabinetry, we deliver sharp lines, durable coatings and a clean result with minimal disruption to your home.
+
+## Modern Home and Family Residence Painting in Doncaster
+
+Doncaster has a strong mix of newer rendered homes, established brick residences and luxury rebuilds. We deliver crisp, modern finishes for contemporary homes and careful preparation and premium coatings for older brick properties — refreshing the look and protecting the surface for years ahead.
+
+Doncaster's elevated, exposed position means exteriors face real sun and weather load. We counter that with premium Dulux and Taubmans exterior systems designed for Melbourne's climate, properly applied over a thorough preparation — so the result lasts, not just looks good on day one.
+
 ## What we paint in Doncaster
 
 ### Interior painting

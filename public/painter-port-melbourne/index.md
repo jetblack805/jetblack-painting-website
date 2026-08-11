@@ -16,6 +16,14 @@ Port Melbourne's housing stock spans Victorian worker's cottages, Edwardian terr
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Port Melbourne with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Victorian Cottages & Heritage Homes
+
+Port Melbourne's grid of Victorian-era worker's cottages — many now immaculately renovated — are a major part of our work in the suburb. These properties typically feature timber weatherboard or brick construction, ornate timber fretwork, and front verandas that require careful preparation and premium coatings to withstand the coastal climate. We work within heritage overlay guidelines and can advise on period-appropriate colour palettes.
+
+## Converted Warehouses & Waterfront Apartments
+
+The Fishermans Bend and waterfront precincts have seen significant conversion of former industrial buildings into residential and mixed-use spaces. These often feature exposed brick, concrete render, and steel — all substrates requiring specialist primers and compatible topcoat systems. We carry $10M public liability insurance and provide a 5-year written workmanship guarantee on all painting work, giving owners of these high-value properties full confidence in the finish.
+
 ## What we paint in Port Melbourne
 
 ### Interior painting

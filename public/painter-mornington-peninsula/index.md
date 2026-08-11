@@ -16,6 +16,18 @@ The Mornington Peninsula features a wide range of properties, including contempo
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Mornington Peninsula with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving the Mornington Peninsula
+
+The Mornington Peninsula is one of Victoria's most beautiful coastal regions, from the bay beaches of Mornington and Mount Eliza to the holiday enclaves of Portsea, Sorrento and Blairgowrie. Jetblack Painting provides premium interior and exterior painting across the Peninsula, built for its coastal homes, beach houses and the salt-air conditions that come with them.
+
+Every Peninsula project comes with a clear written quote and thorough preparation from a professional, tidy team. From permanent homes to holiday houses and beachside residences, we deliver sharp lines, durable coatings and a clean result that protects your property against the coastal environment.
+
+## Coastal and Holiday Home Painting on the Peninsula
+
+Peninsula homes face intense sun, salt air and exposure to the elements, so preparation and coating choice are everything. We use thorough salt washing, flexible primers and premium salt-resistant topcoats so your Peninsula home's finish stays protected and looks sharp season after season.
+
+Weatherboard, timber-clad and rendered coastal homes are common across the Peninsula, and each needs the right care — bare timber priming, careful filling and sharp caulking against moisture. From beach houses to modern coastal builds, we match the system to the surface for a durable, flawless finish.
+
 ## What we paint in Mornington Peninsula
 
 ### Interior painting

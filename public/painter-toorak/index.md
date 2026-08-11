@@ -16,6 +16,18 @@ Toorak's grand Victorian mansions, period homes, and architecturally-designed lu
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Toorak with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Luxury House Painters for Toorak's Finest Homes
+
+Toorak is Melbourne's most prestigious address, and its homes demand a standard of finish to match. From the grand Italianate and Victorian mansions along St Georges Road to the architect-designed contemporary residences tucked behind the hedges of Grange Road and Lansell Road, Jetblack Painting delivers the meticulous, high-end workmanship that Toorak homeowners expect. Every project is treated as a showcase — because in Toorak, it is.
+
+We work discreetly and to exacting standards, whether that's a full repaint of a heritage estate, refined trim and joinery work, ornate ceiling and cornice restoration, or a flawless 2-pack finish on kitchen cabinetry and built-in furniture. Our quotes are detailed and transparent, and our team respects the privacy, security and cleanliness that high-value properties require.
+
+## Heritage Expertise and Premium Finishes in Toorak
+
+Many Toorak homes sit within heritage overlays, where colour schemes and preparation methods matter. We're experienced with period-correct palettes for Victorian and Edwardian façades, careful lead-paint-safe preparation on older homes, and the fine timber restoration that grand Toorak properties often need. The goal is a finish that honours the architecture rather than fighting it.
+
+For contemporary Toorak residences, we deliver the crisp, seamless modern finishes — deep matte walls, high-durability enamels and specialist coatings — that designer homes are built around. Whichever era your home belongs to, we use only premium materials and proven systems so the result looks immaculate and holds up for years.
+
 ## What we paint in Toorak
 
 ### Interior painting

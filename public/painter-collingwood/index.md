@@ -16,6 +16,14 @@ Collingwood's housing stock is predominantly Victorian and Edwardian — single-
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Collingwood with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Victorian Terraces & Heritage Properties
+
+Collingwood's Victorian terrace streetscapes are some of Melbourne's most intact — rows of single-fronted homes with original iron lacework, tessellated tile paths, and rendered or unpainted brick facades. These require surface preparation suited to original lime render and heritage mortar joints, and primer systems compatible with the flexibility and porosity of period construction. We're familiar with the heritage overlay zones that cover much of Collingwood and can advise on colour choices and any permit implications before work begins.
+
+## Converted Warehouses & Rental Properties
+
+Collingwood's former industrial buildings — particularly in the Hoddle Street and Langridge Street precincts — have been extensively converted to residential and mixed-use spaces. These often feature exposed brick, concrete, and steel substrates requiring specialist primer systems. For Collingwood's large rental stock, we offer efficient interior repaints with low-VOC paints, neutral palettes, and turnarounds suited to tenancy changeovers — with $10M public liability insurance and a 5-year written workmanship guarantee on all work.
+
 ## What we paint in Collingwood
 
 ### Interior painting

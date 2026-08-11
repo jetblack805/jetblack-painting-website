@@ -16,6 +16,14 @@ Carnegie's Californian bungalows, Edwardian and interwar homes, post-war brick h
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Carnegie with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Carnegie
+
+Carnegie is one of Glen Eira's busiest residential pockets, with period bungalows on the tree-lined streets and newer townhouse and apartment developments closer to Koornang Road and the station. Jetblack Painting provides premium interior and exterior painting across both — careful preparation, premium Dulux and Taubmans systems, and a clean, respectful approach on site. Every Carnegie project comes with a clear written quote so you know exactly what's included before we start.
+
+## Period Home & Townhouse Painting in Carnegie
+
+Painting a Carnegie bungalow well is mostly preparation. Original weatherboard and timber trims need bare-timber priming, filling and tight caulking; older render needs its cracks cut out and patched rather than skimmed over; and detailed cornices, picture rails and gables need to be cut in by hand. Newer rendered townhouses are a different job again, needing flexible coatings that move with the substrate. Whether it's a full exterior repaint, a room-by-room interior refresh or common-area work for an owners corporation, all work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Carnegie
 
 ### Interior painting

@@ -16,6 +16,18 @@ Carlton is famous for its 19th-century Victorian architecture, including ornate 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Carlton with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Heritage House Painters Serving Carlton
+
+Carlton is one of Melbourne's most historic inner-city suburbs, famous for its grand Victorian terraces, the Italian institution of Lygon Street and its proximity to the University of Melbourne. Jetblack Painting provides premium interior and exterior painting across Carlton and Carlton North, delivering the meticulous, heritage-sensitive work these iconic terraces demand.
+
+Every Carlton project comes with a clear written quote and thorough preparation from a careful, tidy team. Whether it's an ornate terrace façade, an interior refresh or investment-property repaint, we deliver sharp lines, durable coatings and a clean, respectful result in tight inner-city settings.
+
+## Victorian Terrace and Heritage Painting in Carlton
+
+Carlton's Victorian terraces carry cast-iron lacework, decorative render, parapets and fine timber detailing that reward meticulous work. We handle lead-paint-safe preparation on older surfaces, careful restoration of original features and heritage-appropriate colour schemes that suit the era and any overlay requirements.
+
+For Carlton's apartments and renovated interiors, we deliver clean, durable modern finishes using premium Dulux and Taubmans systems. Whatever the property, we work efficiently around inner-city access and parking constraints while keeping the standard high and the site tidy.
+
 ## What we paint in Carlton
 
 ### Interior painting

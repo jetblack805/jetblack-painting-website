@@ -16,6 +16,18 @@ Murrumbeena's Californian bungalows, interwar and post-war brick homes, renovate
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Murrumbeena with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Murrumbeena
+
+Murrumbeena is a friendly, leafy suburb in the City of Glen Eira, known for its Californian bungalows, interwar homes and the relaxed village feel around Neerim Road and Murrumbeena Station. Jetblack Painting provides premium interior and exterior painting across Murrumbeena, delivering careful preparation and a clean, durable finish on these established family homes.
+
+Every Murrumbeena project comes with a clear written quote and thorough preparation from a reliable, tidy local team. From full exterior repaints to interior refreshes and cabinetry, we deliver sharp lines, premium coatings and a professional result with minimal disruption to your household.
+
+## Bungalow and Family Home Painting in Murrumbeena
+
+Murrumbeena's Californian bungalows and interwar homes have characterful rendered surfaces, brick detailing and original timber that genuinely benefit from proper preparation and period-sympathetic colours. We fill and seal render cracks, prime bare timber properly and take care with colour choices that suit the home's era and the street — so the finish looks right and lasts for years.
+
+For Murrumbeena's renovated and contemporary homes, we deliver smooth, long-lasting interiors and weather-resistant exteriors using premium Dulux and Taubmans systems built for Melbourne's climate. Whatever the era, you get meticulous preparation and a finish designed to stand the test of time.
+
 ## What we paint in Murrumbeena
 
 ### Interior painting

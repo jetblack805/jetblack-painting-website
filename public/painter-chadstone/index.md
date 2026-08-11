@@ -16,6 +16,18 @@ Chadstone's residential stock spans post-war brick homes, 1960s–1980s residenc
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Chadstone with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Chadstone for Homes and Townhouses
+
+Chadstone is a well-connected suburb with a residential character shaped by decades of solid brick construction, now seeing increasing infill townhouse activity. The older brick homes make up the core of the suburb's housing stock and they're solid properties that reward proper maintenance — including paint systems applied over correct preparation rather than painted straight over failing existing coatings.
+
+Jetblack Painting works in Chadstone and the surrounding Monash council suburbs. We inspect every property before quoting, specify the correct preparation and product system for the substrates present, and back every job with a 5-year written guarantee. Call Jimmy on 0432 077 782 to arrange a free on-site inspection.
+
+## Interior and Exterior Painting for Chadstone Homes
+
+Interior painting in Chadstone covers all residential surface types — plaster and gyprock ceilings and walls, timber joinery, doors, built-ins and trims. We use premium Dulux and Taubmans products in the correct finish levels for each application, work efficiently to minimise household disruption, and clean up thoroughly on completion.
+
+Exterior repaints in Chadstone start with a proper surface inspection and assessment. We wash, patch, prime correctly and apply a premium exterior acrylic topcoat rated for Melbourne conditions. Every exterior job is backed by a 5-year written guarantee and covered by $10M public liability insurance.
+
 ## What we paint in Chadstone
 
 ### Interior painting

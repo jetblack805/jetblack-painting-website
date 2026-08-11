@@ -16,6 +16,14 @@ Seaford's weatherboard beach cottages, post-war brick homes, rendered contempora
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Seaford with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Seaford
+
+Seaford is a laid-back beachside suburb where weatherboard cottages, brick homes and modern builds sit close to one of the longest beaches on the bay. Jetblack Painting provides premium interior and exterior painting built for this coastal setting — protecting Seaford homes against salt air and sun while delivering a beautiful, lasting finish. We know the area well and every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site — whether it's a full exterior repaint, an interior colour refresh or a pre-sale makeover.
+
+## Coastal Protection and Weatherboard Expertise in Seaford
+
+Homes near the beach in Seaford face constant salt air, UV and damp that punish poorly prepared paintwork. We counter that with proper salt washing, flexible exterior primers and premium salt-resistant topcoats, so your Seaford home's finish holds up far longer than a standard repaint would. Weatherboard is common near the foreshore, and coastal timber needs careful bare-timber priming, filling and tight caulking to keep moisture out. Whether it's a heritage beach cottage, a post-war brick home or a rendered modern build, we tailor the system to the surface. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Seaford
 
 ### Interior painting

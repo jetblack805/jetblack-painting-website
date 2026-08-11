@@ -16,6 +16,18 @@ Highett's housing stock ranges from post-war brick homes and 1960s–1980s resid
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Highett with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in Highett for Brick Homes and Renovations
+
+Highett is a practical, well-connected suburb with a housing stock that rewards good maintenance. The older brick homes that make up much of the suburb's character require painters who understand how to handle face-brick and render properly — not every surface can be painted without preparation, and the wrong primer on the wrong substrate leads to adhesion failure within a year or two. We inspect every property before quoting and identify exactly what the surface needs before we touch a brush.
+
+Jetblack Painting works throughout Highett and the broader Bayside area. We use premium Dulux and Taubmans products, prepare every surface correctly, and back the job with a 5-year written guarantee. Call Jimmy on 0432 077 782 to book an inspection.
+
+## Interior and Exterior Painting for Highett Homes
+
+Interior painting in Highett typically covers a mix of original plaster in older homes and gyprock in renovated sections and extensions. We work with all surface types — ceilings, walls, timber joinery, built-ins, doors and trims — using the correct sheen for each application. We schedule around your household and leave the property clean on completion.
+
+Exterior repaints in Highett require attention to surface condition before anything else. We wash, patch, sand and prime before topcoating with a premium exterior acrylic or elastomeric system rated for Melbourne's UV and seasonal weather variation. Every exterior job is backed by our 5-year written guarantee.
+
 ## What we paint in Highett
 
 ### Interior painting

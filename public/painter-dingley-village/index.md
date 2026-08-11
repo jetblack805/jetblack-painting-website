@@ -16,6 +16,14 @@ Dingley Village's brick-veneer family homes, 1970s–80s houses, rendered and cl
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Dingley Village with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Dingley Village
+
+Dingley Village is a quiet, green, family-focused suburb in the City of Kingston, built largely around comfortable brick-veneer and clad homes on generous blocks. Jetblack Painting provides premium interior and exterior painting suited to this housing — refreshing tired facades, brightening interiors and getting homes presentation-ready for sale or lease. As a local painter based nearby in Mordialloc, we know the area's streets and homes well, and every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site.
+
+## Exterior, Interior and Roof Repaints in Dingley Village
+
+Exterior repaints in Dingley Village start with real preparation — pressure washing, scraping and sanding back failing coatings, priming bare timber, and sealing gaps — before durable weather-resistant topcoats go on. Inside, we stage the work room by room with low-odour premium paints so the home stays livable. For the suburb's tile and metal roofs, we clean, repair and prime before applying a fresh membrane coating that restores the look and protects the roof for years. All work across Dingley Village is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Dingley Village
 
 ### Interior painting

@@ -16,6 +16,18 @@ South Yarra's property mix ranges from classic Victorian and Edwardian terraces 
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in South Yarra with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Painters in South Yarra for Every Property Type
+
+South Yarra sits at the heart of Melbourne's inner southeast, bordered by the Yarra River, Toorak Road and Chapel Street. Its character streets are lined with heritage terraces, converted warehouses and architect-designed townhouses, while newer precincts have brought luxury apartment towers that need a completely different approach. Jetblack Painting works across all of these — bringing the same standard of meticulous preparation and premium finish to every job regardless of size.
+
+For South Yarra's period homes, that means careful stripping and preparation of original joinery, historically sympathetic colour palettes, and a genuine respect for the details that make these homes special — cornices, ceiling roses, timber sash windows, verandah ironwork. For contemporary apartments and townhouses, it means crisp edges, zero visible joins, and durable finishes that hold up in South Yarra's busy rental market.
+
+## Interior and Exterior Painting for South Yarra Homes
+
+Our South Yarra interior painting service covers everything from a single-room refresh to a complete multi-storey repaint, using premium Dulux and Taubmans products in flat, low-sheen, satin and semi-gloss finishes suited to each surface. We prepare properly — filling, sanding and priming — so the finish stays looking its best long after we've packed up.
+
+For South Yarra exteriors, proper preparation is even more important. Many homes in the area have existing paint systems built up over decades, and cutting corners on prep leads to peeling within a year or two. We wash, scrape, sand and prime before any topcoat goes on, and we use exterior-grade systems rated for Melbourne's variable climate. The result is a finish that protects the home and holds its appearance for years.
+
 ## What we paint in South Yarra
 
 ### Interior painting

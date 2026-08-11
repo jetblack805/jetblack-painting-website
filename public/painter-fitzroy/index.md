@@ -16,6 +16,14 @@ Fitzroy's housing stock is predominantly Victorian and Edwardian — single-fron
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Fitzroy with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Victorian Terraces & Heritage Properties
+
+Fitzroy's terrace houses are some of Melbourne's most intact Victorian streetscapes — rows of single-fronted and double-fronted homes with original iron lacework, tessellated tile paths, and rendered or unpainted brick facades. These properties require careful surface preparation — particularly for original lime render and heritage mortar joints — and primer and topcoat systems compatible with the movement and porosity of older substrates. We work within heritage overlay guidelines and can advise on colour choices appropriate for the streetscape context.
+
+## Rental & Investment Property Painting
+
+With Fitzroy's high rental density, interior repaints during tenancy changeovers are a core part of our work. We use low-VOC paints, work efficiently to minimise vacancy time, and apply neutral palettes that photograph well for rental listings and appeal to a broad tenant pool. For landlords with multiple properties, we offer consistent pricing and scheduling across a portfolio. We carry $10M public liability insurance and provide a 5-year written workmanship guarantee on all painting work.
+
 ## What we paint in Fitzroy
 
 ### Interior painting

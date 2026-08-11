@@ -16,6 +16,18 @@ Stonnington's Victorian and Edwardian mansions, Federation homes, Edwardian terr
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Stonnington with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Premium House Painters Across the City of Stonnington
+
+The City of Stonnington takes in some of Melbourne's most prestigious addresses — Toorak, Malvern, Armadale, South Yarra and Prahran — where grand period homes and high-end contemporary residences sit along leafy, heritage-listed streets. Jetblack Painting delivers the meticulous, high-end painting these homes demand, right across the Stonnington area.
+
+Every Stonnington project comes with a detailed written quote and thorough preparation from a discreet, professional team. From heritage mansions to designer interiors, townhouses and luxury apartments, we deliver refined finishes, durable coatings and a clean, respectful result on some of Melbourne's most valuable homes.
+
+## Heritage and Luxury Home Painting in Stonnington
+
+Stonnington's period homes carry fine detailing — decorative render, timber fretwork, cast-iron lacework and ornate ceilings — that reward meticulous work. We handle lead-paint-safe preparation, careful restoration of original features and heritage-sympathetic colour schemes so these valuable homes keep their character intact. Done properly, heritage painting protects both the aesthetic and the long-term value of the property.
+
+For Stonnington's contemporary and architect-designed residences, we deliver the seamless modern finishes designer homes are built around, using premium Dulux and Taubmans systems for durable interiors and weather-resistant exteriors. Whichever era the home belongs to, the standard stays the same: immaculate preparation and a finish that holds up for years.
+
 ## What we paint in Stonnington
 
 ### Interior painting

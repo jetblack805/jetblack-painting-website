@@ -16,6 +16,18 @@ Hampton's weatherboard cottages, period homes, modern beach residences and rende
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Hampton with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Hampton and Hampton East
+
+Hampton is a sought-after Bayside suburb where classic weatherboard cottages, period homes and modern beachside residences sit just back from the water around Hampton Street and the beach. Jetblack Painting provides premium interior and exterior painting built for this coastal setting — protecting Hampton homes against salt air and sun while delivering a beautiful, lasting finish.
+
+As a local Bayside painter based nearby in Mordialloc, we know Hampton's homes and conditions well. Every project comes with a clear written quote, thorough preparation and a clean, respectful approach on site — whether it's a full exterior repaint, an interior colour refresh or a pre-sale makeover to get the property presentation-ready.
+
+## Coastal Protection and Weatherboard Expertise in Hampton
+
+Homes close to the bay in Hampton face constant salt air, UV and damp winters that punish poorly prepared paintwork. We counter that with proper salt washing, flexible exterior primers and premium salt-resistant topcoats, so your Hampton home's finish holds up far longer than a standard repaint would in this environment.
+
+Weatherboard is a Hampton staple, and coastal timber needs particular attention — bare timber priming, careful filling and tight caulking to keep moisture out of the paint film. Whether it's a heritage weatherboard cottage, a rendered modern build or a Colorbond-and-render new home, we tailor the paint system to the surface for a durable, flawless result.
+
 ## What we paint in Hampton
 
 ### Interior painting

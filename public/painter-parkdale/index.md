@@ -16,6 +16,18 @@ Parkdale has a distinctive mix of period bungalows, weatherboard beach houses, b
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Parkdale with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Based Next Door to Parkdale
+
+Jetblack Painting is based in Mordialloc — literally the next suburb along the bay from Parkdale. That means fast response times, no call-out fees and a team that genuinely knows the local area. Owner Jimmy Demirci has been painting homes in Parkdale and across Bayside since 2011, and he personally visits every job to assess the work and provide a written quote.
+
+We've worked on all types of Parkdale properties — from the classic weatherboard beach houses on the streets close to the foreshore, to the brick veneer family homes further back from the beach and the more modern townhouse developments. Whatever your home needs, we've seen it before and we know how to do it right.
+
+## Coastal Painting Protection for Parkdale Homes
+
+Homes near Port Phillip Bay face a harsher environment than inland properties. Salt air, high UV and damp coastal winters accelerate paint degradation — peeling, blistering and fading are all common on homes that weren't painted with the right preparation or the right products. We counter this with a thorough salt-washing process, flexible primers, and premium topcoats specifically rated for coastal exposure.
+
+All our work comes with a 5-year written workmanship guarantee and is covered by $10M public liability insurance. If something isn't right, we'll fix it — that's Jimmy's personal promise on every Parkdale job. Call 0432 077 782 for your free written quote.
+
 ## What we paint in Parkdale
 
 ### Interior painting

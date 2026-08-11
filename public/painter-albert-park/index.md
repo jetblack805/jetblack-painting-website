@@ -16,6 +16,14 @@ Albert Park's housing stock is predominantly Victorian and Edwardian — single-
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Albert Park with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Victorian Terraces & Heritage Overlay Painting
+
+Most of Albert Park's terrace houses and cottages fall within a Heritage Overlay — meaning external works, including repainting to a significantly different colour, may require a planning permit. We navigate this routinely and can advise on what's likely to require approval versus what doesn't. For the painting itself, these properties demand thorough preparation of the original render, mortar, and timber substrates, and we use premium exterior systems rated for both adhesion and flexibility on these older constructions.
+
+## Pre-Sale Painting in Albert Park
+
+Albert Park's property market is consistently strong, and a well-executed repaint is one of the highest-return pre-sale investments available. We work closely with vendors, agents, and stylists to deliver neutral, character-appropriate finishes on a timeline that suits the campaign. Interior repaints in soft whites and warm neutrals, combined with a crisp exterior refresh, reliably lift presentation — and we carry $10M public liability insurance and provide a 5-year written workmanship guarantee, so buyers and agents can quote the work with confidence.
+
 ## What we paint in Albert Park
 
 ### Interior painting

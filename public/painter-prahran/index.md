@@ -16,6 +16,18 @@ Prahran and Windsor's housing spans Victorian terraces and Edwardian cottages in
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Prahran with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Prahran and Windsor
+
+Prahran and Windsor are densely housed inner suburbs with a diverse mix of Victorian terraces, Art Deco apartment blocks and modern builds, spread across the streets between Chapel Street, High Street and Commercial Road. Jetblack Painting provides premium interior and exterior painting across Prahran and Windsor, with a team experienced in the specific requirements of terrace painting, period apartment interiors and the practical realities of working in high-density inner-city streets.
+
+Every Prahran project comes with a clear written quote and thorough preparation from a professional, tidy team. Whether it's an exterior repaint on a Victorian terrace row, an interior refresh in a high-ceiling Edwardian cottage, or a landlord repaint between tenancies in an Art Deco flat, we deliver sharp lines, durable coatings and a clean result backed by our 5-year written workmanship guarantee.
+
+## Terrace, Apartment and Period Home Painting in Prahran
+
+Victorian terraces in Prahran typically have rendered brick exteriors that need thorough preparation — washing, crack filling and flexible primer — before any topcoat goes on. The ironwork detailing on many terrace facades needs careful masking and correct metal primer to hold up long-term. Interior spaces with high ceilings, original cornices and decorative plasterwork need careful cut-in work to maintain the period character.
+
+Art Deco apartment blocks and flats in Prahran often need interior refreshes between tenancies. We select durable, washable low-sheen products suited to rental conditions, work efficiently to minimise vacancy time, and leave a clean result that holds up to regular cleaning and tenant use. For pre-sale work, we can advise on neutral colour palettes that present well at inspection.
+
 ## What we paint in Prahran
 
 ### Interior painting

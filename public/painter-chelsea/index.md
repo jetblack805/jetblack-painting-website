@@ -16,6 +16,18 @@ Chelsea's properties range from original weatherboard beach shacks and Californi
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Chelsea with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## Local Painters Serving Chelsea — Based 5 Minutes Away
+
+When you hire Jetblack Painting in Chelsea, you're getting a team that's genuinely local. Our base in Mordialloc means we can visit your property quickly for a quote, get on site promptly when the job starts, and be on hand if anything needs attention. Owner Jimmy Demirci visits every Chelsea job personally — there's no call centre, no unknown subcontractors, just Jimmy and his small team.
+
+We've been painting homes along this stretch of the bay since 2011. From the quiet streets near the Chelsea beach to the homes backing onto the Nepean Highway corridor, we know the local property types and what they need. Whether it's a complete exterior restoration or a fresh interior repaint, we deliver sharp, durable results every time.
+
+## Protecting Chelsea Homes from the Coastal Environment
+
+Homes near Port Phillip Bay face conditions that inland properties don't — salt air deposits, intense UV and moisture from the bay all attack paintwork far more aggressively. We see the results of poor preparation on Chelsea homes regularly: peeling weatherboards, chalking render, rust streaks from metal trim. Our approach is built specifically to prevent this.
+
+Every Chelsea exterior job starts with thorough pressure washing to strip salt deposits, followed by careful filling and sanding of any damaged surfaces, bare-timber priming, flexible caulking of all joints, and premium topcoats from Dulux and Taubmans rated for coastal exposure. The extra preparation adds time — but it's what makes the difference between a finish that lasts 3 years and one that lasts 10. All work comes with a 5-year written workmanship guarantee and $10M public liability insurance. Call 0432 077 782 for your free written quote.
+
 ## What we paint in Chelsea
 
 ### Interior painting

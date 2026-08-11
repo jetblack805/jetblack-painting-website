@@ -16,6 +16,14 @@ Endeavour Hills's 1980s and 90s brick veneer family homes, split-level houses on
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Endeavour Hills with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
+## House Painters Serving Endeavour Hills
+
+Endeavour Hills is an established family suburb in the City of Casey, built across hilly ground with large brick veneer homes and split-level designs on generous blocks. Most of that housing dates from the 1980s and 90s, which puts it squarely in repaint territory. Jetblack Painting provides premium interior and exterior painting across Endeavour Hills, with access and preparation planned properly for the terrain and a clear written quote before anything starts.
+
+## Split-Level Exteriors & Timber Restoration in Endeavour Hills
+
+The exterior paintwork that fails first on a Endeavour Hills home is the timber — eaves, fascias, barge boards and window frames, especially on the sun-facing and weather-facing elevations. We scrape those back to a sound edge, treat and prime bare timber with a penetrating primer, and replace rotten sections rather than filling over them, then finish with durable exterior systems built for Melbourne's UV and winter damp. On split-level homes and sloping blocks we plan the access and staging up front so high walls and double-height gables are painted safely and properly, not rushed from a ladder. All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+
 ## What we paint in Endeavour Hills
 
 ### Interior painting

@@ -51,7 +51,7 @@ Fast-turnaround repainting to get Wheelers Hill properties market-ready — dura
 Explore nearby suburb pages for neighbouring areas around Wheelers Hill.
 
 - [Glen Waverley](/painter-glen-waverley/)
-- [Keysborough](/painter-keysborough/)
+- [Keysborough](/keysborough-painters/)
 - [Dandenong](/painter-dandenong/)
 - [Kingston](/painter-kingston/)
 - [Moorabbin](/painter-moorabbin/)

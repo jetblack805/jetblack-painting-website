@@ -24,7 +24,7 @@ export default function WheelersHillPainters() {
       description="Premium house painters in Wheelers Hill — rendered family homes on elevated blocks. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Glen Waverley", link: "/painter-glen-waverley" },
-        { name: "Keysborough", link: "/painter-keysborough" },
+        { name: "Keysborough", link: "/keysborough-painters" },
         { name: "Dandenong", link: "/painter-dandenong" },
         { name: "Kingston", link: "/painter-kingston" },
         { name: "Moorabbin", link: "/painter-moorabbin" },

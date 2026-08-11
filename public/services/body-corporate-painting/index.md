@@ -32,6 +32,24 @@ Body corporate painting keeps apartment blocks, unit complexes and townhouse dev
 
 Committees and managers need clarity and confidence, so every project comes with a detailed written scope, transparent pricing, $10 million public liability insurance and a clear schedule — delivered with minimal disruption to residents and backed by a 5-year workmanship guarantee.
 
+## How the committee approval process actually works
+
+A body corporate can't approve a painting job the way a homeowner approves one. A committee needs something they can put in front of owners and defend — a scope specific enough that nobody can reasonably ask "but what does that actually cover," a price that doesn't move once the vote is cast, and proof of insurance that satisfies whatever the owners corporation's rules require. We write the quote for that meeting, not just for the job.
+
+That means breaking the scope down by area rather than quoting the building as one lump figure — lobby, stairwells, façade, car park — so a committee weighing priorities against a budget can see where the cost actually sits, and can stage the work or split it across financial years if that's how the money needs to work. It also means the insurance documentation is ready to go before it's asked for, not chased down after the meeting once someone raises the question.
+
+## Staging work around an occupied building
+
+Closing a whole building down for the length of a repaint isn't realistic when people live and work in it, so staging is the default approach on strata property, not a special request. Most projects run wing by wing or level by level, which keeps at least one entry, one stairwell and the car park accessible at any given time rather than forcing every resident through a single remaining exit.
+
+For complexes with more than one building, that same logic extends across the site — the works can be quoted and run as one continuous staged program, or split building by building against separate budget approvals, whichever suits how the committee wants to fund it. Either way, the schedule is set out clearly enough in advance that the committee can circulate it to owners and tenants before scaffolding or access equipment shows up, not after.
+
+## Access equipment for multi-storey and façade work
+
+Common property access equipment gets chosen for the building, not defaulted to whatever's easiest to book. A three-storey walk-up with a narrow driveway rules out a lot of what would work on an open site with clear boom reach, and scaffolding that makes sense on a low-rise façade isn't practical — or affordable — run up a high-rise tower. Scaffolding, elevated work platforms and scissor lifts each suit different heights, façade shapes and site access, and the right one is worked out at the quote stage, not improvised on the day.
+
+That assessment happens before the price is finalised, because access equipment is one of the biggest cost variables in a multi-storey repaint — getting it wrong either blows the budget or means turning up on site to find the booked equipment can't actually reach the work. We also account for anything the owners corporation's own bylaws specify about common property access, so there's no last-minute conflict between the equipment plan and what the strata rules actually allow.
+
 ## Body Corporate Painting FAQs
 
 ### Do you work with owners corporations and strata managers?
@@ -49,6 +67,22 @@ We plan the work around residents and tenants — keeping access ways safe and o
 ### Are you insured for body corporate and strata work?
 
 Absolutely. Jetblack Painting carries $10 million public liability insurance and follows proper site safety and access procedures. We're happy to provide insurance certificates, safe work documentation and detailed scopes for committees and building managers before work begins.
+
+### What does a committee actually need to approve the work?
+
+A detailed written scope broken down by area, a clear price, and our insurance documentation — that's what lets a committee move from discussion to a decision without a second round of questions. We prepare the quote so it can go straight into an AGM or committee meeting agenda, itemised enough that owners can see exactly what's included before they vote on it.
+
+### Can the work be staged across a large building or multiple buildings?
+
+Yes. Staging is standard on occupied strata property, not an exception — we typically work wing by wing or level by level so entries, stairwells and car park access stay usable throughout, rather than closing the whole building down for the length of the project. For multi-building complexes, we can quote the works as a single staged program or building by building, whichever suits the committee's budget and timing.
+
+### What access equipment do you use for multi-storey buildings?
+
+It depends on the building's height and site constraints — scaffolding, elevated work platforms or scissor lifts, chosen for what the specific façade and access conditions actually need rather than a default option. We factor site access, boom reach and any strata bylaws around common property access into the quote up front, so there's no surprise equipment cost once work starts.
+
+### How do you communicate with residents during the project?
+
+Through the committee or strata manager, with a schedule they can circulate to owners and tenants ahead of time — which areas are affected and when, so residents aren't caught off guard by scaffolding or a closed stairwell. Low-odour products are used as standard in occupied common areas, and access ways are kept safe and usable throughout rather than closed off entirely.
 
 ## Suburbs we service
 

@@ -54,9 +54,13 @@
   <meta name="twitter:description" content="Melbourne painters for interior, exterior, commercial, roof and kitchen cabinet painting." />
   <meta name="twitter:image" content="https://jetblackpainting.com/og-image.jpg" />
 
-  <!-- Preload LCP hero image so browser fetches it before JS runs -->
+  <!-- Preload LCP hero image so browser fetches it before JS runs.
+       WebP re-encode of the original JPEG: 75,006 -> 37,110 bytes (50.5%
+       smaller) at the same 1206x500, quality 0.82 -- every other image on the
+       site is already WebP-only with no JPEG fallback, so this brings the
+       site's single highest-priority resource in line with that. -->
   <link rel="preload" as="image"
-    href="/hero-poolhouse.jpg"
+    href="/hero-poolhouse.webp"
     fetchpriority="high" />
 
   <!-- GA loaded after page is interactive so it doesn't compete with LCP -->
@@ -334,7 +338,7 @@
     via #root) naturally covers this once the app mounts.
   -->
   <div id="hero-static" style="position:fixed;inset:0;z-index:0;background:#060607;overflow:hidden;">
-    <img src="/hero-poolhouse.jpg" alt="" width="1206" height="500"
+    <img src="/hero-poolhouse.webp" alt="" width="1206" height="500"
          fetchpriority="high" decoding="sync"
          style="width:100%;height:100%;object-fit:cover;object-position:center 55%;">
     <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,7,0.97) 0%,rgba(6,6,7,0.72) 22%,rgba(6,6,7,0.28) 48%,rgba(6,6,7,0.08) 70%,rgba(6,6,7,0.25) 100%)"></div>

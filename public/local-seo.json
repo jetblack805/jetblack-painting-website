@@ -101,7 +101,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Interior Painting Melbourne",
-          "url": "https://jetblackpainting.com/services/interior-painting"
+          "url": "https://jetblackpainting.com/services/interior-painting/"
         }
       },
       {
@@ -109,7 +109,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Exterior Painting Melbourne",
-          "url": "https://jetblackpainting.com/services/exterior-painting"
+          "url": "https://jetblackpainting.com/services/exterior-painting/"
         }
       },
       {
@@ -117,7 +117,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Commercial Painting Melbourne",
-          "url": "https://jetblackpainting.com/services/commercial-painting"
+          "url": "https://jetblackpainting.com/services/commercial-painting/"
         }
       },
       {
@@ -125,7 +125,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Roof Painting Melbourne",
-          "url": "https://jetblackpainting.com/services/roof-painting"
+          "url": "https://jetblackpainting.com/services/roof-painting/"
         }
       },
       {
@@ -133,7 +133,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Kitchen Cabinet Resurfacing Melbourne",
-          "url": "https://jetblackpainting.com/services/kitchen-cabinet-resurfacing"
+          "url": "https://jetblackpainting.com/services/kitchen-cabinet-resurfacing/"
         }
       },
       {
@@ -141,7 +141,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Pre-Sale Property Painting Melbourne",
-          "url": "https://jetblackpainting.com/services/pre-sale-property-painting"
+          "url": "https://jetblackpainting.com/services/real-estate-painting/"
         }
       },
       {
@@ -149,7 +149,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Rental Property Painting Melbourne",
-          "url": "https://jetblackpainting.com/services/rental-property-painting"
+          "url": "https://jetblackpainting.com/services/real-estate-painting/"
         }
       },
       {
@@ -157,7 +157,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Roof and Fence Painting Melbourne",
-          "url": "https://jetblackpainting.com/services/roof-fence-painting"
+          "url": "https://jetblackpainting.com/services/roof-fence-painting/"
         }
       }
     ]

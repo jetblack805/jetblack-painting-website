@@ -153,6 +153,15 @@ function extractLocalContent(source, suburb) {
   return blocks;
 }
 
+// Deliberately omits aggregateRating. This function backs the LocalBusiness
+// block on all 96 suburb pages, every one sharing the same "#business" @id as
+// the homepage's LocalBusiness entity. Repeating the rating on every one of
+// those pages is what triggered GSC's "Review has multiple aggregate
+// ratings" critical structured-data error (2026-08-11) — Google reads dozens
+// of pages independently asserting a rating for the same entity as duplicate,
+// conflicting signals, not confirmation. The rating is declared exactly once,
+// on the homepage (client/src/pages/Home.tsx), which is the canonical page
+// for this @id.
 function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
@@ -165,13 +174,6 @@ function localBusinessSchema() {
     "email": EMAIL,
     "url": SITE_URL,
     "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": AGGREGATE_RATING.ratingValue?.toString() || "5.0",
-      "reviewCount": AGGREGATE_RATING.reviewCount?.toString() || "14",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "sameAs": [
       "https://www.instagram.com/jetblack_painting",
       "https://www.facebook.com/jetblackpainting",

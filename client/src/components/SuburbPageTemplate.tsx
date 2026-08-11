@@ -166,6 +166,13 @@ export default function SuburbPageTemplate({
   const extraSchemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
   const breadcrumbId = `${canonical}#breadcrumb`;
 
+  // Deliberately omits aggregateRating. This same "#business" @id is declared
+  // once, with a rating, on the homepage (Home.tsx). Every one of the 96
+  // suburb pages repeating that rating for the identical entity is what
+  // triggered GSC's "Review has multiple aggregate ratings" critical
+  // structured-data error (2026-08-11) — Google treats dozens of independent
+  // pages asserting a rating for one business as duplicate/conflicting
+  // signals, not corroboration.
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -177,7 +184,6 @@ export default function SuburbPageTemplate({
     telephone: siteConfig.phoneSms || "+61432077782",
     email: siteConfig.email || "jimmy@jetblackpainting.com",
     priceRange: "$$",
-    aggregateRating: siteConfig.aggregateRating ? { "@type": "AggregateRating", ratingValue: String(siteConfig.aggregateRating.ratingValue), reviewCount: String(siteConfig.aggregateRating.reviewCount), bestRating: "5" } : { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "14", bestRating: "5" } ,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Mordialloc",

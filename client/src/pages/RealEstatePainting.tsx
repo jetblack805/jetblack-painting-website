@@ -33,6 +33,10 @@ export default function RealEstatePainting() {
     { name: "Mordialloc", link: "/painter-mordialloc" },
   ];
 
+  /* First sentence of every answer is the answer, so it survives being
+     quoted in isolation by an AI assistant or Google's FAQ treatment.
+     Feeds both the visible list and the FAQPage schema; mirrored in
+     scripts/generate-static-pages.mjs — edit both or the layers drift. */
   const faqs = [
     {
       question: "Do you work directly with real estate agents and vendors?",
@@ -53,6 +57,26 @@ export default function RealEstatePainting() {
       question: "Is painting worth it before selling a property?",
       answer:
         "In most cases yes. A professional repaint is one of the highest-return improvements before a sale — it addresses scuffs, dated colours and tired façades that buyers otherwise price against you, and lifts the quality of listing photography and inspections.",
+    },
+    {
+      question: "When in the campaign should painting happen?",
+      answer:
+        "Before styling and before photography — painting is always the first trade on site, not the last. We work backwards from your photography date so paint is finished, dry and ventilated with time to spare for the stylist to move furniture in, rather than painting around styled rooms or rushing the final coat the night before a shoot.",
+    },
+    {
+      question: "Should I paint a feature wall or keep it neutral for a sale?",
+      answer:
+        "Keep it neutral for a sale. A bold feature wall reads as a personal choice a buyer has to mentally undo before they can picture their own furniture in the room, which narrows your buyer pool rather than widening it. Neutral, broad-appeal palettes photograph more evenly under listing lighting too, which is a separate reason they're the default for a sale campaign.",
+    },
+    {
+      question: "Can you paint between a tenant moving out and a new lease starting?",
+      answer:
+        "Yes, and vacancy turnarounds are a regular part of our rental and investment work. We coordinate directly with property managers on the exact window between the outgoing and incoming tenant, and use durable, washable finishes suited to rental wear rather than a presentation-only finish, since the property needs to hold up through the next tenancy, not just the next inspection.",
+    },
+    {
+      question: "Does a patchy DIY touch-up look better or worse than not painting at all?",
+      answer:
+        "Often worse. A touch-up in slightly the wrong colour or sheen shows up under listing photography and open-home lighting as clearly as an unpainted mark does, and can read to a buyer as a sign of deferred maintenance rather than care. A full, even repaint of the affected walls or room is usually the safer call before a campaign starts.",
     },
   ];
 
@@ -189,6 +213,71 @@ export default function RealEstatePainting() {
               <Link href="/services/interior-painting" className="bg-[#131316] px-4 py-2 rounded-lg border border-[#222227] text-[#EDEDEF] hover:border-[#E9BE6C] hover:text-[#E9BE6C] transition-all font-medium">Interior Painting</Link>
               <Link href="/services/exterior-painting" className="bg-[#131316] px-4 py-2 rounded-lg border border-[#222227] text-[#EDEDEF] hover:border-[#E9BE6C] hover:text-[#E9BE6C] transition-all font-medium">Exterior Painting</Link>
             </div>
+          </motion.div>
+
+          {/* Pillar-depth sections. Every paragraph is duplicated verbatim into
+              the `extraSections` for this route in
+              scripts/generate-static-pages.mjs — crawlers that don't run JS
+              read that copy, so both must be edited together or the layers
+              drift. */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">How a Repaint Fits Into the Campaign Timeline</h2>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              Painting is always the first trade on site before a campaign, not the last. We work backwards from the photography date: the property needs to be fully painted, dry and properly ventilated with days to spare, so the stylist can move furniture in without working around wet paint or a lingering smell, and so the final coat isn't rushed the night before a shoot to hit a deadline it was never going to comfortably meet.
+            </p>
+            <p className="text-[#B4B4B8] leading-relaxed">
+              That sequencing matters more than people expect. A property painted after styling means working around furniture, rugs and staged decor — slower, riskier for the stylist's pieces, and harder to get a clean, even finish into corners and skirting that are now partly obstructed. Painting first keeps every trade that follows moving on schedule instead of waiting on a coat of paint that should have been finished a week earlier.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Why Paint Condition Affects What Buyers Offer</h2>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              Scuffed walls, dated colours and a tired façade don't just look worse in photos — they get priced against you at the negotiation table. Buyers read visible wear as a proxy for how well the rest of the property has been maintained, whether or not that's actually true, and a flat, even repaint removes that signal before it can work against the sale price.
+            </p>
+            <p className="text-[#B4B4B8] leading-relaxed">
+              A patchy DIY touch-up can do more damage than no touch-up at all. A slightly-off colour match or a different sheen catches the eye under listing photography and open-home lighting just as clearly as the original mark did, and reads to a buyer as a sign of corners cut rather than care taken. Where a wall or room has visible marks going into a campaign, a full, even repaint of the affected area is almost always the safer call.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Choosing Colours That Sell, Not Just Colours You'd Live With</h2>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              A bold feature wall is a personal choice, and every personal choice a buyer has to mentally undo is one more reason they picture someone else's home instead of their own. Warm whites and soft, broad-appeal neutrals let the widest range of buyers imagine their own furniture in the room, which is the entire job of a listing photo and an open home — removing friction between the buyer and the sale, not adding character for its own sake.
+            </p>
+            <p className="text-[#B4B4B8] leading-relaxed">
+              Neutral palettes also photograph more evenly. Strong or dark colours shift under different light sources and camera settings in a way flat whites and soft neutrals don't, which is part of why they're the default for listing photography specifically, separate from the buyer-appeal argument. We choose the scheme to suit the property's own light and finishes, not a single stock colour applied to every listing regardless of the home.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Rental Turnarounds Between Tenants</h2>
+            <p className="text-[#B4B4B8] mb-4 leading-relaxed">
+              The window between an outgoing tenant leaving and a new lease starting is usually tight, and every day it runs into is a day of vacant rent. We coordinate directly with property managers on the exact dates so the repaint fits the vacancy period rather than extending it, and we prioritise durable, washable finishes over a presentation-only one, because a rental property has to hold up through the next tenancy, not just look good for the next inspection.
+            </p>
+            <p className="text-[#B4B4B8] leading-relaxed">
+              Repainting on a regular cycle rather than only when damage becomes visible protects the asset and reduces disputes at the end of a tenancy — it's easier to assess fair wear and tear against a recent, known paint job than one nobody can date. For landlords managing several properties, we can coordinate turnarounds across a portfolio rather than treating each one as a one-off job.
+            </p>
           </motion.div>
 
           <MidPageCTA heading="Get your free Real Estate Painting quote today" />

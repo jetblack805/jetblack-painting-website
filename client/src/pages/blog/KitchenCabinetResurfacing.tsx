@@ -41,7 +41,7 @@ export default function KitchenCabinetResurfacing() {
             "Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting.",
           canonical: "https://jetblackpainting.com/blog/kitchen-cabinet-resurfacing-vs-replacement/",
           datePublished: "2026-06-23",
-          dateModified: "2026-07-26",
+          dateModified: "2026-08-13",
           articleSection: "Kitchen",
           faqs,
         })}

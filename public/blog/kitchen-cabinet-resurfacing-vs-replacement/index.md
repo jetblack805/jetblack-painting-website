@@ -4,27 +4,38 @@
 
 # Kitchen Cabinet Resurfacing vs Replacement
 
-If your kitchen layout still works, resurfacing cabinet doors and panels can often deliver the visual impact of a renovation without the cost and downtime of full replacement.
+Your kitchen cabinets are looking tired, but does that mean you need a $30,000+ kitchen renovation? Not necessarily. Kitchen cabinet resurfacing can transform your kitchen for a fraction of the cost — and Jetblack Painting specialises in premium 2-pack finishes that look brand new.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 
-## When resurfacing makes sense
+## What Is Kitchen Cabinet Resurfacing?
 
-Resurfacing is ideal when cabinet boxes are structurally sound and the goal is to modernise the finish, colour, or overall presentation of the kitchen.
+Cabinet resurfacing (also called refinishing or respraying) involves stripping the existing finish from your cabinet doors and frames, then applying a new professional-grade coating. At Jetblack Painting, we use 2-pack polyurethane — the same finish used on luxury new kitchens — to deliver a factory-quality result.
 
-It is typically faster, less disruptive, and more cost-effective than a full replacement, especially for rental refreshes or value-focused home improvements.
+## Cost Comparison
 
-## When replacement is the better option
+Cabinet resurfacing typically costs $3,500 to $8,000 and takes 3 to 5 days, with minimal disruption to your household. A full kitchen renovation typically costs $25,000 to $60,000+ and takes 4 to 8 weeks, with major disruption.
 
-Replacement may be necessary if the cabinetry has water damage, poor layout, failing hinges or hardware throughout, or the storage design no longer suits how the kitchen is used.
+That's a saving of up to 85% compared to a full renovation, with results that look just as good.
 
-A full replacement also makes more sense when major plumbing, electrical, or benchtop changes are already planned.
+## When to Resurface vs Replace
 
-## Balancing finish quality, budget, and downtime
+Choose resurfacing when your cabinet boxes (frames) are structurally sound, you're happy with your kitchen layout, you want to change the colour or finish, your cabinets are solid timber or quality MDF, and you want a quick turnaround with minimal disruption.
 
-High-quality resurfacing can deliver a premium finish when the prep and coating system are done properly, especially with 2-pack or hard-wearing cabinet coatings.
+Choose replacement when cabinet boxes are water-damaged or warped, you want to completely change the layout, your cabinets are made from cheap particleboard that's deteriorating, or you need different sized cabinets for new appliances.
 
-The best choice comes down to the condition of the existing kitchen, the renovation budget, and how quickly you need the space back in service.
+## Our 2-Pack Cabinet Resurfacing Process
+
+1. **Consultation & colour selection** — We visit your home and help you choose the perfect colour and finish.
+2. **Door removal** — All doors and drawer fronts are carefully removed and labelled.
+3. **Surface preparation** — Thorough sanding, cleaning, and priming of all surfaces.
+4. **2-pack application** — Professional spray application of 2-pack polyurethane in our controlled environment.
+5. **Reinstallation** — Doors are rehung with new hardware if requested.
+6. **Final inspection** — We ensure every surface is perfect before sign-off.
+
+## Popular Cabinet Colours in Melbourne
+
+The most requested cabinet colours across our projects in Toorak, Brighton, and Malvern are white or bright white — timeless, clean, and makes kitchens feel larger; charcoal or dark grey — modern and sophisticated, especially for island benches; navy blue — a bold statement colour for feature cabinetry; sage green — on-trend and pairs beautifully with timber benchtops; and two-tone schemes — light uppers with dark lowers for visual interest.
 
 ## Frequently Asked Questions
 

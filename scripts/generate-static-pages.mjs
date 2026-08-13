@@ -1878,6 +1878,18 @@ const articlePages = [
         ],
       },
       {
+        heading: "The Preparation Process",
+        type: "steps",
+        items: [
+          { title: "Wash the surface", body: "Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber." },
+          { title: "Scrape and sand back failing paint", body: "Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it." },
+          { title: "Repair damaged timber", body: "Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two." },
+          { title: "Prime all bare timber", body: "Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes." },
+          { title: "Fill and caulk", body: "Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves." },
+          { title: "Apply two topcoats", body: "Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain." },
+        ],
+      },
+      {
         heading: "Choosing the right paint for Melbourne weatherboards",
         paragraphs: [
           "For most Melbourne weatherboards a flexible water-based acrylic exterior system — such as Dulux Weathershield or Taubmans All Weather — over the appropriate primer is the right choice. Coastal homes benefit from the more heavily weather-resistant options in those ranges, because salt air and reflected UV are harsher than inland conditions.",
@@ -2004,7 +2016,7 @@ const articleMeta = {
   "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-08-13", section: "Kitchen" },
   "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
-  "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-07-26", section: "Guide" },
+  "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
 };
 
 for (const article of articlePages) {

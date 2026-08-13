@@ -41,9 +41,15 @@ export default function ProcessSection() {
           ref={header.ref}
           className={`reveal up ${header.visible ? "visible" : ""}`}
         >
-          <span className="lux-eyebrow text-[#B0863C]">Our Process</span>
+          {/* #85622A, not the site's usual #B0863C gold: on this section's
+              #F5F1E8 cream background #B0863C only hits ~2.95:1 contrast,
+              failing WCAG AA (needs 3:1 minimum). #85622A is the same bronze
+              hue darkened to ~4.93:1. The decorative timeline rule/dots
+              below stay #B0863C — they're not text, so the audit doesn't
+              flag them, and it's the same accent used site-wide. */}
+          <span className="lux-eyebrow text-[#85622A]">Our Process</span>
           <h2 className="text-3xl lg:text-4xl text-[#1A1A1A]">
-            Six steps. <span className="text-[#B0863C]">Zero surprises.</span>
+            Six steps. <span className="text-[#85622A]">Zero surprises.</span>
           </h2>
         </div>
 
@@ -56,7 +62,7 @@ export default function ProcessSection() {
                 className={`absolute top-0 left-0 w-[11px] h-[11px] rounded-full border-[1.5px] border-[#B0863C] ${idx === 0 ? "bg-[#B0863C]" : "bg-[#F5F1E8]"}`}
                 aria-hidden="true"
               />
-              <div className="text-xs text-[#B0863C] mb-2" style={{ fontFamily: "Georgia, serif" }}>
+              <div className="text-xs text-[#85622A] mb-2" style={{ fontFamily: "Georgia, serif" }}>
                 {String(idx + 1).padStart(2, "0")}
               </div>
               <h3 className="text-[12px] font-bold tracking-[0.1em] uppercase text-[#1A1A1A] mb-2" style={{ fontFamily: "system-ui, sans-serif" }}>

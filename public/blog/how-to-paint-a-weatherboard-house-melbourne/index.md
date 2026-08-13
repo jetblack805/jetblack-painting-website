@@ -14,6 +14,15 @@ Timber moves — it swells when damp and shrinks when dry, and in Melbourne it o
 
 Water is the second difference. Every board overlap, joint, nail hole and window reveal is a potential entry point, and once water gets behind the paint film it lifts the coating from underneath. That is why weatherboard peels in sheets rather than fading evenly.
 
+## The Preparation Process
+
+1. **Wash the surface** — Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber.
+2. **Scrape and sand back failing paint** — Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it.
+3. **Repair damaged timber** — Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two.
+4. **Prime all bare timber** — Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes.
+5. **Fill and caulk** — Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves.
+6. **Apply two topcoats** — Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain.
+
 ## Choosing the right paint for Melbourne weatherboards
 
 For most Melbourne weatherboards a flexible water-based acrylic exterior system — such as Dulux Weathershield or Taubmans All Weather — over the appropriate primer is the right choice. Coastal homes benefit from the more heavily weather-resistant options in those ranges, because salt air and reflected UV are harsher than inland conditions.

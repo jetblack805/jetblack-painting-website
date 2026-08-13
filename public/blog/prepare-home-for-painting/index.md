@@ -4,27 +4,38 @@
 
 # How to Prepare Your Home for Painting
 
-A little preparation before your painters arrive can make the job faster, safer, and easier for everyone in the home.
+Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 13+ years of painting Melbourne homes.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 
-## Get the space ready before work starts
+## Clear the Rooms
 
-Clear smaller décor items, fragile pieces, and loose furniture wherever possible so the team can protect and access surfaces efficiently.
+Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers. The more space our interior painting team has to work, the faster and more efficient the job will be.
 
-If there are specific rooms, entry times, body corporate rules, or alarm instructions to consider, confirm those details before the project begins.
+## Identify Problem Areas
 
-## Make key decisions early
+Walk through your home and note any areas with peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed.
 
-Confirm colours, sheen levels, and any accent walls before work starts to prevent delays once the project is underway.
+Point these out to your painter during the quote stage so they can factor in the preparation work needed.
 
-If repairs, timber rot, water damage, or additional surfaces are discovered, agree on the updated scope before the painter proceeds.
+## Exterior Preparation
 
-## Plan around the project timeline
+For exterior painting, ensure garden beds are trimmed back from walls (30cm clearance), outdoor furniture and pot plants are moved away, cars are parked away from the house, gates are unlocked for access, and pets are secured inside or in a separate area.
 
-Interior painting often requires some rooms to be unusable for short periods, while exterior projects can affect vehicle access, outdoor furniture, and drying times.
+## What Professional Painters Handle
 
-Good planning helps the painter keep momentum and helps you avoid unnecessary disruption during the project.
+1. **Surface washing** — High-pressure cleaning for exteriors.
+2. **Sanding** — Smoothing rough surfaces for a flawless finish.
+3. **Filling** — Repairing cracks, holes, and imperfections.
+4. **Priming** — Applying primer to bare surfaces and stained areas.
+5. **Masking** — Protecting floors, fixtures, and surfaces not being painted.
+6. **Drop sheets** — Covering all furniture and flooring.
+
+## Best Time to Paint in Melbourne
+
+Melbourne's weather plays a big role in painting schedules. Interior painting can be done year-round because we control the environment. Exterior painting is best between October and April when it's drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days.
+
+We monitor weather forecasts closely and schedule exterior work on optimal days. This is especially important for homes in coastal areas like Brighton and Hampton, where salt air can affect drying times.
 
 ## Frequently Asked Questions
 

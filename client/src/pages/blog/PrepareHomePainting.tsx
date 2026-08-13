@@ -66,7 +66,7 @@ export default function PrepareHomePainting() {
             "Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.",
           canonical: "https://jetblackpainting.com/blog/prepare-home-for-painting/",
           datePublished: "2026-06-23",
-          dateModified: "2026-07-26",
+          dateModified: "2026-08-13",
           articleSection: "Guide",
           extra: [howToSchema],
           faqs,

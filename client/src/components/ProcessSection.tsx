@@ -41,13 +41,12 @@ export default function ProcessSection() {
           ref={header.ref}
           className={`reveal up ${header.visible ? "visible" : ""}`}
         >
-          {/* #85622A, not the site's usual #B0863C gold: on this section's
-              #F5F1E8 cream background #B0863C only hits ~2.95:1 contrast,
-              failing WCAG AA (needs 3:1 minimum). #85622A is the same bronze
-              hue darkened to ~4.93:1. The decorative timeline rule/dots
-              below stay #B0863C — they're not text, so the audit doesn't
-              flag them, and it's the same accent used site-wide. */}
-          <span className="lux-eyebrow text-[#85622A]">Our Process</span>
+          {/* lux-eyebrow-on-cream, not a text-[...] utility: .lux-eyebrow sets its
+              own colour in index.css, which loads after Tailwind's utilities and
+              therefore beats one at equal specificity. See index.css for the
+              contrast rationale. The decorative timeline rule/dots below stay
+              #B0863C — they're not text, so the contrast audit doesn't apply. */}
+          <span className="lux-eyebrow lux-eyebrow-on-cream">Our Process</span>
           <h2 className="text-3xl lg:text-4xl text-[#1A1A1A]">
             Six steps. <span className="text-[#85622A]">Zero surprises.</span>
           </h2>

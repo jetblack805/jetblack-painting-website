@@ -215,6 +215,15 @@ html {
   color: #D0A050;
   margin-bottom: 18px;
 }
+/* Eyebrow variant for the cream (#F5F1E8) sections — TrustBadges and
+   ProcessSection. The default #D0A050 gold only reaches 2.11:1 there, failing
+   WCAG AA (10px/600 needs 4.5:1); #85622A is the same bronze family at 4.93:1.
+   This has to be a class rather than a Tailwind `text-[...]` utility: this
+   stylesheet loads after Tailwind's utilities, so `.lux-eyebrow`'s own colour
+   beats an equal-specificity utility on the same element and silently wins. */
+.lux-eyebrow.lux-eyebrow-on-cream {
+  color: #85622A;
+}
 .lux-serif {
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 400;

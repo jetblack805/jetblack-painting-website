@@ -38,12 +38,11 @@ export default function TrustBadges() {
   return (
     <section className="py-24 lg:py-28 bg-[#F5F1E8]" aria-label="Trust and credentials">
       <div className="container max-w-6xl">
-        {/* #85622A, not the site's usual #B0863C gold: on this section's
-            #F5F1E8 cream background #B0863C only hits ~2.95:1 contrast,
-            failing WCAG AA (needs 3:1 minimum). #85622A is the same bronze
-            hue darkened to ~4.93:1. Everywhere else #B0863C sits on dark
-            backgrounds where it already passes, so it's untouched there. */}
-        <span className="lux-eyebrow text-[#85622A]">Why Jetblack</span>
+        {/* lux-eyebrow-on-cream, not a text-[...] utility: .lux-eyebrow sets its
+            own colour in index.css, which loads after Tailwind's utilities and
+            therefore beats one at equal specificity. See index.css for the
+            contrast rationale. */}
+        <span className="lux-eyebrow lux-eyebrow-on-cream">Why Jetblack</span>
         <h2 className="text-3xl lg:text-4xl text-[#1A1A1A]">
           The difference is in the details
         </h2>

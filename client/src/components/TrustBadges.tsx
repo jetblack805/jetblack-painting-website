@@ -38,7 +38,12 @@ export default function TrustBadges() {
   return (
     <section className="py-24 lg:py-28 bg-[#F5F1E8]" aria-label="Trust and credentials">
       <div className="container max-w-6xl">
-        <span className="lux-eyebrow text-[#B0863C]">Why Jetblack</span>
+        {/* #85622A, not the site's usual #B0863C gold: on this section's
+            #F5F1E8 cream background #B0863C only hits ~2.95:1 contrast,
+            failing WCAG AA (needs 3:1 minimum). #85622A is the same bronze
+            hue darkened to ~4.93:1. Everywhere else #B0863C sits on dark
+            backgrounds where it already passes, so it's untouched there. */}
+        <span className="lux-eyebrow text-[#85622A]">Why Jetblack</span>
         <h2 className="text-3xl lg:text-4xl text-[#1A1A1A]">
           The difference is in the details
         </h2>
@@ -46,7 +51,7 @@ export default function TrustBadges() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-10 gap-y-10 mt-14">
           {badges.map((badge) => (
             <div key={badge.title} className="border-t border-[#1A1A1A]/[0.12] pt-6">
-              <div className="text-[#B0863C] text-xl mb-4" style={{ fontFamily: "Georgia, serif" }}>{badge.mark}</div>
+              <div className="text-[#85622A] text-xl mb-4" style={{ fontFamily: "Georgia, serif" }}>{badge.mark}</div>
               <h3 className="text-[11px] font-bold tracking-[0.14em] uppercase text-[#1A1A1A] mb-2.5 leading-relaxed" style={{ fontFamily: "system-ui, sans-serif" }}>
                 {badge.title}
               </h3>

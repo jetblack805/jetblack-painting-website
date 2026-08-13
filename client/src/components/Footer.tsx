@@ -130,6 +130,8 @@ export default function Footer() {
             <img
               src={LOGO_URL}
               alt="Jetblack Painting"
+              width={843}
+              height={304}
               className="h-12 w-auto mb-5"
             />
             <div className="w-44 h-px bg-[#D0A050]/60 mb-4" aria-hidden="true" />

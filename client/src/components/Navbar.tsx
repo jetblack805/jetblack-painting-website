@@ -129,6 +129,8 @@ export default function Navbar() {
           <img
             src={LOGO_URL}
             alt="Jetblack Painting"
+            width={843}
+            height={304}
             className="h-10 lg:h-12 w-auto"
           />
         </a>

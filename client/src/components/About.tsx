@@ -44,6 +44,8 @@ export default function About() {
                 <img loading="lazy" decoding="async"
                   src={TEAM_IMG}
                   alt="Jimmy Demirci, owner of Jetblack Painting, on the job in Melbourne"
+                  width={800}
+                  height={796}
                   className="w-full shadow-2xl"
                 />
                 <div className="absolute inset-3.5 border border-[#D0A050]/50 pointer-events-none" aria-hidden="true" />
@@ -52,6 +54,8 @@ export default function About() {
                 <img loading="lazy" decoding="async"
                   src={ABOUT_IMG}
                   alt="Jetblack Painting team on site in Melbourne"
+                  width={1120}
+                  height={1400}
                   className="w-full h-32 sm:h-40 object-cover"
                 />
               </div>

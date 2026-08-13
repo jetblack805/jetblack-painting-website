@@ -25,6 +25,13 @@ type Service = {
      not get one, since a second file would add a request without saving bytes. */
   imageSmall?: string;
   imageWidth?: number;
+  /* Intrinsic pixel dimensions of `image`, passed through as the <img>
+     width/height attributes so the browser can reserve the right aspect
+     ratio before load (fixes Lighthouse's "explicit width and height"
+     diagnostic). The card itself is a fixed h-52 with object-cover, so
+     these have no effect on the rendered layout. */
+  imgW: number;
+  imgH: number;
   link: string;
 };
 
@@ -34,6 +41,8 @@ const services: Service[] = [
     title: "Interior House Painting Melbourne",
     description: "Our professional interior painting Melbourne services transform your living spaces with flawless finishes. From walls and ceilings to detailed trims and doors, our expert painters deliver fresh, clean looks throughout your home. We proudly serve Mordialloc, Bayside, and all Melbourne suburbs with premium quality paints and meticulous attention to detail.",
     image: imgInteriorPainting,
+    imgW: 1050,
+    imgH: 1400,
     link: "/services/interior-painting",
   },
   {
@@ -43,6 +52,8 @@ const services: Service[] = [
     image: imgNavyWeatherboard,
     imageSmall: imgNavyWeatherboard900,
     imageWidth: 1050,
+    imgW: 1050,
+    imgH: 1400,
     link: "/services/exterior-painting",
   },
   {
@@ -52,6 +63,8 @@ const services: Service[] = [
     image: imgEpoxyFloor,
     imageSmall: imgEpoxyFloor900,
     imageWidth: 1400,
+    imgW: 1400,
+    imgH: 1050,
     link: "/services/commercial-painting",
   },
   {
@@ -59,6 +72,8 @@ const services: Service[] = [
     title: "Roof & Fence Painting Melbourne",
     description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Mordialloc, Bayside, and throughout Melbourne.",
     image: imgRoofFencePainting,
+    imgW: 640,
+    imgH: 480,
     link: "/services/roof-fence-painting",
   },
   {
@@ -66,6 +81,8 @@ const services: Service[] = [
     title: "Real Estate Painting Melbourne",
     description: "Our real estate painting Melbourne services cover pre-sale repaints, rental and investment property refreshes, and property styling for agents, vendors, landlords and property managers. We deliver fast, sale-ready interior and exterior finishes with broad-appeal neutral colours, coordinating directly with agents and stylists so the property is ready for photography and open homes on schedule.",
     image: imgOpenPlanLiving,
+    imgW: 1206,
+    imgH: 804,
     link: "/services/real-estate-painting",
   },
   {
@@ -75,6 +92,8 @@ const services: Service[] = [
     image: imgCommercialBuilding,
     imageSmall: imgCommercialBuilding900,
     imageWidth: 1400,
+    imgW: 1400,
+    imgH: 1050,
     link: "/services/body-corporate-painting",
   },
 ];
@@ -134,6 +153,8 @@ function ServiceCard({
         <div className="relative h-52 overflow-hidden">
           <img loading="lazy" decoding="async"
             src={service.image}
+            width={service.imgW}
+            height={service.imgH}
             {...("imageSmall" in service
               ? {
                   srcSet: `${service.imageSmall} 900w, ${service.image} ${service.imageWidth}w`,

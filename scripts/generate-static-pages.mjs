@@ -1572,27 +1572,44 @@ const articlePages = [
     description:
       "Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects.",
     intro:
-      "Painting prices in Melbourne vary according to size, access, paint system, and — most importantly — how much preparation is required before the first coat goes on.",
+      "One of the most common questions we get asked as professional painters in Melbourne is \"How much will it cost to paint my house?\" Here's our comprehensive 2026 price guide based on real projects we've completed across Melbourne.",
     sections: [
       {
-        heading: "What drives the cost of a painting project",
+        heading: "Interior Painting Costs in Melbourne",
         paragraphs: [
-          "The biggest pricing factors are surface condition, the amount of repair or sanding needed, the number of colours, and how accessible the work is for ladders, scaffolding, and setup.",
-          "Interior work is often priced differently to exterior work because weather exposure, washing, filling, and coating systems can add significant labour to outside surfaces.",
+          "Interior painting is typically priced per square metre or as a whole-room cost. Walls only (2 coats) run $20 to $35 per m², or $400 to $800 for a typical room. Walls plus ceiling run $25 to $45 per m², or $600 to $1,200 per room. A full room including walls, ceiling and trim runs $35 to $55 per m², or $800 to $1,500. A whole-house interior repaint typically costs $5,000 to $12,000 for a 3-bedroom home, or $8,000 to $18,000 for a 4-bedroom home.",
+          "Our interior painting services include thorough preparation — filling holes, sanding, priming — premium Dulux or Taubmans paint, and a spotless cleanup.",
         ],
       },
       {
-        heading: "Why preparation matters to value",
+        heading: "Exterior Painting Costs in Melbourne",
         paragraphs: [
-          "Cheaper painting quotes often reduce the time spent on preparation. That can lead to poor adhesion, flashing, visible repairs, or early failure.",
-          "A better value quote explains the included preparation, the paint brand and system, and the scope for trims, doors, ceilings, walls, fences, roofs, or specialty finishes.",
+          "A small single-storey home under 150m² typically costs $4,000 to $8,000 for walls, fascia and gutters. A medium double-storey home between 150 and 250m² typically costs $8,000 to $15,000, including trim. A large home over 250m² typically costs $15,000 to $30,000+ for a full exterior package.",
+          "Our exterior painting services use weather-resistant coatings designed for Melbourne's harsh UV and variable climate. We also offer roof painting from $3,500.",
         ],
       },
       {
-        heading: "How to compare painting quotes properly",
+        heading: "Factors That Affect Painting Costs",
+        type: "steps",
+        items: [
+          { title: "Surface condition", body: "Peeling paint, cracks, or water damage require more preparation." },
+          { title: "Number of coats", body: "Dark-to-light colour changes may need 3+ coats." },
+          { title: "Height & access", body: "Multi-storey homes require scaffolding ($500-$2,000 extra)." },
+          { title: "Paint quality", body: "Premium paints cost more but last 10-15 years vs. 5-7 for budget options." },
+          { title: "Trim & detail work", body: "Heritage homes with ornate trim cost more due to detailed preparation." },
+          { title: "Location", body: "Premium suburbs like Toorak and Brighton often have larger homes." },
+        ],
+      },
+      {
+        heading: "How to Get an Accurate Quote",
         paragraphs: [
-          "When comparing quotes, check whether materials are included, whether surface repairs are allowed for, and how many coats are specified for the finish.",
-          "Ask for a written scope so you can compare the real level of workmanship — not just the headline price.",
+          "The best way to get an accurate painting quote is to have a professional painter visit your property. At Jetblack Painting, we provide free, no-obligation quotes that include a detailed written breakdown of all costs, colour consultation and recommendations, a timeline estimate for completion, paint brand and product specifications, and warranty information (5-year workmanship guarantee).",
+        ],
+      },
+      {
+        heading: "Why Choose Jetblack Painting?",
+        paragraphs: [
+          "With 5-star Google reviews, 13+ years of experience, and $10M public liability insurance, Jetblack Painting is Melbourne's most trusted painting company. We service all suburbs including Malvern, Camberwell, Hawthorn, and Keysborough.",
         ],
       },
     ],
@@ -1982,7 +1999,7 @@ const articlePages = [
 // an article's content is rewritten. Categories match the labels shown on /blog/.
 const articleMeta = {
   "/blog/best-paint-colours-melbourne-2025": { published: "2026-06-23", modified: "2026-07-26", section: "Design Tips" },
-  "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-07-26", section: "Price Guide" },
+  "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-08-13", section: "Price Guide" },
   "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-08-13", section: "Guide" },
   "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-08-13", section: "Kitchen" },
   "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },

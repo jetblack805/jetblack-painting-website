@@ -41,7 +41,7 @@ export default function HousePaintingCostMelbourne() {
             "Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects.",
           canonical: "https://jetblackpainting.com/blog/house-painting-cost-melbourne/",
           datePublished: "2026-06-23",
-          dateModified: "2026-07-26",
+          dateModified: "2026-08-13",
           articleSection: "Price Guide",
           faqs,
         })}

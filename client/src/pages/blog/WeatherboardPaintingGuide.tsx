@@ -88,7 +88,7 @@ export default function WeatherboardPaintingGuide() {
             "Melbourne weatherboard painting guide — preparation, priming bare timber, caulking, the right exterior paints and how often to repaint.",
           canonical: "https://jetblackpainting.com/blog/how-to-paint-a-weatherboard-house-melbourne/",
           datePublished: "2026-07-26",
-          dateModified: "2026-07-26",
+          dateModified: "2026-08-13",
           articleSection: "Guide",
           faqs,
           extra: [howToSchema],

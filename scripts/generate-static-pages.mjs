@@ -1622,36 +1622,53 @@ const articlePages = [
     description:
       "Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.",
     intro:
-      "A little preparation before your painters arrive can make the job faster, safer, and easier for everyone in the home.",
+      "Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 13+ years of painting Melbourne homes.",
     howTo: {
-      name: "How to Prepare Your Home for a Painting Project",
+      name: "How to Prepare Your Melbourne Home for Professional Painting",
       totalTime: "PT1H",
       steps: [
-        { name: "Get the space ready before work starts", text: "Clear smaller décor items, fragile pieces, and loose furniture wherever possible so the team can protect and access surfaces efficiently. Confirm room access, entry times, body corporate rules, or alarm instructions before the project begins." },
-        { name: "Make key decisions early", text: "Confirm colours, sheen levels, and any accent walls before work starts to prevent delays. If repairs, timber rot, water damage, or additional surfaces are discovered, agree on the updated scope before the painter proceeds." },
-        { name: "Plan around the project timeline", text: "Interior painting often requires some rooms to be unusable for short periods, while exterior projects can affect vehicle access, outdoor furniture, and drying times." },
+        { name: "Clear the Rooms", text: "Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers so painters have full access to work efficiently." },
+        { name: "Identify Problem Areas", text: "Walk through your home and note any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Point these out to your painter at the quote stage." },
+        { name: "Exterior Preparation", text: "Trim garden beds back 30cm from walls, move outdoor furniture and pot plants away, park cars away from the house, unlock gates for access, and secure pets inside or in a separate area." },
       ],
     },
     sections: [
       {
-        heading: "Get the space ready before work starts",
+        heading: "Clear the Rooms",
         paragraphs: [
-          "Clear smaller décor items, fragile pieces, and loose furniture wherever possible so the team can protect and access surfaces efficiently.",
-          "If there are specific rooms, entry times, body corporate rules, or alarm instructions to consider, confirm those details before the project begins.",
+          "Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers. The more space our interior painting team has to work, the faster and more efficient the job will be.",
         ],
       },
       {
-        heading: "Make key decisions early",
+        heading: "Identify Problem Areas",
         paragraphs: [
-          "Confirm colours, sheen levels, and any accent walls before work starts to prevent delays once the project is underway.",
-          "If repairs, timber rot, water damage, or additional surfaces are discovered, agree on the updated scope before the painter proceeds.",
+          "Walk through your home and note any areas with peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed.",
+          "Point these out to your painter during the quote stage so they can factor in the preparation work needed.",
         ],
       },
       {
-        heading: "Plan around the project timeline",
+        heading: "Exterior Preparation",
         paragraphs: [
-          "Interior painting often requires some rooms to be unusable for short periods, while exterior projects can affect vehicle access, outdoor furniture, and drying times.",
-          "Good planning helps the painter keep momentum and helps you avoid unnecessary disruption during the project.",
+          "For exterior painting, ensure garden beds are trimmed back from walls (30cm clearance), outdoor furniture and pot plants are moved away, cars are parked away from the house, gates are unlocked for access, and pets are secured inside or in a separate area.",
+        ],
+      },
+      {
+        heading: "What Professional Painters Handle",
+        type: "steps",
+        items: [
+          { title: "Surface washing", body: "High-pressure cleaning for exteriors." },
+          { title: "Sanding", body: "Smoothing rough surfaces for a flawless finish." },
+          { title: "Filling", body: "Repairing cracks, holes, and imperfections." },
+          { title: "Priming", body: "Applying primer to bare surfaces and stained areas." },
+          { title: "Masking", body: "Protecting floors, fixtures, and surfaces not being painted." },
+          { title: "Drop sheets", body: "Covering all furniture and flooring." },
+        ],
+      },
+      {
+        heading: "Best Time to Paint in Melbourne",
+        paragraphs: [
+          "Melbourne's weather plays a big role in painting schedules. Interior painting can be done year-round because we control the environment. Exterior painting is best between October and April when it's drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days.",
+          "We monitor weather forecasts closely and schedule exterior work on optimal days. This is especially important for homes in coastal areas like Brighton and Hampton, where salt air can affect drying times.",
         ],
       },
     ],
@@ -1966,7 +1983,7 @@ const articlePages = [
 const articleMeta = {
   "/blog/best-paint-colours-melbourne-2025": { published: "2026-06-23", modified: "2026-07-26", section: "Design Tips" },
   "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-07-26", section: "Price Guide" },
-  "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-07-26", section: "Guide" },
+  "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-08-13", section: "Guide" },
   "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-08-13", section: "Kitchen" },
   "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },

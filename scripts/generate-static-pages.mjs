@@ -355,12 +355,25 @@ function speakableSchema(canonical) {
 // most for the AI crawlers, which don't execute JS and so never reach the
 // React footer's suburb list. Without it each suburb page is reachable from
 // only its handful of neighbour links.
+//
+// A <nav><ul>, not a pipe-joined <p>: as one paragraph this block was ~315
+// words on every page — far and away the longest on the site, and enough to
+// trip Semrush's "paragraphs are too long" content check site-wide. It is a
+// list of links, so list markup is both what it means and what raises the
+// semantic-HTML ratio the AI-search checks measure. generate-markdown.mjs
+// walks <ul> already, so the Markdown twins pick this up as a real list too.
 function suburbDirectoryHtml(currentCanonical) {
-  const links = suburbDirectory
+  const items = suburbDirectory
     .filter((entry) => canonicalForRoute(entry.route) !== currentCanonical)
-    .map((entry) => `<a href="${entry.route}/">Painters ${escapeHtml(entry.name)}</a>`)
-    .join(" | ");
-  return links ? `    <p class="suburb-directory">Suburbs we service: ${links}</p>\n` : "";
+    .map((entry) => `      <li><a href="${entry.route}/">Painters ${escapeHtml(entry.name)}</a></li>`)
+    .join("\n");
+  if (!items) return "";
+  return (
+    `    <nav class="suburb-directory" aria-label="Suburbs we service">\n` +
+    `      <h2>Suburbs we service</h2>\n` +
+    `      <ul>\n${items}\n      </ul>\n` +
+    `    </nav>\n`
+  );
 }
 
 function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots }) {

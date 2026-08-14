@@ -294,6 +294,27 @@ export default {
       return new Response(response.body, { status: 404, statusText: "Not Found", headers });
     }
 
+    // The /assets/ exemption above is necessary — hashed bundle names aren't
+    // known until after `vite build`, so they can't be enumerated in
+    // KNOWN_PATHS — but on its own it re-opens the soft 404 for that one
+    // prefix: a missing /assets/anything.js falls through to the SPA fallback
+    // and answers 200 with index.html, exactly the thing the block above
+    // exists to stop.
+    //
+    // A real bundle under /assets/ is JS, CSS, a font or an image; nothing
+    // there is ever legitimately HTML. So an HTML content-type under that
+    // prefix means the file was not found and the fallback answered — which
+    // is a 404, not a page. Keyed off the response rather than a filename
+    // pattern so it stays correct whatever Vite names its chunks.
+    if (
+      KNOWN_PATHS.size > 0 &&
+      response.status === 200 &&
+      isBuildAsset &&
+      (response.headers.get("content-type") || "").includes("text/html")
+    ) {
+      return new Response(response.body, { status: 404, statusText: "Not Found", headers });
+    }
+
     return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   },
 };

@@ -39,6 +39,14 @@ export default function HighettPainters() {
     {
       question: `How do I get a painting quote in Highett?`,
       answer: `Call 0432 077 782 or use the quote form on this page. We'll arrange an on-site inspection at a time that suits you — we don't estimate without seeing the property. After the inspection you'll receive a detailed written quote covering the full scope, product specification and price. No call centres, no surprises — you deal with the painter directly from quote to final sign-off.`
+    },
+    {
+      question: `Do you paint townhouses and units for owners corporations in ${suburb}?`,
+      answer: `Yes, and ${suburb} has a lot of them. The suburb has taken on a great deal of medium-density housing, and the common property in those developments — entry lobbies, stairwells, balcony soffits, garage undercrofts, boundary and dividing fences — wears far faster than the inside of any single unit. We quote owners corporation work with the scope itemised line by line so a committee can actually read it, stage the work so residents keep access to entries and parking throughout, and carry $10 million public liability cover across the whole site.`
+    },
+    {
+      question: `What usually fails first on a ${suburb} exterior?`,
+      answer: `On the 1960s to 1980s homes that make up much of ${suburb}, it is almost always the timber before the walls. Fascia boards, barge boards, eaves linings and window joinery on the north and west elevations get the hardest sun and go first — the paint chalks, then cracks, then lets water into the end grain. The brickwork below can still look perfectly serviceable while that timber is well past due. It is worth booking an inspection when you notice the eaves rather than waiting for the walls, because replacing rotted fascia costs considerably more than repainting sound timber would have.`
     }
   ];
 
@@ -69,6 +77,20 @@ export default function HighettPainters() {
           body: [
             "Interior painting in Highett typically covers a mix of original plaster in older homes and gyprock in renovated sections and extensions. We work with all surface types — ceilings, walls, timber joinery, built-ins, doors and trims — using the correct sheen for each application. We schedule around your household and leave the property clean on completion.",
             "Exterior repaints in Highett require attention to surface condition before anything else. We wash, patch, sand and prime before topcoating with a premium exterior acrylic or elastomeric system rated for Melbourne's UV and seasonal weather variation. Every exterior job is backed by our 5-year written guarantee.",
+          ],
+        },
+        {
+          heading: "Townhouse, Unit and Common Property Painting in Highett",
+          body: [
+            "Few suburbs in the area have changed shape as quickly as Highett. Streets that held a single post-war house per block now hold two, three or four townhouses, and that shift changes what painting work the suburb actually needs. Common property is the part owners tend to notice last and the part that ages fastest — stairwells and entry lobbies that take daily traffic, balcony soffits that trap moisture, garage undercrofts, and the long runs of boundary fence and render between developments.",
+            "We quote this work the way a committee needs to read it: itemised by area, with the preparation spelled out rather than buried in a single lump sum, so it can be compared properly and taken to a vote without guesswork. Work is staged to keep entries, letterboxes and car parks usable while it runs, and the whole site sits under our $10 million public liability cover.",
+          ],
+        },
+        {
+          heading: "What the 1960s to 1980s Housing Stock Needs",
+          body: [
+            "The bulk of Highett's homes date from a period with a very consistent build recipe — brick or brick veneer walls, timber fascia and eaves, aluminium window frames and a tiled roof. Each of those ages at a different rate, and a repaint that treats them as one surface will fail unevenly. The brick is usually the least of the problem. The timber is the priority, and on any elevation facing north or west it is generally the reason the house has started to look tired.",
+            "Where render has been added during a renovation — a very common update on these homes — it introduces a third substrate with its own requirements, and joining new render to original brickwork is where cracking tends to reappear if the preparation was rushed. We identify each substrate at the inspection and specify the primer and topcoat system for each one rather than applying a single product across the lot. That specification goes into the written quote, so you can see exactly what is going on which surface.",
           ],
         },
       ]}

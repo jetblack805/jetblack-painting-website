@@ -24,6 +24,14 @@ Collingwood's Victorian terrace streetscapes are some of Melbourne's most intact
 
 Collingwood's former industrial buildings — particularly in the Hoddle Street and Langridge Street precincts — have been extensively converted to residential and mixed-use spaces. These often feature exposed brick, concrete, and steel substrates requiring specialist primer systems. For Collingwood's large rental stock, we offer efficient interior repaints with low-VOC paints, neutral palettes, and turnarounds suited to tenancy changeovers — with $10M public liability insurance and a 5-year written workmanship guarantee on all work.
 
+## Lead Paint in Collingwood's Pre-1970 Housing
+
+Lead remained in Australian household paint until 1970, which puts almost every original coating in Collingwood inside the window. On a Victorian terrace or workers' cottage it is typically sitting under decades of later layers — window sashes and their reveals, door frames, skirtings, and any original external weatherboard or joinery. Left intact and sound it is not a hazard. The danger comes from disturbing it, and the single worst thing anyone can do to an old Collingwood house is take an orbital sander to the window frames on a dry day, because that turns a stable coating into airborne dust through the living areas. Our approach on any pre-1970 property here is to test before disturbing original surfaces, then work wet, sheet and contain the work area, use dust extraction where sanding is unavoidable, and bag and remove the waste rather than washing it into the stormwater. It adds time to the preparation, and it is not optional on a house of this age with children in it.
+
+## Access, Party Walls and Working in a Terrace Row
+
+Painting a single-fronted terrace is a logistics problem before it is a painting problem. These houses share party walls on both sides, which means no side path, nowhere to foot a ladder off the boundary, and no route to the rear except through the hallway or over the roof. Front elevations sit hard on the footpath, so anything above the verandah needs either a platform or a scaffold licence and, on some streets, council approval to occupy the footpath. We work all of this out at the quote rather than discovering it on day one — what has to be carried through the house and how it will be protected on the way, how the facade will be reached, whether the rear is accessible from a laneway, and where any of it touches a neighbour's wall, roof or airspace. Where it does, we would rather have that conversation with them before the job starts than halfway through it. Terraces reward planning; they punish improvisation.
+
 ## What we paint in Collingwood
 
 ### Interior painting
@@ -65,6 +73,14 @@ Yes — Collingwood has one of Melbourne's highest rental proportions, and inves
 ### Can you paint heritage terrace houses in Collingwood?
 
 Yes. Much of Collingwood's residential streetscape falls within heritage overlay zones, which can govern exterior colour choices. We work with these constraints regularly — advising on what typically triggers a planning permit requirement and what doesn't, recommending period-compatible colour palettes, and applying exterior systems proven on original render, brick, and timber substrates. We carry $10M public liability insurance and provide a 5-year written workmanship guarantee on all work.
+
+### Is there lead paint in Collingwood's older houses?
+
+In a suburb built the way Collingwood was, it should be assumed until tested. Lead was in Australian household paint until 1970, so any original coating on a Victorian terrace or workers' cottage here is likely to contain it — usually buried under later layers on window sashes, door frames, skirtings and exterior weatherboards. Intact paint is not the hazard; disturbing it is. Dry sanding or power-sanding old coatings puts lead dust through the house, and that is the risk to children and pets. We test before we disturb original surfaces, and where lead is present we work wet, contain and sheet the area, and bag and dispose of the waste properly rather than sweeping it into the garden.
+
+### How do you paint a terrace with no side access?
+
+It is the standard condition in Collingwood rather than the exception. Single-fronted terraces share party walls with the houses either side, so there is usually no side path, no room to stand a ladder off the boundary, and no way to get plant through to the rear. Everything goes through the house or over the roof. We plan access at the quote stage — what needs to be carried through, whether the front elevation needs a scaffold or can be reached off a platform, whether the rear is reachable from the laneway — and we agree it with you and, where the work touches a shared wall or boundary, with your neighbour before we start. Getting that settled up front is what stops a terrace repaint stalling halfway.
 
 ### Can you provide a free quote for painting in Collingwood?
 

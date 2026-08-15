@@ -1,10 +1,10 @@
-<!-- Highett Painters | Coastal Painting | Jetblack Painting -->
+<!-- Highett Painters | House & Townhouse | Jetblack Painting -->
 <!-- Source: https://jetblackpainting.com/painter-highett/ -->
-<!-- Coastal house painters in Highett — 1960s–1980s residences to modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782. -->
+<!-- House painters in Highett — post-war brick homes, 1960s–1980s residences and modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782. -->
 
 # House Painters Highett
 
-Coastal house painters in Highett — 1960s–1980s residences to modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782. Searching for painters near you in Highett? Jetblack Painting are your trusted local Highett painters, servicing Highett and the surrounding suburbs.
+House painters in Highett — post-war brick homes, 1960s–1980s residences and modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782. Searching for painters near you in Highett? Jetblack Painting are your trusted local Highett painters, servicing Highett and the surrounding suburbs.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 
@@ -48,7 +48,7 @@ Walls, ceilings, trims and doors across Highett houses, apartments and townhouse
 
 ### Exterior painting
 
-Coastal exposure in Highett attacks coatings early, so exteriors are pressure washed, chalking and flaking paint taken back, and surfaces primed before weather-resistant topcoats are applied.
+Weatherboards, render, brick, fences, eaves and fascias in Highett, prepared properly so the finish lasts through Melbourne's weather rather than failing at the edges.
 
 ### Commercial painting
 

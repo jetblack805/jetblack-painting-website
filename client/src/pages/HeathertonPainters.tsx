@@ -45,8 +45,8 @@ export default function HeathertonPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Heatherton Painters | Coastal Painting | Jetblack Painting"
-      description="Coastal house painters in Heatherton — 1970s–1980s residences. Free quotes, 5-year guarantee. Call 0432 077 782."
+      title="Heatherton Painters | House Painting | Jetblack Painting"
+      description="House painters in Heatherton — 1970s–1980s residences, brick homes and renovations. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Cheltenham", link: "/painter-cheltenham" },
         { name: "Moorabbin", link: "/painter-moorabbin" },

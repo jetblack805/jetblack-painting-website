@@ -1,10 +1,10 @@
-<!-- Heatherton Painters | Coastal Painting | Jetblack Painting -->
+<!-- Heatherton Painters | House Painting | Jetblack Painting -->
 <!-- Source: https://jetblackpainting.com/painter-heatherton/ -->
-<!-- Coastal house painters in Heatherton — 1970s–1980s residences. Free quotes, 5-year guarantee. Call 0432 077 782. -->
+<!-- House painters in Heatherton — 1970s–1980s residences, brick homes and renovations. Free quotes, 5-year guarantee. Call 0432 077 782. -->
 
 # House Painters Heatherton
 
-Coastal house painters in Heatherton — 1970s–1980s residences. Free quotes, 5-year guarantee. Call 0432 077 782. Searching for painters near you in Heatherton? Jetblack Painting are your trusted local Heatherton painters, servicing Heatherton and the surrounding suburbs.
+House painters in Heatherton — 1970s–1980s residences, brick homes and renovations. Free quotes, 5-year guarantee. Call 0432 077 782. Searching for painters near you in Heatherton? Jetblack Painting are your trusted local Heatherton painters, servicing Heatherton and the surrounding suburbs.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 
@@ -36,7 +36,7 @@ Walls, ceilings, trims, doors and full home repaints in Heatherton. Furniture pr
 
 ### Exterior painting
 
-Coastal exposure in Heatherton attacks coatings early, so exteriors are pressure washed, chalking and flaking paint taken back, and surfaces primed before weather-resistant topcoats are applied.
+Weatherboards, render, brick, fences, eaves and fascias in Heatherton, prepared properly so the finish lasts through Melbourne's weather rather than failing at the edges.
 
 ### Commercial painting
 

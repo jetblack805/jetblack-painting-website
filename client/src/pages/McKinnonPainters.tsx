@@ -14,6 +14,18 @@ export default function McKinnonPainters() {
     {
       question: `Do you offer free quotes in ${suburb}?`,
       answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and the broader Glen Eira area, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 to arrange a site visit.`
+    },
+    {
+      question: `Can you paint over brick that has already been painted?`,
+      answer: `Yes, and it is one of the most common jobs we quote in ${suburb}. Plenty of the post-war brick veneer here was painted decades ago, and the original coating is often chalky, patchy or lifting in sheets where moisture has been trapped behind it. We wash the substrate down, scrape and sand back anything unsound, spot-prime bare masonry with the right sealer and then recoat with a breathable masonry system. Worth knowing before you start: painting brick is a one-way decision — once it is coated it needs recoating periodically forever, so it is worth doing properly the first time.`
+    },
+    {
+      question: `Do you paint steel-framed windows on older ${suburb} homes?`,
+      answer: `Yes. The interwar and early post-war homes around ${suburb} often still have their original steel window frames, and they almost always fail the same way — rust blooming at the corners and along the bottom rail where water sits. Painting straight over it just hides the problem for a season. We wire-brush and sand back to sound metal, treat the bare steel with a rust-inhibiting primer and then bring it up in enamel, so the repair holds rather than bubbling through the new coat by the next winter.`
+    },
+    {
+      question: `Do you take on shopfronts and commercial work around ${suburb} Road?`,
+      answer: `We do. Alongside houses we paint shopfronts, offices, consulting rooms and the common property of the low-rise blocks around the ${suburb} Road strip and the station precinct. Commercial work is scheduled around your trading hours so the shop stays open, and we carry $10 million public liability cover for it. Call Jimmy on 0432 077 782 to talk through access and timing.`
     }
   ];
 
@@ -44,6 +56,27 @@ export default function McKinnonPainters() {
           body: [
             `${suburb}'s interwar homes and Californian bungalows carry rendered surfaces, decorative brickwork and original timber that genuinely reward proper preparation — filling and sealing render cracks, priming bare timber, and choosing colours that suit the era and the streetscape. Skip the prep and the topcoat fails early; do it properly and the finish lasts for years.`,
             `For updated and contemporary ${suburb} homes, we deliver smooth, long-lasting interiors and durable exteriors using premium Dulux and Taubmans paint systems rated for Melbourne's conditions. Whatever the style, the standard is the same: meticulous prep, premium product and a result that holds up.`,
+          ],
+        },
+        {
+          heading: `Post-War Brick Veneer: What ${suburb} Actually Needs`,
+          body: [
+            `Not every house here is a bungalow. A large share of ${suburb}'s stock went up between the late 1940s and the 1960s as the Frankston line suburbs filled in, and that brick veneer needs a different approach entirely. The brickwork itself is usually sound; what fails is everything attached to it — timber eaves and fascia boards, the barge boards along the gable ends, and the window and door joinery. Those are the surfaces that take the weather, and on the north and west elevations they are typically two coats past due while the walls still look fine.`,
+            `Where that brick has been painted at some point, the job changes again. Old masonry coatings go chalky and lose their key, and a fresh topcoat rolled straight over the top will lift with the layer underneath it. We test adhesion before quoting, strip anything unsound, seal the bare brick and rebuild the system so the new coating bonds to the substrate rather than to a failing one.`,
+          ],
+        },
+        {
+          heading: `Working Around the ${suburb} Road Village and Station Precinct`,
+          body: [
+            `${suburb} Road is the suburb's village strip, and the precinct around it changed shape when the level crossing was removed and the station rebuilt below street level. We work on both sides of that — houses through the surrounding streets, and the shopfronts, consulting rooms and low-rise common property closer in.`,
+            `Commercial jobs here run on the tenant's clock, not ours. Shopfront and facade work is scheduled around trading hours, owners corporation work is staged so residents keep access to entries and car parks, and everything is covered by our $10 million public liability policy. It is the same crew and the same preparation standard as the residential work — only the timing changes.`,
+          ],
+        },
+        {
+          heading: `Getting a Quote in ${suburb}`,
+          body: [
+            `Every ${suburb} quote follows a site visit. There is no useful way to price a repaint from a photo or a floor plan, because the cost sits in the condition of the surfaces rather than the size of the house — how much render cracking there is, whether the eaves have been maintained, how many coats the previous owner skipped. We look at all of it, then put the scope and the preparation in writing so you can see exactly what you are paying for.`,
+            `Quotes are free, itemised and typically with you within 24 to 48 hours of the visit. Every job is backed by our 5-year written workmanship guarantee and carried out by a fully insured, VIC registered painting contractor. Call Jimmy on 0432 077 782 or email jimmy@jetblackpainting.com to arrange a time.`,
           ],
         },
       ]}

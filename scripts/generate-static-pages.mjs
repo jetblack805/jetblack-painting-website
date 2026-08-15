@@ -583,7 +583,15 @@ function reviewSchema(reviews) {
 // referenced here is already asserted in the visible copy of that same page, so
 // this varies the wording without inventing a single new claim about a suburb.
 const SUBURB_TRAITS = {
-  coastal: /coastal|bayside|salt air|beach|seaside|foreshore|waterfront/i,
+  // "bayside" is deliberately NOT here. It is a council name, not a geographic
+  // fact: the City of Bayside also covers Highett, Hampton East, Brighton East
+  // and Cheltenham, none of which front the water. Matching it made the
+  // generator assert "coastal exposure attacks coatings early" on an inland
+  // suburb purely because the page mentioned its council. Every genuinely
+  // coastal page also states coastal/salt air/beach/foreshore in its own copy
+  // and still matches on those — verified across all 96 suburb pages, where
+  // dropping this token changed exactly one page.
+  coastal: /coastal|salt air|beach|seaside|foreshore|waterfront/i,
   heritage: /heritage|period home|victorian|edwardian|federation|californian bungalow|art deco/i,
   weatherboard: /weatherboard/i,
   modern: /contemporary|modern home|new build|newly built|new estate|new-build/i,

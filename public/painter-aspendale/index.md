@@ -68,7 +68,7 @@ Yes — we offer a full range of painting services in Aspendale including interi
 
 ### How do I get a painting quote in Aspendale?
 
-Call Jimmy directly on 0432 077 782 or email jimmy@jetblackpainting.com. He'll arrange a time to visit your Aspendale property, assess the work and provide a free, detailed written quote — usually within 24 hours of the site visit.
+Call Jimmy directly on 0432 077 782 or email jimmy@jetblackpainting.com. He'll arrange a time to visit your Aspendale property, assess the work and provide a free, detailed written quote — usually within 24–48 hours of the site visit.
 
 **Jetblack Painting** — House Painters Aspendale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

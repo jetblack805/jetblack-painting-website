@@ -168,7 +168,7 @@ export default function QuoteForm() {
               Request a Free Painting Quote
             </h2>
             <p className="text-[#A3A3A8] text-lg max-w-2xl mx-auto">
-              Fill out the form below and we'll provide you with a detailed, no-obligation quote within 24 hours.
+              Fill out the form below and we'll provide you with a detailed, no-obligation quote within 24–48 hours.
             </p>
           </div>
 

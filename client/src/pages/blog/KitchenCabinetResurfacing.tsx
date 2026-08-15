@@ -178,7 +178,7 @@ export default function KitchenCabinetResurfacing() {
               <h3 className="text-xl font-bold text-[#EDEDEF] mb-3">Transform Your Kitchen Today</h3>
               <p className="text-[#B4B4B8] mb-4">
                 Get a free quote for professional kitchen cabinet resurfacing. We'll visit your home, assess your cabinets, 
-                and provide a detailed quote within 24 hours.
+                and provide a detailed quote within 24–48 hours.
               </p>
               <a
                 href="tel:0432077782"

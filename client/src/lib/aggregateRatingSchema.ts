@@ -4,7 +4,7 @@
  *
  * Based on verified Jetblack Painting Google Business Profile:
  * - 5.0 star rating
- * - 14+ verified reviews
+ * - 15+ verified reviews
  *
  * @see https://schema.org/AggregateRating
  */
@@ -12,7 +12,7 @@ export function aggregateRatingSchema(opts?: { ratingValue?: number; reviewCount
   return {
     "@type": "AggregateRating",
     "ratingValue": opts?.ratingValue ?? 5.0,
-    "reviewCount": opts?.reviewCount ?? 14,
+    "reviewCount": opts?.reviewCount ?? 15,
     "bestRating": 5,
     "worstRating": 1,
   };

@@ -211,7 +211,7 @@ export default function HousePaintingCostMelbourne() {
               <h3 className="text-xl font-bold text-[#EDEDEF] mb-3">Get Your Free Quote Today</h3>
               <p className="text-[#B4B4B8] mb-4">
                 Call us now for a free, no-obligation quote. We'll visit your property and provide a detailed 
-                written estimate within 24 hours.
+                written estimate within 24–48 hours.
               </p>
               <a
                 href="tel:0432077782"

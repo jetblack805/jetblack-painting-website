@@ -30,7 +30,7 @@ We've been serving Melbourne for over 13 years, building a reputation for qualit
 
 ### Do you provide references?
 
-Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 14 Google reviews.
+Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 15 Google reviews.
 
 ## Service Areas
 

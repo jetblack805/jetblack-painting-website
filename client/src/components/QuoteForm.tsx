@@ -185,7 +185,7 @@ export default function QuoteForm() {
                   </h3>
                   <p className="text-[#A3A3A8] mb-8">
                     {delivered
-                      ? "Jimmy will be in touch within 24 hours. If you'd rather not wait, call or text and you'll usually get an answer on the spot."
+                      ? "Jimmy will be in touch within 24–48 hours. If you'd rather not wait, call or text and you'll usually get an answer on the spot."
                       : "Pick whichever suits you. Calling gets the fastest answer — Jimmy usually picks up, and you can have a rough idea on the spot."}
                   </p>
 
@@ -428,8 +428,8 @@ export default function QuoteForm() {
               <div className="flex justify-center mb-3">
                 <Phone className="w-8 h-8 text-[#D0A050]" />
               </div>
-              <p className="text-[#EDEDEF] font-semibold">24-Hour Response</p>
-              <p className="text-[#A3A3A8] text-sm">We'll call you within 24 hours</p>
+              <p className="text-[#EDEDEF] font-semibold">24–48 Hour Response</p>
+              <p className="text-[#A3A3A8] text-sm">We'll call you within 24–48 hours</p>
             </div>
 
             <div className="text-center">

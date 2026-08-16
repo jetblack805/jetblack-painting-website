@@ -14,6 +14,14 @@ export default function MurrumbeenaPainters() {
     {
       question: `Do you offer free quotes in ${suburb}?`,
       answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and surrounding Glen Eira suburbs, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 or submit a request online.`
+    },
+    {
+      question: `Do you paint townhouses and new unit developments in ${suburb}?`,
+      answer: `Yes. A lot of ${suburb}'s larger blocks have been subdivided into townhouses and units over recent years, especially closer to the station and ${suburb} Park. These builds use render, Colorbond cladding and feature cladding rather than the timber and brick of the older bungalows, so we adjust preparation and coatings accordingly — and we're used to coordinating with owners corporations and multiple unit owners on the one job.`
+    },
+    {
+      question: `Do you handle investment property and rental turnover painting in ${suburb}?`,
+      answer: `Regularly. ${suburb}'s proximity to Chadstone Shopping Centre and the train line makes it popular with renters and investors, so a good share of our work here is turnover painting between tenancies — quick, tidy, budget-conscious repaints that get a property back on the market fast without cutting corners on prep.`
     }
   ];
 
@@ -46,6 +54,20 @@ export default function MurrumbeenaPainters() {
           body: [
             `${suburb}'s Californian bungalows and interwar homes have characterful rendered surfaces, brick detailing and original timber that genuinely benefit from proper preparation and period-sympathetic colours. We fill and seal render cracks, prime bare timber properly and take care with colour choices that suit the home's era and the street — so the finish looks right and lasts for years.`,
             `For ${suburb}'s renovated and contemporary homes, we deliver smooth, long-lasting interiors and weather-resistant exteriors using premium Dulux and Taubmans systems built for Melbourne's climate. Whatever the era, you get meticulous preparation and a finish designed to stand the test of time.`,
+          ],
+        },
+        {
+          heading: `Townhouses and Unit Developments Near ${suburb} Station`,
+          body: [
+            `${suburb} has seen steady infill development over the past decade, with older weatherboard blocks subdivided into modern townhouses and units, particularly within walking distance of ${suburb} Station and ${suburb} Park. These newer builds lean on render, Colorbond cladding and feature brickwork rather than the painted timber of the original bungalow stock, and we tailor our preparation and coating systems to suit — smooth, contemporary finishes that hold up to Melbourne's weather.`,
+            `Multi-unit projects often mean coordinating with an owners corporation or several individual owners on the one site. We provide clear written scopes, itemised pricing and the insurance documentation a committee needs before approving works, and we can stage access so residents aren't disrupted while the job is underway.`,
+          ],
+        },
+        {
+          heading: `Investment Properties and Rental Turnovers Near Chadstone`,
+          body: [
+            `${suburb}'s short run to Chadstone Shopping Centre and its position on the train line make it a popular suburb for renters, which means a meaningful share of our work here is turnover painting between tenancies. Landlords and property managers need a property repainted fast, on budget, and ready to re-list — we understand that timeline and work to it without skipping the preparation that makes a repaint actually last.`,
+            `Whether it's a single rental unit or a portfolio of properties across ${suburb} and neighbouring Glen Eira suburbs, we provide clear written quotes and can work around tenancy changeover dates to minimise vacancy periods for landlords.`,
           ],
         },
       ]}

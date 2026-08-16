@@ -28,6 +28,18 @@ Homes near the water in Mentone face salt air, strong UV and damp winters that b
 
 Mentone's Edwardian and interwar homes need careful, period-sympathetic work — bare timber priming, render repair and colours that suit the era. From heritage homes to rendered modern builds, we match the paint system to the surface for a durable, flawless result.
 
+## Beachfront Apartments and Modern Builds Along the Esplanade
+
+Closer to Beach Road and the esplanade, Mentone's housing shifts from the Edwardian and bungalow streets further inland to a stronger mix of apartment blocks, townhouses and newer architecturally-designed homes. These beachfront properties take the same battering from salt air and UV as anything else near the bay, so the coastal-grade preparation and coatings we use across Mentone apply just as much here — arguably more, given the direct water exposure.
+
+Multi-unit buildings along the foreshore often mean working with a body corporate on shared facades, stairwells, balustrades and common areas rather than a single homeowner. We provide the written scopes, itemised pricing and insurance certificates a committee needs to sign off on works, and we stage jobs to keep resident access open throughout.
+
+## Schools and Local Businesses Around Mentone
+
+Mentone isn't only a residential suburb — there's a genuine commercial strip along the Nepean Highway and Bay Road, and established schools including Mentone Grammar in the area. We take on commercial and facility painting alongside residential work: shopfront facades, signage surrounds and general maintenance repaints for local businesses.
+
+Commercial jobs come with the same clear, written scope as any residential quote, and we schedule around trading hours or school terms so the work doesn't get in the way of business as usual.
+
 ## What we paint in Mentone
 
 ### Interior painting
@@ -69,6 +81,14 @@ Salt air from Port Phillip Bay is a real factor in Mentone — it deposits on su
 ### Do you offer free quotes in Mentone?
 
 Yes. We provide free, no-obligation written quotes across Mentone and the surrounding Kingston area, with the full scope and preparation itemised up front so there are no surprises. Call Jimmy on 0432 077 782 or submit a request online — we're usually able to quote within a few days.
+
+### Do you paint apartments and units along the Mentone foreshore?
+
+Yes. The stretch closer to Beach Road and the esplanade has a good number of newer apartment and townhouse developments alongside the older Edwardian homes further inland. These beachfront builds face the same salt-air exposure as any Mentone property, so we use the same coastal-rated preparation and coatings, and we're experienced working with body corporates on shared facades, stairwells and common areas.
+
+### Do you do commercial painting around Mentone's schools and Nepean Highway businesses?
+
+Yes. Mentone has a solid commercial strip along the Nepean Highway and Bay Road, plus established schools including Mentone Grammar in the area, and we handle facade repaints, signage surrounds and general commercial maintenance for businesses and facilities as well as homes. Commercial jobs are quoted with clear scopes and scheduled to minimise disruption to trading hours or school terms.
 
 **Jetblack Painting** — House Painters Mentone | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

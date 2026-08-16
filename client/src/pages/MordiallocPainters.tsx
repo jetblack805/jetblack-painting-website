@@ -127,6 +127,14 @@ export default function MordiallocPainters() {
     {
       question: "How long does a typical house painting project take?",
       answer: "Most residential projects in Mordialloc are completed within 5 to 10 working days, depending on the size of the home and the extent of preparation required. We provide a detailed timeline with every quote to ensure minimal disruption to your daily life."
+    },
+    {
+      question: `Do you paint boat clubs, bowls clubs or other community buildings near ${suburb}'s foreshore?`,
+      answer: `Yes. ${suburb}'s foreshore and creek precinct has a strong community and recreational scene — boating, bowls and life saving clubs among them — and we've worked on this type of building as well as private homes. These jobs often mean larger surface areas, coordinating around club events and dealing with heavier salt-air exposure right on the water, all of which we're set up for.`
+    },
+    {
+      question: `Do you do commercial painting for shops and hospitality venues on ${suburb}'s Main Street?`,
+      answer: `Yes — being based in ${suburb} ourselves, we regularly paint shopfronts, cafes and other hospitality venues along Main Street and the Nepean Highway strip as well as homes. Commercial jobs are quoted with a clear written scope and scheduled around trading hours so the business isn't disrupted any more than it has to be.`
     }
   ];
 
@@ -158,6 +166,20 @@ export default function MordiallocPainters() {
           body: [
             "Being a beachside suburb on Port Phillip Bay, Mordialloc homes take a beating from salt air, strong UV and damp winter conditions. Paint that isn't prepared and applied correctly will blister, peel and fade far faster here than it would inland. We counter that with thorough salt washing, flexible exterior primers and premium weather-resistant topcoats from Dulux and Taubmans rated for coastal exposure.",
             "Weatherboard is everywhere in Mordialloc, and timber near the water needs particular care — proper filling, sanding, priming of bare timber and sharp caulking so moisture can't get behind the paint film. Whether it's a classic weatherboard beach house, a rendered façade or a Colorbond-and-render new build, we tailor the system to the surface so the finish lasts.",
+          ],
+        },
+        {
+          heading: `The Fishing Village Character Around the Pier and Creek`,
+          body: [
+            `${suburb} grew up as a fishing village around its creek mouth and pier, and that character is still visible today in the weatherboard cottages and boat clubs clustered near the foreshore. Being based here ourselves, we know these older coastal homes well — the timber needs proper priming and sealing, and anything within a street or two of the water gets the same salt-air-rated preparation and coatings we use right across the Bayside strip.`,
+            `The pier and creek precinct is also home to boating, bowls and life saving clubs, and we take on this kind of community and recreational building alongside private homes — larger surface areas, heavier salt exposure and often working around club events, all things we're used to managing.`,
+          ],
+        },
+        {
+          heading: `Commercial and Hospitality Painting on Main Street`,
+          body: [
+            `Being based in the 3195, we don't just paint homes around ${suburb} — we look after a good number of the shops, cafes and hospitality venues along Main Street and the Nepean Highway strip too. Commercial work here comes with its own considerations: trading hours to work around, shopfront signage to protect, and often a tighter timeline than a residential job.`,
+            `Every commercial quote is scoped clearly in writing up front, and we schedule work to minimise disruption to trade — early mornings, after hours or a staged approach depending on what the business needs.`,
           ],
         },
       ]}

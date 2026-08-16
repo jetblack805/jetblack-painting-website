@@ -23,6 +23,7 @@ export default function ArmadalePainters() {
       title="Armadale Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Armadale — Victorian, Edwardian terraces and renovated period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Windsor", link: "/painter-windsor" },
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Malvern", link: "/painter-malvern" },
         { name: "Hawthorn", link: "/painter-hawthorn" },

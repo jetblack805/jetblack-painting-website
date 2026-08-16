@@ -23,6 +23,7 @@ export default function BerwickPainters() {
       title="Berwick Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Berwick — established family houses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Endeavour Hills", link: "/painter-endeavour-hills" },
         { name: "Dandenong", link: "/painter-dandenong" },
         { name: "Keysborough", link: "/keysborough-painters" },
         { name: "Greater Dandenong", link: "/painter-greater-dandenong" },

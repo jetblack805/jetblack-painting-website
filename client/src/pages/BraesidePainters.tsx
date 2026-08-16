@@ -27,6 +27,7 @@ export default function BraesidePainters() {
       title="Braeside Painters | Home & Commercial | Jetblack Painting"
       description="Painters in Braeside for homes, warehouses and offices. Based minutes away in Mordialloc. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Waterways", link: "/painter-waterways" },
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Aspendale Gardens", link: "/painter-aspendale-gardens" },
         { name: "Dingley Village", link: "/painter-dingley-village" },

@@ -50,6 +50,7 @@ Fast-turnaround repainting for Mornington sales and rentals, in neutral colours 
 
 Explore nearby suburb pages for neighbouring areas around Mornington.
 
+- [Hastings](/painter-hastings/)
 - [Mornington Peninsula](/painter-mornington-peninsula/)
 - [Frankston](/painter-frankston/)
 - [Mount Eliza](/painter-mount-eliza/)

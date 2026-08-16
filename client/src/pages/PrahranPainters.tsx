@@ -51,6 +51,8 @@ export default function PrahranPainters() {
       title="Prahran Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Prahran — Art Deco flats and apartment blocks from the 1930s–1940s. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Windsor", link: "/painter-windsor" },
+        { name: "Richmond", link: "/painter-richmond" },
         { name: "South Yarra", link: "/painter-south-yarra" },
         { name: "Armadale", link: "/painter-armadale" },
         { name: "Malvern", link: "/painter-malvern" },

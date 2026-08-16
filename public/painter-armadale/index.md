@@ -50,6 +50,7 @@ Fast-turnaround repainting for Armadale sales and rentals, in neutral colours th
 
 Explore nearby suburb pages for neighbouring areas around Armadale.
 
+- [Windsor](/painter-windsor/)
 - [Toorak](/painter-toorak/)
 - [Malvern](/painter-malvern/)
 - [Hawthorn](/painter-hawthorn/)

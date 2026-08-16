@@ -50,6 +50,7 @@ Fast-turnaround repainting for Chelsea sales and rentals, in neutral colours tha
 
 Explore nearby suburb pages for neighbouring areas around Chelsea.
 
+- [Chelsea Heights](/painter-chelsea-heights/)
 - [Aspendale](/painter-aspendale/)
 - [Mordialloc](/painter-mordialloc/)
 - [Parkdale](/painter-parkdale/)

@@ -50,6 +50,7 @@ Fast-turnaround repainting to get Berwick properties market-ready — durable, e
 
 Explore nearby suburb pages for neighbouring areas around Berwick.
 
+- [Endeavour Hills](/painter-endeavour-hills/)
 - [Dandenong](/painter-dandenong/)
 - [Keysborough](/keysborough-painters/)
 - [Greater Dandenong](/painter-greater-dandenong/)

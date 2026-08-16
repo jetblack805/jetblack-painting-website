@@ -50,6 +50,8 @@ Fast-turnaround repainting to get Oakleigh properties market-ready — durable, 
 
 Explore nearby suburb pages for neighbouring areas around Oakleigh.
 
+- [Hughesdale](/painter-hughesdale/)
+- [Carnegie](/painter-carnegie/)
 - [Chadstone](/painter-chadstone/)
 - [Murrumbeena](/painter-murrumbeena/)
 - [Ormond](/painter-ormond/)

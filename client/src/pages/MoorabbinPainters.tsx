@@ -23,6 +23,7 @@ export default function MoorabbinPainters() {
       title="Moorabbin Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Moorabbin — interwar, weatherboard family homes and renovated residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hampton East", link: "/painter-hampton-east" },
         { name: "Mentone", link: "/painter-mentone" },
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Sandringham", link: "/painter-sandringham" },

@@ -23,6 +23,7 @@ export default function BoxHillPainters() {
       title="Box Hill Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Box Hill — Californian bungalows and interwar homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Balwyn", link: "/painter-balwyn" },
         { name: "Doncaster", link: "/painter-doncaster" },
         { name: "Donvale", link: "/painter-donvale" },
         { name: "Templestowe", link: "/painter-templestowe" },

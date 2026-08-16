@@ -56,6 +56,7 @@ export default function HighettPainters() {
       title="Highett Painters | House & Townhouse | Jetblack Painting"
       description="House painters in Highett — post-war brick homes, 1960s–1980s residences and modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hampton East", link: "/painter-hampton-east" },
         { name: "Cheltenham", link: "/painter-cheltenham" },
         { name: "Moorabbin", link: "/painter-moorabbin" },
         { name: "Hampton", link: "/painter-hampton" },

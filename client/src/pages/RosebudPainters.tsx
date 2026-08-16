@@ -27,6 +27,7 @@ export default function RosebudPainters() {
       title="Rosebud Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Rosebud — weatherboard, fibro beach houses and rendered permanent homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Sorrento", link: "/painter-sorrento" },
         { name: "Dromana", link: "/painter-dromana" },
         { name: "Mount Martha", link: "/painter-mount-martha" },
         { name: "Mornington", link: "/painter-mornington" },

@@ -51,6 +51,7 @@ export default function KewPainters() {
       title="Kew Painters | Heritage & Period Homes | Jetblack Painting"
       description="Heritage and period home painters in Kew — Edwardian mansions and modern architectural requirements. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Balwyn", link: "/painter-balwyn" },
         { name: "Hawthorn", link: "/painter-hawthorn" },
         { name: "Camberwell", link: "/painter-camberwell" },
         { name: "Toorak", link: "/painter-toorak" },

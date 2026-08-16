@@ -51,6 +51,7 @@ export default function MountMarthaPainters() {
       title="Mount Martha Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Mount Martha — fibro cottages near the lower foreshore. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hastings", link: "/painter-hastings" },
         { name: "Mornington", link: "/painter-mornington" },
         { name: "Mount Eliza", link: "/painter-mount-eliza" },
         { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },

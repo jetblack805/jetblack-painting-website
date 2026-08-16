@@ -23,6 +23,7 @@ export default function CamberwellPainters() {
       title="Camberwell Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Camberwell — Edwardian homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Balwyn", link: "/painter-balwyn" },
         { name: "Hawthorn", link: "/painter-hawthorn" },
         { name: "Malvern", link: "/painter-malvern" },
         { name: "Toorak", link: "/painter-toorak" },

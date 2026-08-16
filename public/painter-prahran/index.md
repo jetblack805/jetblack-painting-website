@@ -50,6 +50,8 @@ Fast-turnaround repainting for Prahran sales and rentals, in neutral colours tha
 
 Explore nearby suburb pages for neighbouring areas around Prahran.
 
+- [Windsor](/painter-windsor/)
+- [Richmond](/painter-richmond/)
 - [South Yarra](/painter-south-yarra/)
 - [Armadale](/painter-armadale/)
 - [Malvern](/painter-malvern/)

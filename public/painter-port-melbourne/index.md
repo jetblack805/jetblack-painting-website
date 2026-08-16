@@ -46,6 +46,7 @@ Fast-turnaround repainting for Port Melbourne sales and rentals, in neutral colo
 
 Explore nearby suburb pages for neighbouring areas around Port Melbourne.
 
+- [South Melbourne](/painter-south-melbourne/)
 - [South Yarra](/painter-south-yarra/)
 - [St Kilda](/painter-st-kilda/)
 - [Elwood](/painter-elwood/)

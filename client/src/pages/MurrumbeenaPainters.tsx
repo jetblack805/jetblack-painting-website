@@ -23,6 +23,8 @@ export default function MurrumbeenaPainters() {
       title="Murrumbeena Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Murrumbeena — Californian bungalows and interwar. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hughesdale", link: "/painter-hughesdale" },
+        { name: "Carnegie", link: "/painter-carnegie" },
         { name: "McKinnon", link: "/painter-mckinnon" },
         { name: "Ormond", link: "/painter-ormond" },
         { name: "Bentleigh", link: "/painter-bentleigh" },

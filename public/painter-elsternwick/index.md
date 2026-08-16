@@ -50,6 +50,7 @@ Fast-turnaround repainting for Elsternwick sales and rentals, in neutral colours
 
 Explore nearby suburb pages for neighbouring areas around Elsternwick.
 
+- [Brighton East](/painter-brighton-east/)
 - [Caulfield](/painter-caulfield/)
 - [Brighton](/painter-brighton/)
 - [Malvern](/painter-malvern/)

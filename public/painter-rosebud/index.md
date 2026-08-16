@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Rosebud properties market-ready — durable, e
 
 Explore nearby suburb pages for neighbouring areas around Rosebud.
 
+- [Sorrento](/painter-sorrento/)
 - [Dromana](/painter-dromana/)
 - [Mount Martha](/painter-mount-martha/)
 - [Mornington](/painter-mornington/)

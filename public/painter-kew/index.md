@@ -50,6 +50,7 @@ Fast-turnaround repainting for Kew sales and rentals, in neutral colours that le
 
 Explore nearby suburb pages for neighbouring areas around Kew.
 
+- [Balwyn](/painter-balwyn/)
 - [Hawthorn](/painter-hawthorn/)
 - [Camberwell](/painter-camberwell/)
 - [Toorak](/painter-toorak/)

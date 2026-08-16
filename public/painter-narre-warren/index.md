@@ -46,6 +46,8 @@ Fast-turnaround repainting to get Narre Warren properties market-ready — durab
 
 Explore nearby suburb pages for neighbouring areas around Narre Warren.
 
+- [Endeavour Hills](/painter-endeavour-hills/)
+- [Clyde](/painter-clyde/)
 - [Berwick](/painter-berwick/)
 - [Dandenong](/painter-dandenong/)
 - [Greater Dandenong](/painter-greater-dandenong/)

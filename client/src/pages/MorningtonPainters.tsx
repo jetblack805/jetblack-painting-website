@@ -51,6 +51,7 @@ export default function MorningtonPainters() {
       title="Mornington Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Mornington — beach houses, weatherboard cottages and modern coastal homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hastings", link: "/painter-hastings" },
         { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },
         { name: "Frankston", link: "/painter-frankston" },
         { name: "Mount Eliza", link: "/painter-mount-eliza" },

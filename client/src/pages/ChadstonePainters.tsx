@@ -48,6 +48,8 @@ export default function ChadsonePainters() {
       title="Chadstone Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Chadstone — post-war brick homes and 1960s–1980s residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hughesdale", link: "/painter-hughesdale" },
+        { name: "Malvern East", link: "/painter-malvern-east" },
         { name: "Oakleigh", link: "/painter-oakleigh" },
         { name: "Murrumbeena", link: "/painter-murrumbeena" },
         { name: "Glen Waverley", link: "/painter-glen-waverley" },

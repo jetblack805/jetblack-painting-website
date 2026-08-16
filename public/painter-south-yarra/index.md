@@ -50,6 +50,7 @@ Fast-turnaround repainting for South Yarra sales and rentals, in neutral colours
 
 Explore nearby suburb pages for neighbouring areas around South Yarra.
 
+- [Richmond](/painter-richmond/)
 - [Toorak](/painter-toorak/)
 - [Malvern](/painter-malvern/)
 - [Hawthorn](/painter-hawthorn/)

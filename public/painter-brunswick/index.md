@@ -46,6 +46,7 @@ Fast-turnaround repainting for Brunswick sales and rentals, in neutral colours t
 
 Explore nearby suburb pages for neighbouring areas around Brunswick.
 
+- [Thornbury](/painter-thornbury/)
 - [Northcote](/painter-northcote/)
 - [Fitzroy](/painter-fitzroy/)
 - [Carlton](/painter-carlton/)

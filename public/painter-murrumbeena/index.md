@@ -50,6 +50,8 @@ Fast-turnaround repainting for Murrumbeena sales and rentals, in neutral colours
 
 Explore nearby suburb pages for neighbouring areas around Murrumbeena.
 
+- [Hughesdale](/painter-hughesdale/)
+- [Carnegie](/painter-carnegie/)
 - [McKinnon](/painter-mckinnon/)
 - [Ormond](/painter-ormond/)
 - [Bentleigh](/painter-bentleigh/)

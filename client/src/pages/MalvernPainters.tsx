@@ -23,6 +23,7 @@ export default function MalvernPainters() {
       title="Malvern Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Malvern — Edwardian residences and Victorian terraces. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Malvern East", link: "/painter-malvern-east" },
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Camberwell", link: "/painter-camberwell" },
         { name: "Caulfield", link: "/painter-caulfield" },

@@ -50,6 +50,8 @@ Fast-turnaround repainting to get Chadstone properties market-ready — durable,
 
 Explore nearby suburb pages for neighbouring areas around Chadstone.
 
+- [Hughesdale](/painter-hughesdale/)
+- [Malvern East](/painter-malvern-east/)
 - [Oakleigh](/painter-oakleigh/)
 - [Murrumbeena](/painter-murrumbeena/)
 - [Glen Waverley](/painter-glen-waverley/)

@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Patterson Lakes properties market-ready — du
 
 Explore nearby suburb pages for neighbouring areas around Patterson Lakes.
 
+- [Chelsea Heights](/painter-chelsea-heights/)
 - [Carrum](/painter-carrum/)
 - [Bonbeach](/painter-bonbeach/)
 - [Chelsea](/painter-chelsea/)

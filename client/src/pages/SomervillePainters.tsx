@@ -55,6 +55,7 @@ export default function SomervillePainters() {
       title="Somerville Painters | Family Homes | Jetblack Painting"
       description="House painters in Somerville — brick veneer family homes, acreage properties and newer estate builds. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hastings", link: "/painter-hastings" },
         { name: "Frankston", link: "/painter-frankston" },
         { name: "Frankston South", link: "/painter-frankston-south" },
         { name: "Mornington", link: "/painter-mornington" },

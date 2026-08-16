@@ -50,6 +50,7 @@ Fast-turnaround repainting for Malvern sales and rentals, in neutral colours tha
 
 Explore nearby suburb pages for neighbouring areas around Malvern.
 
+- [Malvern East](/painter-malvern-east/)
 - [Toorak](/painter-toorak/)
 - [Camberwell](/painter-camberwell/)
 - [Caulfield](/painter-caulfield/)

@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Rye properties market-ready — durable, easy-
 
 Explore nearby suburb pages for neighbouring areas around Rye.
 
+- [Sorrento](/painter-sorrento/)
 - [Rosebud](/painter-rosebud/)
 - [Dromana](/painter-dromana/)
 - [Safety Beach](/painter-safety-beach/)

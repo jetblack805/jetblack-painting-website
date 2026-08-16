@@ -57,6 +57,7 @@ Explore nearby suburb pages for neighbouring areas around Hampton.
 - [Bentleigh](/painter-bentleigh/)
 - [Cheltenham](/painter-cheltenham/)
 - [Mordialloc](/painter-mordialloc/)
+- [Highett](/painter-highett/)
 
 ## Frequently asked questions about painters in Hampton
 

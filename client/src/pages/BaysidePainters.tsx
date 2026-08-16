@@ -55,7 +55,8 @@ export default function BaysidePainters() {
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Sandringham", link: "/painter-sandringham" },
         { name: "Black Rock", link: "/painter-black-rock" },
-        { name: "Beaumaris", link: "/painter-beaumaris" }
+        { name: "Beaumaris", link: "/painter-beaumaris" },
+        { name: "Highett", link: "/painter-highett" }
       ]}
       localExpertise={`Based in Mordialloc, right at the southern edge of the Bayside council area, we're a genuinely local painter for the whole Bayside coastline. We've painted homes in Brighton, Hampton, Sandringham, Beaumaris and Black Rock for years and understand the coastal conditions, the heritage properties, and the premium finish standards these suburbs expect.`}
       propertyTypes={`Bayside's property mix spans Victorian and Edwardian period homes in Brighton, classic weatherboard beach cottages in Hampton and Sandringham, mid-century architect-designed homes in Beaumaris and luxury contemporary residences throughout — each requiring a tailored preparation and coating approach.`}

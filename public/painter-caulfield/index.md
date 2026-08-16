@@ -53,7 +53,7 @@ Explore nearby suburb pages for neighbouring areas around Caulfield.
 - [Malvern East](/painter-malvern-east/)
 - [Bentleigh](/painter-bentleigh/)
 - [Malvern](/painter-malvern/)
-- [Brighton](/painter-brighton/)
+- [Highett](/painter-highett/)
 - [Elsternwick](/painter-elsternwick/)
 - [McKinnon](/painter-mckinnon/)
 

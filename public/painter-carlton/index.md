@@ -53,7 +53,7 @@ Explore nearby suburb pages for neighbouring areas around Carlton.
 - [South Yarra](/painter-south-yarra/)
 - [Kew](/painter-kew/)
 - [Hawthorn](/painter-hawthorn/)
-- [Toorak](/painter-toorak/)
+- [Collingwood](/painter-collingwood/)
 - [Armadale](/painter-armadale/)
 
 ## Frequently asked questions about painters in Carlton

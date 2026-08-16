@@ -54,7 +54,7 @@ export default function CarltonPainters() {
         { name: "South Yarra", link: "/painter-south-yarra" },
         { name: "Kew", link: "/painter-kew" },
         { name: "Hawthorn", link: "/painter-hawthorn" },
-        { name: "Toorak", link: "/painter-toorak" },
+        { name: "Collingwood", link: "/painter-collingwood" },
         { name: "Armadale", link: "/painter-armadale" }
       ]}
       localExpertise={`Serving the vibrant Carlton community, we are experts in the restoration of iconic Victorian terrace houses. We understand the intricacies of Carlton's heritage architecture and the specific requirements for maintaining these historic properties within the City of Melbourne.`}

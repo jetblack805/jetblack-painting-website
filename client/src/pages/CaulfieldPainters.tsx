@@ -31,7 +31,7 @@ export default function CaulfieldPainters() {
         { name: "Malvern East", link: "/painter-malvern-east" },
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Malvern", link: "/painter-malvern" },
-        { name: "Brighton", link: "/painter-brighton" },
+        { name: "Highett", link: "/painter-highett" },
         { name: "Elsternwick", link: "/painter-elsternwick" },
         { name: "McKinnon", link: "/painter-mckinnon" },
       ]}

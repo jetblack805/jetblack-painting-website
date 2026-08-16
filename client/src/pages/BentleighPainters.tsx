@@ -30,7 +30,7 @@ export default function BentleighPainters() {
       neighbouringSuburbs={[
         { name: "Bentleigh East", link: "/painter-bentleigh-east" },
         { name: "Caulfield", link: "/painter-caulfield" },
-        { name: "Brighton", link: "/painter-brighton" },
+        { name: "Highett", link: "/painter-highett" },
         { name: "Hampton", link: "/painter-hampton" },
         { name: "McKinnon", link: "/painter-mckinnon" },
         { name: "Moorabbin", link: "/painter-moorabbin" },

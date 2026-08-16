@@ -28,6 +28,18 @@ Many Toorak homes sit within heritage overlays, where colour schemes and prepara
 
 For contemporary Toorak residences, we deliver the crisp, seamless modern finishes — deep matte walls, high-durability enamels and specialist coatings — that designer homes are built around. Whichever era your home belongs to, we use only premium materials and proven systems so the result looks immaculate and holds up for years.
 
+## Beyond the House: Fences, Gates and Garden Structures
+
+Toorak's larger estates carry as much paintable surface outside the house as in it — rendered or bagged boundary walls, wrought-iron perimeter gates and fencing, pergolas, pool houses and garden pavilions set well back from the street. These get scoped and quoted as part of the same job rather than treated as an afterthought, because a freshly painted house next to a peeling boundary wall undercuts the result.
+
+Wrought-iron gates and railings need the same rust treatment as any exterior metalwork — sanded or wire-brushed back to sound metal, a rust-inhibiting primer, then enamel — and estates with established gardens mean protecting mature planting and irrigation lines during work, not just drop-sheeting a lawn.
+
+## Working Discreetly on Toorak's Private Estates
+
+Privacy matters as much as the finish on many Toorak properties. Crew details and vehicle access are confirmed ahead of time, work is scheduled around the household rather than the other way around, and we're used to working alongside security systems, gated access and staff without disruption to daily life.
+
+For heritage estates, we keep records of the exact colour formulations used so a future touch-up or a garden-structure repaint years later matches without guesswork — useful on a property where the palette was chosen carefully once and is meant to stay that way.
+
 ## What we paint in Toorak
 
 ### Interior painting
@@ -69,6 +81,18 @@ Yes, we provide professional colour consultation services tailored to Toorak's u
 ### How do you ensure minimal disruption during a large painting project in Toorak?
 
 We understand the importance of privacy and cleanliness. Our team follows a strict protocol for site management, using high-quality drop sheets, dust extraction systems, and organized workflows to ensure your Toorak home remains clean and functional throughout the project.
+
+### Do you paint garden walls, fences, pool houses and other structures as well as the main residence?
+
+Yes — on larger Toorak properties these are scoped as part of the one job. Rendered boundary walls, wrought-iron gates and railings, pergolas and garden pavilions all get the same standard of preparation as the house, quoted together so the whole property reads as one finished result rather than the house looking fresh next to a peeling fence.
+
+### How do you handle privacy and security on a private Toorak estate?
+
+We confirm crew and vehicle details ahead of time, work around the household's schedule rather than the reverse, and are used to operating around gated access, security systems and staff without disruption. If a property has specific requirements — restricted areas, timing around family privacy — we work to them.
+
+### Can you match an existing heritage colour scheme exactly if I only need part of the property repainted?
+
+Yes. We keep a record of the exact paint codes and formulations used on a property so a later touch-up, a garden structure, or an extension matches the original scheme rather than being an obvious mismatch — useful when a palette was chosen carefully and is meant to stay consistent over time.
 
 **Jetblack Painting** — House Painters Toorak | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

@@ -28,6 +28,18 @@ Camberwell's Edwardian homes and Californian bungalows have distinctive timber d
 
 For Camberwell's renovated and modern properties, we deliver smooth contemporary finishes using premium Dulux and Taubmans coatings built to handle Melbourne's climate and stay looking sharp for years. Whichever era your home is, the standard stays the same: meticulous preparation and a finish applied by a team that treats your property with respect.
 
+## Tudor Revival Detailing Around Camberwell
+
+Alongside the Edwardian homes and Californian bungalows, pockets of Camberwell — particularly the streets developed through the 1920s and 30s — carry Tudor Revival style homes with decorative half-timbering: dark timber battens set against a lighter rendered or roughcast infill. That contrast is deliberate and needs to stay crisp, which means masking and cutting in cleanly between the two rather than letting one colour bleed into the other.
+
+The timber battens themselves are usually solid and structural rather than a decorative veneer, so they get treated as real exterior timber — sanded back, primed and finished in a durable enamel that holds the contrast against the render for years rather than fading to the same tone.
+
+## Camberwell Junction and the Shopping Strip
+
+The shops around Camberwell Junction share party walls and awnings much like a terrace row, and the practical challenge is different from a standalone shopfront — access for scaffolding is tighter, awning posts and verandah bullnoses need their own preparation separate from the facade above, and trading hours across a strip of adjoining businesses have to be worked around rather than just one tenant's.
+
+We scope Junction and strip shopfront work the same way we would a row of terraces — condition-assessed individually even where the buildings share a wall, so one tenancy's peeling paint doesn't get lumped into a neighbour's still-sound coating, or vice versa.
+
 ## What we paint in Camberwell
 
 ### Interior painting
@@ -70,6 +82,14 @@ Most Camberwell homes are completed within 5 to 10 working days depending on siz
 ### Do you offer free quotes in Camberwell?
 
 Absolutely. We provide free, no-obligation written quotes across Camberwell, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 or submit a request online to arrange a visit.
+
+### Do you paint the Tudor Revival, mock-Tudor style homes in Camberwell?
+
+Yes. The decorative timber battens set against rendered infill on Camberwell's Tudor Revival homes need to be treated as real structural timber — sanded, primed and finished separately from the render — so the contrast between the two stays sharp rather than blurring together over time.
+
+### Can you paint a shopfront around Camberwell Junction?
+
+Yes. Strip shopfronts around the Junction share party walls and awnings, so we assess each tenancy's condition individually rather than treating the row as one job, and work around trading hours the same way we would for any occupied commercial strip.
 
 **Jetblack Painting** — House Painters Camberwell | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

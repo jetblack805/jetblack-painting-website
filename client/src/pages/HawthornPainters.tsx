@@ -18,6 +18,14 @@ export default function HawthornPainters() {
     {
       question: `Do you also paint the newer townhouses and apartments in ${suburb}?`,
       answer: `Yes. ${suburb} pairs its period streets with contemporary townhouses and apartment developments, and we work across both — including owners-corporation common areas, with the written scope and insurance documentation committees need up front.`
+    },
+    {
+      question: `Do you treat weatherboard homes differently from the rendered terraces in ${suburb}?`,
+      answer: `Yes, as different jobs entirely. Weatherboard fails at the board edges and laps first and needs a flexible coating that moves with the timber; render fails through cracking and needs a masonry system that bridges hairline cracks. We assess the substrate before quoting rather than pricing every exterior the same way.`
+    },
+    {
+      question: `Does being close to the Yarra affect how you approach a repaint in ${suburb}?`,
+      answer: `It can. Lower-lying streets nearer the river hold more moisture, and that shows up as damp patches, mould behind gutters or paint lifting where water sits. We check for the actual cause before quoting — if there's a drainage or rising-damp issue contributing, we'll say so, because painting over it without fixing the source only buys a year or two.`
     }
   ];
 
@@ -49,6 +57,20 @@ export default function HawthornPainters() {
           body: [
             `${suburb}'s period architecture rewards careful, experienced work. We handle the specifics of Victorian and Federation homes — lead-paint-safe preparation, detailed restoration of timber fretwork and cast-iron lacework, and heritage-appropriate colour schemes that suit both the property's era and any local heritage overlay. Done properly, the finish protects the home's character and its considerable value.`,
             `For ${suburb}'s modern properties and renovations, we use premium Dulux and Taubmans systems for crisp, long-lasting interiors and weather-resistant exteriors built for Melbourne's conditions. Whatever the era, the standard stays the same: meticulous preparation, premium coatings, and a finish applied by a team that respects your property.`,
+          ],
+        },
+        {
+          heading: `Weatherboard and Federation Homes Beyond Grace Park`,
+          body: [
+            `Not every ${suburb} street is Victorian terrace and render. Move away from Grace Park and the immediate Yarra-side streets and there's a real run of Federation-era weatherboard homes, particularly through the streets east toward Auburn and Camberwell — different substrate, different failure pattern. Weatherboards fail at the board edges and laps first, not across the face, so preparation means scraping and priming those edges specifically rather than a blanket sand of the whole wall.`,
+            `We treat weatherboard and render as genuinely different jobs rather than one painting service applied to both. Timber gets flexible, breathable coatings that move with the board as it expands and contracts; render gets a masonry system that seals and bridges hairline cracking. Using the wrong system on either substrate is the most common cause of an exterior repaint failing early.`,
+          ],
+        },
+        {
+          heading: `Moisture and Damp Near the Yarra`,
+          body: [
+            `The streets running down toward the river sit lower and hold more moisture than the higher parts of ${suburb}, and that shows up in exterior paint failing faster — persistent damp at the base of walls, mould behind gutters, coatings lifting where water sits rather than draining. Before quoting a repaint on a property in this zone we check for the actual cause rather than just painting over the symptom.`,
+            `Where rising damp or a drainage issue is contributing, painting over it without addressing the source just buys a year or two before it happens again. We'll say so plainly at the quote stage — sometimes the honest advice is to fix the water problem first and repaint once the wall has had a chance to dry out.`,
           ],
         },
       ]}

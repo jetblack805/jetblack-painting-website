@@ -28,6 +28,18 @@ Being a beachside suburb on Port Phillip Bay, Mordialloc homes take a beating fr
 
 Weatherboard is everywhere in Mordialloc, and timber near the water needs particular care — proper filling, sanding, priming of bare timber and sharp caulking so moisture can't get behind the paint film. Whether it's a classic weatherboard beach house, a rendered façade or a Colorbond-and-render new build, we tailor the system to the surface so the finish lasts.
 
+## The Fishing Village Character Around the Pier and Creek
+
+Mordialloc grew up as a fishing village around its creek mouth and pier, and that character is still visible today in the weatherboard cottages and boat clubs clustered near the foreshore. Being based here ourselves, we know these older coastal homes well — the timber needs proper priming and sealing, and anything within a street or two of the water gets the same salt-air-rated preparation and coatings we use right across the Bayside strip.
+
+The pier and creek precinct is also home to boating, bowls and life saving clubs, and we take on this kind of community and recreational building alongside private homes — larger surface areas, heavier salt exposure and often working around club events, all things we're used to managing.
+
+## Commercial and Hospitality Painting on Main Street
+
+Being based in the 3195, we don't just paint homes around Mordialloc — we look after a good number of the shops, cafes and hospitality venues along Main Street and the Nepean Highway strip too. Commercial work here comes with its own considerations: trading hours to work around, shopfront signage to protect, and often a tighter timeline than a residential job.
+
+Every commercial quote is scoped clearly in writing up front, and we schedule work to minimise disruption to trade — early mornings, after hours or a staged approach depending on what the business needs.
+
 ## What we paint in Mordialloc
 
 ### Interior painting
@@ -70,6 +82,14 @@ We have extensive experience with Mordialloc's diverse architecture, from classi
 ### How long does a typical house painting project take?
 
 Most residential projects in Mordialloc are completed within 5 to 10 working days, depending on the size of the home and the extent of preparation required. We provide a detailed timeline with every quote to ensure minimal disruption to your daily life.
+
+### Do you paint boat clubs, bowls clubs or other community buildings near Mordialloc's foreshore?
+
+Yes. Mordialloc's foreshore and creek precinct has a strong community and recreational scene — boating, bowls and life saving clubs among them — and we've worked on this type of building as well as private homes. These jobs often mean larger surface areas, coordinating around club events and dealing with heavier salt-air exposure right on the water, all of which we're set up for.
+
+### Do you do commercial painting for shops and hospitality venues on Mordialloc's Main Street?
+
+Yes — being based in Mordialloc ourselves, we regularly paint shopfronts, cafes and other hospitality venues along Main Street and the Nepean Highway strip as well as homes. Commercial jobs are quoted with a clear written scope and scheduled around trading hours so the business isn't disrupted any more than it has to be.
 
 **Jetblack Painting** — House Painters Mordialloc | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

@@ -70,7 +70,7 @@ export default function FitzroyPainters() {
         { name: "Carlton", link: "/painter-carlton" },
         { name: "Prahran", link: "/painter-prahran" },
         { name: "St Kilda", link: "/painter-st-kilda" },
-        { name: "Hawthorn", link: "/painter-hawthorn" },
+        { name: "Collingwood", link: "/painter-collingwood" },
         { name: "Malvern", link: "/painter-malvern" }
       ]}
       faqs={faqs}

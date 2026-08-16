@@ -30,6 +30,7 @@ export default function HamptonPainters() {
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Cheltenham", link: "/painter-cheltenham" },
         { name: "Mordialloc", link: "/painter-mordialloc" },
+        { name: "Highett", link: "/painter-highett" },
       ]}
       localExpertise={`We understand ${suburb}'s coastal properties and the unique challenges of Bayside painting. From classic weatherboard cottages and period homes on the streets behind ${suburb} Street to modern beach residences closer to the foreshore, our team uses weather-resistant coatings and thorough preparation systems that protect against salt air, UV and Melbourne's variable coastal climate.`}
       propertyTypes={`${suburb}'s weatherboard cottages, period homes, modern beach residences and rendered contemporary builds across ${suburb} and Hampton East.`}

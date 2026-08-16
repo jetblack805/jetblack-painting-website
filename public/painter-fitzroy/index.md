@@ -50,7 +50,7 @@ Explore nearby suburb pages for neighbouring areas around Fitzroy.
 - [Carlton](/painter-carlton/)
 - [Prahran](/painter-prahran/)
 - [St Kilda](/painter-st-kilda/)
-- [Hawthorn](/painter-hawthorn/)
+- [Collingwood](/painter-collingwood/)
 - [Malvern](/painter-malvern/)
 
 ## Frequently asked questions about painters in Fitzroy

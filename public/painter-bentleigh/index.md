@@ -52,7 +52,7 @@ Explore nearby suburb pages for neighbouring areas around Bentleigh.
 
 - [Bentleigh East](/painter-bentleigh-east/)
 - [Caulfield](/painter-caulfield/)
-- [Brighton](/painter-brighton/)
+- [Highett](/painter-highett/)
 - [Hampton](/painter-hampton/)
 - [McKinnon](/painter-mckinnon/)
 - [Moorabbin](/painter-moorabbin/)

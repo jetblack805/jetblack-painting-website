@@ -55,6 +55,7 @@ Explore nearby suburb pages for neighbouring areas around Bayside.
 - [Sandringham](/painter-sandringham/)
 - [Black Rock](/painter-black-rock/)
 - [Beaumaris](/painter-beaumaris/)
+- [Highett](/painter-highett/)
 
 ## Frequently asked questions about painters in Bayside
 

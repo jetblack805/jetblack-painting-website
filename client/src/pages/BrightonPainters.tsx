@@ -42,6 +42,18 @@ export default function BrightonPainters() {
     {
       question: "Are your painters licensed and insured to work on luxury Brighton residences?",
       answer: "Absolutely. All our painters are fully licensed, and we carry $10 million in public liability insurance. We pride ourselves on our professional conduct and respect for the high-end properties we work on in Brighton."
+    },
+    {
+      question: "Do I need a permit to repaint a heritage-overlay home in Brighton?",
+      answer: "It depends on the colour and the element. Bayside's heritage overlay generally controls what's visible from the street on a contributory building — repainting an existing colour scheme like-for-like is usually exempt, but a significant colour change to a street-facing facade, or work to original render detailing and joinery, can trigger a planning permit. We check the specific overlay and property grading before quoting and tell you plainly whether a permit applies, rather than assuming either way."
+    },
+    {
+      question: "Can you paint a brand new architect-built home in Brighton, not just heritage restorations?",
+      answer: "Yes — a large share of our Brighton work now is new architect-designed builds rather than heritage restoration, reflecting how much of the suburb has gone through knockdown-rebuild in the last decade. New render needs to cure fully before coating and gets tested for moisture and alkalinity first, since painting too early traps moisture and causes early failure. We work with builders and owners on the handover timeline so the first coat goes on when the substrate is actually ready, not just when the scaffold comes down."
+    },
+    {
+      question: "How do you protect an occupied, furnished home during painting in Brighton?",
+      answer: "Full drop sheeting, furniture moved and covered rather than worked around, and floors protected before anything is opened. On a high-value property we walk the scope with you first so there's no ambiguity about what's being painted and what isn't, and the crew works room by room so the rest of the house stays liveable. Every job finishes with a walk-through before we consider it done."
     }
   ];
 
@@ -73,6 +85,20 @@ export default function BrightonPainters() {
           body: [
             "Brighton's heritage homes need more than a coat of paint. We handle the specifics of Victorian and Edwardian properties — lead-paint-safe preparation, meticulous timber and ornamental restoration, and authentic heritage colour schemes that suit the era and any overlay requirements. The result protects the home's value and keeps its character intact.",
             "Sitting right on Port Phillip Bay, Brighton homes also face constant salt air and coastal weather. We use high-performance, salt-resistant coatings and thorough surface preparation so exteriors stay protected against the elements and hold their finish far longer than a standard repaint would in this environment.",
+          ],
+        },
+        {
+          heading: "Brighton's Knockdown-Rebuild and Architect-Designed Homes",
+          body: [
+            "Brighton has one of the highest knockdown-rebuild rates in Melbourne, and a large share of our work here now is brand new architect-designed homes rather than heritage restoration. Render is the dominant facade material across both eras — the difference is that new render needs to fully cure before it can be coated, and we test for surface moisture and alkalinity rather than painting the moment the scaffold comes down. Coat a green wall too early and the finish fails within a season, no matter how good the paint is.",
+            "We work directly with builders around handover timelines on new builds, and separately handle the render, cladding and joinery combinations that show up on architect-designed homes — standing-seam metal, timber cladding, off-form concrete panels — each needing its own primer and coating system rather than one product across the lot.",
+          ],
+        },
+        {
+          heading: "Heritage Overlays Around the Golden Mile and Church Street Precinct",
+          body: [
+            "Much of Brighton sits within Bayside's heritage overlay, particularly through the Golden Mile and the streets around Church Street and New Street. What that means for a repaint varies by property grading and by what's actually visible from the street — a like-for-like recolour of an existing scheme is usually straightforward, while a significant change to a contributory building's street-facing facade can require a planning permit first.",
+            "We check the specific overlay and grading for the property before quoting, so you know upfront whether a permit conversation is needed rather than finding out halfway through a job. For homes not under overlay, there's more freedom in colour and finish — we scope both the same way, with the constraints made clear from the first visit.",
           ],
         },
       ]}

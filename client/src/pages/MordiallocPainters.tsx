@@ -136,6 +136,7 @@ export default function MordiallocPainters() {
       title="Mordialloc Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Mordialloc — contemporary bayside residences and ensuring a flawless. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Waterways", link: "/painter-waterways" },
         { name: "Parkdale", link: "/painter-parkdale" },
         { name: "Mentone", link: "/painter-mentone" },
         { name: "Aspendale", link: "/painter-aspendale" },

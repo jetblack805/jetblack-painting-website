@@ -23,6 +23,8 @@ export default function HamptonPainters() {
       title="Hampton Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Hampton — weatherboard cottages, period homes and modern beach residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Hampton East", link: "/painter-hampton-east" },
+        { name: "Brighton East", link: "/painter-brighton-east" },
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Sandringham", link: "/painter-sandringham" },
         { name: "Bentleigh", link: "/painter-bentleigh" },

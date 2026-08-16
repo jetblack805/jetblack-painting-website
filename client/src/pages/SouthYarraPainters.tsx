@@ -51,6 +51,7 @@ export default function SouthYarraPainters() {
       title="South Yarra Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in South Yarra — Victorian terraces, apartments and townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Richmond", link: "/painter-richmond" },
         { name: "Toorak", link: "/painter-toorak" },
         { name: "Malvern", link: "/painter-malvern" },
         { name: "Hawthorn", link: "/painter-hawthorn" },

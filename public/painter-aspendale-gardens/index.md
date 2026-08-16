@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Aspendale Gardens properties market-ready — 
 
 Explore nearby suburb pages for neighbouring areas around Aspendale Gardens.
 
+- [Waterways](/painter-waterways/)
 - [Aspendale](/painter-aspendale/)
 - [Mordialloc](/painter-mordialloc/)
 - [Edithvale](/painter-edithvale/)

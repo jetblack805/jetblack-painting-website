@@ -50,6 +50,7 @@ Fast-turnaround repainting for Bentleigh sales and rentals, in neutral colours t
 
 Explore nearby suburb pages for neighbouring areas around Bentleigh.
 
+- [Bentleigh East](/painter-bentleigh-east/)
 - [Caulfield](/painter-caulfield/)
 - [Brighton](/painter-brighton/)
 - [Hampton](/painter-hampton/)

@@ -78,6 +78,7 @@ export default function BrunswickPainters() {
         }
       ]}
       neighbouringSuburbs={[
+        { name: "Thornbury", link: "/painter-thornbury" },
         { name: "Northcote", link: "/painter-northcote" },
         { name: "Fitzroy", link: "/painter-fitzroy" },
         { name: "Carlton", link: "/painter-carlton" },

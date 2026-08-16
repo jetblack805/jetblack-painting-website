@@ -62,6 +62,7 @@ Fast-turnaround repainting to get Highett properties market-ready — durable, e
 
 Explore nearby suburb pages for neighbouring areas around Highett.
 
+- [Hampton East](/painter-hampton-east/)
 - [Cheltenham](/painter-cheltenham/)
 - [Moorabbin](/painter-moorabbin/)
 - [Hampton](/painter-hampton/)

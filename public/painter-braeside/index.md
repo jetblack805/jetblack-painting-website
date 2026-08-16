@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Braeside properties market-ready — durable, 
 
 Explore nearby suburb pages for neighbouring areas around Braeside.
 
+- [Waterways](/painter-waterways/)
 - [Mordialloc](/painter-mordialloc/)
 - [Aspendale Gardens](/painter-aspendale-gardens/)
 - [Dingley Village](/painter-dingley-village/)

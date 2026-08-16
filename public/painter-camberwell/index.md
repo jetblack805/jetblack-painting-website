@@ -50,6 +50,7 @@ Fast-turnaround repainting for Camberwell sales and rentals, in neutral colours 
 
 Explore nearby suburb pages for neighbouring areas around Camberwell.
 
+- [Balwyn](/painter-balwyn/)
 - [Hawthorn](/painter-hawthorn/)
 - [Malvern](/painter-malvern/)
 - [Toorak](/painter-toorak/)

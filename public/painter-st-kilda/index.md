@@ -46,6 +46,8 @@ Fast-turnaround repainting for St Kilda sales and rentals, in neutral colours th
 
 Explore nearby suburb pages for neighbouring areas around St Kilda.
 
+- [Windsor](/painter-windsor/)
+- [South Melbourne](/painter-south-melbourne/)
 - [Elwood](/painter-elwood/)
 - [Prahran](/painter-prahran/)
 - [South Yarra](/painter-south-yarra/)

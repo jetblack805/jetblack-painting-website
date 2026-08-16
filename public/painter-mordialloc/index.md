@@ -50,6 +50,7 @@ Fast-turnaround repainting for Mordialloc sales and rentals, in neutral colours 
 
 Explore nearby suburb pages for neighbouring areas around Mordialloc.
 
+- [Waterways](/painter-waterways/)
 - [Parkdale](/painter-parkdale/)
 - [Mentone](/painter-mentone/)
 - [Aspendale](/painter-aspendale/)

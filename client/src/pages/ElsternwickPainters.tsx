@@ -51,6 +51,7 @@ export default function ElsternwickPainters() {
       title="Elsternwick Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Elsternwick — inter-war bungalows and Art Deco apartment blocks. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Brighton East", link: "/painter-brighton-east" },
         { name: "Caulfield", link: "/painter-caulfield" },
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Malvern", link: "/painter-malvern" },

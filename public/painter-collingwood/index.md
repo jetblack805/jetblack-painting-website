@@ -54,6 +54,7 @@ Fast-turnaround repainting for Collingwood sales and rentals, in neutral colours
 
 Explore nearby suburb pages for neighbouring areas around Collingwood.
 
+- [Richmond](/painter-richmond/)
 - [Fitzroy](/painter-fitzroy/)
 - [Carlton](/painter-carlton/)
 - [Hawthorn](/painter-hawthorn/)

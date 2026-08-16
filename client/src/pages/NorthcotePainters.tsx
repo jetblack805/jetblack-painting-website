@@ -78,6 +78,7 @@ export default function NorthcotePainters() {
         }
       ]}
       neighbouringSuburbs={[
+        { name: "Thornbury", link: "/painter-thornbury" },
         { name: "Fitzroy", link: "/painter-fitzroy" },
         { name: "Collingwood", link: "/painter-collingwood" },
         { name: "Carlton", link: "/painter-carlton" },

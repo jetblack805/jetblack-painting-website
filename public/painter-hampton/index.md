@@ -50,6 +50,8 @@ Fast-turnaround repainting for Hampton sales and rentals, in neutral colours tha
 
 Explore nearby suburb pages for neighbouring areas around Hampton.
 
+- [Hampton East](/painter-hampton-east/)
+- [Brighton East](/painter-brighton-east/)
 - [Brighton](/painter-brighton/)
 - [Sandringham](/painter-sandringham/)
 - [Bentleigh](/painter-bentleigh/)

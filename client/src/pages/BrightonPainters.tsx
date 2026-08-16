@@ -51,6 +51,7 @@ export default function BrightonPainters() {
       title="Brighton Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Brighton — heritage homes, modern beachside residences and premium materials. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Brighton East", link: "/painter-brighton-east" },
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Mordialloc", link: "/painter-mordialloc" },

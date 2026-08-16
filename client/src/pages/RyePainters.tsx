@@ -27,6 +27,7 @@ export default function RyePainters() {
       title="Rye Painters | Beach House Repaints | Jetblack Painting"
       description="Coastal house painters in Rye — beach shacks, holiday homes and permanent residences, front beach and back beach. Free quotes. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Sorrento", link: "/painter-sorrento" },
         { name: "Rosebud", link: "/painter-rosebud" },
         { name: "Dromana", link: "/painter-dromana" },
         { name: "Safety Beach", link: "/painter-safety-beach" },

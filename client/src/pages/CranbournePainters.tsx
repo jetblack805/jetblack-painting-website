@@ -28,6 +28,7 @@ export default function CranbournePainters() {
       title="Cranbourne Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Cranbourne — brick-veneer family homes, double-storey homes and metal roofs. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Clyde", link: "/painter-clyde" },
         { name: "Berwick", link: "/painter-berwick" },
         { name: "Dandenong", link: "/painter-dandenong" },
         { name: "Greater Dandenong", link: "/painter-greater-dandenong" },

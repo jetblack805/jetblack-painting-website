@@ -46,6 +46,7 @@ Fast-turnaround repainting for Fitzroy sales and rentals, in neutral colours tha
 
 Explore nearby suburb pages for neighbouring areas around Fitzroy.
 
+- [Thornbury](/painter-thornbury/)
 - [Carlton](/painter-carlton/)
 - [Prahran](/painter-prahran/)
 - [St Kilda](/painter-st-kilda/)

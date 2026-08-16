@@ -50,6 +50,7 @@ Fast-turnaround repainting for Caulfield sales and rentals, in neutral colours t
 
 Explore nearby suburb pages for neighbouring areas around Caulfield.
 
+- [Malvern East](/painter-malvern-east/)
 - [Bentleigh](/painter-bentleigh/)
 - [Malvern](/painter-malvern/)
 - [Brighton](/painter-brighton/)

@@ -50,6 +50,7 @@ Fast-turnaround repainting to get Somerville properties market-ready — durable
 
 Explore nearby suburb pages for neighbouring areas around Somerville.
 
+- [Hastings](/painter-hastings/)
 - [Frankston](/painter-frankston/)
 - [Frankston South](/painter-frankston-south/)
 - [Mornington](/painter-mornington/)

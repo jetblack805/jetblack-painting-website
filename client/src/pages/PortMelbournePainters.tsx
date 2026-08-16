@@ -66,6 +66,7 @@ export default function PortMelbournePainters() {
         }
       ]}
       neighbouringSuburbs={[
+        { name: "South Melbourne", link: "/painter-south-melbourne" },
         { name: "South Yarra", link: "/painter-south-yarra" },
         { name: "St Kilda", link: "/painter-st-kilda" },
         { name: "Elwood", link: "/painter-elwood" },

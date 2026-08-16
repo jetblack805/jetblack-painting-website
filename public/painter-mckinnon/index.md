@@ -68,6 +68,7 @@ Fast-turnaround repainting for McKinnon sales and rentals, in neutral colours th
 
 Explore nearby suburb pages for neighbouring areas around McKinnon.
 
+- [Bentleigh East](/painter-bentleigh-east/)
 - [Bentleigh](/painter-bentleigh/)
 - [Ormond](/painter-ormond/)
 - [Murrumbeena](/painter-murrumbeena/)

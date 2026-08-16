@@ -23,6 +23,7 @@ export default function DandenongPainters() {
       title="Dandenong Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Dandenong — weatherboard family homes, unit developments and retail shopfronts. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Endeavour Hills", link: "/painter-endeavour-hills" },
         { name: "Keysborough", link: "/keysborough-painters" },
         { name: "Greater Dandenong", link: "/painter-greater-dandenong" },
         { name: "Berwick", link: "/painter-berwick" },

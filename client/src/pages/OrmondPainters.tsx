@@ -23,6 +23,8 @@ export default function OrmondPainters() {
       title="Ormond Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Ormond — interwar homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Bentleigh East", link: "/painter-bentleigh-east" },
+        { name: "Carnegie", link: "/painter-carnegie" },
         { name: "McKinnon", link: "/painter-mckinnon" },
         { name: "Murrumbeena", link: "/painter-murrumbeena" },
         { name: "Bentleigh", link: "/painter-bentleigh" },

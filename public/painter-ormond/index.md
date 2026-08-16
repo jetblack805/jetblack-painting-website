@@ -50,6 +50,8 @@ Fast-turnaround repainting for Ormond sales and rentals, in neutral colours that
 
 Explore nearby suburb pages for neighbouring areas around Ormond.
 
+- [Bentleigh East](/painter-bentleigh-east/)
+- [Carnegie](/painter-carnegie/)
 - [McKinnon](/painter-mckinnon/)
 - [Murrumbeena](/painter-murrumbeena/)
 - [Bentleigh](/painter-bentleigh/)

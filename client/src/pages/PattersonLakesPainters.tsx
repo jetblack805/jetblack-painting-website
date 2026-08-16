@@ -27,6 +27,7 @@ export default function PattersonLakesPainters() {
       title="Patterson Lakes Painters | Waterfront House Painting"
       description="Waterfront and coastal house painters in Patterson Lakes — canal-front homes and rendered residences. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Chelsea Heights", link: "/painter-chelsea-heights" },
         { name: "Carrum", link: "/painter-carrum" },
         { name: "Bonbeach", link: "/painter-bonbeach" },
         { name: "Chelsea", link: "/painter-chelsea" },

@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Cranbourne properties market-ready — durable
 
 Explore nearby suburb pages for neighbouring areas around Cranbourne.
 
+- [Clyde](/painter-clyde/)
 - [Berwick](/painter-berwick/)
 - [Dandenong](/painter-dandenong/)
 - [Greater Dandenong](/painter-greater-dandenong/)

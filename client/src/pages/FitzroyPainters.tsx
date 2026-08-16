@@ -66,6 +66,7 @@ export default function FitzroyPainters() {
         }
       ]}
       neighbouringSuburbs={[
+        { name: "Thornbury", link: "/painter-thornbury" },
         { name: "Carlton", link: "/painter-carlton" },
         { name: "Prahran", link: "/painter-prahran" },
         { name: "St Kilda", link: "/painter-st-kilda" },

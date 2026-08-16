@@ -28,6 +28,7 @@ export default function CaulfieldPainters() {
       title="Caulfield Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Caulfield — Edwardian terraces and interwar homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Malvern East", link: "/painter-malvern-east" },
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Malvern", link: "/painter-malvern" },
         { name: "Brighton", link: "/painter-brighton" },

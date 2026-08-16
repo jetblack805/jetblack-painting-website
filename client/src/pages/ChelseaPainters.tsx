@@ -51,6 +51,7 @@ export default function ChelseaPainters() {
       title="Chelsea Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Chelsea — Californian bungalows to mid-century brick veneer. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Chelsea Heights", link: "/painter-chelsea-heights" },
         { name: "Aspendale", link: "/painter-aspendale" },
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Parkdale", link: "/painter-parkdale" },

@@ -66,6 +66,8 @@ export default function StKildaPainters() {
         }
       ]}
       neighbouringSuburbs={[
+        { name: "Windsor", link: "/painter-windsor" },
+        { name: "South Melbourne", link: "/painter-south-melbourne" },
         { name: "Elwood", link: "/painter-elwood" },
         { name: "Prahran", link: "/painter-prahran" },
         { name: "South Yarra", link: "/painter-south-yarra" },

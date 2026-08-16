@@ -46,6 +46,7 @@ Fast-turnaround repainting for Northcote sales and rentals, in neutral colours t
 
 Explore nearby suburb pages for neighbouring areas around Northcote.
 
+- [Thornbury](/painter-thornbury/)
 - [Fitzroy](/painter-fitzroy/)
 - [Collingwood](/painter-collingwood/)
 - [Carlton](/painter-carlton/)

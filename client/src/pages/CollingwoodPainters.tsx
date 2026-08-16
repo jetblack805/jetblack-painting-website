@@ -82,6 +82,7 @@ export default function CollingwoodPainters() {
         }
       ]}
       neighbouringSuburbs={[
+        { name: "Richmond", link: "/painter-richmond" },
         { name: "Fitzroy", link: "/painter-fitzroy" },
         { name: "Carlton", link: "/painter-carlton" },
         { name: "Hawthorn", link: "/painter-hawthorn" },

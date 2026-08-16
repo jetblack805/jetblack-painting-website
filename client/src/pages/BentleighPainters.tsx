@@ -28,6 +28,7 @@ export default function BentleighPainters() {
       title="Bentleigh Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Bentleigh — interwar Californian bungalows and post-war brick homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Bentleigh East", link: "/painter-bentleigh-east" },
         { name: "Caulfield", link: "/painter-caulfield" },
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Hampton", link: "/painter-hampton" },

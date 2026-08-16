@@ -31,6 +31,7 @@ export default function DromanaPainters() {
       title="Dromana Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Dromana — weatherboard, fibro beach houses and rendered permanent homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Sorrento", link: "/painter-sorrento" },
         { name: "Mount Martha", link: "/painter-mount-martha" },
         { name: "Mornington", link: "/painter-mornington" },
         { name: "Mount Eliza", link: "/painter-mount-eliza" },

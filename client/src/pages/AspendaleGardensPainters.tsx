@@ -27,6 +27,7 @@ export default function AspendaleGardensPainters() {
       title="Aspendale Gardens Painters | Coastal House Painting"
       description="Coastal house painters in Aspendale Gardens — rendered family homes and 1980s–2000s builds. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Waterways", link: "/painter-waterways" },
         { name: "Aspendale", link: "/painter-aspendale" },
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Edithvale", link: "/painter-edithvale" },

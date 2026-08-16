@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Dromana properties market-ready — durable, e
 
 Explore nearby suburb pages for neighbouring areas around Dromana.
 
+- [Sorrento](/painter-sorrento/)
 - [Mount Martha](/painter-mount-martha/)
 - [Mornington](/painter-mornington/)
 - [Mount Eliza](/painter-mount-eliza/)

@@ -50,6 +50,7 @@ Fast-turnaround repainting for Brighton sales and rentals, in neutral colours th
 
 Explore nearby suburb pages for neighbouring areas around Brighton.
 
+- [Brighton East](/painter-brighton-east/)
 - [Hampton](/painter-hampton/)
 - [Bentleigh](/painter-bentleigh/)
 - [Mordialloc](/painter-mordialloc/)

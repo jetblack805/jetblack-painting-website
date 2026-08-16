@@ -28,6 +28,7 @@ export default function ClydeNorthPainters() {
       title="Clyde North Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Clyde North — double-storey family houses and metal roofs. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Clyde", link: "/painter-clyde" },
         { name: "Cranbourne", link: "/painter-cranbourne" },
         { name: "Berwick", link: "/painter-berwick" },
         { name: "Dandenong", link: "/painter-dandenong" },

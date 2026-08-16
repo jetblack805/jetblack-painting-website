@@ -50,6 +50,7 @@ Fast-turnaround repainting to get Moorabbin properties market-ready — durable,
 
 Explore nearby suburb pages for neighbouring areas around Moorabbin.
 
+- [Hampton East](/painter-hampton-east/)
 - [Mentone](/painter-mentone/)
 - [Mordialloc](/painter-mordialloc/)
 - [Sandringham](/painter-sandringham/)

@@ -46,6 +46,7 @@ Fast-turnaround repainting for Albert Park sales and rentals, in neutral colours
 
 Explore nearby suburb pages for neighbouring areas around Albert Park.
 
+- [South Melbourne](/painter-south-melbourne/)
 - [St Kilda](/painter-st-kilda/)
 - [South Yarra](/painter-south-yarra/)
 - [Prahran](/painter-prahran/)

@@ -50,6 +50,7 @@ Fast-turnaround repainting to get Edithvale properties market-ready — durable,
 
 Explore nearby suburb pages for neighbouring areas around Edithvale.
 
+- [Chelsea Heights](/painter-chelsea-heights/)
 - [Chelsea](/painter-chelsea/)
 - [Aspendale](/painter-aspendale/)
 - [Bonbeach](/painter-bonbeach/)

@@ -46,6 +46,7 @@ Fast-turnaround repainting to get Clyde North properties market-ready — durabl
 
 Explore nearby suburb pages for neighbouring areas around Clyde North.
 
+- [Clyde](/painter-clyde/)
 - [Cranbourne](/painter-cranbourne/)
 - [Berwick](/painter-berwick/)
 - [Dandenong](/painter-dandenong/)

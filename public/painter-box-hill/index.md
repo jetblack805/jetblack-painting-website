@@ -50,6 +50,7 @@ Fast-turnaround repainting for Box Hill sales and rentals, in neutral colours th
 
 Explore nearby suburb pages for neighbouring areas around Box Hill.
 
+- [Balwyn](/painter-balwyn/)
 - [Doncaster](/painter-doncaster/)
 - [Donvale](/painter-donvale/)
 - [Templestowe](/painter-templestowe/)

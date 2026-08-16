@@ -66,6 +66,7 @@ export default function AlbertParkPainters() {
         }
       ]}
       neighbouringSuburbs={[
+        { name: "South Melbourne", link: "/painter-south-melbourne" },
         { name: "St Kilda", link: "/painter-st-kilda" },
         { name: "South Yarra", link: "/painter-south-yarra" },
         { name: "Prahran", link: "/painter-prahran" },

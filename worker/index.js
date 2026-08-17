@@ -246,8 +246,24 @@ export default {
 
     // Long-lived cache for immutable hashed assets (JS/CSS bundles with content hash in filename)
     // and for stable public images (hero-background.jpg, og-image.jpg etc.)
+    //
+    // ⚠️ The previous pattern here was /\.[a-f0-9]{8,}\.(js|css|woff2?)$/ and it
+    // never matched anything, so every bundle was served with the default
+    // `max-age=0, must-revalidate` and repeat visitors revalidated all ~141
+    // chunks on every navigation. It assumed `name.hash.ext` with a lowercase
+    // hex hash; Vite actually emits `name-hash.ext` with a base64url hash —
+    // `index-BEiJaWzV.js`, `index-FvSxDLw8.css`, `vendor-animation-D3Hbm0mm.js`.
+    // Both the separator and the alphabet were wrong, so the test could not
+    // succeed for any real filename. The isStaticImage branch below did work,
+    // which is why /og-image.jpg cached correctly and masked the problem.
+    //
+    // Scoped to /assets/ deliberately: that is the only place Vite writes build
+    // output, and everything it writes there is content-hashed, so a change
+    // always produces a new filename. Names themselves contain hyphens
+    // ("vendor-animation-D3Hbm0mm.js"), so the pattern anchors on the LAST
+    // hash-shaped segment before the extension.
     const pathname = url.pathname;
-    const isHashedAsset = /\.[a-f0-9]{8,}\.(js|css|woff2?)$/.test(pathname);
+    const isHashedAsset = /^\/assets\/.+[.-][A-Za-z0-9_-]{8,}\.(js|css|woff2?)$/.test(pathname);
     const isStaticImage = /\.(jpg|jpeg|png|webp|avif|gif|ico|svg)$/.test(pathname);
     if (isHashedAsset) {
       headers.set("Cache-Control", "public, max-age=31536000, immutable");

@@ -18,6 +18,14 @@ export default function ClydeNorthPainters() {
     {
       question: `Do you offer free quotes in ${suburb}?`,
       answer: `Yes. We service ${suburb} and the wider City of Casey with free written quotes. Call Jimmy on 0432 077 782.`
+    },
+    {
+      question: `Do you paint shops, medical suites and childcare centres in ${suburb}?`,
+      answer: `Yes — commercial work is a real part of what we do here. A growth corridor fills in with the businesses that serve it, so ${suburb} has a steady pipeline of neighbourhood retail, medical and allied-health suites, childcare, gyms and cafes, much of it either fitting out for the first time or repainting after a few hard years of use. We quote these with an itemised written scope and provide insurance certificates before work starts.`
+    },
+    {
+      question: `Does my estate's design guidelines affect what colour I can repaint?`,
+      answer: `It can, and it is worth checking before you settle on a colour. Many Casey estates run design guidelines or covenants that govern exterior colours and materials, and they typically apply for a set period after the estate is released rather than forever. We will raise it at the quote if a colour you are considering looks likely to run into one — but the guidelines are held by your estate or owners corporation, so confirming what applies to your block is a call you make, not us.`
     }
   ];
 
@@ -44,6 +52,14 @@ export default function ClydeNorthPainters() {
         {
           heading: `Exterior, Interior and Roof Repaints in ${suburb}`,
           body: `Exterior repaints in ${suburb} start with real preparation — pressure washing, sanding back failing or chalking builder's coatings, priming, and sealing gaps — before durable, weather-resistant topcoats go on. Inside, we stage the work room by room with low-odour premium paints so the home stays livable. For the suburb's tile and metal roofs, we clean, repair and prime before applying a fresh membrane coating. All work across ${suburb} is backed by our $10M public liability insurance and 5-year written workmanship guarantee.`
+        },
+        {
+          heading: `Commercial and Fitout Painting Across ${suburb}`,
+          body: `A growth corridor does not just fill up with houses — it fills up with the businesses that serve them, and ${suburb} has been doing that for years now. Neighbourhood retail strips, medical and allied-health suites, childcare centres, gyms and cafes have all followed the housing, and each brings its own painting work: first fitouts on a builder's shell, tenancy changeovers between operators, and facade repaints on buildings that went up early in the corridor's growth and are now showing it. Commercial jobs are quoted with a written scope itemising surfaces, products and coats, with insurance certificates supplied before anyone starts.`
+        },
+        {
+          heading: `Working Around Trade and Estate Design Rules`,
+          body: `Commercial work in ${suburb} is usually less about the painting than the timing. A trading business cannot close for a week, so the work gets staged — after hours, across weekends, or zone by zone so half a tenancy stays open while the other half is done. We agree that sequence at the quote rather than discovering it on day one. On the residential side, the thing most likely to catch owners out is estate design guidelines: many Casey estates set rules on exterior colours and materials for a period after release. If a colour you are weighing up looks likely to run into one, we will say so — though the guidelines themselves sit with your estate or owners corporation, so the final check is yours to make.`
         }
       ]}
       faqs={faqs}

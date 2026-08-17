@@ -14,6 +14,14 @@ export default function DonvalePainters() {
     {
       question: `Do you offer free quotes in ${suburb}?`,
       answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and the City of Manningham, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 or submit a request online.`
+    },
+    {
+      question: `Why has the shaded side of my ${suburb} house gone green or black?`,
+      answer: `That is almost always mould and lichen rather than dirt, and it is a direct consequence of ${suburb}'s tree cover. Elevations that sit under canopy stay damp for hours after the rest of the house has dried, and that is all the growth needs. Washing it off without treating it means it returns within a season, so those walls get a proper treatment and a topcoat with a mould inhibitor rather than a simple repaint.`
+    },
+    {
+      question: `Do you paint cedar cladding and exposed timber on ${suburb}'s split-level homes?`,
+      answer: `Yes, though it is worth a conversation first. A lot of ${suburb}'s 1970s split-levels use cedar cladding and exposed beams that were originally oiled or stained rather than painted. Both can be painted and the result lasts well, but it is effectively a one-way decision — going back to a natural oiled finish afterwards means stripping, which is slow and rarely worth it. We will tell you that at the quote rather than after.`
     }
   ];
 
@@ -44,6 +52,20 @@ export default function DonvalePainters() {
           body: [
             `${suburb}'s homes on big, treed blocks see significant weather exposure — UV, wind and Melbourne's damp winters can punish unprepared paintwork quickly. We use thorough surface preparation: proper timber priming on bare wood, careful filling and sanding, rust treatment on metal surfaces, and premium weather-resistant topcoats that hold up through seasons and years.`,
             `For ${suburb}'s rendered and modern homes, we deliver smooth, crisp interiors and durable exteriors using premium Dulux and Taubmans systems. Large homes mean more surface area to manage — we bring the right team size and access equipment to do it efficiently without compromising on quality.`,
+          ],
+        },
+        {
+          heading: `Painting Against ${suburb}'s Bushland Edge`,
+          body: [
+            `What separates ${suburb} from most of the suburbs we work in is the tree cover. Blocks back onto remnant bushland and the Mullum Mullum Creek corridor, and mature eucalypts sit over houses rather than beside them. That shade is the whole appeal of living here, and it also changes what paintwork has to survive. Walls under canopy dry slowly after rain, and surfaces that stay damp grow mould and lichen — the green and black staining you see creeping across south and south-east elevations while the sunny walls look fine.`,
+            `Painting over that growth does not work; it comes back through the new coating. Those elevations get treated and killed off first, then a topcoat carrying a mould inhibitor. Gum litter is the other factor — leaves and bark fill gutters, gutters overflow, and the run-off leaves dark tracking down fascias and window heads. We flag blocked or overflowing gutters at the quote, because repainting a fascia without sorting the cause just resets a clock.`,
+          ],
+        },
+        {
+          heading: `Split-Level and Cedar-Clad Homes from the 1970s`,
+          body: [
+            `Much of ${suburb} was built out through the 1960s and 70s, and that era left a distinctive housing stock: split-level homes stepped down sloping blocks, wide eaves, exposed rafters and a lot of cedar cladding. These are not the brick-and-render facades of newer estates, and they do not take the same approach. Timber that has been oiled or stained for decades needs different preparation from a rendered wall — the old coating has to be assessed for what it actually is before anything goes over it.`,
+            `Split-levels also mean the exterior is rarely one straight run. Stepped rooflines, high gable ends and elevations that drop away down the slope all need proper access rather than an over-extended ladder, and that gets planned into the quote instead of being improvised on the day.`,
           ],
         },
       ]}

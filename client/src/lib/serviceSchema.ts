@@ -1,9 +1,9 @@
 import { breadcrumbSchema } from "@/lib/breadcrumbSchema";
 
 // Builds Schema.org structured data for a service page.
-// Deliberately omits aggregateRating — the business rating lives once in the
-// LocalBusiness schema (suburb pages / homepage) to avoid Google's
-// "multiple aggregate ratings" error.
+// Deliberately omits aggregateRating — the business rating is declared exactly
+// once site-wide, in client/index.html's "#business" @graph node, to avoid
+// Google's "multiple aggregate ratings" error.
 //
 // Always returns an array: the Service schema, a FAQPage schema when `faqs` are
 // supplied (so the page is eligible for FAQ rich results), and a BreadcrumbList

@@ -92,13 +92,17 @@ const homeSchema = [
       { "@type": "City", "name": "Wheelers Hill" }
     ],
     "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "15",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
+    // Deliberately omits aggregateRating. client/index.html already declares
+    // this exact "#business" @id with a rating AND the six supporting Review
+    // objects, and that block is NOT marked data-static-schema, so SEOHead's
+    // cleanup selector never removes it. Both therefore survive in the rendered
+    // DOM, and Google saw two aggregateRating values for one entity on "/" —
+    // which is what kept GSC's "Review has multiple aggregate ratings"
+    // validation failing on the homepage after the 2026-08-11 fix cleared the
+    // 96 suburb pages. The static block is a strict superset (it also carries
+    // sameAs, hasOfferCatalog, logo, founder and serviceArea), so the rating
+    // stays there and this copy defers to it — the same rule SuburbPageTemplate
+    // and serviceSchema already follow.
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],

@@ -6,6 +6,20 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { breadcrumbSchema } from "@/lib/breadcrumbSchema";
 
+// Publication dates and categories for the genuine /blog/ articles, keyed by
+// slug. Must stay in step with `articleMeta` in
+// scripts/generate-static-pages.mjs — SEOHead replaces the pre-rendered JSON-LD
+// once React mounts, so both layers have to describe the same page.
+const articleMeta: Record<string, { published: string; modified: string; section: string }> = {
+  "/blog/best-paint-colours-melbourne-2025": { published: "2026-06-23", modified: "2026-07-26", section: "Design Tips" },
+  "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-08-13", section: "Price Guide" },
+  "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-08-13", section: "Guide" },
+  "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-08-13", section: "Kitchen" },
+  "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
+  "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
+  "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
+};
+
 export default function Blog() {
   const posts = [
     {
@@ -114,14 +128,32 @@ export default function Blog() {
             // Only genuine /blog/ articles. Two cards below link to service
             // pages, which are Service/WebPage entities on their own URLs —
             // declaring them BlogPosting here would contradict their own schema.
+            //
+            // Dates, image and author are carried here as well as on each
+            // article's own page: Search Console evaluates these nested
+            // BlogPosting entities in their own right and reported them as
+            // Articles warnings while only headline+description+url were set.
             blogPost: posts
               .filter((post) => post.slug.startsWith("/blog/"))
-              .map((post) => ({
-                "@type": "BlogPosting",
-                headline: post.title,
-                description: post.excerpt,
-                url: `https://jetblackpainting.com${post.slug}/`,
-              })),
+              .map((post) => {
+                const meta = articleMeta[post.slug];
+                return {
+                  "@type": "BlogPosting",
+                  headline: post.title,
+                  description: post.excerpt,
+                  url: `https://jetblackpainting.com${post.slug}/`,
+                  inLanguage: "en-AU",
+                  ...(meta
+                    ? { datePublished: meta.published, dateModified: meta.modified, articleSection: meta.section }
+                    : {}),
+                  image: "https://jetblackpainting.com/og-image.jpg",
+                  author: {
+                    "@type": "Organization",
+                    name: "Jetblack Painting",
+                    url: "https://jetblackpainting.com",
+                  },
+                };
+              }),
           },
           breadcrumbSchema([
             { name: "Home", url: "/" },

@@ -167,12 +167,14 @@ export default function SuburbPageTemplate({
   const breadcrumbId = `${canonical}#breadcrumb`;
 
   // Deliberately omits aggregateRating. This same "#business" @id is declared
-  // once, with a rating, on the homepage (Home.tsx). Every one of the 96
-  // suburb pages repeating that rating for the identical entity is what
-  // triggered GSC's "Review has multiple aggregate ratings" critical
-  // structured-data error (2026-08-11) — Google treats dozens of independent
-  // pages asserting a rating for one business as duplicate/conflicting
-  // signals, not corroboration.
+  // once, with a rating, in client/index.html's @graph — the homepage shell,
+  // which also carries the supporting Review objects. (Home.tsx used to declare
+  // it too; that made the homepage itself assert the rating twice and kept the
+  // GSC validation failing, fixed 2026-08-17.) Every one of the 96 suburb pages
+  // repeating that rating for the identical entity is what triggered GSC's
+  // "Review has multiple aggregate ratings" critical structured-data error
+  // (2026-08-11) — Google treats dozens of independent pages asserting a rating
+  // for one business as duplicate/conflicting signals, not corroboration.
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",

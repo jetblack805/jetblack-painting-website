@@ -1418,6 +1418,23 @@ for (const service of servicePages) {
   );
 }
 
+// Publication metadata for the blog articles. Dates track when each guide was
+// first published and last substantively revised — keep `modified` in step when
+// an article's content is rewritten. Categories match the labels shown on /blog/.
+//
+// Declared above `blogIndexArticles` because the /blog/ index writes its
+// `blogPost` entries from this map at module-execution time; a `const` declared
+// further down would still be in the temporal dead zone and throw.
+const articleMeta = {
+  "/blog/best-paint-colours-melbourne-2025": { published: "2026-06-23", modified: "2026-07-26", section: "Design Tips" },
+  "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-08-13", section: "Price Guide" },
+  "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-08-13", section: "Guide" },
+  "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-08-13", section: "Kitchen" },
+  "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
+  "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
+  "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
+};
+
 // Titles and bodies must match the `posts` array in client/src/pages/Blog.tsx
 // verbatim. The static index is what crawlers read and the React index is what
 // Google's rendered pass reads; when they drift, the two passes disagree about
@@ -1485,12 +1502,32 @@ writePage(
         },
         // Enumerating the posts lets AI assistants see the full guide list from
         // the index page alone, without crawling each article first.
-        blogPost: blogIndexArticles.map((article) => ({
-          "@type": "BlogPosting",
-          headline: article.title,
-          description: article.body,
-          url: `${SITE_URL}${article.href}`,
-        })),
+        //
+        // Dates, image and author are carried here as well as on each article's
+        // own page: Search Console evaluates these nested BlogPosting entities
+        // in its own right, and reported them as Articles warnings (missing
+        // datePublished / image) while only headline+description+url were set.
+        // Values come from `articleMeta` so the index and the article pages
+        // cannot drift apart.
+        blogPost: blogIndexArticles.map((article) => {
+          const meta = articleMeta[article.href.replace(/\/$/, "")];
+          return {
+            "@type": "BlogPosting",
+            headline: article.title,
+            description: article.body,
+            url: `${SITE_URL}${article.href}`,
+            inLanguage: "en-AU",
+            ...(meta
+              ? { datePublished: meta.published, dateModified: meta.modified, articleSection: meta.section }
+              : {}),
+            image: `${SITE_URL}/og-image.jpg`,
+            author: {
+              "@type": "Organization",
+              name: "Jetblack Painting",
+              url: SITE_URL,
+            },
+          };
+        }),
       },
       breadcrumbTrail([
         { name: "Home", item: "/" },
@@ -2026,19 +2063,6 @@ const articlePages = [
     ],
   },
 ];
-
-// Publication metadata for the blog articles. Dates track when each guide was
-// first published and last substantively revised — keep `modified` in step when
-// an article's content is rewritten. Categories match the labels shown on /blog/.
-const articleMeta = {
-  "/blog/best-paint-colours-melbourne-2025": { published: "2026-06-23", modified: "2026-07-26", section: "Design Tips" },
-  "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-08-13", section: "Price Guide" },
-  "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-08-13", section: "Guide" },
-  "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-08-13", section: "Kitchen" },
-  "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
-  "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
-  "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
-};
 
 for (const article of articlePages) {
   const canonical = canonicalForRoute(article.route);

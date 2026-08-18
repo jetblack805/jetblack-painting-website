@@ -92,9 +92,9 @@ export default function SEOHead({ title, description, canonical, ogImage, schema
     upsertMeta('meta[name="viewport"]', { name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=5.0" });
     upsertMeta('meta[name="theme-color"]', { name: "theme-color", content: "#060607" });
     
-    // Additional SEO Signals
-    upsertMeta('meta[name="language"]', { name: "language", content: "English" });
-    upsertMeta('meta[name="revisit-after"]', { name: "revisit-after", content: "7 days" });
+    // `language` and `revisit-after` removed 2026-08-18. Neither is a Google
+    // ranking signal: language is superseded by the html lang attribute and
+    // hreflang, and revisit-after has never been honoured by any major crawler.
 
     // JSON-LD Schema Management
     const managedSchemaId = "jetblack-page-schema";

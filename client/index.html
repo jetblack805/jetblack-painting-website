@@ -12,17 +12,14 @@
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
    
-  <!-- AEO (AI Engine Optimization) Meta Tags -->
-  <meta name="aeo" content="enabled" />
-  <meta name="ai-content-api" content="enabled" />
-  <meta name="claude-understanding" content="enabled" />
-   
-  <!-- Enterprise Content Markup for AI -->
-  <meta name="content-type" content="business-directory-ai-friendly" />
-   
+  <!-- Nonstandard AEO/AI meta tags (aeo, ai-content-api, claude-understanding,
+       content-type=business-directory-ai-friendly) removed 2026-08-18. No search
+       engine or AI crawler consumes them; SEOHead.tsx had already dropped them on
+       the React side, so the shell was contradicting the rendered page. AI
+       discoverability here rests on JSON-LD, llms.txt, the Markdown twins and
+       robots.txt Content-Signal — all of which are real, consumed signals. -->
   <meta name="author" content="Jetblack Painting" />
   <meta name="copyright" content="© 2026 Jetblack Painting. All rights reserved." />
-  <meta name="language" content="English" />
   <meta name="geo.placename" content="Mordialloc, Melbourne, Victoria, Australia" />
   <meta name="geo.region" content="AU-VIC" />
   <meta name="geo.position" content="-38.0131;145.0965" />
@@ -34,8 +31,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <link rel="canonical" href="https://jetblackpainting.com/" />
-  <link rel="alternate" hreflang="en-au" href="https://jetblackpainting.com/" />
-  <link rel="alternate" hreflang="en" href="https://jetblackpainting.com/" />
+  <!-- hreflang removed 2026-08-18: both alternates pointed at this same URL and
+       there is no separate international English site, so the pair asserted a
+       language-targeting relationship that does not exist. The self-referential
+       canonical above already states the single canonical version. -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="author" href="/llms.txt" />
   <link rel="alternate" type="text/plain" title="LLM-readable site summary" href="/llms.txt" />
@@ -116,19 +115,17 @@
         "@type": ["HomeAndConstructionBusiness", "LocalBusiness"],
         "@id": "https://jetblackpainting.com/#business",
         "name": "Jetblack Painting",
-        "alternateName": ["Jet Black Painting", "Jetblack Painting Melbourne", "Best Painters Melbourne"],
+        "alternateName": ["Jet Black Painting", "Jetblack Painting Melbourne"],
         "image": "https://jetblackpainting.com/og-image.jpg",
         "logo": "https://jetblackpainting.com/logo.jpg",
         "url": "https://jetblackpainting.com/",
         "telephone": "+61432077782",
         "email": "jimmy@jetblackpainting.com",
         "priceRange": "$$",
-        "description": "Jetblack Painting — Melbourne's top-rated local painters. 5-star rated, fully insured painting contractors offering interior, exterior, commercial, roof and kitchen cabinet painting across 90+ Melbourne suburbs. Free quotes available.",
-        "keywords": "painters Melbourne, house painters Melbourne, painters near me, best painters Melbourne, local painters Melbourne, interior painters Melbourne, exterior painters Melbourne, painting contractors Melbourne, residential painters Melbourne",
+        "description": "Jetblack Painting is a Melbourne-based residential and commercial painting company providing interior, exterior, roof, commercial and kitchen cabinet resurfacing services across Melbourne and surrounding suburbs.",
         "founder": { "@type": "Person", "name": "Jimmy Demirci" },
         "address": {
           "@type": "PostalAddress",
-        "streetAddress": "Mordialloc",
         "addressLocality": "Mordialloc",
           "addressRegion": "VIC",
         "postalCode": "3195",

@@ -363,3 +363,47 @@ Confirmed against the production apex, not just the build status:
 
 This also closes the standing "cannot verify the build" caveat for these commits — `pnpm build`
 could not run in the agent environment, but Cloudflare ran it and it passed.
+
+### 2026-08-18 (run 5) — daily audit: two real metadata defects found and fixed
+
+Steps 0–6 run in order. Two real problems, so no content work this run (Step 7 skipped by rule).
+
+**Defect 1 — Mordialloc meta description was 168 chars**, breaking the "0 descriptions over 158"
+baseline. Self-inflicted: introduced by run 4 earlier today. Trimmed to 155 by dropping one
+adjective; the intent terms (interior, exterior, roof, commercial) all survive.
+
+**Defect 2 — locked-fact violation on the homepage.** `client/index.html` stated **"14 verified
+Google reviews"** and **"14 Google reviews"** in prose while its own JSON-LD said
+`reviewCount: "15"`, and site-config.json, FAQ.tsx, the generator and llms.txt all said 15. The
+homepage was telling humans 14 and telling Google 15. Corrected both to the locked value of 15.
+The drift had also reached `public/index.md` — the homepage markdown twin served to AI agents —
+so AI assistants were being given the wrong review count. Regeneration propagated the fix.
+(Checked and left alone: the 14/15 matches in `Reviews.tsx` are SVG path coordinates —
+14.09, 14.97 — exactly as the brief warns.)
+
+**Everything else checked, all clean, no change needed:**
+
+| Step | Check | Result |
+|---|---|---|
+| 0 | pnpm-lock completeness | **77/77** deps present |
+| 0 | Production serves current code | Verified — new service block live |
+| 2 | Three-layer regeneration | **0 diffs** |
+| 2 | Schema vs visible text | 114 pages, **477 questions, 0 problems** |
+| 2 | Near-duplicate (96 pages incl. Keysborough) | 25.6% avg, worst 46.4%, **0 over 55%** |
+| 2 | Bad URLs 404 | `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404 |
+| 2 | Real hashed bundles still 200 | `text/javascript` / `text/css` — both directions verified |
+| 2 | Redirects | 301 not 307; `/painters-toorak` and `/au/` correct |
+| 2 | Sitemap | **114/114 return 200 with zero redirect hops** |
+| 2 | Structured data | 0 parse errors, 0 required-field gaps, **0 aggregateRating in static pages** |
+| 3 | Metadata | 0 duplicate titles/descriptions/H1s; 1 title >60 (`/painter-hastings/` 64 — baseline, unchanged) |
+| 4 | Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`; HTML on normal Accept |
+| 4 | Markdown body parity | 95.9–97.1% across 5 sampled pages — in the 92–99% band |
+| 4 | llms.txt prices | 3 `$` matches, **all read**: all are "$10 million public liability". No prices. |
+| 4 | robots.txt | Disallows only `/api/` |
+| 5 | TTFB | 0.18–0.26s, `cf-cache-status: HIT` |
+| 6 | og:image | 200 `image/jpeg` |
+
+⚠️ **Step 1 (GSC ranking data) could not be measured this run — the Supermetrics connector is not
+available in this chat.** Its tools are absent from the session, so no GSC, GMB, GA4, PSI or
+Trends data was pulled. Position figures in this log remain those of 2026-08-17; nothing here
+updates them. Semrush is connected but returns units-zero on every call, as the brief predicts.

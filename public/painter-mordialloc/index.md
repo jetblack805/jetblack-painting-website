@@ -1,10 +1,10 @@
 <!-- Mordialloc Painters | Coastal Painting | Jetblack Painting -->
 <!-- Source: https://jetblackpainting.com/painter-mordialloc/ -->
-<!-- Mordialloc painters based in the 3195 — weatherboard beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782. -->
+<!-- Mordialloc painters based in the 3195 — beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782. -->
 
 # House Painters Mordialloc
 
-Mordialloc painters based in the 3195 — weatherboard beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782. Searching for painters near you in Mordialloc? Jetblack Painting are your trusted local Mordialloc painters, servicing Mordialloc and the surrounding suburbs.
+Mordialloc painters based in the 3195 — beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782. Searching for painters near you in Mordialloc? Jetblack Painting are your trusted local Mordialloc painters, servicing Mordialloc and the surrounding suburbs.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 

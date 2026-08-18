@@ -351,3 +351,15 @@ service** before it goes anywhere near the site.
 intents — roof, kitchen cabinets, fence/deck, body corporate — written from real local property
 stock, not padded. Also two other broken meta descriptions found in the sweep: Murrumbeena
 ("…and interwar") and Kingston ("…and coating selection").
+
+**Deploy verified live 2026-08-18 20:12 UTC** (Cloudflare Workers Builds: success, PR #194).
+Confirmed against the production apex, not just the build status:
+
+- Mordialloc, Sorrento, Mentone, Highett, Mornington Peninsula each now serve **6 distinct service
+  links** to crawlers (was 2).
+- Mordialloc meta description is the corrected one.
+- Sorrento's two new sections are live.
+- The Peninsula hub links to Sorrento.
+
+This also closes the standing "cannot verify the build" caveat for these commits — `pnpm build`
+could not run in the agent environment, but Cloudflare ran it and it passed.

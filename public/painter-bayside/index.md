@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Bayside, scheduled around your
 
 Fast-turnaround repainting for Bayside sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Bayside
+
+Every service below is available in Bayside. Follow a link for service details and to request a quote.
+
+- [Interior house painting Bayside](/services/interior-painting/)
+- [Exterior house painting Bayside](/services/exterior-painting/)
+- [Commercial painting Bayside](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Bayside](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Bayside](/services/roof-painting/)
+- [Real estate painting Bayside](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Bayside.

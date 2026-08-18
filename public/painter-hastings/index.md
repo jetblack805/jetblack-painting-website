@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Hastings, scheduled around you
 
 Fast-turnaround repainting to get Hastings properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Hastings
+
+Every service below is available in Hastings. Follow a link for service details and to request a quote.
+
+- [Interior house painting Hastings](/services/interior-painting/)
+- [Exterior house painting Hastings](/services/exterior-painting/)
+- [Commercial painting Hastings](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Hastings](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Hastings](/services/roof-painting/)
+- [Real estate painting Hastings](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Hastings.

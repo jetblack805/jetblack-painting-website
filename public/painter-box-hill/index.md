@@ -46,6 +46,17 @@ Strata and owners-corporation work across Box Hill — common areas, stairwells,
 
 Fast-turnaround repainting for Box Hill sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Box Hill
+
+Every service below is available in Box Hill. Follow a link for service details and to request a quote.
+
+- [Interior house painting Box Hill](/services/interior-painting/)
+- [Exterior house painting Box Hill](/services/exterior-painting/)
+- [Commercial painting Box Hill](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Box Hill](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Box Hill](/services/roof-painting/)
+- [Real estate painting Box Hill](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Box Hill.

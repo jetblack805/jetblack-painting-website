@@ -42,6 +42,17 @@ Strata and owners-corporation work across Northcote — common areas, stairwells
 
 Fast-turnaround repainting for Northcote sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Northcote
+
+Every service below is available in Northcote. Follow a link for service details and to request a quote.
+
+- [Interior house painting Northcote](/services/interior-painting/)
+- [Exterior house painting Northcote](/services/exterior-painting/)
+- [Commercial painting Northcote](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Northcote](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Northcote](/services/roof-painting/)
+- [Real estate painting Northcote](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Northcote.

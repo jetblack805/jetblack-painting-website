@@ -42,6 +42,17 @@ Shops, offices, and maintenance repainting across Braeside, scheduled around you
 
 Fast-turnaround repainting to get Braeside properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Braeside
+
+Every service below is available in Braeside. Follow a link for service details and to request a quote.
+
+- [Interior house painting Braeside](/services/interior-painting/)
+- [Exterior house painting Braeside](/services/exterior-painting/)
+- [Commercial painting Braeside](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Braeside](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Braeside](/services/roof-painting/)
+- [Real estate painting Braeside](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Braeside.

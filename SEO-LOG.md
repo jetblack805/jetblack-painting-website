@@ -300,3 +300,54 @@ would not typecheck anything even with deps installed. Cloudflare's build remain
 give it 2–3 weeks in GSC before touching it again. Meanwhile the untested question is whether
 Collingwood (100 impressions, position 17.5, already 1,444w) moves on links alone — it has no
 Peninsula-style cluster defect, so it needs a different diagnosis, not more words.
+
+### 2026-08-18 (run 4) — Mordialloc flagship brief: audit, then Batch 1
+
+Brief received: make Mordialloc the flagship local-authority location. It asks for an audit of the
+page, schema, internal links and supporting service pages, with the highest-value gaps identified
+**before** changes. That audit follows; it found the biggest problem was not Mordialloc-specific.
+
+**Audit of `/painter-mordialloc/`**
+
+| Signal | State | Verdict |
+|---|---|---|
+| Inbound internal links | **26** (vs Mentone 16, Highett 15) | Strongest on the site — **not** the gap |
+| Word count | 1,107 | Mid-pack, not thin |
+| "We are based here" signalling | 6 explicit statements, incl. "Mordialloc is our home", "based right here in the 3195" | Already strong |
+| Schema | LocalBusiness + Service + FAQPage + Breadcrumb + speakable | Sound |
+| Outbound service links | **2 of 8** | **Gap** |
+| Roof / kitchen cabinet / fence / body corporate | **0 mentions each** | **Gap** — 4 of the brief's 10 named intents |
+| Meta description | *"…contemporary bayside residences and ensuring a flawless."* | **Broken sentence fragment** |
+| GSC | `painters mordialloc` **regressed 19.7 → 29.2** | The term the brief is about is going backwards |
+
+**Root cause found — and it is site-wide, not Mordialloc-specific.**
+`SuburbPageTemplate.tsx` renders a `coreServices` grid of **six** service links ("Painting Services
+in {suburb}"). The static generator never emitted it — suburb pages carried only the two footer
+links, interior and exterior. So **crawlers saw 2 service links per suburb page where users saw 6**,
+across all 96 suburb pages. Commercial painting, kitchen cabinet resurfacing, roof painting and
+real estate painting had **zero** crawlable inbound links from any suburb page. That is also why
+the Mordialloc page mentions roof, cabinets, fence and body corporate zero times — the section
+carrying them was absent from the crawler layer entirely.
+
+**Batch 1 — two defect fixes, no invented content**
+
+1. Generator now emits the six-service block, matching the React grid, with anchor text
+   `"<Service> <Suburb>"` — the exact intent phrasing the brief lists. **+384 crawler-visible
+   internal links** into the four commercially strongest service pages (96 each).
+2. Mordialloc meta description rewritten. The old one was a broken fragment on the flagship page,
+   serving the SERP snippet for the one term that regressed.
+
+**Gates:** similarity 23.0% → **25.6% avg**, worst twin 44.0% → 46.4%, **0 pages over 55%** —
+inside the gate (revert only above 45% avg or 55% any page). The rise is expected and paid for:
+an identical block on 96 pages, in exchange for 384 links into the money pages. Schema-vs-visible
+477 questions / 0 problems. 0 broken links. Sitemap bumped for the 96 pages that genuinely changed.
+
+**Not done, deliberately.** *Epoxy flooring Mordialloc* appears in the brief's target list but
+Jetblack has no epoxy flooring service page and no evidence of offering it. Adding it would be
+inventing a capability, which the standing rules forbid — **Jimmy to confirm whether this is a real
+service** before it goes anywhere near the site.
+
+**Next task (Batch 2, not started):** Mordialloc-specific body content for the four uncovered
+intents — roof, kitchen cabinets, fence/deck, body corporate — written from real local property
+stock, not padded. Also two other broken meta descriptions found in the sweep: Murrumbeena
+("…and interwar") and Kingston ("…and coating selection").

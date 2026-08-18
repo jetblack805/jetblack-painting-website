@@ -42,6 +42,17 @@ Strata and owners-corporation work across St Kilda — common areas, stairwells,
 
 Fast-turnaround repainting for St Kilda sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in St Kilda
+
+Every service below is available in St Kilda. Follow a link for service details and to request a quote.
+
+- [Interior house painting St Kilda](/services/interior-painting/)
+- [Exterior house painting St Kilda](/services/exterior-painting/)
+- [Commercial painting St Kilda](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing St Kilda](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting St Kilda](/services/roof-painting/)
+- [Real estate painting St Kilda](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around St Kilda.

@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Croydon, scheduled around your
 
 Fast-turnaround repainting to get Croydon properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Croydon
+
+Every service below is available in Croydon. Follow a link for service details and to request a quote.
+
+- [Interior house painting Croydon](/services/interior-painting/)
+- [Exterior house painting Croydon](/services/exterior-painting/)
+- [Commercial painting Croydon](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Croydon](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Croydon](/services/roof-painting/)
+- [Real estate painting Croydon](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Croydon.

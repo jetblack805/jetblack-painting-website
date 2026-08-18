@@ -58,6 +58,17 @@ Shops, offices, and maintenance repainting across Mentone, scheduled around your
 
 Fast-turnaround repainting for Mentone sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Mentone
+
+Every service below is available in Mentone. Follow a link for service details and to request a quote.
+
+- [Interior house painting Mentone](/services/interior-painting/)
+- [Exterior house painting Mentone](/services/exterior-painting/)
+- [Commercial painting Mentone](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Mentone](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Mentone](/services/roof-painting/)
+- [Real estate painting Mentone](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Mentone.

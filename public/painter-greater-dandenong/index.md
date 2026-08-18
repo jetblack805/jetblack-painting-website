@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Greater Dandenong, scheduled a
 
 Fast-turnaround repainting to get Greater Dandenong properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Greater Dandenong
+
+Every service below is available in Greater Dandenong. Follow a link for service details and to request a quote.
+
+- [Interior house painting Greater Dandenong](/services/interior-painting/)
+- [Exterior house painting Greater Dandenong](/services/exterior-painting/)
+- [Commercial painting Greater Dandenong](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Greater Dandenong](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Greater Dandenong](/services/roof-painting/)
+- [Real estate painting Greater Dandenong](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Greater Dandenong.

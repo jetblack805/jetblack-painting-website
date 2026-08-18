@@ -58,6 +58,17 @@ Strata and owners-corporation work across Hawthorn — common areas, stairwells,
 
 Fast-turnaround repainting for Hawthorn sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Hawthorn
+
+Every service below is available in Hawthorn. Follow a link for service details and to request a quote.
+
+- [Interior house painting Hawthorn](/services/interior-painting/)
+- [Exterior house painting Hawthorn](/services/exterior-painting/)
+- [Commercial painting Hawthorn](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Hawthorn](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Hawthorn](/services/roof-painting/)
+- [Real estate painting Hawthorn](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Hawthorn.

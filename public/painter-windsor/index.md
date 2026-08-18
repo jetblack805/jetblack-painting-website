@@ -42,6 +42,17 @@ Strata and owners-corporation work across Windsor — common areas, stairwells, 
 
 Fast-turnaround repainting for Windsor sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Windsor
+
+Every service below is available in Windsor. Follow a link for service details and to request a quote.
+
+- [Interior house painting Windsor](/services/interior-painting/)
+- [Exterior house painting Windsor](/services/exterior-painting/)
+- [Commercial painting Windsor](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Windsor](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Windsor](/services/roof-painting/)
+- [Real estate painting Windsor](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Windsor.

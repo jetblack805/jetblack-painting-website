@@ -46,6 +46,17 @@ Strata and owners-corporation work across Hampton East — common areas, stairwe
 
 Fast-turnaround repainting for Hampton East sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Hampton East
+
+Every service below is available in Hampton East. Follow a link for service details and to request a quote.
+
+- [Interior house painting Hampton East](/services/interior-painting/)
+- [Exterior house painting Hampton East](/services/exterior-painting/)
+- [Commercial painting Hampton East](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Hampton East](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Hampton East](/services/roof-painting/)
+- [Real estate painting Hampton East](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Hampton East.

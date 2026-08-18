@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Carrum, scheduled around your 
 
 Fast-turnaround repainting to get Carrum properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Carrum
+
+Every service below is available in Carrum. Follow a link for service details and to request a quote.
+
+- [Interior house painting Carrum](/services/interior-painting/)
+- [Exterior house painting Carrum](/services/exterior-painting/)
+- [Commercial painting Carrum](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Carrum](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Carrum](/services/roof-painting/)
+- [Real estate painting Carrum](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Carrum.

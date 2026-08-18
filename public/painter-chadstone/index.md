@@ -46,6 +46,17 @@ Strata and owners-corporation work across Chadstone — common areas, stairwells
 
 Fast-turnaround repainting to get Chadstone properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Chadstone
+
+Every service below is available in Chadstone. Follow a link for service details and to request a quote.
+
+- [Interior house painting Chadstone](/services/interior-painting/)
+- [Exterior house painting Chadstone](/services/exterior-painting/)
+- [Commercial painting Chadstone](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Chadstone](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Chadstone](/services/roof-painting/)
+- [Real estate painting Chadstone](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Chadstone.

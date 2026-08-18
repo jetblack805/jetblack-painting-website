@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Somerville, scheduled around y
 
 Fast-turnaround repainting to get Somerville properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Somerville
+
+Every service below is available in Somerville. Follow a link for service details and to request a quote.
+
+- [Interior house painting Somerville](/services/interior-painting/)
+- [Exterior house painting Somerville](/services/exterior-painting/)
+- [Commercial painting Somerville](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Somerville](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Somerville](/services/roof-painting/)
+- [Real estate painting Somerville](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Somerville.

@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Brighton East, scheduled aroun
 
 Fast-turnaround repainting to get Brighton East properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Brighton East
+
+Every service below is available in Brighton East. Follow a link for service details and to request a quote.
+
+- [Interior house painting Brighton East](/services/interior-painting/)
+- [Exterior house painting Brighton East](/services/exterior-painting/)
+- [Commercial painting Brighton East](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Brighton East](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Brighton East](/services/roof-painting/)
+- [Real estate painting Brighton East](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Brighton East.

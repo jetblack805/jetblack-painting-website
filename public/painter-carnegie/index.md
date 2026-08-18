@@ -42,6 +42,17 @@ Strata and owners-corporation work across Carnegie — common areas, stairwells,
 
 Fast-turnaround repainting for Carnegie sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Carnegie
+
+Every service below is available in Carnegie. Follow a link for service details and to request a quote.
+
+- [Interior house painting Carnegie](/services/interior-painting/)
+- [Exterior house painting Carnegie](/services/exterior-painting/)
+- [Commercial painting Carnegie](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Carnegie](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Carnegie](/services/roof-painting/)
+- [Real estate painting Carnegie](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Carnegie.

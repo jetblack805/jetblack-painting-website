@@ -42,6 +42,17 @@ Strata and owners-corporation work across Richmond — common areas, stairwells,
 
 Fast-turnaround repainting for Richmond sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Richmond
+
+Every service below is available in Richmond. Follow a link for service details and to request a quote.
+
+- [Interior house painting Richmond](/services/interior-painting/)
+- [Exterior house painting Richmond](/services/exterior-painting/)
+- [Commercial painting Richmond](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Richmond](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Richmond](/services/roof-painting/)
+- [Real estate painting Richmond](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Richmond.

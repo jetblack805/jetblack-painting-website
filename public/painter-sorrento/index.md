@@ -58,6 +58,17 @@ Shops, offices, and maintenance repainting across Sorrento, scheduled around you
 
 Fast-turnaround repainting for Sorrento sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Sorrento
+
+Every service below is available in Sorrento. Follow a link for service details and to request a quote.
+
+- [Interior house painting Sorrento](/services/interior-painting/)
+- [Exterior house painting Sorrento](/services/exterior-painting/)
+- [Commercial painting Sorrento](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Sorrento](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Sorrento](/services/roof-painting/)
+- [Real estate painting Sorrento](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Sorrento.

@@ -46,6 +46,17 @@ Strata and owners-corporation work across Caulfield — common areas, stairwells
 
 Fast-turnaround repainting for Caulfield sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Caulfield
+
+Every service below is available in Caulfield. Follow a link for service details and to request a quote.
+
+- [Interior house painting Caulfield](/services/interior-painting/)
+- [Exterior house painting Caulfield](/services/exterior-painting/)
+- [Commercial painting Caulfield](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Caulfield](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Caulfield](/services/roof-painting/)
+- [Real estate painting Caulfield](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Caulfield.

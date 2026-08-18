@@ -700,6 +700,26 @@ function generateSuburbPage(route, sourceFile) {
           heading: `What we paint in ${suburb}`,
           items: suburbServiceCards({ suburb, localExpertise, propertyTypes }),
         },
+        // Mirrors the `coreServices` grid the React template renders as
+        // "Painting Services in {suburb}". The static layer used to ship only
+        // the two footer links (interior + exterior), so crawlers saw 2 service
+        // links per suburb page where users saw 6 — commercial, kitchen cabinet
+        // resurfacing, roof and real estate painting were absent from the
+        // crawlable layer on all 96 suburb pages. Keep this list in step with
+        // `coreServices` in client/src/components/SuburbPageTemplate.tsx.
+        {
+          type: "links",
+          heading: `Painting Services in ${suburb}`,
+          body: `Every service below is available in ${suburb}. Follow a link for service details and to request a quote.`,
+          items: [
+            { label: `Interior house painting ${suburb}`, href: "/services/interior-painting/" },
+            { label: `Exterior house painting ${suburb}`, href: "/services/exterior-painting/" },
+            { label: `Commercial painting ${suburb}`, href: "/services/commercial-painting/" },
+            { label: `Kitchen cabinet resurfacing ${suburb}`, href: "/services/kitchen-cabinet-resurfacing/" },
+            { label: `Roof painting ${suburb}`, href: "/services/roof-painting/" },
+            { label: `Real estate painting ${suburb}`, href: "/services/real-estate-painting/" },
+          ],
+        },
         {
           type: "links",
           heading: `Nearby suburbs we also service`,

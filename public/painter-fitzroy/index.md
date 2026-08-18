@@ -42,6 +42,17 @@ Shops, offices, and maintenance repainting across Fitzroy, scheduled around your
 
 Fast-turnaround repainting for Fitzroy sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Fitzroy
+
+Every service below is available in Fitzroy. Follow a link for service details and to request a quote.
+
+- [Interior house painting Fitzroy](/services/interior-painting/)
+- [Exterior house painting Fitzroy](/services/exterior-painting/)
+- [Commercial painting Fitzroy](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Fitzroy](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Fitzroy](/services/roof-painting/)
+- [Real estate painting Fitzroy](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Fitzroy.

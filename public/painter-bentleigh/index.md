@@ -46,6 +46,17 @@ Strata and owners-corporation work across Bentleigh — common areas, stairwells
 
 Fast-turnaround repainting for Bentleigh sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Bentleigh
+
+Every service below is available in Bentleigh. Follow a link for service details and to request a quote.
+
+- [Interior house painting Bentleigh](/services/interior-painting/)
+- [Exterior house painting Bentleigh](/services/exterior-painting/)
+- [Commercial painting Bentleigh](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Bentleigh](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Bentleigh](/services/roof-painting/)
+- [Real estate painting Bentleigh](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Bentleigh.

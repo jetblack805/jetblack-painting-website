@@ -46,6 +46,17 @@ Strata and owners-corporation work across Glen Iris — common areas, stairwells
 
 Fast-turnaround repainting for Glen Iris sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Glen Iris
+
+Every service below is available in Glen Iris. Follow a link for service details and to request a quote.
+
+- [Interior house painting Glen Iris](/services/interior-painting/)
+- [Exterior house painting Glen Iris](/services/exterior-painting/)
+- [Commercial painting Glen Iris](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Glen Iris](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Glen Iris](/services/roof-painting/)
+- [Real estate painting Glen Iris](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Glen Iris.

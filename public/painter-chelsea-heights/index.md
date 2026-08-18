@@ -42,6 +42,17 @@ Strata and owners-corporation work across Chelsea Heights — common areas, stai
 
 Fast-turnaround repainting to get Chelsea Heights properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Chelsea Heights
+
+Every service below is available in Chelsea Heights. Follow a link for service details and to request a quote.
+
+- [Interior house painting Chelsea Heights](/services/interior-painting/)
+- [Exterior house painting Chelsea Heights](/services/exterior-painting/)
+- [Commercial painting Chelsea Heights](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Chelsea Heights](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Chelsea Heights](/services/roof-painting/)
+- [Real estate painting Chelsea Heights](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Chelsea Heights.

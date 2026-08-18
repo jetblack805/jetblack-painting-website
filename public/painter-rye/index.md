@@ -42,6 +42,17 @@ Shops, offices, and maintenance repainting across Rye, scheduled around your tra
 
 Fast-turnaround repainting to get Rye properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Rye
+
+Every service below is available in Rye. Follow a link for service details and to request a quote.
+
+- [Interior house painting Rye](/services/interior-painting/)
+- [Exterior house painting Rye](/services/exterior-painting/)
+- [Commercial painting Rye](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Rye](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Rye](/services/roof-painting/)
+- [Real estate painting Rye](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Rye.

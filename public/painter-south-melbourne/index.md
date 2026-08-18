@@ -42,6 +42,17 @@ Strata and owners-corporation work across South Melbourne — common areas, stai
 
 Fast-turnaround repainting for South Melbourne sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in South Melbourne
+
+Every service below is available in South Melbourne. Follow a link for service details and to request a quote.
+
+- [Interior house painting South Melbourne](/services/interior-painting/)
+- [Exterior house painting South Melbourne](/services/exterior-painting/)
+- [Commercial painting South Melbourne](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing South Melbourne](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting South Melbourne](/services/roof-painting/)
+- [Real estate painting South Melbourne](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around South Melbourne.

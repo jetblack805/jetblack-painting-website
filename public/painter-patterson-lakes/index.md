@@ -42,6 +42,17 @@ Strata and owners-corporation work across Patterson Lakes — common areas, stai
 
 Fast-turnaround repainting to get Patterson Lakes properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Patterson Lakes
+
+Every service below is available in Patterson Lakes. Follow a link for service details and to request a quote.
+
+- [Interior house painting Patterson Lakes](/services/interior-painting/)
+- [Exterior house painting Patterson Lakes](/services/exterior-painting/)
+- [Commercial painting Patterson Lakes](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Patterson Lakes](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Patterson Lakes](/services/roof-painting/)
+- [Real estate painting Patterson Lakes](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Patterson Lakes.

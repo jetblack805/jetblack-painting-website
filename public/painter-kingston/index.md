@@ -46,6 +46,17 @@ Strata and owners-corporation work across Kingston — common areas, stairwells,
 
 Fast-turnaround repainting to get Kingston properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Kingston
+
+Every service below is available in Kingston. Follow a link for service details and to request a quote.
+
+- [Interior house painting Kingston](/services/interior-painting/)
+- [Exterior house painting Kingston](/services/exterior-painting/)
+- [Commercial painting Kingston](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Kingston](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Kingston](/services/roof-painting/)
+- [Real estate painting Kingston](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Kingston.

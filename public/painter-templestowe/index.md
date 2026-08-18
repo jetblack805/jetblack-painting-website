@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Templestowe, scheduled around 
 
 Fast-turnaround repainting to get Templestowe properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Templestowe
+
+Every service below is available in Templestowe. Follow a link for service details and to request a quote.
+
+- [Interior house painting Templestowe](/services/interior-painting/)
+- [Exterior house painting Templestowe](/services/exterior-painting/)
+- [Commercial painting Templestowe](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Templestowe](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Templestowe](/services/roof-painting/)
+- [Real estate painting Templestowe](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Templestowe.

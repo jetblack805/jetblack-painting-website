@@ -58,6 +58,17 @@ Shops, offices, and maintenance repainting across Toorak, scheduled around your 
 
 Fast-turnaround repainting for Toorak sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Toorak
+
+Every service below is available in Toorak. Follow a link for service details and to request a quote.
+
+- [Interior house painting Toorak](/services/interior-painting/)
+- [Exterior house painting Toorak](/services/exterior-painting/)
+- [Commercial painting Toorak](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Toorak](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Toorak](/services/roof-painting/)
+- [Real estate painting Toorak](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Toorak.

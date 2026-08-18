@@ -42,6 +42,17 @@ Strata and owners-corporation work across Brunswick — common areas, stairwells
 
 Fast-turnaround repainting for Brunswick sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Brunswick
+
+Every service below is available in Brunswick. Follow a link for service details and to request a quote.
+
+- [Interior house painting Brunswick](/services/interior-painting/)
+- [Exterior house painting Brunswick](/services/exterior-painting/)
+- [Commercial painting Brunswick](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Brunswick](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Brunswick](/services/roof-painting/)
+- [Real estate painting Brunswick](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Brunswick.

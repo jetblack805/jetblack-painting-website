@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Kew, scheduled around your tra
 
 Fast-turnaround repainting for Kew sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Kew
+
+Every service below is available in Kew. Follow a link for service details and to request a quote.
+
+- [Interior house painting Kew](/services/interior-painting/)
+- [Exterior house painting Kew](/services/exterior-painting/)
+- [Commercial painting Kew](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Kew](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Kew](/services/roof-painting/)
+- [Real estate painting Kew](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Kew.

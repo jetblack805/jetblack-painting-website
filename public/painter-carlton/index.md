@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Carlton, scheduled around your
 
 Fast-turnaround repainting for Carlton sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Carlton
+
+Every service below is available in Carlton. Follow a link for service details and to request a quote.
+
+- [Interior house painting Carlton](/services/interior-painting/)
+- [Exterior house painting Carlton](/services/exterior-painting/)
+- [Commercial painting Carlton](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Carlton](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Carlton](/services/roof-painting/)
+- [Real estate painting Carlton](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Carlton.

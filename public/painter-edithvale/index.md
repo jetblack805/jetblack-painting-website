@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Edithvale, scheduled around yo
 
 Fast-turnaround repainting to get Edithvale properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Edithvale
+
+Every service below is available in Edithvale. Follow a link for service details and to request a quote.
+
+- [Interior house painting Edithvale](/services/interior-painting/)
+- [Exterior house painting Edithvale](/services/exterior-painting/)
+- [Commercial painting Edithvale](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Edithvale](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Edithvale](/services/roof-painting/)
+- [Real estate painting Edithvale](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Edithvale.

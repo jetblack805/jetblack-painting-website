@@ -31,6 +31,9 @@ export default function SafetyBeachPainters() {
         { name: "Mount Martha", link: "/painter-mount-martha" },
         { name: "Mornington", link: "/painter-mornington" },
         { name: "Rosebud", link: "/painter-rosebud" },
+        { name: "Rye", link: "/painter-rye" },
+        { name: "Sorrento", link: "/painter-sorrento" },
+        { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },
       ]}
       localExpertise={`We know ${suburb} well — a Mornington Peninsula bayside town sitting between Mount Martha and Dromana, where the housing runs from original beach houses to modern permanent homes and the waterfront properties around Martha Cove marina. Everything here is exposed to salt air, strong coastal UV and wind-driven rain, which strips poorly prepared paintwork fast. We use coastal-grade preparation — salt washing, bare-timber priming and flexible, salt-resistant topcoats — so a ${suburb} repaint actually lasts in this environment.`}
       propertyTypes={`${suburb}'s weatherboard and fibro beach houses, modern rendered and brick permanent homes, waterfront properties around Martha Cove, and holiday and rental homes near the foreshore.`}

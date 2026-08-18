@@ -50,11 +50,15 @@ Fast-turnaround repainting to get Mornington Peninsula properties market-ready â
 
 Explore nearby suburb pages for neighbouring areas around Mornington Peninsula.
 
-- [Berwick](/painter-berwick/)
-- [Dandenong](/painter-dandenong/)
-- [Greater Dandenong](/painter-greater-dandenong/)
-- [Kingston](/painter-kingston/)
-- [Moorabbin](/painter-moorabbin/)
+- [Sorrento](/painter-sorrento/)
+- [Rye](/painter-rye/)
+- [Rosebud](/painter-rosebud/)
+- [Dromana](/painter-dromana/)
+- [Safety Beach](/painter-safety-beach/)
+- [Mount Martha](/painter-mount-martha/)
+- [Mornington](/painter-mornington/)
+- [Mount Eliza](/painter-mount-eliza/)
+- [Frankston](/painter-frankston/)
 
 ## Frequently asked questions about painters in Mornington Peninsula
 

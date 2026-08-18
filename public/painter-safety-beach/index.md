@@ -50,6 +50,9 @@ Explore nearby suburb pages for neighbouring areas around Safety Beach.
 - [Mount Martha](/painter-mount-martha/)
 - [Mornington](/painter-mornington/)
 - [Rosebud](/painter-rosebud/)
+- [Rye](/painter-rye/)
+- [Sorrento](/painter-sorrento/)
+- [Mornington Peninsula](/painter-mornington-peninsula/)
 
 ## Frequently asked questions about painters in Safety Beach
 

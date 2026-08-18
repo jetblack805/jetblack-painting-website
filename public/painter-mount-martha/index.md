@@ -50,12 +50,15 @@ Fast-turnaround repainting to get Mount Martha properties market-ready — durab
 
 Explore nearby suburb pages for neighbouring areas around Mount Martha.
 
-- [Hastings](/painter-hastings/)
 - [Mornington](/painter-mornington/)
+- [Safety Beach](/painter-safety-beach/)
+- [Dromana](/painter-dromana/)
+- [Rosebud](/painter-rosebud/)
+- [Sorrento](/painter-sorrento/)
 - [Mount Eliza](/painter-mount-eliza/)
-- [Mornington Peninsula](/painter-mornington-peninsula/)
+- [Hastings](/painter-hastings/)
 - [Frankston](/painter-frankston/)
-- [Berwick](/painter-berwick/)
+- [Mornington Peninsula](/painter-mornington-peninsula/)
 
 ## Frequently asked questions about painters in Mount Martha
 

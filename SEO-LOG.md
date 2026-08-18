@@ -245,3 +245,58 @@ before assuming depth is the answer.
 **Next task:** deepen Sorrento on genuinely new angles (seasonal holiday-town scheduling, Bass
 Strait wind exposure on the back beach vs the calmer bay side, heritage/limestone overlay
 specifics). Do not repeat the coastal-salt paragraph pattern used across a dozen bayside pages.
+
+### 2026-08-18 (run 3) — Sorrento actioned: depth + Peninsula link cluster repaired
+
+Both levers identified last run were pulled, because investigating the link side turned up a
+genuine defect rather than a marginal gain.
+
+**Lever 1 — depth. Sorrento 972w → 1,750w, 4 FAQs → 7.**
+Two new sections, deliberately on angles no other bayside page uses (the coastal-salt paragraph
+pattern was not repeated):
+
+- *Why Sorrento's Two Coastlines Need Different Specifications* — front beach salt settles as a
+  film; back beach salt arrives wind-driven off Bass Strait carrying sand, which abrades as well
+  as attacks. Consequence: elevations on one house age at very different rates, so they are
+  assessed separately and noted in the quote, and exposed faces often have to be brushed and
+  rolled rather than sprayed because overspray carries.
+- *Seasons, Access and Getting a Sorrento Job Scheduled Properly* — a holiday town's population
+  swing versus the weather window (autumn/spring for exteriors, winter for interiors), plus steep
+  blocks falling to the water and narrow front-beach streets with summer parking pressure.
+
+New FAQs: whether every elevation needs the same system, best time of year to repaint, access on
+steep/narrow blocks. No prices, timeframes, reviews, awards or capabilities were invented.
+"Autumn and spring" is stated as workable conditions, not a promised schedule.
+
+**Lever 2 — internal links. Sorrento 5 → 8 inbound (excluding the shared nav).**
+The investigation found the cause, and it was a real error, not a shortage:
+
+| Page | Was linking to | Problem |
+|---|---|---|
+| `/painter-mornington-peninsula/` | Berwick, Dandenong, Greater Dandenong, Kingston, Moorabbin | **None of these are on the Mornington Peninsula.** The regional hub page linked to no Peninsula town at all, while naming Sorrento, Portsea and Blairgowrie in its own prose |
+| `/painter-mount-martha/` | …Berwick | ~55 km inland, across a different region |
+
+Corrected to the actual bay-side run: Peninsula hub now links to Sorrento, Rye, Rosebud, Dromana,
+Safety Beach, Mount Martha, Mornington, Mount Eliza, Frankston. Mount Martha drops Berwick and
+picks up Safety Beach, Dromana, Rosebud, Sorrento. Safety Beach adds Rye, Sorrento and the hub.
+This is an accuracy fix that happens to flow authority into the whole Peninsula cluster —
+Dromana 9, Peninsula hub 9, Sorrento 8, Mount Martha 7 inbound.
+
+**Also fixed — `scripts/generate-sitemap.mjs` was stamping `today` onto all 114 `lastmod` values
+on every run.** Editing one suburb page told Google the entire site had been rewritten. The
+script now carries forward each URL's existing `lastmod` and bumps only routes named on the
+command line (`node scripts/generate-sitemap.mjs /painter-sorrento/ …`); new routes still get
+today. This run's sitemap diff is 4 lines, not 99.
+
+**Gates:** similarity 23.0% avg, 0 pages >55% (unchanged/marginally better); schema-vs-visible
+477 FAQ questions, 0 problems; 0 broken links; 0 orphans; three-layer regeneration touched only
+the expected files; React ↔ static neighbouring-link parity matches on all 4 pages.
+
+⚠️ `pnpm check` / `pnpm build` still cannot run here — the registry 403s pnpm's own self-install,
+`node_modules` is absent, and **there is still no `tsconfig.json` in the repo**, so `pnpm check`
+would not typecheck anything even with deps installed. Cloudflare's build remains the real gate.
+
+**Next task:** measure before adding. Sorrento's depth and links both changed on the same day;
+give it 2–3 weeks in GSC before touching it again. Meanwhile the untested question is whether
+Collingwood (100 impressions, position 17.5, already 1,444w) moves on links alone — it has no
+Peninsula-style cluster defect, so it needs a different diagnosis, not more words.

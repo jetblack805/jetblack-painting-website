@@ -51,11 +51,15 @@ export default function MorningtonPeninsulaPainters() {
       title="Mornington Peninsula Painters | Coastal House Painting"
       description="Coastal house painters across the Mornington Peninsula — beach houses, coastal homes and rural properties. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
-        { name: "Berwick", link: "/painter-berwick" },
-        { name: "Dandenong", link: "/painter-dandenong" },
-        { name: "Greater Dandenong", link: "/painter-greater-dandenong" },
-        { name: "Kingston", link: "/painter-kingston" },
-        { name: "Moorabbin", link: "/painter-moorabbin" }
+        { name: "Sorrento", link: "/painter-sorrento" },
+        { name: "Rye", link: "/painter-rye" },
+        { name: "Rosebud", link: "/painter-rosebud" },
+        { name: "Dromana", link: "/painter-dromana" },
+        { name: "Safety Beach", link: "/painter-safety-beach" },
+        { name: "Mount Martha", link: "/painter-mount-martha" },
+        { name: "Mornington", link: "/painter-mornington" },
+        { name: "Mount Eliza", link: "/painter-mount-eliza" },
+        { name: "Frankston", link: "/painter-frankston" }
       ]}
       localExpertise={`As specialists serving the Mornington Peninsula, we understand the diverse needs of this region. From salt-sprayed coastal residences to rural farmhouses and luxury holiday homes, we provide durable painting solutions tailored to the Peninsula's unique climate.`}
       propertyTypes={`The Mornington Peninsula features a wide range of properties, including contemporary coastal mansions, rustic rural retreats, and classic beach shacks. Our team is experienced in selecting the right materials for each environment.`}

@@ -125,11 +125,40 @@ const ROUTES = [
 
 const today = new Date().toISOString().split("T")[0];
 
+// lastmod is a freshness signal, so it must only move for pages that actually
+// changed. This script used to stamp `today` onto all 114 URLs on every run,
+// which told Google the entire site was rewritten whenever one suburb page was
+// edited. Instead we carry forward each URL's existing lastmod and only bump
+// the routes named on the command line:
+//
+//   node scripts/generate-sitemap.mjs /painter-sorrento/ /painter-rye/
+//
+// URLs new to ROUTES (no previous entry) get today's date automatically.
+const existingLastmod = new Map();
+if (fs.existsSync(OUT_PATH)) {
+  const previous = fs.readFileSync(OUT_PATH, "utf-8");
+  const entry = /<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g;
+  let m;
+  while ((m = entry.exec(previous)) !== null) {
+    existingLastmod.set(m[1].replace(SITE_URL, ""), m[2]);
+  }
+}
+
+const touched = new Set(process.argv.slice(2));
+for (const route of touched) {
+  if (!ROUTES.some(r => r.path === route)) {
+    console.warn(`Warning: --touch route "${route}" is not in ROUTES and was ignored.`);
+  }
+}
+
+const lastmodFor = (routePath) =>
+  touched.has(routePath) ? today : existingLastmod.get(routePath) ?? today;
+
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${ROUTES.map(r => `  <url>
     <loc>${SITE_URL}${r.path}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmodFor(r.path)}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>
   </url>`).join("\n")}
@@ -138,4 +167,4 @@ ${ROUTES.map(r => `  <url>
 
 fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
 fs.writeFileSync(OUT_PATH, xml, "utf-8");
-console.log(`Sitemap written to ${OUT_PATH} with ${ROUTES.length} URLs.`);
+console.log(`Sitemap written to ${OUT_PATH} with ${ROUTES.length} URLs (${touched.size} lastmod bumped to ${today}).`);

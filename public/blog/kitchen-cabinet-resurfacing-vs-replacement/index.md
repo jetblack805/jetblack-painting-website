@@ -57,7 +57,7 @@ We use 2-pack polyurethane, the same professional-grade finish used on luxury ne
 
 **Jetblack Painting** — Kitchen Cabinet Resurfacing vs Replacement | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
-[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Contact](/review-us/)
+[Blog](/blog/) | [Kitchen Cabinet Resurfacing](/services/kitchen-cabinet-resurfacing/) | [Interior Painting](/services/interior-painting/) | [Contact](/review-us/)
 
 ## Suburbs we service
 

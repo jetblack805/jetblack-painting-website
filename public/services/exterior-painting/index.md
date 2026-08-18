@@ -79,16 +79,16 @@ Yes. Weatherboard needs more preparation — sanding back flaking coatings, repl
 
 ## Suburbs we service
 
-We provide this service across Melbourne, including these popular areas.
+We provide this service across Melbourne, including these areas.
 
-- [Painters Toorak](/painter-toorak/)
-- [Painters Brighton](/painter-brighton/)
-- [Painters Camberwell](/painter-camberwell/)
-- [Painters Hawthorn](/painter-hawthorn/)
-- [Painters Bentleigh](/painter-bentleigh/)
 - [Painters Mordialloc](/painter-mordialloc/)
-- [Painters Keysborough](/keysborough-painters/)
-- [Painters Glen Waverley](/painter-glen-waverley/)
+- [Painters Mentone](/painter-mentone/)
+- [Painters Aspendale](/painter-aspendale/)
+- [Painters Highett](/painter-highett/)
+- [Painters Sorrento](/painter-sorrento/)
+- [Painters Dromana](/painter-dromana/)
+- [Painters Patterson Lakes](/painter-patterson-lakes/)
+- [Painters Hampton](/painter-hampton/)
 
 ## Related painting services
 

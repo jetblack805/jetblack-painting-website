@@ -31,15 +31,14 @@ export default function RoofFencePainting() {
   ];
 
   const suburbs = [
-    { name: "Brighton", link: "/painter-brighton" },
-    { name: "Toorak", link: "/painter-toorak" },
-    { name: "Malvern", link: "/painter-malvern" },
-    { name: "Camberwell", link: "/painter-camberwell" },
-    { name: "Hawthorn", link: "/painter-hawthorn" },
-    { name: "Bentleigh", link: "/painter-bentleigh" },
-    { name: "Caulfield", link: "/painter-caulfield" },
-    { name: "Hampton", link: "/painter-hampton" },
     { name: "Mordialloc", link: "/painter-mordialloc" },
+    { name: "Mentone", link: "/painter-mentone" },
+    { name: "Aspendale", link: "/painter-aspendale" },
+    { name: "Highett", link: "/painter-highett" },
+    { name: "Dromana", link: "/painter-dromana" },
+    { name: "Patterson Lakes", link: "/painter-patterson-lakes" },
+    { name: "Bentleigh", link: "/painter-bentleigh" },
+    { name: "Hampton", link: "/painter-hampton" },
   ];
 
   /* First sentence of every answer is the answer. These are what get lifted

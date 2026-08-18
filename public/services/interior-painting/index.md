@@ -87,16 +87,16 @@ Yes. Colour consultation is included with every quote — we look at the room's 
 
 ## Suburbs we service
 
-We provide this service across Melbourne, including these popular areas.
+We provide this service across Melbourne, including these areas.
 
-- [Painters Toorak](/painter-toorak/)
-- [Painters Brighton](/painter-brighton/)
-- [Painters Camberwell](/painter-camberwell/)
-- [Painters Hawthorn](/painter-hawthorn/)
+- [Painters McKinnon](/painter-mckinnon/)
+- [Painters Highett](/painter-highett/)
+- [Painters Murrumbeena](/painter-murrumbeena/)
+- [Painters Mentone](/painter-mentone/)
 - [Painters Bentleigh](/painter-bentleigh/)
+- [Painters Caulfield](/painter-caulfield/)
+- [Painters Hampton](/painter-hampton/)
 - [Painters Mordialloc](/painter-mordialloc/)
-- [Painters Keysborough](/keysborough-painters/)
-- [Painters Glen Waverley](/painter-glen-waverley/)
 
 ## Related painting services
 

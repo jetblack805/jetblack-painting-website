@@ -86,16 +86,16 @@ Through the committee or strata manager, with a schedule they can circulate to o
 
 ## Suburbs we service
 
-We provide this service across Melbourne, including these popular areas.
+We provide this service across Melbourne, including these areas.
 
-- [Painters Toorak](/painter-toorak/)
-- [Painters Brighton](/painter-brighton/)
-- [Painters Camberwell](/painter-camberwell/)
-- [Painters Hawthorn](/painter-hawthorn/)
+- [Painters Caulfield](/painter-caulfield/)
+- [Painters Collingwood](/painter-collingwood/)
 - [Painters Bentleigh](/painter-bentleigh/)
+- [Painters Clyde North](/painter-clyde-north/)
+- [Painters Box Hill](/painter-box-hill/)
 - [Painters Mordialloc](/painter-mordialloc/)
-- [Painters Keysborough](/keysborough-painters/)
-- [Painters Glen Waverley](/painter-glen-waverley/)
+- [Painters Mentone](/painter-mentone/)
+- [Painters Highett](/painter-highett/)
 
 ## Related painting services
 

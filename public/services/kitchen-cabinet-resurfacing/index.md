@@ -96,16 +96,16 @@ Water damage and structural problems. If the board under the sink or beside the 
 
 ## Suburbs we service
 
-We provide this service across Melbourne, including these popular areas.
+We provide this service across Melbourne, including these areas.
 
-- [Painters Toorak](/painter-toorak/)
-- [Painters Brighton](/painter-brighton/)
-- [Painters Camberwell](/painter-camberwell/)
-- [Painters Hawthorn](/painter-hawthorn/)
+- [Painters McKinnon](/painter-mckinnon/)
+- [Painters Highett](/painter-highett/)
+- [Painters Murrumbeena](/painter-murrumbeena/)
+- [Painters Mentone](/painter-mentone/)
+- [Painters Aspendale](/painter-aspendale/)
 - [Painters Bentleigh](/painter-bentleigh/)
+- [Painters Caulfield](/painter-caulfield/)
 - [Painters Mordialloc](/painter-mordialloc/)
-- [Painters Keysborough](/keysborough-painters/)
-- [Painters Glen Waverley](/painter-glen-waverley/)
 
 ## Related painting services
 

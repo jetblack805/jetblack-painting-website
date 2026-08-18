@@ -60,7 +60,7 @@ Standard primers won't prevent regrowth. A dedicated anti-mould primer — we us
 
 **Jetblack Painting** — Mould Remediation & Painting Guide Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
-[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Contact](/review-us/)
+[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/) | [Contact](/review-us/)
 
 ## Suburbs we service
 

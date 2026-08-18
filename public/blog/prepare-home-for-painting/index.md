@@ -57,7 +57,7 @@ Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould
 
 **Jetblack Painting** — How to Prepare Your Home for Painting | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
-[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Contact](/review-us/)
+[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/) | [Contact](/review-us/)
 
 ## Suburbs we service
 

@@ -885,16 +885,125 @@ function serviceSchema({ name, title, description, canonical }) {
   ];
 }
 
+// Fallback only. Kept so a service without an entry in serviceSuburbLinks below
+// still renders a list rather than nothing.
 const popularSuburbLinks = [
-  { label: "Painters Toorak", href: "/painter-toorak/" },
-  { label: "Painters Brighton", href: "/painter-brighton/" },
-  { label: "Painters Camberwell", href: "/painter-camberwell/" },
-  { label: "Painters Hawthorn", href: "/painter-hawthorn/" },
-  { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
   { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+  { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+  { label: "Painters Highett", href: "/painter-highett/" },
+  { label: "Painters McKinnon", href: "/painter-mckinnon/" },
+  { label: "Painters Mentone", href: "/painter-mentone/" },
+  { label: "Painters Caulfield", href: "/painter-caulfield/" },
   { label: "Painters Keysborough", href: "/keysborough-painters/" },
-  { label: "Painters Glen Waverley", href: "/painter-glen-waverley/" },
+  { label: "Painters Hampton", href: "/painter-hampton/" },
 ];
+
+// Suburb links per service, replacing the single shared list that pointed all
+// eight service pages at the SAME eight suburbs. Two problems with that:
+//
+//  1. It was the "repeated keyword-heavy link block" pattern — an identical
+//     list on every page with no contextual reason for any given suburb to be
+//     there. None of these suburbs is named anywhere in the service prose.
+//  2. Five of the eight (Toorak, Brighton, Camberwell, Hawthorn, Glen Waverley)
+//     sit at GSC positions 79-90 and were moved to off-page channels on
+//     2026-08-17. Every service page — the strongest internal hubs on the site
+//     — was pushing authority into pages that cannot rank, while the winnable
+//     set (McKinnon 11.3, Aspendale 14.0, Sorrento 14.5, Patterson Lakes 16.5,
+//     Murrumbeena 17.2, Collingwood 17.3, Mentone/Highett 17.5, Donvale 18.3,
+//     Dromana 19.4) received no service-page links at all.
+//
+// Each list below is chosen for genuine relevance to that specific service, not
+// just swapped for a different uniform block:
+//   commercial / body corporate → Mount Eliza and Clyde North actually rank
+//     15-18 on commercial queries ("commercial facade painting", "commercial
+//     repainting"); Moorabbin and Box Hill are real commercial/apartment areas.
+//   roof and roof/fence → weather-exposed bayside and Peninsula suburbs;
+//     "roof painting dromana" is already a ranking query.
+//   exterior → the coastal strip, where salt exposure genuinely changes the job.
+//   real estate → Murrumbeena and Mordialloc, where rental turnover and
+//     pre-sale work is a real part of the local mix.
+const serviceSuburbLinks = {
+  "/services/interior-painting": [
+    { label: "Painters McKinnon", href: "/painter-mckinnon/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+    { label: "Painters Murrumbeena", href: "/painter-murrumbeena/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Caulfield", href: "/painter-caulfield/" },
+    { label: "Painters Hampton", href: "/painter-hampton/" },
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+  ],
+  "/services/exterior-painting": [
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Aspendale", href: "/painter-aspendale/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+    { label: "Painters Sorrento", href: "/painter-sorrento/" },
+    { label: "Painters Dromana", href: "/painter-dromana/" },
+    { label: "Painters Patterson Lakes", href: "/painter-patterson-lakes/" },
+    { label: "Painters Hampton", href: "/painter-hampton/" },
+  ],
+  "/services/roof-painting": [
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Dromana", href: "/painter-dromana/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Aspendale", href: "/painter-aspendale/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+    { label: "Painters Sorrento", href: "/painter-sorrento/" },
+    { label: "Painters Patterson Lakes", href: "/painter-patterson-lakes/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+  ],
+  "/services/roof-fence-painting": [
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Aspendale", href: "/painter-aspendale/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+    { label: "Painters Dromana", href: "/painter-dromana/" },
+    { label: "Painters Patterson Lakes", href: "/painter-patterson-lakes/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Hampton", href: "/painter-hampton/" },
+  ],
+  "/services/commercial-painting": [
+    { label: "Painters Clyde North", href: "/painter-clyde-north/" },
+    { label: "Painters Mount Eliza", href: "/painter-mount-eliza/" },
+    { label: "Painters Moorabbin", href: "/painter-moorabbin/" },
+    { label: "Painters Collingwood", href: "/painter-collingwood/" },
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Caulfield", href: "/painter-caulfield/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+  ],
+  "/services/body-corporate-painting": [
+    { label: "Painters Caulfield", href: "/painter-caulfield/" },
+    { label: "Painters Collingwood", href: "/painter-collingwood/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Clyde North", href: "/painter-clyde-north/" },
+    { label: "Painters Box Hill", href: "/painter-box-hill/" },
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+  ],
+  "/services/kitchen-cabinet-resurfacing": [
+    { label: "Painters McKinnon", href: "/painter-mckinnon/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+    { label: "Painters Murrumbeena", href: "/painter-murrumbeena/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Aspendale", href: "/painter-aspendale/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Caulfield", href: "/painter-caulfield/" },
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+  ],
+  "/services/real-estate-painting": [
+    { label: "Painters Murrumbeena", href: "/painter-murrumbeena/" },
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Highett", href: "/painter-highett/" },
+    { label: "Painters McKinnon", href: "/painter-mckinnon/" },
+    { label: "Painters Collingwood", href: "/painter-collingwood/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Aspendale", href: "/painter-aspendale/" },
+  ],
+};
 
 const servicePages = [
   {
@@ -1396,8 +1505,8 @@ for (const service of servicePages) {
         {
           type: "links",
           heading: "Suburbs we service",
-          body: "We provide this service across Melbourne, including these popular areas.",
-          items: popularSuburbLinks,
+          body: "We provide this service across Melbourne, including these areas.",
+          items: serviceSuburbLinks[service.route] || popularSuburbLinks,
         },
         {
           type: "links",
@@ -1433,6 +1542,43 @@ const articleMeta = {
   "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
+};
+
+// The service page(s) each article should point at. Previously every article
+// carried the same single "Interior Painting" footer link regardless of subject,
+// so the weatherboard guide, the mould guide and the kitchen cabinet cost
+// comparison all pushed readers to interior painting — the cabinet article in
+// particular linked past the very service it is about. Each article now links
+// to the services it actually concerns.
+const articleServiceLinks = {
+  "/blog/best-paint-colours-melbourne-2025": [
+    { label: "Interior Painting", href: "/services/interior-painting/" },
+    { label: "Exterior Painting", href: "/services/exterior-painting/" },
+  ],
+  "/blog/house-painting-cost-melbourne": [
+    { label: "Interior Painting", href: "/services/interior-painting/" },
+    { label: "Exterior Painting", href: "/services/exterior-painting/" },
+  ],
+  "/blog/prepare-home-for-painting": [
+    { label: "Interior Painting", href: "/services/interior-painting/" },
+    { label: "Exterior Painting", href: "/services/exterior-painting/" },
+  ],
+  "/blog/kitchen-cabinet-resurfacing-vs-replacement": [
+    { label: "Kitchen Cabinet Resurfacing", href: "/services/kitchen-cabinet-resurfacing/" },
+    { label: "Interior Painting", href: "/services/interior-painting/" },
+  ],
+  "/blog/mould-remediation-painting-melbourne": [
+    { label: "Interior Painting", href: "/services/interior-painting/" },
+    { label: "Exterior Painting", href: "/services/exterior-painting/" },
+  ],
+  "/blog/how-to-choose-a-painter-melbourne": [
+    { label: "Interior Painting", href: "/services/interior-painting/" },
+    { label: "Exterior Painting", href: "/services/exterior-painting/" },
+  ],
+  "/blog/how-to-paint-a-weatherboard-house-melbourne": [
+    { label: "Exterior Painting", href: "/services/exterior-painting/" },
+    { label: "Roof & Fence Painting", href: "/services/roof-fence-painting/" },
+  ],
 };
 
 // Titles and bodies must match the `posts` array in client/src/pages/Blog.tsx
@@ -2140,7 +2286,9 @@ for (const article of articlePages) {
       sections: articleSections,
       footerLinks: [
         { label: "Blog", href: "/blog/" },
-        { label: "Interior Painting", href: "/services/interior-painting/" },
+        ...(articleServiceLinks[article.route] || [
+          { label: "Interior Painting", href: "/services/interior-painting/" },
+        ]),
         { label: "Contact", href: "/review-us/" },
       ],
     })

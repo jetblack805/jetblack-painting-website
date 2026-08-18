@@ -20,15 +20,14 @@ export default function ExteriorPainting() {
   ];
 
   const suburbs = [
-    { name: "Brighton", link: "/painter-brighton" },
-    { name: "Toorak", link: "/painter-toorak" },
-    { name: "Malvern", link: "/painter-malvern" },
-    { name: "Camberwell", link: "/painter-camberwell" },
-    { name: "Hawthorn", link: "/painter-hawthorn" },
-    { name: "Bentleigh", link: "/painter-bentleigh" },
-    { name: "Caulfield", link: "/painter-caulfield" },
-    { name: "Hampton", link: "/painter-hampton" },
     { name: "Mordialloc", link: "/painter-mordialloc" },
+    { name: "Mentone", link: "/painter-mentone" },
+    { name: "Aspendale", link: "/painter-aspendale" },
+    { name: "Highett", link: "/painter-highett" },
+    { name: "Sorrento", link: "/painter-sorrento" },
+    { name: "Dromana", link: "/painter-dromana" },
+    { name: "Patterson Lakes", link: "/painter-patterson-lakes" },
+    { name: "Hampton", link: "/painter-hampton" },
   ];
 
   const faqs = [

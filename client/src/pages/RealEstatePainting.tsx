@@ -22,15 +22,14 @@ export default function RealEstatePainting() {
   ];
 
   const suburbs = [
-    { name: "Brighton", link: "/painter-brighton" },
-    { name: "Toorak", link: "/painter-toorak" },
-    { name: "Malvern", link: "/painter-malvern" },
-    { name: "Camberwell", link: "/painter-camberwell" },
-    { name: "Hawthorn", link: "/painter-hawthorn" },
-    { name: "Bentleigh", link: "/painter-bentleigh" },
-    { name: "Caulfield", link: "/painter-caulfield" },
-    { name: "Hampton", link: "/painter-hampton" },
+    { name: "Murrumbeena", link: "/painter-murrumbeena" },
     { name: "Mordialloc", link: "/painter-mordialloc" },
+    { name: "Mentone", link: "/painter-mentone" },
+    { name: "Highett", link: "/painter-highett" },
+    { name: "McKinnon", link: "/painter-mckinnon" },
+    { name: "Collingwood", link: "/painter-collingwood" },
+    { name: "Bentleigh", link: "/painter-bentleigh" },
+    { name: "Aspendale", link: "/painter-aspendale" },
   ];
 
   /* First sentence of every answer is the answer, so it survives being

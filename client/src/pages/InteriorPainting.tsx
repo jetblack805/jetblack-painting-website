@@ -26,11 +26,10 @@ export default function InteriorPainting() {
   ];
 
   const suburbs = [
-    { name: "Brighton", link: "/painter-brighton" },
-    { name: "Toorak", link: "/painter-toorak" },
-    { name: "Malvern", link: "/painter-malvern" },
-    { name: "Camberwell", link: "/painter-camberwell" },
-    { name: "Hawthorn", link: "/painter-hawthorn" },
+    { name: "McKinnon", link: "/painter-mckinnon" },
+    { name: "Highett", link: "/painter-highett" },
+    { name: "Murrumbeena", link: "/painter-murrumbeena" },
+    { name: "Mentone", link: "/painter-mentone" },
     { name: "Bentleigh", link: "/painter-bentleigh" },
     { name: "Caulfield", link: "/painter-caulfield" },
     { name: "Hampton", link: "/painter-hampton" },

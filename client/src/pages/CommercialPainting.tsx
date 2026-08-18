@@ -90,12 +90,14 @@ export default function CommercialPainting() {
   ];
 
   const suburbs = [
-    { name: "Brighton", link: "/painter-brighton" },
-    { name: "Toorak", link: "/painter-toorak" },
-    { name: "Malvern", link: "/painter-malvern" },
-    { name: "Camberwell", link: "/painter-camberwell" },
-    { name: "Hawthorn", link: "/painter-hawthorn" },
+    { name: "Clyde North", link: "/painter-clyde-north" },
+    { name: "Mount Eliza", link: "/painter-mount-eliza" },
+    { name: "Moorabbin", link: "/painter-moorabbin" },
+    { name: "Collingwood", link: "/painter-collingwood" },
     { name: "Mordialloc", link: "/painter-mordialloc" },
+    { name: "Bentleigh", link: "/painter-bentleigh" },
+    { name: "Caulfield", link: "/painter-caulfield" },
+    { name: "Highett", link: "/painter-highett" },
   ];
 
   return (

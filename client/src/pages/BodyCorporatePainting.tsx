@@ -24,16 +24,14 @@ export default function BodyCorporatePainting() {
   ];
 
   const suburbs = [
-    { name: "Brighton", link: "/painter-brighton" },
-    { name: "Toorak", link: "/painter-toorak" },
-    { name: "Camberwell", link: "/painter-camberwell" },
-    { name: "Box Hill", link: "/painter-box-hill" },
     { name: "Caulfield", link: "/painter-caulfield" },
-    { name: "Doncaster", link: "/painter-doncaster" },
-    { name: "Ringwood", link: "/painter-ringwood" },
-    { name: "Dandenong", link: "/painter-dandenong" },
+    { name: "Collingwood", link: "/painter-collingwood" },
+    { name: "Bentleigh", link: "/painter-bentleigh" },
+    { name: "Clyde North", link: "/painter-clyde-north" },
+    { name: "Box Hill", link: "/painter-box-hill" },
     { name: "Mordialloc", link: "/painter-mordialloc" },
-    { name: "Glen Waverley", link: "/painter-glen-waverley" },
+    { name: "Mentone", link: "/painter-mentone" },
+    { name: "Highett", link: "/painter-highett" },
   ];
 
   /* First sentence of every answer is the answer, so it survives being

@@ -88,16 +88,16 @@ A roof membrane is a flexible, waterproof coating rather than a standard paint f
 
 ## Suburbs we service
 
-We provide this service across Melbourne, including these popular areas.
+We provide this service across Melbourne, including these areas.
 
-- [Painters Toorak](/painter-toorak/)
-- [Painters Brighton](/painter-brighton/)
-- [Painters Camberwell](/painter-camberwell/)
-- [Painters Hawthorn](/painter-hawthorn/)
-- [Painters Bentleigh](/painter-bentleigh/)
 - [Painters Mordialloc](/painter-mordialloc/)
-- [Painters Keysborough](/keysborough-painters/)
-- [Painters Glen Waverley](/painter-glen-waverley/)
+- [Painters Dromana](/painter-dromana/)
+- [Painters Mentone](/painter-mentone/)
+- [Painters Aspendale](/painter-aspendale/)
+- [Painters Highett](/painter-highett/)
+- [Painters Sorrento](/painter-sorrento/)
+- [Painters Patterson Lakes](/painter-patterson-lakes/)
+- [Painters Bentleigh](/painter-bentleigh/)
 
 ## Related painting services
 

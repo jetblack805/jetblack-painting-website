@@ -57,7 +57,7 @@ Yes, multi-storey homes that need scaffolding for safe access typically add $500
 
 **Jetblack Painting** — House Painting Cost Melbourne 2026 | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
-[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Contact](/review-us/)
+[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/) | [Contact](/review-us/)
 
 ## Suburbs we service
 

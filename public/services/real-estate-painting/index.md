@@ -92,16 +92,16 @@ Often worse. A touch-up in slightly the wrong colour or sheen shows up under lis
 
 ## Suburbs we service
 
-We provide this service across Melbourne, including these popular areas.
+We provide this service across Melbourne, including these areas.
 
-- [Painters Toorak](/painter-toorak/)
-- [Painters Brighton](/painter-brighton/)
-- [Painters Camberwell](/painter-camberwell/)
-- [Painters Hawthorn](/painter-hawthorn/)
-- [Painters Bentleigh](/painter-bentleigh/)
+- [Painters Murrumbeena](/painter-murrumbeena/)
 - [Painters Mordialloc](/painter-mordialloc/)
-- [Painters Keysborough](/keysborough-painters/)
-- [Painters Glen Waverley](/painter-glen-waverley/)
+- [Painters Mentone](/painter-mentone/)
+- [Painters Highett](/painter-highett/)
+- [Painters McKinnon](/painter-mckinnon/)
+- [Painters Collingwood](/painter-collingwood/)
+- [Painters Bentleigh](/painter-bentleigh/)
+- [Painters Aspendale](/painter-aspendale/)
 
 ## Related painting services
 

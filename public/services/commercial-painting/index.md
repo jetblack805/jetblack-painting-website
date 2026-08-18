@@ -87,16 +87,16 @@ Yes. We provide detailed scopes, transparent pricing, insurance documentation an
 
 ## Suburbs we service
 
-We provide this service across Melbourne, including these popular areas.
+We provide this service across Melbourne, including these areas.
 
-- [Painters Toorak](/painter-toorak/)
-- [Painters Brighton](/painter-brighton/)
-- [Painters Camberwell](/painter-camberwell/)
-- [Painters Hawthorn](/painter-hawthorn/)
-- [Painters Bentleigh](/painter-bentleigh/)
+- [Painters Clyde North](/painter-clyde-north/)
+- [Painters Mount Eliza](/painter-mount-eliza/)
+- [Painters Moorabbin](/painter-moorabbin/)
+- [Painters Collingwood](/painter-collingwood/)
 - [Painters Mordialloc](/painter-mordialloc/)
-- [Painters Keysborough](/keysborough-painters/)
-- [Painters Glen Waverley](/painter-glen-waverley/)
+- [Painters Bentleigh](/painter-bentleigh/)
+- [Painters Caulfield](/painter-caulfield/)
+- [Painters Highett](/painter-highett/)
 
 ## Related painting services
 

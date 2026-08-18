@@ -60,7 +60,7 @@ Yes. Jetblack Painting offers a free colour consultation with every painting quo
 
 **Jetblack Painting** — Best Paint Colours for Melbourne Homes 2026 | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
-[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Contact](/review-us/)
+[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/) | [Contact](/review-us/)
 
 ## Suburbs we service
 

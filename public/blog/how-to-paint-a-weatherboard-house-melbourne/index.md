@@ -65,7 +65,7 @@ Homes built before 1970 may have lead-based paint. It should not be dry-sanded o
 
 **Jetblack Painting** — How to Paint a Weatherboard House | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
-[Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Contact](/review-us/)
+[Blog](/blog/) | [Exterior Painting](/services/exterior-painting/) | [Roof & Fence Painting](/services/roof-fence-painting/) | [Contact](/review-us/)
 
 ## Suburbs we service
 

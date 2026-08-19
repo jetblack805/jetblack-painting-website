@@ -46,6 +46,17 @@ Strata and owners-corporation work across Oakleigh — common areas, stairwells,
 
 Fast-turnaround repainting to get Oakleigh properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Oakleigh
+
+Every service below is available in Oakleigh. Follow a link for service details and to request a quote.
+
+- [Interior house painting Oakleigh](/services/interior-painting/)
+- [Exterior house painting Oakleigh](/services/exterior-painting/)
+- [Commercial painting Oakleigh](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Oakleigh](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Oakleigh](/services/roof-painting/)
+- [Real estate painting Oakleigh](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Oakleigh.

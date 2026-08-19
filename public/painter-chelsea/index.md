@@ -46,6 +46,17 @@ Strata and owners-corporation work across Chelsea — common areas, stairwells, 
 
 Fast-turnaround repainting for Chelsea sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Chelsea
+
+Every service below is available in Chelsea. Follow a link for service details and to request a quote.
+
+- [Interior house painting Chelsea](/services/interior-painting/)
+- [Exterior house painting Chelsea](/services/exterior-painting/)
+- [Commercial painting Chelsea](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Chelsea](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Chelsea](/services/roof-painting/)
+- [Real estate painting Chelsea](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Chelsea.

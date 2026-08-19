@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Heatherton, scheduled around y
 
 Fast-turnaround repainting to get Heatherton properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Heatherton
+
+Every service below is available in Heatherton. Follow a link for service details and to request a quote.
+
+- [Interior house painting Heatherton](/services/interior-painting/)
+- [Exterior house painting Heatherton](/services/exterior-painting/)
+- [Commercial painting Heatherton](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Heatherton](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Heatherton](/services/roof-painting/)
+- [Real estate painting Heatherton](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Heatherton.

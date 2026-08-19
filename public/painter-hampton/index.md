@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Hampton, scheduled around your
 
 Fast-turnaround repainting for Hampton sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Hampton
+
+Every service below is available in Hampton. Follow a link for service details and to request a quote.
+
+- [Interior house painting Hampton](/services/interior-painting/)
+- [Exterior house painting Hampton](/services/exterior-painting/)
+- [Commercial painting Hampton](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Hampton](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Hampton](/services/roof-painting/)
+- [Real estate painting Hampton](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Hampton.

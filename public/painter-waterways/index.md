@@ -42,6 +42,17 @@ Strata and owners-corporation work across Waterways — common areas, stairwells
 
 Fast-turnaround repainting to get Waterways properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Waterways
+
+Every service below is available in Waterways. Follow a link for service details and to request a quote.
+
+- [Interior house painting Waterways](/services/interior-painting/)
+- [Exterior house painting Waterways](/services/exterior-painting/)
+- [Commercial painting Waterways](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Waterways](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Waterways](/services/roof-painting/)
+- [Real estate painting Waterways](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Waterways.

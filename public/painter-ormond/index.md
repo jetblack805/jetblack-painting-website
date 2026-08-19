@@ -46,6 +46,17 @@ Strata and owners-corporation work across Ormond — common areas, stairwells, e
 
 Fast-turnaround repainting for Ormond sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Ormond
+
+Every service below is available in Ormond. Follow a link for service details and to request a quote.
+
+- [Interior house painting Ormond](/services/interior-painting/)
+- [Exterior house painting Ormond](/services/exterior-painting/)
+- [Commercial painting Ormond](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Ormond](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Ormond](/services/roof-painting/)
+- [Real estate painting Ormond](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Ormond.

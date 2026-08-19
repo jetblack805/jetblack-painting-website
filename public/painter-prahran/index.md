@@ -46,6 +46,17 @@ Strata and owners-corporation work across Prahran — common areas, stairwells, 
 
 Fast-turnaround repainting for Prahran sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Prahran
+
+Every service below is available in Prahran. Follow a link for service details and to request a quote.
+
+- [Interior house painting Prahran](/services/interior-painting/)
+- [Exterior house painting Prahran](/services/exterior-painting/)
+- [Commercial painting Prahran](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Prahran](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Prahran](/services/roof-painting/)
+- [Real estate painting Prahran](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Prahran.

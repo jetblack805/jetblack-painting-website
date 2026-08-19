@@ -42,6 +42,17 @@ Strata and owners-corporation work across Dingley Village — common areas, stai
 
 Fast-turnaround repainting to get Dingley Village properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Dingley Village
+
+Every service below is available in Dingley Village. Follow a link for service details and to request a quote.
+
+- [Interior house painting Dingley Village](/services/interior-painting/)
+- [Exterior house painting Dingley Village](/services/exterior-painting/)
+- [Commercial painting Dingley Village](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Dingley Village](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Dingley Village](/services/roof-painting/)
+- [Real estate painting Dingley Village](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Dingley Village.

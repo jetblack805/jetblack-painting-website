@@ -42,6 +42,17 @@ Strata and owners-corporation work across Port Melbourne — common areas, stair
 
 Fast-turnaround repainting for Port Melbourne sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Port Melbourne
+
+Every service below is available in Port Melbourne. Follow a link for service details and to request a quote.
+
+- [Interior house painting Port Melbourne](/services/interior-painting/)
+- [Exterior house painting Port Melbourne](/services/exterior-painting/)
+- [Commercial painting Port Melbourne](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Port Melbourne](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Port Melbourne](/services/roof-painting/)
+- [Real estate painting Port Melbourne](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Port Melbourne.

@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Berwick, scheduled around your
 
 Fast-turnaround repainting to get Berwick properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Berwick
+
+Every service below is available in Berwick. Follow a link for service details and to request a quote.
+
+- [Interior house painting Berwick](/services/interior-painting/)
+- [Exterior house painting Berwick](/services/exterior-painting/)
+- [Commercial painting Berwick](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Berwick](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Berwick](/services/roof-painting/)
+- [Real estate painting Berwick](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Berwick.

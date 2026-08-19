@@ -42,6 +42,17 @@ Strata and owners-corporation work across Bentleigh East — common areas, stair
 
 Fast-turnaround repainting for Bentleigh East sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Bentleigh East
+
+Every service below is available in Bentleigh East. Follow a link for service details and to request a quote.
+
+- [Interior house painting Bentleigh East](/services/interior-painting/)
+- [Exterior house painting Bentleigh East](/services/exterior-painting/)
+- [Commercial painting Bentleigh East](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Bentleigh East](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Bentleigh East](/services/roof-painting/)
+- [Real estate painting Bentleigh East](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Bentleigh East.

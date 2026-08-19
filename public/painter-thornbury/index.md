@@ -42,6 +42,17 @@ Strata and owners-corporation work across Thornbury — common areas, stairwells
 
 Fast-turnaround repainting for Thornbury sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Thornbury
+
+Every service below is available in Thornbury. Follow a link for service details and to request a quote.
+
+- [Interior house painting Thornbury](/services/interior-painting/)
+- [Exterior house painting Thornbury](/services/exterior-painting/)
+- [Commercial painting Thornbury](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Thornbury](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Thornbury](/services/roof-painting/)
+- [Real estate painting Thornbury](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Thornbury.

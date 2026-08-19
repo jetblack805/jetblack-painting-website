@@ -46,6 +46,17 @@ Strata and owners-corporation work across Elwood — common areas, stairwells, e
 
 Fast-turnaround repainting for Elwood sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Elwood
+
+Every service below is available in Elwood. Follow a link for service details and to request a quote.
+
+- [Interior house painting Elwood](/services/interior-painting/)
+- [Exterior house painting Elwood](/services/exterior-painting/)
+- [Commercial painting Elwood](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Elwood](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Elwood](/services/roof-painting/)
+- [Real estate painting Elwood](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Elwood.

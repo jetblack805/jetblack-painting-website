@@ -42,6 +42,17 @@ Strata and owners-corporation work across Malvern East — common areas, stairwe
 
 Fast-turnaround repainting for Malvern East sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Malvern East
+
+Every service below is available in Malvern East. Follow a link for service details and to request a quote.
+
+- [Interior house painting Malvern East](/services/interior-painting/)
+- [Exterior house painting Malvern East](/services/exterior-painting/)
+- [Commercial painting Malvern East](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Malvern East](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Malvern East](/services/roof-painting/)
+- [Real estate painting Malvern East](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Malvern East.

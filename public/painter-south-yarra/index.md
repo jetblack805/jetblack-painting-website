@@ -46,6 +46,17 @@ Strata and owners-corporation work across South Yarra — common areas, stairwel
 
 Fast-turnaround repainting for South Yarra sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in South Yarra
+
+Every service below is available in South Yarra. Follow a link for service details and to request a quote.
+
+- [Interior house painting South Yarra](/services/interior-painting/)
+- [Exterior house painting South Yarra](/services/exterior-painting/)
+- [Commercial painting South Yarra](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing South Yarra](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting South Yarra](/services/roof-painting/)
+- [Real estate painting South Yarra](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around South Yarra.

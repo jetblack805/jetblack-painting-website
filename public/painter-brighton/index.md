@@ -58,6 +58,17 @@ Shops, offices, and maintenance repainting across Brighton, scheduled around you
 
 Fast-turnaround repainting for Brighton sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Brighton
+
+Every service below is available in Brighton. Follow a link for service details and to request a quote.
+
+- [Interior house painting Brighton](/services/interior-painting/)
+- [Exterior house painting Brighton](/services/exterior-painting/)
+- [Commercial painting Brighton](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Brighton](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Brighton](/services/roof-painting/)
+- [Real estate painting Brighton](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Brighton.

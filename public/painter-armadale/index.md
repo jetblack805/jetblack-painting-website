@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Armadale, scheduled around you
 
 Fast-turnaround repainting for Armadale sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Armadale
+
+Every service below is available in Armadale. Follow a link for service details and to request a quote.
+
+- [Interior house painting Armadale](/services/interior-painting/)
+- [Exterior house painting Armadale](/services/exterior-painting/)
+- [Commercial painting Armadale](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Armadale](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Armadale](/services/roof-painting/)
+- [Real estate painting Armadale](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Armadale.

@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Malvern, scheduled around your
 
 Fast-turnaround repainting for Malvern sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Malvern
+
+Every service below is available in Malvern. Follow a link for service details and to request a quote.
+
+- [Interior house painting Malvern](/services/interior-painting/)
+- [Exterior house painting Malvern](/services/exterior-painting/)
+- [Commercial painting Malvern](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Malvern](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Malvern](/services/roof-painting/)
+- [Real estate painting Malvern](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Malvern.

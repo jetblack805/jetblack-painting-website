@@ -46,6 +46,17 @@ Strata and owners-corporation work across Keysborough — common areas, stairwel
 
 Fast-turnaround repainting to get Keysborough properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Keysborough
+
+Every service below is available in Keysborough. Follow a link for service details and to request a quote.
+
+- [Interior house painting Keysborough](/services/interior-painting/)
+- [Exterior house painting Keysborough](/services/exterior-painting/)
+- [Commercial painting Keysborough](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Keysborough](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Keysborough](/services/roof-painting/)
+- [Real estate painting Keysborough](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Keysborough.

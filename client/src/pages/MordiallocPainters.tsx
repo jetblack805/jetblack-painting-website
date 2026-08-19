@@ -142,7 +142,7 @@ export default function MordiallocPainters() {
     <SuburbPageTemplate
       suburb={suburb}
       title="Mordialloc Painters | Coastal Painting | Jetblack Painting"
-      description="Coastal house painters in Mordialloc — contemporary bayside residences and ensuring a flawless. Free quotes, 5-year guarantee. Call 0432 077 782."
+      description="Mordialloc painters based in the 3195 — beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Waterways", link: "/painter-waterways" },
         { name: "Parkdale", link: "/painter-parkdale" },

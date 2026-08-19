@@ -46,6 +46,17 @@ Strata and owners-corporation work across Clarinda — common areas, stairwells,
 
 Fast-turnaround repainting to get Clarinda properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Clarinda
+
+Every service below is available in Clarinda. Follow a link for service details and to request a quote.
+
+- [Interior house painting Clarinda](/services/interior-painting/)
+- [Exterior house painting Clarinda](/services/exterior-painting/)
+- [Commercial painting Clarinda](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Clarinda](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Clarinda](/services/roof-painting/)
+- [Real estate painting Clarinda](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Clarinda.

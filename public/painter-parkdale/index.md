@@ -46,6 +46,17 @@ Strata and owners-corporation work across Parkdale — common areas, stairwells,
 
 Fast-turnaround repainting for Parkdale sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Parkdale
+
+Every service below is available in Parkdale. Follow a link for service details and to request a quote.
+
+- [Interior house painting Parkdale](/services/interior-painting/)
+- [Exterior house painting Parkdale](/services/exterior-painting/)
+- [Commercial painting Parkdale](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Parkdale](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Parkdale](/services/roof-painting/)
+- [Real estate painting Parkdale](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Parkdale.

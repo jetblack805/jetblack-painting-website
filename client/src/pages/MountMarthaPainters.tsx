@@ -51,12 +51,15 @@ export default function MountMarthaPainters() {
       title="Mount Martha Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Mount Martha — fibro cottages near the lower foreshore. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
-        { name: "Hastings", link: "/painter-hastings" },
         { name: "Mornington", link: "/painter-mornington" },
+        { name: "Safety Beach", link: "/painter-safety-beach" },
+        { name: "Dromana", link: "/painter-dromana" },
+        { name: "Rosebud", link: "/painter-rosebud" },
+        { name: "Sorrento", link: "/painter-sorrento" },
         { name: "Mount Eliza", link: "/painter-mount-eliza" },
-        { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" },
+        { name: "Hastings", link: "/painter-hastings" },
         { name: "Frankston", link: "/painter-frankston" },
-        { name: "Berwick", link: "/painter-berwick" }
+        { name: "Mornington Peninsula", link: "/painter-mornington-peninsula" }
       ]}
       localExpertise={`Jetblack Painting services Mount Martha as part of our Mornington Peninsula coverage. Mount Martha extends south from Mornington along the eastern shore of Port Phillip Bay — a suburb of hillside homes with bay views, foreshore properties near Mount Martha Beach, and a substantial holiday home and investment property stock. We understand the coastal conditions that affect paintwork in the foreshore and bay-facing streets, and the practical realities of working on holiday properties with seasonal access schedules.`}
       propertyTypes={`Mount Martha's housing spans older weatherboard beach houses and fibro cottages near the lower foreshore, established brick and rendered homes on the hillside residential streets, and contemporary builds on the upper slopes with bay views — a wide range of surface types that each require specific preparation and coating approaches.`}

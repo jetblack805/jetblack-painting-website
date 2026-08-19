@@ -46,6 +46,17 @@ Shops, offices, and maintenance repainting across Balwyn, scheduled around your 
 
 Fast-turnaround repainting for Balwyn sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Balwyn
+
+Every service below is available in Balwyn. Follow a link for service details and to request a quote.
+
+- [Interior house painting Balwyn](/services/interior-painting/)
+- [Exterior house painting Balwyn](/services/exterior-painting/)
+- [Commercial painting Balwyn](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Balwyn](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Balwyn](/services/roof-painting/)
+- [Real estate painting Balwyn](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Balwyn.

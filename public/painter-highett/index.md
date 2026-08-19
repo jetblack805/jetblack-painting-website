@@ -58,6 +58,17 @@ Strata and owners-corporation work across Highett — common areas, stairwells, 
 
 Fast-turnaround repainting to get Highett properties market-ready — durable, easy-clean neutral finishes that photograph well and suit the widest range of buyers and tenants.
 
+## Painting Services in Highett
+
+Every service below is available in Highett. Follow a link for service details and to request a quote.
+
+- [Interior house painting Highett](/services/interior-painting/)
+- [Exterior house painting Highett](/services/exterior-painting/)
+- [Commercial painting Highett](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Highett](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Highett](/services/roof-painting/)
+- [Real estate painting Highett](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Highett.

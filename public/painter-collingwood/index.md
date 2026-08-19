@@ -50,6 +50,17 @@ Strata and owners-corporation work across Collingwood — common areas, stairwel
 
 Fast-turnaround repainting for Collingwood sales and rentals, in neutral colours that let period features present well to buyers without overwhelming them.
 
+## Painting Services in Collingwood
+
+Every service below is available in Collingwood. Follow a link for service details and to request a quote.
+
+- [Interior house painting Collingwood](/services/interior-painting/)
+- [Exterior house painting Collingwood](/services/exterior-painting/)
+- [Commercial painting Collingwood](/services/commercial-painting/)
+- [Kitchen cabinet resurfacing Collingwood](/services/kitchen-cabinet-resurfacing/)
+- [Roof painting Collingwood](/services/roof-painting/)
+- [Real estate painting Collingwood](/services/real-estate-painting/)
+
 ## Nearby suburbs we also service
 
 Explore nearby suburb pages for neighbouring areas around Collingwood.

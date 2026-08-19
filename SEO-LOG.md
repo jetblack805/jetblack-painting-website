@@ -407,3 +407,147 @@ so AI assistants were being given the wrong review count. Regeneration propagate
 available in this chat.** Its tools are absent from the session, so no GSC, GMB, GA4, PSI or
 Trends data was pulled. Position figures in this log remain those of 2026-08-17; nothing here
 updates them. Semrush is connected but returns units-zero on every call, as the brief predicts.
+
+---
+
+## 2026-08-19 — Phase change: authority acquisition. PR #194 merged as baseline.
+
+PR #194 merged (squash `e33710e`); branch recreated from main. Standing instruction from Jimmy:
+**stop broad internal-link changes.** Next phase is authority, Maps prominence, and measured
+page-2 → page-1 movement. Diagnose the limiting factor before changing anything.
+
+### Diagnosis of the 11 tracked suburbs — GSC, 2026-05-21 → 2026-08-16 (90 days)
+
+| Suburb | Impressions | Best position | Clicks |
+|---|---|---|---|
+| Collingwood | 129 | 17.65 | **0** |
+| Sorrento | 100 | **7.13** | **0** |
+| Murrumbeena | 86 | 17.00 | **0** |
+| Highett | 85 | 17.32 | **0** |
+| Mordialloc | 77 | 29.18 | **0** |
+| Mentone | 61 | 24.82 | **0** |
+| McKinnon | 57 | 11.19 | **0** |
+| Donvale | 49 | 16.63 | **0** |
+| Patterson Lakes | 39 | **6.83** | **0** |
+| Dromana | 38 | 19.53 | **0** |
+| Aspendale | 21 | 10.00 | **0** |
+
+~742 impressions across the eleven, **zero clicks**. Every click the site earns is brand:
+`jetblack painting` 123 imp / 33 clicks / pos 3.9.
+
+**The limiting factor is off-page authority. Ruled out, with evidence:**
+
+- **Not content.** These pages run 700–1,750 words and six have already been deepened. Adding
+  words to a page sitting at position 17 does not move it to position 8.
+- **Not internal links.** This is the decisive test. **Mordialloc has 26 inbound internal links —
+  more than any other page on the site — and the worst position of the eleven (29.18).** Sorrento
+  has 8 and sits at 7.13. Internal links are not what separates them. PR #194 also just added 384
+  crawler-visible service links, so this lever is now spent.
+- **Not CTR.** Nothing is on page 1 to have a CTR. Positions run 7–29. Three queries do sit at
+  3–7 (`house painter clarinda` 3.6, `bedroom painting patterson lakes` 6.8, `painters sorrento
+  bay` 7.1) with zero clicks — but each has only 5–8 impressions, far too little to read a CTR
+  signal from. **Do not treat this as a title/description problem.** Re-test when a page holds
+  the top 10 on a term with real volume.
+- **Is authority.** 44 links / 31 domains / authority 2 (measured 2026-08-13). The head terms
+  are exactly the ones stuck at 15–30.
+
+**Trajectory is healthy — the ceiling is the problem, not the slope.** Period-over-period
+(2026-07-19→08-16 vs prior 28d), queries that existed in both windows improved enormously:
+`house painting mount eliza` 97 → 24.5 · `house painting mount martha` 91 → 24.3 ·
+`house painters caulfield` 84.8 → 31.8 · `painters bentleigh` 89 → 45.0 ·
+`house painters bentleigh` 90.9 → 43.3 · `painters park dale` 66.5 → 30.2.
+Most of the eleven tracked suburbs show **null** prior impressions — they had zero impressions in
+the prior window and only started ranking in the latest one. Their positions are
+first-appearance positions, not stalled ones.
+
+### Backlink targets — researched and verified 2026-08-19
+
+⚠️ **Semrush Backlink Gap could not be run.** Every Semrush report returns units-zero; Ahrefs
+returns "Insufficient plan". So this list is *not* a competitor gap analysis — it is researched
+industry-standard targets, each verified to exist. The competitor-gap step still needs Semrush
+units: https://www.semrush.com/mcp-access
+
+**Tier 0 — fix before adding anything new.** Existing citations point at the dead Manus site:
+Yellow Pages AU (4 listings), TrueLocal (2). These are live links pointing somewhere broken.
+Repairing them is the cheapest legitimate win available and requires no new relationships.
+Yellow Pages duplicate merge: 1800 359 321. **Edit the existing entries — do not create new ones.**
+
+**Tier 1 — trade accreditation. Highest topical relevance available in Australia.**
+
+| Target | Notes |
+|---|---|
+| **Master Painters Association of Victoria** — `mpav.com.au/find-a-master-painter/` | The painting trade body for this state. Membership-gated directory. 03 9813 5922, Dandenong South. Highest-relevance Australian link there is for this business. |
+| **Dulux Accredited Painter** — `duluxtrade.com.au` + `dulux.com.au/services/find-a-painter/` | **Invite-only**; requires sufficient public liability, which Jetblack has ($10M). Two of the strongest painting domains in the country, plus consumer leads. Enquire on 13 25 25. |
+| **Haymes Paint Trade Applicator** — `applicators.haymespaint.com.au` | Australian-owned, 350+ stockists. Sign-up is open, not invite-only. |
+| **Taubmans Trade** — `taubmans.com.au/for-painters` | PPG trade program. |
+
+**Tier 2 — genuine local authority. Also feeds Maps prominence, which is the real lead constraint.**
+Kingston City Council business support (`kingston.vic.gov.au/services/business`) · local chamber of
+commerce · sponsorship of a Mordialloc club (football, bowls, boat) — genuine local ties, and the
+Mordialloc page already speaks to foreshore club work · Kingston/Bayside community press.
+
+**Tier 3 — relationship-based, slowest, highest value.** Real-estate agency preferred-trades pages
+(matches the real-estate-painting service page) · body corporate and owners-corporation managers
+(matches the body-corporate page) · builders and renovators, via HIA or Master Builders Victoria.
+
+**Not recommended, per standing rules:** mass directory submission, PBNs, paid links.
+
+### Recommendation on where effort goes
+
+The website is doing its job — 11.3× impressions, average position 76 → 53, and broad 30–70 place
+gains on every query old enough to compare. What it cannot do is manufacture authority. With
+**5 phone calls in 88 days** from GBP and only `jetblack` clearing the Maps reporting threshold,
+the binding constraint on actual leads remains GBP prominence and reviews, not the site.
+Tier 0 and Tier 1 above are the highest-leverage work available, and none of it is a code change.
+
+### 2026-08-19 (run 6) — daily audit: everything clean, no change made
+
+First run under the authority phase. Steps 0–6 all clean, so by rule no fix was needed; Step 7
+content work was **not** done, for two independent reasons given below.
+
+| Step | Check | Result |
+|---|---|---|
+| 0 | Latest main | `e33710e` (PR #194 squash), merged 14:02 UTC |
+| 0 | pnpm-lock completeness | **77/77** deps present |
+| 0 | Production serves current main | Verified two ways — service block live on Mordialloc, homepage reads "15 Google reviews" |
+| 2.1 | Three-layer regeneration | **0 diffs** |
+| 2.2 | Schema vs visible text | 114 pages, **477 questions, 0 problems** |
+| 2.3 | Near-duplicate, 96 pages | 25.6% avg, worst 46.4% (cranbourne/narre-warren), **0 over 55%** |
+| 2.4 | Bad URLs 404 | `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` — all 404 |
+| 2.4 | Real hashed bundles | 200 `text/css` / `text/javascript` — both directions verified |
+| 2.4 | Redirects | 301 on `/painter-toorak`, `/painters-toorak`, `/au/` |
+| 2.4 | Sitemap | **114/114 at 200 with zero redirect hops** |
+| 2.5 | Structured data | 0 parse errors, 0 required-field gaps, **0 aggregateRating in static pages** |
+| 3 | Metadata | 0 dup titles/descriptions/H1s/canonicals, 0 missing descriptions, 0 keywords tags; 1 title >60 (`/painter-hastings/` 64 — baseline) |
+| 4 | Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`; HTML on normal Accept |
+| 4 | robots.txt | Disallows only `/api/` |
+| 4 | llms.txt prices | 3 `$` matches, **all read**: all "$10 million/\$10M public liability". No prices. |
+| 5 | TTFB | 0.154–0.196s, `cf-cache-status: HIT` |
+| 6 | og:image · /review-us/ | 200 `image/jpeg` · noindex and correctly absent from sitemap |
+
+**⚠️ The daily brief's Step 7 queue is stale on 4 of 7 entries.** Measured live, excluding nav:
+
+| Suburb | Brief says | Actual | |
+|---|---|---|---|
+| Donvale | 702w | **1,236w** | stale |
+| Aspendale | 738w | **1,274w** | stale |
+| Clyde North | 752w | **1,245w** | stale |
+| Sorrento | 964w | **1,794w** | stale |
+| Patterson Lakes | 807w | 865w | current |
+| Dromana | 841w | 892w | current |
+| Mount Eliza | 899w | 959w | current |
+
+This is the failure mode the brief itself warns about. Four queue entries were deepened by PRs
+#192 and #194 and would have been re-deepened by a run that trusted the figures.
+
+**No content work, for two independent reasons.** Jimmy's standing phase instruction
+(2026-08-19) says stop broad internal-link changes, do not add content merely to increase word
+count, and diagnose the limiting factor before changing anything. That diagnosis was done earlier
+today: the constraint on the tracked suburbs is **off-page authority**, not content. Separately,
+the brief's own guard says to recommend GBP/off-page work rather than pad a page — and Patterson
+Lakes, the strongest remaining candidate, already ranks at position **6.83** on
+`bedroom painting patterson lakes`. A page that close to the top is not short of words.
+
+**Could not be measured:** nothing this run — Supermetrics was available and GSC data was pulled
+earlier today. Semrush remains units-zero and Ahrefs "Insufficient plan", so competitor backlink
+gap analysis is still blocked.

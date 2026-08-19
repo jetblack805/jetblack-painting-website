@@ -499,3 +499,55 @@ gains on every query old enough to compare. What it cannot do is manufacture aut
 **5 phone calls in 88 days** from GBP and only `jetblack` clearing the Maps reporting threshold,
 the binding constraint on actual leads remains GBP prominence and reviews, not the site.
 Tier 0 and Tier 1 above are the highest-leverage work available, and none of it is a code change.
+
+### 2026-08-19 (run 6) — daily audit: everything clean, no change made
+
+First run under the authority phase. Steps 0–6 all clean, so by rule no fix was needed; Step 7
+content work was **not** done, for two independent reasons given below.
+
+| Step | Check | Result |
+|---|---|---|
+| 0 | Latest main | `e33710e` (PR #194 squash), merged 14:02 UTC |
+| 0 | pnpm-lock completeness | **77/77** deps present |
+| 0 | Production serves current main | Verified two ways — service block live on Mordialloc, homepage reads "15 Google reviews" |
+| 2.1 | Three-layer regeneration | **0 diffs** |
+| 2.2 | Schema vs visible text | 114 pages, **477 questions, 0 problems** |
+| 2.3 | Near-duplicate, 96 pages | 25.6% avg, worst 46.4% (cranbourne/narre-warren), **0 over 55%** |
+| 2.4 | Bad URLs 404 | `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` — all 404 |
+| 2.4 | Real hashed bundles | 200 `text/css` / `text/javascript` — both directions verified |
+| 2.4 | Redirects | 301 on `/painter-toorak`, `/painters-toorak`, `/au/` |
+| 2.4 | Sitemap | **114/114 at 200 with zero redirect hops** |
+| 2.5 | Structured data | 0 parse errors, 0 required-field gaps, **0 aggregateRating in static pages** |
+| 3 | Metadata | 0 dup titles/descriptions/H1s/canonicals, 0 missing descriptions, 0 keywords tags; 1 title >60 (`/painter-hastings/` 64 — baseline) |
+| 4 | Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`; HTML on normal Accept |
+| 4 | robots.txt | Disallows only `/api/` |
+| 4 | llms.txt prices | 3 `$` matches, **all read**: all "$10 million/\$10M public liability". No prices. |
+| 5 | TTFB | 0.154–0.196s, `cf-cache-status: HIT` |
+| 6 | og:image · /review-us/ | 200 `image/jpeg` · noindex and correctly absent from sitemap |
+
+**⚠️ The daily brief's Step 7 queue is stale on 4 of 7 entries.** Measured live, excluding nav:
+
+| Suburb | Brief says | Actual | |
+|---|---|---|---|
+| Donvale | 702w | **1,236w** | stale |
+| Aspendale | 738w | **1,274w** | stale |
+| Clyde North | 752w | **1,245w** | stale |
+| Sorrento | 964w | **1,794w** | stale |
+| Patterson Lakes | 807w | 865w | current |
+| Dromana | 841w | 892w | current |
+| Mount Eliza | 899w | 959w | current |
+
+This is the failure mode the brief itself warns about. Four queue entries were deepened by PRs
+#192 and #194 and would have been re-deepened by a run that trusted the figures.
+
+**No content work, for two independent reasons.** Jimmy's standing phase instruction
+(2026-08-19) says stop broad internal-link changes, do not add content merely to increase word
+count, and diagnose the limiting factor before changing anything. That diagnosis was done earlier
+today: the constraint on the tracked suburbs is **off-page authority**, not content. Separately,
+the brief's own guard says to recommend GBP/off-page work rather than pad a page — and Patterson
+Lakes, the strongest remaining candidate, already ranks at position **6.83** on
+`bedroom painting patterson lakes`. A page that close to the top is not short of words.
+
+**Could not be measured:** nothing this run — Supermetrics was available and GSC data was pulled
+earlier today. Semrush remains units-zero and Ahrefs "Insufficient plan", so competitor backlink
+gap analysis is still blocked.

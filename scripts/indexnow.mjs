@@ -96,15 +96,43 @@ if (dry) {
   process.exit(0);
 }
 
-const res = await fetch(ENDPOINT, {
-  method: "POST",
-  headers: { "Content-Type": "application/json; charset=utf-8" },
-  body: JSON.stringify(payload),
-});
-const body = await res.text();
+let res, body;
+try {
+  res = await fetch(ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body: JSON.stringify(payload),
+  });
+  body = await res.text();
+} catch (err) {
+  console.log(`\nUNREACHABLE  ${err.message}`);
+  console.log(
+    "Could not reach the IndexNow endpoint at all. This is a network problem," +
+      "\nnot a problem with the key or the payload. Run this from a machine with" +
+      "\noutbound access to api.indexnow.org."
+  );
+  process.exit(2);
+}
+
+// A sandboxed or corporate egress proxy also answers 403, and its body says so.
+// Reporting that as "key not valid" would send someone off checking a key file
+// that is perfectly fine, so separate the two before printing a diagnosis.
+const proxyBlocked =
+  res.status === 403 && /not in allowlist|egress|proxy|blocked/i.test(body || "");
 
 // 200 accepted; 202 accepted but the key is still being validated — both fine.
 const ok = res.status === 200 || res.status === 202;
+
+if (proxyBlocked) {
+  console.log(`\nUNREACHABLE  HTTP 403 from a network proxy — ${body.slice(0, 200)}`);
+  console.log(
+    "This is the local network refusing the request, NOT IndexNow rejecting the key." +
+      "\nThe key and payload were never seen by IndexNow. Either allow" +
+      "\napi.indexnow.org through egress, or run this from an unrestricted machine."
+  );
+  process.exit(2);
+}
+
 console.log(`\n${ok ? "OK" : "FAILED"}  HTTP ${res.status}${body ? ` — ${body.slice(0, 300)}` : ""}`);
 if (!ok) {
   console.log(

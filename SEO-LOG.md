@@ -643,3 +643,27 @@ https://jetblackpainting.com/painter-somerville/
 https://jetblackpainting.com/painter-clyde/
 https://jetblackpainting.com/painter-hastings/
 ```
+
+### 2026-08-20 — IndexNow implemented
+
+Replaces the manual Bing "Submit URLs" flow (100/day quota, dashboard required). IndexNow has no
+quota and reaches Bing, Yandex, Seznam and Naver from one request.
+
+- `public/236b45859f0cf903f27f5160088eba04.txt` — proves ownership. **Verified live**, 200
+  `text/plain`, contents match the filename. The key is public by design.
+- `scripts/indexnow.mjs` — takes paths, full URLs, or `--all`; `--dry` prints without sending.
+- `pnpm indexnow` wired up. `generate-known-paths` picked the key file up automatically.
+
+**Deliberately NOT wired into the build.** IndexNow treats resubmitting an unchanged site as abuse
+and ignores keys that do it; a build-step ping would resubmit all 114 URLs on every deploy. Call it
+with the pages a change actually touched.
+
+⚠️ **`api.indexnow.org` is blocked by this sandbox's egress policy** (`HTTP 403 Host not in
+allowlist`). The script is complete and its guards are tested, but **it cannot be executed from the
+agent environment.** Options: run `pnpm indexnow /path/` from Jimmy's own machine, or add
+`api.indexnow.org` to the environment's network policy.
+
+Note for future runs: a proxy 403 and an IndexNow "key not valid" 403 look identical on the status
+line. The first version of the script printed "Key not valid" for a proxy block, which would have
+sent someone checking a key file that was fine. It now inspects the body, reports UNREACHABLE, and
+exits **2** for network failure versus **1** for a genuine API rejection.

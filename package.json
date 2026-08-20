@@ -15,7 +15,8 @@
     "generate-images": "node scripts/generate-images.mjs",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "generate-markdown": "node scripts/generate-markdown.mjs",
-    "generate-known-paths": "node scripts/generate-known-paths.mjs"
+    "generate-known-paths": "node scripts/generate-known-paths.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

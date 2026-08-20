@@ -3,6 +3,7 @@
 // instead of Cloudflare's SPA fallback 200 for URLs that do not exist.
 export const KNOWN_PATHS = new Set([
   "/",
+  "/236b45859f0cf903f27f5160088eba04.txt",
   "/BingSiteAuth.xml",
   "/apple-touch-icon.png",
   "/blog/",

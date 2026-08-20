@@ -551,3 +551,47 @@ Lakes, the strongest remaining candidate, already ranks at position **6.83** on
 **Could not be measured:** nothing this run — Supermetrics was available and GSC data was pulled
 earlier today. Semrush remains units-zero and Ahrefs "Insufficient plan", so competitor backlink
 gap analysis is still blocked.
+
+### 2026-08-20 — Bing Webmaster Tools verified
+
+Jimmy supplied a BingSiteAuth token and it is now **verified**. Bing matters beyond Bing itself:
+it feeds ChatGPT search and Copilot, and there is **no Bing Webmaster connector** in the registry
+(checked 2026-08-20), so this file is the only route in and all Bing work is manual.
+
+⚠️ **The file already contained a different token** — `920FCBF9…`, added 2026-07-24 in PR #108
+under Jimmy's own account, an earlier verification attempt. It was kept, not deleted.
+
+**Gotcha worth remembering: Bing matches only the FIRST `<user>` entry.** The first attempt failed
+with "Incorrect authentication key" even though the correct token was present, because the older
+token was listed first. Ruled out before touching it: serves 200 `application/xml` to bingbot's
+user-agent and to a plain client, no BOM, no stray whitespace, `must-revalidate` with a matching
+etag so not a stale edge copy. Reordering so the issued token is first fixed it immediately.
+**If a Bing token is ever rotated, put the new one at the top of the file.**
+
+Note: `www.jetblackpainting.com` cannot be fetched from this sandbox, so the www host was never
+testable as a hypothesis. It turned out not to matter.
+
+**Next in Bing (manual, Jimmy):** submit `https://jetblackpainting.com/sitemap.xml` (114 URLs, all
+verified 200 with zero redirect hops), then use Bing's URL submission — its quota is far more
+generous than Google's — on the pages closest to page 1: Sorrento, Collingwood, McKinnon, Mordialloc.
+
+### Connector audit — 2026-08-20
+
+Checked the installed list and searched the registry. **No connector exists for Google Search
+Console, Google Business Profile, Bing Webmaster Tools or Apple Business Connect.**
+
+| Connector | State | Action |
+|---|---|---|
+| **Supermetrics** | Connected, working | ⚠️ **TRIAL ENDS ~2026-08-24.** Sole route to GSC and GBP data. No substitute. Renew. |
+| **Local Falcon** | Installed, `enabledInChat: false`, state unknown | 37 tools incl. grid-based map-pack scans. Measures the binding constraint. Paywalled — highest-value new spend. |
+| Semrush | Connected, **0 API units** | Not an auth problem. Only for competitor Backlink Gap. |
+| Ahrefs | Connected, "Insufficient plan" | Overlaps Semrush. Do not pay for both. |
+| Cloudflare | Connected | **No DNS tools** — DMARC must be added by hand. |
+| Gmail, Resend, GitHub | Connected, working | Outreach drafts created 2026-08-20. |
+
+**DMARC is genuinely missing** (SPF exists: `v=spf1 include:_spf.google.com ~all`). Add TXT
+`_dmarc` = `v=DMARC1; p=none; rua=mailto:jimmy@jetblackpainting.com`. Start at `p=none` so it
+cannot break mail; tighten later. Matters because `/api/quote` sends through Resend.
+
+**Free and worth doing, no connector available:** Apple Business Connect (feeds Apple Maps on every
+iPhone in Melbourne — relevant given the map pack is the constraint).

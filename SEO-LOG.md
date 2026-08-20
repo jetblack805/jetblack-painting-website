@@ -595,3 +595,51 @@ cannot break mail; tighten later. Matters because `/api/quote` sends through Res
 
 **Free and worth doing, no connector available:** Apple Business Connect (feeds Apple Maps on every
 iPhone in Melbourne — relevant given the map pack is the constraint).
+
+### 2026-08-20 — Bing URL submission: 100 of 114 done
+
+Verified, then submitted via Bing Webmaster Tools URL Submission (100/day quota):
+16 in a first batch, then 84. **30 URLs remain**, listed below, to submit when the quota resets.
+
+⚠️ **Paste bare URLs only.** The first attempt failed because the list carried trailing
+annotations (`<- tracked suburb`); Bing reads the whole line as the URL and rejects every one.
+Also submit the sitemap separately under **Sitemaps** — `https://jetblackpainting.com/sitemap.xml`
+covers all 114 and does **not** consume the URL quota.
+
+**Priority order used:** homepage → the 11 tracked suburbs → 8 service pages → blog → FAQ →
+remaining suburbs ranked by measured GSC impressions.
+
+**Still to submit (30):**
+
+```
+https://jetblackpainting.com/painter-chelsea-heights/
+https://jetblackpainting.com/painter-brighton-east/
+https://jetblackpainting.com/painter-heatherton/
+https://jetblackpainting.com/painter-edithvale/
+https://jetblackpainting.com/painter-bonbeach/
+https://jetblackpainting.com/painter-carrum/
+https://jetblackpainting.com/painter-oakleigh/
+https://jetblackpainting.com/painter-clarinda/
+https://jetblackpainting.com/painter-dingley-village/
+https://jetblackpainting.com/painter-chadstone/
+https://jetblackpainting.com/painter-frankston/
+https://jetblackpainting.com/painter-frankston-south/
+https://jetblackpainting.com/painter-mornington/
+https://jetblackpainting.com/painter-glen-iris/
+https://jetblackpainting.com/painter-balwyn/
+https://jetblackpainting.com/painter-st-kilda/
+https://jetblackpainting.com/painter-port-melbourne/
+https://jetblackpainting.com/painter-albert-park/
+https://jetblackpainting.com/painter-richmond/
+https://jetblackpainting.com/painter-south-melbourne/
+https://jetblackpainting.com/painter-carnegie/
+https://jetblackpainting.com/painter-braeside/
+https://jetblackpainting.com/painter-waterways/
+https://jetblackpainting.com/painter-safety-beach/
+https://jetblackpainting.com/painter-rye/
+https://jetblackpainting.com/painter-hampton-park/
+https://jetblackpainting.com/painter-endeavour-hills/
+https://jetblackpainting.com/painter-somerville/
+https://jetblackpainting.com/painter-clyde/
+https://jetblackpainting.com/painter-hastings/
+```

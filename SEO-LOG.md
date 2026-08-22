@@ -667,3 +667,77 @@ Note for future runs: a proxy 403 and an IndexNow "key not valid" 403 look ident
 line. The first version of the script printed "Key not valid" for a proxy block, which would have
 sent someone checking a key file that was fine. It now inspects the body, reports UNREACHABLE, and
 exits **2** for network failure versus **1** for a genuine API rejection.
+
+### 2026-08-22 — Daily audit: IndexNow postbuild hook removed (deploy-safety defect)
+
+**Real defect found and fixed — one I introduced the day before.**
+
+The 2026-08-20 entry below records that IndexNow was *deliberately* not wired into the build. On
+2026-08-21 a `postbuild` hook was added anyway (`"postbuild": "node scripts/indexnow-on-deploy.mjs"`),
+which contradicted that decision and was wrong on two counts:
+
+1. **It could take production deploys down.** `indexnow.mjs` exits 2 when the API is unreachable and
+   1 when a submission is rejected; `indexnow-on-deploy.mjs` propagated that. A non-zero `postbuild`
+   fails `pnpm build`, and Cloudflare deploys every branch push by running the build — so an
+   unreachable third-party API would have stopped the site shipping. Verified end-to-end with a `git`
+   shim that simulates a changed page: exit **2**. It only passed at 743f450 because that commit
+   touched no `public/*.html`, so the diff was empty and the hook exited 0. **The first deploy that
+   touched a suburb page would have failed.**
+2. **It would not have worked anyway.** Cloudflare clones shallow (`git rev-parse
+   --is-shallow-repository` = true here too), so `HEAD~1` may not resolve on the build machine and
+   the diff would find nothing on every deploy.
+
+Fix: removed the `postbuild` hook; the tool is now explicit (`pnpm indexnow:changed`). Added
+`--no-fail` (reports the failure, exits 0) for anyone who does want it in a pipeline, and swapped
+`execSync` with an interpolated shell string for `spawnSync` with an argument array. Header comment
+now states the reasoning so it does not get re-wired a third time.
+
+Indexing is best-effort; deploying is not. **Do not put a third-party API call in the build chain.**
+
+**Checks — all clean, no other change made.**
+- Build health: 77/77 package.json deps present in pnpm-lock.yaml. (First check scripted this wrong
+  and reported 77/77 *missing* — scoped names are single-quoted in the lockfile's `importers` block.
+  Read the lockfile before believing a dependency alarm.)
+- Three layers regenerate to **zero diffs** (static pages → markdown → known paths).
+- 114 pages · 477 FAQ questions · 0 not visible as text · 0 JSON-LD parse errors · 0 aggregateRating
+  in static pages · 0 missing required fields.
+- Metadata: 0 duplicate titles/descriptions/H1s/canonicals · 0 missing descriptions · 0 keywords tags
+  · 0 descriptions over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted).
+- Near-duplicate: 96 suburb pages, avg worst-twin **25.8%** (baseline 25.6%), worst **45.2%**
+  chelsea-heights/dingley-village, **zero over 55%**. Mordialloc is **18.3%** — the readability
+  rewrite made it *less* templated, not more.
+- Site health: real pages 200; `/nope-not-a-page/`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css`
+  all 404 **and** real hashed bundles still 200 with `text/javascript` / `text/css`; redirects 301;
+  sitemap **114/114 all 200, zero redirect hops**.
+- AEO: markdown negotiation returns `text/markdown` with `Vary: Accept` / `no-store` / `noindex`;
+  normal Accept returns HTML; the Mordialloc twin body carries the rewritten copy (salt air, Main
+  Street, Mordialloc Creek, Peter Scullin all present in both layers). robots.txt disallows only
+  `/api/`. llms.txt `$` matches read in context: both are `$10M public liability`, **no prices**.
+- Review count consistent at **15** in every location, including both prose sentences in
+  `client/index.html` (the one that drifted to 14 is still correct) and both copies of llms.txt.
+- Speed: TTFB 0.21–0.43s. og:image/twitter:image resolve 200.
+
+**Ranking data (GSC via Supermetrics, 2026-05-24 → 2026-08-19, vs the 2026-08-19 baseline).**
+Tracked eleven, best position: Collingwood 17.65→16.73 · Sorrento 7.13→6.75 · Murrumbeena 17.00→16.91
+· Highett 17.32→16.86 · **Mordialloc 29.18→25.64** · Mentone 24.82→flat · McKinnon 11.19→11.05 ·
+Donvale 16.63→16.09 · Patterson Lakes 6.83→6.75 · Dromana 19.53→flat · **Aspendale 10.00→14.00**.
+Impressions **742 → 933**. Clicks **still zero on all eleven**; every click remains brand
+(`jetblack painting` 123 imp / 33 clicks / pos 3.9).
+
+Caveats, stated rather than glossed: the two windows overlap almost entirely, so these are small
+shifts inside largely the same 90 days, not a fresh period. Aspendale's −4.0 is on 17 impressions —
+noise. Mordialloc's +3.54 is the largest move, but the readability rewrite only went live 2026-08-20,
+two days of an 88-day window — **too early to attribute, re-measure after 2026-09-20.** The query pull
+truncated at 400 rows, so the lowest-impression long tail is not included. Nothing crossed into the
+top 10 on a term with real volume, so **CTR remains untestable and titles/descriptions stay untouched.**
+
+⚠️ **Supermetrics trial expires in 2 days** (the API said so on this run). It is the only working
+route to GSC and GBP data — Semrush is units-zero and Ahrefs is "insufficient plan". If it lapses,
+ranking measurement stops entirely.
+
+⚠️ Production serves the **branch head**, not `main` — Cloudflare deploys branch pushes straight to
+production, so `main` sat 8 commits behind what was live. Merging this PR resyncs them.
+
+Authority work: no change this run. The brief's rule is one type of change per run, and a real
+deploy-safety defect outranks a backlink task. Tier 0 (Yellow Pages / TrueLocal still pointing at the
+dead Manus site) remains the cheapest open win and needs a phone call — 1800 359 321.

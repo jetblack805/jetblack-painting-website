@@ -6,20 +6,33 @@
  * and submits them to IndexNow. Only runs if git diff finds changes.
  *
  * Usage:
- *   node scripts/indexnow-on-deploy.mjs
- *   node scripts/indexnow-on-deploy.mjs --dry   # show what would be submitted
+ *   pnpm indexnow:changed            # submit whatever the last commit changed
+ *   pnpm indexnow:changed --dry      # show what would be submitted, send nothing
+ *   pnpm indexnow:changed --no-fail  # always exit 0, even if the submission fails
  *
  * ⚠️ Only submitted URLs that actually changed. Resubmitting unchanged content
  * is treated as abuse by IndexNow and gets the key ignored.
  *
- * Integration: call this AFTER pnpm build in your post-commit hook or CI.
- *   pnpm build && node scripts/indexnow-on-deploy.mjs
+ * ⚠️ Do NOT wire this into `pnpm build` (it was briefly a `postbuild` hook, which
+ * was wrong on two counts):
+ *
+ *   1. Cloudflare deploys every branch push straight to production by running the
+ *      build. A non-zero exit here would fail the build and take the DEPLOY down
+ *      over an unreachable third-party API — the site would stop shipping because
+ *      Bing had a bad minute. Indexing is best-effort; deploying is not.
+ *   2. Cloudflare clones shallow, so `HEAD~1` may not resolve on the build machine
+ *      and the diff would silently find nothing on every deploy anyway.
+ *
+ * Run it after a deploy has landed instead, from a machine that can reach
+ * api.indexnow.org. `--no-fail` exists for anyone who still wants it in a
+ * pipeline: it reports the failure but always exits 0.
  */
 import fs from "node:fs";
 import path from "node:path";
-import { execSync } from "node:child_process";
+import { execSync, spawnSync } from "node:child_process";
 
 const dry = process.argv.includes("--dry");
+const noFail = process.argv.includes("--no-fail");
 
 /**
  * Maps a file path in public/ to its canonical URL.
@@ -112,15 +125,17 @@ if (urls.length === 0) {
 console.log(`Found ${urls.length} changed URL(s) to submit:`);
 urls.forEach((url) => console.log(`  ${url}`));
 
-// Call the main indexnow script with the URLs
+// Hand off to the submitter. spawnSync with an argument array — no shell, so a
+// path containing a quote cannot be reinterpreted as shell syntax.
 const indexnowArgs = dry ? [...urls, "--dry"] : urls;
+const run = spawnSync(process.execPath, ["scripts/indexnow.mjs", ...indexnowArgs], {
+  stdio: "inherit",
+});
 
-try {
-  execSync(`node scripts/indexnow.mjs ${indexnowArgs.map((a) => `'${a}'`).join(" ")}`, {
-    stdio: "inherit",
-  });
-} catch (err) {
-  // indexnow.mjs exits with codes 0 (success), 1 (API error), or 2 (network error)
-  // Pass those through so the caller can decide what to do
-  process.exit(err.status);
+// indexnow.mjs exits 0 (submitted), 1 (IndexNow rejected it), or 2 (never reached it).
+const code = run.status ?? 1;
+if (code !== 0 && noFail) {
+  console.log(`\nindexnow exited ${code} — continuing anyway (--no-fail).`);
+  process.exit(0);
 }
+process.exit(code);

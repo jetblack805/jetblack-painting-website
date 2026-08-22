@@ -551,3 +551,119 @@ Lakes, the strongest remaining candidate, already ranks at position **6.83** on
 **Could not be measured:** nothing this run — Supermetrics was available and GSC data was pulled
 earlier today. Semrush remains units-zero and Ahrefs "Insufficient plan", so competitor backlink
 gap analysis is still blocked.
+
+### 2026-08-20 — Bing Webmaster Tools verified
+
+Jimmy supplied a BingSiteAuth token and it is now **verified**. Bing matters beyond Bing itself:
+it feeds ChatGPT search and Copilot, and there is **no Bing Webmaster connector** in the registry
+(checked 2026-08-20), so this file is the only route in and all Bing work is manual.
+
+⚠️ **The file already contained a different token** — `920FCBF9…`, added 2026-07-24 in PR #108
+under Jimmy's own account, an earlier verification attempt. It was kept, not deleted.
+
+**Gotcha worth remembering: Bing matches only the FIRST `<user>` entry.** The first attempt failed
+with "Incorrect authentication key" even though the correct token was present, because the older
+token was listed first. Ruled out before touching it: serves 200 `application/xml` to bingbot's
+user-agent and to a plain client, no BOM, no stray whitespace, `must-revalidate` with a matching
+etag so not a stale edge copy. Reordering so the issued token is first fixed it immediately.
+**If a Bing token is ever rotated, put the new one at the top of the file.**
+
+Note: `www.jetblackpainting.com` cannot be fetched from this sandbox, so the www host was never
+testable as a hypothesis. It turned out not to matter.
+
+**Next in Bing (manual, Jimmy):** submit `https://jetblackpainting.com/sitemap.xml` (114 URLs, all
+verified 200 with zero redirect hops), then use Bing's URL submission — its quota is far more
+generous than Google's — on the pages closest to page 1: Sorrento, Collingwood, McKinnon, Mordialloc.
+
+### Connector audit — 2026-08-20
+
+Checked the installed list and searched the registry. **No connector exists for Google Search
+Console, Google Business Profile, Bing Webmaster Tools or Apple Business Connect.**
+
+| Connector | State | Action |
+|---|---|---|
+| **Supermetrics** | Connected, working | ⚠️ **TRIAL ENDS ~2026-08-24.** Sole route to GSC and GBP data. No substitute. Renew. |
+| **Local Falcon** | Installed, `enabledInChat: false`, state unknown | 37 tools incl. grid-based map-pack scans. Measures the binding constraint. Paywalled — highest-value new spend. |
+| Semrush | Connected, **0 API units** | Not an auth problem. Only for competitor Backlink Gap. |
+| Ahrefs | Connected, "Insufficient plan" | Overlaps Semrush. Do not pay for both. |
+| Cloudflare | Connected | **No DNS tools** — DMARC must be added by hand. |
+| Gmail, Resend, GitHub | Connected, working | Outreach drafts created 2026-08-20. |
+
+**DMARC is genuinely missing** (SPF exists: `v=spf1 include:_spf.google.com ~all`). Add TXT
+`_dmarc` = `v=DMARC1; p=none; rua=mailto:jimmy@jetblackpainting.com`. Start at `p=none` so it
+cannot break mail; tighten later. Matters because `/api/quote` sends through Resend.
+
+**Free and worth doing, no connector available:** Apple Business Connect (feeds Apple Maps on every
+iPhone in Melbourne — relevant given the map pack is the constraint).
+
+### 2026-08-20 — Bing URL submission: 100 of 114 done
+
+Verified, then submitted via Bing Webmaster Tools URL Submission (100/day quota):
+16 in a first batch, then 84. **30 URLs remain**, listed below, to submit when the quota resets.
+
+⚠️ **Paste bare URLs only.** The first attempt failed because the list carried trailing
+annotations (`<- tracked suburb`); Bing reads the whole line as the URL and rejects every one.
+Also submit the sitemap separately under **Sitemaps** — `https://jetblackpainting.com/sitemap.xml`
+covers all 114 and does **not** consume the URL quota.
+
+**Priority order used:** homepage → the 11 tracked suburbs → 8 service pages → blog → FAQ →
+remaining suburbs ranked by measured GSC impressions.
+
+**Still to submit (30):**
+
+```
+https://jetblackpainting.com/painter-chelsea-heights/
+https://jetblackpainting.com/painter-brighton-east/
+https://jetblackpainting.com/painter-heatherton/
+https://jetblackpainting.com/painter-edithvale/
+https://jetblackpainting.com/painter-bonbeach/
+https://jetblackpainting.com/painter-carrum/
+https://jetblackpainting.com/painter-oakleigh/
+https://jetblackpainting.com/painter-clarinda/
+https://jetblackpainting.com/painter-dingley-village/
+https://jetblackpainting.com/painter-chadstone/
+https://jetblackpainting.com/painter-frankston/
+https://jetblackpainting.com/painter-frankston-south/
+https://jetblackpainting.com/painter-mornington/
+https://jetblackpainting.com/painter-glen-iris/
+https://jetblackpainting.com/painter-balwyn/
+https://jetblackpainting.com/painter-st-kilda/
+https://jetblackpainting.com/painter-port-melbourne/
+https://jetblackpainting.com/painter-albert-park/
+https://jetblackpainting.com/painter-richmond/
+https://jetblackpainting.com/painter-south-melbourne/
+https://jetblackpainting.com/painter-carnegie/
+https://jetblackpainting.com/painter-braeside/
+https://jetblackpainting.com/painter-waterways/
+https://jetblackpainting.com/painter-safety-beach/
+https://jetblackpainting.com/painter-rye/
+https://jetblackpainting.com/painter-hampton-park/
+https://jetblackpainting.com/painter-endeavour-hills/
+https://jetblackpainting.com/painter-somerville/
+https://jetblackpainting.com/painter-clyde/
+https://jetblackpainting.com/painter-hastings/
+```
+
+### 2026-08-20 — IndexNow implemented
+
+Replaces the manual Bing "Submit URLs" flow (100/day quota, dashboard required). IndexNow has no
+quota and reaches Bing, Yandex, Seznam and Naver from one request.
+
+- `public/236b45859f0cf903f27f5160088eba04.txt` — proves ownership. **Verified live**, 200
+  `text/plain`, contents match the filename. The key is public by design.
+- `scripts/indexnow.mjs` — takes paths, full URLs, or `--all`; `--dry` prints without sending.
+- `pnpm indexnow` wired up. `generate-known-paths` picked the key file up automatically.
+
+**Deliberately NOT wired into the build.** IndexNow treats resubmitting an unchanged site as abuse
+and ignores keys that do it; a build-step ping would resubmit all 114 URLs on every deploy. Call it
+with the pages a change actually touched.
+
+⚠️ **`api.indexnow.org` is blocked by this sandbox's egress policy** (`HTTP 403 Host not in
+allowlist`). The script is complete and its guards are tested, but **it cannot be executed from the
+agent environment.** Options: run `pnpm indexnow /path/` from Jimmy's own machine, or add
+`api.indexnow.org` to the environment's network policy.
+
+Note for future runs: a proxy 403 and an IndexNow "key not valid" 403 look identical on the status
+line. The first version of the script printed "Key not valid" for a proxy block, which would have
+sent someone checking a key file that was fine. It now inspects the body, reports UNREACHABLE, and
+exits **2** for network failure versus **1** for a genuine API rejection.

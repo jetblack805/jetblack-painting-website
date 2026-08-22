@@ -231,6 +231,8 @@ export const KNOWN_PATHS = new Set([
   "/services/body-corporate-painting/index.md",
   "/services/commercial-painting/",
   "/services/commercial-painting/index.md",
+  "/services/epoxy-flooring/",
+  "/services/epoxy-flooring/index.md",
   "/services/exterior-painting/",
   "/services/exterior-painting/index.md",
   "/services/interior-painting/",

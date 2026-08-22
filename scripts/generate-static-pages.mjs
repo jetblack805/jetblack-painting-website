@@ -9,7 +9,7 @@ let PHONE_DISPLAY = "0432 077 782";
 let PHONE_HREF = "0432077782";
 let EMAIL = "jimmy@jetblackpainting.com";
 let GOOGLE_REVIEW_LINK = "https://g.page/r/CS0L-iKiqJlHEBM/review";
-let AGGREGATE_RATING = { ratingValue: "5.0", reviewCount: "15" };
+let AGGREGATE_RATING = { ratingValue: "5.0", reviewCount: "17" };
 let REVIEWS = null;
 try {
   const cfg = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -2337,7 +2337,7 @@ const faqCategories = [
       },
       {
         question: "Do you provide references?",
-        answer: "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 15 Google reviews.",
+        answer: "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 17 Google reviews.",
       },
     ],
   },

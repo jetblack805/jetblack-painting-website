@@ -35,9 +35,9 @@ Jetblack Painting services 90+ Melbourne suburbs across the southeast, Bayside, 
 
 ## Why Jetblack Painting
 
-Jetblack Painting was founded by Jimmy Demirci and has spent 13+ years painting homes and businesses across Melbourne's southeast, Bayside, City of Casey, Glen Eira, Stonnington and the Mornington Peninsula. The business holds a 5.0-star rating from 15 verified Google reviews, and every project — residential or commercial — is covered by $10 million public liability insurance and a 5-year written workmanship guarantee.
+Jetblack Painting was founded by Jimmy Demirci and has spent 13+ years painting homes and businesses across Melbourne's southeast, Bayside, City of Casey, Glen Eira, Stonnington and the Mornington Peninsula. The business holds a 5.0-star rating from 17 verified Google reviews, and every project — residential or commercial — is covered by $10 million public liability insurance and a 5-year written workmanship guarantee.
 
-- 5.0-star rating from 15 Google reviews
+- 5.0-star rating from 17 Google reviews
 - 13+ years of experience painting Melbourne homes and businesses
 - $10 million public liability insurance
 - 5-year written workmanship guarantee

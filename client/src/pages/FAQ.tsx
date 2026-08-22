@@ -27,7 +27,7 @@ export default function FAQ() {
         },
         {
           q: "Do you provide references?",
-          a: "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 15 Google reviews."
+          a: "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 17 Google reviews."
         }
       ]
     },

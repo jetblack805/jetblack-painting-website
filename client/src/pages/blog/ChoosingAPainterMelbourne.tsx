@@ -138,7 +138,7 @@ export default function ChoosingAPainterMelbourne() {
 
             <p className="text-[#B4B4B8] mb-6">
               Jetblack Painting is based in Mordialloc and services Melbourne's southeast, Bayside, inner east and
-              the Mornington Peninsula, with 13+ years of experience and a 5.0 Google rating across 15 reviews.
+              the Mornington Peninsula, with 13+ years of experience and a 5.0 Google rating across 17 reviews.
               We're always glad to answer these questions directly before you book.
             </p>
 

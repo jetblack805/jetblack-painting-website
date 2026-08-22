@@ -44,7 +44,7 @@ Never claim to have checked them directly.
 ## Locked business facts — never invent or vary
 
 Phone **0432 077 782** · jimmy@jetblackpainting.com · **$10M** public liability ·
-**5-year** written guarantee · Mordialloc VIC 3195 · **13+ years** · **5.0 from 15 Google reviews** ·
+**5-year** written guarantee · Mordialloc VIC 3195 · **13+ years** · **5.0 from 17 Google reviews** ·
 quote turnaround and enquiry response both **24–48 hours**.
 
 Review count is hardcoded in nine places — see `CLAUDE.md`. The "15"/"14" matches in

@@ -462,6 +462,9 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <meta name="twitter:description" content="${escapeHtml(description)}">
   <meta name="twitter:url" content="${escapeHtml(canonical)}">
   <meta name="twitter:image" content="${escapeHtml(ogImage || SITE_URL + "/og-image.jpg")}">
+  <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
+       covers "/" -- these generated pages carry their own head. -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
 ${schemaScripts}
   <style>
     body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#EDEDEF;background:#060607;line-height:1.6}

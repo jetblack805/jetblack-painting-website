@@ -88,6 +88,11 @@
   <meta name="manus:disable-auto-review-schema" content="true" />
   <meta name="manus:schema-mode" content="manual" />
 
+  <!-- Ahrefs Web Analytics. Cookieless, so it needs no consent banner, and
+       async so it never blocks the LCP image. Must stay in step with the
+       copy in scripts/generate-static-pages.mjs: this file only serves "/",
+       while every other page is built by that generator. -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

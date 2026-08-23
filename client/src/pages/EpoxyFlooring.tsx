@@ -10,9 +10,13 @@ import MidPageCTA from "@/components/MidPageCTA";
 // re-imported as a second copy of the same photo.
 import imgEpoxyAfter from "@/assets/images/gallery-commercial-epoxy-floor.webp";
 import imgEpoxyAfter900 from "@/assets/images/gallery-commercial-epoxy-floor-900.webp";
-// Before shot: the same warehouse, same viewpoint, bare slab.
-import imgEpoxyBefore from "@/assets/images/gallery-epoxy-warehouse-before.webp";
-import imgEpoxyBefore900 from "@/assets/images/gallery-epoxy-warehouse-before-900.webp";
+// Before shot: the same warehouse in its original condition, ahead of the
+// walls, beams and floor being done.
+import imgEpoxyBefore from "@/assets/images/gallery-epoxy-warehouse-original.webp";
+import imgEpoxyBefore900 from "@/assets/images/gallery-epoxy-warehouse-original-900.webp";
+// Mid-job: walls and beams finished, slab bare and ready to coat.
+import imgEpoxySlab from "@/assets/images/gallery-epoxy-warehouse-before.webp";
+import imgEpoxySlab900 from "@/assets/images/gallery-epoxy-warehouse-before-900.webp";
 
 export default function EpoxyFlooring() {
   const benefits = [
@@ -135,12 +139,12 @@ export default function EpoxyFlooring() {
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1400}
                 height={1050}
-                alt="Bare stained concrete warehouse slab in Melbourne before epoxy flake flooring by Jetblack Painting"
+                alt="Melbourne warehouse in original condition before Jetblack Painting repainted the walls and beams and laid an epoxy flake floor"
                 className="rounded-lg shadow-md w-full h-72 object-cover"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm uppercase tracking-[0.2em] text-[#98989D]">
-                Before — bare slab
+                Before — original condition
               </figcaption>
             </figure>
             <figure className="m-0">
@@ -155,7 +159,7 @@ export default function EpoxyFlooring() {
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm uppercase tracking-[0.2em] text-[#D0A050]">
-                After — epoxy flake
+                After — walls, beams and epoxy flake floor
               </figcaption>
             </figure>
           </div>
@@ -208,6 +212,21 @@ export default function EpoxyFlooring() {
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Preparation Is the Whole Job</h2>
+            <figure className="m-0 mb-6">
+              <img
+                src={imgEpoxySlab}
+                srcSet={`${imgEpoxySlab900} 900w, ${imgEpoxySlab} 1400w`}
+                sizes="(max-width: 1024px) 100vw, 896px"
+                width={1400}
+                height={1050}
+                alt="Warehouse slab with walls and beams repainted, concrete bare and ready for the epoxy coating"
+                className="rounded-lg shadow-md w-full h-64 object-cover"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm text-[#98989D]">
+                The same warehouse mid-job: walls and beams finished, slab bare and ready to coat.
+              </figcaption>
+            </figure>
             <p className="text-[#B4B4B8] mb-4 leading-relaxed">
               Almost every failed garage floor you've seen — the coating lifting in sheets, peeling away where the tyres sit — failed for the same reason. It was rolled onto smooth concrete that was never opened up first. Bare slabs have a dense, closed surface layer, and a coating applied straight onto it is holding on by very little. Heat, moisture and a turning tyre are enough to break that bond.
             </p>

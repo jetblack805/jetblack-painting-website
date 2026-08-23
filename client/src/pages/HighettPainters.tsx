@@ -29,24 +29,24 @@ export default function HighettPainters() {
 
   const faqs = [
     {
-      question: `What types of homes do you paint in Highett?`,
-      answer: `Highett has a solid mix of post-war brick homes, 1960s–1980s residences and a growing number of townhouses and knock-down rebuilds. We're experienced across all of these — from preparing original face-brick and weatherboard on older homes to delivering sharp, clean finishes on new renders and modern cladding systems. The right preparation approach varies significantly by substrate and age of the home, and we assess each property before quoting.`
+      question: `What types of homes do you paint in ${suburb}?`,
+      answer: `${suburb} has a solid mix. Post-war brick homes, houses from the 1960s to the 1980s, and a growing number of townhouses and knock-down rebuilds. We work across all of them, from preparing original face-brick and weatherboard on the older homes to clean finishes on new render and modern cladding. The preparation changes a lot depending on the surface and the age of the house, so we look at the property before we quote.`
     },
     {
-      question: `Do you do exterior repaints in Highett?`,
-      answer: `Yes. Exterior repaints are a core part of what we do. For Highett homes we inspect the current paint condition, check for adhesion failure, chalking, efflorescence or surface contamination, then prepare accordingly — washing down, patching, sanding and priming — before applying a premium exterior acrylic topcoat. All exterior work is covered by our 5-year written guarantee and $10M public liability insurance.`
+      question: `Do you do exterior repaints in ${suburb}?`,
+      answer: `Yes, they are a core part of what we do. On a ${suburb} home we check the existing paint first. Is it letting go, chalking, showing efflorescence or contamination? Then we prepare to suit: washing down, patching, sanding and priming, before a premium exterior acrylic topcoat. All exterior work carries our 5-year written guarantee and $10 million public liability insurance.`
     },
     {
-      question: `How do I get a painting quote in Highett?`,
-      answer: `Call 0432 077 782 or use the quote form on this page. We'll arrange an on-site inspection at a time that suits you — we don't estimate without seeing the property. After the inspection you'll receive a detailed written quote covering the full scope, product specification and price. No call centres, no surprises — you deal with the painter directly from quote to final sign-off.`
+      question: `How do I get a painting quote in ${suburb}?`,
+      answer: `Call 0432 077 782 or use the quote form on this page. We book an on-site inspection at a time that suits you. We do not price a job without seeing it. After the inspection you get a written quote covering the full scope, the products and the price. No call centre. You deal with the painter from the quote through to sign-off.`
     },
     {
       question: `Do you paint townhouses and units for owners corporations in ${suburb}?`,
-      answer: `Yes, and ${suburb} has a lot of them. The suburb has taken on a great deal of medium-density housing, and the common property in those developments — entry lobbies, stairwells, balcony soffits, garage undercrofts, boundary and dividing fences — wears far faster than the inside of any single unit. We quote owners corporation work with the scope itemised line by line so a committee can actually read it, stage the work so residents keep access to entries and parking throughout, and carry $10 million public liability cover across the whole site.`
+      answer: `Yes, and ${suburb} has plenty of them. The suburb has taken on a lot of medium-density housing. In those developments the common property wears far faster than the inside of any single unit — entry lobbies, stairwells, balcony soffits, garage undercrofts, boundary and dividing fences. We itemise the scope line by line so a committee can actually read it, stage the work so residents keep access to entries and parking, and carry $10 million public liability cover across the whole site.`
     },
     {
       question: `What usually fails first on a ${suburb} exterior?`,
-      answer: `On the 1960s to 1980s homes that make up much of ${suburb}, it is almost always the timber before the walls. Fascia boards, barge boards, eaves linings and window joinery on the north and west elevations get the hardest sun and go first — the paint chalks, then cracks, then lets water into the end grain. The brickwork below can still look perfectly serviceable while that timber is well past due. It is worth booking an inspection when you notice the eaves rather than waiting for the walls, because replacing rotted fascia costs considerably more than repainting sound timber would have.`
+      answer: `On the 1960s to 1980s homes that make up much of ${suburb}, it is almost always the timber before the walls. Fascia boards, barge boards, eaves linings and window joinery on the north and west elevations get the hardest sun. The paint chalks, then cracks, then lets water into the end grain. The brickwork below can still look fine while that timber is well past due. Book an inspection when you notice the eaves rather than waiting for the walls. Replacing rotted fascia costs considerably more than repainting sound timber would have.`
     }
   ];
 
@@ -63,35 +63,35 @@ export default function HighettPainters() {
         { name: "Beaumaris", link: "/painter-beaumaris" },
         { name: "Bentleigh", link: "/painter-bentleigh" },
       ]}
-      localExpertise={`Highett sits in Melbourne's Bayside council area, bordered by Cheltenham to the east, Moorabbin to the south and Hampton to the west. It's a well-established suburb with a broad housing stock — post-war brick homes, 1970s–1980s residences and a steady influx of townhouse development as the suburb attracts young families and renovators. We work throughout Highett and the surrounding Bayside and Kingston areas regularly.`}
-      propertyTypes={`Highett's housing stock ranges from post-war brick homes and 1960s–1980s residences to modern townhouses and renovation projects — all benefiting from proper preparation and quality coating systems.`}
+      localExpertise={`${suburb} sits in Melbourne's Bayside council area. Cheltenham is to the east, Moorabbin to the south, Hampton to the west. The housing is broad: post-war brick homes, houses from the 1970s and 1980s, and a steady run of townhouse development as young families and renovators move in. We work across ${suburb} and the surrounding Bayside and Kingston areas regularly.`}
+      propertyTypes={`Post-war brick homes, houses from the 1960s to the 1980s, modern townhouses and renovation projects. All of them do better with proper preparation and a coating system matched to the surface.`}
       localContent={[
         {
           heading: "Painters in Highett for Brick Homes and Renovations",
           body: [
-            "Highett is a practical, well-connected suburb with a housing stock that rewards good maintenance. The older brick homes that make up much of the suburb's character require painters who understand how to handle face-brick and render properly — not every surface can be painted without preparation, and the wrong primer on the wrong substrate leads to adhesion failure within a year or two. We inspect every property before quoting and identify exactly what the surface needs before we touch a brush.",
-            "Jetblack Painting works throughout Highett and the broader Bayside area. We use premium Dulux and Taubmans products, prepare every surface correctly, and back the job with a 5-year written guarantee. Call Jimmy on 0432 077 782 to book an inspection.",
+            "Highett is a practical, well-connected suburb, and its housing rewards good maintenance. Much of it is older brick. That needs a painter who knows what to do with face-brick and render. Not every surface can simply be painted. Put the wrong primer on the wrong surface and the paint lets go within a year or two. So we look at the property before we quote, and work out what each surface needs first.",
+            "We work throughout Highett and the wider Bayside area. Premium Dulux and Taubmans products, proper preparation, and a 5-year written guarantee on the job. Call Jimmy on 0432 077 782 to book an inspection.",
           ],
         },
         {
           heading: "Interior and Exterior Painting for Highett Homes",
           body: [
-            "Interior painting in Highett typically covers a mix of original plaster in older homes and gyprock in renovated sections and extensions. We work with all surface types — ceilings, walls, timber joinery, built-ins, doors and trims — using the correct sheen for each application. We schedule around your household and leave the property clean on completion.",
-            "Exterior repaints in Highett require attention to surface condition before anything else. We wash, patch, sand and prime before topcoating with a premium exterior acrylic or elastomeric system rated for Melbourne's UV and seasonal weather variation. Every exterior job is backed by our 5-year written guarantee.",
+            "Inside a Highett house you usually find two things at once. Original plaster in the old part, and gyprock in the extension. We handle both, along with ceilings, walls, timber joinery, built-ins, doors and trims. Each gets the right sheen for the job. We work around your household and leave the place clean.",
+            "Outside, the condition of the surface decides everything else. We wash, patch, sand and prime before any topcoat goes on. Then a premium exterior acrylic or elastomeric system rated for Melbourne's UV and its swings in weather. Every exterior job carries the 5-year written guarantee.",
           ],
         },
         {
           heading: "Townhouse, Unit and Common Property Painting in Highett",
           body: [
-            "Few suburbs in the area have changed shape as quickly as Highett. Streets that held a single post-war house per block now hold two, three or four townhouses, and that shift changes what painting work the suburb actually needs. Common property is the part owners tend to notice last and the part that ages fastest — stairwells and entry lobbies that take daily traffic, balcony soffits that trap moisture, garage undercrofts, and the long runs of boundary fence and render between developments.",
-            "We quote this work the way a committee needs to read it: itemised by area, with the preparation spelled out rather than buried in a single lump sum, so it can be compared properly and taken to a vote without guesswork. Work is staged to keep entries, letterboxes and car parks usable while it runs, and the whole site sits under our $10 million public liability cover.",
+            "Few suburbs nearby have changed shape as fast as Highett. Streets that held one post-war house per block now hold two, three or four townhouses. That changes what painting the suburb actually needs. Common property is the part owners notice last and the part that ages fastest. Stairwells and entry lobbies take daily traffic. Balcony soffits trap moisture. Then there are garage undercrofts, and long runs of boundary fence and render between developments.",
+            "We quote this work the way a committee needs to read it. Itemised by area, with the preparation spelled out rather than buried in one lump sum. That way it can be compared properly and taken to a vote without guesswork. Work is staged so entries, letterboxes and car parks stay usable while it runs. The whole site sits under our $10 million public liability cover.",
           ],
         },
         {
           heading: "What the 1960s to 1980s Housing Stock Needs",
           body: [
-            "The bulk of Highett's homes date from a period with a very consistent build recipe — brick or brick veneer walls, timber fascia and eaves, aluminium window frames and a tiled roof. Each of those ages at a different rate, and a repaint that treats them as one surface will fail unevenly. The brick is usually the least of the problem. The timber is the priority, and on any elevation facing north or west it is generally the reason the house has started to look tired.",
-            "Where render has been added during a renovation — a very common update on these homes — it introduces a third substrate with its own requirements, and joining new render to original brickwork is where cracking tends to reappear if the preparation was rushed. We identify each substrate at the inspection and specify the primer and topcoat system for each one rather than applying a single product across the lot. That specification goes into the written quote, so you can see exactly what is going on which surface.",
+            "Most Highett homes come from a period with one consistent recipe. Brick or brick veneer walls. Timber fascia and eaves. Aluminium window frames. A tiled roof. Each of those ages at its own rate, so a repaint that treats them as one surface fails unevenly. The brick is usually the least of your problems. The timber is the priority. On any elevation facing north or west, the timber is generally why the house has started to look tired.",
+            "Render added during a renovation is common on these homes, and it brings a third surface with its own needs. Where new render meets original brickwork is where cracking tends to come back if the preparation was rushed. We identify each surface at the inspection and specify a primer and topcoat for each one, rather than running a single product over the lot. That specification goes into the written quote, so you can see what is going where.",
           ],
         },
       ]}

@@ -10,9 +10,9 @@ Coastal house painters in Sorrento — limestone cottages, weatherboard and prem
 
 ## Local painting services in Sorrento
 
-Jetblack Painting services Sorrento as part of our Mornington Peninsula coverage. Sorrento sits at the narrowest point of the Peninsula, with the calm front beach on Port Phillip Bay on one side and the exposed back beach on Bass Strait on the other — a combination that makes it one of the most weather-exposed towns we work in. The town's housing is distinctive: original limestone cottages and heritage buildings from Sorrento's early settlement, weatherboard beach houses, and a significant number of premium, architect-designed holiday homes. We tailor preparation and coating systems to this exposure and this housing stock, rather than applying a standard suburban approach.
+We cover Sorrento as part of our Mornington Peninsula work. Sorrento sits at the narrowest point of the Peninsula. The calm front beach on Port Phillip Bay is on one side, the exposed back beach on Bass Strait on the other. That makes it one of the most weather-exposed towns we work in. The housing is just as distinctive: original limestone cottages and heritage buildings from the town's early days, weatherboard beach houses, and a good number of premium architect-designed holiday homes. We match the preparation and the coating to that exposure and that housing, rather than running a standard suburban approach over the top of it.
 
-Sorrento's limestone and heritage cottages, weatherboard beach houses, premium architect-designed holiday homes, and rendered permanent residences near both the front and back beach.
+Limestone and heritage cottages, weatherboard beach houses, premium architect-designed holiday homes, and rendered permanent residences near both the front and back beach.
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Sorrento with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
@@ -83,31 +83,31 @@ Explore nearby suburb pages for neighbouring areas around Sorrento.
 
 ### Do you paint holiday homes and premium properties in Sorrento?
 
-Yes — Sorrento has one of the Mornington Peninsula's highest concentrations of premium holiday homes and architect-designed properties, and this kind of work is a core part of what we do. Owners here expect a standard of preparation and finish that matches the value of the property, so we scope every job in detail, use premium Dulux and Taubmans systems, and coordinate around letting calendars and caretaker access rather than treating a holiday property like a standard job.
+Yes. Sorrento has one of the Peninsula's highest concentrations of premium holiday homes and architect-designed properties, and this work is core to what we do. Owners here expect preparation and finish that match what the house is worth. So we scope every job in detail, use premium Dulux and Taubmans systems, and work around letting calendars and caretaker access rather than treating a holiday house like a standard job.
 
 ### How do you protect Sorrento homes from the coastal environment?
 
-Sorrento sits at the point where Port Phillip Bay meets Bass Strait, so properties here take salt air and weather from both the calm front beach and the exposed back beach. We wash every exterior thoroughly to remove salt film before any coating goes on, prime bare timber with penetrating oil-based primers, and finish with flexible, salt-resistant exterior systems built for this level of coastal exposure — not a standard suburban acrylic.
+Sorrento sits where Port Phillip Bay meets Bass Strait, so houses here take salt and weather from both the calm front beach and the exposed back beach. We wash every exterior thoroughly to strip the salt film before any coating goes on. Bare timber gets a penetrating oil-based primer. Then flexible, salt-resistant exterior systems built for this level of exposure, not a standard suburban acrylic.
 
 ### Do you paint limestone and heritage cottages in Sorrento?
 
-Yes. Sorrento has a number of original limestone cottages and heritage weatherboard buildings dating back to the town's early history, alongside modern architect-designed homes and everything in between. Limestone and older render need their own preparation — testing for existing coatings, appropriate breathable products, and careful attention to pointing and detail — rather than the same system used on modern rendered walls.
+Yes. Sorrento has a number of original limestone cottages and heritage weatherboard buildings from the town's early history, alongside modern architect-designed homes and everything in between. Limestone and older render need their own preparation. That means testing for what is already on the wall, using breathable products, and paying attention to the pointing and the detail, rather than the system you would use on a modern rendered wall.
 
 ### Does every side of my Sorrento house need the same paint system?
 
-Not always, and Sorrento is one of the few places where that genuinely matters. An elevation facing the back beach is taking wind-driven spray and airborne sand, which abrades a coating as well as salting it, while a sheltered elevation on the same house is only dealing with settled salt film. The exposed faces commonly start chalking and losing film while the protected faces still look sound. We walk each elevation separately at the quote and note where one warrants a heavier build or an extra coat, so you are not paying ocean-grade specification on a wall that does not need it — or under-specifying the wall that does.
+Not always, and Sorrento is one of the few places where it genuinely matters. A wall facing the back beach takes wind-driven spray and airborne sand. The sand abrades the coating as well as salting it. A sheltered wall on the same house is only dealing with settled salt film. So the exposed faces start chalking and losing film while the protected faces still look sound. We walk each elevation separately at the quote and note where one needs a heavier build or an extra coat. That way you are not paying ocean-grade specification on a wall that does not need it, or under-specifying the wall that does.
 
 ### When is the best time of year to repaint a house in Sorrento?
 
-For exterior work, autumn and spring generally give the most workable conditions down here. Peninsula winters are wet and windy, and exterior coatings need dry surfaces and sensible temperatures to cure properly, while high summer brings both the heat and the town at its busiest. Interiors are the reverse — winter suits them well, and an empty holiday house between bookings is an easy interior to work in. If what you are asking for is better suited to a different part of the year, we will say so at the quote rather than start work that will not cure the way it should.
+For exterior work, autumn and spring usually give the most workable conditions down here. Peninsula winters are wet and windy, and exterior coatings need dry surfaces and sensible temperatures to cure. High summer brings the heat and the town at its busiest. Interiors are the opposite. Winter suits them well, and an empty holiday house between bookings is an easy interior to work in. If what you are asking for would sit better in a different part of the year, we will say so at the quote rather than start work that will not cure properly.
 
 ### Can you work on steep blocks and narrow streets near the beach?
 
-Yes, but it gets planned rather than improvised. Plenty of Sorrento blocks fall away steeply toward the water, and the older streets near the front beach are narrow with limited parking that tightens considerably over summer. We work out at the quote stage where platforms and equipment will stand, how materials get to the site, and whether an exposed elevation is going to need brushing and rolling instead of spray — because on a windy day near the back beach, overspray carrying onto a neighbour's property or a parked car is a real risk, not a theoretical one.
+Yes, but it gets planned rather than improvised. Plenty of Sorrento blocks fall away steeply toward the water. The older streets near the front beach are narrow, and parking tightens a lot over summer. At the quote we work out where platforms and equipment will stand, how materials reach the site, and whether an exposed elevation needs brushing and rolling instead of spray. On a windy day near the back beach, overspray drifting onto a neighbour's property or a parked car is a real risk, not a theoretical one.
 
 ### Do you offer free quotes in Sorrento?
 
-Yes. We service the full Mornington Peninsula and provide free, no-obligation written quotes across Sorrento with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 or submit a request online.
+Yes. We service the full Mornington Peninsula and quote across Sorrento for free, in writing, with no obligation. The full scope and the preparation are itemised up front. Call Jimmy on 0432 077 782 or ask for one online.
 
 **Jetblack Painting** — House Painters Sorrento | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

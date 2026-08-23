@@ -10,9 +10,9 @@ Coastal house painters in Mentone — California bungalow-style period homes. Fr
 
 ## Local painting services in Mentone
 
-Based just up the road in Mordialloc, Jetblack Painting works in Mentone regularly and understands the suburb's character — the Edwardian and interwar homes along Como Parade and Mentone Parade, the coastal salt-air environment close to the beach, and the mix of heritage and modern properties throughout. This is genuinely local territory for us.
+We are based just up the road in Mordialloc, so Mentone is genuinely local territory for us. We know the Edwardian and interwar homes along Como Parade and Mentone Parade. We know what the salt air does to paint this close to the beach. And we know the suburb runs from heritage homes to modern ones, often in the same street.
 
-Mentone's housing spans Edwardian and California bungalow-style period homes, weatherboard beach cottages near the foreshore, mid-century brick homes and modern residential builds — each needing a tailored approach to preparation and coating.
+Edwardian and California bungalow period homes, weatherboard beach cottages near the foreshore, mid-century brick homes and modern residential builds. Each one needs its own approach to preparation and coating.
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Mentone with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
@@ -83,23 +83,23 @@ Explore nearby suburb pages for neighbouring areas around Mentone.
 
 ### Do you paint Mentone's Edwardian and interwar homes?
 
-Yes — Mentone has a strong stock of Edwardian and California bungalow-style homes, particularly around Como Parade, Mentone Parade and the streets between the station and the beach. These homes need period-appropriate care: lead-paint-safe preparation, careful timber restoration, render repair where needed and colour schemes that suit the era. We do this work properly and the results show in how long the finish lasts.
+Yes. Mentone has a strong run of Edwardian and California bungalow homes, especially around Como Parade, Mentone Parade and the streets between the station and the beach. These houses need period-appropriate care. That means lead-safe preparation, careful timber restoration, render repair where it is needed, and colours that suit the era. Done properly, it shows in how long the finish lasts.
 
 ### How do you handle Mentone's coastal salt air on exteriors?
 
-Salt air from Port Phillip Bay is a real factor in Mentone — it deposits on surfaces, breaks down adhesion and causes paint film to peel far faster than inland suburbs. We counter it with thorough pressure washing to strip salt deposits before any paint goes on, premium flexible primers and salt-resistant topcoats from Dulux and Taubmans specifically designed for coastal exposure. Every exterior job is backed by our 5-year written workmanship guarantee.
+Salt air off Port Phillip Bay is a real factor here. It settles on the surface, breaks down adhesion, and makes paint peel far sooner than it would inland. So we pressure wash the salt off before any paint goes on. Then premium flexible primers, and salt-resistant topcoats from Dulux and Taubmans made for coastal exposure. Every exterior job carries our 5-year written workmanship guarantee.
 
 ### Do you offer free quotes in Mentone?
 
-Yes. We provide free, no-obligation written quotes across Mentone and the surrounding Kingston area, with the full scope and preparation itemised up front so there are no surprises. Call Jimmy on 0432 077 782 or submit a request online — we're usually able to quote within a few days.
+Yes. Quotes are free, written, and carry no obligation, across Mentone and the wider Kingston area. The scope and the preparation are itemised up front, so there are no surprises later. Call Jimmy on 0432 077 782 or ask for one online. We can usually quote within a few days.
 
 ### Do you paint apartments and units along the Mentone foreshore?
 
-Yes. The stretch closer to Beach Road and the esplanade has a good number of newer apartment and townhouse developments alongside the older Edwardian homes further inland. These beachfront builds face the same salt-air exposure as any Mentone property, so we use the same coastal-rated preparation and coatings, and we're experienced working with body corporates on shared facades, stairwells and common areas.
+Yes. The stretch near Beach Road and the esplanade holds a good number of newer apartment and townhouse developments, sitting alongside the older Edwardian homes further inland. Those beachfront buildings face the same salt air as anything else in Mentone, so they get the same coastal-rated preparation and coatings. We are used to working with body corporates on shared facades, stairwells and common areas.
 
 ### Do you do commercial painting around Mentone's schools and Nepean Highway businesses?
 
-Yes. Mentone has a solid commercial strip along the Nepean Highway and Bay Road, plus established schools including Mentone Grammar in the area, and we handle facade repaints, signage surrounds and general commercial maintenance for businesses and facilities as well as homes. Commercial jobs are quoted with clear scopes and scheduled to minimise disruption to trading hours or school terms.
+Yes. Mentone has a solid commercial strip along the Nepean Highway and Bay Road, and established schools including Mentone Grammar. We handle facade repaints, signage surrounds and general maintenance for businesses and facilities as well as homes. Commercial work is quoted with a clear scope and scheduled around trading hours or school terms.
 
 **Jetblack Painting** — House Painters Mentone | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

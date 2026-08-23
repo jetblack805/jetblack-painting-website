@@ -14,6 +14,7 @@ const ROUTES = [
   { path: "/services/kitchen-cabinet-resurfacing/",             priority: "0.7", changefreq: "monthly" },
   { path: "/services/real-estate-painting/",                    priority: "0.8", changefreq: "monthly" },
   { path: "/services/body-corporate-painting/",                 priority: "0.8", changefreq: "monthly" },
+  { path: "/services/epoxy-flooring/",                          priority: "0.8", changefreq: "monthly" },
   { path: "/keysborough-painters/",                            priority: "0.9", changefreq: "monthly" },
   { path: "/painter-toorak/",                                  priority: "0.9", changefreq: "monthly" },
   { path: "/painter-malvern/",                                 priority: "0.9", changefreq: "monthly" },

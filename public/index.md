@@ -1,4 +1,4 @@
-<!-- Painters Melbourne | Painters Near Me | Jetblack Painting -->
+<!-- Jetblack Painting | House & Commercial Painters Melbourne -->
 <!-- Source: https://jetblackpainting.com/ -->
 <!-- Melbourne painters for interior, exterior, commercial and roof work. Servicing 90+ suburbs from Mordialloc. $10M insured, 5-year guarantee. Call 0432 077 782. -->
 

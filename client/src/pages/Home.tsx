@@ -123,7 +123,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Painters Melbourne | Painters Near Me | Jetblack Painting"
+        title="Jetblack Painting | House & Commercial Painters Melbourne"
         description="Melbourne painters for interior, exterior, commercial and roof work. Servicing 90+ suburbs from Mordialloc. $10M insured, 5-year guarantee. Call 0432 077 782."
         canonical="https://jetblackpainting.com/"
         schema={homeSchema}

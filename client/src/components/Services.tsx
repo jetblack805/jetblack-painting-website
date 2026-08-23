@@ -2,7 +2,7 @@
  * Design: Bold Contrast — Services section on light background
  * Card-based layout with real project photos and hover interactions
  */
-import { Home, Building2, Paintbrush, Fence, Key, Building } from "lucide-react";
+import { Home, Building2, Paintbrush, Fence, Key, Building, Layers } from "lucide-react";
 import { Link } from "wouter";
 import { useInView } from "@/lib/useInView";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.webp";
@@ -15,6 +15,8 @@ import imgRoofFencePainting from "@/assets/images/gallery-roof-charcoal-tiles.we
 import imgOpenPlanLiving from "@/assets/images/gallery-interior-staged-living.webp";
 import imgCommercialBuilding from "@/assets/images/gallery-commercial-heritage-white.webp";
 import imgCommercialBuilding900 from "@/assets/images/gallery-commercial-heritage-white-900.webp";
+import imgEpoxyFlakeFloor from "@/assets/images/gallery-commercial-epoxy-floor.webp";
+import imgEpoxyFlakeFloor900 from "@/assets/images/gallery-commercial-epoxy-floor-900.webp";
 
 type Service = {
   icon: typeof Home;
@@ -95,6 +97,17 @@ const services: Service[] = [
     imgW: 1400,
     imgH: 1050,
     link: "/services/body-corporate-painting",
+  },
+  {
+    icon: Layers,
+    title: "Epoxy Flooring Melbourne",
+    description: "Jetblack Painting installs decorative epoxy flake flooring, garage floor coatings and concrete resurfacing across Melbourne. We grind the slab back mechanically before anything is coated, then build the floor up in layers — flake, solid colour or clear-sealed concrete — for garages, warehouses, workshops and showrooms in Mordialloc, Bayside and throughout Melbourne.",
+    image: imgEpoxyFlakeFloor,
+    imageSmall: imgEpoxyFlakeFloor900,
+    imageWidth: 1120,
+    imgW: 1120,
+    imgH: 1400,
+    link: "/services/epoxy-flooring",
   },
 ];
 

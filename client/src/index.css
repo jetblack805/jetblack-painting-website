@@ -168,11 +168,37 @@
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .reveal.up   { transform: translateY(30px); }
-.reveal.left { transform: translateX(-40px); }
-.reveal.right { transform: translateX(40px); }
+.reveal.left { transform: translateY(30px); }
+.reveal.right { transform: translateY(30px); }
 .reveal.visible {
   opacity: 1;
   transform: none;
+}
+
+/* The horizontal variants used to be translateX(-40px)/(40px). Content in the
+   page container already fills its max-width, so at every Tailwind breakpoint
+   width - 390, 640, 768, 1024, 1280 - there is no slack to absorb the offset
+   and an unrevealed section makes the whole document draggable sideways.
+   Measured at 390px the document was 414px and scrolled 24px; at 768px, 16px;
+   at 1024px, 8px. Between breakpoints there is spare margin, which is why it
+   looked intermittent.
+
+   Revealing on the Y axis instead removes the cause outright at every width.
+   The slide is a subtle 40px either way, so the effect is preserved. Clipping
+   with overflow-x on html or body was tried first and does not contain it:
+   overflow on body propagates to the viewport, and clip on html still left the
+   document scrollable. */
+
+/* Honour a reduced-motion preference: show the content, skip the movement. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.up,
+  .reveal.left,
+  .reveal.right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Smooth scrolling */

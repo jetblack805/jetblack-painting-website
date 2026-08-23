@@ -61,25 +61,40 @@ export default function CollingwoodPainters() {
       suburb={suburb}
       title="Collingwood Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Collingwood — Edwardian — single-fronted terraces. Free quotes, 5-year guarantee. Call 0432 077 782."
-      localExpertise={`${suburb} sits immediately east of the CBD, bordering Fitzroy to the north — one of Melbourne's most historically dense working-class suburbs, now one of its most sought-after inner-city addresses. Smith Street and Johnston Street anchor a vibrant commercial precinct, while the surrounding residential streets are packed with Victorian terrace houses, workers' cottages, and converted warehouses that have been transformed into loft apartments and creative workspaces. Jetblack Painting works throughout ${suburb} and neighbouring Fitzroy, Abbotsford, and Richmond, with deep familiarity with the heritage properties, heritage overlay guidelines, and rental-market dynamics of the area.`}
-      propertyTypes={`${suburb}'s housing stock is predominantly Victorian and Edwardian — single-fronted terraces, double-fronted cottages, and row houses — alongside a significant share of converted warehouse apartments and modern infill developments. The suburb has a very high rental density and a strong investment property market. Many properties sit within heritage overlay zones. We handle interior and exterior repaints across all property types.`}
+      localExpertise={`${suburb} sits just east of the CBD, next to Fitzroy. It was a working-class suburb for most of its life. Now it is one of the inner city's most wanted addresses. Smith Street and Johnston Street carry the shops and cafes. The streets behind them are packed with Victorian terraces, workers' cottages and old warehouses turned into loft apartments. We paint across ${suburb}, Fitzroy, Abbotsford and Richmond. We know the heritage overlay rules here, and we know how fast rental jobs need to move.`}
+      propertyTypes={`Most homes in ${suburb} are Victorian or Edwardian. Single-fronted terraces, double-fronted cottages and row houses. Mixed in are converted warehouse apartments and modern infill builds. A lot of it is rented, and a lot of it is held as investment property. Many houses sit inside a heritage overlay. We paint inside and out on all of it.`}
       localContent={[
         {
-          heading: `Victorian Terraces & Heritage Properties`,
-          body: `${suburb}'s Victorian terrace streetscapes are some of Melbourne's most intact — rows of single-fronted homes with original iron lacework, tessellated tile paths, and rendered or unpainted brick facades. These require surface preparation suited to original lime render and heritage mortar joints, and primer systems compatible with the flexibility and porosity of period construction. We're familiar with the heritage overlay zones that cover much of ${suburb} and can advise on colour choices and any permit implications before work begins.`
+          heading: `Victorian Terraces and Heritage Properties`,
+          body: [
+            `${suburb}'s terrace streetscapes are some of the most intact in Melbourne. Rows of single-fronted homes with original iron lacework. Tessellated tile paths. Facades in render or bare brick.`,
+            `Old walls need old-wall treatment. Lime render and heritage mortar joints are softer and more porous than modern brickwork. They move and they breathe. We use primers that cope with that rather than sealing the wall up tight.`,
+            `Much of ${suburb} sits inside a heritage overlay. We can talk you through colour choices, and whether you need a permit, before any work starts.`,
+          ],
         },
         {
-          heading: `Converted Warehouses & Rental Properties`,
-          body: `${suburb}'s former industrial buildings — particularly in the Hoddle Street and Langridge Street precincts — have been extensively converted to residential and mixed-use spaces. These often feature exposed brick, concrete, and steel substrates requiring specialist primer systems. For ${suburb}'s large rental stock, we offer efficient interior repaints with low-VOC paints, neutral palettes, and turnarounds suited to tenancy changeovers — with $10M public liability insurance and a 5-year written workmanship guarantee on all work.`
+          heading: `Converted Warehouses and Rental Properties`,
+          body: [
+            `The old factories around Hoddle Street and Langridge Street have mostly been converted. Some are homes now. Some are a mix of home and workspace. Inside you find exposed brick, bare concrete and steel. Each of those needs its own primer. Paint straight onto them and it lifts.`,
+            `${suburb} also has a lot of rental stock. On those jobs we work to the changeover date. Low-VOC paints so the place can be lived in quickly, neutral colours that suit any tenant, and a finish date we hold to. Every job carries $10 million public liability insurance and a 5-year written workmanship guarantee.`,
+          ],
         },
         {
           heading: `Lead Paint in ${suburb}'s Pre-1970 Housing`,
-          body: `Lead remained in Australian household paint until 1970, which puts almost every original coating in ${suburb} inside the window. On a Victorian terrace or workers' cottage it is typically sitting under decades of later layers — window sashes and their reveals, door frames, skirtings, and any original external weatherboard or joinery. Left intact and sound it is not a hazard. The danger comes from disturbing it, and the single worst thing anyone can do to an old ${suburb} house is take an orbital sander to the window frames on a dry day, because that turns a stable coating into airborne dust through the living areas. Our approach on any pre-1970 property here is to test before disturbing original surfaces, then work wet, sheet and contain the work area, use dust extraction where sanding is unavoidable, and bag and remove the waste rather than washing it into the stormwater. It adds time to the preparation, and it is not optional on a house of this age with children in it.`
+          body: [
+            `Australian house paint contained lead until 1970. That covers almost every original coating in ${suburb}. On a terrace or a workers' cottage it is usually buried under later layers. Window sashes and their reveals, door frames, skirtings, and any original weatherboard or joinery outside.`,
+            `Left alone and sound, it is not a hazard. The danger is in disturbing it. The worst thing anyone can do to an old ${suburb} house is take an orbital sander to the window frames on a dry day. That turns a stable coating into dust, and the dust travels through the living areas.`,
+            `So on any pre-1970 house here we test first. Then we work wet, sheet and seal the work area, and use dust extraction where sanding cannot be avoided. Waste is bagged and taken away, not hosed into the stormwater. It adds time to the preparation. With children in the house it is not optional.`,
+          ],
         },
         {
           heading: `Access, Party Walls and Working in a Terrace Row`,
-          body: `Painting a single-fronted terrace is a logistics problem before it is a painting problem. These houses share party walls on both sides, which means no side path, nowhere to foot a ladder off the boundary, and no route to the rear except through the hallway or over the roof. Front elevations sit hard on the footpath, so anything above the verandah needs either a platform or a scaffold licence and, on some streets, council approval to occupy the footpath. We work all of this out at the quote rather than discovering it on day one — what has to be carried through the house and how it will be protected on the way, how the facade will be reached, whether the rear is accessible from a laneway, and where any of it touches a neighbour's wall, roof or airspace. Where it does, we would rather have that conversation with them before the job starts than halfway through it. Terraces reward planning; they punish improvisation.`
-        }
+          body: [
+            `Painting a single-fronted terrace is an access problem before it is a painting problem. These houses share walls on both sides. There is no side path. There is nowhere to foot a ladder off the boundary. The only way to the back is through the hallway or over the roof.`,
+            `The front sits hard on the footpath. Anything above the verandah needs a platform or a scaffold licence, and on some streets council approval to stand on the footpath at all.`,
+            `We work all of this out at the quote, not on the first morning. What has to be carried through the house, and how we protect it on the way. How we reach the facade. Whether there is a laneway to the rear. Where the work touches a neighbour's wall, roof or airspace. Where it does, we would rather speak to them before we start than halfway through. Terraces reward planning and punish improvisation.`,
+          ],
+        },
       ]}
       neighbouringSuburbs={[
         { name: "Richmond", link: "/painter-richmond" },

@@ -773,3 +773,65 @@ not be repeated:
 
 Timing: directory edits propagate over days to weeks, and any search effect trails that. Nothing
 here should be expected to show in ranking data inside the current measurement window.
+
+### 2026-08-23 (evening) — Daily audit: all checks clean, no change made
+
+Everything in steps 0–6 passes. No defect found, so nothing was changed. Recording the run and,
+more importantly, the ways the trigger brief has gone stale.
+
+**Checks — all clean.**
+- Build health: local HEAD == origin/main; 77/77 package.json deps present in pnpm-lock.yaml;
+  production serves the newest commit (the Ahrefs tag from PR #204 is live).
+- Three layers regenerate to **zero diffs**.
+- **115 pages · 485 FAQ questions · 0 not visible as text** · 0 JSON-LD parse errors · 0
+  aggregateRating in static pages · 0 missing required fields.
+- Metadata: 0 duplicate titles/descriptions/H1s/canonicals · 0 missing descriptions · 0 keywords
+  tags · **0 descriptions over 158** · 1 title over 60 (`/painter-hastings/` 64, accepted).
+- Near-duplicate: 96 suburb pages, avg worst-twin **25.2%** (down from the 25.6% baseline after the
+  readability rewrites), zero over 55%.
+- Site health both directions: real pages 200; `/nope-not-a-page/`, `/nope.zip`, `/assets/nope.js`,
+  `/assets/fake.css` all 404 **and** real hashed bundles still 200 with `text/javascript` /
+  `text/css`; `/painters-mordialloc` 301s; sitemap **115/115 all 200, zero redirect hops**.
+- AEO: markdown negotiation returns `text/markdown` with `Vary: Accept` and `noindex`; robots
+  disallows only `/api/`; llms.txt `$` matches read in context are both `$10M public liability`,
+  **no prices**; llms.txt carries the correct **17 verified reviews**.
+- Review count consistent at **17** across homepage JSON-LD, both homepage prose sentences and the
+  FAQ page. Zero stale "15 Google reviews" anywhere live.
+- Speed: TTFB 0.23–0.59s, `cf-cache-status: HIT`. og:image/twitter:image resolve 200.
+
+**Could not measure.** Supermetrics is not connected to this session, so there is **no ranking
+re-measure this run** — no GSC positions, no GBP figures. Semrush was probed once as the brief
+allows and still returns units-zero. ⚠️ The Supermetrics trial expires **2026-08-25**, two days out.
+
+**The trigger brief is now stale in six places.** The log wins, per the brief's own rule:
+1. Review count is **17**, not 15. Updated everywhere and verified live (PR #198).
+2. Epoxy flooring is **real and shipped**. Jimmy confirmed with job photos; `/services/epoxy-flooring/`
+   is live (PRs #199, #201). The brief still says "do not add until Jimmy confirms".
+3. Readability rewrite **was authorised and is done** for the tracked eleven (PR #202). The brief
+   still says "do not start without Jimmy's explicit go-ahead".
+4. Page count is **115**, not 114. FAQ questions **485**, not 477.
+5. Sitemap is **115** URLs, not 114.
+6. Tier 0 Yellow Pages is **done** (Jimmy called; logged 2026-08-23). TrueLocal's two listings remain.
+
+**Authority work this run: reporting only, nothing to change.**
+- Yellow Pages: done, unverifiable from here (`yellowpages.com.au` is egress-blocked).
+- **TrueLocal: still outstanding**, two listings still pointing at the dead Manus site.
+- **Dulux: route in identified.** Jimmy has a Dulux *trade account*, which is a purchasing
+  arrangement, not the Accredited Painter programme that feeds dulux.com.au Find a Painter. He meets
+  every published criterion — registered business, 2+ years, current public liability, track record.
+  What remains is their training and a site assessment. The programme is invite-only, so the trade
+  rep is the route to nomination. **No accreditation claim has been added to the site and none
+  should be until it is actually granted.**
+
+**Also shipped today, outside the audit:** Ahrefs Web Analytics (PR #204), in both head layers, 115
+of 115 pages. Worth noting because it is the only traffic analytics that survives the Supermetrics
+expiry — GA4 is connected but has no data.
+
+**A GPT-authored audit PDF was reviewed.** Its strategic read agrees with the settled diagnosis
+(authority, not technical). Three of its specific findings are wrong and were **not** actioned:
+the homepage "missing alt text" is a deliberate `alt=""` on a decorative background image behind a
+gradient, and adding descriptive alt would make screen-reader output worse; the duplicate-URL fix it
+prescribes is already implemented (non-slash 301s to slash, which self-canonicalises); and the
+sitemap needs no reconciling (115 URLs, all trailing-slash, zero duplicates). Its one genuinely new
+find is **Clyde North — ~750 impressions at position 31, zero clicks** — unverified here for want of
+GSC access, and it wants project evidence rather than word count.

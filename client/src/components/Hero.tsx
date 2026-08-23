@@ -35,14 +35,21 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Headline — serif, flyer treatment */}
-          <h1
+          {/* Headline — serif, flyer treatment.
+              h2, not h1: this is a brand slogan and carries no search terms.
+              The page's single H1 is the keyword-bearing line in Home.tsx
+              ("Melbourne's Best-Rated Local House Painters"), which is what a
+              crawler should read as the page's subject. Kept as a heading
+              rather than a <p> deliberately — index.css:120 styles h1–h6 with
+              Georgia serif, so demoting it to a paragraph would silently
+              change the hero font. Classes are untouched; nothing moves. */}
+          <h2
             className="hero-fade-in text-4xl sm:text-5xl lg:text-[4.2rem] text-[#FCFCFC] leading-[1.14] mb-7"
             style={{ animationDelay: "0.25s" }}
           >
             Premium Painting.{" "}
             <span className="text-[#D0A050] block">Exceptional Results.</span>
-          </h1>
+          </h2>
 
           <div className="hero-fade-in w-11 h-px bg-[#D0A050] mb-6" style={{ animationDelay: "0.3s" }} />
 

@@ -2,7 +2,9 @@
 <!-- Source: https://jetblackpainting.com/ -->
 <!-- Melbourne painters for interior, exterior, commercial and roof work. Servicing 90+ suburbs from Mordialloc. $10M insured, 5-year guarantee. Call 0432 077 782. -->
 
-# Premium Painting. Exceptional Results.
+## Premium Painting. Exceptional Results.
+
+# Melbourne's Best-Rated Local House Painters
 
 Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 90+ suburbs.
 We offer interior, exterior, commercial, roof, and cabinet painting for homeowners, landlords, and businesses.
@@ -42,6 +44,7 @@ Jetblack Painting was founded by Jimmy Demirci and has spent 13+ years painting 
 - $10 million public liability insurance
 - 5-year written workmanship guarantee
 - Based in Mordialloc, VIC 3195
+- ABN 50 548 669 474
 
 ## How a Painting Project Works
 

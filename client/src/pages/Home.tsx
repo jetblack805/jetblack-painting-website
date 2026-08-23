@@ -133,14 +133,16 @@ export default function Home() {
       <Hero />
       <section className="bg-[#060607] py-14 border-t border-white/[0.06]">
         <div className="container max-w-4xl text-center">
-          {/* h2, not h1: Hero.tsx already renders the page's one H1
-              ("Premium Painting. Exceptional Results.") above this section.
-              PR #157 turned this from a <p> into a second <h1>, which is an
-              on-page SEO fault — a page should carry exactly one H1. All
-              classes are unchanged, so this is not a visual change. */}
-          <h2 className="text-2xl md:text-3xl text-[#FCFCFC] mb-3" style={{ fontFamily: "Georgia, serif" }}>
+          {/* This is the page's single H1. The hero above renders a brand
+              slogan ("Premium Painting. Exceptional Results.") which carries
+              no search terms, so it is an h2 and this keyword-bearing line is
+              the H1 — the heading a crawler should read as the page's subject.
+              Still exactly one H1 on the page: PR #157 once created a second
+              one, which is an on-page SEO fault. Classes are unchanged, so
+              this is not a visual change. */}
+          <h1 className="text-2xl md:text-3xl text-[#FCFCFC] mb-3" style={{ fontFamily: "Georgia, serif" }}>
             Melbourne's Best-Rated Local House Painters
-          </h2>
+          </h1>
           <p className="text-[#98989D] text-sm md:text-base font-light leading-relaxed">
             5-star rated, fully insured, and servicing 90+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
             Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.

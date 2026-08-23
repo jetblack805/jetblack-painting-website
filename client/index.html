@@ -124,6 +124,11 @@
         "priceRange": "$$",
         "description": "Jetblack Painting is a Melbourne-based residential and commercial painting company providing interior, exterior, roof, commercial and kitchen cabinet resurfacing services across Melbourne and surrounding suburbs.",
         "founder": { "@type": "Person", "name": "Jimmy Demirci" },
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "ABN",
+          "value": "50 548 669 474"
+        },
         "address": {
           "@type": "PostalAddress",
         "addressLocality": "Mordialloc",
@@ -342,7 +347,14 @@
   </div>
   <div id="root" style="position:relative;z-index:1;">
     <main style="padding:7rem 1.5rem 2rem;color:rgba(237,233,224,0.85);font-family:system-ui,sans-serif;">
-      <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:2.2rem;margin-bottom:0.75rem;line-height:1.18;letter-spacing:0.01em;color:#FCFCFC;">Premium Painting. <span style="color:#D0A050">Exceptional Results.</span></h1>
+      <!-- Mirrors the React DOM's heading order: the brand slogan is an h2
+           because it carries no search terms, and the page's single H1 is the
+           keyword-bearing line below it. This block is the no-JS fallback
+           inside #root and is replaced on hydration, so crawlers read it and
+           users effectively never do. Keep it in step with Hero.tsx and
+           Home.tsx or the two layers disagree about the page's subject. -->
+      <h2 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:2.2rem;margin-bottom:0.75rem;line-height:1.18;letter-spacing:0.01em;color:#FCFCFC;">Premium Painting. <span style="color:#D0A050">Exceptional Results.</span></h2>
+      <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.5rem;margin-bottom:0.75rem;line-height:1.25;color:#FCFCFC;">Melbourne's Best-Rated Local House Painters</h1>
       <p style="font-size:1rem;line-height:1.6;max-width:40rem;">
         Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 90+ suburbs.
         We offer interior, exterior, commercial, roof, and cabinet painting for homeowners, landlords, and businesses.
@@ -399,6 +411,7 @@
           <li>$10 million public liability insurance</li>
           <li>5-year written workmanship guarantee</li>
           <li>Based in Mordialloc, VIC 3195</li>
+          <li>ABN 50 548 669 474</li>
         </ul>
 
         <h2 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.4rem;color:#FCFCFC;margin-bottom:0.5rem;">How a Painting Project Works</h2>

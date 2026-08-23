@@ -741,3 +741,35 @@ production, so `main` sat 8 commits behind what was live. Merging this PR resync
 Authority work: no change this run. The brief's rule is one type of change per run, and a real
 deploy-safety defect outranks a backlink task. Tier 0 (Yellow Pages / TrueLocal still pointing at the
 dead Manus site) remains the cheapest open win and needs a phone call — 1800 359 321.
+
+### 2026-08-23 — Tier 0: Yellow Pages listings updated (reported by Jimmy)
+
+Jimmy called Yellow Pages (1800 359 321) and updated the business details. This was the longest-
+standing Tier 0 item: four Yellow Pages listings still pointed at the dead Manus site.
+
+⚠️ **Not independently verified.** `yellowpages.com.au` is blocked by this environment's egress
+proxy (`EGRESS_BLOCKED`), so this entry records what Jimmy reported, not what was confirmed from
+the source. A future run with network access to that host should check: how many listings now
+resolve, and whether each points at `jetblackpainting.com` rather than a `manus.space` URL.
+
+**Still outstanding: TrueLocal (2 listings).** Jimmy mentioned Yellow Pages only. TrueLocal was
+always the second half of Tier 0 and is unaffected by this call — it is a separate provider with
+its own listings, also still pointing at the dead site as at 2026-08-19.
+
+**What this actually buys, stated accurately rather than optimistically.** An earlier note in this
+log framed the directory cleanup as fixing "the authority problem". That was imprecise and should
+not be repeated:
+
+- **Certain gain — the leak stops.** Anyone clicking those listings was landing on a dead page.
+  This matters most on **Bing**, where Yellow Pages ranks well for the brand and Google does not
+  — Google demotes aggregator pages for local intent, Bing does not.
+- **Certain gain — NAP consistency.** Name/address/phone agreement across directories is a local
+  search and map-pack signal. Given the map pack is the binding constraint on actual leads
+  (5 phone calls in 88 days), this is the more valuable half.
+- **Uncertain — link equity.** Major directories commonly mark outbound links `nofollow`, in which
+  case this does not move domain authority at all. Unverifiable from here for the same egress
+  reason. **Do not assume the 44 links / 31 domains / authority 2 baseline improves because of
+  this.** Re-measure before claiming it did.
+
+Timing: directory edits propagate over days to weeks, and any search effect trails that. Nothing
+here should be expected to show in ranking data inside the current measurement window.

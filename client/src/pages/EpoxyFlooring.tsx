@@ -6,8 +6,13 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
-import imgEpoxyFloor from "@/assets/images/gallery-commercial-epoxy-floor.webp";
-import imgEpoxyFloor900 from "@/assets/images/gallery-commercial-epoxy-floor-900.webp";
+// After shot. Already in the repo and used in Gallery.tsx — reused rather than
+// re-imported as a second copy of the same photo.
+import imgEpoxyAfter from "@/assets/images/gallery-commercial-epoxy-floor.webp";
+import imgEpoxyAfter900 from "@/assets/images/gallery-commercial-epoxy-floor-900.webp";
+// Before shot: the same warehouse, same viewpoint, bare slab.
+import imgEpoxyBefore from "@/assets/images/gallery-epoxy-warehouse-before.webp";
+import imgEpoxyBefore900 from "@/assets/images/gallery-epoxy-warehouse-before-900.webp";
 
 export default function EpoxyFlooring() {
   const benefits = [
@@ -116,18 +121,44 @@ export default function EpoxyFlooring() {
         </div>
       </section>
 
+      {/* Before and after of the same warehouse, same viewpoint. The pair is the
+          most persuasive thing on this page, so it sits above the copy. Both
+          images keep their intrinsic width/height so the browser reserves the
+          right aspect ratio before load. */}
       <section className="py-12 bg-[#131316]">
         <div className="container">
-          <img
-            src={imgEpoxyFloor}
-            srcSet={`${imgEpoxyFloor900} 900w, ${imgEpoxyFloor} 1120w`}
-            sizes="(max-width: 1024px) 100vw, 1152px"
-            width={1120}
-            height={1400}
-            alt="Grey and black decorative epoxy flake floor finished by Jetblack Painting in a Melbourne warehouse"
-            className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
-            loading="lazy"
-          />
+          <div className="grid gap-4 md:grid-cols-2">
+            <figure className="m-0">
+              <img
+                src={imgEpoxyBefore}
+                srcSet={`${imgEpoxyBefore900} 900w, ${imgEpoxyBefore} 1400w`}
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1400}
+                height={1050}
+                alt="Bare stained concrete warehouse slab in Melbourne before epoxy flake flooring by Jetblack Painting"
+                className="rounded-lg shadow-md w-full h-72 object-cover"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm uppercase tracking-[0.2em] text-[#98989D]">
+                Before — bare slab
+              </figcaption>
+            </figure>
+            <figure className="m-0">
+              <img
+                src={imgEpoxyAfter}
+                srcSet={`${imgEpoxyAfter900} 900w, ${imgEpoxyAfter} 1120w`}
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1120}
+                height={1400}
+                alt="Grey and black decorative epoxy flake floor finished by Jetblack Painting in the same Melbourne warehouse"
+                className="rounded-lg shadow-md w-full h-72 object-cover"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-sm uppercase tracking-[0.2em] text-[#D0A050]">
+                After — epoxy flake
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

@@ -141,12 +141,16 @@ export default function BodyCorporatePainting() {
             />
             <img
               src={imgComfortelBuilding}
+              width={1400}
+              height={1050}
               alt="Commercial and strata building exterior painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"
             />
             <img
               src={imgComfortelFront}
+              width={1050}
+              height={1400}
               alt="Multi-tenancy building frontage painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"

@@ -108,6 +108,8 @@ export default function RoofPainting() {
         <div className="container">
           <img
             src={imgService}
+            width={640}
+            height={480}
             alt="Charcoal grey tiled roof freshly painted by Jetblack Painting"
             className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
@@ -115,6 +117,8 @@ export default function RoofPainting() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
             <img
               src={imgMetalRoof}
+              width={1050}
+              height={1400}
               alt="Colorbond metal roof painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"

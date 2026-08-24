@@ -497,7 +497,14 @@ ${sectionHtml}
   <footer>
     <p><strong>Jetblack Painting</strong> — ${escapeHtml(heroTitle)} | Phone: <a href="tel:${PHONE_HREF}">${PHONE_DISPLAY}</a> | Email: <a href="mailto:${EMAIL}">${EMAIL}</a></p>
     <p>${footerLinks.map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join(" | ")}</p>
-${suburbDirectoryHtml(canonical)}  </footer>
+${suburbDirectoryHtml(canonical)}    <!-- Legal links are emitted here, not via footerLinks, so every generated
+         page carries them. Added after /privacy/ and /terms/ shipped reachable
+         only from each other in the crawlable layer — the same orphan defect
+         that left the body-corporate and epoxy service pages with zero inbound
+         links. The React footer (client/src/components/Footer.tsx) carries the
+         matching pair. -->
+    <p>${canonical.endsWith("/privacy/") ? "" : `<a href="/privacy/">Privacy Policy</a>`}${canonical.endsWith("/privacy/") || canonical.endsWith("/terms/") ? "" : " | "}${canonical.endsWith("/terms/") ? "" : `<a href="/terms/">Terms of Use</a>`}</p>
+  </footer>
   </div>
 </body>
 </html>
@@ -2617,6 +2624,208 @@ writePage(
       { label: "Home", href: "/" },
       { label: "FAQ", href: "/faq/" },
       { label: "Blog", href: "/blog/" },
+    ],
+  })
+);
+
+
+// Legal pages. Both are noindex, follow for the same reason as /review-us: a
+// short legal page nobody searches for reads to Google as a soft 404 when
+// indexed, and these exist for visitors and for Google's trust evaluation, not
+// for rankings. They are deliberately absent from sitemap.xml for that reason.
+//
+// Keep this copy in step with client/src/pages/PrivacyPolicy.tsx and Terms.tsx.
+// Every factual claim in the privacy page was checked against worker/quote.js,
+// client/index.html and GoogleMap.tsx — if the form fields, the delivery path
+// or the analytics change, both layers have to change.
+writePage(
+  "/privacy",
+  pageHtml({
+    title: "Privacy Policy | Jetblack Painting Melbourne",
+    description:
+      "How Jetblack Painting collects, uses and protects the personal information you give us through this website, by phone or by email.",
+    canonical: canonicalForRoute("/privacy"),
+    robots: "noindex, follow",
+    heroTitle: "Privacy Policy",
+    heroBody: "How Jetblack Painting collects, uses and protects the personal information you give us. Last updated 24 August 2026.",
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Privacy Policy | Jetblack Painting Melbourne",
+        description:
+          "How Jetblack Painting collects, uses and protects the personal information you give us through this website, by phone or by email.",
+        url: canonicalForRoute("/privacy"),
+      },
+      breadcrumbTrail([
+        { name: "Home", item: "/" },
+        { name: "Privacy Policy", item: canonicalForRoute("/privacy") },
+      ]),
+    ],
+    sections: [
+      {
+        heading: "Who we are",
+        paragraphs: [
+          `Jetblack Painting (ABN 50 548 669 474) is a painting business based in Mordialloc, Victoria 3195, servicing Melbourne. This policy covers jetblackpainting.com and any information you give us by phone or email.`,
+          `If you have a question about your information, contact us on ${PHONE_DISPLAY} or at ${EMAIL}.`,
+        ],
+      },
+      {
+        heading: "What we collect",
+        paragraphs: [
+          `When you fill in the quote form on this site we ask for your name, phone number, suburb and the type of work you want. Those four are required. Your email address, preferred start date, budget range and a description of the project are optional.`,
+          `The form also records which page you submitted it from and the time you sent it, plus two anti-spam checks: a hidden field that only automated bots fill in, and how long the form took to complete. Neither of those identifies you.`,
+          `If you call or email us instead, we have whatever you choose to tell us. When we quote or carry out work we will also hold your address and the details of the job. We do not collect payment card details through this website.`,
+        ],
+      },
+      {
+        heading: "What we use it for",
+        paragraphs: [
+          `To answer your enquiry, prepare a quote, carry out the work and invoice you. That is all. We do not sell your information, we do not rent it, and we do not add you to a marketing list.`,
+        ],
+      },
+      {
+        heading: "Where your enquiry goes",
+        paragraphs: [
+          `This website does not store your enquiry. When you submit the form it is emailed straight to us and nothing is kept on the site itself — there is no customer database behind jetblackpainting.com.`,
+          `Cloudflare hosts and delivers this website, and like any web host it sees technical details of your visit including your IP address. Resend delivers the quote form to our inbox as an email. Google Analytics and Ahrefs Web Analytics tell us how many people visit and which pages they read. The map showing our location is embedded from Google Maps, so Google can see that your browser loaded it.`,
+          `The social media icons in our footer are ordinary links, not embedded widgets. Nothing is sent to Instagram, Facebook, YouTube or TikTok unless you click through to them.`,
+        ],
+      },
+      {
+        heading: "How long we keep it",
+        paragraphs: [
+          `Enquiries that do not turn into work sit in our email until we clear them out. Where we have quoted or completed a job, we keep the records for at least five years, because Australian tax law requires us to keep records of the work we invoice for that long.`,
+        ],
+      },
+      {
+        heading: "Cookies and analytics",
+        paragraphs: [
+          `Google Analytics sets cookies in your browser so it can tell a returning visitor from a new one. We use it to see which pages are useful, not to identify you.`,
+          `You can block or delete cookies in your browser settings, or install Google's opt-out add-on at tools.google.com/dlpage/gaoptout to stop Google Analytics entirely. The site works fine either way.`,
+        ],
+      },
+      {
+        heading: "Photographs of your property",
+        paragraphs: [
+          `We photograph the work we complete and may publish those photographs on this website and on our social media. The photographs show the paintwork — we do not publish customer names or street addresses, only the suburb.`,
+          `If you would rather we did not photograph your property, or you want a photograph taken down, tell us and we will sort it out.`,
+        ],
+      },
+      {
+        heading: "Your choices",
+        paragraphs: [
+          `You can ask us what information we hold about you, ask us to correct it, or ask us to delete it where we are not required to keep it. Email ${EMAIL} and we will respond.`,
+        ],
+      },
+      {
+        heading: "Keeping it safe",
+        paragraphs: [
+          `This website is served over HTTPS, so anything you type into the form is encrypted in transit. Your enquiry lives in our business email, which is password protected. No system is perfect, but we do not hold more information than we need and we do not keep it longer than we have to.`,
+        ],
+      },
+      {
+        heading: "Complaints",
+        paragraphs: [
+          `If you think we have mishandled your information, contact us first — most things are a misunderstanding we can fix quickly. If you are not satisfied, you can raise it with the Office of the Australian Information Commissioner at oaic.gov.au.`,
+        ],
+      },
+      {
+        heading: "Changes to this policy",
+        paragraphs: [
+          `If we change how we handle information — a new analytics tool, a different way of receiving enquiries — we will update this page and change the date at the top.`,
+        ],
+      },
+    ],
+    // Terms is emitted by the global legal line in pageHtml — no need to repeat it here.
+    footerLinks: [
+      { label: "Home", href: "/" },
+      { label: "FAQ", href: "/faq/" },
+      { label: "Contact", href: "/#contact" },
+    ],
+  })
+);
+
+writePage(
+  "/terms",
+  pageHtml({
+    title: "Terms of Use | Jetblack Painting Melbourne",
+    description:
+      "The terms that apply to using the Jetblack Painting website, including content ownership, quotes, and the limits of the information published here.",
+    canonical: canonicalForRoute("/terms"),
+    robots: "noindex, follow",
+    heroTitle: "Terms of Use",
+    heroBody: "The terms that apply to using the Jetblack Painting website. Last updated 24 August 2026.",
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Terms of Use | Jetblack Painting Melbourne",
+        description:
+          "The terms that apply to using the Jetblack Painting website, including content ownership, quotes, and the limits of the information published here.",
+        url: canonicalForRoute("/terms"),
+      },
+      breadcrumbTrail([
+        { name: "Home", item: "/" },
+        { name: "Terms of Use", item: canonicalForRoute("/terms") },
+      ]),
+    ],
+    sections: [
+      {
+        heading: "About these terms",
+        paragraphs: [
+          `These terms cover your use of jetblackpainting.com, operated by Jetblack Painting (ABN 50 548 669 474) of Mordialloc, Victoria. By using the site you accept them.`,
+        ],
+      },
+      {
+        heading: "This site is not a quote",
+        paragraphs: [
+          `Everything published here — service descriptions, project photographs, articles and answers to common questions — is general information about the work we do. It is not a quote and not advice about your particular property.`,
+          `The terms of any actual job are the ones in the written quote you receive from us and agree to. Where this website and a signed quote say different things, the quote is what counts.`,
+        ],
+      },
+      {
+        heading: "Enquiries",
+        paragraphs: [
+          `Sending the quote form does not create a booking or oblige us to take the work on, and it does not oblige you to accept a quote. It starts a conversation. What you tell us is handled as set out in our Privacy Policy.`,
+          `Please give us accurate details. A quote based on the wrong suburb, surface or scope is of no use to either of us.`,
+        ],
+      },
+      {
+        heading: "Our content",
+        paragraphs: [
+          `The text, photographs, logo and design on this site belong to Jetblack Painting. The project photographs are of our own work. You are welcome to read, print and share pages for your own use, but please do not republish our photographs or copy our page content onto another website without asking.`,
+        ],
+      },
+      {
+        heading: "Links to other sites",
+        paragraphs: [
+          `We link to Google, our social media profiles and occasionally to other organisations. We do not control those sites and are not responsible for what they publish or how they handle your information.`,
+        ],
+      },
+      {
+        heading: "Availability and accuracy",
+        paragraphs: [
+          `We keep this site accurate and up to date as best we can, but we do not promise it will always be available or entirely free of errors. Prices, product ranges and service areas change.`,
+          `Nothing here limits any rights you have under the Australian Consumer Law, which applies to our work regardless of what this page says.`,
+        ],
+      },
+      {
+        heading: "Governing law",
+        paragraphs: [`These terms are governed by the laws of Victoria, Australia.`],
+      },
+      {
+        heading: "Contact",
+        paragraphs: [
+          `Questions about these terms? Call ${PHONE_DISPLAY} or email ${EMAIL}.`,
+        ],
+      },
+    ],
+    // Privacy is emitted by the global legal line in pageHtml — no need to repeat it here.
+    footerLinks: [
+      { label: "Home", href: "/" },
+      { label: "FAQ", href: "/faq/" },
+      { label: "Contact", href: "/#contact" },
     ],
   })
 );

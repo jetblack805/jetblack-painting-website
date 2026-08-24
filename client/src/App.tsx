@@ -41,6 +41,8 @@ const KingstonPainters = lazy(() => import("./pages/KingstonPainters"));
 const GreaterDandenongPainters = lazy(() => import("./pages/GreaterDandenongPainters"));
 const Blog = lazy(() => import("./pages/Blog"));
 const ReviewUs = lazy(() => import("./pages/ReviewUs"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Terms = lazy(() => import("./pages/Terms"));
 const BestPaintColours2025 = lazy(() => import("./pages/blog/BestPaintColours2025"));
 const HousePaintingCostMelbourne = lazy(() => import("./pages/blog/HousePaintingCostMelbourne"));
 const PrepareHomePainting = lazy(() => import("./pages/blog/PrepareHomePainting"));
@@ -356,6 +358,8 @@ function Router() {
       <Route path={"/blog/toorak-painting-guide"} component={ToorakPainters} />
       {/* Other Pages */}
       <Route path={"/review-us"} component={ReviewUs} />
+      <Route path={"/privacy"} component={PrivacyPolicy} />
+      <Route path={"/terms"} component={Terms} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/about"} component={Home} />
       <Route path={"/contact"} component={Home} />

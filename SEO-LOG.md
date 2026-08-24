@@ -960,3 +960,78 @@ A real fix needs the **function form** of `manualChunks`, matching `node_modules
 doing — 128KB off every page is the largest single speed win available — but it cannot be verified
 here (no `node_modules`, registry blocked) and Cloudflare deploys straight to production, so it
 should be a deliberate, separately-watched change rather than a second blind attempt.
+
+---
+
+## 2026-08-24 — Privacy/Terms pages, and repo tidy
+
+### Privacy Policy and Terms of Use
+
+`/privacy/` and `/terms/` now exist in both rendering layers. They were the one genuinely
+actionable finding in the Copilot audit — everything else it flagged was either already done or
+factually wrong about the site.
+
+**Every factual claim in the privacy page was checked against the code, not assumed:**
+
+| Claim | Verified against |
+| --- | --- |
+| Form fields, which are required vs optional | `worker/quote.js` `FIELD_LIMITS` + `validate()` |
+| Anti-spam signals (honeypot, fill timing) | `worker/quote.js` lines 141–152 |
+| "The website does not store your enquiry" | `worker/quote.js` uses **no** Cloudflare bindings — no KV, no D1. It validates and forwards. |
+| Enquiries emailed via Resend | `worker/quote.js` `sendViaResend` → `api.resend.com` |
+| Google Analytics + Ahrefs Web Analytics | `client/index.html` (GA4 `G-6NC2597W9L`, `analytics.ahrefs.com`) |
+| Google Maps embed sees visitors | `client/src/components/GoogleMap.tsx` — `maps.google.com` iframe |
+| Social icons send nothing until clicked | `Footer.tsx` — plain `<a>` links, not embeds |
+| Photos name suburbs, never customers or addresses | `Gallery.tsx` alt/location strings |
+| Five-year record retention | Australian tax law record-keeping period |
+
+**Deliberately not done: a cookie consent banner.** The audit recommended one. Australia has no
+cookie-consent law, and GDPR applies to offering goods or services to people in the EU — which a
+Melbourne painting business does not. A banner would cost conversions for no legal gain. What GA4's
+own terms *do* require is a privacy policy disclosing cookie use, and that is now in place. If the
+business ever markets into the EU or UK, this changes.
+
+**Both pages are `noindex, follow`,** matching the reasoning already established for `/review-us/`:
+nobody searches for a privacy policy, and they exist for visitors and for Google's trust evaluation,
+not for rankings. They are deliberately absent from `sitemap.xml`. One-line change if that call
+should be revisited — the privacy page runs 991 words, so thinness is not the constraint.
+
+**Orphan defect caught before commit.** First pass added the legal links only to the React
+`Footer.tsx`, which left `/privacy/` and `/terms/` reachable in the crawlable layer only from each
+other — the identical defect just fixed for the body-corporate and epoxy service pages. The static
+generator has its own footer. Legal links now emit from `pageHtml` itself, so all 116 other pages
+carry them, with self-links suppressed.
+
+### Repo tidy
+
+**`client/src/components/Map.tsx` deleted.** 155 lines, imported by nothing, and a Manus-platform
+leftover: it loaded the Google Maps API through `forge.butterfly-effect.dev`, a third-party proxy,
+via a `VITE_FRONTEND_FORGE_API_KEY` that exists nowhere else in the repo. It also imported
+`@/hooks/usePersistFn` — and `client/src/hooks/` **does not exist**, so the file carried a broken
+import. Nothing else referenced either. The live map is `GoogleMap.tsx`, a plain Google Maps iframe,
+and is unaffected.
+
+**19 `<img>` elements given explicit `width`/`height`.** Intrinsic dimensions read from the WebP
+headers, so the browser reserves the correct aspect ratio before load. Covers
+`InteriorPainting` (8), `RealEstatePainting` (4), `CommercialPainting` (3), `BodyCorporatePainting`
+(2), `RoofPainting` (2). Sized elements went 26 → 45 of 46.
+
+Correction to the figure reported earlier: the count was "22 of 48 unsized". The real number was
+**20 of 46** — the first pass counted type declarations in `Services.tsx` as `<img>` tags. The one
+remaining unsized element is the `Gallery.tsx` lightbox, which has a dynamic `src` and sits in a
+fixed overlay, so it cannot shift page layout. Correctly left alone.
+
+**35 legacy JPEG/PNG files left in place, deliberately.** 33 are unreferenced and total ~7.1MB, but
+Vite only emits imported assets, so **they add nothing to page weight** — the cost is repo size
+only. Checked whether they were higher-resolution masters worth keeping: every one has a WebP pair
+at *identical* dimensions, none larger. They are same-size duplicates from a one-time conversion,
+not originals. Deleting them is safe and reversible from git history, but the gain is cosmetic and
+they are the owner's photographs, so this is his call rather than a silent cleanup.
+
+**Verification:** `pnpm check` / `pnpm build` still cannot run here (`registry.npmjs.org` → 403, no
+`node_modules`). All four `.tsx` files parse cleanly under Prettier's TypeScript parser; the
+generator, sitemap and known-paths scripts ran; 117 pages checked for broken internal links, zero
+found; every new route has a `<Route>` in `App.tsx` and an entry in `worker/known-paths.js`.
+
+**Not legal advice.** These are plain-English pages built from what the site demonstrably does. If
+certainty matters, a lawyer should read them.

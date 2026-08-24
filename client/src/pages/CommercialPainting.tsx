@@ -139,6 +139,8 @@ export default function CommercialPainting() {
         <div className="container">
           <img
             src={imgService}
+            width={1400}
+            height={1050}
             alt="Commercial building exterior painted by Jetblack Painting in Melbourne"
             className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
@@ -156,12 +158,16 @@ export default function CommercialPainting() {
             />
             <img
               src={imgComfortelFront}
+              width={1050}
+              height={1400}
               alt="Commercial office and warehouse frontage painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"
             />
             <img
               src={imgIndustrialLift}
+              width={1050}
+              height={1400}
               alt="Industrial building painting in progress with access equipment by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"

@@ -275,6 +275,14 @@ export default function Footer() {
           <p className="text-white/60 text-xs">
             &copy; {new Date().getFullYear()} Jetblack Painting. All rights reserved. ABN 50 548 669 474.
           </p>
+          <nav className="flex items-center gap-4">
+            <a href="/privacy/" className="text-white/60 hover:text-[#D0A050] transition-colors text-xs">
+              Privacy Policy
+            </a>
+            <a href="/terms/" className="text-white/60 hover:text-[#D0A050] transition-colors text-xs">
+              Terms of Use
+            </a>
+          </nav>
           <p className="text-[#98989D] text-[10px] tracking-[0.24em] uppercase">
             Quality. Precision. Integrity.
           </p>

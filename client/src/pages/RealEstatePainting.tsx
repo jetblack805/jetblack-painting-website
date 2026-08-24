@@ -118,6 +118,8 @@ export default function RealEstatePainting() {
         <div className="container">
           <img
             src={imgService}
+            width={1206}
+            height={804}
             alt="Sale-ready living room repainted by Jetblack Painting for a Melbourne real estate campaign"
             className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
@@ -125,18 +127,24 @@ export default function RealEstatePainting() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
               src={imgOpenLiving}
+              width={1170}
+              height={782}
               alt="Freshly painted open living room presented for sale by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"
             />
             <img
               src={imgBoucleLiving}
+              width={1050}
+              height={1400}
               alt="Styled living and dining room repainted by Jetblack Painting for sale presentation"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"
             />
             <img
               src={imgOpenPlanLiving}
+              width={823}
+              height={561}
               alt="Open plan living and kitchen repainted by Jetblack Painting for a property sale"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"

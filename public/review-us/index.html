@@ -172,6 +172,13 @@
       <li><a href="/painter-windsor/">Painters Windsor</a></li>
       </ul>
     </nav>
+    <!-- Legal links are emitted here, not via footerLinks, so every generated
+         page carries them. Added after /privacy/ and /terms/ shipped reachable
+         only from each other in the crawlable layer — the same orphan defect
+         that left the body-corporate and epoxy service pages with zero inbound
+         links. The React footer (client/src/components/Footer.tsx) carries the
+         matching pair. -->
+    <p><a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Use</a></p>
   </footer>
   </div>
 </body>

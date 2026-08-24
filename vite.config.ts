@@ -281,16 +281,25 @@ export default defineConfig({
       output: {
         manualChunks: {
           // Split vendor libraries into separate chunks for better caching
-          // "react/jsx-runtime" is listed explicitly. React's automatic JSX
-          // transform imports from that specifier, not from "react", so leaving
-          // it out let Rollup assign the JSX runtime to whichever manual chunk
-          // pulled it in first -- which was vendor-animation. The result: the
-          // runtime every component needs was trapped inside the 128KB
-          // framer-motion chunk, and 123 of 146 built chunks imported it. Every
-          // page paid 128KB for framer-motion, including the homepage and all 96
-          // suburb pages, none of which use it. Only the 11 service/blog/FAQ
-          // pages actually do.
-          "vendor-react": ["react", "react-dom", "react/jsx-runtime"],
+          // Adding "react/jsx-runtime" to this list was tried (7e7ff0e) and
+          // REVERTED after measuring the deployed build. It does not work, and
+          // the reason is worth recording so nobody tries it again:
+          //
+          // React core is not in vendor-react at all. It is inside
+          // vendor-animation. The deployed vendor-react was 3.5KB and opened
+          // with `import{r as t}from"./vendor-animation-*.js"` -- it imports
+          // React *from* the framer-motion chunk. Listing jsx-runtime here only
+          // moved a stub; 118 of 140 chunks still imported vendor-animation
+          // (down from 123), so every page still downloads 128KB of
+          // framer-motion, now plus an extra request for the stub.
+          //
+          // The object form of manualChunks assigns only the exact module ids
+          // listed, and shared transitive deps land in whichever manual chunk
+          // Rollup reaches first -- here, vendor-animation via framer-motion.
+          // A real fix needs the function form, matching node_modules paths for
+          // react / react-dom / scheduler, so assignment does not depend on
+          // traversal order. Untested: this repo cannot run pnpm build.
+          "vendor-react": ["react", "react-dom"],
           // vendor-radix removed: let Rollup tree-shake each Radix package into
           // only the chunks that actually import it, cutting unused JS on homepage.
           "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],

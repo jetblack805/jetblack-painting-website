@@ -932,3 +932,31 @@ is effectively read-nothing for API purposes; the Web Analytics script (PR #204)
 
 **Supermetrics trial expires 2026-08-25.** After that, GSC data has to come from the Search Console
 UI directly.
+
+### Addendum — the vendor-react chunk fix failed and was reverted
+
+`7e7ff0e` added `react/jsx-runtime` to the `vendor-react` manual chunk, on the theory that the JSX
+runtime had been assigned to `vendor-animation` and was dragging 128KB of framer-motion onto every
+page. It deployed successfully. Measured against the live build:
+
+```
+vendor-animation-D3Hbm0mm.js   127.7 KB   contains framer-motion AND React core
+vendor-react-6BqCyl38.js         3.5 KB   contains neither
+```
+
+`vendor-react`'s first line is `import{r as t}from"./vendor-animation-D3Hbm0mm.js"` — **it imports
+React from the framer-motion chunk.** Of 140 chunks, 118 still import `vendor-animation` (down from
+123). Every page still downloads the 128KB, now with an extra request for a 3.5KB stub.
+
+The diagnosis was wrong. It is not the JSX runtime that is trapped in the animation chunk — **it is
+React itself.** The object form of `manualChunks` assigns only the exact module ids listed; shared
+transitive dependencies land in whichever manual chunk Rollup reaches first, which here is
+`vendor-animation` via framer-motion.
+
+Reverted to `["react", "react-dom"]`, with the finding recorded in the config so it is not retried.
+
+A real fix needs the **function form** of `manualChunks`, matching `node_modules/react`,
+`react-dom` and `scheduler` by path so assignment does not depend on traversal order. That is worth
+doing — 128KB off every page is the largest single speed win available — but it cannot be verified
+here (no `node_modules`, registry blocked) and Cloudflare deploys straight to production, so it
+should be a deliberate, separately-watched change rather than a second blind attempt.

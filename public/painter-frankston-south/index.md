@@ -52,6 +52,8 @@ Every service below is available in Frankston South. Follow a link for service d
 - [Kitchen cabinet resurfacing Frankston South](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Frankston South](/services/roof-painting/)
 - [Real estate painting Frankston South](/services/real-estate-painting/)
+- [Body corporate painting Frankston South](/services/body-corporate-painting/)
+- [Epoxy flooring Frankston South](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We service Frankston and the Mornington Peninsula corridor and provide free
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

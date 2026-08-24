@@ -56,6 +56,8 @@ Every service below is available in Chadstone. Follow a link for service details
 - [Kitchen cabinet resurfacing Chadstone](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Chadstone](/services/roof-painting/)
 - [Real estate painting Chadstone](/services/real-estate-painting/)
+- [Body corporate painting Chadstone](/services/body-corporate-painting/)
+- [Epoxy flooring Chadstone](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -184,3 +186,5 @@ A typical exterior repaint on a single-storey brick home in Chadstone takes 3–
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

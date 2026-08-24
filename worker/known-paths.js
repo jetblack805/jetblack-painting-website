@@ -225,6 +225,7 @@ export const KNOWN_PATHS = new Set([
   "/painter-windsor/",
   "/painter-windsor/index.md",
   "/privacy/",
+  "/privacy/index.md",
   "/review-us/",
   "/review-us/index.md",
   "/robots.txt",
@@ -247,5 +248,6 @@ export const KNOWN_PATHS = new Set([
   "/services/roof-painting/",
   "/services/roof-painting/index.md",
   "/sitemap.xml",
-  "/terms/"
+  "/terms/",
+  "/terms/index.md"
 ]);

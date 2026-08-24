@@ -56,6 +56,8 @@ Every service below is available in Clarinda. Follow a link for service details 
 - [Kitchen cabinet resurfacing Clarinda](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Clarinda](/services/roof-painting/)
 - [Real estate painting Clarinda](/services/real-estate-painting/)
+- [Body corporate painting Clarinda](/services/body-corporate-painting/)
+- [Epoxy flooring Clarinda](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We work with landlords and property managers regularly across the Kingston 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -52,6 +52,8 @@ Every service below is available in Windsor. Follow a link for service details a
 - [Kitchen cabinet resurfacing Windsor](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Windsor](/services/roof-painting/)
 - [Real estate painting Windsor](/services/real-estate-painting/)
+- [Body corporate painting Windsor](/services/body-corporate-painting/)
+- [Epoxy flooring Windsor](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Windsor with the full 
 - [Painters Toorak](/painter-toorak/)
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

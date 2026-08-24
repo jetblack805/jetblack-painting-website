@@ -68,6 +68,8 @@ Every service below is available in Highett. Follow a link for service details a
 - [Kitchen cabinet resurfacing Highett](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Highett](/services/roof-painting/)
 - [Real estate painting Highett](/services/real-estate-painting/)
+- [Body corporate painting Highett](/services/body-corporate-painting/)
+- [Epoxy flooring Highett](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -203,3 +205,5 @@ On the 1960s to 1980s homes that make up much of Highett, it is almost always th
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

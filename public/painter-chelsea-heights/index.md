@@ -52,6 +52,8 @@ Every service below is available in Chelsea Heights. Follow a link for service d
 - [Kitchen cabinet resurfacing Chelsea Heights](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Chelsea Heights](/services/roof-painting/)
 - [Real estate painting Chelsea Heights](/services/real-estate-painting/)
+- [Body corporate painting Chelsea Heights](/services/body-corporate-painting/)
+- [Epoxy flooring Chelsea Heights](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. Many Chelsea Heights homes have tile or metal roofs, and in a damp pocket l
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

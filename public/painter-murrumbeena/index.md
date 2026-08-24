@@ -68,6 +68,8 @@ Every service below is available in Murrumbeena. Follow a link for service detai
 - [Kitchen cabinet resurfacing Murrumbeena](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Murrumbeena](/services/roof-painting/)
 - [Real estate painting Murrumbeena](/services/real-estate-painting/)
+- [Body corporate painting Murrumbeena](/services/body-corporate-painting/)
+- [Epoxy flooring Murrumbeena](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -204,3 +206,5 @@ Regularly. Murrumbeena sits close to Chadstone Shopping Centre and on the train 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

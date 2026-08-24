@@ -56,6 +56,8 @@ Every service below is available in Chelsea. Follow a link for service details a
 - [Kitchen cabinet resurfacing Chelsea](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Chelsea](/services/roof-painting/)
 - [Real estate painting Chelsea](/services/real-estate-painting/)
+- [Body corporate painting Chelsea](/services/body-corporate-painting/)
+- [Epoxy flooring Chelsea](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes — Jetblack Painting is based in Mordialloc, about 5 minutes from Chelsea. 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

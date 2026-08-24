@@ -56,6 +56,8 @@ Every service below is available in Elsternwick. Follow a link for service detai
 - [Kitchen cabinet resurfacing Elsternwick](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Elsternwick](/services/roof-painting/)
 - [Real estate painting Elsternwick](/services/real-estate-painting/)
+- [Body corporate painting Elsternwick](/services/body-corporate-painting/)
+- [Epoxy flooring Elsternwick](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ For Elsternwick's rendered brick and solid brick Victorian and Edwardian homes, 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -56,6 +56,8 @@ Every service below is available in Caulfield. Follow a link for service details
 - [Kitchen cabinet resurfacing Caulfield](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Caulfield](/services/roof-painting/)
 - [Real estate painting Caulfield](/services/real-estate-painting/)
+- [Body corporate painting Caulfield](/services/body-corporate-painting/)
+- [Epoxy flooring Caulfield](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -187,3 +189,5 @@ Yes. We provide free written quotes across Caulfield, with the preparation, prod
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

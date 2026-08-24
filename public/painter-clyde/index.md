@@ -56,6 +56,8 @@ Every service below is available in Clyde. Follow a link for service details and
 - [Kitchen cabinet resurfacing Clyde](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Clyde](/services/roof-painting/)
 - [Real estate painting Clyde](/services/real-estate-painting/)
+- [Body corporate painting Clyde](/services/body-corporate-painting/)
+- [Epoxy flooring Clyde](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -186,3 +188,5 @@ Yes. We service Clyde as part of our City of Casey coverage and provide free, no
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

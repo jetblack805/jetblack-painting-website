@@ -56,6 +56,8 @@ Every service below is available in Hastings. Follow a link for service details 
 - [Kitchen cabinet resurfacing Hastings](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Hastings](/services/roof-painting/)
 - [Real estate painting Hastings](/services/real-estate-painting/)
+- [Body corporate painting Hastings](/services/body-corporate-painting/)
+- [Epoxy flooring Hastings](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -186,3 +188,5 @@ Yes. We service Hastings as part of our Mornington Peninsula coverage and provid
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

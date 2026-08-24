@@ -68,6 +68,8 @@ Every service below is available in Mordialloc. Follow a link for service detail
 - [Kitchen cabinet resurfacing Mordialloc](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Mordialloc](/services/roof-painting/)
 - [Real estate painting Mordialloc](/services/real-estate-painting/)
+- [Body corporate painting Mordialloc](/services/body-corporate-painting/)
+- [Epoxy flooring Mordialloc](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -203,3 +205,5 @@ Yes. We are based in Mordialloc, and we paint shopfronts, cafes and hospitality 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

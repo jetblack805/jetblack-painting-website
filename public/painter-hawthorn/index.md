@@ -68,6 +68,8 @@ Every service below is available in Hawthorn. Follow a link for service details 
 - [Kitchen cabinet resurfacing Hawthorn](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Hawthorn](/services/roof-painting/)
 - [Real estate painting Hawthorn](/services/real-estate-painting/)
+- [Body corporate painting Hawthorn](/services/body-corporate-painting/)
+- [Epoxy flooring Hawthorn](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -206,3 +208,5 @@ It can. Lower-lying streets nearer the river hold more moisture, and that shows 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

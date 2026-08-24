@@ -68,6 +68,8 @@ Every service below is available in Sorrento. Follow a link for service details 
 - [Kitchen cabinet resurfacing Sorrento](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Sorrento](/services/roof-painting/)
 - [Real estate painting Sorrento](/services/real-estate-painting/)
+- [Body corporate painting Sorrento](/services/body-corporate-painting/)
+- [Epoxy flooring Sorrento](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -210,3 +212,5 @@ Yes. We service the full Mornington Peninsula and quote across Sorrento for free
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

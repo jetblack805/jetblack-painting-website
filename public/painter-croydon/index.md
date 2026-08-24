@@ -56,6 +56,8 @@ Every service below is available in Croydon. Follow a link for service details a
 - [Kitchen cabinet resurfacing Croydon](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Croydon](/services/roof-painting/)
 - [Real estate painting Croydon](/services/real-estate-painting/)
+- [Body corporate painting Croydon](/services/body-corporate-painting/)
+- [Epoxy flooring Croydon](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Croydon, Croydon North
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

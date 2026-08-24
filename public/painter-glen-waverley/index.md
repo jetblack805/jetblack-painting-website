@@ -56,6 +56,8 @@ Every service below is available in Glen Waverley. Follow a link for service det
 - [Kitchen cabinet resurfacing Glen Waverley](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Glen Waverley](/services/roof-painting/)
 - [Real estate painting Glen Waverley](/services/real-estate-painting/)
+- [Body corporate painting Glen Waverley](/services/body-corporate-painting/)
+- [Epoxy flooring Glen Waverley](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Glen Waverley and the 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

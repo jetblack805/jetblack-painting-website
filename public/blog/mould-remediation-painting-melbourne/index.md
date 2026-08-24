@@ -160,3 +160,5 @@ Standard primers won't prevent regrowth. A dedicated anti-mould primer — we us
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -157,3 +157,5 @@ We use 2-pack polyurethane, the same professional-grade finish used on luxury ne
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

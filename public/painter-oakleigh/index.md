@@ -56,6 +56,8 @@ Every service below is available in Oakleigh. Follow a link for service details 
 - [Kitchen cabinet resurfacing Oakleigh](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Oakleigh](/services/roof-painting/)
 - [Real estate painting Oakleigh](/services/real-estate-painting/)
+- [Body corporate painting Oakleigh](/services/body-corporate-painting/)
+- [Epoxy flooring Oakleigh](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -184,3 +186,5 @@ Call 0432 077 782 or fill in the quote form on this page. We'll arrange a time t
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -56,6 +56,8 @@ Every service below is available in Hampton East. Follow a link for service deta
 - [Kitchen cabinet resurfacing Hampton East](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Hampton East](/services/roof-painting/)
 - [Real estate painting Hampton East](/services/real-estate-painting/)
+- [Body corporate painting Hampton East](/services/body-corporate-painting/)
+- [Epoxy flooring Hampton East](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes, and it's common work for us here given how tightly Hampton East sits betwee
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

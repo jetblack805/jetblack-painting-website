@@ -56,6 +56,8 @@ Every service below is available in Heatherton. Follow a link for service detail
 - [Kitchen cabinet resurfacing Heatherton](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Heatherton](/services/roof-painting/)
 - [Real estate painting Heatherton](/services/real-estate-painting/)
+- [Body corporate painting Heatherton](/services/body-corporate-painting/)
+- [Epoxy flooring Heatherton](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Timeline depends on size, scope and surface condition. An exterior repaint on a 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

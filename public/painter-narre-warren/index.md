@@ -52,6 +52,8 @@ Every service below is available in Narre Warren. Follow a link for service deta
 - [Kitchen cabinet resurfacing Narre Warren](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Narre Warren](/services/roof-painting/)
 - [Real estate painting Narre Warren](/services/real-estate-painting/)
+- [Body corporate painting Narre Warren](/services/body-corporate-painting/)
+- [Epoxy flooring Narre Warren](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We service Narre Warren and the wider City of Casey with free written quote
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

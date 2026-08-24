@@ -157,3 +157,5 @@ Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

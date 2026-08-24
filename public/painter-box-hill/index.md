@@ -56,6 +56,8 @@ Every service below is available in Box Hill. Follow a link for service details 
 - [Kitchen cabinet resurfacing Box Hill](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Box Hill](/services/roof-painting/)
 - [Real estate painting Box Hill](/services/real-estate-painting/)
+- [Body corporate painting Box Hill](/services/body-corporate-painting/)
+- [Epoxy flooring Box Hill](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation written quotes across Box Hill, Box Hill Nor
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

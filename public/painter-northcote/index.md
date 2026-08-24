@@ -52,6 +52,8 @@ Every service below is available in Northcote. Follow a link for service details
 - [Kitchen cabinet resurfacing Northcote](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Northcote](/services/roof-painting/)
 - [Real estate painting Northcote](/services/real-estate-painting/)
+- [Body corporate painting Northcote](/services/body-corporate-painting/)
+- [Epoxy flooring Northcote](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes — we offer free, no-obligation quotes across Northcote and surrounding sub
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

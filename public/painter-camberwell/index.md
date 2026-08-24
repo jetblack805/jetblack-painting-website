@@ -68,6 +68,8 @@ Every service below is available in Camberwell. Follow a link for service detail
 - [Kitchen cabinet resurfacing Camberwell](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Camberwell](/services/roof-painting/)
 - [Real estate painting Camberwell](/services/real-estate-painting/)
+- [Body corporate painting Camberwell](/services/body-corporate-painting/)
+- [Epoxy flooring Camberwell](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -203,3 +205,5 @@ Yes. Strip shopfronts around the Junction share party walls and awnings, so we a
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

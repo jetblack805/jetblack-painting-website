@@ -1191,3 +1191,80 @@ An intermediate calculation claimed a "126 KB compressed saving" from scraping `
 the suburb page's HTML. That was wrong: the static HTML names only the entry script, and the other
 twelve chunks load at runtime from the module map. It compared an HTML scrape against a browser
 measurement. The real figure is **34KB brotli**, measured the same way on both sides.
+
+---
+
+## 2026-08-24 (evening) — Daily audit: one real defect, found and fixed
+
+**Defect: 118 markdown twins were stale.** Today's earlier work regenerated the static HTML but never ran
+`generate-markdown.mjs`. The twins served to AI assistants via Accept negotiation were missing:
+
+- the two service links added to 97 suburb pages (`/services/body-corporate-painting/`, `/services/epoxy-flooring/`)
+- the legal footer links added to 115 pages (`/privacy/`, `/terms/`)
+
+So for roughly nine hours, Claude, ChatGPT and Perplexity reading jetblackpainting.com got a version of
+every suburb page that did not mention body corporate or epoxy flooring at all. Regenerated; the twins
+now match their HTML (verified by comparing extracted service-link sets on two routes). Two new twins
+created for `/privacy/` and `/terms/`.
+
+This is exactly what the Step 2.1 three-layer check exists to catch, and it caught it.
+
+### Everything else checked and clean
+
+| Check | Result | Baseline |
+| --- | --- | --- |
+| Pages | **117** | was 114 (privacy, terms, epoxy added since) |
+| FAQ questions | **485** | was 477 |
+| Schema vs visible text | 0 problems | 0 |
+| JSON-LD parse errors | 0 | 0 |
+| BlogPosting/HowTo missing fields | 0 | 0 |
+| aggregateRating in static pages | **0** | 0 — still lives only in client/index.html |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
+| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
+| Titles over 60 | 1 (`/painter-hastings/` 64) | 1, accepted |
+| Keywords tags | 0 | 0 |
+| Near-duplicate avg worst-twin | **25.7%** | 25.6% (gate 45%) |
+| Near-duplicate worst single | **46.1%** chelsea-heights/dingley-village | 46.4% (gate 55%) |
+| Pages over 55% | 0 | 0 |
+| Lockfile vs package.json | **77/77** | 77/77 |
+| Negative URLs 404 (extensionless, .zip, /assets/) | all 404 | — |
+| Real hashed bundles still 200 + correct MIME | js `text/javascript`, css `text/css` | — |
+| Redirects | all 301, none 307 | — |
+| Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex` | — |
+| llms.txt prices | none — all three `$` matches are the $10M public liability | clean |
+| TTFB | 0.20–0.22s, cf-cache HIT | 0.15–0.40s |
+
+**Adding identical footer text to all 117 pages did not move the near-duplicate figure** (25.6% → 25.7%).
+
+### A false negative in my own check, worth recording
+
+The first pass reported **0 FAQ questions** against a baseline of 477. The site was fine; my regex was
+`<script type="application/ld+json">` and the real tag is
+`<script type="application/ld+json" data-static-schema>`. Fixed, re-run, 485 found. Precisely the
+false-FAILURE class the brief warns about — a check that reports a catastrophe should be suspected before
+the site is.
+
+### Where the brief is stale (the log wins, per the brief's own rule)
+
+- **Review count is 17, not 15.** Updated 2026-08-23, verified today in all sources.
+- **Page count 117, FAQ questions 485** — not 114/477.
+- **Epoxy flooring is real and shipped.** The brief still says "do not add until Jimmy confirms".
+- **The readability rewrite was authorised and done** for the tracked eleven (PR #202).
+- **Yellow Pages Tier 0 is done** (Jimmy called, logged 2026-08-23). TrueLocal's two listings remain.
+- **PageSpeed's "unused JS 144 KiB" is fixed.** See today's chunking work: suburb pages dropped 120KB
+  raw / 34KB brotli, `vendor-animation` importers 120 → 11. CLS 0.000, down from 0.084.
+
+### Step 1 could not run — all three data sources are gone
+
+**Supermetrics, Semrush and Ahrefs MCP servers are all disconnected this session.** The Supermetrics
+trial was due to expire today and the connector is no longer present, so **no GSC data could be pulled
+and no position deltas measured against the tracked eleven.** Reporting that plainly rather than
+dropping the metric. Ranking measurement now needs the Search Console UI directly.
+
+**Bing also remains unverifiable** — `bing.com` and `google.com` are both refused by this session's
+egress policy (403 on CONNECT).
+
+### Authority work: nothing actioned
+
+No new evidence available without ranking data. TrueLocal's two dead listings remain the cheapest
+outstanding Tier 0 win. Not something this session can do — those sites block automated access.

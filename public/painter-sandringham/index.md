@@ -56,6 +56,8 @@ Every service below is available in Sandringham. Follow a link for service detai
 - [Kitchen cabinet resurfacing Sandringham](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Sandringham](/services/roof-painting/)
 - [Real estate painting Sandringham](/services/real-estate-painting/)
+- [Body corporate painting Sandringham](/services/body-corporate-painting/)
+- [Epoxy flooring Sandringham](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Sandringham and the su
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

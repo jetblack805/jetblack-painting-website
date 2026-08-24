@@ -1,29 +1,54 @@
-<!-- Leave a Review | Jetblack Painting Melbourne -->
-<!-- Source: https://jetblackpainting.com/review-us/ -->
-<!-- Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters. -->
+<!-- Terms of Use | Jetblack Painting Melbourne -->
+<!-- Source: https://jetblackpainting.com/terms/ -->
+<!-- The terms that apply to using the Jetblack Painting website, including content ownership, quotes, and the limits of the information published here. -->
 
-# Leave a Review for Jetblack Painting
+# Terms of Use
 
-Your feedback helps other Melbourne homeowners and businesses find a painter they can trust for quality preparation, clear communication, and durable finishes.
+The terms that apply to using the Jetblack Painting website. Last updated 24 August 2026.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 
-## Why reviews matter
+## About these terms
 
-Google reviews help local homeowners compare painters with confidence. They also help small Melbourne businesses like Jetblack Painting continue to grow through word of mouth.
+These terms cover your use of jetblackpainting.com, operated by Jetblack Painting (ABN 50 548 669 474) of Mordialloc, Victoria. By using the site you accept them.
 
-If we've completed interior, exterior, roof, cabinet, or commercial painting for you, a short review about the service and finish quality is greatly appreciated.
+## This site is not a quote
 
-## How to leave a Google review
+Everything published here — service descriptions, project photographs, articles and answers to common questions — is general information about the work we do. It is not a quote and not advice about your particular property.
 
-1. **Open our review link** — Visit https://g.page/r/CS0L-iKiqJlHEBM/review on your phone or computer.
-2. **Choose your star rating** — Select the star rating that matches your experience working with Jetblack Painting.
-3. **Add a short comment** — Mention the type of painting service, your suburb, and what stood out about the job.
-4. **Submit the review** — Post the review so other Melbourne property owners can read your feedback.
+The terms of any actual job are the ones in the written quote you receive from us and agree to. Where this website and a signed quote say different things, the quote is what counts.
 
-**Jetblack Painting** — Leave a Review for Jetblack Painting | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
+## Enquiries
 
-[Home](/) | [FAQ](/faq/) | [Blog](/blog/)
+Sending the quote form does not create a booking or oblige us to take the work on, and it does not oblige you to accept a quote. It starts a conversation. What you tell us is handled as set out in our Privacy Policy.
+
+Please give us accurate details. A quote based on the wrong suburb, surface or scope is of no use to either of us.
+
+## Our content
+
+The text, photographs, logo and design on this site belong to Jetblack Painting. The project photographs are of our own work. You are welcome to read, print and share pages for your own use, but please do not republish our photographs or copy our page content onto another website without asking.
+
+## Links to other sites
+
+We link to Google, our social media profiles and occasionally to other organisations. We do not control those sites and are not responsible for what they publish or how they handle your information.
+
+## Availability and accuracy
+
+We keep this site accurate and up to date as best we can, but we do not promise it will always be available or entirely free of errors. Prices, product ranges and service areas change.
+
+Nothing here limits any rights you have under the Australian Consumer Law, which applies to our work regardless of what this page says.
+
+## Governing law
+
+These terms are governed by the laws of Victoria, Australia.
+
+## Contact
+
+Questions about these terms? Call 0432 077 782 or email jimmy@jetblackpainting.com.
+
+**Jetblack Painting** — Terms of Use | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
+
+[Home](/) | [FAQ](/faq/) | [Contact](/#contact)
 
 ## Suburbs we service
 
@@ -124,4 +149,4 @@ If we've completed interior, exterior, roof, cabinet, or commercial painting for
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
 
-[Privacy Policy](/privacy/) | [Terms of Use](/terms/)
+[Privacy Policy](/privacy/)

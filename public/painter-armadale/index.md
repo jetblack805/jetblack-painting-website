@@ -56,6 +56,8 @@ Every service below is available in Armadale. Follow a link for service details 
 - [Kitchen cabinet resurfacing Armadale](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Armadale](/services/roof-painting/)
 - [Real estate painting Armadale](/services/real-estate-painting/)
+- [Body corporate painting Armadale](/services/body-corporate-painting/)
+- [Epoxy flooring Armadale](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation written quotes across Armadale and the surro
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

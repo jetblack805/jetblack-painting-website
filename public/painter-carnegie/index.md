@@ -52,6 +52,8 @@ Every service below is available in Carnegie. Follow a link for service details 
 - [Kitchen cabinet resurfacing Carnegie](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Carnegie](/services/roof-painting/)
 - [Real estate painting Carnegie](/services/real-estate-painting/)
+- [Body corporate painting Carnegie](/services/body-corporate-painting/)
+- [Epoxy flooring Carnegie](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -181,3 +183,5 @@ Yes. We provide free written quotes across Carnegie with the full scope, prepara
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

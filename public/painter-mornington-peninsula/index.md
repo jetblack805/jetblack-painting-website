@@ -56,6 +56,8 @@ Every service below is available in Mornington Peninsula. Follow a link for serv
 - [Kitchen cabinet resurfacing Mornington Peninsula](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Mornington Peninsula](/services/roof-painting/)
 - [Real estate painting Mornington Peninsula](/services/real-estate-painting/)
+- [Body corporate painting Mornington Peninsula](/services/body-corporate-painting/)
+- [Epoxy flooring Mornington Peninsula](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -186,3 +188,5 @@ Certainly. We often work with property owners to complete painting projects on h
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

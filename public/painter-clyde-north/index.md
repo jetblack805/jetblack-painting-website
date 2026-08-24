@@ -60,6 +60,8 @@ Every service below is available in Clyde North. Follow a link for service detai
 - [Kitchen cabinet resurfacing Clyde North](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Clyde North](/services/roof-painting/)
 - [Real estate painting Clyde North](/services/real-estate-painting/)
+- [Body corporate painting Clyde North](/services/body-corporate-painting/)
+- [Epoxy flooring Clyde North](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -198,3 +200,5 @@ It can, and it is worth checking before you settle on a colour. Many Casey estat
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

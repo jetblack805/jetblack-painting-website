@@ -56,6 +56,8 @@ Every service below is available in Bayside. Follow a link for service details a
 - [Kitchen cabinet resurfacing Bayside](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Bayside](/services/roof-painting/)
 - [Real estate painting Bayside](/services/real-estate-painting/)
+- [Body corporate painting Bayside](/services/body-corporate-painting/)
+- [Epoxy flooring Bayside](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation written quotes across all Bayside and Kingst
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

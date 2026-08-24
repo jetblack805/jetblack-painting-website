@@ -68,6 +68,8 @@ Every service below is available in Toorak. Follow a link for service details an
 - [Kitchen cabinet resurfacing Toorak](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Toorak](/services/roof-painting/)
 - [Real estate painting Toorak](/services/real-estate-painting/)
+- [Body corporate painting Toorak](/services/body-corporate-painting/)
+- [Epoxy flooring Toorak](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -206,3 +208,5 @@ Yes. We keep a record of the exact paint codes and formulations used on a proper
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -56,6 +56,8 @@ Every service below is available in Kew. Follow a link for service details and t
 - [Kitchen cabinet resurfacing Kew](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Kew](/services/roof-painting/)
 - [Real estate painting Kew](/services/real-estate-painting/)
+- [Body corporate painting Kew](/services/body-corporate-painting/)
+- [Epoxy flooring Kew](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Absolutely. We understand the requirements of Boroondara Council's heritage over
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

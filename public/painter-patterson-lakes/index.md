@@ -56,6 +56,8 @@ Every service below is available in Patterson Lakes. Follow a link for service d
 - [Kitchen cabinet resurfacing Patterson Lakes](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Patterson Lakes](/services/roof-painting/)
 - [Real estate painting Patterson Lakes](/services/real-estate-painting/)
+- [Body corporate painting Patterson Lakes](/services/body-corporate-painting/)
+- [Epoxy flooring Patterson Lakes](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -187,3 +189,5 @@ Yes. We are based nearby in Mordialloc and quote across Patterson Lakes for free
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

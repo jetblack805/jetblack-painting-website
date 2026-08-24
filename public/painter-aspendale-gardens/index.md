@@ -52,6 +52,8 @@ Every service below is available in Aspendale Gardens. Follow a link for service
 - [Kitchen cabinet resurfacing Aspendale Gardens](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Aspendale Gardens](/services/roof-painting/)
 - [Real estate painting Aspendale Gardens](/services/real-estate-painting/)
+- [Body corporate painting Aspendale Gardens](/services/body-corporate-painting/)
+- [Epoxy flooring Aspendale Gardens](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. As a local painter based nearby in Mordialloc, we provide free written quot
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

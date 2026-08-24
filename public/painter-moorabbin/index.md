@@ -56,6 +56,8 @@ Every service below is available in Moorabbin. Follow a link for service details
 - [Kitchen cabinet resurfacing Moorabbin](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Moorabbin](/services/roof-painting/)
 - [Real estate painting Moorabbin](/services/real-estate-painting/)
+- [Body corporate painting Moorabbin](/services/body-corporate-painting/)
+- [Epoxy flooring Moorabbin](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation written quotes across Moorabbin and the surr
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

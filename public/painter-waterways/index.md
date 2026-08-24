@@ -52,6 +52,8 @@ Every service below is available in Waterways. Follow a link for service details
 - [Kitchen cabinet resurfacing Waterways](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Waterways](/services/roof-painting/)
 - [Real estate painting Waterways](/services/real-estate-painting/)
+- [Body corporate painting Waterways](/services/body-corporate-painting/)
+- [Epoxy flooring Waterways](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -181,3 +183,5 @@ Yes. We're based just minutes away in Mordialloc and provide free written quotes
 - [Painters Toorak](/painter-toorak/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

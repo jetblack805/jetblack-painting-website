@@ -56,6 +56,8 @@ Every service below is available in Parkdale. Follow a link for service details 
 - [Kitchen cabinet resurfacing Parkdale](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Parkdale](/services/roof-painting/)
 - [Real estate painting Parkdale](/services/real-estate-painting/)
+- [Body corporate painting Parkdale](/services/body-corporate-painting/)
+- [Epoxy flooring Parkdale](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Most Parkdale exterior repaints take between 3 and 7 working days, depending on 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

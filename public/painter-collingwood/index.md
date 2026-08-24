@@ -74,6 +74,8 @@ Every service below is available in Collingwood. Follow a link for service detai
 - [Kitchen cabinet resurfacing Collingwood](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Collingwood](/services/roof-painting/)
 - [Real estate painting Collingwood](/services/real-estate-painting/)
+- [Body corporate painting Collingwood](/services/body-corporate-painting/)
+- [Epoxy flooring Collingwood](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -213,3 +215,5 @@ Yes. We provide free, no-obligation on-site quotes across Collingwood and all su
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -56,6 +56,8 @@ Every service below is available in Stonnington. Follow a link for service detai
 - [Kitchen cabinet resurfacing Stonnington](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Stonnington](/services/roof-painting/)
 - [Real estate painting Stonnington](/services/real-estate-painting/)
+- [Body corporate painting Stonnington](/services/body-corporate-painting/)
+- [Epoxy flooring Stonnington](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across the City of Stonningto
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

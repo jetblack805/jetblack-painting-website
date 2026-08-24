@@ -52,6 +52,8 @@ Every service below is available in Port Melbourne. Follow a link for service de
 - [Kitchen cabinet resurfacing Port Melbourne](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Port Melbourne](/services/roof-painting/)
 - [Real estate painting Port Melbourne](/services/real-estate-painting/)
+- [Body corporate painting Port Melbourne](/services/body-corporate-painting/)
+- [Epoxy flooring Port Melbourne](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation on-site quotes across Port Melbourne and all
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

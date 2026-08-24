@@ -68,6 +68,8 @@ Every service below is available in Donvale. Follow a link for service details a
 - [Kitchen cabinet resurfacing Donvale](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Donvale](/services/roof-painting/)
 - [Real estate painting Donvale](/services/real-estate-painting/)
+- [Body corporate painting Donvale](/services/body-corporate-painting/)
+- [Epoxy flooring Donvale](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -202,3 +204,5 @@ Yes, though it is worth talking through first. A lot of the 1970s split-levels h
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

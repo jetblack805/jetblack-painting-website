@@ -56,6 +56,8 @@ Every service below is available in Greater Dandenong. Follow a link for service
 - [Kitchen cabinet resurfacing Greater Dandenong](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Greater Dandenong](/services/roof-painting/)
 - [Real estate painting Greater Dandenong](/services/real-estate-painting/)
+- [Body corporate painting Greater Dandenong](/services/body-corporate-painting/)
+- [Epoxy flooring Greater Dandenong](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes, Jetblack Painting is fully insured and licensed, providing peace of mind fo
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

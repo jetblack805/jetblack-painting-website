@@ -52,6 +52,8 @@ Every service below is available in Rosebud. Follow a link for service details a
 - [Kitchen cabinet resurfacing Rosebud](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Rosebud](/services/roof-painting/)
 - [Real estate painting Rosebud](/services/real-estate-painting/)
+- [Body corporate painting Rosebud](/services/body-corporate-painting/)
+- [Epoxy flooring Rosebud](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We service the Mornington Peninsula and provide free written quotes across 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

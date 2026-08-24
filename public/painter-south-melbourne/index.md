@@ -52,6 +52,8 @@ Every service below is available in South Melbourne. Follow a link for service d
 - [Kitchen cabinet resurfacing South Melbourne](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting South Melbourne](/services/roof-painting/)
 - [Real estate painting South Melbourne](/services/real-estate-painting/)
+- [Body corporate painting South Melbourne](/services/body-corporate-painting/)
+- [Epoxy flooring South Melbourne](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes — we provide free, no-obligation quotes across South Melbourne and surroun
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

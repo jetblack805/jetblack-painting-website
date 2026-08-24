@@ -52,6 +52,8 @@ Every service below is available in Brunswick. Follow a link for service details
 - [Kitchen cabinet resurfacing Brunswick](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Brunswick](/services/roof-painting/)
 - [Real estate painting Brunswick](/services/real-estate-painting/)
+- [Body corporate painting Brunswick](/services/body-corporate-painting/)
+- [Epoxy flooring Brunswick](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes — we provide free, no-obligation quotes across Brunswick and surrounding s
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

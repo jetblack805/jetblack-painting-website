@@ -279,43 +279,48 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Split vendor libraries into separate chunks for better caching
-          // Adding "react/jsx-runtime" to this list was tried (7e7ff0e) and
-          // REVERTED after measuring the deployed build. It does not work, and
-          // the reason is worth recording so nobody tries it again:
-          //
-          // React core is not in vendor-react at all. It is inside
-          // vendor-animation. The deployed vendor-react was 3.5KB and opened
-          // with `import{r as t}from"./vendor-animation-*.js"` -- it imports
-          // React *from* the framer-motion chunk. Listing jsx-runtime here only
-          // moved a stub; 118 of 140 chunks still imported vendor-animation
-          // (down from 123), so every page still downloads 128KB of
-          // framer-motion, now plus an extra request for the stub.
-          //
-          // The object form of manualChunks assigns only the exact module ids
-          // listed, and shared transitive deps land in whichever manual chunk
-          // Rollup reaches first -- here, vendor-animation via framer-motion.
-          // CONFIRMED INERT. The revert was measured against a genuinely fresh
-          // deploy (34e25ec — entry chunk hash changed from index-DFlkDqsI to
-          // index-DKoErESO, so the build definitely re-ran) and vendor-react
-          // came back byte-identical: same hash 6BqCyl38, same 3634 bytes, same
-          // first line importing React from vendor-animation. Adding
-          // "react/jsx-runtime" to this list changed nothing, and removing it
-          // changed nothing. The list entry has no effect on the output at all.
-          //
-          // Current state of the deployed bundle: 120 of 142 chunks import the
-          // 127.7KB vendor-animation, 117 import the 3.5KB vendor-react stub.
-          //
-          // A real fix needs the function form, matching node_modules paths for
-          // react / react-dom / scheduler, so assignment does not depend on
-          // traversal order. Untested: this repo cannot run pnpm build.
-          "vendor-react": ["react", "react-dom"],
-          // vendor-radix removed: let Rollup tree-shake each Radix package into
-          // only the chunks that actually import it, cutting unused JS on homepage.
-          "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],
-          "vendor-animation": ["framer-motion"],
-          "vendor-utils": ["clsx", "tailwind-merge", "nanoid"],
+        // FUNCTION form, not the object form — and the difference is the whole
+        // point. See the history below before changing this.
+        //
+        // With the object form, Rollup assigns only the exact module ids listed.
+        // "react" resolves to react/index.js, but React's actual implementation
+        // lives in react/cjs/react.production.js, which is a *dependency* of
+        // that id rather than the id itself. Unlisted dependencies fall to
+        // Rollup's default assignment and land in whichever chunk reaches them
+        // first — which was vendor-animation, via framer-motion. That is how
+        // React core ended up inside the 128KB animation chunk while
+        // vendor-react was a 3.6KB stub whose first line was
+        // `import{r as t}from"./vendor-animation-*.js"`.
+        //
+        // Consequence measured on the deployed build (34e25ec): 120 of 142
+        // chunks imported vendor-animation, and a suburb page shipped 43KB
+        // brotli of framer-motion out of ~162KB total JS — roughly a quarter of
+        // its payload — despite framer-motion being imported by exactly 11
+        // source files, all of them service/blog/FAQ pages. Neither
+        // SuburbPageTemplate nor Home imports it.
+        //
+        // Adding "react/jsx-runtime" to the object list was tried (7e7ff0e) and
+        // proved completely inert: the revert produced a byte-identical
+        // vendor-react (same hash, same 3634 bytes) across a build that
+        // definitely re-ran. Do not try that again.
+        //
+        // The function is called for every module id, including the cjs
+        // implementation files, so a path match catches what the object form
+        // could not. React must be matched FIRST: framer-motion, the form
+        // libraries and Radix all depend on it, and whichever chunk claims it
+        // first is exactly how this went wrong.
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          // Matches both npm's flat layout and pnpm's
+          // .pnpm/<pkg>@<ver>/node_modules/<pkg>/ nesting, since the trailing
+          // /node_modules/<pkg>/ segment is present either way.
+          if (/[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/.test(id)) return "vendor-react";
+          if (id.includes("framer-motion")) return "vendor-animation";
+          if (/[\\/]node_modules[\\/](react-hook-form|@hookform[\\/]resolvers|zod)[\\/]/.test(id)) return "vendor-form";
+          if (/[\\/]node_modules[\\/](clsx|tailwind-merge|nanoid)[\\/]/.test(id)) return "vendor-utils";
+          // Everything else: Rollup's default. vendor-radix was deliberately
+          // removed so each Radix package tree-shakes into only the chunks that
+          // actually import it.
         },
       },
     },

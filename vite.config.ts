@@ -296,6 +296,17 @@ export default defineConfig({
           // The object form of manualChunks assigns only the exact module ids
           // listed, and shared transitive deps land in whichever manual chunk
           // Rollup reaches first -- here, vendor-animation via framer-motion.
+          // CONFIRMED INERT. The revert was measured against a genuinely fresh
+          // deploy (34e25ec — entry chunk hash changed from index-DFlkDqsI to
+          // index-DKoErESO, so the build definitely re-ran) and vendor-react
+          // came back byte-identical: same hash 6BqCyl38, same 3634 bytes, same
+          // first line importing React from vendor-animation. Adding
+          // "react/jsx-runtime" to this list changed nothing, and removing it
+          // changed nothing. The list entry has no effect on the output at all.
+          //
+          // Current state of the deployed bundle: 120 of 142 chunks import the
+          // 127.7KB vendor-animation, 117 import the 3.5KB vendor-react stub.
+          //
           // A real fix needs the function form, matching node_modules paths for
           // react / react-dom / scheduler, so assignment does not depend on
           // traversal order. Untested: this repo cannot run pnpm build.

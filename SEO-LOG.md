@@ -1035,3 +1035,32 @@ found; every new route has a `<Route>` in `App.tsx` and an entry in `worker/know
 
 **Not legal advice.** These are plain-English pages built from what the site demonstrably does. If
 certainty matters, a lawyer should read them.
+
+### Addendum 2 — the vendor-react change is confirmed inert, and an earlier figure was wrong
+
+The PR #207 build gave a decisive measurement. That build definitely re-ran (a component was deleted
+and 19 image tags changed; the entry chunk hash moved `index-DFlkDqsI` → `index-DKoErESO`), and it
+contains the revert. Yet:
+
+```
+vendor-react-6BqCyl38.js    3634 bytes   identical hash, identical size
+vendor-animation-D3Hbm0mm.js             identical hash
+```
+
+Byte-identical across a build that definitely re-ran. **Adding `react/jsx-runtime` to the
+`manualChunks` list changed nothing, and removing it changed nothing.** The list entry has no effect
+on Rollup's output whatsoever.
+
+**Correcting an earlier claim in this log and to Jimmy:** the failure was reported as "118 of 140
+chunks still import vendor-animation, down from 123", which implied the change moved the count. It
+did not. The 123/146 figure came from a measurement recorded before this session; the 118/140 came
+from fetching and counting live chunks. Two different methods, so it was never a sound before/after
+comparison, and the change never moved anything.
+
+Clean current numbers, measured against the deployed 34e25ec build: **120 of 142 chunks import the
+127.7KB `vendor-animation`; 117 import the 3.5KB `vendor-react` stub, which itself imports React
+from `vendor-animation`.**
+
+The diagnosis is unchanged and now firmer: React core lives inside the framer-motion chunk, the
+object form of `manualChunks` cannot move it, and the function form is the only fix. 128KB on every
+page remains the largest single speed win available and the largest open item.

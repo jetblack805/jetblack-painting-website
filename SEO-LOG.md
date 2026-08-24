@@ -1064,3 +1064,71 @@ from `vendor-animation`.**
 The diagnosis is unchanged and now firmer: React core lives inside the framer-motion chunk, the
 object form of `manualChunks` cannot move it, and the function form is the only fix. 128KB on every
 page remains the largest single speed win available and the largest open item.
+
+---
+
+## 2026-08-24 — Indexing audit and the chunking fix
+
+### Indexing: nothing broken
+
+Crawled all 115 sitemap URLs on the live site.
+
+| Check | Result |
+| --- | --- |
+| Non-200 status | **0** |
+| `noindex` while in the sitemap | **0** |
+| Missing canonical | **0** |
+| Canonical ≠ sitemap URL | **0** |
+| Missing title / description / H1 | **0** |
+| Missing JSON-LD | **0** |
+| Duplicate titles / descriptions / canonicals | **0** |
+
+Redirects verified: `/painters-<suburb>` → singular, 1 hop. Non-slash → slash, 1 hop. `http://` → `https://` → slash, 2 hops (Cloudflare upgrades, the worker canonicalises) — normal and all landing 200. `robots.txt` correct, sitemap referenced, `/api/` disallowed.
+
+Compression and caching are right: brotli everywhere, hashed assets `max-age=31536000, immutable`, HTML `max-age=0, must-revalidate` with Cloudflare cache HITs.
+
+**GSC still shows old URL variants earning impressions** — `/painter-mornington-peninsula` without the slash (136), `/blog/kitchen-cabinet-resurfacing-vs-replacement` without the slash (47), `http://jetblackpainting.com/painter-greater-dandenong` (13, 1 click). These are all correctly 301'd now; they are historical index entries that will fade. Nothing to fix.
+
+`/services/pre-sale-property-painting/` earns 6 impressions and **2 clicks** at position 27 and 301s to `/services/real-estate-painting/`. Working as intended.
+
+**14 sitemap URLs had zero impressions in 90 days.** The only surprising one was `/services/interior-painting/`, which has 111 inbound internal links. Checked it directly: HTTP 200, indexable, correct canonical, 1,403 words — *more* than `/services/exterior-painting/`, which does get impressions. No defect. It is losing a very competitive term, which is the standing authority problem, not an indexing one.
+
+**Bing could not be checked.** `www.bing.com` and `www.google.com` are both refused by this session's egress policy (403 on CONNECT), so no `site:` queries and no Bing Webmaster Tools. `api.indexnow.org` is still blocked too. Bing indexing remains unverified from here.
+
+### Speed: CLS is fixed, and the chunking is the real problem
+
+Measured in headless Chromium at a 390×844 mobile viewport, against a local mirror of the deployed build (Chromium cannot reach the live site through this session's proxy, so LCP/TTFB from that run are not real-world figures — but layout shift, main-thread time and payload composition are).
+
+**CLS 0.000, down from 0.084.** Zero long tasks. The `width`/`height` work on 19 images plus the earlier reveal-animation fix removed layout shift entirely.
+
+Real network timings from the crawl itself are healthy — a service page returns in ~0.43s.
+
+**The payload is the problem.** A suburb page ships ~162KB of brotli-compressed JS, and **43KB of it is framer-motion**:
+
+```
+ 93198 B  index-DKoErESO.js
+ 43073 B  vendor-animation-D3Hbm0mm.js   <- framer-motion, ~27% of the page's JS
+ 10327 B  SuburbPageTemplate-BQhGqPsj.js
+  8498 B  vendor-utils
+  5582 B  SEOHead
+  3966 B  CollingwoodPainters
+  1349 B  vendor-react                   <- a stub, imports React from vendor-animation
+```
+
+framer-motion is imported by **exactly 11 source files, all of them service/blog/FAQ pages**. `SuburbPageTemplate` does not import it. `Home` does not import it. Every one of the ~100 suburb pages downloads it anyway, because React core is inside that chunk.
+
+### Why the object form failed, and what replaced it
+
+`"vendor-react": ["react", "react-dom"]` looks like it should work. It does not, because the object form assigns only the **exact module ids listed**. `"react"` resolves to `react/index.js`, but React's implementation lives in `react/cjs/react.production.js` — a *dependency* of the listed id, not the id itself. Unlisted dependencies fall to Rollup's default assignment and land in whichever chunk reaches them first: framer-motion's.
+
+That is also why adding `react/jsx-runtime` to the list was completely inert — it was the wrong lever.
+
+Replaced with the **function form**, which is called for every module id including the cjs implementation files, so a path match catches them. React is matched first, before framer-motion, the form libraries or Radix can claim it.
+
+**Verified without a build** (this repo still cannot run `pnpm build` — registry 403, no `node_modules`):
+- `vite.config.ts` parses cleanly under Prettier's TypeScript parser; brace balance checked
+- The function was **extracted from the real file and executed** against 25 realistic module ids — every case correct
+- Critically, the traps pass: `react-hook-form`, `react-day-picker`, `react-resizable-panels`, `@radix-ui/react-dialog` and `lucide-react` are **not** captured by the React rule, and app source is never chunked
+- pnpm's `.pnpm/<pkg>@<ver>/node_modules/<pkg>/` nesting is handled alongside npm's flat layout
+
+**This is the second attempt at this target.** The first was inert. The failure mode here is a failed Cloudflare build, which stops future deploys but leaves the current site up — recoverable. Success looks like: `vendor-react` contains React core rather than a stub, `vendor-animation` is imported by ~11 chunks rather than 120, and a suburb page drops ~43KB of compressed JS. **If the deployed build does not show that, revert.**

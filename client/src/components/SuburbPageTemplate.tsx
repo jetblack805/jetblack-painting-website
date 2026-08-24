@@ -40,6 +40,8 @@ const coreServices = [
   { name: "Kitchen cabinet resurfacing", link: "/services/kitchen-cabinet-resurfacing" },
   { name: "Roof painting", link: "/services/roof-painting" },
   { name: "Real estate painting", link: "/services/real-estate-painting" },
+  { name: "Body corporate painting", link: "/services/body-corporate-painting" },
+  { name: "Epoxy flooring", link: "/services/epoxy-flooring" },
 ];
 
 const KNOWN_LANDING_PATHS = new Set([

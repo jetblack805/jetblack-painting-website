@@ -120,11 +120,23 @@ const SERVICE_AREAS = [
   { name: "Windsor", href: "/painter-windsor/" },
 ];
 
+const SERVICES = [
+  { label: "Interior Painting", href: "/services/interior-painting/" },
+  { label: "Exterior Painting", href: "/services/exterior-painting/" },
+  { label: "Commercial Painting", href: "/services/commercial-painting/" },
+  { label: "Kitchen Cabinet Resurfacing", href: "/services/kitchen-cabinet-resurfacing/" },
+  { label: "Roof Painting", href: "/services/roof-painting/" },
+  { label: "Roof & Fence Painting", href: "/services/roof-fence-painting/" },
+  { label: "Body Corporate Painting", href: "/services/body-corporate-painting/" },
+  { label: "Epoxy Flooring", href: "/services/epoxy-flooring/" },
+  { label: "Real Estate Painting", href: "/services/real-estate-painting/" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#030304] border-t border-white/[0.06]">
       <div className="container py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <img
@@ -189,6 +201,29 @@ export default function Footer() {
               >
                 ★ Leave a Google Review
               </a>
+            </nav>
+          </div>
+
+          {/* Services — every service page, linked. The footer previously carried
+              a single "Services" anchor to /#services and no page links at all,
+              so the service pages depended entirely on the suburb templates for
+              internal links. */}
+          <div>
+            <h2
+              className="text-[#98989D] font-bold mb-5 text-[9.5px] uppercase tracking-[0.3em]"
+            >
+              Services
+            </h2>
+            <nav className="flex flex-col gap-2.5">
+              {SERVICES.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-white/50 hover:text-[#D0A050] transition-colors text-sm"
+                >
+                  {link.label}
+                </a>
+              ))}
             </nav>
           </div>
 

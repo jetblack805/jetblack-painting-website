@@ -24,21 +24,26 @@ const featuredServices = [
   },
 ];
 
-const allServices = [
-  "Interior House Painting",
-  "Exterior House Painting",
-  "Commercial & Office Painting",
-  "Kitchen Cabinet Resurfacing (2-Pack)",
-  "Roof Painting & Restoration",
-  "Fence & Deck Staining",
-  "Concrete & Epoxy Flooring",
-  "Wallpaper Removal",
-  "Colour Consultation",
-  "Heritage Home Painting",
-  "Strata & Body Corporate Painting",
-  "Real Estate Painting",
-  "Shop & Office Repaints",
-  "Garage Floor Coatings",
+// Named services that have a page of their own carry a link to it. This list
+// used to be plain strings, which left /services/body-corporate-painting and
+// /services/epoxy-flooring with zero inbound internal links anywhere on the
+// site — reachable only from the sitemap — while the homepage named both of
+// them in text. Anything added here that has a page should be linked.
+const allServices: { name: string; link?: string }[] = [
+  { name: "Interior House Painting", link: "/services/interior-painting" },
+  { name: "Exterior House Painting", link: "/services/exterior-painting" },
+  { name: "Commercial & Office Painting", link: "/services/commercial-painting" },
+  { name: "Kitchen Cabinet Resurfacing (2-Pack)", link: "/services/kitchen-cabinet-resurfacing" },
+  { name: "Roof Painting & Restoration", link: "/services/roof-painting" },
+  { name: "Fence & Deck Staining", link: "/services/roof-fence-painting" },
+  { name: "Concrete & Epoxy Flooring", link: "/services/epoxy-flooring" },
+  { name: "Wallpaper Removal" },
+  { name: "Colour Consultation" },
+  { name: "Heritage Home Painting" },
+  { name: "Strata & Body Corporate Painting", link: "/services/body-corporate-painting" },
+  { name: "Real Estate Painting", link: "/services/real-estate-painting" },
+  { name: "Shop & Office Repaints", link: "/services/commercial-painting" },
+  { name: "Garage Floor Coatings", link: "/services/epoxy-flooring" },
 ];
 
 const premiumSuburbs = [
@@ -125,14 +130,29 @@ export default function PremiumServices() {
         >
           <h3 className="text-2xl text-[#EDEDEF] mb-6 text-center">Complete Range of Painting Services</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {allServices.map((service) => (
-              <div key={service} className="flex items-center gap-2 bg-[#101013] p-3 rounded-lg">
+            {allServices.map((service) => {
+              const tick = (
                 <svg className="w-4 h-4 text-[#D0A050] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
-                <span className="text-[#EDEDEF] text-sm font-medium">{service}</span>
-              </div>
-            ))}
+              );
+              const cell = "flex items-center gap-2 bg-[#101013] p-3 rounded-lg";
+              return service.link ? (
+                <Link
+                  key={service.name}
+                  href={service.link}
+                  className={`${cell} hover:bg-[#17171b] transition-colors`}
+                >
+                  {tick}
+                  <span className="text-[#EDEDEF] text-sm font-medium">{service.name}</span>
+                </Link>
+              ) : (
+                <div key={service.name} className={cell}>
+                  {tick}
+                  <span className="text-[#EDEDEF] text-sm font-medium">{service.name}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 

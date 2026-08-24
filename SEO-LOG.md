@@ -835,3 +835,100 @@ prescribes is already implemented (non-slash 301s to slash, which self-canonical
 sitemap needs no reconciling (115 URLs, all trailing-slash, zero duplicates). Its one genuinely new
 find is **Clyde North — ~750 impressions at position 31, zero clicks** — unverified here for want of
 GSC access, and it wants project evidence rather than word count.
+
+---
+
+## 2026-08-24 — Keyword review, and two orphaned service pages
+
+**Question asked:** "What about optimising my keywords?"
+
+**Data:** GSC via Supermetrics, 2026-05-24 → 2026-08-20 (90 days), 800 queries.
+
+### There is no keyword-targeting gap
+
+Every query cluster with meaningful volume already has a page pointed at it:
+
+| Cluster | 90-day impressions | Best position | Page |
+| --- | --- | --- | --- |
+| Suburb + painters (top 20) | ~1,900 | 13.3 (Sorrento) | all present |
+| Body corporate / strata | 74 | 49.0 | `/services/body-corporate-painting/` |
+| Kitchen / cabinet resurfacing | ~74 | 74.1 | `/services/kitchen-cabinet-resurfacing/` |
+| Roof painting | ~28 | 15.3 | `/services/roof-painting/` |
+
+Only two suburbs in the top 50 queries have no dedicated page — **Brunswick East** (58 impressions
+@ 47.3) and **Fitzroy North** (54 @ 36.5) — and the parent Brunswick/Fitzroy pages already serve
+them. Building page 116 and 117 to land at position 40 alongside the existing hundred is not worth
+doing, so it was not done.
+
+**Clicks on non-brand queries across the full 90 days: zero.** The only queries that convert an
+impression into a click are `jetblack painting` (124 impr / 33 clicks / pos 4.0) and `jet black`.
+The brief's CTR re-test condition ("re-test when a page holds top-10 on a term with volume") is
+still not met: the best non-brand position with real volume is `painters sorrento` at 13.26.
+
+### Position spread is geographic, not lexical
+
+Titles read `<Suburb> Painters` while queries read `painters <suburb>`. Word order is not a ranking
+factor for this and **no title was rewritten** — the brief's "do not rewrite healthy titles" rule
+holds.
+
+What actually separates the pages is where they are:
+
+- **Bayside / Peninsula / inner-north, pos 13–25:** Sorrento 13.3, Aspendale 14.0, McKinnon 14.4,
+  Brighton East 16.0, Patterson Lakes 16.5, Collingwood 16.7, Donvale 17.1, Highett 17.8,
+  Murrumbeena 18.6, Dromana 19.5, Elwood 21.6, Mordialloc 24.9.
+- **Eastern affluent corridor, pos 75–99:** Kew 97.4, South Yarra 92.5, Hawthorn 91.0,
+  Camberwell 90.9, Malvern 88.6, Glen Waverley 88.1, Doncaster 85.1, Chadstone 83.2, Toorak 79.2.
+
+Same template, same title pattern, same word count — 80 positions apart. That is proximity and
+competitor authority, not keywords.
+
+Note the first list is (almost exactly) the eleven pages rewritten in PR #202. **That is selection,
+not effect** — those pages were picked *because* they were already the closest to page one, and this
+window closes 2026-08-20, before the rewrite shipped. The rewrite's effect is not yet measurable.
+
+### What was actually wrong: two service pages had zero inbound internal links
+
+Counting inbound internal links across all 115 generated pages:
+
+```
+0  /services/body-corporate-painting/   ← 74 impressions, pos 49–66
+0  /services/epoxy-flooring/            ← shipped PR #199/#201, never linked
+5  /services/roof-fence-painting/
+96 /services/real-estate-painting/      ← the other six sit at 96–111
+```
+
+Both were reachable only from `sitemap.xml`. The homepage *names* both ("Concrete & Epoxy Flooring",
+"Strata & Body Corporate Painting", "Garage Floor Coatings") in a list that was plain strings with no
+links. The epoxy page was my own omission when it shipped.
+
+**Fixed:**
+1. `PremiumServices.tsx` — `allServices` converted from strings to `{name, link?}`; every entry with
+   a page now links to it.
+2. `Footer.tsx` — added a Services column listing all nine service pages. The footer previously
+   carried a single `/#services` anchor and no service page links at all.
+3. `SuburbPageTemplate.tsx` `coreServices` + the matching block in `generate-static-pages.mjs` —
+   body corporate and epoxy added, so both layers agree.
+
+Both pages went 0 → 96 inbound links.
+
+**Left alone, flagged:** `/services/roof-fence-painting/` (5 inbound) overlaps
+`/services/roof-painting/` (104 inbound). Boosting the weak one risks splitting the same intent
+across two URLs. Worth deciding whether to merge them before linking either harder.
+
+**Also worth naming:** the footer links all 100+ suburb pages from every page, so every suburb page
+has exactly 114 inbound links — perfectly flat. Site-wide boilerplate links are heavily discounted,
+so this gives Google no signal about which suburbs matter. Not changed here; it is a structural
+decision, not a bug.
+
+**Verification limits this run:** `pnpm check` and `pnpm build` could **not** be run —
+`registry.npmjs.org` returns 403 in this environment and `node_modules` is absent. The three edited
+`.tsx` files parse cleanly under Prettier's TypeScript parser, and the static generator and sitemap
+script (both dependency-free) ran successfully. The React changes are deliberately small and follow
+patterns already present in the same files.
+
+**Ahrefs API is not usable on the current plan** — `management-projects`,
+`keywords-explorer-*` and `subscription-info` all return `Insufficient plan`. The Ahrefs connector
+is effectively read-nothing for API purposes; the Web Analytics script (PR #204) still works.
+
+**Supermetrics trial expires 2026-08-25.** After that, GSC data has to come from the Search Console
+UI directly.

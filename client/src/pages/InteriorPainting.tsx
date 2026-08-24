@@ -140,6 +140,8 @@ export default function InteriorPainting() {
         <div className="container">
           <img
             src={imgHallway}
+            width={1050}
+            height={1400}
             alt="Elegant painted hallway with ornate cornices and parquet flooring by Jetblack Painting"
             className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
@@ -147,24 +149,32 @@ export default function InteriorPainting() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
             <img
               src={imgOpenPlanLiving}
+              width={823}
+              height={561}
               alt="Open plan living room and kitchen interior painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />
             <img
               src={imgKitchenTimber}
+              width={823}
+              height={561}
               alt="Modern kitchen with timber panelling painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />
             <img
               src={imgLounge}
+              width={823}
+              height={561}
               alt="Freshly painted lounge room by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />
             <img
               src={imgStaircase}
+              width={1050}
+              height={1400}
               alt="Staircase balustrade and walls painted white by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
@@ -173,18 +183,24 @@ export default function InteriorPainting() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
               src={imgStagedLiving}
+              width={1206}
+              height={804}
               alt="Freshly painted staged living room by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />
             <img
               src={imgOpenLiving}
+              width={1170}
+              height={782}
               alt="Bright open living room interior painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />
             <img
               src={imgBoucleLiving}
+              width={1050}
+              height={1400}
               alt="Styled living and dining room interior painted by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"

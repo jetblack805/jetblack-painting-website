@@ -52,6 +52,8 @@ Every service below is available in Hampton Park. Follow a link for service deta
 - [Kitchen cabinet resurfacing Hampton Park](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Hampton Park](/services/roof-painting/)
 - [Real estate painting Hampton Park](/services/real-estate-painting/)
+- [Body corporate painting Hampton Park](/services/body-corporate-painting/)
+- [Epoxy flooring Hampton Park](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -181,3 +183,5 @@ Yes. We service the City of Casey and provide free written quotes across Hampton
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

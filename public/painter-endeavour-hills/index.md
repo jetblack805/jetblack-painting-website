@@ -52,6 +52,8 @@ Every service below is available in Endeavour Hills. Follow a link for service d
 - [Kitchen cabinet resurfacing Endeavour Hills](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Endeavour Hills](/services/roof-painting/)
 - [Real estate painting Endeavour Hills](/services/real-estate-painting/)
+- [Body corporate painting Endeavour Hills](/services/body-corporate-painting/)
+- [Epoxy flooring Endeavour Hills](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -181,3 +183,5 @@ Yes. We service the City of Casey and provide free written quotes across Endeavo
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -52,6 +52,8 @@ Every service below is available in Hughesdale. Follow a link for service detail
 - [Kitchen cabinet resurfacing Hughesdale](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Hughesdale](/services/roof-painting/)
 - [Real estate painting Hughesdale](/services/real-estate-painting/)
+- [Body corporate painting Hughesdale](/services/body-corporate-painting/)
+- [Epoxy flooring Hughesdale](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -181,3 +183,5 @@ Yes. We provide free written quotes across Hughesdale with the preparation, numb
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

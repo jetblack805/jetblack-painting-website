@@ -68,6 +68,8 @@ Every service below is available in McKinnon. Follow a link for service details 
 - [Kitchen cabinet resurfacing McKinnon](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting McKinnon](/services/roof-painting/)
 - [Real estate painting McKinnon](/services/real-estate-painting/)
+- [Body corporate painting McKinnon](/services/body-corporate-painting/)
+- [Epoxy flooring McKinnon](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -207,3 +209,5 @@ We do. Alongside houses we paint shopfronts, offices, consulting rooms and the c
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

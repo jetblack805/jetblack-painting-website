@@ -52,6 +52,8 @@ Every service below is available in St Kilda. Follow a link for service details 
 - [Kitchen cabinet resurfacing St Kilda](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting St Kilda](/services/roof-painting/)
 - [Real estate painting St Kilda](/services/real-estate-painting/)
+- [Body corporate painting St Kilda](/services/body-corporate-painting/)
+- [Epoxy flooring St Kilda](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -184,3 +186,5 @@ Yes. We offer free, no-obligation on-site quotes across St Kilda and all surroun
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

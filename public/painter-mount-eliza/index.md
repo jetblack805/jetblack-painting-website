@@ -56,6 +56,8 @@ Every service below is available in Mount Eliza. Follow a link for service detai
 - [Kitchen cabinet resurfacing Mount Eliza](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Mount Eliza](/services/roof-painting/)
 - [Real estate painting Mount Eliza](/services/real-estate-painting/)
+- [Body corporate painting Mount Eliza](/services/body-corporate-painting/)
+- [Epoxy flooring Mount Eliza](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Mount Eliza and the su
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

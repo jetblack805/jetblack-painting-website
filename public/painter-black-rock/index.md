@@ -56,6 +56,8 @@ Every service below is available in Black Rock. Follow a link for service detail
 - [Kitchen cabinet resurfacing Black Rock](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Black Rock](/services/roof-painting/)
 - [Real estate painting Black Rock](/services/real-estate-painting/)
+- [Body corporate painting Black Rock](/services/body-corporate-painting/)
+- [Epoxy flooring Black Rock](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Call us on 0432 077 782 or fill in the quote form on this page. We'll arrange a 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

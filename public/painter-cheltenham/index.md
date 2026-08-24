@@ -56,6 +56,8 @@ Every service below is available in Cheltenham. Follow a link for service detail
 - [Kitchen cabinet resurfacing Cheltenham](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Cheltenham](/services/roof-painting/)
 - [Real estate painting Cheltenham](/services/real-estate-painting/)
+- [Body corporate painting Cheltenham](/services/body-corporate-painting/)
+- [Epoxy flooring Cheltenham](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. Jetblack Painting is based in Mordialloc, just a few minutes from Cheltenha
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

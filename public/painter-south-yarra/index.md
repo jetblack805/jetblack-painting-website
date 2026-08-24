@@ -56,6 +56,8 @@ Every service below is available in South Yarra. Follow a link for service detai
 - [Kitchen cabinet resurfacing South Yarra](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting South Yarra](/services/roof-painting/)
 - [Real estate painting South Yarra](/services/real-estate-painting/)
+- [Body corporate painting South Yarra](/services/body-corporate-painting/)
+- [Epoxy flooring South Yarra](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ South Yarra properties tend to suit warm whites, soft greige tones and restraine
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -56,6 +56,8 @@ Every service below is available in Kingston. Follow a link for service details 
 - [Kitchen cabinet resurfacing Kingston](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Kingston](/services/roof-painting/)
 - [Real estate painting Kingston](/services/real-estate-painting/)
+- [Body corporate painting Kingston](/services/body-corporate-painting/)
+- [Epoxy flooring Kingston](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across all Kingston suburbs, 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

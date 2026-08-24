@@ -52,6 +52,8 @@ Every service below is available in Cranbourne. Follow a link for service detail
 - [Kitchen cabinet resurfacing Cranbourne](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Cranbourne](/services/roof-painting/)
 - [Real estate painting Cranbourne](/services/real-estate-painting/)
+- [Body corporate painting Cranbourne](/services/body-corporate-painting/)
+- [Epoxy flooring Cranbourne](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We service Cranbourne and the wider City of Casey with free written quotes,
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

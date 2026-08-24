@@ -52,6 +52,8 @@ Every service below is available in Seaford. Follow a link for service details a
 - [Kitchen cabinet resurfacing Seaford](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Seaford](/services/roof-painting/)
 - [Real estate painting Seaford](/services/real-estate-painting/)
+- [Body corporate painting Seaford](/services/body-corporate-painting/)
+- [Epoxy flooring Seaford](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. As a local painter servicing the bayside and Mornington Peninsula corridor 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

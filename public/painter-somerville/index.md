@@ -56,6 +56,8 @@ Every service below is available in Somerville. Follow a link for service detail
 - [Kitchen cabinet resurfacing Somerville](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Somerville](/services/roof-painting/)
 - [Real estate painting Somerville](/services/real-estate-painting/)
+- [Body corporate painting Somerville](/services/body-corporate-painting/)
+- [Epoxy flooring Somerville](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -187,3 +189,5 @@ Yes. We service the southern Mornington Peninsula corridor and provide free, no-
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -56,6 +56,8 @@ Every service below is available in Mount Martha. Follow a link for service deta
 - [Kitchen cabinet resurfacing Mount Martha](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Mount Martha](/services/roof-painting/)
 - [Real estate painting Mount Martha](/services/real-estate-painting/)
+- [Body corporate painting Mount Martha](/services/body-corporate-painting/)
+- [Epoxy flooring Mount Martha](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -186,3 +188,5 @@ Yes. We provide free, no-obligation written quotes across Mount Martha and the s
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

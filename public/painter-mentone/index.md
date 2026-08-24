@@ -68,6 +68,8 @@ Every service below is available in Mentone. Follow a link for service details a
 - [Kitchen cabinet resurfacing Mentone](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Mentone](/services/roof-painting/)
 - [Real estate painting Mentone](/services/real-estate-painting/)
+- [Body corporate painting Mentone](/services/body-corporate-painting/)
+- [Epoxy flooring Mentone](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -202,3 +204,5 @@ Yes. Mentone has a solid commercial strip along the Nepean Highway and Bay Road,
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

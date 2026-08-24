@@ -56,6 +56,8 @@ Every service below is available in Balwyn. Follow a link for service details an
 - [Kitchen cabinet resurfacing Balwyn](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Balwyn](/services/roof-painting/)
 - [Real estate painting Balwyn](/services/real-estate-painting/)
+- [Body corporate painting Balwyn](/services/body-corporate-painting/)
+- [Epoxy flooring Balwyn](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Balwyn, Balwyn North a
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

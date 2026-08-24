@@ -56,6 +56,8 @@ Every service below is available in Beaumaris. Follow a link for service details
 - [Kitchen cabinet resurfacing Beaumaris](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Beaumaris](/services/roof-painting/)
 - [Real estate painting Beaumaris](/services/real-estate-painting/)
+- [Body corporate painting Beaumaris](/services/body-corporate-painting/)
+- [Epoxy flooring Beaumaris](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Cost depends on property size, number of storeys, surface condition and scope â€
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -52,6 +52,8 @@ Every service below is available in Thornbury. Follow a link for service details
 - [Kitchen cabinet resurfacing Thornbury](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Thornbury](/services/roof-painting/)
 - [Real estate painting Thornbury](/services/real-estate-painting/)
+- [Body corporate painting Thornbury](/services/body-corporate-painting/)
+- [Epoxy flooring Thornbury](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes — we offer free, no-obligation quotes across Thornbury and the surrounding
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

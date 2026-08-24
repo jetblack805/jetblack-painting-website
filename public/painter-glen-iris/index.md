@@ -56,6 +56,8 @@ Every service below is available in Glen Iris. Follow a link for service details
 - [Kitchen cabinet resurfacing Glen Iris](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Glen Iris](/services/roof-painting/)
 - [Real estate painting Glen Iris](/services/real-estate-painting/)
+- [Body corporate painting Glen Iris](/services/body-corporate-painting/)
+- [Epoxy flooring Glen Iris](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Glen Iris and the surr
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

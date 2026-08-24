@@ -52,6 +52,8 @@ Every service below is available in Braeside. Follow a link for service details 
 - [Kitchen cabinet resurfacing Braeside](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Braeside](/services/roof-painting/)
 - [Real estate painting Braeside](/services/real-estate-painting/)
+- [Body corporate painting Braeside](/services/body-corporate-painting/)
+- [Epoxy flooring Braeside](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free written quotes for residential and commercial work across B
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -56,6 +56,8 @@ Every service below is available in Bentleigh. Follow a link for service details
 - [Kitchen cabinet resurfacing Bentleigh](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Bentleigh](/services/roof-painting/)
 - [Real estate painting Bentleigh](/services/real-estate-painting/)
+- [Body corporate painting Bentleigh](/services/body-corporate-painting/)
+- [Epoxy flooring Bentleigh](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -187,3 +189,5 @@ Yes. We are based nearby in Mordialloc and provide free written quotes across Be
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

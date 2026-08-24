@@ -52,6 +52,8 @@ Every service below is available in Safety Beach. Follow a link for service deta
 - [Kitchen cabinet resurfacing Safety Beach](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Safety Beach](/services/roof-painting/)
 - [Real estate painting Safety Beach](/services/real-estate-painting/)
+- [Body corporate painting Safety Beach](/services/body-corporate-painting/)
+- [Epoxy flooring Safety Beach](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -184,3 +186,5 @@ Yes. We service the Mornington Peninsula and provide free written quotes across 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

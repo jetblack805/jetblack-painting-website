@@ -52,6 +52,8 @@ Every service below is available in Fitzroy. Follow a link for service details a
 - [Kitchen cabinet resurfacing Fitzroy](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Fitzroy](/services/roof-painting/)
 - [Real estate painting Fitzroy](/services/real-estate-painting/)
+- [Body corporate painting Fitzroy](/services/body-corporate-painting/)
+- [Epoxy flooring Fitzroy](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation on-site quotes across Fitzroy and all surrou
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

@@ -52,6 +52,8 @@ Every service below is available in Albert Park. Follow a link for service detai
 - [Kitchen cabinet resurfacing Albert Park](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Albert Park](/services/roof-painting/)
 - [Real estate painting Albert Park](/services/real-estate-painting/)
+- [Body corporate painting Albert Park](/services/body-corporate-painting/)
+- [Epoxy flooring Albert Park](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation on-site quotes across Albert Park and all su
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

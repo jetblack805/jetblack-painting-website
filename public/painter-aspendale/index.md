@@ -68,6 +68,8 @@ Every service below is available in Aspendale. Follow a link for service details
 - [Kitchen cabinet resurfacing Aspendale](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Aspendale](/services/roof-painting/)
 - [Real estate painting Aspendale](/services/real-estate-painting/)
+- [Body corporate painting Aspendale](/services/body-corporate-painting/)
+- [Epoxy flooring Aspendale](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -202,3 +204,5 @@ Yes, and we treat them as genuinely different jobs. Aspendale Gardens is a separ
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

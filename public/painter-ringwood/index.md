@@ -56,6 +56,8 @@ Every service below is available in Ringwood. Follow a link for service details 
 - [Kitchen cabinet resurfacing Ringwood](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Ringwood](/services/roof-painting/)
 - [Real estate painting Ringwood](/services/real-estate-painting/)
+- [Body corporate painting Ringwood](/services/body-corporate-painting/)
+- [Epoxy flooring Ringwood](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Ringwood and the City 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

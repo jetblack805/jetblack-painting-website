@@ -56,6 +56,8 @@ Every service below is available in Elwood. Follow a link for service details an
 - [Kitchen cabinet resurfacing Elwood](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Elwood](/services/roof-painting/)
 - [Real estate painting Elwood](/services/real-estate-painting/)
+- [Body corporate painting Elwood](/services/body-corporate-painting/)
+- [Epoxy flooring Elwood](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Elwood and the surroun
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

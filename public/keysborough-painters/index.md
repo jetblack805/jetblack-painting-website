@@ -56,6 +56,8 @@ Every service below is available in Keysborough. Follow a link for service detai
 - [Kitchen cabinet resurfacing Keysborough](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Keysborough](/services/roof-painting/)
 - [Real estate painting Keysborough](/services/real-estate-painting/)
+- [Body corporate painting Keysborough](/services/body-corporate-painting/)
+- [Epoxy flooring Keysborough](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Keysborough and the su
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

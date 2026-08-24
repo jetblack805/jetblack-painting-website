@@ -52,6 +52,8 @@ Every service below is available in Malvern East. Follow a link for service deta
 - [Kitchen cabinet resurfacing Malvern East](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Malvern East](/services/roof-painting/)
 - [Real estate painting Malvern East](/services/real-estate-painting/)
+- [Body corporate painting Malvern East](/services/body-corporate-painting/)
+- [Epoxy flooring Malvern East](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Malvern East with the 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

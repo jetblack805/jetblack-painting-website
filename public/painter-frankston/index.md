@@ -56,6 +56,8 @@ Every service below is available in Frankston. Follow a link for service details
 - [Kitchen cabinet resurfacing Frankston](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Frankston](/services/roof-painting/)
 - [Real estate painting Frankston](/services/real-estate-painting/)
+- [Body corporate painting Frankston](/services/body-corporate-painting/)
+- [Epoxy flooring Frankston](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Frankston, Frankston S
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

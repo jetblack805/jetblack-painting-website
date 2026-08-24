@@ -56,6 +56,8 @@ Every service below is available in Templestowe. Follow a link for service detai
 - [Kitchen cabinet resurfacing Templestowe](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Templestowe](/services/roof-painting/)
 - [Real estate painting Templestowe](/services/real-estate-painting/)
+- [Body corporate painting Templestowe](/services/body-corporate-painting/)
+- [Epoxy flooring Templestowe](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Templestowe and the Ci
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

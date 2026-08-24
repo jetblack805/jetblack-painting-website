@@ -56,6 +56,8 @@ Every service below is available in Carrum. Follow a link for service details an
 - [Kitchen cabinet resurfacing Carrum](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Carrum](/services/roof-painting/)
 - [Real estate painting Carrum](/services/real-estate-painting/)
+- [Body corporate painting Carrum](/services/body-corporate-painting/)
+- [Epoxy flooring Carrum](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. Weatherboard homes are common throughout Melbourne's coastal suburbs includ
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

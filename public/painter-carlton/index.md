@@ -56,6 +56,8 @@ Every service below is available in Carlton. Follow a link for service details a
 - [Kitchen cabinet resurfacing Carlton](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Carlton](/services/roof-painting/)
 - [Real estate painting Carlton](/services/real-estate-painting/)
+- [Body corporate painting Carlton](/services/body-corporate-painting/)
+- [Epoxy flooring Carlton](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ We provide comprehensive interior painting for Carlton's modern apartments and h
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

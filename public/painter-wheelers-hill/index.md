@@ -56,6 +56,8 @@ Every service below is available in Wheelers Hill. Follow a link for service det
 - [Kitchen cabinet resurfacing Wheelers Hill](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Wheelers Hill](/services/roof-painting/)
 - [Real estate painting Wheelers Hill](/services/real-estate-painting/)
+- [Body corporate painting Wheelers Hill](/services/body-corporate-painting/)
+- [Epoxy flooring Wheelers Hill](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. We provide free, no-obligation written quotes across Wheelers Hill and the 
 - [Painters Toorak](/painter-toorak/)
 - [Painters Waterways](/painter-waterways/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

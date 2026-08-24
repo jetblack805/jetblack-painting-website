@@ -52,6 +52,8 @@ Every service below is available in Dingley Village. Follow a link for service d
 - [Kitchen cabinet resurfacing Dingley Village](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Dingley Village](/services/roof-painting/)
 - [Real estate painting Dingley Village](/services/real-estate-painting/)
+- [Body corporate painting Dingley Village](/services/body-corporate-painting/)
+- [Epoxy flooring Dingley Village](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -182,3 +184,5 @@ Yes. Tile and metal roofs are common across Dingley Village, and the tree cover 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

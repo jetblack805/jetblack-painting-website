@@ -56,6 +56,8 @@ Every service below is available in Prahran. Follow a link for service details a
 - [Kitchen cabinet resurfacing Prahran](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Prahran](/services/roof-painting/)
 - [Real estate painting Prahran](/services/real-estate-painting/)
+- [Body corporate painting Prahran](/services/body-corporate-painting/)
+- [Epoxy flooring Prahran](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -184,3 +186,5 @@ Yes. We provide free, no-obligation written quotes across Prahran, Windsor and t
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

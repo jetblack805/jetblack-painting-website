@@ -56,6 +56,8 @@ Every service below is available in Mornington. Follow a link for service detail
 - [Kitchen cabinet resurfacing Mornington](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Mornington](/services/roof-painting/)
 - [Real estate painting Mornington](/services/real-estate-painting/)
+- [Body corporate painting Mornington](/services/body-corporate-painting/)
+- [Epoxy flooring Mornington](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation written quotes across Mornington and the sur
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

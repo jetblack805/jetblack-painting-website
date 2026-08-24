@@ -68,6 +68,8 @@ Every service below is available in Brighton. Follow a link for service details 
 - [Kitchen cabinet resurfacing Brighton](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Brighton](/services/roof-painting/)
 - [Real estate painting Brighton](/services/real-estate-painting/)
+- [Body corporate painting Brighton](/services/body-corporate-painting/)
+- [Epoxy flooring Brighton](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -207,3 +209,5 @@ Full drop sheeting, furniture moved and covered rather than worked around, and f
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

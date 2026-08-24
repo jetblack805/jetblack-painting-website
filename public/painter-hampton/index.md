@@ -56,6 +56,8 @@ Every service below is available in Hampton. Follow a link for service details a
 - [Kitchen cabinet resurfacing Hampton](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Hampton](/services/roof-painting/)
 - [Real estate painting Hampton](/services/real-estate-painting/)
+- [Body corporate painting Hampton](/services/body-corporate-painting/)
+- [Epoxy flooring Hampton](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -185,3 +187,5 @@ Absolutely. As a local Bayside painter based nearby in Mordialloc, we provide fr
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

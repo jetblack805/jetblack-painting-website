@@ -56,6 +56,8 @@ Every service below is available in Ormond. Follow a link for service details an
 - [Kitchen cabinet resurfacing Ormond](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Ormond](/services/roof-painting/)
 - [Real estate painting Ormond](/services/real-estate-painting/)
+- [Body corporate painting Ormond](/services/body-corporate-painting/)
+- [Epoxy flooring Ormond](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -184,3 +186,5 @@ Yes. We provide free, no-obligation written quotes across Ormond and surrounding
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

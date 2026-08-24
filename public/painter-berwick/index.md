@@ -56,6 +56,8 @@ Every service below is available in Berwick. Follow a link for service details a
 - [Kitchen cabinet resurfacing Berwick](/services/kitchen-cabinet-resurfacing/)
 - [Roof painting Berwick](/services/roof-painting/)
 - [Real estate painting Berwick](/services/real-estate-painting/)
+- [Body corporate painting Berwick](/services/body-corporate-painting/)
+- [Epoxy flooring Berwick](/services/epoxy-flooring/)
 
 ## Nearby suburbs we also service
 
@@ -183,3 +185,5 @@ Yes. We provide free, no-obligation written quotes across Berwick and the wider 
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)
+
+[Privacy Policy](/privacy/) | [Terms of Use](/terms/)

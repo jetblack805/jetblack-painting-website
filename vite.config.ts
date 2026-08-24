@@ -281,7 +281,16 @@ export default defineConfig({
       output: {
         manualChunks: {
           // Split vendor libraries into separate chunks for better caching
-          "vendor-react": ["react", "react-dom"],
+          // "react/jsx-runtime" is listed explicitly. React's automatic JSX
+          // transform imports from that specifier, not from "react", so leaving
+          // it out let Rollup assign the JSX runtime to whichever manual chunk
+          // pulled it in first -- which was vendor-animation. The result: the
+          // runtime every component needs was trapped inside the 128KB
+          // framer-motion chunk, and 123 of 146 built chunks imported it. Every
+          // page paid 128KB for framer-motion, including the homepage and all 96
+          // suburb pages, none of which use it. Only the 11 service/blog/FAQ
+          // pages actually do.
+          "vendor-react": ["react", "react-dom", "react/jsx-runtime"],
           // vendor-radix removed: let Rollup tree-shake each Radix package into
           // only the chunks that actually import it, cutting unused JS on homepage.
           "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],

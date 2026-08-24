@@ -1132,3 +1132,62 @@ Replaced with the **function form**, which is called for every module id includi
 - pnpm's `.pnpm/<pkg>@<ver>/node_modules/<pkg>/` nesting is handled alongside npm's flat layout
 
 **This is the second attempt at this target.** The first was inert. The failure mode here is a failed Cloudflare build, which stops future deploys but leaves the current site up — recoverable. Success looks like: `vendor-react` contains React core rather than a stub, `vendor-animation` is imported by ~11 chunks rather than 120, and a suburb page drops ~43KB of compressed JS. **If the deployed build does not show that, revert.**
+
+### Verified against the deployed build — the chunking fix worked
+
+Measured on the deploy of the function-form change.
+
+**`vendor-react` now holds React:**
+
+```
+                    before          after
+raw                 3,634 B        190,563 B
+brotli              1,349 B         59,811 B
+React core             no              yes
+react-dom              no              yes
+scheduler              no              yes
+imports vendor-animation  YES            no
+```
+
+**`vendor-animation` importers: 120 of 142 → 11 of 142.** The eleven are exactly the eleven source
+files that import framer-motion — Blog, BodyCorporatePainting, CommercialPainting, EpoxyFlooring,
+ExteriorPainting, FAQ, InteriorPainting, KitchenCabinetResurfacing, RealEstatePainting,
+RoofFencePainting, RoofPainting. Nothing else pulls it any more. The homepage no longer references
+it at all.
+
+**Per suburb page** (identical browser method both sides, brotli computed locally at quality 11 so
+the two are directly comparable):
+
+| | before | after |
+| --- | --- | --- |
+| JS files | 14 | 13 |
+| raw | 524 KB | **404 KB** |
+| brotli | 140 KB | **106 KB** |
+
+**34KB less compressed JavaScript on every suburb page — 24% of the payload — and 120KB less to
+parse.**
+
+#### A metric that looked like a regression, and wasn't
+
+The first single-run measurement showed suburb LCP going 88ms → 528ms and a new 84ms long task,
+which would have been a serious regression. It was measurement noise. Three repeated runs against
+each build, same method:
+
+```
+OLD build: LCP 508, 488, 488 ms   long tasks 0, 0, 0
+NEW build: LCP 472, 452, 448 ms   long tasks 0, 0, 0
+```
+
+Same LCP element (`P.text-xl`) in both. The new build is slightly *faster*, and neither build has
+long tasks. **The earlier "before LCP 88ms" figure was the unreliable one** — a single run where the
+observer had not settled. Single-run LCP off a zero-latency local mirror should not be trusted; only
+the repeated comparison is meaningful.
+
+CLS is 0.000 on both homepage and suburb pages.
+
+#### Correcting one more figure
+
+An intermediate calculation claimed a "126 KB compressed saving" from scraping `/assets/*.js` out of
+the suburb page's HTML. That was wrong: the static HTML names only the entry script, and the other
+twelve chunks load at runtime from the module map. It compared an HTML scrape against a browser
+measurement. The real figure is **34KB brotli**, measured the same way on both sides.

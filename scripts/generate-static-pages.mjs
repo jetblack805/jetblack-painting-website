@@ -721,6 +721,8 @@ function generateSuburbPage(route, sourceFile) {
             { label: `Kitchen cabinet resurfacing ${suburb}`, href: "/services/kitchen-cabinet-resurfacing/" },
             { label: `Roof painting ${suburb}`, href: "/services/roof-painting/" },
             { label: `Real estate painting ${suburb}`, href: "/services/real-estate-painting/" },
+            { label: `Body corporate painting ${suburb}`, href: "/services/body-corporate-painting/" },
+            { label: `Epoxy flooring ${suburb}`, href: "/services/epoxy-flooring/" },
           ],
         },
         {

@@ -10,7 +10,7 @@ Heritage and period home painters in Kew — Edwardian mansions and modern archi
 
 ## Local painting services in Kew
 
-As local painting experts serving Kew and the City of Boroondara, we understand the prestige and history of the area. Our team specializes in the meticulous restoration of heritage Victorian and Edwardian homes, ensuring every detail is preserved while using modern, durable paints for a long-lasting finish.
+As local painting experts serving Kew and the City of Boroondara, we understand the prestige and history of the area. Our team specialises in the meticulous restoration of heritage Victorian and Edwardian homes, ensuring every detail is preserved while using modern, durable paints for a long-lasting finish.
 
 Kew's architectural landscape is defined by its grand Victorian and Edwardian mansions, particularly in the Sackville Ward, alongside stunning contemporary residences. We adapt our techniques to suit both historic preservation and modern architectural requirements.
 
@@ -27,6 +27,18 @@ We approach every Kew project as a premium job: detailed preparation, refined fi
 Many Kew homes are heritage-significant, and the details matter — period-correct colour schemes, lead-paint-safe preparation on older surfaces, and careful restoration of timber, render and ornamental features. We protect both the character and the substantial value of these grand properties with work that honours the original architecture.
 
 For Kew's contemporary residences, we deliver the seamless modern finishes designer homes are built around, using premium Dulux and Taubmans systems for durable interiors and weather-resistant exteriors. Whichever era your Kew home belongs to, the standard is the same: immaculate preparation and a finish that lasts.
+
+## Getting to the Work on a Double-Storey Kew Home
+
+A lot of Kew sits on a slope. The streets running down toward Studley Park and the Yarra put houses on blocks that fall away at the back, so a home that looks like a comfortable two storeys from the footpath can be three storeys off the ground at the rear. That changes the job before a brush is opened.
+
+Access gets decided at the site visit, not guessed at afterwards. Scaffolding, edge protection or a lift depends on the height, the fall of the land and what is underneath — garden beds, a deck, a driveway the neighbours share. It is itemised in the quote rather than folded into a lump sum, because it affects both the price and how long the work takes. Gable ends, upper-storey window frames and high fascia are where exterior paint fails first on these houses, and they are exactly the parts that get skipped when access is treated as an afterthought.
+
+## What Is Under the Old Paint on a Period Home
+
+On a house that has been repainted every decade or so since the 1920s, the surface you are looking at is the top of a stack. How that stack behaves decides the preparation. Layers that have gone brittle need to come back to a sound edge rather than be coated over, and render that has been sealed with the wrong product will keep rejecting paint until it is dealt with properly.
+
+Anything built before roughly 1970 can also carry lead-based paint down in those layers. That is common across Kew's period housing and it is manageable, but it rules out dry sanding, heat guns and anything that throws dust around the garden. We keep the area contained, use wet methods where sanding is needed, and clean up as we go. If a surface needs full removal rather than preparation, that is specialist work and we will say so.
 
 ## What we paint in Kew
 
@@ -72,17 +84,25 @@ Explore nearby suburb pages for neighbouring areas around Kew.
 
 ## Frequently asked questions about painters in Kew
 
-### Do you specialize in heritage house painting in Kew?
+### Do you specialise in heritage house painting in Kew?
 
 Yes, we have extensive experience with Kew's historic properties. We use traditional techniques combined with premium modern paints to restore Victorian and Edwardian homes to their former glory while ensuring they are protected for years to come.
 
 ### What is your process for painting high-value residences in Kew?
 
-For Kew's prestigious homes, we follow a rigorous preparation process, including thorough cleaning, sanding, and premium priming. we use only the highest quality paints like Dulux and Taubmans to ensure a flawless, luxury finish.
+For Kew's prestigious homes, we follow a rigorous preparation process, including thorough cleaning, sanding, and premium priming. We use only the highest quality paints like Dulux and Taubmans to ensure a flawless, luxury finish.
 
 ### Are you familiar with heritage overlays in Kew?
 
 Absolutely. We understand the requirements of Boroondara Council's heritage overlays and can work with you to ensure your painting project complies with local regulations while achieving your aesthetic goals.
+
+### Do you deal with lead paint on older Kew homes?
+
+Anything built before about 1970 can carry lead-based paint under the later coats, and a lot of Kew's period housing falls into that bracket. It is not a reason to panic, but it does change how the surface is prepared: no dry sanding, no heat guns, and no power tools that throw dust around. We identify it, keep the area contained, use wet methods where sanding is needed, and clean up properly as we go. Where a surface needs extensive removal rather than preparation, that is specialist work and we will tell you so rather than press on.
+
+### How do you reach second-storey and gable work on a Kew home?
+
+With scaffolding or edge protection, chosen for the building and the ground it sits on. Many Kew homes are double-storey on sloping blocks toward Studley Park and the Yarra, which means the ground is rarely flat and a ladder is rarely the right answer. Access gets worked out at the site visit and itemised in the quote, because it affects both the price and how long the job takes.
 
 **Jetblack Painting** — House Painters Kew | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

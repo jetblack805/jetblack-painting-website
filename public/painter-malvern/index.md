@@ -28,6 +28,18 @@ Many Malvern streetscapes carry heritage significance, and getting the colours a
 
 For Malvern's renovated and architect-designed homes, we deliver the crisp, durable modern finishes that premium interiors require — using proven Dulux and Taubmans paint systems built to handle Melbourne's variable climate and maintain their look year after year.
 
+## The Surfaces Malvern Houses Actually Have
+
+Between the Edwardian and Victorian stock and the Californian bungalows through the side streets, Malvern throws up a particular set of surfaces, and each one behaves differently. Roughcast render holds dirt and moss in its texture and drinks far more paint than a smooth wall. Timber fretwork, verandah posts and window sashes carry decades of build-up in the profiles, and that has to come back to a sound edge rather than be buried under another coat.
+
+Bungalow porches and the deep eaves common on these houses shelter some elevations while leaving others fully exposed, so the same building can need real repair on one side and little more than a clean and recoat on the other. That is why the quote comes after walking the property rather than from a floor area — the number changes with what the surfaces are doing, not with how big the house is.
+
+## Painting a Home You Are Still Living In
+
+Most Malvern interior work happens around a household that has not moved out, and that shapes how the job runs. We stage it so there are always usable rooms, seal off the section being worked on, and protect floors, leadlight and fixed joinery before any sanding starts. Furniture gets moved and covered properly rather than pushed to the middle and left.
+
+It takes a little longer than working through an empty house, and that goes into the timeline up front rather than turning into a surprise halfway through. Dust is the part people underestimate on a period home — old paint, old plaster and detailed trim make plenty of it, so containment and cleaning up daily matter more here than on a new build.
+
 ## What we paint in Malvern
 
 ### Interior painting
@@ -83,6 +95,14 @@ Most Malvern homes are completed within 5 to 10 working days depending on size a
 ### Do you offer free quotes in Malvern?
 
 Absolutely. We provide free, no-obligation written quotes across Malvern and Malvern East, with the full scope and preparation itemised up front so you know exactly what's included. Call Jimmy on 0432 077 782 to arrange a visit.
+
+### Do you paint roughcast render on Malvern homes?
+
+Yes, and it needs a different approach to a flat wall. Roughcast holds dirt and moss in its texture, so it gets washed down properly before anything else happens, and any cracked or drummy sections are made good rather than painted over. The texture also drinks paint — coverage is nothing like a smooth surface, which is why a rate quoted per square metre over the phone tends to be wrong on these houses. We work it out on site.
+
+### Can you work room by room while we stay in the house?
+
+Yes, and most Malvern interior jobs run that way. We stage it so you keep usable rooms throughout, seal off the area being worked on, and protect floors, leadlight and fixed joinery before sanding starts. Furniture is moved and covered rather than shuffled around you. It usually adds a little time compared with an empty house, and that gets built into the timeline rather than sprung on you.
 
 **Jetblack Painting** — House Painters Malvern | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

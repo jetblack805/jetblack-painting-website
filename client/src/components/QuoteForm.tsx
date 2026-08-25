@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -125,6 +126,21 @@ export default function QuoteForm() {
       // Offline, blocked, or the request failed — fall through to the manual
       // options, which is the whole point of keeping them.
     }
+
+    // Conversion tracking. `generate_lead` fires ONLY when the endpoint
+    // confirmed delivery, because that is the only case where the enquiry
+    // actually reached Jimmy — it is the event to import into Google Ads. A
+    // failed delivery drops the visitor onto the call/text/email fallbacks
+    // below, so counting it as a lead would overstate conversions; it gets its
+    // own event instead, which also surfaces how often delivery is failing.
+    //
+    // ⚠️ No name, email or phone in these params — see lib/analytics.ts.
+    trackEvent(confirmed ? "generate_lead" : "quote_form_undelivered", {
+      method: "quote_form",
+      suburb: data.suburb,
+      service_type: data.serviceType,
+      source_page: typeof window !== "undefined" ? window.location.pathname : "",
+    });
 
     setDelivered(confirmed);
     setSubmitted(data);

@@ -1344,3 +1344,71 @@ The cost queries carry almost no volume — `house painting cost toorak` 10 impr
 already answered the query well and sits at ~85 organically. That is the authority ceiling (44 links / 31
 domains / authority 2), not a content gap. An instant-estimate calculator was declined: it needs real pricing
 logic, and this session established the existing numbers were not Jimmy's.
+
+---
+
+## 2026-08-25 — Conversion tracking, so ad spend becomes measurable
+
+Jimmy wants to run Google Ads the way colourway.com.au does. The blocker was not the ad account.
+
+**The site measured nothing.** GA4 (`G-6NC2597W9L`) was installed in `client/index.html`, but a grep across
+`client/src` found **zero** references to `gtag` or `dataLayer`. Nothing fired on quote-form submit, and none
+of the phone links were tracked — 31 hardcoded `href="tel:0432077782"` anchors plus template-literal ones
+from `siteConfig.phoneHref`, and one `mailto:`. Ads into that means paying for clicks with no idea which
+became jobs, and Google's automated bidding has no conversion signal to optimise against.
+
+### What was built
+
+**`client/src/lib/analytics.ts`** — a single `trackEvent(name, params)`. It exists rather than calling
+`window.gtag` directly because `index.html` loads gtag lazily inside `requestIdleCallback`, so **both**
+`window.gtag` and `window.dataLayer` are undefined for the first moments of a visit. A visitor tapping the
+sticky call bar immediately would otherwise be lost — and for a painter the phone tap is the conversion that
+matters most. The fallback queues onto `dataLayer` in gtag's own array shape so it replays on init.
+
+**`client/src/main.tsx`** — one delegated, capture-phase click listener for `a[href^="tel:"]` and
+`a[href^="mailto:"]`, instead of an `onClick` on each of 21 components. Every phone action on the site is a
+real anchor (verified — no `window.location = "tel:"` handlers), so one listener covers all of them and any
+added later. It never calls `preventDefault`; the call has to connect.
+
+**`client/src/components/QuoteForm.tsx`** — fires on the `confirmed` flag the submit handler already computes:
+
+| Outcome | Event | Reasoning |
+| --- | --- | --- |
+| delivery confirmed | `generate_lead` | The enquiry actually reached Jimmy. **This is the only event to import into Ads.** |
+| delivery failed | `quote_form_undelivered` | Visitor was dropped onto call/text/email fallbacks. Counting it as a lead would overstate conversions; tracked separately it also surfaces the delivery failure rate. |
+
+**No PII.** The form collects name, email, phone and project description; the event sends only `suburb`,
+`service_type` and `source_page`. Sending personal data to GA4 breaches Google's policy and can get a
+property terminated — and suburb-plus-service is what ad targeting actually needs anyway.
+
+### Verified in headless Chromium, both code paths
+
+| Test | Result |
+| --- | --- |
+| gtag **absent** (lazy-load window) | queued to `dataLayer`: `["event","phone_call_click",{method:"phone",source_page:"/",link_text:"Call Jimmy — 0432 077 782"}]` |
+| gtag **present** (normal case) | 1 `gtag()` call, **0** dataLayer fallback entries — correct path taken |
+| click on a nested `<span>` inside the anchor | caught via `closest()` |
+| click on a non-contact link | **no event** — exactly 2 entries from 3 clicks |
+| `preventDefault` | not called; `href="tel:0432077782"` intact and the browser did navigate |
+| PII in payload | none — name, email, phone, description all absent |
+| generated layers | **zero diffs** — React-only change, as expected |
+
+### ⚠️ Not verified, and Jimmy must check before spending
+
+**I cannot confirm GA4 actually receives these events.** `google.com` and `googletagmanager.com` are both
+refused by this session's egress policy (403 on CONNECT). What is proven is that the calls reach `gtag`/
+`dataLayer` with the right shape and payload. **Confirm in GA4 → Admin → DebugView or Reports → Realtime
+before putting money into ads.**
+
+Then in GA4, mark `generate_lead` and `phone_call_click` as conversions and import them into Google Ads.
+That is dashboard work — no account access from here.
+
+**Known undercount:** a phone tap landing before React hydrates is not counted. The static layer ships two
+`tel:` anchors per page for crawlers and those are live immediately. Hydration is quick and the sticky call
+bar is React-rendered, so the gap should be small — but phone conversions will read slightly low.
+
+### Also this session
+
+colourway.com.au could **not** be fetched, on three attempts across two tools — the proxy logged 403 CONNECT
+denials at 09:14 and 09:30. Their placement in Jimmy's screenshot is a **Sponsored Result**, i.e. a Google
+Ad, not an organic ranking. No conclusions were drawn about their site beyond what the screenshot shows.

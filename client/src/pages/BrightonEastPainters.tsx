@@ -38,7 +38,7 @@ export default function BrightonEastPainters() {
     },
     {
       question: `How much does painting a house in Brighton East cost?`,
-      answer: `Cost depends on size, scope, number of storeys, surface condition and whether you're doing interior, exterior or both. For a typical Brighton East exterior repaint, you'd expect to invest $5,000–$15,000 depending on size and complexity. Interior projects vary widely based on room count, ceiling heights, and finish level. We provide a detailed written quote after inspecting the property — no rough estimates over the phone. Call 0432 077 782 or use the quote form to book an inspection.`
+      answer: `Cost depends on size, scope, number of storeys, surface condition and whether you're doing interior, exterior or both. As a guide, a full interior repaint of a 3-bedroom Melbourne home typically runs $5,000 to $12,000, and an exterior repaint $4,000 to $8,000 for a single-storey home or $8,000 to $15,000 for a double-storey. These are indicative ranges — every job is priced after a site visit, because condition, access and scope move the number more than floor area does. We provide a detailed written quote after inspecting the property — no rough estimates over the phone. Call 0432 077 782 or use the quote form to book an inspection.`
     }
   ];
 

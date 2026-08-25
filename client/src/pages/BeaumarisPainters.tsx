@@ -38,7 +38,7 @@ export default function BeaumarisPainters() {
     },
     {
       question: `How much does it cost to paint a house in Beaumaris?`,
-      answer: `Cost depends on property size, number of storeys, surface condition and scope — interior only, exterior only, or both. A typical Beaumaris home exterior repaint ranges from $4,000 to $12,000+, while interior projects vary widely by room count and finish level. We provide a detailed, no-obligation written quote after inspecting the property. Call 0432 077 782 or use the quote form to get started.`
+      answer: `Cost depends on property size, number of storeys, surface condition and scope — interior only, exterior only, or both. As a guide, a full interior repaint of a 3-bedroom Melbourne home typically runs $5,000 to $12,000, and an exterior repaint $4,000 to $8,000 for a single-storey home or $8,000 to $15,000 for a double-storey. These are indicative ranges — every job is priced after a site visit, because condition, access and scope move the number more than floor area does. We provide a detailed, no-obligation written quote after inspecting the property. Call 0432 077 782 or use the quote form to get started.`
     }
   ];
 

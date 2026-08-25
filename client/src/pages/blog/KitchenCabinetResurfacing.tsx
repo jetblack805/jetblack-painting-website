@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "How much can I save by resurfacing instead of replacing my kitchen?",
     answer:
-      "Cabinet resurfacing typically costs $3,500 to $8,000 compared to $25,000 to $60,000+ for a full kitchen renovation — a saving of up to 85% — because your cabinet boxes, layout and benchtops stay in place.",
+      "Cabinet resurfacing typically costs $3,500 to $8,000 compared with $15,000 to $60,000 depending on size and finish for a full kitchen renovation — a fraction of the cost — because your cabinet boxes, layout and benchtops stay in place.",
   },
   {
     question: "Can any kitchen cabinets be resurfaced?",
@@ -72,7 +72,7 @@ export default function KitchenCabinetResurfacing() {
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-[#A3A3A8] mb-8">
-              Your kitchen cabinets are looking tired, but does that mean you need a $30,000+ kitchen renovation? 
+              Your kitchen cabinets are looking tired, but does that mean you need a full kitchen renovation? 
               Not necessarily. <strong>Kitchen cabinet resurfacing</strong> can transform your kitchen for a fraction 
               of the cost — and Jetblack Painting specialises in premium 2-pack finishes that look brand new.
             </p>
@@ -106,7 +106,7 @@ export default function KitchenCabinetResurfacing() {
                   </tr>
                   <tr className="bg-[#101013]">
                     <td className="border border-[#222227] p-3 font-semibold">Full Kitchen Renovation</td>
-                    <td className="border border-[#222227] p-3">$25,000 - $60,000+</td>
+                    <td className="border border-[#222227] p-3">$15,000 - $60,000</td>
                     <td className="border border-[#222227] p-3">4-8 weeks</td>
                     <td className="border border-[#222227] p-3">Major</td>
                   </tr>
@@ -115,7 +115,7 @@ export default function KitchenCabinetResurfacing() {
             </div>
 
             <p className="text-[#B4B4B8] mb-4">
-              That's a saving of <strong>up to 85%</strong> compared to a full renovation, with results that look just as good.
+              That's a substantial saving compared with a full renovation, with results that look just as good.
             </p>
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">When to Resurface vs Replace</h2>

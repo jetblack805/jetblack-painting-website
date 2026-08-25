@@ -33,7 +33,7 @@ export default function CheltenhamPainters() {
   const faqs = [
     {
       question: `How much does house painting cost in Cheltenham?`,
-      answer: `Most Cheltenham homes cost between $3,500 and $8,500 for a full interior repaint and $4,000 to $12,000 for a full exterior, depending on size, condition and number of storeys. We provide free written quotes with no obligation — call 0432 077 782 or email jimmy@jetblackpainting.com.`
+      answer: `As a guide, a full interior repaint of a 3-bedroom Melbourne home typically runs $5,000 to $12,000, and an exterior repaint $4,000 to $8,000 for a single-storey home or $8,000 to $15,000 for a double-storey. These are indicative ranges — every job is priced after a site visit, because condition, access and scope move the number more than floor area does. We provide free written quotes with no obligation — call 0432 077 782 or email jimmy@jetblackpainting.com.`
     },
     {
       question: `Do you paint weatherboard homes in Cheltenham?`,

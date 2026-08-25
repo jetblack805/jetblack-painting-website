@@ -175,7 +175,7 @@ export default function KitchenCabinetResurfacing() {
               Transform Your Kitchen Without Breaking the Bank
             </h2>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
-              Kitchen cabinet resurfacing is one of the most cost-effective ways to transform your kitchen. Instead of a full renovation costing $15,000-$30,000+, cabinet resurfacing delivers a brand new look for a fraction of the price. Jetblack Painting specialises in premium 2-pack kitchen cabinet finishes that rival custom cabinetry.
+              Kitchen cabinet resurfacing is one of the most cost-effective ways to transform your kitchen. Instead of a full renovation, cabinet resurfacing delivers a brand new look for a fraction of the price. Jetblack Painting specialises in premium 2-pack kitchen cabinet finishes that rival custom cabinetry.
             </p>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               Our professional team handles the complete process: careful disassembly, thorough surface preparation, priming, and application of premium 2-pack finish. The result is a durable, high-gloss kitchen cabinet finish that looks and feels like new cabinetry, with the added benefit of a 5-year workmanship guarantee.

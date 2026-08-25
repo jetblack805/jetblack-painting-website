@@ -1268,3 +1268,79 @@ egress policy (403 on CONNECT).
 
 No new evidence available without ranking data. TrueLocal's two dead listings remain the cheapest
 outstanding Tier 0 win. Not something this session can do — those sites block automated access.
+
+---
+
+## 2026-08-24 (late) — Removed invented price commitments
+
+**Trigger:** Jimmy searched `interior house painting rates per m2 in melbourne`, saw colourway.com.au at the
+top, and asked for a comparison.
+
+**colourway.com.au could not be fetched** — refused by this session's egress policy (403 on CONNECT) via
+both `curl` and `WebFetch`, and not routed around. Everything known about them comes from the screenshot.
+
+**Their placement is a Google Ad, not an organic result.** Labelled *Sponsored Result*. Hook: "Calculate
+Painting Cost Online — 60-Second Instant Estimate", sitelink "Transparent Fixed Pricing". That is what they
+are buying, not how they rank.
+
+### The real finding: the site was publishing prices that were never Jimmy's
+
+Checking the equivalent Jetblack page turned up specific painting prices in **seven places**, some inside
+`FAQPage` JSON-LD — the content Google lifts into rich results and AI Overviews. They trace to an early bulk
+commit (`bbbf1ae`, "add 4 SEO blog posts"), and the per-suburb figures varied in ways with no plausible
+source: Chelsea $3,500–9,000 against Cheltenham $3,500–8,500.
+
+Jimmy's decision: **take down the risky specifics, keep broad ranges with clear caveats.**
+
+**Removed** (firm commitments a customer could hold him to):
+
+| Removed | Was |
+| --- | --- |
+| Roof painting starting price | `roof painting from $3,500` |
+| Interior per-m² rate card | $20–35 / $25–45 / $35–55 per m², plus a "Typical Room Cost" column |
+| Scaffolding surcharge (body **and** FAQ answer) | `scaffolding ($500-$2,000 extra)` / "typically add $500 to $2,000" |
+| Cherry-picked saving claim | "a saving of up to 85%" — arithmetic on the two extremes ($3,500 vs $60,000 = 94%; $8,000 vs $15,000 = 47%) |
+
+**Kept, each now caveated:** whole-house interior $5,000–12,000 (3-bed) and $8,000–18,000 (4-bed); exterior
+by house size $4,000–8,000 / $8,000–15,000 / $15,000–30,000+; kitchen cabinet resurfacing $3,500–8,000.
+
+Standard caveat now sits beside the figures: *"These are indicative Melbourne ranges to help you budget.
+Every quote is priced after a site visit — condition, access and scope move the number more than floor area
+does."*
+
+The per-m² table was replaced with prose explaining **why** a per-m² rate quoted sight-unseen is misleading
+and what actually drives interior cost. That answers the "rates per m²" intent more honestly than a
+fabricated number, and the page grew 874 → 947 words in the process.
+
+### Two consistency defects fixed in the same pass
+
+1. **The site contradicted itself on kitchen renovation cost** — $25,000–60,000+ on the blog, $15,000–30,000+
+   on the service page, and "$30,000+" in the blog's opening line. All aligned to a single stated range, and
+   the figure now appears **only** on the cost-comparison blog post. The service page is qualitative, matching
+   its static twin, which already said "a fraction of renovation cost" with no number.
+2. **Five suburb pages carried five different invented ranges.** Replaced with one consistent Melbourne-wide
+   statement drawn from the cost guide's retained figures, keeping each page's local colour (Chelsea's
+   weatherboard beach houses, Beaumaris's coastal exposure) and its CTA.
+
+### Verification
+
+| Check | Result |
+| --- | --- |
+| Removed strings across HTML, markdown and source | `from $3,500`, `per m²`, `$500-$2,000`, `up to 85%` — **0 in all three layers** |
+| Pages · FAQ questions | 117 · 485 |
+| Schema vs visible text | **0 problems** — every edited FAQ answer still matches its rendered copy |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0 |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 |
+| Near-duplicate avg · worst | **25.7% · 46.1%** — unchanged despite five pages sharing price wording (gates 45% / 55%) |
+| All three generators re-run | static, **markdown**, known-paths |
+
+`QuoteForm.tsx:381` left alone — `"e.g., $5,000 - $10,000"` is a placeholder asking the customer for *their*
+budget, not a Jetblack price.
+
+### Recommendation given, and taken: do the price work and stop
+
+The cost queries carry almost no volume — `house painting cost toorak` 10 impressions at 93.6,
+`cost to repaint exterior house` 2 at 37, `how much to paint 3 bedroom house` 2 at 95.5. The cost page
+already answered the query well and sits at ~85 organically. That is the authority ceiling (44 links / 31
+domains / authority 2), not a content gap. An instant-estimate calculator was declined: it needs real pricing
+logic, and this session established the existing numbers were not Jimmy's.

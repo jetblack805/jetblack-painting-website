@@ -14,9 +14,9 @@ Cabinet resurfacing (also called refinishing or respraying) involves stripping t
 
 ## Cost Comparison
 
-Cabinet resurfacing typically costs $3,500 to $8,000 and takes 3 to 5 days, with minimal disruption to your household. A full kitchen renovation typically costs $25,000 to $60,000+ and takes 4 to 8 weeks, with major disruption.
+Cabinet resurfacing typically costs $3,500 to $8,000 and takes 3 to 5 days, with minimal disruption to your household. A full kitchen renovation typically costs $15,000 to $60,000 depending on size and finish, and takes 4 to 8 weeks with major disruption.
 
-That's a saving of up to 85% compared to a full renovation, with results that look just as good.
+That's a substantial saving compared with a full renovation, with results that look just as good.
 
 ## When to Resurface vs Replace
 
@@ -41,7 +41,7 @@ The most requested cabinet colours across our projects in Toorak, Brighton, and 
 
 ### How much can I save by resurfacing instead of replacing my kitchen?
 
-Cabinet resurfacing typically costs $3,500 to $8,000 compared to $25,000 to $60,000+ for a full kitchen renovation — a saving of up to 85% — because your cabinet boxes, layout and benchtops stay in place.
+Cabinet resurfacing typically costs $3,500 to $8,000 compared with $15,000 to $60,000 depending on size and finish for a full kitchen renovation — a fraction of the cost — because your cabinet boxes, layout and benchtops stay in place.
 
 ### Can any kitchen cabinets be resurfaced?
 

@@ -82,7 +82,7 @@ Yes — Edithvale sits on Port Phillip Bay and the coastal microclimate accelera
 
 ### What are typical painting costs for an Edithvale home?
 
-Costs vary based on property size, storey count, scope and surface condition. An exterior repaint on a typical Edithvale home generally ranges from $4,000–$10,000 depending on size and preparation required. Interior projects vary by room count and finish level. We provide a detailed written quote after an on-site inspection — no guesswork. Call 0432 077 782 to arrange.
+Costs vary based on property size, storey count, scope and surface condition. As a guide, a full interior repaint of a 3-bedroom Melbourne home typically runs $5,000 to $12,000, and an exterior repaint $4,000 to $8,000 for a single-storey home or $8,000 to $15,000 for a double-storey. These are indicative ranges — every job is priced after a site visit, because condition, access and scope move the number more than floor area does. We provide a detailed written quote after an on-site inspection — no guesswork. Call 0432 077 782 to arrange.
 
 **Jetblack Painting** — House Painters Edithvale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

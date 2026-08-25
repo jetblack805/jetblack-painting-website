@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Do you charge extra for scaffolding on multi-storey homes?",
     answer:
-      "Yes, multi-storey homes that need scaffolding for safe access typically add $500 to $2,000 to the job, depending on the height and complexity of the property. This is itemised in your written quote rather than hidden in the total.",
+      "Multi-storey homes often need scaffolding or edge protection for safe access, and that adds to the cost. How much depends on the height, the ground conditions and how much of the building needs to be reached, so we price it after seeing the property. It is itemised in your written quote rather than hidden in the total.",
   },
 ];
 
@@ -79,44 +79,30 @@ export default function HousePaintingCostMelbourne() {
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Interior Painting Costs in Melbourne</h2>
             
-            <div className="overflow-x-auto mb-6">
-              <table className="w-full border-collapse border border-[#222227] text-sm">
-                <thead>
-                  <tr className="bg-[#0A0A0B] text-white">
-                    <th className="border border-[#2A2A30] p-3 text-left">Service</th>
-                    <th className="border border-[#2A2A30] p-3 text-left">Price Range (per m²)</th>
-                    <th className="border border-[#2A2A30] p-3 text-left">Typical Room Cost</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-[#131316]">
-                    <td className="border border-[#222227] p-3">Walls only (2 coats)</td>
-                    <td className="border border-[#222227] p-3">$20 - $35</td>
-                    <td className="border border-[#222227] p-3">$400 - $800</td>
-                  </tr>
-                  <tr className="bg-[#101013]">
-                    <td className="border border-[#222227] p-3">Walls + ceiling</td>
-                    <td className="border border-[#222227] p-3">$25 - $45</td>
-                    <td className="border border-[#222227] p-3">$600 - $1,200</td>
-                  </tr>
-                  <tr className="bg-[#131316]">
-                    <td className="border border-[#222227] p-3">Full room (walls, ceiling, trim)</td>
-                    <td className="border border-[#222227] p-3">$35 - $55</td>
-                    <td className="border border-[#222227] p-3">$800 - $1,500</td>
-                  </tr>
-                  <tr className="bg-[#101013]">
-                    <td className="border border-[#222227] p-3">Whole house interior (3-bed)</td>
-                    <td className="border border-[#222227] p-3">—</td>
-                    <td className="border border-[#222227] p-3">$5,000 - $12,000</td>
-                  </tr>
-                  <tr className="bg-[#131316]">
-                    <td className="border border-[#222227] p-3">Whole house interior (4-bed)</td>
-                    <td className="border border-[#222227] p-3">—</td>
-                    <td className="border border-[#222227] p-3">$8,000 - $18,000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <p className="text-[#B4B4B8] mb-4">
+              Interior painting is usually quoted per room or for the whole house rather than at a flat rate
+              per square metre. A per-m² figure quoted before anyone has seen the property tends to be
+              misleading, because the things that actually move the price are not floor area:
+            </p>
+
+            <ul className="list-disc pl-6 text-[#B4B4B8] space-y-2 mb-6">
+              <li><strong>Wall and ceiling condition</strong> — filling, sanding and priming is where the hours go</li>
+              <li><strong>Whether ceilings and trim are included</strong> — cutting in doors, skirting and architraves is slow work</li>
+              <li><strong>Colour change</strong> — going dark to light can need a third coat across the whole job</li>
+              <li><strong>Room count and ceiling height</strong> — not the same thing as total square metres</li>
+              <li><strong>Finish level</strong> — a low-sheen wall and a gloss trim are different jobs</li>
+            </ul>
+
+            <p className="text-[#B4B4B8] mb-4">
+              As a budgeting guide, a whole-house interior repaint in Melbourne typically runs
+              <strong> $5,000 to $12,000 for a 3-bedroom home</strong> and
+              <strong> $8,000 to $18,000 for a 4-bedroom home</strong>.
+            </p>
+
+            <p className="text-[#B4B4B8] mb-6 italic">
+              These are indicative Melbourne ranges to help you budget. Every quote is priced after a site
+              visit — condition, access and scope move the number more than floor area does.
+            </p>
 
             <p className="text-[#B4B4B8] mb-4">
               Our <Link href="/services/interior-painting" className="text-[#D0A050] hover:underline">interior painting services</Link> include 
@@ -157,7 +143,7 @@ export default function HousePaintingCostMelbourne() {
             <p className="text-[#B4B4B8] mb-4">
               Our <Link href="/services/exterior-painting" className="text-[#D0A050] hover:underline">exterior painting services</Link> use 
               weather-resistant coatings designed for Melbourne's harsh UV and variable climate. We also offer 
-              <Link href="/services/roof-painting" className="text-[#D0A050] hover:underline"> roof painting</Link> from $3,500.
+              <Link href="/services/roof-painting" className="text-[#D0A050] hover:underline"> roof painting</Link>, quoted after an inspection of the roof.
             </p>
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Factors That Affect Painting Costs</h2>
@@ -165,7 +151,7 @@ export default function HousePaintingCostMelbourne() {
             <ul className="list-disc pl-6 text-[#B4B4B8] space-y-2 mb-6">
               <li><strong>Surface condition</strong> — Peeling paint, cracks, or water damage require more preparation</li>
               <li><strong>Number of coats</strong> — Dark-to-light colour changes may need 3+ coats</li>
-              <li><strong>Height & access</strong> — Multi-storey homes require scaffolding ($500-$2,000 extra)</li>
+              <li><strong>Height & access</strong> — Multi-storey homes need scaffolding or edge protection, which adds cost</li>
               <li><strong>Paint quality</strong> — Premium paints cost more but last 10-15 years vs. 5-7 for budget options</li>
               <li><strong>Trim & detail work</strong> — Heritage homes with ornate trim cost more due to detailed preparation</li>
               <li><strong>Location</strong> — Premium suburbs like <Link href="/painter-toorak" className="text-[#D0A050] hover:underline">Toorak</Link> and <Link href="/painter-brighton" className="text-[#D0A050] hover:underline">Brighton</Link> often have larger homes</li>

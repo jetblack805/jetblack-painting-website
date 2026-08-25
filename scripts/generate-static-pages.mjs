@@ -1870,7 +1870,9 @@ const articlePages = [
       {
         heading: "Interior Painting Costs in Melbourne",
         paragraphs: [
-          "Interior painting is typically priced per square metre or as a whole-room cost. Walls only (2 coats) run $20 to $35 per m², or $400 to $800 for a typical room. Walls plus ceiling run $25 to $45 per m², or $600 to $1,200 per room. A full room including walls, ceiling and trim runs $35 to $55 per m², or $800 to $1,500. A whole-house interior repaint typically costs $5,000 to $12,000 for a 3-bedroom home, or $8,000 to $18,000 for a 4-bedroom home.",
+          "Interior painting is usually quoted per room or for the whole house rather than at a flat rate per square metre. A per-m² figure quoted before anyone has seen the property tends to be misleading, because the things that actually move the price are not floor area: wall and ceiling condition, whether ceilings and trim are included, whether you are changing colour dramatically, room count and ceiling height, and the finish level you choose.",
+          "As a budgeting guide, a whole-house interior repaint in Melbourne typically runs $5,000 to $12,000 for a 3-bedroom home and $8,000 to $18,000 for a 4-bedroom home.",
+          "These are indicative Melbourne ranges to help you budget. Every quote is priced after a site visit — condition, access and scope move the number more than floor area does.",
           "Our interior painting services include thorough preparation — filling holes, sanding, priming — premium Dulux or Taubmans paint, and a spotless cleanup.",
         ],
       },
@@ -1878,7 +1880,7 @@ const articlePages = [
         heading: "Exterior Painting Costs in Melbourne",
         paragraphs: [
           "A small single-storey home under 150m² typically costs $4,000 to $8,000 for walls, fascia and gutters. A medium double-storey home between 150 and 250m² typically costs $8,000 to $15,000, including trim. A large home over 250m² typically costs $15,000 to $30,000+ for a full exterior package.",
-          "Our exterior painting services use weather-resistant coatings designed for Melbourne's harsh UV and variable climate. We also offer roof painting from $3,500.",
+          "Our exterior painting services use weather-resistant coatings designed for Melbourne's harsh UV and variable climate. We also offer roof painting, quoted after an inspection of the roof.",
         ],
       },
       {
@@ -1887,7 +1889,7 @@ const articlePages = [
         items: [
           { title: "Surface condition", body: "Peeling paint, cracks, or water damage require more preparation." },
           { title: "Number of coats", body: "Dark-to-light colour changes may need 3+ coats." },
-          { title: "Height & access", body: "Multi-storey homes require scaffolding ($500-$2,000 extra)." },
+          { title: "Height & access", body: "Multi-storey homes need scaffolding or edge protection, which adds cost." },
           { title: "Paint quality", body: "Premium paints cost more but last 10-15 years vs. 5-7 for budget options." },
           { title: "Trim & detail work", body: "Heritage homes with ornate trim cost more due to detailed preparation." },
           { title: "Location", body: "Premium suburbs like Toorak and Brighton often have larger homes." },
@@ -1921,7 +1923,7 @@ const articlePages = [
       },
       {
         question: "Do you charge extra for scaffolding on multi-storey homes?",
-        answer: "Yes, multi-storey homes that need scaffolding for safe access typically add $500 to $2,000 to the job, depending on the height and complexity of the property. This is itemised in your written quote rather than hidden in the total.",
+        answer: "Multi-storey homes often need scaffolding or edge protection for safe access, and that adds to the cost. How much depends on the height, the ground conditions and how much of the building needs to be reached, so we price it after seeing the property. It is itemised in your written quote rather than hidden in the total.",
       },
     ],
   },
@@ -2019,8 +2021,8 @@ const articlePages = [
       {
         heading: "Cost Comparison",
         paragraphs: [
-          "Cabinet resurfacing typically costs $3,500 to $8,000 and takes 3 to 5 days, with minimal disruption to your household. A full kitchen renovation typically costs $25,000 to $60,000+ and takes 4 to 8 weeks, with major disruption.",
-          "That's a saving of up to 85% compared to a full renovation, with results that look just as good.",
+          "Cabinet resurfacing typically costs $3,500 to $8,000 and takes 3 to 5 days, with minimal disruption to your household. A full kitchen renovation typically costs $15,000 to $60,000 depending on size and finish, and takes 4 to 8 weeks with major disruption.",
+          "That's a substantial saving compared with a full renovation, with results that look just as good.",
         ],
       },
       {
@@ -2052,7 +2054,7 @@ const articlePages = [
     faqs: [
       {
         question: "How much can I save by resurfacing instead of replacing my kitchen?",
-        answer: "Cabinet resurfacing typically costs $3,500 to $8,000 compared to $25,000 to $60,000+ for a full kitchen renovation — a saving of up to 85% — because your cabinet boxes, layout and benchtops stay in place.",
+        answer: "Cabinet resurfacing typically costs $3,500 to $8,000 compared with $15,000 to $60,000 depending on size and finish for a full kitchen renovation — a fraction of the cost — because your cabinet boxes, layout and benchtops stay in place.",
       },
       {
         question: "Can any kitchen cabinets be resurfaced?",

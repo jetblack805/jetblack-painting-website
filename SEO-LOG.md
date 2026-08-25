@@ -1412,3 +1412,98 @@ bar is React-rendered, so the gap should be small — but phone conversions will
 colourway.com.au could **not** be fetched, on three attempts across two tools — the proxy logged 403 CONNECT
 denials at 09:14 and 09:30. Their placement in Jimmy's screenshot is a **Sponsored Result**, i.e. a Google
 Ad, not an organic ranking. No conclusions were drawn about their site beyond what the screenshot shows.
+
+---
+
+## 2026-08-25 — Homepage, Mordialloc, and the two under-built affluent pages
+
+Jimmy asked for the homepage, Mordialloc, and the high-income suburbs. Flagged at the time: he moved
+Toorak/Kew/Camberwell/Hawthorn/Malvern to off-page channels on 2026-08-17 because they sit at positions
+79–95 and are organically unreachable, so content there is the least likely part of this to move anything.
+Proceeded on his instruction, doing the pages that actually earn clicks first.
+
+### An eighth invented price — missed yesterday
+
+The homepage FAQ carried **"Interior painting typically starts from $1,500 for a standard room. Full
+exterior painting for an average home ranges from $4,000–$10,000."** In the visible copy *and* in the
+homepage `FAQPage` JSON-LD.
+
+Yesterday's sweep sampled `public/**/index.html`. **The homepage is served from `client/index.html`, which
+is not under `public/`** — so it was never scanned. The claim also contradicted the cost page, which had
+just had its per-room rates removed.
+
+Replaced in both places with an answer consistent with the corrected cost guide: whole-house interior
+$5,000–12,000 for a 3-bedroom home, exterior $4,000–8,000 single-storey / $8,000–15,000 double-storey,
+priced after a site visit. Every dollar figure on the homepage now matches a range that survived
+yesterday's cull.
+
+### Homepage: 584 → 892 crawler-visible words
+
+The static homepage — what non-rendering crawlers read — ran **584 words against 1,300–1,500 on the suburb
+pages**, and said almost nothing about where the business operates from. The React homepage has thirteen
+sections; the thin layer was the crawlable one.
+
+Added a **"Based in Mordialloc"** section covering the service-area model, why proximity matters on a repaint
+(site visits, weather-driven scheduling, returning under the guarantee), and what thirteen years on this side
+of Melbourne means for reading a property — bayside salt exposure, weatherboard needing bare-timber priming,
+period trim through Glen Eira and Stonnington. This is missing information rather than padding: local
+proximity is the signal that feeds Maps prominence, and **Maps is where this business's calls actually come
+from** (5 phone calls from 328 GBP views in 88 days, against zero clicks on every non-brand organic query).
+
+### Mordialloc: nothing added, deliberately
+
+The page already opens *"Mordialloc is our home. Jetblack Painting is based here in the 3195"* and runs
+1,368 words across coastal weather, the fishing-village housing stock around the pier and creek, the boat
+and bowls clubs, and Main Street commercial. It was in the readability rewrite (PR #202). It sits at
+position 19.05 with 2 clicks — one of the few pages earning any.
+
+It also has **26 inbound internal links, the most of any page on the site**, and the worst position of the
+tracked eleven. Adding words to it would be padding. Nothing changed.
+
+### Kew and Malvern: a real structural gap, now closed
+
+Not "these pages are short" — they were **built to a lesser template than their siblings**:
+
+| | Words | FAQs | Custom sections |
+| --- | --- | --- | --- |
+| Kew *(before)* | 943 | **3** | **2** |
+| Malvern *(before)* | 952 | **3** | **2** |
+| Toorak / Hawthorn / Brighton / Mordialloc | 1,297–1,487 | 5–6 | 4 |
+| Kew *(after)* | **1,457** | **5** | **4** |
+| Malvern *(after)* | **1,407** | **5** | **4** |
+
+Both pages were also generic — "prestige", "elevated expectations" — where the strong pages are concrete
+about the work. The new sections follow the strong pages:
+
+- **Kew** — access on double-storey homes on the slope toward Studley Park and the Yarra, where a house is
+  two storeys from the footpath and three off the ground at the rear; and what sits under the old paint on a
+  period home, including lead-based paint in pre-1970 stock (identify, contain, wet methods, no dry sanding
+  or heat guns, and say so plainly when removal is specialist work rather than pressing on).
+- **Malvern** — the surfaces these houses actually have (roughcast render holding dirt and drinking paint,
+  timber fretwork needing to come back to a sound edge, bungalow eaves sheltering one elevation while
+  another is fully exposed); and painting a home that is still occupied — staging, containment, protecting
+  leadlight and fixed joinery.
+
+Also fixed on Kew, both pre-existing: **US spelling** (`specialize`/`Specializing` → `specialise`/
+`Specialising`) against the site's Australian English, and a sentence starting lowercase mid-answer.
+
+### Gates
+
+| Check | Result |
+| --- | --- |
+| Pages · FAQ questions | 117 · **489** (was 485) |
+| Schema vs visible text | **0 problems** |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0 |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 |
+| Descriptions over 158 | 0 |
+| Near-duplicate avg · worst | **25.6% · 46.1%** — unchanged, still under 45%/55% |
+| All three generators re-run | static, markdown, known-paths |
+
+### Access — asked how to unblock the sandbox
+
+The network policy is set per-environment in Claude Code on the web
+(https://code.claude.com/docs/en/claude-code-on-the-web). Highest value first:
+**`registry.npmjs.org`** — it is the reason `pnpm install` fails, which is why every change this week has
+shipped without a typecheck or a local build and "Cloudflare is the real gate" keeps appearing in these
+notes. Then `google.com` + `googletagmanager.com` (verify the GA4 events, check rankings), `bing.com`,
+`api.indexnow.org`, and competitor domains.

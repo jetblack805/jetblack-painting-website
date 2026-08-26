@@ -72,7 +72,7 @@ Yes — Waterways is a modern master-planned estate, so almost every home here i
 
 ### Does being on the wetlands affect the paintwork?
 
-It does. Homes fronting the lakes and wetlands in Waterways sit in a damper, more exposed setting, so south and west-facing walls, eaves and fences pick up mould and weathering faster. We wash and treat those surfaces before painting and use mould-resistant exterior systems so the finish holds up.
+Being on the wetlands does affect the paintwork. Homes fronting the lakes and wetlands in Waterways sit in a damper, more exposed setting, so south and west-facing walls, eaves and fences pick up mould and weathering faster. We wash and treat those surfaces before painting and use mould-resistant exterior systems so the finish holds up.
 
 ### Can you match the estate's existing colour scheme?
 

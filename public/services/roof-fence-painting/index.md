@@ -70,7 +70,7 @@ Yes, and it's usually the cheaper way to do it. The access equipment, the site s
 
 ### Should timber be painted, stained or oiled?
 
-It depends on the timber and how much upkeep you want. Paint gives the longest protection and full colour control, but once timber is painted it stays painted — stripping it back later is a big job. Stain lets the grain show and weathers back gradually rather than peeling. Hardwoods like merbau are usually oiled instead, because paint struggles to hold on their dense, oily surface.
+Whether to paint, stain or oil depends on the timber and how much upkeep you want. Paint gives the longest protection and full colour control, but once timber is painted it stays painted — stripping it back later is a big job. Stain lets the grain show and weathers back gradually rather than peeling. Hardwoods like merbau are usually oiled instead, because paint struggles to hold on their dense, oily surface.
 
 ### Can Colorbond fences and roofs be painted?
 

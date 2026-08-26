@@ -72,7 +72,7 @@ Yes — Endeavour Hills was built out largely through the 1980s and 90s, so bric
 
 ### Do the sloping blocks in Endeavour Hills make exterior painting harder?
 
-They can. Endeavour Hills has genuinely hilly terrain, and split-level homes on sloping blocks often mean high walls, awkward access and double-height gable ends. We plan access and scaffolding as part of the quote rather than treating it as an extra, so the price you're given accounts for the site.
+Sloping blocks can make exterior painting harder. Endeavour Hills has genuinely hilly terrain, and split-level homes on sloping blocks often mean high walls, awkward access and double-height gable ends. We plan access and scaffolding as part of the quote rather than treating it as an extra, so the price you're given accounts for the site.
 
 ### Can you paint the interior while we stay in the house?
 

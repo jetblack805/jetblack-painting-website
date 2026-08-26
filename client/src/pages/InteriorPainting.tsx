@@ -54,7 +54,7 @@ export default function InteriorPainting() {
     },
     {
       question: "How much does interior painting cost in Melbourne?",
-      answer: "It depends on the number of rooms, the condition of the walls and ceilings, whether you're changing colour significantly, and the finish level you choose. Those factors move the price more than room size alone, so we quote after a site visit rather than a rate sight-unseen. Quotes are free — call 0432 077 782."
+      answer: "Interior painting cost depends on the number of rooms, the condition of the walls and ceilings, whether you're changing colour significantly, and the finish level you choose. Those factors move the price more than room size alone, so we quote after a site visit rather than a rate sight-unseen. Quotes are free — call 0432 077 782."
     },
     {
       question: "Do you paint ceilings as well as walls?",

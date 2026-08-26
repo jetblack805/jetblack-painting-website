@@ -20,7 +20,13 @@ Our interior painting services include thorough preparation — filling holes, s
 
 ## Exterior Painting Costs in Melbourne
 
-A small single-storey home under 150m² typically costs $4,000 to $8,000 for walls, fascia and gutters. A medium double-storey home between 150 and 250m² typically costs $8,000 to $15,000, including trim. A large home over 250m² typically costs $15,000 to $30,000+ for a full exterior package.
+| Home Size | Price Range | Includes |
+| --- | --- | --- |
+| Small (single storey, under 150m²) | $4,000 - $8,000 | Walls, fascia, gutters |
+| Medium (double storey, 150-250m²) | $8,000 - $15,000 | Walls, fascia, gutters, trim |
+| Large (250m²+) | $15,000 - $30,000+ | Full exterior package |
+
+These are indicative Melbourne ranges to help you budget. Every quote is priced after a site visit — condition, access and scope move the number more than floor area does.
 
 Our exterior painting services use weather-resistant coatings designed for Melbourne's harsh UV and variable climate. We also offer roof painting, quoted after an inspection of the roof.
 

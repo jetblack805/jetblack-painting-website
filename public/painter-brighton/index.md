@@ -98,7 +98,7 @@ Absolutely. All our painters are fully licensed, and we carry $10 million in pub
 
 ### Do I need a permit to repaint a heritage-overlay home in Brighton?
 
-It depends on the colour and the element. Bayside's heritage overlay generally controls what's visible from the street on a contributory building — repainting an existing colour scheme like-for-like is usually exempt, but a significant colour change to a street-facing facade, or work to original render detailing and joinery, can trigger a planning permit. We check the specific overlay and property grading before quoting and tell you plainly whether a permit applies, rather than assuming either way.
+Whether a permit is needed depends on the colour and the element. Bayside's heritage overlay generally controls what's visible from the street on a contributory building — repainting an existing colour scheme like-for-like is usually exempt, but a significant colour change to a street-facing facade, or work to original render detailing and joinery, can trigger a planning permit. We check the specific overlay and property grading before quoting and tell you plainly whether a permit applies, rather than assuming either way.
 
 ### Can you paint a brand new architect-built home in Brighton, not just heritage restorations?
 

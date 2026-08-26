@@ -67,7 +67,7 @@ Yes. Jetblack Painting is fully licensed and carries $10 million public liabilit
 
 ### How much does commercial painting cost in Melbourne?
 
-It depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.
+Commercial painting cost depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.
 
 ### How long will a commercial repaint take?
 

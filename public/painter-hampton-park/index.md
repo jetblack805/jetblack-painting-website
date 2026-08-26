@@ -76,7 +76,7 @@ Yes. Hampton Park has a lot of investment properties, and a fast, clean repaint 
 
 ### How much does it cost to repaint a home in Hampton Park?
 
-It depends on the size of the home, how much preparation the surfaces need and whether it's interior, exterior or both. Rather than quote a number blind, we visit the property, assess the actual condition and give you a free written quote itemising preparation, coats and products.
+Repainting cost depends on the size of the home, how much preparation the surfaces need and whether it's interior, exterior or both. Rather than quote a number blind, we visit the property, assess the actual condition and give you a free written quote itemising preparation, coats and products.
 
 ### Do you offer free quotes in Hampton Park?
 

@@ -1578,3 +1578,90 @@ no PII. **Unverified against GA4 itself**: googletagmanager.com is egress-blocke
 DebugView before any ad spend. An eighth invented price removed from the homepage, which yesterday's sweep
 missed because the homepage serves from `client/index.html`, outside `public/`. Homepage 584 → 892
 crawler-visible words. Kew and Malvern brought from 3 FAQs / 2 sections to 5 / 4, matching their siblings.
+
+---
+
+## 2026-08-26 — AEO Pillar 3: tables in the crawlable layer, and pronoun elimination
+
+Jimmy supplied an AEO audit playbook (four pillars). Pillars 1 and 2 were already satisfied — see the
+2026-08-24 entry: all AI crawlers allowed, TTFB 0.23–0.41s, pre-rendered static HTML, markdown twins via
+Accept negotiation, and a JSON-LD graph of 225 WebPage / 117 BreadcrumbList / 113 FAQPage / 105 Service /
+96 LocalBusiness / 7 BlogPosting / 3 HowTo with a seven-profile `sameAs`.
+
+**Pillar 3 was where the document earned its keep.** Two measured gaps, both now closed.
+
+### Gap 1 — no tables reached crawlers or AI agents
+
+`/blog/house-painting-cost-melbourne/` and `/blog/kitchen-cabinet-resurfacing-vs-replacement/` each carried
+a `<table>` in their React source, but the static generator had **no table section type** — it flattened the
+same figures into a paragraph. Crawlers, and every AI agent reading the markdown twins, saw prose:
+
+> "A small single-storey home under 150m² typically costs $4,000 to $8,000 for walls, fascia and gutters…"
+
+That was both an AEO gap (retrieval engines extract tables well and prose poorly) and a **React/static parity
+violation**, which the repo's own rules forbid.
+
+Added a `table` section type to `pageHtml` in `generate-static-pages.mjs` — real `<thead>`/`<tbody>` markup
+plus CSS — and a `tableToMd` converter in `generate-markdown.mjs` emitting GitHub-flavoured tables, with
+`table` added to the block walk. Cell pipes are escaped so a cell cannot break the row. The section type also
+accepts trailing `paragraphs`, so the caveat and service prose still follow the table.
+
+Both posts converted to real tables, matching their React source exactly. Markdown twins now carry 5 and 4
+table rows respectively where they previously carried none.
+
+**Drift caught in passing:** the generator's kitchen-post intro still read "a $30,000+ kitchen renovation"
+— the React copy was corrected on 2026-08-25 but the generator's was missed. Now consistent.
+
+### Gap 2 — 23 FAQ answers opened with an unresolvable pronoun
+
+Retrieved as a standalone chunk, *"It depends on the timber and how much upkeep you want"* has lost its
+subject entirely. Same for *"It can be. Homes built before 1970…"* and *"That is almost always mould and
+lichen…"*. Every one now opens with the subject:
+
+| Was | Now |
+| --- | --- |
+| "It depends on the timber…" | "Whether to paint, stain or oil depends on the timber…" |
+| "It can be. Homes built before 1970…" | "Lead paint can be a concern on older ${suburb} homes. Homes built before 1970…" |
+| "That is almost always mould and lichen…" | "Green or black growth on a shaded wall is almost always mould and lichen…" |
+| "It will hide fine surface cracking…" | "The coating will hide fine surface cracking…" |
+
+Only the leading clause changed, so answer length and the rest of the copy are untouched.
+
+**"We" openings were deliberately left alone.** An initial scan flagged 58 answers, but "We paint all common
+property…" resolves perfectly well in an isolated chunk — "we" is the business, recoverable from context.
+Rewriting 35 of those would have been churn. The genuinely broken ones were **It / They / That / This**, where
+the subject is the thing being asked about.
+
+Five of the 23 live in both layers (service and blog FAQs exist in the `.tsx` **and** in the generator's
+arrays); both copies were edited.
+
+**Result: 0 of 489 answers now open with an ambiguous pronoun.**
+
+### Deliberately not done
+
+- **Answer length forced to 40–60 words.** 45% already sit in the band and the median is 49 — well-centred.
+  Padding 137 short answers and trimming 129 long ones to hit a heuristic is word-count work in two layers,
+  which the standing brief forbids.
+- **Wikidata / Wikipedia / Crunchbase in `sameAs`** (Pillar 2). Both Wikidata and Wikipedia have notability
+  bars a local painting business will not clear, and Crunchbase is for funded startups. Thin entries created
+  to game entity linking are worse than none.
+- **Pillar 4 off-page.** G2 and Capterra are software review sites — the playbook is written for SaaS. Reddit
+  and Quora only count with genuine participation; manufacturing posts is astroturfing. YouTube transcripts
+  are a real opportunity (@jetblackpaint exists) but need video, not code. "Co-occurrence" is the standing
+  authority problem restated.
+
+**Score against the document's own tiers: Green (70–89%) — AI-Ready.** Sapphire requires Wikidata mapping
+and multi-engine citation dominance, neither appropriate here.
+
+### Gates
+
+| Check | Result |
+| --- | --- |
+| Pages · FAQ questions | 117 · 489 |
+| Ambiguous pronoun openings | **0** (was 23 in source) |
+| Schema vs visible text | **0 problems** |
+| JSON-LD errors · missing fields · aggregateRating in static | 0 · 0 · 0 |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 |
+| Descriptions over 158 | 0 |
+| Near-duplicate avg · worst | **25.5% · 45.8%** — both improved (gates 45% / 55%) |
+| Parse | 17 `.tsx` files + both generators clean |

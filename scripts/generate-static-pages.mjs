@@ -424,6 +424,27 @@ ${section.items
   </section>`;
       }
 
+      // A real <table> in the crawlable layer, not prose. Two blog posts carried
+      // <table> markup in their React source while the static twin flattened the
+      // same figures into a paragraph, so crawlers and AI agents never saw the
+      // structure. Retrieval engines extract tables well and prose poorly, and
+      // the two layers are supposed to agree — this closes both gaps at once.
+      if (section.type === "table") {
+        return `  <section>
+    <h2>${escapeHtml(section.heading)}</h2>
+    ${section.body ? `<p>${escapeHtml(section.body)}</p>` : ""}
+    <table>
+      <thead>
+        <tr>${section.columns.map((c) => `<th>${escapeHtml(c)}</th>`).join("")}</tr>
+      </thead>
+      <tbody>
+${section.rows.map((row) => `        <tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("\n")}
+      </tbody>
+    </table>
+${(section.paragraphs || []).map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).join("\n")}
+  </section>`;
+      }
+
       if (section.type === "steps") {
         return `  <section>
     <h2>${escapeHtml(section.heading)}</h2>
@@ -481,6 +502,9 @@ ${schemaScripts}
     h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:20px;margin-bottom:8px;color:#FCFCFC}
     a{color:#D0A050}
     ul,ol{padding-left:20px}
+    table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+    th,td{border:1px solid rgba(255,255,255,0.14);padding:10px 12px;text-align:left}
+    th{background:#101012;color:#FCFCFC;font-weight:700}
     footer{font-size:14px;color:#98989D;border-top:1px solid rgba(255,255,255,0.1)}
   </style>
 </head>
@@ -1085,7 +1109,7 @@ const servicePages = [
       { question: "How long does interior painting take?", answer: "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required. A single room is usually a day or two; a full home repaint is staged across a working week or more." },
       { question: "Do I need to move out during interior painting?", answer: "No. We stage the work room by room, use low-odour premium paints, and keep living areas usable throughout the project. Most households stay in the home for the full job." },
       { question: "Which paint brands do you use for interiors?", answer: "We use premium Australian brands including Dulux and Taubmans, matched to each surface and traffic level — washable low-sheen for living areas, durable enamels for trims and doors." },
-      { question: "How much does interior painting cost in Melbourne?", answer: "It depends on the number of rooms, the condition of the walls and ceilings, whether you're changing colour significantly, and the finish level you choose. Those factors move the price more than room size alone, so we quote after a site visit rather than a rate sight-unseen. Quotes are free — call 0432 077 782." },
+      { question: "How much does interior painting cost in Melbourne?", answer: "Interior painting cost depends on the number of rooms, the condition of the walls and ceilings, whether you're changing colour significantly, and the finish level you choose. Those factors move the price more than room size alone, so we quote after a site visit rather than a rate sight-unseen. Quotes are free — call 0432 077 782." },
       { question: "Do you paint ceilings as well as walls?", answer: "Yes. Ceiling painting is included where specified — flat or low-sheen finishes are standard, and we address any cracking, water staining or previous patch repairs as part of the preparation." },
       { question: "Can you match or change to a completely different colour?", answer: "Yes. Significant colour changes — especially dark to light — sometimes need a tinted primer or an extra coat for even coverage. We account for this in the quote so there are no surprises once the job starts." },
       { question: "Do you paint rental properties between tenants?", answer: "Yes. We regularly repaint rental properties for landlords and property managers between tenancies, working to a fixed turnaround with durable, easy-clean finishes in neutral colours that suit the widest range of tenants." },
@@ -1247,7 +1271,7 @@ const servicePages = [
       { question: "Can you paint outside business hours to avoid disruption?", answer: "Yes. We regularly complete commercial painting after hours, overnight and on weekends so trading isn't disrupted. The staging is agreed before we start, so you know which areas are affected and when they're back in use." },
       { question: "What types of commercial premises do you paint?", answer: "Offices, retail and hospitality fit-outs, warehouses and industrial units, and strata and body-corporate common areas across Melbourne. Coatings and access are matched to the building rather than applied from a standard template." },
       { question: "Are you licensed and insured for commercial work?", answer: "Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and we can provide documentation for building managers, owners corporations and site inductions before work begins." },
-      { question: "How much does commercial painting cost in Melbourne?", answer: "It depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782." },
+      { question: "How much does commercial painting cost in Melbourne?", answer: "Commercial painting cost depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782." },
       { question: "How long will a commercial repaint take?", answer: "A single office suite or shopfront is usually a few days; a warehouse or a staged multi-area repaint runs longer, and after-hours work spreads the same hours across more calendar days. You get a schedule with the quote, including which zones are affected on which days." },
       { question: "Can you paint while staff and customers are still on site?", answer: "Yes, and much of our commercial work is done in occupied premises. We zone the work so only one area is affected at a time, keep access ways safe and clear, use low-odour water-based products where the specification allows, and leave each area clean at the end of every shift." },
       { question: "What paint do you use on commercial buildings?", answer: "Premium Dulux and Taubmans commercial systems, specified to the surface and the traffic it takes — washable low-sheen for corridors and offices, hard-wearing enamels or two-pack on doors, frames and handrails, and appropriate primers for steel, block and previously unsealed substrates. The products are named in your written quote." },
@@ -1309,7 +1333,7 @@ const servicePages = [
     ],
     faqs: [
       { question: "Can you do the roof and fences in one project?", answer: "Yes, and it's usually the cheaper way to do it. The access equipment, the site setup and the weather window are shared across both, so quoting them together costs less than booking two separate jobs — and the exterior reads as one finished thing from the street rather than a new roof above a tired fence." },
-      { question: "Should timber be painted, stained or oiled?", answer: "It depends on the timber and how much upkeep you want. Paint gives the longest protection and full colour control, but once timber is painted it stays painted — stripping it back later is a big job. Stain lets the grain show and weathers back gradually rather than peeling. Hardwoods like merbau are usually oiled instead, because paint struggles to hold on their dense, oily surface." },
+      { question: "Should timber be painted, stained or oiled?", answer: "Whether to paint, stain or oil depends on the timber and how much upkeep you want. Paint gives the longest protection and full colour control, but once timber is painted it stays painted — stripping it back later is a big job. Stain lets the grain show and weathers back gradually rather than peeling. Hardwoods like merbau are usually oiled instead, because paint struggles to hold on their dense, oily surface." },
       { question: "Can Colorbond fences and roofs be painted?", answer: "Yes. Colorbond and Zincalume take a new colour well, but they need different preparation from timber — a thorough wash to remove chalked factory coating, a scuff to give the surface a key, and a primer made for metal. Skipping any of that is why repainted Colorbond sometimes peels in sheets a year later." },
       { question: "Does my fence need repairs before painting?", answer: "Often, yes. Loose or rotted palings, popped nails and posts that have shifted all get dealt with before any coating goes on — paint doesn't hold a failing fence together. The bottom of a timber fence fails first because ground moisture wicks up into the end grain, so that's the first place we check at the quote." },
       { question: "Do you paint both sides of the fence?", answer: "Where we can get access, yes — and it's worth doing, because a fence coated on one side only weathers unevenly and can cup. A boundary fence needs your neighbour's agreement for us to work on their side, so it's worth asking them before the quote rather than after we're booked in." },
@@ -1492,7 +1516,7 @@ const servicePages = [
       { question: "Are you insured for body corporate and strata work?", answer: "Absolutely. Jetblack Painting carries $10 million public liability insurance and follows proper site safety and access procedures. We're happy to provide insurance certificates, safe work documentation and detailed scopes for committees and building managers before work begins." },
       { question: "What does a committee actually need to approve the work?", answer: "A detailed written scope broken down by area, a clear price, and our insurance documentation — that's what lets a committee move from discussion to a decision without a second round of questions. We prepare the quote so it can go straight into an AGM or committee meeting agenda, itemised enough that owners can see exactly what's included before they vote on it." },
       { question: "Can the work be staged across a large building or multiple buildings?", answer: "Yes. Staging is standard on occupied strata property, not an exception — we typically work wing by wing or level by level so entries, stairwells and car park access stay usable throughout, rather than closing the whole building down for the length of the project. For multi-building complexes, we can quote the works as a single staged program or building by building, whichever suits the committee's budget and timing." },
-      { question: "What access equipment do you use for multi-storey buildings?", answer: "It depends on the building's height and site constraints — scaffolding, elevated work platforms or scissor lifts, chosen for what the specific façade and access conditions actually need rather than a default option. We factor site access, boom reach and any strata bylaws around common property access into the quote up front, so there's no surprise equipment cost once work starts." },
+      { question: "What access equipment do you use for multi-storey buildings?", answer: "The access equipment depends on the building's height and site constraints — scaffolding, elevated work platforms or scissor lifts, chosen for what the specific façade and access conditions actually need rather than a default option. We factor site access, boom reach and any strata bylaws around common property access into the quote up front, so there's no surprise equipment cost once work starts." },
       { question: "How do you communicate with residents during the project?", answer: "Through the committee or strata manager, with a schedule they can circulate to owners and tenants ahead of time — which areas are affected and when, so residents aren't caught off guard by scaffolding or a closed stairwell. Low-odour products are used as standard in occupied common areas, and access ways are kept safe and usable throughout rather than closed off entirely." },
     ],
   },
@@ -1550,7 +1574,7 @@ const servicePages = [
       { question: "How long before I can walk on it and park on it?", answer: "Foot traffic and vehicle traffic return at different times, and both depend on the coating system and the temperature while it cures. Vehicle traffic always waits considerably longer than foot traffic, because a tyre puts far more stress on a coating that hasn't fully hardened than a shoe does. We give you the exact timings for your floor and the conditions on the day as part of the quote, rather than a general figure that may not apply." },
       { question: "What's the difference between epoxy coating and concrete resurfacing?", answer: "Coating puts a new wearing surface on top of a sound slab, while resurfacing rebuilds the surface of a slab that's damaged. If the concrete is structurally fine but stained, dusty or tired, a coating is the right answer. If the surface itself is spalling, pitted or has been patched repeatedly, it needs making good before any coating goes on — otherwise the new finish just follows the shape of the damage underneath." },
       { question: "Do you do warehouse and commercial floors as well as domestic garages?", answer: "Yes, both. The difference is mostly scale, access and downtime rather than the finish itself — a warehouse floor has to be staged around the business still operating, and a retail or showroom floor usually has to be done outside trading hours. We work to a schedule agreed up front so you know exactly when the space is out of use." },
-      { question: "Will the coating hide cracks in my concrete?", answer: "It will hide fine surface cracking, but it will not fix a moving crack. A crack that's still moving will telegraph straight back through a new coating, sometimes within months, so it has to be cut out and filled properly first rather than coated over. We'd rather point that out at the quote than have it reappear through a finished floor." },
+      { question: "Will the coating hide cracks in my concrete?", answer: "The coating will hide fine surface cracking, but it will not fix a moving crack. A crack that's still moving will telegraph straight back through a new coating, sometimes within months, so it has to be cut out and filled properly first rather than coated over. We'd rather point that out at the quote than have it reappear through a finished floor." },
     ],
   },
 ];
@@ -1878,8 +1902,15 @@ const articlePages = [
       },
       {
         heading: "Exterior Painting Costs in Melbourne",
+        type: "table",
+        columns: ["Home Size", "Price Range", "Includes"],
+        rows: [
+          ["Small (single storey, under 150m²)", "$4,000 - $8,000", "Walls, fascia, gutters"],
+          ["Medium (double storey, 150-250m²)", "$8,000 - $15,000", "Walls, fascia, gutters, trim"],
+          ["Large (250m²+)", "$15,000 - $30,000+", "Full exterior package"],
+        ],
         paragraphs: [
-          "A small single-storey home under 150m² typically costs $4,000 to $8,000 for walls, fascia and gutters. A medium double-storey home between 150 and 250m² typically costs $8,000 to $15,000, including trim. A large home over 250m² typically costs $15,000 to $30,000+ for a full exterior package.",
+          "These are indicative Melbourne ranges to help you budget. Every quote is priced after a site visit — condition, access and scope move the number more than floor area does.",
           "Our exterior painting services use weather-resistant coatings designed for Melbourne's harsh UV and variable climate. We also offer roof painting, quoted after an inspection of the roof.",
         ],
       },
@@ -2010,7 +2041,7 @@ const articlePages = [
     description:
       "Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting.",
     intro:
-      "Your kitchen cabinets are looking tired, but does that mean you need a $30,000+ kitchen renovation? Not necessarily. Kitchen cabinet resurfacing can transform your kitchen for a fraction of the cost — and Jetblack Painting specialises in premium 2-pack finishes that look brand new.",
+      "Your kitchen cabinets are looking tired, but does that mean you need a full kitchen renovation? Not necessarily. Kitchen cabinet resurfacing can transform your kitchen for a fraction of the cost — and Jetblack Painting specialises in premium 2-pack finishes that look brand new.",
     sections: [
       {
         heading: "What Is Kitchen Cabinet Resurfacing?",
@@ -2020,9 +2051,14 @@ const articlePages = [
       },
       {
         heading: "Cost Comparison",
+        type: "table",
+        columns: ["Option", "Average Cost", "Timeframe", "Disruption"],
+        rows: [
+          ["Cabinet Resurfacing", "$3,500 - $8,000", "3-5 days", "Minimal"],
+          ["Full Kitchen Renovation", "$15,000 - $60,000", "4-8 weeks", "Major"],
+        ],
         paragraphs: [
-          "Cabinet resurfacing typically costs $3,500 to $8,000 and takes 3 to 5 days, with minimal disruption to your household. A full kitchen renovation typically costs $15,000 to $60,000 depending on size and finish, and takes 4 to 8 weeks with major disruption.",
-          "That's a substantial saving compared with a full renovation, with results that look just as good.",
+          "That's a substantial saving compared with a full renovation, with results that look just as good. Renovation figures are an industry estimate, not a Jetblack price — resurfacing is quoted after seeing the kitchen.",
         ],
       },
       {

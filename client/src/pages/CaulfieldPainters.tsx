@@ -9,7 +9,7 @@ export default function CaulfieldPainters() {
     },
     {
       question: `Does traffic grime on Hawthorn Road or Glen Huntly Road affect paintwork?`,
-      answer: `It does. Facades fronting the busier ${suburb} arterials pick up a film of traffic grime and exhaust residue that ordinary rain does not shift. Painting over it stops the new coating bonding properly, so those elevations get a proper wash-down and, where needed, a sugar-soap clean before any primer goes on.`
+      answer: `Traffic grime does affect paintwork. Facades fronting the busier ${suburb} arterials pick up a film of traffic grime and exhaust residue that ordinary rain does not shift. Painting over it stops the new coating bonding properly, so those elevations get a proper wash-down and, where needed, a sugar-soap clean before any primer goes on.`
     },
     {
       question: `Do you paint apartment blocks and common areas in ${suburb}?`,

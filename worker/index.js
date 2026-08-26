@@ -245,7 +245,7 @@ export default {
     headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
 
     // Long-lived cache for immutable hashed assets (JS/CSS bundles with content hash in filename)
-    // and for stable public images (hero-background.jpg, og-image.jpg etc.)
+    // and for stable public images (og-image.jpg, hero-poolhouse.webp etc.)
     //
     // ⚠️ The previous pattern here was /\.[a-f0-9]{8,}\.(js|css|woff2?)$/ and it
     // never matched anything, so every bundle was served with the default

@@ -2,7 +2,6 @@
  * Design: Bold Contrast — Services section on light background
  * Card-based layout with real project photos and hover interactions
  */
-import { Home, Building2, Paintbrush, Fence, Key, Building, Layers } from "lucide-react";
 import { Link } from "wouter";
 import { useInView } from "@/lib/useInView";
 import imgInteriorPainting from "@/assets/images/service-interior-painting.webp";
@@ -19,9 +18,18 @@ import imgEpoxyFlakeFloor from "@/assets/images/gallery-commercial-epoxy-floor.w
 import imgEpoxyFlakeFloor900 from "@/assets/images/gallery-commercial-epoxy-floor-900.webp";
 
 type Service = {
-  icon: typeof Home;
-  title: string;
-  description: string;
+  /* Short, confident label — the visible card heading. Deliberately not
+     "Interior House Painting Melbourne": keyword-stuffed card labels read as a
+     trade directory, and the ranking work is done by the page <title>, the H1
+     and the crawler-facing service list in client/index.html, not by a grid
+     label a human reads. */
+  label: string;
+  /* One line. The old copy ran 5-6 lines per card and repeated "painting
+     Melbourne services" in nearly every one. */
+  lede: string;
+  /* Describes the photograph, not the service — better for screen readers and
+     for image search than reusing the heading. */
+  alt: string;
   image: string;
   /* Present only where a 900px variant exists; images already under ~90KB do
      not get one, since a second file would add a request without saving bytes. */
@@ -39,18 +47,18 @@ type Service = {
 
 const services: Service[] = [
   {
-    icon: Home,
-    title: "Interior House Painting Melbourne",
-    description: "Our professional interior painting Melbourne services transform your living spaces with flawless finishes. From walls and ceilings to detailed trims and doors, our expert painters deliver fresh, clean looks throughout your home. We proudly serve Mordialloc, Bayside, and all Melbourne suburbs with premium quality paints and meticulous attention to detail.",
+    label: "Interior Painting",
+    lede: "Walls, ceilings, trim and doors — cut in sharp, finished clean.",
+    alt: "Freshly painted interior hallway with white walls and timber flooring",
     image: imgInteriorPainting,
     imgW: 1050,
     imgH: 1400,
     link: "/services/interior-painting",
   },
   {
-    icon: Paintbrush,
-    title: "Exterior House Painting Melbourne",
-    description: "Boost your property's curb appeal with our expert exterior painting Melbourne services. We specialise in high-quality repaints for weatherboards, render, fascias, and gutters, using durable paints built to withstand Melbourne's varied weather. Our exterior house painters ensure long-lasting protection and a beautiful finish for homes in Mordialloc and Bayside.",
+    label: "Exterior Painting",
+    lede: "Weatherboard, render, fascia and gutters, prepared for Melbourne weather.",
+    alt: "Navy weatherboard home with white picket fence, repainted exterior",
     image: imgNavyWeatherboard,
     imageSmall: imgNavyWeatherboard900,
     imageWidth: 1050,
@@ -59,9 +67,9 @@ const services: Service[] = [
     link: "/services/exterior-painting",
   },
   {
-    icon: Building2,
-    title: "Commercial Painting Melbourne",
-    description: "Jetblack Painting provides professional commercial painting Melbourne services to keep your business premises looking their best. Our commercial painting contractors work with offices, retail shops, warehouses, and factories across Melbourne, ensuring high-quality results while minimising disruption to your daily operations.",
+    label: "Commercial",
+    lede: "Offices, retail and industrial — staged around your trading hours.",
+    alt: "Repainted commercial building exterior in charcoal and white",
     image: imgEpoxyFloor,
     imageSmall: imgEpoxyFloor900,
     imageWidth: 1400,
@@ -70,27 +78,27 @@ const services: Service[] = [
     link: "/services/commercial-painting",
   },
   {
-    icon: Fence,
-    title: "Roof & Fence Painting Melbourne",
-    description: "Complete your property's transformation with our specialised roof restoration and fence painting Melbourne services. We provide thorough preparation, high-quality priming, and expert finishing to ensure long-lasting protection and aesthetic appeal for homes in Mordialloc, Bayside, and throughout Melbourne.",
+    label: "Roof & Fence",
+    lede: "Roof restoration and fencing, coated for UV and salt exposure.",
+    alt: "Charcoal tiled roof after restoration and recoating",
     image: imgRoofFencePainting,
     imgW: 640,
     imgH: 480,
     link: "/services/roof-fence-painting",
   },
   {
-    icon: Key,
-    title: "Real Estate Painting Melbourne",
-    description: "Our real estate painting Melbourne services cover pre-sale repaints, rental and investment property refreshes, and property styling for agents, vendors, landlords and property managers. We deliver fast, sale-ready interior and exterior finishes with broad-appeal neutral colours, coordinating directly with agents and stylists so the property is ready for photography and open homes on schedule.",
+    label: "Real Estate & Pre-Sale",
+    lede: "Sale-ready finishes, timed to photography and the first open.",
+    alt: "Styled open-plan living room repainted in neutral tones before sale",
     image: imgOpenPlanLiving,
     imgW: 1206,
     imgH: 804,
     link: "/services/real-estate-painting",
   },
   {
-    icon: Building,
-    title: "Body Corporate Painting Melbourne",
-    description: "Jetblack Painting provides professional body corporate and strata painting Melbourne services for owners corporations and strata managers. We repaint common areas, hallways, stairwells and external façades with minimal disruption to residents — fully insured, with detailed scopes and clear schedules for committee approval.",
+    label: "Body Corporate & Strata",
+    lede: "Common property and façades, scoped and scheduled for committee sign-off.",
+    alt: "Heritage white apartment façade repainted along a Melbourne street",
     image: imgCommercialBuilding,
     imageSmall: imgCommercialBuilding900,
     imageWidth: 1400,
@@ -99,9 +107,9 @@ const services: Service[] = [
     link: "/services/body-corporate-painting",
   },
   {
-    icon: Layers,
-    title: "Epoxy Flooring Melbourne",
-    description: "Jetblack Painting installs decorative epoxy flake flooring, garage floor coatings and concrete resurfacing across Melbourne. We grind the slab back mechanically before anything is coated, then build the floor up in layers — flake, solid colour or clear-sealed concrete — for garages, warehouses, workshops and showrooms in Mordialloc, Bayside and throughout Melbourne.",
+    label: "Epoxy & Concrete Floors",
+    lede: "Slabs ground back, then built up in flake, solid colour or clear seal.",
+    alt: "Decorative epoxy flake floor in a finished warehouse space",
     image: imgEpoxyFlakeFloor,
     imageSmall: imgEpoxyFlakeFloor900,
     imageWidth: 1120,
@@ -123,23 +131,24 @@ export default function Services() {
           className={`reveal up max-w-2xl mb-16 ${header.visible ? "visible" : ""}`}
         >
           <span className="lux-eyebrow">
-            Professional Painting Services
+            What We Do
           </span>
           <h2
             className="text-3xl sm:text-4xl lg:text-5xl text-[#EDEDEF] leading-tight mb-5"
           >
-            Our Services
+            Every surface, one standard
           </h2>
           <p className="text-[#B4B4B8] text-lg leading-relaxed">
-            From residential repaints to large-scale commercial projects, Jetblack Painting
-            delivers professional results across all aspects of painting in Melbourne.
+            Interiors, exteriors, commercial sites and floors. The same preparation, the
+            same materials and the same person signing the job off &mdash; whether it is a
+            single room in Mordialloc or a strata façade in Brighton.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, idx) => (
-            <ServiceCard key={service.title} service={service} delay={idx * 0.1} />
+            <ServiceCard key={service.label} service={service} delay={idx * 0.1} />
           ))}
         </div>
       </div>
@@ -174,27 +183,20 @@ function ServiceCard({
                   sizes: "(max-width: 768px) 100vw, 33vw",
                 }
               : {})}
-            alt={service.title}
+            alt={service.alt}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B]/60 to-transparent" />
-          <div className="absolute bottom-4 left-4">
-            <div className="w-10 h-10 rounded bg-[#D0A050] flex items-center justify-center">
-              <service.icon className="w-5 h-5 text-white" />
-            </div>
-          </div>
         </div>
 
         {/* Content */}
         <div className="p-6">
           <h3
-            className="text-xl text-[#EDEDEF] mb-3 group-hover:text-[#D0A050] transition-colors"
+            className="text-xl text-[#EDEDEF] mb-2 group-hover:text-[#D0A050] transition-colors"
           >
-            {service.title}
+            {service.label}
           </h3>
-          <p className="text-[#A3A3A8] text-sm leading-relaxed">
-            {service.description}
-          </p>
+          <p className="text-[#A3A3A8] text-sm leading-relaxed">{service.lede}</p>
         </div>
       </div>
     </Link>

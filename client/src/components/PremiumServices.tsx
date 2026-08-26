@@ -4,22 +4,22 @@ import { useInView } from "@/lib/useInView";
 const featuredServices = [
   {
     title: "Interior Painting",
-    description: "Transform your living spaces with premium interior painting, sharp cutting-in and durable Dulux or Taubmans finishes.",
+    description: "Walls, ceilings, trim and doors. Filled, sanded and primed before a brush touches them, then cut in by hand.",
     link: "/services/interior-painting",
   },
   {
     title: "Exterior Painting",
-    description: "Protect and lift your home's exterior with proper washing, preparation, priming and weather-resistant coatings.",
+    description: "Weatherboard, render and brick. Washed back, made good and primed, then coated for Melbourne sun and salt air.",
     link: "/services/exterior-painting",
   },
   {
     title: "Kitchen Cabinet Resurfacing",
-    description: "Luxury 2-pack kitchen cabinet finishes. Save thousands compared with replacing the whole kitchen.",
+    description: "Doors and panels sprayed in 2-pack for a factory-flat finish, at a fraction of what a new kitchen costs.",
     link: "/services/kitchen-cabinet-resurfacing",
   },
   {
     title: "Roof Painting",
-    description: "Restore and protect your roof with professional roof painting and coating systems for Melbourne conditions.",
+    description: "Broken tiles replaced and ridge capping repointed before the coating goes on. Restoration first, paint second.",
     link: "/services/roof-painting",
   },
 ];
@@ -87,7 +87,7 @@ export default function PremiumServices() {
             Interior, Exterior, Commercial, Roof &amp; Cabinet Painting Services
           </p>
           <p className="text-lg text-[#A3A3A8]">
-            Wherever you are in Melbourne, Jetblack Painting has a local team that knows your area — from beachside weatherboards to heritage brick homes.
+            Working out of Mordialloc across Bayside, Kingston, Stonnington and the inner east — from beachside weatherboards to period brick homes.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function PremiumServices() {
           ref={areas.ref}
           className={`reveal up bg-[#060607] rounded-xl p-8 mb-16 ${areas.visible ? "visible" : ""}`}
         >
-          <h3 className="text-2xl text-[#EDEDEF] mb-6">Service Areas for Local &amp; Map Search</h3>
+          <h3 className="text-2xl text-[#EDEDEF] mb-6">Where We Work</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSuburbs.map((suburb) => (
               <Link key={suburb.name} href={suburb.link} className="flex items-center gap-2 hover:text-[#D0A050] transition-colors">

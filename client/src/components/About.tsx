@@ -73,8 +73,8 @@ export default function About() {
           >
             <span className="lux-eyebrow">Meet Jimmy</span>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.9rem] text-[#FCFCFC] leading-[1.18] mb-6">
-              Proudly local.{" "}
-              <span className="text-[#D0A050]">Passionate about perfection.</span>
+              Thirteen years.{" "}
+              <span className="text-[#D0A050]">One name on every job.</span>
             </h2>
             <p className="text-[#EDEDEF]/75 text-lg font-light leading-[1.8] mb-5">
               I'm Jimmy Demirci, founder and owner of Jetblack Painting. I started this

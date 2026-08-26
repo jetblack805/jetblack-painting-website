@@ -2,7 +2,7 @@
 <!-- Source: https://jetblackpainting.com/ -->
 <!-- Melbourne painters for interior, exterior, commercial and roof work. Servicing 90+ suburbs from Mordialloc. $10M insured, 5-year guarantee. Call 0432 077 782. -->
 
-## Premium Painting. Exceptional Results.
+## Preparation is the job. The finish is the proof.
 
 # Melbourne's Best-Rated Local House Painters
 

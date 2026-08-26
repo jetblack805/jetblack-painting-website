@@ -44,7 +44,7 @@ Anything built before roughly 1970 can also carry lead-based paint down in those
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Kew, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Kew, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

@@ -44,7 +44,7 @@ Commercial jobs come with the same clear, written scope as any residential quote
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Mentone, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Mentone, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

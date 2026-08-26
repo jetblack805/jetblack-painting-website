@@ -50,7 +50,7 @@ export default function KitchenCabinetResurfacing() {
     },
     {
       question: "Are the doors sprayed in my kitchen or taken away?",
-      answer: "Doors, drawer fronts and end panels come off and are sprayed in our booth, where dust and airflow are controlled and every face can be laid flat. The carcasses and face frames that can't be removed are masked and sprayed in place. That combination is what gives the finish its factory-flat look instead of the texture you get from brushing everything on site."
+      answer: "Doors, drawer fronts and end panels come off and are sprayed in our booth, where dust and airflow are controlled and every face can be laid flat. The carcasses and face frames that can't be removed are masked and sprayed in place. That combination is what gives the finish its glass-smooth look instead of the texture you get from brushing everything on site."
     },
     {
       question: "How long does cabinet resurfacing take?",

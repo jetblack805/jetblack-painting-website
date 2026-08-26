@@ -41,7 +41,7 @@ export default function CarnegiePainters() {
         },
         {
           heading: `Period Home & Townhouse Painting in ${suburb}`,
-          body: `Painting a ${suburb} bungalow well is mostly preparation. Original weatherboard and timber trims need bare-timber priming, filling and tight caulking; older render needs its cracks cut out and patched rather than skimmed over; and detailed cornices, picture rails and gables need to be cut in by hand. Newer rendered townhouses are a different job again, needing flexible coatings that move with the substrate. Whether it's a full exterior repaint, a room-by-room interior refresh or common-area work for an owners corporation, all work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.`
+          body: `Painting a ${suburb} bungalow well is mostly preparation. Original weatherboard and timber trims need bare-timber priming, filling and tight caulking; older render needs its cracks cut out and patched rather than skimmed over; and detailed cornices, picture rails and gables need cutting in properly. Newer rendered townhouses are a different job again, needing flexible coatings that move with the substrate. Whether it's a full exterior repaint, a room-by-room interior refresh or common-area work for an owners corporation, all work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.`
         }
       ]}
       faqs={faqs}

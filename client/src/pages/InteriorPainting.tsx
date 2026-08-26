@@ -89,7 +89,7 @@ export default function InteriorPainting() {
     },
     {
       title: "Edges, trims and doors — sprayed or cut in by hand",
-      body: "How the detail work goes on depends on the room. Where a space can be properly masked and sealed off — empty rooms, and doors, trims and built-in joinery in particular — we spray, which lays the finish down dead flat with no brush marks and no roller texture on surfaces where every stroke would otherwise show. Where spraying isn't practical, because you're living in the room or an adjacent finish can't be masked cleanly, edges, corners and cornices are cut in by hand before the broad areas are rolled. Either way this is the step that separates a sharp finish from a messy one, and it's where an experienced painter earns their keep.",
+      body: "How the detail work goes on depends on the room. Where a space can be properly masked and sealed off — empty rooms, and doors, trims and built-in joinery in particular — we spray, which lays the finish down glass-smooth with no brush marks and no roller texture on surfaces where every stroke would otherwise show. Where spraying isn't practical, because you're living in the room or an adjacent finish can't be masked cleanly, edges, corners and cornices are cut in by hand before the broad areas are rolled. Either way this is the step that separates a sharp finish from a messy one, and it's where an experienced painter earns their keep.",
     },
     {
       title: "Topcoats",

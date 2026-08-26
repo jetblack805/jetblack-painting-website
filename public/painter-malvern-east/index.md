@@ -28,7 +28,7 @@ Beyond heritage exteriors, we deliver flawless interior repaints across Malvern 
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Malvern East, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Malvern East, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

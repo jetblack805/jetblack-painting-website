@@ -32,7 +32,7 @@ For Bentleigh's modern townhouses and unit developments, we deliver smooth conte
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Bentleigh, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Bentleigh, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

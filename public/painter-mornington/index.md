@@ -32,7 +32,7 @@ Mornington's heritage weatherboard homes near the Main Street precinct need care
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Mornington, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Mornington, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

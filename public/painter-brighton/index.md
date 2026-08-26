@@ -44,7 +44,7 @@ We check the specific overlay and grading for the property before quoting, so yo
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Brighton, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Brighton, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

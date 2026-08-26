@@ -44,7 +44,7 @@ Landlords and property managers need the place repainted fast, on budget and rea
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Murrumbeena, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Murrumbeena, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

@@ -50,7 +50,7 @@ We work all of this out at the quote, not on the first morning. What has to be c
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Collingwood, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Collingwood, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

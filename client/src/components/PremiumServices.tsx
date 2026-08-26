@@ -4,7 +4,7 @@ import { useInView } from "@/lib/useInView";
 const featuredServices = [
   {
     title: "Interior Painting",
-    description: "Walls, ceilings, trim and doors. Filled, sanded and primed before a brush touches them, then cut in by hand.",
+    description: "Walls, ceilings, trim and doors. Filled, sanded and primed first — then sprayed if the house is empty, brushed and rolled if you are living in it.",
     link: "/services/interior-painting",
   },
   {
@@ -14,7 +14,7 @@ const featuredServices = [
   },
   {
     title: "Kitchen Cabinet Resurfacing",
-    description: "Doors and panels sprayed in 2-pack for a factory-flat finish, at a fraction of what a new kitchen costs.",
+    description: "Doors and panels sprayed in 2-pack for a glass-smooth finish, at a fraction of what a new kitchen costs.",
     link: "/services/kitchen-cabinet-resurfacing",
   },
   {

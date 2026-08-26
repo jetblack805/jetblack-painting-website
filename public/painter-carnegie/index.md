@@ -22,13 +22,13 @@ Carnegie is one of Glen Eira's busiest residential pockets, with period bungalow
 
 ## Period Home & Townhouse Painting in Carnegie
 
-Painting a Carnegie bungalow well is mostly preparation. Original weatherboard and timber trims need bare-timber priming, filling and tight caulking; older render needs its cracks cut out and patched rather than skimmed over; and detailed cornices, picture rails and gables need to be cut in by hand. Newer rendered townhouses are a different job again, needing flexible coatings that move with the substrate. Whether it's a full exterior repaint, a room-by-room interior refresh or common-area work for an owners corporation, all work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
+Painting a Carnegie bungalow well is mostly preparation. Original weatherboard and timber trims need bare-timber priming, filling and tight caulking; older render needs its cracks cut out and patched rather than skimmed over; and detailed cornices, picture rails and gables need cutting in properly. Newer rendered townhouses are a different job again, needing flexible coatings that move with the substrate. Whether it's a full exterior repaint, a room-by-room interior refresh or common-area work for an owners corporation, all work is backed by our $10M public liability insurance and 5-year written workmanship guarantee.
 
 ## What we paint in Carnegie
 
 ### Interior painting
 
-Walls, ceilings, trims and doors in Carnegie, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in by hand, surfaces patched and sanded, premium low-sheen and enamel finishes.
+Walls, ceilings, trims and doors in Carnegie, including the ornate cornices, ceiling roses and deep skirtings period homes here tend to have. Detailed cutting-in, surfaces patched and sanded, premium low-sheen and enamel finishes.
 
 ### Exterior painting
 

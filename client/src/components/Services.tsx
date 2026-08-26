@@ -48,7 +48,7 @@ type Service = {
 const services: Service[] = [
   {
     label: "Interior Painting",
-    lede: "Walls, ceilings, trim and doors — cut in sharp, finished clean.",
+    lede: "Walls, ceilings, trim and doors. Filled and sanded first, then sprayed or brushed.",
     alt: "Freshly painted interior hallway with white walls and timber flooring",
     image: imgInteriorPainting,
     imgW: 1050,

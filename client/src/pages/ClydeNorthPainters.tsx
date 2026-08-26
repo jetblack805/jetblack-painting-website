@@ -25,7 +25,7 @@ export default function ClydeNorthPainters() {
     },
     {
       question: `Does my estate's design guidelines affect what colour I can repaint?`,
-      answer: `It can, and it is worth checking before you settle on a colour. Many Casey estates run design guidelines or covenants that govern exterior colours and materials, and they typically apply for a set period after the estate is released rather than forever. We will raise it at the quote if a colour you are considering looks likely to run into one — but the guidelines are held by your estate or owners corporation, so confirming what applies to your block is a call you make, not us.`
+      answer: `Estate design guidelines can restrict your colour choice, and it is worth checking before you settle on one. Many Casey estates run design guidelines or covenants that govern exterior colours and materials, and they typically apply for a set period after the estate is released rather than forever. We will raise it at the quote if a colour you are considering looks likely to run into one — but the guidelines are held by your estate or owners corporation, so confirming what applies to your block is a call you make, not us.`
     }
   ];
 

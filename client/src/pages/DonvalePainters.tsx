@@ -17,7 +17,7 @@ export default function DonvalePainters() {
     },
     {
       question: `Why has the shaded side of my ${suburb} house gone green or black?`,
-      answer: `That is almost always mould and lichen rather than dirt, and it comes straight from ${suburb}'s tree cover. Walls under canopy stay damp for hours after the rest of the house has dried. That is all the growth needs. Washing it off without treating it means it is back within a season. So those walls get a proper treatment first, then a topcoat with a mould inhibitor, rather than a simple repaint.`
+      answer: `Green or black growth on a shaded wall is almost always mould and lichen rather than dirt, and it comes straight from ${suburb}'s tree cover. Walls under canopy stay damp for hours after the rest of the house has dried. That is all the growth needs. Washing it off without treating it means it is back within a season. So those walls get a proper treatment first, then a topcoat with a mould inhibitor, rather than a simple repaint.`
     },
     {
       question: `Do you paint cedar cladding and exposed timber on ${suburb}'s split-level homes?`,

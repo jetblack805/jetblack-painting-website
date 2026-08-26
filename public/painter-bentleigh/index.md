@@ -82,7 +82,7 @@ Yes. Bentleigh has a lot of unit and townhouse developments, and we provide the 
 
 ### Is lead paint a concern on older Bentleigh homes?
 
-It can be. Anything built before 1970 may carry lead-based paint under later coats, so we do not dry-sand or power-sand original timberwork of that age. Preparation uses low-dust methods, and where the age is uncertain we recommend testing before sanding begins.
+Lead paint can be a concern on older Bentleigh homes. Anything built before 1970 may carry lead-based paint under later coats, so we do not dry-sand or power-sand original timberwork of that age. Preparation uses low-dust methods, and where the age is uncertain we recommend testing before sanding begins.
 
 ### Do you offer free quotes in Bentleigh?
 

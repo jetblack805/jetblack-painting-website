@@ -5,7 +5,7 @@ export default function ChelseaHeightsPainters() {
   const faqs = [
     {
       question: `Does being near the Edithvale-Seaford wetlands affect paintwork?`,
-      answer: `It can. Ground-level humidity sits higher around the wetlands, and ${suburb} homes on shaded or south-facing walls tend to show mould and that grey-green film sooner than drier pockets of Kingston. Painting over it just traps it, so those walls are treated and primed with a mould-inhibiting system rather than simply recoated.`
+      answer: `Being near the Edithvale-Seaford wetlands can affect paintwork. Ground-level humidity sits higher around the wetlands, and ${suburb} homes on shaded or south-facing walls tend to show mould and that grey-green film sooner than drier pockets of Kingston. Painting over it just traps it, so those walls are treated and primed with a mould-inhibiting system rather than simply recoated.`
     },
     {
       question: `Do you paint brick-veneer family homes in ${suburb}?`,

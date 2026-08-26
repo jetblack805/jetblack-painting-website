@@ -9,7 +9,7 @@ export default function EndeavourHillsPainters() {
     },
     {
       question: `Do the sloping blocks in ${suburb} make exterior painting harder?`,
-      answer: `They can. ${suburb} has genuinely hilly terrain, and split-level homes on sloping blocks often mean high walls, awkward access and double-height gable ends. We plan access and scaffolding as part of the quote rather than treating it as an extra, so the price you're given accounts for the site.`
+      answer: `Sloping blocks can make exterior painting harder. ${suburb} has genuinely hilly terrain, and split-level homes on sloping blocks often mean high walls, awkward access and double-height gable ends. We plan access and scaffolding as part of the quote rather than treating it as an extra, so the price you're given accounts for the site.`
     },
     {
       question: `Can you paint the interior while we stay in the house?`,

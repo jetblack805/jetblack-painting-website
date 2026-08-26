@@ -78,7 +78,7 @@ Yes — those are a signature of Caulfield. Edwardian and interwar houses carry 
 
 ### Does traffic grime on Hawthorn Road or Glen Huntly Road affect paintwork?
 
-It does. Facades fronting the busier Caulfield arterials pick up a film of traffic grime and exhaust residue that ordinary rain does not shift. Painting over it stops the new coating bonding properly, so those elevations get a proper wash-down and, where needed, a sugar-soap clean before any primer goes on.
+Traffic grime does affect paintwork. Facades fronting the busier Caulfield arterials pick up a film of traffic grime and exhaust residue that ordinary rain does not shift. Painting over it stops the new coating bonding properly, so those elevations get a proper wash-down and, where needed, a sugar-soap clean before any primer goes on.
 
 ### Do you paint apartment blocks and common areas in Caulfield?
 

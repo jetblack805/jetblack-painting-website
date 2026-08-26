@@ -72,7 +72,7 @@ export default function BodyCorporatePainting() {
     {
       question: "What access equipment do you use for multi-storey buildings?",
       answer:
-        "It depends on the building's height and site constraints — scaffolding, elevated work platforms or scissor lifts, chosen for what the specific façade and access conditions actually need rather than a default option. We factor site access, boom reach and any strata bylaws around common property access into the quote up front, so there's no surprise equipment cost once work starts.",
+        "The access equipment depends on the building's height and site constraints — scaffolding, elevated work platforms or scissor lifts, chosen for what the specific façade and access conditions actually need rather than a default option. We factor site access, boom reach and any strata bylaws around common property access into the quote up front, so there's no surprise equipment cost once work starts.",
     },
     {
       question: "How do you communicate with residents during the project?",

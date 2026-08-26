@@ -89,7 +89,7 @@ Yes — the period stock around Grace Park and the Yarra-side streets is core to
 
 ### Does a heritage overlay affect what colours I can use in Hawthorn?
 
-It can. Parts of Hawthorn sit within heritage overlays that place conditions on external colour schemes, particularly on street-facing elevations. We recommend checking with Boroondara before committing to an exterior scheme, and we are happy to work to a heritage-appropriate palette.
+A heritage overlay can affect your colour choices. Parts of Hawthorn sit within heritage overlays that place conditions on external colour schemes, particularly on street-facing elevations. We recommend checking with Boroondara before committing to an exterior scheme, and we are happy to work to a heritage-appropriate palette.
 
 ### Can you paint the render and ironwork on a Hawthorn terrace?
 
@@ -105,7 +105,7 @@ Yes, as different jobs entirely. Weatherboard fails at the board edges and laps 
 
 ### Does being close to the Yarra affect how you approach a repaint in Hawthorn?
 
-It can. Lower-lying streets nearer the river hold more moisture, and that shows up as damp patches, mould behind gutters or paint lifting where water sits. We check for the actual cause before quoting — if there's a drainage or rising-damp issue contributing, we'll say so, because painting over it without fixing the source only buys a year or two.
+Being close to the Yarra can affect the approach. Lower-lying streets nearer the river hold more moisture, and that shows up as damp patches, mould behind gutters or paint lifting where water sits. We check for the actual cause before quoting — if there's a drainage or rising-damp issue contributing, we'll say so, because painting over it without fixing the source only buys a year or two.
 
 **Jetblack Painting** — House Painters Hawthorn | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

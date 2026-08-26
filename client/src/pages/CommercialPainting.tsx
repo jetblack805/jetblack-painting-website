@@ -42,7 +42,7 @@ export default function CommercialPainting() {
     },
     {
       question: "How much does commercial painting cost in Melbourne?",
-      answer: "It depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.",
+      answer: "Commercial painting cost depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.",
     },
     {
       question: "How long will a commercial repaint take?",

@@ -9,7 +9,7 @@ export default function WaterwaysPainters() {
     },
     {
       question: `Does being on the wetlands affect the paintwork?`,
-      answer: `It does. Homes fronting the lakes and wetlands in ${suburb} sit in a damper, more exposed setting, so south and west-facing walls, eaves and fences pick up mould and weathering faster. We wash and treat those surfaces before painting and use mould-resistant exterior systems so the finish holds up.`
+      answer: `Being on the wetlands does affect the paintwork. Homes fronting the lakes and wetlands in ${suburb} sit in a damper, more exposed setting, so south and west-facing walls, eaves and fences pick up mould and weathering faster. We wash and treat those surfaces before painting and use mould-resistant exterior systems so the finish holds up.`
     },
     {
       question: `Can you match the estate's existing colour scheme?`,

@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: `How do you paint a terrace with no side access?`,
-    answer: `It is the standard condition in ${suburb} rather than the exception. Single-fronted terraces share party walls with the houses either side, so there is usually no side path, no room to stand a ladder off the boundary, and no way to get plant through to the rear. Everything goes through the house or over the roof. We plan access at the quote stage — what needs to be carried through, whether the front elevation needs a scaffold or can be reached off a platform, whether the rear is reachable from the laneway — and we agree it with you and, where the work touches a shared wall or boundary, with your neighbour before we start. Getting that settled up front is what stops a terrace repaint stalling halfway.`
+    answer: `A terrace with no side access is the standard condition in ${suburb} rather than the exception. Single-fronted terraces share party walls with the houses either side, so there is usually no side path, no room to stand a ladder off the boundary, and no way to get plant through to the rear. Everything goes through the house or over the roof. We plan access at the quote stage — what needs to be carried through, whether the front elevation needs a scaffold or can be reached off a platform, whether the rear is reachable from the laneway — and we agree it with you and, where the work touches a shared wall or boundary, with your neighbour before we start. Getting that settled up front is what stops a terrace repaint stalling halfway.`
   },
   {
     question: `Can you provide a free quote for painting in ${suburb}?`,

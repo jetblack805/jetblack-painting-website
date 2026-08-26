@@ -75,7 +75,7 @@ export default function EpoxyFlooring() {
     {
       question: "Will the coating hide cracks in my concrete?",
       answer:
-        "It will hide fine surface cracking, but it will not fix a moving crack. A crack that's still moving will telegraph straight back through a new coating, sometimes within months, so it has to be cut out and filled properly first rather than coated over. We'd rather point that out at the quote than have it reappear through a finished floor.",
+        "The coating will hide fine surface cracking, but it will not fix a moving crack. A crack that's still moving will telegraph straight back through a new coating, sometimes within months, so it has to be cut out and filled properly first rather than coated over. We'd rather point that out at the quote than have it reappear through a finished floor.",
     },
   ];
 

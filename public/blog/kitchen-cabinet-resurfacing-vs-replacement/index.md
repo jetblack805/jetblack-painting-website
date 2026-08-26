@@ -4,7 +4,7 @@
 
 # Kitchen Cabinet Resurfacing vs Replacement
 
-Your kitchen cabinets are looking tired, but does that mean you need a $30,000+ kitchen renovation? Not necessarily. Kitchen cabinet resurfacing can transform your kitchen for a fraction of the cost — and Jetblack Painting specialises in premium 2-pack finishes that look brand new.
+Your kitchen cabinets are looking tired, but does that mean you need a full kitchen renovation? Not necessarily. Kitchen cabinet resurfacing can transform your kitchen for a fraction of the cost — and Jetblack Painting specialises in premium 2-pack finishes that look brand new.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 
@@ -14,9 +14,12 @@ Cabinet resurfacing (also called refinishing or respraying) involves stripping t
 
 ## Cost Comparison
 
-Cabinet resurfacing typically costs $3,500 to $8,000 and takes 3 to 5 days, with minimal disruption to your household. A full kitchen renovation typically costs $15,000 to $60,000 depending on size and finish, and takes 4 to 8 weeks with major disruption.
+| Option | Average Cost | Timeframe | Disruption |
+| --- | --- | --- | --- |
+| Cabinet Resurfacing | $3,500 - $8,000 | 3-5 days | Minimal |
+| Full Kitchen Renovation | $15,000 - $60,000 | 4-8 weeks | Major |
 
-That's a substantial saving compared with a full renovation, with results that look just as good.
+That's a substantial saving compared with a full renovation, with results that look just as good. Renovation figures are an industry estimate, not a Jetblack price — resurfacing is quoted after seeing the kitchen.
 
 ## When to Resurface vs Replace
 

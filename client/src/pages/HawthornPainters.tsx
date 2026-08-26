@@ -9,7 +9,7 @@ export default function HawthornPainters() {
     },
     {
       question: `Does a heritage overlay affect what colours I can use in ${suburb}?`,
-      answer: `It can. Parts of ${suburb} sit within heritage overlays that place conditions on external colour schemes, particularly on street-facing elevations. We recommend checking with Boroondara before committing to an exterior scheme, and we are happy to work to a heritage-appropriate palette.`
+      answer: `A heritage overlay can affect your colour choices. Parts of ${suburb} sit within heritage overlays that place conditions on external colour schemes, particularly on street-facing elevations. We recommend checking with Boroondara before committing to an exterior scheme, and we are happy to work to a heritage-appropriate palette.`
     },
     {
       question: `Can you paint the render and ironwork on a ${suburb} terrace?`,
@@ -25,7 +25,7 @@ export default function HawthornPainters() {
     },
     {
       question: `Does being close to the Yarra affect how you approach a repaint in ${suburb}?`,
-      answer: `It can. Lower-lying streets nearer the river hold more moisture, and that shows up as damp patches, mould behind gutters or paint lifting where water sits. We check for the actual cause before quoting — if there's a drainage or rising-damp issue contributing, we'll say so, because painting over it without fixing the source only buys a year or two.`
+      answer: `Being close to the Yarra can affect the approach. Lower-lying streets nearer the river hold more moisture, and that shows up as damp patches, mould behind gutters or paint lifting where water sits. We check for the actual cause before quoting — if there's a drainage or rising-damp issue contributing, we'll say so, because painting over it without fixing the source only buys a year or two.`
     }
   ];
 

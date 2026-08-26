@@ -13,7 +13,7 @@ export default function BentleighPainters() {
     },
     {
       question: `Is lead paint a concern on older ${suburb} homes?`,
-      answer: `It can be. Anything built before 1970 may carry lead-based paint under later coats, so we do not dry-sand or power-sand original timberwork of that age. Preparation uses low-dust methods, and where the age is uncertain we recommend testing before sanding begins.`
+      answer: `Lead paint can be a concern on older ${suburb} homes. Anything built before 1970 may carry lead-based paint under later coats, so we do not dry-sand or power-sand original timberwork of that age. Preparation uses low-dust methods, and where the age is uncertain we recommend testing before sanding begins.`
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,

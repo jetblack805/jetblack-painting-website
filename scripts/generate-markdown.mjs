@@ -94,6 +94,20 @@ function listToMd(inner, ordered) {
   return items.map((item, i) => (ordered ? `${i + 1}. ${item}` : `- ${item}`)).join("\n");
 }
 
+// GitHub-flavoured table, so the structure survives into the agent-facing twin
+// instead of collapsing to a run of cell text. Header row plus separator, then
+// one line per row; pipes inside a cell are escaped so they cannot break it.
+function tableToMd(inner) {
+  const cell = (c) => inlineToMd(c).replace(/\|/g, "\\|").replace(/\n/g, " ").trim();
+  const rows = [...inner.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].map((tr) =>
+    [...tr[1].matchAll(/<(th|td)[^>]*>([\s\S]*?)<\/\1>/gi)].map((c) => cell(c[2]))
+  );
+  if (rows.length === 0 || rows[0].length === 0) return "";
+  const width = rows[0].length;
+  const line = (r) => `| ${r.concat(Array(Math.max(0, width - r.length)).fill("")).slice(0, width).join(" | ")} |`;
+  return [line(rows[0]), `| ${Array(width).fill("---").join(" | ")} |`, ...rows.slice(1).map(line)].join("\n");
+}
+
 function bodyToMd(html) {
   let body = html;
 
@@ -117,7 +131,7 @@ function bodyToMd(html) {
   body = body.replace(/<a class="btn"[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (_, href, text) => `<p><a href="${href}">${text}</a></p>`);
 
   const blocks = [];
-  const blockRe = /<(h1|h2|h3|h4|p|ul|ol)\b[^>]*>([\s\S]*?)<\/\1>/gi;
+  const blockRe = /<(h1|h2|h3|h4|p|ul|ol|table)\b[^>]*>([\s\S]*?)<\/\1>/gi;
   let match;
   while ((match = blockRe.exec(body)) !== null) {
     const tag = match[1].toLowerCase();
@@ -126,6 +140,12 @@ function bodyToMd(html) {
     if (tag === "ul" || tag === "ol") {
       const list = listToMd(inner, tag === "ol");
       if (list) blocks.push(list);
+      continue;
+    }
+
+    if (tag === "table") {
+      const table = tableToMd(inner);
+      if (table) blocks.push(table);
       continue;
     }
 

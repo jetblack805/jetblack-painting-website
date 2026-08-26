@@ -1507,3 +1507,74 @@ The network policy is set per-environment in Claude Code on the web
 shipped without a typecheck or a local build and "Cloudflare is the real gate" keeps appearing in these
 notes. Then `google.com` + `googletagmanager.com` (verify the GA4 events, check rankings), `bing.com`,
 `api.indexnow.org`, and competitor domains.
+
+---
+
+## 2026-08-25 (evening) — Daily audit: everything clean, no change made
+
+A run that investigates, finds nothing worth changing, and says so. Nothing was committed beyond this entry.
+
+### Steps 0–6: all clean
+
+| Check | Result | Baseline |
+| --- | --- | --- |
+| Three layers regenerate to zero diffs | **ZERO** | — |
+| Lockfile vs package.json | **77/77** | 77/77 |
+| Production serves current main | yes — Mordialloc section live, `$1,500` gone, Kew at 5 FAQ entities | — |
+| Pages · FAQ questions | **117 · 489** | was 114 · 477 |
+| Schema vs visible text | **0 problems** | 0 |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0 | 0 |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
+| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
+| Titles over 60 | 1 (`/painter-hastings/` 64) | 1, accepted |
+| Near-duplicate avg · worst | **25.6% · 46.1%** | 25.6% · 46.4% (gates 45% / 55%) |
+| Negative URLs 404 (extensionless, `.zip`, `/assets/`) | all 404 | — |
+| Real bundles 200 + correct MIME | `text/javascript`, `text/css` | — |
+| Redirects | all 301 | — |
+| Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex` | — |
+| llms.txt prices | none — all `$` matches read, all are the $10M public liability | clean |
+| Review count across all nine locations | **17 everywhere**, no drift | — |
+| TTFB | 0.23–0.41s, cf-cache HIT | 0.15–0.40s |
+
+### Step 1 could not run — all three ranking sources are gone
+
+- **Supermetrics**: the connector is no longer present. The trial expired 2026-08-24 as the brief predicted.
+- **Semrush**: one probe, "not enough API units" (options: https://www.semrush.com/mcp-access).
+- **Ahrefs**: not connected this session; previously "Insufficient plan".
+
+**No position deltas against the tracked eleven were measured, and no backlink figure was refreshed.**
+Recording that rather than dropping the metric. Ranking measurement now requires the Search Console UI
+directly. **Google and Bing both remain egress-blocked** (403 on CONNECT), so no `site:` checks either.
+
+### Step 7 authority: option 4 — nothing
+
+With no ranking data and every site check clean, there is no evidence-backed change available. TrueLocal's
+two listings still pointing at the dead Manus site remain the cheapest outstanding Tier 0 win, and that site
+blocks automated access from here. Not actioned.
+
+### The brief is now stale in eight places
+
+Per its own rule that this log wins:
+
+| Brief says | Reality |
+| --- | --- |
+| 5.0 from **15** Google reviews | **17**, verified in all nine locations today |
+| **114** pages, **477** FAQ questions | **117** · **489** |
+| Mordialloc 1,154w @ 29.18 | **1,368w**, and 19.05 in the last GSC pull (2026-08-24) |
+| Epoxy flooring — "do not add until Jimmy confirms" | shipped, `/services/epoxy-flooring/` live |
+| Readability rewrite — "do not start without go-ahead" | authorised and done (#202) |
+| Yellow Pages Tier 0 outstanding | done — Jimmy called 2026-08-23 |
+| PageSpeed "unused JS 144 KiB, most tractable" | **fixed** — suburb pages dropped 120KB raw / 34KB brotli; `vendor-animation` importers 120 → 11 |
+| "3 long main-thread tasks", CLS | **0 long tasks, CLS 0.000** (was 0.084) |
+
+Also worth adding to the brief's locked facts: **the site publishes indicative price ranges** on the cost
+guide, five suburb pages and the homepage, each carrying a site-visit caveat. Eight invented figures were
+removed 2026-08-24/25. Any future run must not reintroduce a rate card, a starting price, or a per-m² figure.
+
+### Also shipped earlier today (already logged above, listed here for the run record)
+
+Conversion tracking (#212) — `generate_lead`, `quote_form_undelivered`, `phone_call_click`, `email_click`,
+no PII. **Unverified against GA4 itself**: googletagmanager.com is egress-blocked, so Jimmy must confirm in
+DebugView before any ad spend. An eighth invented price removed from the homepage, which yesterday's sweep
+missed because the homepage serves from `client/index.html`, outside `public/`. Homepage 584 → 892
+crawler-visible words. Kew and Malvern brought from 3 FAQs / 2 sections to 5 / 4, matching their siblings.

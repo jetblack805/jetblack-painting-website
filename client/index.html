@@ -349,6 +349,14 @@
          fetchpriority="high" decoding="sync"
          style="width:100%;height:100%;object-fit:cover;object-position:center 55%;">
     <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,7,0.97) 0%,rgba(6,6,7,0.72) 22%,rgba(6,6,7,0.28) 48%,rgba(6,6,7,0.08) 70%,rgba(6,6,7,0.25) 100%)"></div>
+    <!-- Horizontal scrim. The gradient above runs bottom-to-top, but the headline,
+         eyebrow and body copy all sit in the LEFT column, and at that height the
+         photo is at its brightest (the lit interior). The result was that the gold
+         second headline line and "QUALITY. PRECISION. INTEGRITY." faded out
+         against it — a contrast failure on the most important copy on the site.
+         This darkens the left third where the text lives and releases to nothing
+         by 78%, so the architecture on the right is untouched. -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(6,6,7,0.86) 0%,rgba(6,6,7,0.74) 28%,rgba(6,6,7,0.34) 55%,rgba(6,6,7,0.06) 72%,rgba(6,6,7,0) 78%)"></div>
   </div>
   <div id="root" style="position:relative;z-index:1;">
     <main style="padding:7rem 1.5rem 2rem;color:rgba(237,233,224,0.85);font-family:system-ui,sans-serif;">
@@ -358,7 +366,7 @@
            inside #root and is replaced on hydration, so crawlers read it and
            users effectively never do. Keep it in step with Hero.tsx and
            Home.tsx or the two layers disagree about the page's subject. -->
-      <h2 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:2.2rem;margin-bottom:0.75rem;line-height:1.18;letter-spacing:0.01em;color:#FCFCFC;">Premium Painting. <span style="color:#D0A050">Exceptional Results.</span></h2>
+      <h2 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:2.2rem;margin-bottom:0.75rem;line-height:1.18;letter-spacing:0.01em;color:#FCFCFC;">Preparation is the job. <span style="color:#D0A050">The finish is the proof.</span></h2>
       <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.5rem;margin-bottom:0.75rem;line-height:1.25;color:#FCFCFC;">Melbourne's Best-Rated Local House Painters</h1>
       <p style="font-size:1rem;line-height:1.6;max-width:40rem;">
         Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 90+ suburbs.

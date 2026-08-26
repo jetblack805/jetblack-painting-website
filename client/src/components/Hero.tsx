@@ -47,8 +47,8 @@ export default function Hero() {
             className="hero-fade-in text-4xl sm:text-5xl lg:text-[4.2rem] text-[#FCFCFC] leading-[1.14] mb-7"
             style={{ animationDelay: "0.25s" }}
           >
-            Premium Painting.{" "}
-            <span className="text-[#D0A050] block">Exceptional Results.</span>
+            Preparation is the job.{" "}
+            <span className="text-[#D0A050] block">The finish is the proof.</span>
           </h2>
 
           <div className="hero-fade-in w-11 h-px bg-[#D0A050] mb-6" style={{ animationDelay: "0.3s" }} />
@@ -66,7 +66,7 @@ export default function Hero() {
             className="hero-fade-in text-[#EDEDEF]/70 text-base sm:text-lg font-light leading-relaxed mb-10 max-w-xl"
             style={{ animationDelay: "0.4s" }}
           >
-            Transforming Melbourne homes with flawless finishes. Interior, exterior &amp; commercial painting specialists serving Brighton, Toorak, Bayside, the Mornington Peninsula and all Melbourne suburbs. 5-star rated. Fully licensed &amp; insured.
+            Thirteen years on Melbourne's period homes, new builds and commercial sites &mdash; Brighton, Toorak, Bayside and the inner east. Every job scoped, checked and signed off by Jimmy himself. Fully insured, five-year written guarantee.
           </p>
 
           {/* CTAs */}

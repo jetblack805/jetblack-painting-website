@@ -1959,14 +1959,24 @@ This is the second run in two days lost to connector flapping. The connectors th
 defect. Worth Jimmy knowing that a "nothing moved" report may mean the data was unreachable
 rather than that the site is static; this log entry distinguishes the two.
 
-### Still not done — `update_trigger` unreachable, fifth attempt
+### ✅ Brief updated — sixth attempt, 2026-08-27 20:12 UTC
 
-The routine's brief still names Supermetrics as the primary GSC source and does not mention GSC
-Wizard. `update_trigger` has now failed on five separate attempts across two sessions, always
-because the claude-code-remote MCP server was disconnected at the moment of the call. The Data
-access section above carries the correct picture and the brief defers to this log, so the
-guidance is live — but the brief text itself is still wrong and should be fixed when that server
-is reachable, or by Jimmy directly in his Routines list.
+`update_trigger` failed on five separate attempts across two sessions, always because the
+claude-code-remote MCP server was disconnected at the moment of the call. **The sixth attempt,
+made minutes after this entry was first written, succeeded.** The brief's Step 1 now reads:
+
+- **GSC Wizard as PRIMARY**, listing the seven tools actually exercised on 2026-08-27
+- **Supermetrics as FALLBACK**, flagged as still the only source of GMB / Maps data
+- the 20+ impressions interpretation rule
+- striking distance corrected to **8–18**
+- and, from the two runs lost to it: *"connectors flap constantly, including mid-session … if
+  neither is reachable, make no ranking claim at all. 'Nothing moved' and 'I could not see' are
+  different findings and must not be reported the same way."*
+
+The 2026-08-11 clicks cliff and the zero-click `jetblack` query were carried into the brief's
+standing context so the next run inherits them.
+
+The brief and this log now agree. Where they ever diverge again, this log still wins.
 
 ### Checked and clean, no change needed
 

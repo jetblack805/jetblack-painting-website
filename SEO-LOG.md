@@ -1665,3 +1665,93 @@ and multi-engine citation dominance, neither appropriate here.
 | Descriptions over 158 | 0 |
 | Near-duplicate avg · worst | **25.5% · 45.8%** — both improved (gates 45% / 55%) |
 | Parse | 17 `.tsx` files + both generators clean |
+
+---
+
+## 2026-08-26 (evening) — full audit, all clean, no site change made
+
+Steps 0–6 all passed. Step 7 taken as **entity consistency**, which was verified rather than
+changed. No code change this run. Four places where the **standing brief is now stale** are
+recorded below — the log wins, so future runs should trust this entry over the brief.
+
+### Step 0 — build health
+
+| Check | Result |
+| --- | --- |
+| package.json deps present in pnpm-lock.yaml | **77 / 77** |
+| Production serving current main | yes — `70b09ce`, confirmed by a string unique to that lineage |
+| TTFB · edge cache | 0.18–0.45 s · `cf-cache-status: HIT` |
+
+Build health was confirmed from deployment evidence rather than the check-run API: the live
+site serves `glass-smooth` on `/services/interior-painting/`, a string that exists only from
+`70b09ce` onward, which proves Cloudflare built and deployed that commit.
+
+### Steps 2–6 — regressions, metadata, AEO, speed, indexing
+
+| Check | Result | Baseline |
+| --- | --- | --- |
+| Three layers regenerated → git diff | **0 files** | 0 |
+| Schema vs visible text | 117 pages · 489 questions · **0 problems** | 0 |
+| Near-duplicate (nav included) | 25.5% avg · worst 47.0% cranbourne/narre-warren · 0 over 55% | gate 45% / 55% |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · **0** | 0 · 0 · 0 |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
+| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
+| Titles over 60 | 1 — `/painter-hastings/` (64), accepted | 1 |
+| `keywords` meta tags | 0 | 0 |
+| Sitemap | **115 / 115** all 200, **zero** redirect hops | see note |
+| Bad URLs 404 (extensionless, `/nope.zip`, `/assets/*`) | all 404 | 404 |
+| Real hashed bundles still served | `.js` 200 `text/javascript` · `.css` 200 `text/css` | 200 |
+| Redirect status | `/painters-brighton` → 301 → `/painter-brighton/` | 301 |
+| Markdown negotiation | `text/markdown` + `Vary: Accept` + `Cache-Control: no-store` + `X-Robots-Tag: noindex`; plain Accept → `text/html` | correct |
+| robots.txt | `Disallow: /api/` only; GPTBot/ClaudeBot/PerplexityBot allowed; `Content-Signal: search=yes, ai-train=no, ai-input=yes` | correct |
+| llms.txt price figures | **none** — all three `$` matches read and confirmed as the $10 million public liability figure | none |
+| og:image / twitter:image | one URL, resolves 200 | 200 |
+
+### Step 7 — entity consistency (verified, nothing changed)
+
+Semrush probed **once** and still returns units-zero, so Backlink Gap remains unavailable.
+**Supermetrics was disconnected for this session**, so there is no GSC and no GMB data — the
+tracked eleven could not be re-measured and no ranking claim is made in this run.
+
+Review count audited across every place it is hardcoded, plus both deployed layers:
+
+| Location | Value |
+| --- | --- |
+| `client/index.html` JSON-LD `reviewCount` | 17 |
+| `client/index.html` prose | 17 |
+| `lib/aggregateRatingSchema.ts` default | 17 |
+| `site-config.json` | 17 |
+| `pages/FAQ.tsx` | 17 |
+| `blog/ChoosingAPainterMelbourne.tsx` | 17 |
+| `generate-static-pages.mjs` AGGREGATE_RATING | 17 |
+| `generate-static-pages.mjs` duplicate FAQ answer | 17 |
+| `llms.txt` and `public/llms.txt` (byte-identical) | 17 |
+
+A regex sweep for any stale count (`1[0-6] … reviews`) across all `index.html` **and**
+`index.md` files returned **zero hits**. NAP agrees across HTML, markdown twins and llms.txt:
+`0432 077 782` · Mordialloc · 3195 · jimmy@jetblackpainting.com.
+
+### ⚠️ Four ways the standing brief is now stale
+
+1. **LOCKED FACTS says "5.0 from 15 Google reviews". It is 17.** Confirmed two ways: every one
+   of the hardcoded places reads 17, and Jimmy sent a screenshot of his own Google knowledge
+   panel today showing `5.0 ★ (17)`. **A future run must not "correct" 17 back to 15.**
+2. **The nine-places list names `pages/Home.tsx`.** That file no longer carries a review count —
+   only comments and `<Reviews />`. The count lives in the eight other places above.
+   `ChoosingAPainterMelbourne.tsx:105` contains "a 5.0 rating with 3 reviews" — that is generic
+   advice about judging any painter, not a Jetblack claim. Leave it.
+3. **Step 5 says the only image over 250KB is og-image.jpg at 281KB.** As of today there are
+   **zero** images over 250KB in `public/` — og-image.jpg was replaced (163KB) because the old
+   one carried a competitor's watermark.
+4. **The sitemap baseline of 114 reads as 115 and is correct.** 117 static pages, minus the
+   three noindex pages (`/privacy/`, `/review-us/`, `/terms/`) that are rightly excluded, plus
+   `/` which has no `public/*/index.html` of its own. Reconciled exactly; not a defect.
+
+### Checked and clean, no change needed
+
+Build health, lockfile, deployment currency, three-layer regeneration, schema-vs-visible,
+near-duplicate, site health in both directions, sitemap, structured data, metadata, markdown
+negotiation, robots.txt, llms.txt, entity/NAP consistency, review count, speed, og:image.
+
+**No site change made this run.** Nothing was found that evidence supports changing, and the
+brief's own standard is that such a run is a successful one.

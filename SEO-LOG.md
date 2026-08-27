@@ -1913,3 +1913,66 @@ The daily routine's own brief still names Supermetrics as the primary GSC source
 edits Routine prompts (`update_trigger`) disconnected mid-call twice while attempting it. The brief
 reads this log first and the log wins, so the correction is live either way — but the brief itself
 should still be updated when that server is reachable.
+
+---
+
+## 2026-08-27 (evening) — full audit, all clean, no ranking data, no change made
+
+Steps 0–6 all passed. Step 7 → **option 4: nothing**. No site change.
+
+### Steps 0–6
+
+| Check | Result | Baseline |
+| --- | --- | --- |
+| Deps in lockfile | 77 / 77 | 77 / 77 |
+| Production serving current main | yes — `c86974c` | — |
+| Three layers regenerated → git diff | **0 files** | 0 |
+| Schema vs visible text | 117 pages · 489 questions · **0 problems** | 117 · 489 · 0 |
+| Near-duplicate (nav incl.) | 25.5% avg · worst 47.0% · 0 over 55% | gate 45% / 55% |
+| JSON-LD errors · missing fields · aggregateRating in static | 0 · 0 · 0 | 0 · 0 · 0 |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
+| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
+| Titles over 60 | 1 — `/painter-hastings/` (64), accepted | 1 |
+| `keywords` meta tags | 0 | 0 |
+| Sitemap | **115 / 115** at 200, zero redirect hops | 115 |
+| Bad URLs 404 (extensionless · `.zip` · `/assets/*`) | all 404 | 404 |
+| Real hashed bundles | `.js` 200 `text/javascript` · `.css` 200 `text/css` | 200 |
+| Redirect status | `/painters-brighton` → 301 | 301 |
+| Markdown negotiation headers | 4 / 4 present | 4 |
+| robots.txt | `Disallow: /api/` only | correct |
+| llms.txt price figures | none — both `$` matches are the $10M public liability | none |
+| Images over 250KB | **0** | 0 |
+| TTFB | 0.55 s first hit, 200 | 0.15–0.45 s |
+
+### ⚠️ NO RANKING DATA THIS RUN
+
+**GSC Wizard, Supermetrics and Windsor.ai were all disconnected for this session.** Checked
+before assuming, per the rule added to this log earlier today. That leaves no Search Console and
+no GMB access, so **this run makes no ranking claim whatsoever** — no position deltas, no
+striking-distance list, no indexing-tracker delta. The 2026-08-28 run should be the first able to
+report an indexing-tracker change, since the tracker was created 2026-08-27 14:46.
+
+Semrush was not re-probed; it returned units-zero on 2026-08-27 and nothing suggests that changed.
+
+This is the second run in two days lost to connector flapping. The connectors themselves are fine
+— they were all working earlier the same day — so this is environmental, not a configuration
+defect. Worth Jimmy knowing that a "nothing moved" report may mean the data was unreachable
+rather than that the site is static; this log entry distinguishes the two.
+
+### Still not done — `update_trigger` unreachable, fifth attempt
+
+The routine's brief still names Supermetrics as the primary GSC source and does not mention GSC
+Wizard. `update_trigger` has now failed on five separate attempts across two sessions, always
+because the claude-code-remote MCP server was disconnected at the moment of the call. The Data
+access section above carries the correct picture and the brief defers to this log, so the
+guidance is live — but the brief text itself is still wrong and should be fixed when that server
+is reachable, or by Jimmy directly in his Routines list.
+
+### Checked and clean, no change needed
+
+Build health, lockfile, deployment currency, three-layer regeneration, schema-vs-visible,
+near-duplicate, site health in both directions, sitemap, structured data, metadata, markdown
+negotiation, robots.txt, llms.txt, image weights, TTFB.
+
+**No site change made.** Nothing was found that evidence supports changing, and no ranking data
+was available to justify one.

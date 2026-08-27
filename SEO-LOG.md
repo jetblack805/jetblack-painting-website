@@ -10,6 +10,63 @@ Not published — root `.md` files 404 on the live site (only `dist/public` is s
 
 ---
 
+## ⚠️ CURRENT LOCKED FACTS — these override any brief
+
+The daily routine's brief carries a stale copy of these. Its own rule is that **this log wins**.
+Re-verify against the live site before cementing any of them again.
+
+| Fact | Value | Verified |
+| --- | --- | --- |
+| Google rating | 5.0 | 2026-08-27 |
+| **Google review count** | **17** | 2026-08-27 |
+| Phone | 0432 077 782 | 2026-08-27 |
+| Email | jimmy@jetblackpainting.com | 2026-08-27 |
+| Public liability | $10 million | — |
+| Workmanship guarantee | 5 years, written | — |
+| Base | Mordialloc VIC 3195 | 2026-08-27 |
+| Years trading | 13+ | — |
+| Quote turnaround / enquiry response | 24–48 hours | — |
+
+### Review count — read this before touching it
+
+**It is 17, not 15.** The routine's brief still says "5.0 from 15 Google reviews". That figure is
+stale and **a run must not "correct" 17 back down to 15** — doing so would publish a false review
+count across the whole site. Confirmed two ways on 2026-08-26: every hardcoded place reads 17, and
+Jimmy supplied a screenshot of his own Google knowledge panel showing `5.0 ★ (17)`.
+
+The count is hardcoded in **eight** places, not the nine the brief lists:
+
+1. `client/index.html` — the JSON-LD `reviewCount`
+2. `client/index.html` — the prose line ("5.0-star rating from 17 Google reviews")
+3. `client/src/lib/aggregateRatingSchema.ts` — the default and its comment
+4. `client/src/site-config.json`
+5. `client/src/pages/FAQ.tsx`
+6. `client/src/pages/blog/ChoosingAPainterMelbourne.tsx`
+7. `scripts/generate-static-pages.mjs` — the `AGGREGATE_RATING` const **and** its duplicate FAQ answer
+8. `llms.txt` and `public/llms.txt` — byte-identical, keep them that way
+
+**`client/src/pages/Home.tsx` is NOT one of them.** The brief lists it; the file carries only
+comments and `<Reviews />`. Do not go hunting for a count there.
+
+Two decoys, both of which must be left alone:
+
+- `ChoosingAPainterMelbourne.tsx` contains *"a 5.0 rating with 3 reviews tells you less than a 4.8
+  with 100"*. That is generic advice about judging any painter, **not** a Jetblack claim.
+- The `15` / `14` matches in `Reviews.tsx` are SVG path coordinates (`14.09`, `14.97`).
+
+The `client/index.html` prose drifted to "14" once and was fixed on 2026-08-18 — re-check it each run.
+
+### Three smaller stale figures in the brief
+
+- **Step 5** says the only image over 250KB is `og-image.jpg` at 281KB. There are now **zero**
+  images over 250KB — `og-image.jpg` was replaced at 163KB on 2026-08-26 because the previous file
+  carried a competitor's watermark.
+- **Step 2/Step 3** baseline of **114** sitemap URLs reads as **115** and is correct: 117 static
+  pages, minus the three noindex pages (`/privacy/`, `/review-us/`, `/terms/`), plus `/`.
+- **Step 2** baselines of 114 pages / 477 FAQ questions are now **117 pages / 489 questions**.
+
+---
+
 ## Success criterion
 
 > Judge success by whether Jetblack Painting is becoming more visible for commercially

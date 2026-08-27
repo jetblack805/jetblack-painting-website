@@ -53,7 +53,8 @@ Each suburb page (`client/src/pages/<Suburb>Painters.tsx`) is a thin wrapper aro
 - `client/src/components/SEOHead.tsx` upserts title/meta/canonical/JSON-LD client-side; the static generator produces the equivalent for crawlers. Keep the two consistent when editing a page.
 - Canonical URLs use **trailing slashes** (`https://jetblackpainting.com/painter-toorak/`).
 - `llms.txt`, `local-seo.json`, `robots.txt`, `sitemap.xml` exist both at repo root and in `public/` — **the `public/` copies are what get deployed**; keep them in sync if you edit either.
-- Business facts (phone `0432 077 782`, email `jimmy@jetblackpainting.com`, review count, $10M insurance, 5-year guarantee) are hardcoded in multiple places: `llms.txt`, constants at the top of `scripts/generate-static-pages.mjs`, and various components. When one changes, grep and update everywhere.
+- Business facts (phone `0432 077 782`, email `jimmy@jetblackpainting.com`, Google rating **5.0 from 17 reviews**, $10M insurance, 5-year guarantee) are hardcoded in multiple places: `llms.txt`, constants at the top of `scripts/generate-static-pages.mjs`, and various components. When one changes, grep and update everywhere.
+- **Review count is 17.** It lives in eight places and one stale automation brief still says 15 — see the locked-facts block at the top of `SEO-LOG.md` before changing it. Lowering it to 15 would publish a false review count sitewide.
 
 ### Serving & deployment
 

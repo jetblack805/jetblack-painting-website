@@ -80,16 +80,46 @@ A run that investigates, finds nothing worth changing, and says so is a successf
 
 | Source | Status | Notes |
 |---|---|---|
-| Google Search Console | ⚠️ Via Supermetrics MCP only | Connector flaps constantly; often unavailable mid-run. `ds_id="GW"` |
-| Google Business Profile | ⚠️ Via Supermetrics MCP only | `ds_id="GMB"`, **read-only** — cannot post |
-| GA4 | ❌ Effectively broken | Connected property `545100608` has **zero data in 20 months**; site fires `G-6NC2597W9L`. Unresolved — needs GA4 Admin |
-| **Bing Webmaster Tools** | ❌ **No access** | No connector exists. Cannot inspect Bing data |
+| Google Search Console | ✅ **GSC Wizard (primary)** | Connected and verified 2026-08-27. Supermetrics `ds_id="GW"` is the fallback |
+| Google Business Profile | ⚠️ Via Supermetrics MCP only | `ds_id="GMB"`, **read-only** — cannot post. GSC Wizard does NOT cover GBP |
+| GA4 | ❌ Effectively broken | Connected property `545100608` has **zero data in 20 months**; site fires `G-6NC2597W9L`. GSC Wizard has a GA4 suite but it reads the same empty property — the gap is upstream, not tooling |
+| **Bing Webmaster Tools** | ⚠️ **Now reachable, untested** | GSC Wizard ships a Bing suite (`get_bing_query_stats`, `get_bing_crawl_issues`, …). Never exercised — verify before quoting |
 | **Apple Business Connect** | ❌ **No access** | No connector exists |
 | Competitor intelligence | ❌ Largely unavailable | Semrush out of API units; Ahrefs returns "Insufficient plan" |
 | Instagram | ⚠️ Read-only via Supermetrics | `ds_id="IGI"`. Cannot post |
 | The site itself | ✅ Full | curl + repo. Most reliable source |
 
-**Consequence:** the daily loop's "inspect performance first" step is frequently impossible.
+### GSC Wizard — the primary ranking-data path since 2026-08-27
+
+Load with ToolSearch first (`select:mcp__GSC_wizard__list_sites,…`). One property:
+`sc-domain:jetblackpainting.com`. These seven were exercised against it on 2026-08-27 and all
+returned real data:
+
+`list_sites` · `detect_anomalies(metric, days≥21)` · `detect_change_points(metric, days≥14)` ·
+`get_ranking_changes(start/end + comparison window, dimension)` · `list_algo_updates(start,end)` ·
+`get_indexing_tracker` · `score_opportunities(limit, minImpressions)`
+
+Available but not yet exercised: `query_search_analytics`, `query_top_queries`, `query_top_pages`,
+`get_page_performance`, `analyze_cannibalization`, `find_decaying_content`, `get_core_web_vitals`,
+`inspect_url` / `bulk_inspect_urls`, the Bing suite, the GA4 suite.
+
+Data lags 2–3 days; omit start/end dates and the server uses the last 28 settled days. Every
+response carries a `dataSource` field (`api` or warehouse).
+
+> ⚠️ **INTERPRETATION RULE.** Most of this property's queries carry **1–8 impressions**. At that
+> volume a swing from position 96 to position 4 is ONE SERP sample, not a trend, and
+> `get_ranking_changes` returns dozens in both directions — its improved and declined tables come
+> back as near mirror images. Treat a mover as real only at roughly **20+ impressions**. Report
+> noise as noise.
+
+> ⚠️ **Striking distance is 8–18, not 8–12.** On 2026-08-27 the two highest-scoring queries on the
+> whole property sat at **13.4** (`painters sorrento`, 116 impressions) and **16.3**
+> (`painters collingwood`, 144 impressions) — outside a 8–12 band and carrying 5–10× the
+> impressions of anything inside it.
+
+**Consequence:** the daily loop's "inspect performance first" step used to be frequently impossible.
+With GSC Wizard connected it usually is not — but MCP servers here connect and disconnect mid-session,
+so check before assuming.
 When data is unavailable, say so — do not substitute guesswork, and do not invent a rationale
 for a change.
 
@@ -1812,3 +1842,74 @@ negotiation, robots.txt, llms.txt, entity/NAP consistency, review count, speed, 
 
 **No site change made this run.** Nothing was found that evidence supports changing, and the
 brief's own standard is that such a run is a successful one.
+
+---
+
+## 2026-08-27 — GSC Wizard connected; first sweep run
+
+Jimmy connected the GSC Wizard MCP server. This is the first run with real Search Console data
+since 2026-08-25 — the 2026-08-26 audit had none, because Supermetrics was disconnected that
+session. GSC Wizard is now the primary path; see the Data access section above.
+
+### Anomalies · 28 days to 2026-08-24
+
+| Signal | Date | Detail |
+| --- | --- | --- |
+| Impressions spike | **2026-08-22** | 645 actual vs 358 expected — **+79.9%**, modified Z 3.52, severity critical |
+| Clicks step-down | **2026-08-11** | mean 3/day → **0/day**, **−87.5%**, sustained level shift |
+
+No clicks anomalies; no impressions change points.
+
+### Correlation with confirmed Google updates
+
+One update in the window: **August 2026 spam update**, 2026-08-18 16:27 → 2026-08-21 08:49 UTC,
+severity low (Search Status Dashboard, via `list_algo_updates`).
+
+- **The impressions spike aligns.** It landed 2026-08-22, the day after that rollout completed.
+- **The clicks drop does not.** 2026-08-11 is a week before the update began. No confirmed Google
+  update accounts for it. **Open and unexplained.**
+
+### Movers, 18–24 Aug vs 11–17 Aug — almost entirely noise
+
+`get_ranking_changes` returned improved and declined tables that are near mirror images: the same
+Clyde North / Narre Warren / Malvern East long-tail swinging 40–92 places in both directions, nearly
+all on **1–8 impressions**. This is the interpretation trap recorded above; it is not movement.
+
+The one mover with enough volume to mean something:
+
+| Query | Impressions | Position | Prior |
+| --- | --- | --- | --- |
+| painter narre warren | 31 | **18.5** | 58.3 |
+
+### Striking distance
+
+Top opportunities by impression-weighted score, 28 days to 2026-08-24:
+
+| Query | Position | Impressions | Est. extra clicks | Score |
+| --- | --- | --- | --- | --- |
+| painters sorrento | 13.4 | 116 | 29 | 93 |
+| painters collingwood | 16.3 | 144 | 36 | 72 |
+| painters elwood | 19.8 | 108 | 27 | 54 |
+| house painters caulfield | 18.3 | 87 | 22 | 44 |
+| painters murrumbeena | 18.4 | 81 | 20 | 41 |
+
+Every one is a suburb head term with real volume and **zero clicks**. None sit in a 8–12 band.
+
+### Indexing tracker
+
+Created 2026-08-27 14:46 with **77 URLs**: 1 indexed, 76 pending, 0 errors, 0 warnings. No history
+on day one, so "changed since yesterday" is only meaningful from 2026-08-28 onward.
+
+### ⚠️ Two open questions raised by this data
+
+1. **The 2026-08-11 clicks cliff.** Sustained, −87.5%, and not explained by any confirmed update.
+2. **`jetblack` — position 3.4, 51 impressions, ZERO clicks.** The brand name itself, on page one,
+   earning nothing — while `jetblack painting` takes 12 clicks at position 4.0. Same site, same
+   page of results, opposite behaviour. Worth re-checking with fresh data before theorising.
+
+### Not done this run
+
+The daily routine's own brief still names Supermetrics as the primary GSC source. The tool that
+edits Routine prompts (`update_trigger`) disconnected mid-call twice while attempting it. The brief
+reads this log first and the log wins, so the correction is live either way — but the brief itself
+should still be updated when that server is reachable.

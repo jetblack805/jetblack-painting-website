@@ -1907,12 +1907,11 @@ on day one, so "changed since yesterday" is only meaningful from 2026-08-28 onwa
    earning nothing — while `jetblack painting` takes 12 clicks at position 4.0. Same site, same
    page of results, opposite behaviour. Worth re-checking with fresh data before theorising.
 
-### Not done this run
+### Not done this run — RESOLVED LATER THE SAME DAY
 
-The daily routine's own brief still names Supermetrics as the primary GSC source. The tool that
-edits Routine prompts (`update_trigger`) disconnected mid-call twice while attempting it. The brief
-reads this log first and the log wins, so the correction is live either way — but the brief itself
-should still be updated when that server is reachable.
+At the time of this entry the routine's brief still named Supermetrics as the primary GSC source;
+`update_trigger` had disconnected mid-call twice. **It was updated successfully at 20:12 UTC on
+2026-08-27** — see the 2026-08-27 (evening) entry below. Brief and log now agree.
 
 ---
 

@@ -2180,7 +2180,7 @@ calls and form submissions, not impressions.
 ### Still outstanding, and not done here
 
 - The remaining 30 merges and 15 cuts — not authorised in this pass
-- **The inner north is a decided "no"** (Fitzroy, Collingwood, Brunswick, Northcote, Thornbury, Carlton — plus the rest of the Decide group). Per §8.5 that means noindex them with the cut group. **Queued, not executed** — it was outside the scope Jimmy approved for this pass
+- ~~**The inner north is a decided "no"**~~ — **superseded the same day, see the addendum below. Do not execute this.**
 - Casey pages remain in the sitewide footer suburb directory (94 links). `noindex, follow` keeps equity flowing, and removing them is a nav change beyond this scope
 - The quote form on all 95 suburb pages — still the audit's highest-value site-side fix
 
@@ -2195,3 +2195,45 @@ against the live knowledge panel before any run cements it again.
 **Years trading (13+).** Three different numbers are live: `llms.txt` says **13+**, a Google
 Business Profile post says **18+**, and Google records the business opening as **March 2015 (11)**.
 Not resolved here — Jimmy has to pick the true one before it is propagated further.
+
+
+### Addendum, same day — a third PDF supersedes the inner-north decision
+
+Jimmy then supplied `jetblackpaintingseoaudit.pdf` (11 pages). It is **the same audit, byte-identical
+through §8.7**, with a new section appended: **§8.9a**. Verified by normalising both extractions and
+diffing — they agree for the first 35,174 characters, then diverge.
+
+**Nothing already shipped is affected.** The Casey corridor cut and the Bentleigh East merge both
+stand; §8.9a explicitly reconfirms `/painter-hampton-park/` belongs in the cut list.
+
+**What changed is the reasoning behind §8.2, and therefore the inner-north question.** §8.5 asked
+"will you travel there?", Jimmy answered **no**, and §8.5 says a "no" means noindex those 11 pages.
+§8.9a undermines the premise of that question:
+
+> Unistar is based in **Clyde North** and ranks in the **Hampton** local pack — 55 km and an hour
+> away. That single fact undercuts the assumption behind the whole geographic argument in §8.2.
+> **Proximity is not what gates local pack entry. Review volume is.** Unistar has 358 reviews; you
+> have 17.
+
+The audit's own consequence: the inner north "isn't structurally closed to you. Revisit it once
+reviews are past 50." So the correct action on those 11 pages is now the §8.5 *"only for a big job"*
+outcome — **leave them up and unchanged** — not noindex. **A future run must not execute the
+noindex that the entry above originally queued.** Jimmy's decision was sound on the information he
+had; the information changed.
+
+§8.9a also resolves two judgment calls in the invest group: **Brighton and Hampton have confirmed
+commercial demand** (dedicated local packs, PAA blocks, 65 painting services listed on Airtasker for
+Brighton VIC; Google resolves bare "painters brighton" to Brighton VIC 3186). They stay in invest.
+The reason they don't show is the review count, not the pages.
+
+**One small unfixed item from §8.9a.** Google conflates **Hampton 3188** with **Hampton Park 3976**
+— DH Creative Painting, a Hampton Park business, ranks for "painters hampton vic". The audit asks
+that `/painter-hampton/` state postcode **3188** explicitly and name neighbouring Bayside suburbs.
+Checked: the Bayside neighbours are **already there** (Brighton, Brighton East, Sandringham,
+Bentleigh, Cheltenham, Mordialloc, Highett, Hampton East). **The postcode is not** — 3188 appears in
+`suburbsData.ts` for the map but nowhere in the page prose. Not changed here; it is a content edit
+outside the scope Jimmy approved.
+
+**The finding the audit says outranks everything else in it:** getting from 17 reviews to 60. Its
+words — "The review campaign in §6 is not one task among many. It is the task." Which collides with
+§7.5's warning that some existing reviews look manufactured and risk being filtered.

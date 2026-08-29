@@ -1985,3 +1985,108 @@ negotiation, robots.txt, llms.txt, image weights, TTFB.
 
 **No site change made.** Nothing was found that evidence supports changing, and no ranking data
 was available to justify one.
+
+---
+
+## 2026-08-28 — third-party audit reviewed against live data; two real findings, three false alarms
+
+Jimmy supplied a "Jetblack Painting — SEO & AI Search Audit" PDF (dated 30 August 2026, two days
+ahead of receipt). It is genuinely well-researched — its Search Console figures are within ~4% of
+what Windsor.ai returns — so its claims were checked one by one rather than accepted or dismissed.
+
+### ✅ CONFIRMED — act on these
+
+**1. The 96 suburb pages have no quote form.** `SuburbPageTemplate.tsx` renders Navbar, SEOHead,
+MidPageCTA, Footer and icons. It does NOT render `QuoteForm` or `Contact`; the homepage renders
+both. All 96 suburb page files route through that template, so **0 of 96 have a form**. The
+crawler layer confirms it: `/painter-clyde-north/` has 0 `<form>` and 0 `<input>`.
+Consequence beyond conversion: the `generate_lead` event added on 2026-08-25 can only ever fire
+from the homepage, so lead tracking is blind on every page that carries the impressions.
+(The audit's "8 phone links" is wrong — the static layer has 2 — but the substance holds.)
+
+**2. Both URL variants really are in Google's index.** The site now redirects correctly —
+`/painter-black-rock` → 301, `/painter-black-rock/` → 200, verified live — but Search Console
+still carries impressions against BOTH forms, and against `http://`:
+
+| Non-slash | Slash | http:// |
+| --- | --- | --- |
+| painter-black-rock 30 | painter-black-rock/ 5 | `http://` homepage 2 imp / **2 clicks** |
+| painter-caulfield 21 | painter-caulfield/ 276 | `http://painter-greater-dandenong` 13 imp / **1 click** |
+| painter-mount-eliza 2 | painter-mount-eliza/ 313 | |
+| painter-mornington-peninsula **136** | painter-mornington-peninsula/ **165** | |
+| painter-sandringham 16 | painter-sandringham/ 235 | |
+| services/commercial-painting 8 | .../ 266 | |
+
+Mornington Peninsula is a near-even split — real signal dilution. This is **legacy index data on a
+correctly-configured site**, not a live redirect defect, so it should consolidate on its own. The
+standing "trailing slashes are not a defect" note remains right about the *serving* behaviour and
+should not be used to dismiss the *index* state.
+
+### ❌ NOT CONFIRMED — do not act on these
+
+**"You have no analytics installed — no gtag, no dataLayer, no googletagmanager."** False. The
+live homepage HTML contains `gtag` ×5, `dataLayer` ×2, `googletagmanager` ×2 and `G-6NC2597W9L`
+×2. It is lazy-loaded inside `requestIdleCallback` via `_loadGA`, which is why a checker that does
+not wait reports nothing. **Their companion claim is true though** — the GA4 property returns zero
+rows, which this log already records as a known upstream problem. Tag present, data not landing:
+a property/stream mismatch, not a missing tag, and the fix is different.
+
+**"Duplicate URL variants are being indexed [because the site serves both]."** Half false — see
+above. The index state is real; the serving defect they imply is not.
+
+**"Schema gaps — suburb pages only carry LocalBusiness + WebPage. Add Service, BreadcrumbList,
+FAQPage."** False. `/painter-clyde-north/` already carries **BreadcrumbList, FAQPage,
+LocalBusiness, Service and WebPage**, with 6 Question entries — exactly the five types recommended.
+
+### ⚠️ COULD NOT VERIFY
+
+**"Your GBP listing has no phone number on it"** — flagged as the single highest-value fix in the
+whole audit, and it contradicts this log, which records phone and website as correct. Google and
+Maps are blocked from this sandbox and Supermetrics GMB is now paywalled (below), so it could not
+be checked either way. **Jimmy should confirm this on his phone before anything else in the audit.**
+
+Their local-pack snapshot for "painters mordialloc": Unistar 358 reviews · Melbourne Painters 55 ·
+One Day Paint 50 · **Jetblack 17, not shown in the pack.** That is consistent with everything this
+log records about review count being the map-pack constraint.
+
+### 🔴 BOTH PAID GSC SOURCES LAPSED — Windsor.ai is now the only one
+
+- **GSC Wizard**: `payment_required` — "your trial has ended or you have no active subscription".
+  It worked on 2026-08-27. Subscribe at tool.gscwizard.com/settings/subscription.
+- **Supermetrics**: `TRIAL_EXPIRED` — expired **2026-08-25**, team "Team jetblackpainting"
+  (ID 1902861). The standing brief predicted this and said to tell Jimmy; telling him.
+- **Windsor.ai (`searchconsole`) WORKS** and returned full page-level data this run. It is now the
+  **only** working Search Console path and should be promoted to primary in the brief.
+
+### Ranking data (Windsor.ai, 2026-07-01 → 2026-08-25)
+
+The brief's "tracked eleven" are **not** this site's high-impression pages. The real ones:
+
+| Page | Impressions | Clicks | Position |
+| --- | --- | --- | --- |
+| /painter-clyde-north/ | **1,356** | 0 | 32.8 |
+| /painter-doncaster/ | 803 | 0 | 76.7 |
+| /painter-narre-warren/ | 608 | 0 | 36.6 |
+| /painter-bentleigh/ | 603 | 1 | 49.4 |
+| /painter-camberwell/ | 603 | 0 | 84.9 |
+| /painter-malvern-east/ | 557 | 0 | 56.9 |
+| / (homepage) | 510 | 35 | 15.8 |
+| /painter-toorak/ | 485 | **3** | 79.3 |
+
+⚠️ **Two standing instructions are contradicted by this.** The brief says Toorak, Kew, Camberwell,
+Hawthorn and Malvern are "organically unreachable — do not re-queue for content". Camberwell has
+603 impressions and Toorak has 485 impressions **and 3 clicks**. They are reachable; they are just
+ranking badly. And Clyde North — the single biggest page on the site by impressions, 1,356 — is not
+in the tracked eleven at all.
+
+### Steps 0–6 — all clean
+
+Deps 77/77 · production serving current main · three layers regenerate to a **0-file diff** ·
+117 pages / 489 FAQ questions / **0** schema-vs-visible problems · near-duplicate 25.5% avg,
+worst 47.0%, 0 over 55% · TTFB 0.46s.
+
+### No site change made this run
+
+The two confirmed findings are both real work — a form on 96 pages is a visual/component change
+requiring a draft PR and Jimmy's sign-off, and the index-duplication resolves itself. Neither is a
+same-run fix under the one-change-per-run rule.

@@ -24,6 +24,7 @@ export const KNOWN_PATHS = new Set([
   "/blog/prepare-home-for-painting/index.md",
   "/faq/",
   "/faq/index.md",
+  "/favicon.ico",
   "/favicon.png",
   "/googlebc9e38933d2233a8",
   "/hero-poolhouse.webp",

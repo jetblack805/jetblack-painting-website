@@ -470,7 +470,8 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="${robotsContent}">
   <meta name="googlebot" content="${robotsContent}">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="canonical" href="${escapeHtml(canonical)}">
   <meta property="og:type" content="website">

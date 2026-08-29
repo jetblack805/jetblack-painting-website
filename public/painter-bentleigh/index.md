@@ -63,8 +63,8 @@ Every service below is available in Bentleigh. Follow a link for service details
 
 Explore nearby suburb pages for neighbouring areas around Bentleigh.
 
-- [Bentleigh East](/painter-bentleigh-east/)
 - [Caulfield](/painter-caulfield/)
+- [Ormond](/painter-ormond/)
 - [Highett](/painter-highett/)
 - [Hampton](/painter-hampton/)
 - [McKinnon](/painter-mckinnon/)
@@ -101,7 +101,6 @@ Yes. We are based nearby in Mordialloc and provide free written quotes across Be
 - [Painters Balwyn](/painter-balwyn/)
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

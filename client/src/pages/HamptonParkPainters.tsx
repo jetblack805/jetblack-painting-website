@@ -21,8 +21,11 @@ export default function HamptonParkPainters() {
     }
   ];
 
+  // Casey/Cardinia corridor — this page stays live but is out of the index
+  // as of 2026-08-29. Rationale and the query-level numbers are in SEO-LOG.md.
   return (
     <SuburbPageTemplate
+      noindex
       suburb={suburb}
       title="Hampton Park Painters | Family Homes | Jetblack Painting"
       description="House painters in Hampton Park — brick veneer family homes, rentals and investment properties across Casey. Free quotes. Call 0432 077 782."

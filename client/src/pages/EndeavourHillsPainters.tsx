@@ -21,8 +21,11 @@ export default function EndeavourHillsPainters() {
     }
   ];
 
+  // Casey/Cardinia corridor — this page stays live but is out of the index
+  // as of 2026-08-29. Rationale and the query-level numbers are in SEO-LOG.md.
   return (
     <SuburbPageTemplate
+      noindex
       suburb={suburb}
       title="Endeavour Hills Painters | Jetblack Painting Melbourne"
       description="House painters in Endeavour Hills — 1980s and 90s brick veneer and split-level homes on sloping blocks. Free quotes. Call 0432 077 782."

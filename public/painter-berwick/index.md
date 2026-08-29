@@ -98,7 +98,6 @@ Yes. We provide free, no-obligation written quotes across Berwick and the wider 
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)
 - [Painters Box Hill](/painter-box-hill/)

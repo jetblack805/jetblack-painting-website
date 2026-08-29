@@ -22,8 +22,11 @@ export default function CranbournePainters() {
   ];
 
 
+  // Casey/Cardinia corridor — this page stays live but is out of the index
+  // as of 2026-08-29. Rationale and the query-level numbers are in SEO-LOG.md.
   return (
     <SuburbPageTemplate
+      noindex
       suburb={suburb}
       title="Cranbourne Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Cranbourne — brick-veneer family homes, double-storey homes and metal roofs. Free quotes, 5-year guarantee. Call 0432 077 782."

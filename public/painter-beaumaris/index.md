@@ -96,7 +96,6 @@ Cost depends on property size, number of storeys, surface condition and scope â€
 - [Painters Balwyn](/painter-balwyn/)
 - [Painters Bayside](/painter-bayside/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

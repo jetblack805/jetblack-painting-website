@@ -30,7 +30,6 @@ const SERVICE_AREAS = [
   { name: "Bayside", href: "/painter-bayside/" },
   { name: "Beaumaris", href: "/painter-beaumaris/" },
   { name: "Bentleigh", href: "/painter-bentleigh/" },
-  { name: "Bentleigh East", href: "/painter-bentleigh-east/" },
   { name: "Berwick", href: "/painter-berwick/" },
   { name: "Black Rock", href: "/painter-black-rock/" },
   { name: "Bonbeach", href: "/painter-bonbeach/" },

@@ -49,8 +49,6 @@ export const KNOWN_PATHS = new Set([
   "/painter-bayside/index.md",
   "/painter-beaumaris/",
   "/painter-beaumaris/index.md",
-  "/painter-bentleigh-east/",
-  "/painter-bentleigh-east/index.md",
   "/painter-bentleigh/",
   "/painter-bentleigh/index.md",
   "/painter-berwick/",

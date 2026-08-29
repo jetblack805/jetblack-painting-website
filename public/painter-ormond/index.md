@@ -63,7 +63,6 @@ Every service below is available in Ormond. Follow a link for service details an
 
 Explore nearby suburb pages for neighbouring areas around Ormond.
 
-- [Bentleigh East](/painter-bentleigh-east/)
 - [Carnegie](/painter-carnegie/)
 - [McKinnon](/painter-mckinnon/)
 - [Murrumbeena](/painter-murrumbeena/)
@@ -99,7 +98,6 @@ Yes. We provide free, no-obligation written quotes across Ormond and surrounding
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

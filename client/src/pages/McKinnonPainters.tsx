@@ -35,7 +35,6 @@ export default function McKinnonPainters() {
       title="McKinnon Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in McKinnon — Californian bungalows and interwar homes. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
-        { name: "Bentleigh East", link: "/painter-bentleigh-east" },
         { name: "Bentleigh", link: "/painter-bentleigh" },
         { name: "Ormond", link: "/painter-ormond" },
         { name: "Murrumbeena", link: "/painter-murrumbeena" },

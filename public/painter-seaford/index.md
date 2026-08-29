@@ -97,7 +97,6 @@ Yes. As a local painter servicing the bayside and Mornington Peninsula corridor 
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

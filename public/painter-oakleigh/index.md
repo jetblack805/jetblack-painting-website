@@ -99,7 +99,6 @@ Call 0432 077 782 or fill in the quote form on this page. We'll arrange a time t
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

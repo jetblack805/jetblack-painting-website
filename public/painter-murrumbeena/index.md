@@ -119,7 +119,6 @@ Regularly. Murrumbeena sits close to Chadstone Shopping Centre and on the train 
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

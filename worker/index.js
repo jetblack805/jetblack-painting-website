@@ -43,13 +43,20 @@ const PATH_REDIRECTS = {
   "/painters-camberwell":           "/painter-camberwell/",
   "/painters-hawthorn":             "/painter-hawthorn/",
   "/painters-bentleigh":            "/painter-bentleigh/",
-  "/painters-bentleigh-east":       "/painter-bentleigh-east/",
+  "/painters-bentleigh-east":       "/painter-bentleigh/",
   "/painters-caulfield":            "/painter-caulfield/",
   "/painters-hampton":              "/painter-hampton/",
   "/painters-hampton-east":         "/painter-hampton-east/",
   "/painters-mordialloc":           "/painter-mordialloc/",
   "/painters-keysborough":          "/keysborough-painters/",
   "/painter-keysborough":           "/keysborough-painters/",
+
+  // Merged suburb pages. The page is gone; the 301 keeps whatever
+  // authority it had and lands the visitor on the suburb that now covers
+  // it. Bentleigh East produced zero head-term impressions in two months
+  // while sitting beside /painter-bentleigh/ (276) and competing with it
+  // for the same searcher — merged 2026-08-29.
+  "/painter-bentleigh-east":        "/painter-bentleigh/",
   "/painters-kew":                  "/painter-kew/",
   "/painters-sandringham":          "/painter-sandringham/",
   "/painters-seaford":              "/painter-seaford/",

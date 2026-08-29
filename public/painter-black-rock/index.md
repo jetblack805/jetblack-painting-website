@@ -97,7 +97,6 @@ Call us on 0432 077 782 or fill in the quote form on this page. We'll arrange a 
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Bonbeach](/painter-bonbeach/)
 - [Painters Box Hill](/painter-box-hill/)

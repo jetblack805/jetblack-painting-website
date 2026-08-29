@@ -102,7 +102,6 @@ Yes. We service the southern Mornington Peninsula corridor and provide free, no-
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

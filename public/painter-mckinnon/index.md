@@ -75,7 +75,6 @@ Every service below is available in McKinnon. Follow a link for service details 
 
 Explore nearby suburb pages for neighbouring areas around McKinnon.
 
-- [Bentleigh East](/painter-bentleigh-east/)
 - [Bentleigh](/painter-bentleigh/)
 - [Ormond](/painter-ormond/)
 - [Murrumbeena](/painter-murrumbeena/)
@@ -122,7 +121,6 @@ We do. Alongside houses we paint shopfronts, offices, consulting rooms and the c
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

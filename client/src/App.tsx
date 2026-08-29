@@ -25,7 +25,6 @@ const BrightonPainters = lazy(() => import("./pages/BrightonPainters"));
 const CamberwellPainters = lazy(() => import("./pages/CamberwellPainters"));
 const HawthornPainters = lazy(() => import("./pages/HawthornPainters"));
 const BentleighPainters = lazy(() => import("./pages/BentleighPainters"));
-const BentleighEastPainters = lazy(() => import("./pages/BentleighEastPainters"));
 const CaulfieldPainters = lazy(() => import("./pages/CaulfieldPainters"));
 const HamptonPainters = lazy(() => import("./pages/HamptonPainters"));
 const HamptonEastPainters = lazy(() => import("./pages/HamptonEastPainters"));
@@ -154,8 +153,6 @@ function Router() {
       <Route path={"/painter-hawthorn"} component={HawthornPainters} />
       <Route path={"/painters-hawthorn"} component={HawthornPainters} />
       <Route path={"/painter-bentleigh"} component={BentleighPainters} />
-      <Route path={"/painter-bentleigh-east"} component={BentleighEastPainters} />
-      <Route path={"/painters-bentleigh-east"} component={BentleighEastPainters} />
       <Route path={"/painters-bentleigh"} component={BentleighPainters} />
       <Route path={"/painter-caulfield"} component={CaulfieldPainters} />
       <Route path={"/painters-caulfield"} component={CaulfieldPainters} />

@@ -56,13 +56,6 @@ export const SUBURBS_DATA = {
     description: "Bayside suburb with family-friendly properties",
     areasServed: ["Bentleigh", "Bentleigh East"]
   },
-  bentleighEast: {
-    name: "Bentleigh East",
-    coordinates: { lat: -37.9200, lng: 145.0560 },
-    postcode: "3165",
-    description: "Large family Glen Eira suburb with post-war brick homes and californian bungalows",
-    areasServed: ["Bentleigh East", "Bentleigh"]
-  },
   caulfield: {
     name: "Caulfield",
     coordinates: { lat: -37.8767, lng: 145.0653 },

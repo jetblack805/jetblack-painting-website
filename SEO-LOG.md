@@ -2090,3 +2090,108 @@ worst 47.0%, 0 over 55% · TTFB 0.46s.
 The two confirmed findings are both real work — a form on 96 pages is a visual/component change
 requiring a draft PR and Jimmy's sign-off, and the index-duplication resolves itself. Neither is a
 same-run fix under the one-change-per-run rule.
+
+---
+
+## 2026-08-29 — Suburb page consolidation, step one: 8 noindexed, 1 merged
+
+Jimmy supplied two documents: a 26-page **SEO & AI Search Audit** and a 9-page **Suburb Page
+Merge & Cut Implementation Pack**. This entry records what was verified, what was rejected, and
+the first slice of what was executed.
+
+### The metric that overturned an earlier conclusion in this log
+
+On 2026-08-28 this log argued the routine brief was wrong to write off Camberwell and Toorak, and
+flagged Clyde North — the site's biggest page by impressions — as untracked. **The audit pulled
+query-level data and that reframing is correct; total impressions were the wrong number.**
+
+| Page | Total impressions | Head-term ("painters + suburb") | Clicks |
+| --- | --- | --- | --- |
+| `/painter-clyde-north/` | 1,406 | **2** | 0 |
+| `/painter-mordialloc/` | 131 | **122** | some |
+
+Clyde North's 1,406 impressions are ~540 distinct machine-generated query combinations at 1–6
+impressions each ("balustrade and railing painting clyde north"). Mordialloc's 131 come from 21
+real queries. **Judge suburb pages on head-term impressions, not total.**
+
+One genuine limitation of that metric, since this log previously relied on the opposite reading:
+it scores only "painters/painter/house painters + suburb". Clyde North was linked from the
+commercial and body-corporate service pages precisely because it ranked 15–18 on *commercial*
+queries, which the metric ignores by construction. That does not overturn the call — those
+queries are Melbourne-wide and the service pages can hold them directly — but it is why both
+service links were repointed rather than simply dropped.
+
+### Verified against the live site before acting
+
+| Audit claim | Verdict |
+| --- | --- |
+| GBP listing has no phone number | **Second independent source.** Still unverifiable from here — Google is sandbox-blocked. Jimmy's to fix |
+| Suburb pages have no quote form | **True.** 0 `<form>` on all 95 |
+| 96 suburb pages, 115 sitemap URLs | **True** (both now reduced — see below) |
+| "No GA4 tag — no gtag, no dataLayer, no googletagmanager" | **FALSE.** Live homepage: `gtag` ×6, `dataLayer` ×3, `googletagmanager` ×2, `G-6NC2597W9L` ×2. Lazy-loaded in `requestIdleCallback`. **Second audit in two days to make this same error** |
+| "Suburb pages only carry LocalBusiness + WebPage" | **FALSE.** Already carry BreadcrumbList, FAQPage, Service, HomeAndConstructionBusiness. `aggregateRating` genuinely is off (`manus:disable-auto-review-schema`) |
+| Trailing-slash / `http://` duplicates need fixing | **Already fixed.** Verified working; what GSC shows is legacy index state |
+| Hughesdale "check that URL is actually indexed" | **No defect.** 200, `index, follow`, in the sitemap |
+
+**The implementation pack ships redirect config for Apache, Nginx, Netlify and Vercel. This site
+runs on Cloudflare Workers.** None of it applies as written; the redirect map was sound and was
+translated into `PATH_REDIRECTS` in `worker/index.js`.
+
+### What was executed — §8.9's two moves only
+
+Jimmy chose the two lowest-risk moves, not the full 54-URL programme.
+
+**1. Casey/Cardinia corridor — 8 pages noindexed, kept live.** Clyde, Clyde North, Cranbourne,
+Berwick, Hampton Park, Endeavour Hills, Dandenong, Greater Dandenong. Pages stay live per the
+pack's month-1 rule (noindex first, delete only in month 2 if nothing surfaces). Narre Warren was
+deliberately **not** cut — 80 real head-term impressions, the only genuine demand in that corridor.
+
+`noindex` is a new prop on `SuburbPageTemplate`, passed to `SEOHead`, and read off the same `.tsx`
+source by `scripts/generate-static-pages.mjs` so the crawler layer says the same thing. One source
+of truth, not two lists.
+
+**2. Bentleigh East merged into Bentleigh.** 301 in the worker. It produced zero head-term
+impressions while sitting beside `/painter-bentleigh/` (276) and competing for the same searcher.
+Checked its content for anything unique worth lifting first, per the pack's §1.3 — there was
+nothing: its lead-paint FAQ, the one genuinely distinct item, already exists on the Bentleigh page.
+The served-locations copy the pack supplies was also already present ("across Bentleigh and
+Bentleigh East" in the heading, propertyTypes and body), so it was not duplicated.
+
+Internal links were repointed rather than left to chain: Footer, Ormond, McKinnon and Bentleigh
+itself all linked to the merged URL. `/painters-bentleigh-east` was repointed straight at
+`/painter-bentleigh/` — leaving it aimed at the old singular would have made a two-hop chain, which
+the pack explicitly warns against.
+
+### Verification
+
+- Redirect chains: **0** across all 120 `PATH_REDIRECTS` entries (every target checked against the map)
+- Redirects into a 404: **0** (every target checked against `known-paths.js`)
+- Sitemap: **115 → 106** URLs, and none of the 9 removed URLs still appears
+- All 8 Casey static pages emit `content="noindex, follow"`; controls unaffected
+- Suburb pages: 96 → **95**; static pages 117 → 116; markdown twins 117 (the extra is `public/index.md`, the homepage twin — pre-existing, not an anomaly)
+- **`pnpm check` and `pnpm test` could not run** — `node_modules` is empty and the npm registry returns 403 through the proxy. The Cloudflare build is the real typecheck gate. Block comments were moved out of JSX attribute position rather than relying on an unverifiable parse.
+
+### Expect impressions to fall
+
+The audit predicts a 40–50% drop in total impressions if the full programme runs; this slice is
+smaller but Clyde North alone was 1,406. **That is the intended outcome.** Judge it on clicks,
+calls and form submissions, not impressions.
+
+### Still outstanding, and not done here
+
+- The remaining 30 merges and 15 cuts — not authorised in this pass
+- **The inner north is a decided "no"** (Fitzroy, Collingwood, Brunswick, Northcote, Thornbury, Carlton — plus the rest of the Decide group). Per §8.5 that means noindex them with the cut group. **Queued, not executed** — it was outside the scope Jimmy approved for this pass
+- Casey pages remain in the sitewide footer suburb directory (94 links). `noindex, follow` keeps equity flowing, and removing them is a nav change beyond this scope
+- The quote form on all 95 suburb pages — still the audit's highest-value site-side fix
+
+### Two facts in this log are now at risk
+
+**Review count (17).** Audit §7.5 flags that several reviews look written rather than volunteered:
+near-identical keyword phrasing, two reviewers sharing Jimmy's surname, one apparently from a crew
+member. Google filters exactly these patterns. **If they are removed, 17 becomes ~12 and the figure
+hardcoded in eight places across the site becomes false.** Do not treat 17 as immutable; re-verify
+against the live knowledge panel before any run cements it again.
+
+**Years trading (13+).** Three different numbers are live: `llms.txt` says **13+**, a Google
+Business Profile post says **18+**, and Google records the business opening as **March 2015 (11)**.
+Not resolved here — Jimmy has to pick the true one before it is propagated further.

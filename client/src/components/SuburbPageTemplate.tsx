@@ -31,6 +31,13 @@ interface SuburbPageProps {
   faqs?: { question: string; answer: string }[];
   schema?: object | object[];
   localContent?: { heading: string; body: string | string[] }[];
+  /* Pages kept live but dropped from the index — the Casey corridor set, cut
+     on 2026-08-29 because their impressions were machine-generated long-tail
+     combinations rather than people searching. Emits "noindex, follow" so
+     Google stops ranking them while internal link equity still flows through.
+     scripts/generate-static-pages.mjs reads this same prop off the source so
+     the crawler-facing HTML says the same thing. */
+  noindex?: boolean;
 }
 
 const coreServices = [
@@ -49,7 +56,6 @@ const KNOWN_LANDING_PATHS = new Set([
   "/painter-armadale",
   "/painter-bayside",
   "/painter-bentleigh",
-  "/painter-bentleigh-east",
   "/painter-berwick",
   "/painter-brighton",
   "/painter-camberwell",
@@ -162,6 +168,7 @@ export default function SuburbPageTemplate({
   faqs = [],
   schema,
   localContent = [],
+  noindex,
 }: SuburbPageProps) {
   const canonical = `${siteConfig.siteUrl}${primarySuburbPath(suburb)}/`;
   const validNeighbouringSuburbs = neighbouringSuburbs.filter((s) => KNOWN_LANDING_PATHS.has(s.link));
@@ -323,7 +330,7 @@ export default function SuburbPageTemplate({
 
   return (
     <div className="min-h-screen bg-[#131316]">
-      <SEOHead title={title} description={description} canonical={canonical} schema={pageSchema} />
+      <SEOHead title={title} description={description} canonical={canonical} schema={pageSchema} noindex={noindex} />
       <Navbar />
 
       <section className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white pt-32 pb-16">

@@ -49,8 +49,11 @@ export default function ClydePainters() {
     }
   ];
 
+  // Casey/Cardinia corridor — this page stays live but is out of the index
+  // as of 2026-08-29. Rationale and the query-level numbers are in SEO-LOG.md.
   return (
     <SuburbPageTemplate
+      noindex
       suburb={suburb}
       title="Clyde Painters | New Estate Homes | Jetblack Painting"
       description="House painters in Clyde — handover-stage and repaint work on new estate homes in one of Melbourne's fastest-growing suburbs. Free quotes. Call 0432 077 782."

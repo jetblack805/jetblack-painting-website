@@ -698,6 +698,12 @@ function generateSuburbPage(route, sourceFile) {
   // back to the site-wide og-image.jpg in pageHtml().
   const ogImageFile = path.join(PUBLIC_DIR, "og", `${route.replace(/^\//, "")}.jpg`);
   const ogImage = fs.existsSync(ogImageFile) ? `${SITE_URL}/og${route}.jpg` : undefined;
+  // Read the noindex flag off the same source the React layer uses, rather
+  // than keeping a second list here. A page that carries `noindex` in its
+  // SuburbPageTemplate props must say "noindex, follow" in the crawler HTML
+  // too — the two layers disagreeing is the whole failure mode this generator
+  // exists to avoid.
+  const noindex = /\bnoindex(\s*=\s*\{\s*true\s*\}|\s*[/>\n])/.test(source);
  
   writePage(
     route,
@@ -706,6 +712,7 @@ function generateSuburbPage(route, sourceFile) {
       description,
       canonical,
       ogImage,
+      robots: noindex ? "noindex, follow" : undefined,
       heroTitle: `House Painters ${suburb}`,
       heroBody: `${description} Searching for painters near you in ${suburb}? Jetblack Painting are your trusted local ${suburb} painters, servicing ${suburb} and the surrounding suburbs.`,
       schema: [
@@ -793,7 +800,6 @@ const allSuburbPages = [
   { route: "/painter-armadale", source: "ArmadalePainters.tsx" },
   { route: "/painter-bayside", source: "BaysidePainters.tsx" },
   { route: "/painter-bentleigh", source: "BentleighPainters.tsx" },
-  { route: "/painter-bentleigh-east", source: "BentleighEastPainters.tsx" },
   { route: "/painter-berwick", source: "BerwickPainters.tsx" },
   { route: "/painter-box-hill", source: "BoxHillPainters.tsx" },
   { route: "/painter-brighton", source: "BrightonPainters.tsx" },
@@ -1021,7 +1027,11 @@ const serviceSuburbLinks = {
     { label: "Painters Hampton", href: "/painter-hampton/" },
   ],
   "/services/commercial-painting": [
-    { label: "Painters Clyde North", href: "/painter-clyde-north/" },
+    // Was Clyde North, which ranked 15-18 on commercial queries but went
+    // noindex on 2026-08-29; a service page should not hand its authority to a
+    // page Google is being told to drop. Cheltenham is the nearest replacement
+    // with real commercial stock and head-term demand (155).
+    { label: "Painters Cheltenham", href: "/painter-cheltenham/" },
     { label: "Painters Mount Eliza", href: "/painter-mount-eliza/" },
     { label: "Painters Moorabbin", href: "/painter-moorabbin/" },
     { label: "Painters Collingwood", href: "/painter-collingwood/" },
@@ -1034,7 +1044,7 @@ const serviceSuburbLinks = {
     { label: "Painters Caulfield", href: "/painter-caulfield/" },
     { label: "Painters Collingwood", href: "/painter-collingwood/" },
     { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
-    { label: "Painters Clyde North", href: "/painter-clyde-north/" },
+    { label: "Painters Elwood", href: "/painter-elwood/" },
     { label: "Painters Box Hill", href: "/painter-box-hill/" },
     { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
     { label: "Painters Mentone", href: "/painter-mentone/" },

@@ -17,8 +17,11 @@ export default function BerwickPainters() {
     }
   ];
 
+  // Casey/Cardinia corridor — this page stays live but is out of the index
+  // as of 2026-08-29. Rationale and the query-level numbers are in SEO-LOG.md.
   return (
     <SuburbPageTemplate
+      noindex
       suburb={suburb}
       title="Berwick Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Berwick — established family houses. Free quotes, 5-year guarantee. Call 0432 077 782."

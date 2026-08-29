@@ -89,7 +89,7 @@ Yes. We provide detailed scopes, transparent pricing, insurance documentation an
 
 We provide this service across Melbourne, including these areas.
 
-- [Painters Clyde North](/painter-clyde-north/)
+- [Painters Cheltenham](/painter-cheltenham/)
 - [Painters Mount Eliza](/painter-mount-eliza/)
 - [Painters Moorabbin](/painter-moorabbin/)
 - [Painters Collingwood](/painter-collingwood/)
@@ -121,7 +121,6 @@ Explore our other painting services across Melbourne.
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Bonbeach](/painter-bonbeach/)

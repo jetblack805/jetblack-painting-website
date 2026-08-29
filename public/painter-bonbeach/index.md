@@ -97,7 +97,6 @@ Yes. Many older homes in coastal suburbs like Bonbeach have timber weatherboard 
 - [Painters Bayside](/painter-bayside/)
 - [Painters Beaumaris](/painter-beaumaris/)
 - [Painters Bentleigh](/painter-bentleigh/)
-- [Painters Bentleigh East](/painter-bentleigh-east/)
 - [Painters Berwick](/painter-berwick/)
 - [Painters Black Rock](/painter-black-rock/)
 - [Painters Box Hill](/painter-box-hill/)

@@ -73,7 +73,21 @@ function summariseRequest(data: QuoteFormData) {
     .join("\n");
 }
 
-export default function QuoteForm() {
+interface QuoteFormProps {
+  /* The suburb this form is embedded on. Preselects the dropdown so a visitor
+     on /painter-clyde-north/ does not have to find their own suburb in a list
+     of sixteen that never contained it. Still a select, not a locked field —
+     people do enquire about a property in a different suburb. */
+  suburb?: string;
+  /* Landing-page variant: name, phone, suburb, service and nothing else.
+     The full form asks for eight things, which is fine on the homepage where
+     someone has already scrolled past everything, and is a wall on a suburb
+     page where the whole job is to catch an enquiry before they leave. The
+     hidden fields are all optional ones — nothing required is dropped. */
+  compact?: boolean;
+}
+
+export default function QuoteForm({ suburb: pageSuburb, compact = false }: QuoteFormProps = {}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Holds the completed request so the details stay on screen after submitting.
   // This form used to call reset() and fire a mailto: immediately, which meant
@@ -96,7 +110,14 @@ export default function QuoteForm() {
     formState: { errors },
   } = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
+    defaultValues: pageSuburb ? { suburb: pageSuburb } : undefined,
   });
+
+  // The page's own suburb first, then the standard list with it removed so it
+  // cannot appear twice.
+  const suburbOptions = pageSuburb
+    ? [pageSuburb, ...suburbs.filter((s) => s !== pageSuburb)]
+    : suburbs;
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
@@ -170,7 +191,11 @@ export default function QuoteForm() {
 
   const wrapper = useInView("-100px");
   return (
-    <section id="quote" className="py-20 bg-[#131316]">
+    // On a suburb page the template already owns the #quote anchor with its
+    // call-Jimmy block, and this form sits directly beneath it — two elements
+    // with the same id would be invalid and the anchor would jump to whichever
+    // came first.
+    <section id={pageSuburb ? undefined : "quote"} className="py-20 bg-[#131316]">
       <div className="container">
         <div
           ref={wrapper.ref}
@@ -181,10 +206,14 @@ export default function QuoteForm() {
               Get Your Quote
             </span>
             <h2 className="text-3xl sm:text-4xl text-[#EDEDEF] mb-4">
-              Request a Free Painting Quote
+              {pageSuburb
+                ? `Request a Free Painting Quote in ${pageSuburb}`
+                : "Request a Free Painting Quote"}
             </h2>
             <p className="text-[#A3A3A8] text-lg max-w-2xl mx-auto">
-              Fill out the form below and we'll provide you with a detailed, no-obligation quote within 24–48 hours.
+              {compact
+                ? "Name and phone number is enough to start. We'll come back to you with a detailed, no-obligation quote within 24\u201348 hours."
+                : "Fill out the form below and we'll provide you with a detailed, no-obligation quote within 24\u201348 hours."}
             </p>
           </div>
 
@@ -295,6 +324,8 @@ export default function QuoteForm() {
                 )}
               </div>
 
+              {!compact && (
+              <>
               {/* Email */}
               <div>
                 <label htmlFor="quote-email" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
@@ -311,7 +342,8 @@ export default function QuoteForm() {
                   <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
                 )}
               </div>
-
+              </>
+            )}
               {/* Phone */}
               <div>
                 <label htmlFor="quote-phone" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
@@ -340,7 +372,7 @@ export default function QuoteForm() {
                   className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
                 >
                   <option value="">Select a suburb</option>
-                  {suburbs.map((suburb) => (
+                  {suburbOptions.map((suburb) => (
                     <option key={suburb} value={suburb}>
                       {suburb}
                     </option>
@@ -374,6 +406,8 @@ export default function QuoteForm() {
                 )}
               </div>
 
+              {!compact && (
+              <>
               {/* Preferred Date */}
               <div>
                 <label htmlFor="quote-date" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
@@ -400,8 +434,12 @@ export default function QuoteForm() {
                   className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
                 />
               </div>
+              </>
+            )}
             </div>
 
+            {!compact && (
+              <>
             {/* Project Description */}
             <div className="mb-6">
               <label htmlFor="quote-description" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
@@ -418,7 +456,8 @@ export default function QuoteForm() {
                 <p className="text-red-500 text-sm mt-1">{errors.projectDescription.message}</p>
               )}
             </div>
-
+              </>
+            )}
             {/* Submit Button */}
             <button
               type="submit"

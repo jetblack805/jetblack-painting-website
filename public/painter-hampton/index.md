@@ -10,7 +10,7 @@ Coastal house painters in Hampton — weatherboard cottages, period homes and mo
 
 ## Local painting services in Hampton
 
-We understand Hampton's coastal properties and the unique challenges of Bayside painting. From classic weatherboard cottages and period homes on the streets behind Hampton Street to modern beach residences closer to the foreshore, our team uses weather-resistant coatings and thorough preparation systems that protect against salt air, UV and Melbourne's variable coastal climate.
+We work in Hampton 3188 — the Bayside suburb between Brighton and Sandringham, not Hampton Park out in the south-east. We understand Hampton's coastal properties and the unique challenges of Bayside painting. From classic weatherboard cottages and period homes on the streets behind Hampton Street to modern beach residences closer to the foreshore, our team uses weather-resistant coatings and thorough preparation systems that protect against salt air, UV and Melbourne's variable coastal climate.
 
 Hampton's weatherboard cottages, period homes, modern beach residences and rendered contemporary builds across Hampton and Hampton East.
 

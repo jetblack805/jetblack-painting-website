@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Star, Phone, MapPin, CheckCircle } from "lucide-react";
 import siteConfig from "@/site-config.json";
 import { Link } from "wouter";
@@ -5,6 +6,9 @@ import SEOHead from "./SEOHead";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MidPageCTA from "./MidPageCTA";
+// Lazy, as on the homepage: the form pulls in react-hook-form and zod, and
+// these 95 pages are the fastest thing on the site. It loads below the fold.
+const QuoteForm = lazy(() => import("./QuoteForm"));
 import { getSuburbData, getEmbedMapSrc } from "../suburbsData";
 // Each gallery image is paired with a 900px variant. These three render on all
 // 95 suburb pages, so serving the full-size file to a phone for a 224px-tall
@@ -632,6 +636,11 @@ export default function SuburbPageTemplate({
           </div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm suburb={suburb} compact />
+      </Suspense>
+
       <Footer />
     </div>
   );

@@ -24,8 +24,28 @@ Re-verify against the live site before cementing any of them again.
 | Public liability | $10 million | — |
 | Workmanship guarantee | 5 years, written | — |
 | Base | Mordialloc VIC 3195 | 2026-08-27 |
-| Years trading | 13+ | — |
+| **Years experience** | **18+** | 2026-08-30 |
 | Quote turnaround / enquiry response | 24–48 hours | — |
+
+### Years experience — 18+, not 13+
+
+**Jimmy confirmed on 2026-08-30 that 18 is correct**, and asked the site to match his Google
+Business Profile, which states 18+. Every occurrence was changed across 23 source files. **Do not
+revert this to 13.** An earlier version of the daily brief says 13+; that is now stale.
+
+Three other figures were live and are all wrong or need care:
+
+| Where | Said | Status |
+| --- | --- | --- |
+| Site, llms.txt, schema | 13+ | **corrected to 18+** |
+| `TrustBadges.tsx` | "trusted since 2011" (implies 15) | **year claim removed** — not replaced with an invented founding year |
+| Google Business Profile | 18+ | the source of truth Jimmy nominated |
+| Google's record of the business opening | March 2015 (11) | **unresolved, and Google can see it** |
+
+Phrasing throughout is deliberately "18+ years of **experience**", not "the business is 18 years
+old" — that is what the Business Profile says and it is the reading that does not contradict
+Google's own opening date. If the intent is business age, that conflict has to be settled at the
+Business Profile end, not in the repo.
 
 ### Review count — read this before touching it
 

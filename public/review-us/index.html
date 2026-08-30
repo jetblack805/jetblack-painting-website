@@ -24,6 +24,34 @@
   <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
        covers "/" -- these generated pages carry their own head. -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
+  <!-- GA4. Mirrored from client/index.html for the same reason as the Ahrefs tag
+       above: that file only serves "/", and every other page is built here.
+       Until 2026-08-30 this block was missing, so GA4 fired on the homepage
+       alone and recorded nothing from the 95 suburb pages or the 9 service
+       pages -- which is also every page carrying a quote form. lib/analytics.ts
+       queues events onto dataLayer when gtag has not loaded, so without this the
+       generate_lead and phone_call_click events sat in an array that was never
+       sent. Keep the two copies in step. -->
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script>
+    function _loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6NC2597W9L';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-6NC2597W9L');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(_loadGA);
+    } else {
+      window.addEventListener('load', _loadGA);
+    }
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"WebPage","name":"Leave a Review | Jetblack Painting Melbourne","description":"Leave a Google review for Jetblack Painting. Your feedback helps Melbourne homeowners find trusted interior, exterior and commercial painters.","url":"https://jetblackpainting.com/review-us/"}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jetblackpainting.com/"},{"@type":"ListItem","position":2,"name":"Leave a Review","item":"https://jetblackpainting.com/review-us/"}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"WebPage","@id":"https://jetblackpainting.com/review-us/#webpage-speakable","url":"https://jetblackpainting.com/review-us/","speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".hero p"]}}</script>
@@ -71,6 +99,7 @@
       <li><strong>Submit the review</strong> — Post the review so other Melbourne property owners can read your feedback.</li>
     </ol>
   </section>
+
 
   <footer>
     <p><strong>Jetblack Painting</strong> — Leave a Review for Jetblack Painting | Phone: <a href="tel:0432077782">0432 077 782</a> | Email: <a href="mailto:jimmy@jetblackpainting.com">jimmy@jetblackpainting.com</a></p>

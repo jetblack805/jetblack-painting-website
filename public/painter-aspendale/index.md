@@ -103,6 +103,10 @@ Yes, meaningfully. The strip between the Frankston line and the sand takes wind 
 
 Yes, and we treat them as genuinely different jobs. Aspendale Gardens is a separate, later suburb built inland from the 1980s onward. Different housing, different era, and far enough from the water that the coastal specification we use near the beach is often unnecessary. If you are not sure which side of the line your property sits on, mention the street when you call and we will tell you.
 
+## Recent work in Aspendale
+
+Render repairs and a full exterior repaint on a beachfront home at Gnotuk, Aspendale — a property that takes salt-laden wind off the bay year round. Damaged render was cut out and patched, the patches primed, and the whole exterior recoated including the eaves lining, fascia and downpipes.
+
 **Jetblack Painting** — House Painters Aspendale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

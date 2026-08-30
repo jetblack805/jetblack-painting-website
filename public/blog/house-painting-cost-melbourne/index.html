@@ -24,6 +24,34 @@
   <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
        covers "/" -- these generated pages carry their own head. -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
+  <!-- GA4. Mirrored from client/index.html for the same reason as the Ahrefs tag
+       above: that file only serves "/", and every other page is built here.
+       Until 2026-08-30 this block was missing, so GA4 fired on the homepage
+       alone and recorded nothing from the 95 suburb pages or the 9 service
+       pages -- which is also every page carrying a quote form. lib/analytics.ts
+       queues events onto dataLayer when gtag has not loaded, so without this the
+       generate_lead and phone_call_click events sat in an array that was never
+       sent. Keep the two copies in step. -->
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script>
+    function _loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6NC2597W9L';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-6NC2597W9L');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(_loadGA);
+    } else {
+      window.addEventListener('load', _loadGA);
+    }
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BlogPosting","headline":"House Painting Cost Melbourne 2026","description":"Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects.","inLanguage":"en-AU","datePublished":"2026-06-23","dateModified":"2026-08-13","articleSection":"Price Guide","image":"https://jetblackpainting.com/og-image.jpg","author":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com"},"publisher":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com","logo":{"@type":"ImageObject","url":"https://jetblackpainting.com/logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jetblackpainting.com/blog/house-painting-cost-melbourne/"}}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does it cost to paint an average 3-bedroom house in Melbourne?","acceptedAnswer":{"@type":"Answer","text":"A whole-house interior repaint for a 3-bedroom home typically runs $5,000 to $12,000, depending on wall and ceiling condition, trim work, and the finish level chosen. That's for interior only — exterior painting is quoted separately based on the home's size and access."}},{"@type":"Question","name":"Why do quotes vary so much between painters?","acceptedAnswer":{"@type":"Answer","text":"Surface condition, the number of coats needed, height and access requirements, and paint quality all move the price more than floor area alone. A quote that looks cheap often has less preparation built in, which is where paint failure usually starts."}},{"@type":"Question","name":"Is a written, itemised quote necessary?","acceptedAnswer":{"@type":"Answer","text":"Yes. A proper quote should include a detailed written breakdown of costs, the paint brand and product specifications, a timeline, and warranty information. A one-line price with no scope makes it hard to compare against other quotes fairly."}},{"@type":"Question","name":"Do you charge extra for scaffolding on multi-storey homes?","acceptedAnswer":{"@type":"Answer","text":"Multi-storey homes often need scaffolding or edge protection for safe access, and that adds to the cost. How much depends on the height, the ground conditions and how much of the building needs to be reached, so we price it after seeing the property. It is itemised in your written quote rather than hidden in the total."}}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jetblackpainting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://jetblackpainting.com/blog/"},{"@type":"ListItem","position":3,"name":"House Painting Cost Melbourne 2026","item":"https://jetblackpainting.com/blog/house-painting-cost-melbourne/"}]}</script>
@@ -115,6 +143,7 @@
     <h3>Do you charge extra for scaffolding on multi-storey homes?</h3>
     <p>Multi-storey homes often need scaffolding or edge protection for safe access, and that adds to the cost. How much depends on the height, the ground conditions and how much of the building needs to be reached, so we price it after seeing the property. It is itemised in your written quote rather than hidden in the total.</p>
   </section>
+
 
   <footer>
     <p><strong>Jetblack Painting</strong> — House Painting Cost Melbourne 2026 | Phone: <a href="tel:0432077782">0432 077 782</a> | Email: <a href="mailto:jimmy@jetblackpainting.com">jimmy@jetblackpainting.com</a></p>

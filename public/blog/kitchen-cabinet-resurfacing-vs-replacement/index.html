@@ -24,6 +24,34 @@
   <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
        covers "/" -- these generated pages carry their own head. -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
+  <!-- GA4. Mirrored from client/index.html for the same reason as the Ahrefs tag
+       above: that file only serves "/", and every other page is built here.
+       Until 2026-08-30 this block was missing, so GA4 fired on the homepage
+       alone and recorded nothing from the 95 suburb pages or the 9 service
+       pages -- which is also every page carrying a quote form. lib/analytics.ts
+       queues events onto dataLayer when gtag has not loaded, so without this the
+       generate_lead and phone_call_click events sat in an array that was never
+       sent. Keep the two copies in step. -->
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script>
+    function _loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6NC2597W9L';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-6NC2597W9L');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(_loadGA);
+    } else {
+      window.addEventListener('load', _loadGA);
+    }
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kitchen Cabinet Resurfacing vs Replacement","description":"Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting.","inLanguage":"en-AU","datePublished":"2026-06-23","dateModified":"2026-08-13","articleSection":"Kitchen","image":"https://jetblackpainting.com/og-image.jpg","author":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com"},"publisher":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com","logo":{"@type":"ImageObject","url":"https://jetblackpainting.com/logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jetblackpainting.com/blog/kitchen-cabinet-resurfacing-vs-replacement/"}}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much can I save by resurfacing instead of replacing my kitchen?","acceptedAnswer":{"@type":"Answer","text":"Cabinet resurfacing typically costs $3,500 to $8,000 compared with $15,000 to $60,000 depending on size and finish for a full kitchen renovation — a fraction of the cost — because your cabinet boxes, layout and benchtops stay in place."}},{"@type":"Question","name":"Can any kitchen cabinets be resurfaced?","acceptedAnswer":{"@type":"Answer","text":"Resurfacing works well when the cabinet boxes are structurally sound, you're happy with the layout, and the cabinets are solid timber or quality MDF. If the boxes are water-damaged, warped, or made from deteriorating particleboard, replacement is the better option."}},{"@type":"Question","name":"How long does cabinet resurfacing take?","acceptedAnswer":{"@type":"Answer","text":"Most kitchen cabinet resurfacing projects take 3 to 5 days, compared to 4 to 8 weeks for a full renovation, with far less disruption to your household in the meantime."}},{"@type":"Question","name":"What finish do you use for cabinet resurfacing?","acceptedAnswer":{"@type":"Answer","text":"We use 2-pack polyurethane, the same professional-grade finish used on luxury new kitchens, sprayed on in a controlled environment after thorough sanding, cleaning and priming for a factory-quality result."}}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jetblackpainting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://jetblackpainting.com/blog/"},{"@type":"ListItem","position":3,"name":"Kitchen Cabinet Resurfacing vs Replacement","item":"https://jetblackpainting.com/blog/kitchen-cabinet-resurfacing-vs-replacement/"}]}</script>
@@ -111,6 +139,7 @@
     <h3>What finish do you use for cabinet resurfacing?</h3>
     <p>We use 2-pack polyurethane, the same professional-grade finish used on luxury new kitchens, sprayed on in a controlled environment after thorough sanding, cleaning and priming for a factory-quality result.</p>
   </section>
+
 
   <footer>
     <p><strong>Jetblack Painting</strong> — Kitchen Cabinet Resurfacing vs Replacement | Phone: <a href="tel:0432077782">0432 077 782</a> | Email: <a href="mailto:jimmy@jetblackpainting.com">jimmy@jetblackpainting.com</a></p>

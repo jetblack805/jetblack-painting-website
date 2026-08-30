@@ -75,6 +75,49 @@ export default function CaulfieldPainters() {
           ],
         },
       ]}
+      projectSummary={`Exterior repaints on rendered homes in ${suburb}. The before-and-after below is one of them: the render, parapet, fascia and garage door were repainted. The gate, letterbox and planting visible in that frame are not painting work.`}
+      projectImages={[
+        {
+          src: "/projects/project-caulfield-before-after.webp",
+          small: "/projects/project-caulfield-before-after-800.webp",
+          width: 1120,
+          height: 764,
+          alt: `Before and after of a rendered two-storey ${suburb} home exterior repainted by Jetblack Painting`,
+          caption: "The same elevation, before and after. The paintwork is the render, parapet, fascia and garage door — the gate, letterbox and garden beds in the after frame are not ours to claim.",
+        },
+        {
+          src: "/projects/project-caulfield-street-before.webp",
+          small: "/projects/project-caulfield-street-before-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Rendered two-storey ${suburb} home with scaffolding in place before an exterior repaint`,
+          caption: "Access set up before a brush is lifted. Scaffold to the upper balcony, because on a two-storey render job the parapet and fascia are where the result is decided.",
+        },
+        {
+          src: "/projects/project-caulfield-scaffold-masked-windows.webp",
+          small: "/projects/project-caulfield-scaffold-masked-windows-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Scaffolding and fully masked windows on a ${suburb} render exterior during painting`,
+          caption: "Windows and frames masked out before any coating goes on. Masking is the slow, unglamorous part and the reason the finished lines are sharp.",
+        },
+        {
+          src: "/projects/project-caulfield-rendered-facade.webp",
+          small: "/projects/project-caulfield-rendered-facade-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Repainted cream render, columns and eaves on a second ${suburb} property`,
+          caption: `A second ${suburb} property. Render this flat and this pale shows every roller mark, so it gets laid off carefully rather than rushed.`,
+        },
+        {
+          src: "/projects/project-caulfield-eaves-prep.webp",
+          small: "/projects/project-caulfield-eaves-prep-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Drop sheets, ladder and masking tape in place on ${suburb} eaves and rendered wall before painting`,
+          caption: "Preparation under way — drop sheets down, tape up, everything covered before the first coat.",
+        },
+      ]}
       faqs={faqs}
     />
   );

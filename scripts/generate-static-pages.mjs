@@ -5,6 +5,8 @@ import path from "node:path";
 // values can be used by both the static generator and the client app.
 const CONFIG_PATH = path.resolve("client/src/site-config.json");
 let SITE_URL = "https://jetblackpainting.com";
+// Must match the id in client/index.html.
+const GA4_MEASUREMENT_ID = "G-6NC2597W9L";
 let PHONE_DISPLAY = "0432 077 782";
 let PHONE_HREF = "0432077782";
 let EMAIL = "jimmy@jetblackpainting.com";
@@ -376,7 +378,7 @@ function suburbDirectoryHtml(currentCanonical) {
   );
 }
 
-function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots }) {
+function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots, projectImages = [], projectSummary = "", projectHeading = "Recent work" }) {
   // Utility pages pass robots: "noindex, follow". A thin page left indexable
   // reads to Google as a soft 404; "follow" keeps link equity flowing.
   const robotsContent =
@@ -385,6 +387,23 @@ function pageHtml({ title, description, canonical, heroTitle, heroBody, sections
     .filter(Boolean)
     .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
     .join("\n");
+
+  // Real project photographs, emitted as genuine <img> with descriptive alt text
+  // and captions. Every other image on this site is a React module import and
+  // therefore invisible to crawlers; these are the only ones Google can see.
+  const projectHtml = projectImages.length
+    ? `  <section>
+    <h2>${escapeHtml(projectHeading)}</h2>
+${projectSummary ? `    <p>${escapeHtml(projectSummary)}</p>\n` : ""}${projectImages
+        .map(
+          (img) => `    <figure>
+      <img src="${img.src}"${img.small ? ` srcset="${img.small} 800w, ${img.src} ${img.width}w" sizes="(max-width: 768px) 100vw, 50vw"` : ""} width="${img.width}" height="${img.height}" alt="${escapeHtml(img.alt)}" loading="lazy" decoding="async">
+      <figcaption>${escapeHtml(img.caption)}</figcaption>
+    </figure>`
+        )
+        .join("\n")}
+  </section>`
+    : "";
 
   const sectionHtml = sections
     .map((section) => {
@@ -487,6 +506,34 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
        covers "/" -- these generated pages carry their own head. -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
+  <!-- GA4. Mirrored from client/index.html for the same reason as the Ahrefs tag
+       above: that file only serves "/", and every other page is built here.
+       Until 2026-08-30 this block was missing, so GA4 fired on the homepage
+       alone and recorded nothing from the 95 suburb pages or the 9 service
+       pages -- which is also every page carrying a quote form. lib/analytics.ts
+       queues events onto dataLayer when gtag has not loaded, so without this the
+       generate_lead and phone_call_click events sat in an array that was never
+       sent. Keep the two copies in step. -->
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script>
+    function _loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '${GA4_MEASUREMENT_ID}');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(_loadGA);
+    } else {
+      window.addEventListener('load', _loadGA);
+    }
+  </script>
 ${schemaScripts}
   <style>
     body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#EDEDEF;background:#060607;line-height:1.6}
@@ -518,6 +565,7 @@ ${schemaScripts}
   </header>
 
 ${sectionHtml}
+${projectHtml}
 
   <footer>
     <p><strong>Jetblack Painting</strong> — ${escapeHtml(heroTitle)} | Phone: <a href="tel:${PHONE_HREF}">${PHONE_DISPLAY}</a> | Email: <a href="mailto:${EMAIL}">${EMAIL}</a></p>
@@ -680,6 +728,49 @@ function suburbServiceCards({ suburb, localExpertise, propertyTypes }) {
   ];
 }
 
+// Real project photographs for a suburb, parsed off the same `projectImages`
+// prop the React layer uses. This exists because the crawler-facing HTML
+// otherwise carries no <img> at all — every photo on the site is a React module
+// import, so Google can see none of them. Files live under public/projects/
+// with stable, descriptive names rather than hashed bundle names.
+function extractProjectImages(source, suburb) {
+  const start = source.indexOf("projectImages={[");
+  if (start === -1) return [];
+  let depth = 0, end = -1;
+  for (let i = source.indexOf("[", start); i < source.length; i++) {
+    if (source[i] === "[") depth++;
+    else if (source[i] === "]") { depth--; if (depth === 0) { end = i; break; } }
+  }
+  if (end === -1) return [];
+  const block = source.slice(start, end + 1);
+
+  // Split on each `src:` rather than brace-matching. A template literal such as
+  // `... ${suburb} home` contains a closing brace, so a non-greedy {...} match
+  // terminates inside the string and silently loses every field after it —
+  // which is exactly how alt text came out empty the first time.
+  const marks = [...block.matchAll(/\bsrc:\s*"/g)].map((m) => m.index);
+  const out = [];
+  for (let i = 0; i < marks.length; i++) {
+    const body = block.slice(marks[i], i + 1 < marks.length ? marks[i + 1] : block.length);
+    const pick = (key) => {
+      const hit = body.match(new RegExp(key + ':\\s*(?:"([^"]*)"|`([^`]*)`|(\\d+))'));
+      return hit ? normalizeTemplate(hit[1] ?? hit[2] ?? hit[3] ?? "", { suburb }) : "";
+    };
+    const src = pick("src");
+    if (!src) continue;
+    out.push({
+      src, small: pick("small"), width: pick("width"), height: pick("height"),
+      alt: pick("alt"), caption: pick("caption"),
+    });
+  }
+  return out;
+}
+
+function extractProjectSummary(source, suburb) {
+  const m = source.match(/projectSummary=\{`([\s\S]*?)`\}/);
+  return m ? normalizeTemplate(m[1], { suburb }) : "";
+}
+
 function generateSuburbPage(route, sourceFile) {
   const source = fs.readFileSync(sourceFile, "utf8");
   const suburb = extractQuotedValue(source, "suburb") || titleCaseFromSlug(route.replace("/painter-", ""));
@@ -690,6 +781,8 @@ function generateSuburbPage(route, sourceFile) {
   const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
   const faqs = extractFaqs(source, suburb);
   const localContent = extractLocalContent(source, suburb);
+  const projectImages = extractProjectImages(source, suburb);
+  const projectSummary = extractProjectSummary(source, suburb);
   const canonical = canonicalForRoute(route);
   // Only advertise a per-route OG image when the file actually exists. The
   // generator that produces these (scripts/generate-images.mjs) is opt-in and
@@ -713,6 +806,9 @@ function generateSuburbPage(route, sourceFile) {
       canonical,
       ogImage,
       robots: noindex ? "noindex, follow" : undefined,
+      projectImages,
+      projectSummary,
+      projectHeading: `Recent work in ${suburb}`,
       heroTitle: `House Painters ${suburb}`,
       heroBody: `${description} Searching for painters near you in ${suburb}? Jetblack Painting are your trusted local ${suburb} painters, servicing ${suburb} and the surrounding suburbs.`,
       schema: [

@@ -97,6 +97,49 @@ export default function AspendalePainters() {
           ],
         },
       ]}
+      projectSummary={`Render repairs and a full exterior repaint on a beachfront home at Gnotuk, ${suburb} — a property that takes salt-laden wind off the bay year round. Damaged render was cut out and patched, the patches primed, and the whole exterior recoated including the eaves lining, fascia and downpipes.`}
+      projectImages={[
+        {
+          src: "/projects/project-aspendale-render-patches-before.webp",
+          small: "/projects/project-aspendale-render-patches-before-800.webp",
+          width: 1000,
+          height: 1333,
+          alt: `Fresh render patch repairs drying on the upper wall of an ${suburb} home before repainting`,
+          caption: "Render cut out and patched. The patches are left to cure before priming — coating them early is what causes the flashing you see on a rushed job.",
+        },
+        {
+          src: "/projects/project-aspendale-render-repair-scaffold.webp",
+          small: "/projects/project-aspendale-render-repair-scaffold-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Scaffolding against the rear elevation of a beachfront ${suburb} house during exterior painting`,
+          caption: "Scaffold up on the elevation facing the water. That side takes the salt and weathers first, so it gets the closest preparation.",
+        },
+        {
+          src: "/projects/project-aspendale-eaves-skylights-after.webp",
+          small: "/projects/project-aspendale-eaves-skylights-after-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Repainted eaves lining and skylights on an ${suburb} home`,
+          caption: "Eaves lining, fascia and downpipes recoated. Skylights masked rather than cut around freehand.",
+        },
+        {
+          src: "/projects/project-aspendale-facade-after.webp",
+          small: "/projects/project-aspendale-facade-after-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Finished render and gutter line on a two-storey ${suburb} house after repainting`,
+          caption: "Finished render with the repairs invisible under the topcoat, and a clean line where the wall meets the gutter.",
+        },
+        {
+          src: "/projects/project-aspendale-roofline-bay-view.webp",
+          small: "/projects/project-aspendale-roofline-bay-view-800.webp",
+          width: 1200,
+          height: 900,
+          alt: `Roofline of a completed ${suburb} exterior repaint with Port Phillip Bay beyond`,
+          caption: "From the roofline, with the bay behind. This is the exposure every coating on this house has to survive.",
+        },
+      ]}
       faqs={faqs}
       schema={schema}
     />

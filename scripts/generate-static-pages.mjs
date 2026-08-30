@@ -376,7 +376,7 @@ function suburbDirectoryHtml(currentCanonical) {
   );
 }
 
-function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots }) {
+function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots, projectImages = [], projectSummary = "" }) {
   // Utility pages pass robots: "noindex, follow". A thin page left indexable
   // reads to Google as a soft 404; "follow" keeps link equity flowing.
   const robotsContent =
@@ -385,6 +385,23 @@ function pageHtml({ title, description, canonical, heroTitle, heroBody, sections
     .filter(Boolean)
     .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
     .join("\n");
+
+  // Real project photographs, emitted as genuine <img> with descriptive alt text
+  // and captions. Every other image on this site is a React module import and
+  // therefore invisible to crawlers; these are the only ones Google can see.
+  const projectHtml = projectImages.length
+    ? `  <section>
+    <h2>Recent work</h2>
+${projectSummary ? `    <p>${escapeHtml(projectSummary)}</p>\n` : ""}${projectImages
+        .map(
+          (img) => `    <figure>
+      <img src="${img.src}"${img.small ? ` srcset="${img.small} 800w, ${img.src} ${img.width}w" sizes="(max-width: 768px) 100vw, 50vw"` : ""} width="${img.width}" height="${img.height}" alt="${escapeHtml(img.alt)}" loading="lazy" decoding="async">
+      <figcaption>${escapeHtml(img.caption)}</figcaption>
+    </figure>`
+        )
+        .join("\n")}
+  </section>`
+    : "";
 
   const sectionHtml = sections
     .map((section) => {
@@ -518,6 +535,7 @@ ${schemaScripts}
   </header>
 
 ${sectionHtml}
+${projectHtml}
 
   <footer>
     <p><strong>Jetblack Painting</strong> — ${escapeHtml(heroTitle)} | Phone: <a href="tel:${PHONE_HREF}">${PHONE_DISPLAY}</a> | Email: <a href="mailto:${EMAIL}">${EMAIL}</a></p>
@@ -680,6 +698,49 @@ function suburbServiceCards({ suburb, localExpertise, propertyTypes }) {
   ];
 }
 
+// Real project photographs for a suburb, parsed off the same `projectImages`
+// prop the React layer uses. This exists because the crawler-facing HTML
+// otherwise carries no <img> at all — every photo on the site is a React module
+// import, so Google can see none of them. Files live under public/projects/
+// with stable, descriptive names rather than hashed bundle names.
+function extractProjectImages(source, suburb) {
+  const start = source.indexOf("projectImages={[");
+  if (start === -1) return [];
+  let depth = 0, end = -1;
+  for (let i = source.indexOf("[", start); i < source.length; i++) {
+    if (source[i] === "[") depth++;
+    else if (source[i] === "]") { depth--; if (depth === 0) { end = i; break; } }
+  }
+  if (end === -1) return [];
+  const block = source.slice(start, end + 1);
+
+  // Split on each `src:` rather than brace-matching. A template literal such as
+  // `... ${suburb} home` contains a closing brace, so a non-greedy {...} match
+  // terminates inside the string and silently loses every field after it —
+  // which is exactly how alt text came out empty the first time.
+  const marks = [...block.matchAll(/\bsrc:\s*"/g)].map((m) => m.index);
+  const out = [];
+  for (let i = 0; i < marks.length; i++) {
+    const body = block.slice(marks[i], i + 1 < marks.length ? marks[i + 1] : block.length);
+    const pick = (key) => {
+      const hit = body.match(new RegExp(key + ':\\s*(?:"([^"]*)"|`([^`]*)`|(\\d+))'));
+      return hit ? normalizeTemplate(hit[1] ?? hit[2] ?? hit[3] ?? "", { suburb }) : "";
+    };
+    const src = pick("src");
+    if (!src) continue;
+    out.push({
+      src, small: pick("small"), width: pick("width"), height: pick("height"),
+      alt: pick("alt"), caption: pick("caption"),
+    });
+  }
+  return out;
+}
+
+function extractProjectSummary(source, suburb) {
+  const m = source.match(/projectSummary=\{`([\s\S]*?)`\}/);
+  return m ? normalizeTemplate(m[1], { suburb }) : "";
+}
+
 function generateSuburbPage(route, sourceFile) {
   const source = fs.readFileSync(sourceFile, "utf8");
   const suburb = extractQuotedValue(source, "suburb") || titleCaseFromSlug(route.replace("/painter-", ""));
@@ -690,6 +751,8 @@ function generateSuburbPage(route, sourceFile) {
   const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
   const faqs = extractFaqs(source, suburb);
   const localContent = extractLocalContent(source, suburb);
+  const projectImages = extractProjectImages(source, suburb);
+  const projectSummary = extractProjectSummary(source, suburb);
   const canonical = canonicalForRoute(route);
   // Only advertise a per-route OG image when the file actually exists. The
   // generator that produces these (scripts/generate-images.mjs) is opt-in and
@@ -713,6 +776,8 @@ function generateSuburbPage(route, sourceFile) {
       canonical,
       ogImage,
       robots: noindex ? "noindex, follow" : undefined,
+      projectImages,
+      projectSummary,
       heroTitle: `House Painters ${suburb}`,
       heroBody: `${description} Searching for painters near you in ${suburb}? Jetblack Painting are your trusted local ${suburb} painters, servicing ${suburb} and the surrounding suburbs.`,
       schema: [

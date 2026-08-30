@@ -42,6 +42,21 @@ interface SuburbPageProps {
      scripts/generate-static-pages.mjs reads this same prop off the source so
      the crawler-facing HTML says the same thing. */
   noindex?: boolean;
+  /* Real photographs from a real job in this suburb. Optional, and deliberately
+     so — a page only gets this section when there is genuine work to show. The
+     three shared gallery images below render on every suburb page and prove
+     nothing local; these prove the job happened here. `src` is the full-size
+     import, `small` the narrower variant for phones. */
+  projectImages?: {
+    src: string;
+    small: string;
+    width: number;
+    height: number;
+    alt: string;
+    caption: string;
+  }[];
+  /* One line describing the job the photographs came from. Rendered above them. */
+  projectSummary?: string;
 }
 
 const coreServices = [
@@ -173,6 +188,8 @@ export default function SuburbPageTemplate({
   schema,
   localContent = [],
   noindex,
+  projectImages = [],
+  projectSummary,
 }: SuburbPageProps) {
   const canonical = `${siteConfig.siteUrl}${primarySuburbPath(suburb)}/`;
   const validNeighbouringSuburbs = neighbouringSuburbs.filter((s) => KNOWN_LANDING_PATHS.has(s.link));
@@ -477,6 +494,37 @@ export default function SuburbPageTemplate({
               ))}
             </div>
           </div>
+
+          {projectImages.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">
+                A Recent {suburb} Job
+              </h2>
+              {projectSummary && (
+                <p className="text-[#B4B4B8] mb-6 max-w-3xl">{projectSummary}</p>
+              )}
+              <div className="grid md:grid-cols-2 gap-6">
+                {projectImages.map((img) => (
+                  <figure key={img.src} className="m-0">
+                    <img
+                      src={img.src}
+                      srcSet={`${img.small} 800w, ${img.src} ${img.width}w`}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      width={img.width}
+                      height={img.height}
+                      alt={img.alt}
+                      className="rounded-lg shadow-sm w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption className="text-[#8B8B90] text-sm mt-2">
+                      {img.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Our Painting Work</h2>

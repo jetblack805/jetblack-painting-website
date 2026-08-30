@@ -2409,3 +2409,67 @@ Google records the opening as March 2015 — 11).
 
 A separate **"House Painters Melbourne"** page. The homepage already targets that intent; a second
 page would compete with it.
+
+---
+
+## 2026-08-30 (evening) — daily audit after the largest change day: all clean, no ranking data
+
+Run fired 20:05 UTC after nine commits merged across PRs #229 and #230 — service-page
+forms, three deepened suburb pages, 18+ years sitewide, the first project photographs, and the
+GA4 fix. **No change made this run.**
+
+### The check that mattered: the new images actually serve
+
+Twenty files were added under `public/projects/` today, referenced from the crawler HTML of two
+suburb pages. If they 404'd, both pages would show broken images to Google and to visitors.
+
+**All 20 return 200 with `content-type: image/webp`.** Verified individually, not by spot check.
+
+### Steps 0–6 — all clean
+
+- **Build health**: `main` at `0daaadf`; production serving today's commits. Deps **77/77**.
+- **Three layers** → **0 diffs**.
+- **Sitemap**: **106/106 at 200, zero redirect hops.**
+- **404s both directions**: `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404, and the current hashed bundle and stylesheet both 200 with correct content types.
+- **Schema**: 116 pages, 491 FAQ questions, 0 parse errors, 0 schema-vs-visible mismatches, 0 `aggregateRating` in static pages.
+- **Metadata**: 0 duplicate titles / descriptions / H1s / canonicals, 0 missing, 0 keywords tags, 0 over 158, 1 title over 60 (the known `/painter-hastings/`).
+- **AEO**: markdown negotiation correct on a page that gained content today; llms.txt's three `$` matches all read and all the legitimate $10M insurance.
+- **Speed**: TTFB **0.150s**, `cf-cache-status: HIT`, **0 images over 250KB** — including the 20 new ones.
+- **og:image** resolves 200.
+
+### Two false failures I generated, and what caused them
+
+Both are method errors worth recording, because both looked like real regressions.
+
+**"38/77 dependencies missing."** My check matched bare YAML keys only. pnpm-lock quotes scoped
+names (`'@radix-ui/react-slot':`), so every scoped package read as missing. A second attempt
+returned **0/77** — shell quoting mangled the regex that time. The correct check scans only the
+`importers:` block (the rest of the file is the resolved tree and would produce false *passes*) and
+matches quoted or bare keys: **77/77**. The version run earlier today was right; tonight's rewrite
+dropped a clause.
+
+**"Real bundle 404."** I tested `/assets/index-Bfj2cCGE.js`, a hash captured before today's
+deploys. Hashes change on every build. Reading the current one off the live homepage first:
+`/assets/index-DrxnzHHw.js` → 200. **Always read the hash from the live page, never from notes.**
+
+### ⚠️ Step 1 — no ranking data
+
+GSC Wizard, Windsor.ai and Supermetrics were all disconnected at run time. Semrush was probed
+earlier today and returned its documented units-zero response; not retried, since nothing changes
+within hours. **No position, striking-distance or indexing claims are made this run.**
+
+Still unmeasured, and now accumulating: the impressions drop from the Casey noindex, any effect of
+the quote forms, and whether the suburb-page depth moved anything.
+
+### Baselines after today — the brief is stale on six figures
+
+| Figure | Brief | Actual |
+| --- | --- | --- |
+| Years experience | 13+ | **18+** |
+| Suburb pages | 96 | **95** |
+| Static pages | 117 | **116** |
+| FAQ questions | 489 | **491** |
+| Sitemap URLs | 115 | **106** |
+| Near-duplicate avg | 25.5% | **34.3%** (different implementation — see the 2026-08-29 entry before acting) |
+
+Review count **17** is correct in the brief and unchanged.

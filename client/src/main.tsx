@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import { trackEvent } from "./lib/analytics";
+import { trackEvent, trackMetaEvent } from "./lib/analytics";
 import "./index.css";
 
 /*
@@ -41,8 +41,15 @@ document.addEventListener(
       // This is Jetblack's own contact detail, never the visitor's.
       link_text: (link.textContent ?? "").trim().slice(0, 60) || undefined,
     });
+
+    // Meta's standard event for "reached out". Same tap, same rules: never
+    // preventDefault, never any of the visitor's own details -- the phone
+    // number involved is Jetblack's, not theirs.
+    trackMetaEvent("Contact", {
+      content_category: isPhone ? "phone" : "email",
+    });
   },
-  { capture: true }
+  { capture: true },
 );
 
 createRoot(document.getElementById("root")!).render(<App />);

@@ -52,6 +52,46 @@
       window.addEventListener('load', _loadGA);
     }
   </script>
+
+  <!-- Meta (Facebook) Pixel. Mirrored from client/index.html --
+       that file only serves "/", these generated pages carry their own head. Keep the two
+       copies in step; GA4 was in exactly one of them until 2026-08-30 and so
+       recorded nothing from the 116 pages that carry the quote form.
+
+       Fill in the Pixel ID from Meta Events Manager > Data Sources. While it is
+       empty this block installs nothing at all: no stub, no network request, no
+       fbq. Every trackMetaEvent call in lib/analytics.ts becomes a no-op.
+
+       The fbq stub is installed synchronously on purpose -- it does no I/O, and
+       it gives Meta's own queue somewhere to buffer a phone tap that happens in
+       the first second. Only fbevents.js itself is deferred to idle, so this
+       cannot compete with the LCP hero image.
+
+       No <noscript> tracking pixel. It cannot be gated on the ID being set the
+       way this block can, so it would fire a third-party request on every
+       crawler fetch of all 117 pages in exchange for the vanishingly small
+       share of real customers browsing with JavaScript off. -->
+  <script>
+    (function () {
+      var PIXEL_ID = '';
+      if (!PIXEL_ID) return;
+      var n = window.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!window._fbq) window._fbq = n;
+      n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+      function _loadFB() {
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
+      }
+      if ('requestIdleCallback' in window) { requestIdleCallback(_loadFB); }
+      else { window.addEventListener('load', _loadFB); }
+    })();
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BlogPosting","headline":"House Painting Cost Melbourne 2026","description":"Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects.","inLanguage":"en-AU","datePublished":"2026-06-23","dateModified":"2026-08-13","articleSection":"Price Guide","image":"https://jetblackpainting.com/og-image.jpg","author":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com"},"publisher":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com","logo":{"@type":"ImageObject","url":"https://jetblackpainting.com/logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jetblackpainting.com/blog/house-painting-cost-melbourne/"}}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does it cost to paint an average 3-bedroom house in Melbourne?","acceptedAnswer":{"@type":"Answer","text":"A whole-house interior repaint for a 3-bedroom home typically runs $5,000 to $12,000, depending on wall and ceiling condition, trim work, and the finish level chosen. That's for interior only — exterior painting is quoted separately based on the home's size and access."}},{"@type":"Question","name":"Why do quotes vary so much between painters?","acceptedAnswer":{"@type":"Answer","text":"Surface condition, the number of coats needed, height and access requirements, and paint quality all move the price more than floor area alone. A quote that looks cheap often has less preparation built in, which is where paint failure usually starts."}},{"@type":"Question","name":"Is a written, itemised quote necessary?","acceptedAnswer":{"@type":"Answer","text":"Yes. A proper quote should include a detailed written breakdown of costs, the paint brand and product specifications, a timeline, and warranty information. A one-line price with no scope makes it hard to compare against other quotes fairly."}},{"@type":"Question","name":"Do you charge extra for scaffolding on multi-storey homes?","acceptedAnswer":{"@type":"Answer","text":"Multi-storey homes often need scaffolding or edge protection for safe access, and that adds to the cost. How much depends on the height, the ground conditions and how much of the building needs to be reached, so we price it after seeing the property. It is itemised in your written quote rather than hidden in the total."}}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jetblackpainting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://jetblackpainting.com/blog/"},{"@type":"ListItem","position":3,"name":"House Painting Cost Melbourne 2026","item":"https://jetblackpainting.com/blog/house-painting-cost-melbourne/"}]}</script>

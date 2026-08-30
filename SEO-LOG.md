@@ -2556,3 +2556,64 @@ reversed. **Kept.**
 `SEO-LOG.md` is **not** prettier-maintained — it fails `prettier --check` on main. Running
 `prettier --write` on it rewraps the whole file (535+/446- of pure noise) and buries the actual
 entry. Append by hand; do not format it.
+
+### 2026-08-30 (later) — Jimmy answered the three questions above
+
+Superseding what the entry above says was pending:
+
+**Address — CONFIRMED CORRECT, close this out.** GBP is set to *service area, address hidden*. The
+site already matches: no `streetAddress` in the schema, "Based in Mordialloc" in the copy. NAP is
+consistent. **No change made, and none should be.** SEOptimer will keep reporting "Missing:
+Address" on every future run — that is the tool not modelling service-area businesses, not a
+defect. Do not add a street address to satisfy it.
+
+**Facebook Pixel — approved, built this commit.** Jimmy plans to run Meta ads.
+
+**LinkedIn — exists, URL not yet supplied.** Still to do: add it to the `sameAs` array in the
+homepage schema and to the footer, once Jimmy sends the URL. Not guessed.
+
+**X — not raised.** Stays absent. **Patreon — not raised**; the `sameAs` entry stands unverified.
+
+### Meta Pixel implementation notes
+
+Mirrored into **both** heads — `client/index.html` (serves `/` only) and
+`scripts/generate-static-pages.mjs` (the other 116 pages). This is the one mistake this codebase has
+already made once: GA4 lived in only one of them until 2026-08-30 and so recorded nothing from every
+page that carries a quote form. **Two `PIXEL_ID` literals now exist and must be changed together.**
+
+**Currently inert.** Both literals are `""` pending the ID from Meta Events Manager → Data Sources.
+With an empty ID the block returns before doing anything: no stub, no `window.fbq`, no network
+request, and every `trackMetaEvent` call no-ops. Verified by executing the emitted block in a
+sandbox — `window.fbq` stayed `undefined`.
+
+**Verified with a real ID too**, since testing only the disabled state would prove nothing. Ran the
+actual emitted block in headless Chromium with a test ID and `fbevents.js` stubbed at the network
+layer: `fbq` installs synchronously, buffers `["init", …]` and `["track","PageView"]`, and a
+`Contact` event fired *before* the library loaded was replayed correctly on load. That replay path
+is the one that matters — it is the visitor who taps the sticky call bar in the first second.
+
+**Why the stub is synchronous while the library is deferred.** The stub does no I/O, so it costs
+nothing at parse time, and it gives Meta's own queue somewhere to buffer early taps. Only
+`fbevents.js` waits for `requestIdleCallback`, so it cannot compete with the LCP hero image. Note
+the deferral *timing* is by construction, not measured — the test fixture is trivial enough that
+idle arrives almost immediately, so it confirms the queue mechanics, not the scheduling.
+
+**No `<noscript>` tracking pixel.** Unlike the script block it cannot be gated on the ID being set,
+so it would fire a third-party request on every crawler fetch of all 117 pages in exchange for the
+vanishingly small share of real customers running with JavaScript off.
+
+**Event mapping.** GA4 and Meta deliberately do not share names — Meta only optimises against its
+standard vocabulary, so a GA4 name sent to Meta becomes a custom event its bidding cannot use.
+
+| Action | GA4 | Meta |
+| --- | --- | --- |
+| Quote form, delivery confirmed | `generate_lead` | `Lead` |
+| Quote form, delivery failed | `quote_form_undelivered` | *(none — diagnostic, not a conversion)* |
+| Phone or email tap | `phone_call_click` / `email_click` | `Contact` |
+
+**PII:** swept both call sites — no visitor name, email or phone reaches either tracker. Meta
+enforces this harder than Google; repeated breaches restrict the ad account.
+
+**Not yet verifiable end-to-end.** `connect.facebook.net` is blocked by this session's egress
+policy, and the React-side calls cannot run until Cloudflare builds the bundle. Jimmy must confirm
+receipt in Meta Events Manager → Test Events once the ID is in.

@@ -7,6 +7,10 @@ const CONFIG_PATH = path.resolve("client/src/site-config.json");
 let SITE_URL = "https://jetblackpainting.com";
 // Must match the id in client/index.html.
 const GA4_MEASUREMENT_ID = "G-6NC2597W9L";
+// Meta (Facebook) Pixel ID from Events Manager > Data Sources. Empty = the
+// pixel block emits nothing and trackMetaEvent no-ops. Must match the literal
+// in client/index.html, which serves "/" and is not built by this script.
+const META_PIXEL_ID = "";
 let PHONE_DISPLAY = "0432 077 782";
 let PHONE_HREF = "0432077782";
 let EMAIL = "jimmy@jetblackpainting.com";
@@ -533,6 +537,46 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
     } else {
       window.addEventListener('load', _loadGA);
     }
+  </script>
+
+  <!-- Meta (Facebook) Pixel. Mirrored from client/index.html --
+       that file only serves "/", these generated pages carry their own head. Keep the two
+       copies in step; GA4 was in exactly one of them until 2026-08-30 and so
+       recorded nothing from the 116 pages that carry the quote form.
+
+       Fill in the Pixel ID from Meta Events Manager > Data Sources. While it is
+       empty this block installs nothing at all: no stub, no network request, no
+       fbq. Every trackMetaEvent call in lib/analytics.ts becomes a no-op.
+
+       The fbq stub is installed synchronously on purpose -- it does no I/O, and
+       it gives Meta's own queue somewhere to buffer a phone tap that happens in
+       the first second. Only fbevents.js itself is deferred to idle, so this
+       cannot compete with the LCP hero image.
+
+       No <noscript> tracking pixel. It cannot be gated on the ID being set the
+       way this block can, so it would fire a third-party request on every
+       crawler fetch of all 117 pages in exchange for the vanishingly small
+       share of real customers browsing with JavaScript off. -->
+  <script>
+    (function () {
+      var PIXEL_ID = '${META_PIXEL_ID}';
+      if (!PIXEL_ID) return;
+      var n = window.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!window._fbq) window._fbq = n;
+      n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+      function _loadFB() {
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
+      }
+      if ('requestIdleCallback' in window) { requestIdleCallback(_loadFB); }
+      else { window.addEventListener('load', _loadFB); }
+    })();
   </script>
 ${schemaScripts}
   <style>

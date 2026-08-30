@@ -52,6 +52,46 @@
       window.addEventListener('load', _loadGA);
     }
   </script>
+
+  <!-- Meta (Facebook) Pixel. Mirrored from client/index.html --
+       that file only serves "/", these generated pages carry their own head. Keep the two
+       copies in step; GA4 was in exactly one of them until 2026-08-30 and so
+       recorded nothing from the 116 pages that carry the quote form.
+
+       Fill in the Pixel ID from Meta Events Manager > Data Sources. While it is
+       empty this block installs nothing at all: no stub, no network request, no
+       fbq. Every trackMetaEvent call in lib/analytics.ts becomes a no-op.
+
+       The fbq stub is installed synchronously on purpose -- it does no I/O, and
+       it gives Meta's own queue somewhere to buffer a phone tap that happens in
+       the first second. Only fbevents.js itself is deferred to idle, so this
+       cannot compete with the LCP hero image.
+
+       No <noscript> tracking pixel. It cannot be gated on the ID being set the
+       way this block can, so it would fire a third-party request on every
+       crawler fetch of all 117 pages in exchange for the vanishingly small
+       share of real customers browsing with JavaScript off. -->
+  <script>
+    (function () {
+      var PIXEL_ID = '';
+      if (!PIXEL_ID) return;
+      var n = window.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!window._fbq) window._fbq = n;
+      n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+      function _loadFB() {
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
+      }
+      if ('requestIdleCallback' in window) { requestIdleCallback(_loadFB); }
+      else { window.addEventListener('load', _loadFB); }
+    })();
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Prepare Your Home for Painting","description":"Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.","inLanguage":"en-AU","datePublished":"2026-06-23","dateModified":"2026-08-13","articleSection":"Guide","image":"https://jetblackpainting.com/og-image.jpg","author":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com"},"publisher":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com","logo":{"@type":"ImageObject","url":"https://jetblackpainting.com/logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jetblackpainting.com/blog/prepare-home-for-painting/"}}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"HowTo","name":"How to Prepare Your Melbourne Home for Professional Painting","description":"Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 18+ years of painting Melbourne homes.","totalTime":"PT1H","step":[{"@type":"HowToStep","name":"Clear the Rooms","text":"Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers so painters have full access to work efficiently."},{"@type":"HowToStep","name":"Identify Problem Areas","text":"Walk through your home and note any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Point these out to your painter at the quote stage."},{"@type":"HowToStep","name":"Exterior Preparation","text":"Trim garden beds back 30cm from walls, move outdoor furniture and pot plants away, park cars away from the house, unlock gates for access, and secure pets inside or in a separate area."}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the best time of year to paint the exterior of a home in Melbourne?","acceptedAnswer":{"@type":"Answer","text":"Exterior painting is best done between October and April when conditions are drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days, since they affect how the paint cures."}},{"@type":"Question","name":"Do I need to move all my furniture out before painting?","acceptedAnswer":{"@type":"Answer","text":"No. Furniture just needs to be moved away from walls or into the centre of the room — we cover it with drop sheets along with the flooring. Most households stay in the home throughout an interior repaint."}},{"@type":"Question","name":"How far back should garden beds be trimmed before exterior painting?","acceptedAnswer":{"@type":"Answer","text":"About 30cm clearance from the walls gives our painters safe, unobstructed access to weatherboards, render or brick. It's worth doing this along with moving outdoor furniture and pot plants before we arrive."}},{"@type":"Question","name":"What should I point out to the painter during the quote?","acceptedAnswer":{"@type":"Answer","text":"Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Flagging these at the quote stage means the preparation work is accounted for in the price from the start."}}]}</script>

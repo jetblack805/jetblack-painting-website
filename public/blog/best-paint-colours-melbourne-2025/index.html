@@ -52,6 +52,46 @@
       window.addEventListener('load', _loadGA);
     }
   </script>
+
+  <!-- Meta (Facebook) Pixel. Mirrored from client/index.html --
+       that file only serves "/", these generated pages carry their own head. Keep the two
+       copies in step; GA4 was in exactly one of them until 2026-08-30 and so
+       recorded nothing from the 116 pages that carry the quote form.
+
+       Fill in the Pixel ID from Meta Events Manager > Data Sources. While it is
+       empty this block installs nothing at all: no stub, no network request, no
+       fbq. Every trackMetaEvent call in lib/analytics.ts becomes a no-op.
+
+       The fbq stub is installed synchronously on purpose -- it does no I/O, and
+       it gives Meta's own queue somewhere to buffer a phone tap that happens in
+       the first second. Only fbevents.js itself is deferred to idle, so this
+       cannot compete with the LCP hero image.
+
+       No <noscript> tracking pixel. It cannot be gated on the ID being set the
+       way this block can, so it would fire a third-party request on every
+       crawler fetch of all 117 pages in exchange for the vanishingly small
+       share of real customers browsing with JavaScript off. -->
+  <script>
+    (function () {
+      var PIXEL_ID = '';
+      if (!PIXEL_ID) return;
+      var n = window.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!window._fbq) window._fbq = n;
+      n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+      function _loadFB() {
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
+      }
+      if ('requestIdleCallback' in window) { requestIdleCallback(_loadFB); }
+      else { window.addEventListener('load', _loadFB); }
+    })();
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Best Paint Colours for Melbourne Homes 2026","description":"Discover trending paint colours for Melbourne homes in 2026. Interior & exterior colour trends, expert tips, and colour consultation from Jetblack Painting.","inLanguage":"en-AU","datePublished":"2026-06-23","dateModified":"2026-07-26","articleSection":"Design Tips","image":"https://jetblackpainting.com/og-image.jpg","author":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com"},"publisher":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com","logo":{"@type":"ImageObject","url":"https://jetblackpainting.com/logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025/"}}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the best interior paint colours for Melbourne homes in 2026?","acceptedAnswer":{"@type":"Answer","text":"Warm terracotta and burnt orange, deep forest green, soft blush and warm mauve, and charcoal black are the standout 2026 interior trends, while creamy whites and natural off-whites remain the timeless choice for main living areas."}},{"@type":"Question","name":"What exterior paint colours suit Melbourne conditions in 2026?","acceptedAnswer":{"@type":"Answer","text":"Charcoal and dark greys, warm terracotta and earthy reds on heritage homes, greige and warm grey-beige, and cool whites with contrasting dark trim all perform well. Melbourne exteriors face strong UV, moisture and temperature swings, so the coating system matters as much as the colour."}},{"@type":"Question","name":"How do I choose a paint colour with confidence?","acceptedAnswer":{"@type":"Answer","text":"Test large sample patches on more than one wall or elevation and look at them at different times of day, because Melbourne light changes dramatically through the day and between seasons. Let the home's architecture guide the palette, and check heritage overlay requirements before committing to an exterior scheme."}},{"@type":"Question","name":"Does Jetblack Painting help with colour selection?","acceptedAnswer":{"@type":"Answer","text":"Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 18+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782."}}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jetblackpainting.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://jetblackpainting.com/blog/"},{"@type":"ListItem","position":3,"name":"Best Paint Colours for Melbourne Homes 2026","item":"https://jetblackpainting.com/blog/best-paint-colours-melbourne-2025/"}]}</script>

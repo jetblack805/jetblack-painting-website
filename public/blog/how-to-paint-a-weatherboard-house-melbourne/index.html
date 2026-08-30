@@ -52,6 +52,46 @@
       window.addEventListener('load', _loadGA);
     }
   </script>
+
+  <!-- Meta (Facebook) Pixel. Mirrored from client/index.html --
+       that file only serves "/", these generated pages carry their own head. Keep the two
+       copies in step; GA4 was in exactly one of them until 2026-08-30 and so
+       recorded nothing from the 116 pages that carry the quote form.
+
+       Fill in the Pixel ID from Meta Events Manager > Data Sources. While it is
+       empty this block installs nothing at all: no stub, no network request, no
+       fbq. Every trackMetaEvent call in lib/analytics.ts becomes a no-op.
+
+       The fbq stub is installed synchronously on purpose -- it does no I/O, and
+       it gives Meta's own queue somewhere to buffer a phone tap that happens in
+       the first second. Only fbevents.js itself is deferred to idle, so this
+       cannot compete with the LCP hero image.
+
+       No <noscript> tracking pixel. It cannot be gated on the ID being set the
+       way this block can, so it would fire a third-party request on every
+       crawler fetch of all 117 pages in exchange for the vanishingly small
+       share of real customers browsing with JavaScript off. -->
+  <script>
+    (function () {
+      var PIXEL_ID = '';
+      if (!PIXEL_ID) return;
+      var n = window.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!window._fbq) window._fbq = n;
+      n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+      function _loadFB() {
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
+      }
+      if ('requestIdleCallback' in window) { requestIdleCallback(_loadFB); }
+      else { window.addEventListener('load', _loadFB); }
+    })();
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Paint a Weatherboard House","description":"Melbourne weatherboard painting guide — preparation, priming bare timber, caulking, the right exterior paints and how often to repaint. Call 0432 077 782.","inLanguage":"en-AU","datePublished":"2026-07-26","dateModified":"2026-08-13","articleSection":"Guide","image":"https://jetblackpainting.com/og-image.jpg","author":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com"},"publisher":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com","logo":{"@type":"ImageObject","url":"https://jetblackpainting.com/logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jetblackpainting.com/blog/how-to-paint-a-weatherboard-house-melbourne/"}}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"HowTo","name":"How to Paint a Weatherboard House","description":"Weatherboard is everywhere in Melbourne, from bayside beach cottages to inner-suburb period homes — and it fails faster than any other exterior surface when it's painted badly. Here's how the job is done properly, and why preparation is roughly 70% of the work.","totalTime":"P5D","step":[{"@type":"HowToStep","name":"Wash the surface","text":"Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber."},{"@type":"HowToStep","name":"Scrape and sand back failing paint","text":"Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it."},{"@type":"HowToStep","name":"Repair damaged timber","text":"Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two."},{"@type":"HowToStep","name":"Prime all bare timber","text":"Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes."},{"@type":"HowToStep","name":"Fill and caulk","text":"Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves."},{"@type":"HowToStep","name":"Apply two topcoats","text":"Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain."}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How often should a weatherboard house be repainted in Melbourne?","acceptedAnswer":{"@type":"Answer","text":"Most Melbourne weatherboard homes need repainting every 7 to 10 years. Bayside and coastal homes exposed to salt air and full sun often sit at the shorter end of that range, while sheltered south-facing walls can last longer. Flaking, chalking, bare timber and gaps opening at the joints are the signs it is due."}},{"@type":"Question","name":"Do I need to prime bare timber on weatherboards?","acceptedAnswer":{"@type":"Answer","text":"Yes. Any bare or newly exposed timber must be spot-primed before topcoats, using an oil-based or alkyd primer that penetrates the grain. Skipping this is the most common cause of early peeling on weatherboard homes, because water gets behind the paint film through the unsealed timber."}},{"@type":"Question","name":"What paint is best for weatherboard houses in Melbourne?","acceptedAnswer":{"@type":"Answer","text":"A flexible, water-based acrylic exterior system such as Dulux Weathershield or Taubmans All Weather suits most Melbourne weatherboards. Flexibility matters because timber expands and contracts with temperature and moisture, and a brittle coating cracks at the board edges."}},{"@type":"Question","name":"Can weatherboards be painted in winter?","acceptedAnswer":{"@type":"Answer","text":"Exterior painting needs dry timber and moderate temperatures, so Melbourne winter work is weather-dependent. Most exterior acrylics need above roughly 10 degrees Celsius and a dry surface to cure properly. Jetblack Painting schedules exterior weatherboard work around the forecast rather than pushing on in unsuitable conditions."}},{"@type":"Question","name":"Should I paint over lead paint on an older weatherboard home?","acceptedAnswer":{"@type":"Answer","text":"Homes built before 1970 may have lead-based paint. It should not be dry-sanded or power-sanded, as that releases lead dust. Testing first and using safe preparation methods is essential — this is a job for an experienced painter rather than a DIY sander."}}]}</script>

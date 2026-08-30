@@ -39,3 +39,47 @@ export function trackEvent(name: string, params: EventParams = {}): void {
     // connecting. A dropped event is strictly better than a thrown error.
   }
 }
+
+/*
+ * Meta (Facebook) Pixel — standard events.
+ *
+ * Separate from trackEvent above because the two platforms do not share an
+ * event vocabulary. GA4 takes free-form names (generate_lead); Meta wants its
+ * own standard names (Lead, Contact) or they do not become optimisable
+ * conversions. Sending a GA4 name to Meta produces a custom event that its
+ * bidding cannot use, which is the failure mode this split exists to avoid.
+ *
+ * No bespoke queue here. The inline snippet in the page head installs Meta's
+ * own fbq stub synchronously — that costs no network request — and only defers
+ * fetching fbevents.js to requestIdleCallback. So window.fbq exists from the
+ * first moment, buffers into fbq.queue, and the library replays it on load.
+ * That is the same reasoning as the GA4 helper, solved by Meta's own stub
+ * rather than by us.
+ *
+ * If META_PIXEL_ID is unset the snippet installs nothing, window.fbq stays
+ * undefined, and every call here is a no-op. Nothing breaks, nothing is sent.
+ *
+ * ⚠️ Same PII rule as above, and Meta enforces it harder than Google: never
+ * pass a name, email address or phone number. Meta's automated filtering will
+ * reject the event and repeated breaches restrict the ad account.
+ */
+
+interface FbqWindow extends Window {
+  fbq?: (
+    command: "track" | "trackCustom",
+    eventName: string,
+    params?: EventParams,
+  ) => void;
+}
+
+export function trackMetaEvent(name: string, params: EventParams = {}): void {
+  if (typeof window === "undefined") return;
+  const w = window as FbqWindow;
+
+  try {
+    if (typeof w.fbq !== "function") return;
+    w.fbq("track", name, params);
+  } catch {
+    // Never let a tracker break the page or block a phone call.
+  }
+}

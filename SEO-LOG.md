@@ -2237,3 +2237,75 @@ outside the scope Jimmy approved.
 **The finding the audit says outranks everything else in it:** getting from 17 reviews to 60. Its
 words — "The review campaign in §6 is not one task among many. It is the task." Which collides with
 §7.5's warning that some existing reviews look manufactured and risk being filtered.
+
+---
+
+## 2026-08-29 (evening) — daily audit: all checks clean, no ranking data, no change made
+
+Run fired 20:05 UTC, after three merges earlier the same day (#225 consolidation, #226 log
+correction, #227 quote form + Hampton). **No change made this run.**
+
+### ⚠️ The brief's baselines are now stale — these are the current numbers
+
+Today's merges moved five figures the brief still quotes. A future run comparing against the brief
+will see false regressions. Current, measured this run:
+
+| Figure | Brief says | Actual now | Why |
+| --- | --- | --- | --- |
+| Sitemap URLs | 115 | **106** | 8 Casey pages noindexed + Bentleigh East merged |
+| Suburb pages | 96 | **95** | Bentleigh East merged into Bentleigh |
+| Static pages | 117 | **116** | same |
+| FAQ questions | 489 | **485** | same |
+| Pages noindexed | — | **8** | Casey/Cardinia corridor, live but out of the index |
+
+### Steps 0–6 — all clean
+
+- **Build health**: production serves the newest commit's content (Hampton "3188" live). Deps **77/77** in the lockfile.
+- **Three layers**: generate-static-pages → generate-markdown → generate-known-paths → **0 diffs**.
+- **Sitemap**: **106/106 return 200 with zero redirect hops.** None of the 9 removed URLs is listed.
+- **404 behaviour, both directions**: `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; the real hashed bundle still 200 `text/javascript`.
+- **Schema**: 116 pages, 485 FAQ questions, **0 parse errors, 0 schema-vs-visible mismatches, 0 aggregateRating in static pages, 0 BlogPosting missing required fields**.
+- **Metadata**: 0 duplicate titles / descriptions / H1s / canonicals · 0 missing descriptions · 0 keywords tags · 0 descriptions over 158 · 1 title over 60 (`/painter-hastings/` at 64, the known accepted one).
+- **AEO**: markdown negotiation returns `text/markdown` with `Vary: Accept`, `Cache-Control: no-store`, `X-Robots-Tag: noindex`; normal Accept returns HTML. `robots.txt` disallows only `/api/`. **llms.txt carries no prices** — all three `$` matches read and are the legitimate $10M public liability.
+- **Speed**: TTFB **0.146s**, `cf-cache-status: HIT`, **zero images in public/ over 250KB**.
+- **Review count**: **17** in all eight hardcoded places and on the live site (`reviewCount": "17"`, "from 17 Google reviews"). Locked fact intact.
+
+### Near-duplicate gate — read this before acting on it next run
+
+Measured **42.3% average worst-twin, 4 pages over 55%**, which reads as a gate breach against the
+brief's "25.5% avg, worst ~47%, zero over 55%". **It is not a regression — it is a different
+implementation.** My first pass compared the full page text, which on a suburb page includes the
+93-link suburb directory and the footer that all 95 pages share. Stripping that shared template:
+
+| Measure | Full page | Boilerplate stripped |
+| --- | --- | --- |
+| Average worst-twin | 42.3% | **34.6%** |
+| Pages over 55% | 4 | **2** |
+| Worst pair | cranbourne~narre-warren 61.2% | cranbourne~narre-warren **55.2%** |
+
+Both variants pass the 45% average gate. The one pair still near the line is
+cranbourne~narre-warren — **already named in the brief as the known worst pair**, and neither page
+was touched today. My 55.2% is still above the brief's 47%, so my script is not the one that
+produced that baseline and the two numbers are not comparable. Do not "fix" this on my figure;
+re-measure with the original script first.
+
+Worth noting: **`/painter-cranbourne/` is now noindexed** as part of the Casey corridor cut, so the
+worst remaining duplicate pair is an indexed page against a de-indexed one. Today's work
+incidentally defused it.
+
+### ⚠️ Step 1 — no ranking data. Nothing was measured.
+
+**GSC Wizard, Supermetrics and Windsor.ai were all disconnected at run time.** Semrush reconnected
+but the one sanctioned probe (`backlinks_research`) returned the documented units-zero response —
+the subscription is active but has no API units; options at https://www.semrush.com/mcp-access.
+
+Per the brief's own rule: **no position deltas, no striking distance, no indexing delta are claimed
+this run.** "Nothing moved" and "I could not see" are different findings. This was the latter.
+
+That also means **the impressions drop expected from today's noindex work cannot yet be observed**,
+and neither can the effect of the quote form. Both need a run with ranking data.
+
+### Step 7 — nothing done, deliberately
+
+Authority work requires measurement to target it, and there was none. The brief's own guidance:
+a run that investigates, finds nothing worth changing, and says so is a successful run.

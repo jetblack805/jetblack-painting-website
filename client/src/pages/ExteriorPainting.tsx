@@ -6,6 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import { lazy, Suspense } from "react";
+// Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
+// out of the initial payload and the form loads below the fold.
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 import imgService from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
 import imgService900 from "@/assets/images/gallery-exterior-navy-weatherboard-900.webp";
 
@@ -294,6 +298,11 @@ export default function ExteriorPainting() {
           </motion.div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm compact serviceType="Exterior Painting" />
+      </Suspense>
+
       <Footer />
     </div>
   );

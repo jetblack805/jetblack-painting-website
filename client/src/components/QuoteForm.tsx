@@ -85,9 +85,14 @@ interface QuoteFormProps {
      page where the whole job is to catch an enquiry before they leave. The
      hidden fields are all optional ones — nothing required is dropped. */
   compact?: boolean;
+  /* The service this form is embedded beside, on a service page. Preselects the
+     dropdown for the same reason `suburb` does — and the fixed list below only
+     names seven of the nine services the site actually sells, so Body Corporate,
+     Real Estate and Epoxy could not be chosen at all before this. */
+  serviceType?: string;
 }
 
-export default function QuoteForm({ suburb: pageSuburb, compact = false }: QuoteFormProps = {}) {
+export default function QuoteForm({ suburb: pageSuburb, compact = false, serviceType: pageService }: QuoteFormProps = {}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Holds the completed request so the details stay on screen after submitting.
   // This form used to call reset() and fire a mailto: immediately, which meant
@@ -110,7 +115,10 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false }: Quote
     formState: { errors },
   } = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
-    defaultValues: pageSuburb ? { suburb: pageSuburb } : undefined,
+    defaultValues:
+      pageSuburb || pageService
+        ? { ...(pageSuburb ? { suburb: pageSuburb } : {}), ...(pageService ? { serviceType: pageService } : {}) }
+        : undefined,
   });
 
   // The page's own suburb first, then the standard list with it removed so it
@@ -118,6 +126,10 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false }: Quote
   const suburbOptions = pageSuburb
     ? [pageSuburb, ...suburbs.filter((s) => s !== pageSuburb)]
     : suburbs;
+
+  const serviceOptions = pageService
+    ? [pageService, ...serviceTypes.filter((s) => s !== pageService)]
+    : serviceTypes;
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
@@ -208,7 +220,9 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false }: Quote
             <h2 className="text-3xl sm:text-4xl text-[#EDEDEF] mb-4">
               {pageSuburb
                 ? `Request a Free Painting Quote in ${pageSuburb}`
-                : "Request a Free Painting Quote"}
+                : pageService
+                  ? `Request a Free ${pageService} Quote`
+                  : "Request a Free Painting Quote"}
             </h2>
             <p className="text-[#A3A3A8] text-lg max-w-2xl mx-auto">
               {compact
@@ -395,7 +409,7 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false }: Quote
                   className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
                 >
                   <option value="">Select a service</option>
-                  {serviceTypes.map((service) => (
+                  {serviceOptions.map((service) => (
                     <option key={service} value={service}>
                       {service}
                     </option>

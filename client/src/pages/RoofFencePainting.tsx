@@ -6,6 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import { lazy, Suspense } from "react";
+// Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
+// out of the initial payload and the form loads below the fold.
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 // service-roof-fence-painting.webp was a byte-identical copy of this file under a
 // second name, so the same photo shipped twice. Points at the canonical one.
 // No -900 variant: the source is only 640x480, so a "900" file would be the same
@@ -467,6 +471,11 @@ export default function RoofFencePainting() {
           </motion.div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm compact serviceType="Roof & Fence Painting" />
+      </Suspense>
+
       <Footer />
     </div>
   );

@@ -42,6 +42,14 @@ export default function SandringhamPainters() {
     {
       question: `Do you offer free quotes across Sandringham?`,
       answer: `Yes. We provide free, no-obligation written quotes across Sandringham and the surrounding Bayside area, with the full scope and preparation detailed up front. Call Jimmy on 0432 077 782 or submit a request online — we're usually able to come out and quote within a few days.`
+    },
+    {
+      question: `Does the salt air really change how you paint in ${suburb}?`,
+      answer: `It changes the preparation more than the paint. Salt settles on the surface as a fine film, and coating over it bonds the new paint to the salt instead of the substrate, which is why bayside repaints sometimes let go in sheets. Every exterior here gets washed down and rinsed before preparation starts, with the south and west elevations checked hardest.`
+    },
+    {
+      question: `What decides how long a weatherboard exterior lasts near the bay?`,
+      answer: `Mostly exposure and preparation rather than the brand on the tin. The elevations facing the water weather fastest, and the board ends and joints go before the faces do because end grain absorbs water. Sealing those ends and using a filler that stays flexible is what buys the extra years.`
     }
   ];
 
@@ -72,6 +80,20 @@ export default function SandringhamPainters() {
           body: [
             "Homes near the water in Sandringham are exposed to relentless salt air, UV and damp winters that quickly break down paintwork that hasn't been prepared properly. We use thorough salt washing, flexible primers and premium salt-resistant topcoats so your Sandringham home's finish stays protected and looks sharp for years.",
             "Weatherboard is everywhere along the Sandringham coastline, and coastal timber needs particular attention — bare timber priming, careful filling and sharp caulking to lock out moisture. From heritage beach cottages to rendered modern homes, we match the paint system to the surface for a durable, flawless result.",
+          ],
+        },
+        {
+          heading: `What Salt Air Does to a ${suburb} Exterior`,
+          body: [
+            `${suburb} sits directly on Port Phillip, and the elevations facing the water take salt-laden wind for most of the year. Salt does something specific to paint. It settles as a fine crystalline film, and if it is painted over, the new coating is bonded to the salt rather than to the surface underneath. It lets go early, and it tends to come away in sheets rather than flaking politely.`,
+            `The answer is not a more expensive paint. It is a proper wash. Every exterior we do on the bay side is washed down and rinsed before preparation starts, and the south and west elevations get the closest inspection because they take the worst of it. A repaint that skips that step can look immaculate for a season and fail well inside the time it should have lasted.`,
+          ],
+        },
+        {
+          heading: `Weatherboard, End Grain and the Joints That Open First`,
+          body: [
+            `Much of ${suburb}'s older stock is weatherboard — Edwardian homes and Californian bungalows on the streets running back from Beach Road. Timber of that age has moved through a great many summers, and it fails first at the board ends and the joints where two boards meet. That is where end grain is exposed, and end grain drinks water far faster than the face of a board does.`,
+            `We seal those ends rather than coating straight over them, and we fill the joints with something that stays flexible instead of a hard filler that cracks the first time the timber moves again. It is slower than running a roller along the wall. It is also most of the difference between a weatherboard exterior that holds for years and one that wants attention again far too soon.`,
           ],
         },
       ]}

@@ -5,6 +5,8 @@ import path from "node:path";
 // values can be used by both the static generator and the client app.
 const CONFIG_PATH = path.resolve("client/src/site-config.json");
 let SITE_URL = "https://jetblackpainting.com";
+// Must match the id in client/index.html.
+const GA4_MEASUREMENT_ID = "G-6NC2597W9L";
 let PHONE_DISPLAY = "0432 077 782";
 let PHONE_HREF = "0432077782";
 let EMAIL = "jimmy@jetblackpainting.com";
@@ -504,6 +506,34 @@ ${section.paragraphs.map((paragraph) => `    <p>${escapeHtml(paragraph)}</p>`).j
   <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
        covers "/" -- these generated pages carry their own head. -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
+  <!-- GA4. Mirrored from client/index.html for the same reason as the Ahrefs tag
+       above: that file only serves "/", and every other page is built here.
+       Until 2026-08-30 this block was missing, so GA4 fired on the homepage
+       alone and recorded nothing from the 95 suburb pages or the 9 service
+       pages -- which is also every page carrying a quote form. lib/analytics.ts
+       queues events onto dataLayer when gtag has not loaded, so without this the
+       generate_lead and phone_call_click events sat in an array that was never
+       sent. Keep the two copies in step. -->
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script>
+    function _loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', '${GA4_MEASUREMENT_ID}');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(_loadGA);
+    } else {
+      window.addEventListener('load', _loadGA);
+    }
+  </script>
 ${schemaScripts}
   <style>
     body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#EDEDEF;background:#060607;line-height:1.6}

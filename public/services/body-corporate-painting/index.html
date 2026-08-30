@@ -24,6 +24,34 @@
   <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
        covers "/" -- these generated pages carry their own head. -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
+  <!-- GA4. Mirrored from client/index.html for the same reason as the Ahrefs tag
+       above: that file only serves "/", and every other page is built here.
+       Until 2026-08-30 this block was missing, so GA4 fired on the homepage
+       alone and recorded nothing from the 95 suburb pages or the 9 service
+       pages -- which is also every page carrying a quote form. lib/analytics.ts
+       queues events onto dataLayer when gtag has not loaded, so without this the
+       generate_lead and phone_call_click events sat in an array that was never
+       sent. Keep the two copies in step. -->
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script>
+    function _loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6NC2597W9L';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-6NC2597W9L');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(_loadGA);
+    } else {
+      window.addEventListener('load', _loadGA);
+    }
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"Service","name":"Body Corporate Painting","serviceType":"Body Corporate Painting","provider":{"@type":"HomeAndConstructionBusiness","name":"Jetblack Painting","telephone":"0432 077 782","email":"jimmy@jetblackpainting.com","url":"https://jetblackpainting.com","image":"https://jetblackpainting.com/og-image.jpg","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Mordialloc","addressRegion":"VIC","postalCode":"3195","addressCountry":"AU"}},"areaServed":{"@type":"City","name":"Melbourne"},"description":"Body corporate and strata painting in Melbourne. Common areas, facades and maintenance programs. Fully insured. Free quotes — 0432 077 782.","url":"https://jetblackpainting.com/services/body-corporate-painting/"}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"WebPage","name":"Body Corporate Painting Melbourne | Jetblack Painting","description":"Body corporate and strata painting in Melbourne. Common areas, facades and maintenance programs. Fully insured. Free quotes — 0432 077 782.","url":"https://jetblackpainting.com/services/body-corporate-painting/"}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you work with owners corporations and strata managers?","acceptedAnswer":{"@type":"Answer","text":"Yes. We regularly work directly with owners corporations, body corporate committees and strata managers across Melbourne — providing detailed quotes, scopes of work, insurance documentation and clear schedules so committees can approve and plan the works with confidence."}},{"@type":"Question","name":"What areas of an apartment or unit complex do you paint?","acceptedAnswer":{"@type":"Answer","text":"We paint all common property, including entry lobbies, hallways and corridors, stairwells, car parks, external façades and rendered walls, balconies, eaves and shared amenities. We can quote a full repaint or a staged maintenance program across multiple buildings."}},{"@type":"Question","name":"How do you minimise disruption to residents?","acceptedAnswer":{"@type":"Answer","text":"We plan the work around residents and tenants — keeping access ways safe and open, staging areas so entries and stairwells remain usable, using low-odour products in occupied buildings, and communicating the schedule clearly in advance so everyone knows what to expect."}},{"@type":"Question","name":"Are you insured for body corporate and strata work?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Jetblack Painting carries $10 million public liability insurance and follows proper site safety and access procedures. We're happy to provide insurance certificates, safe work documentation and detailed scopes for committees and building managers before work begins."}},{"@type":"Question","name":"What does a committee actually need to approve the work?","acceptedAnswer":{"@type":"Answer","text":"A detailed written scope broken down by area, a clear price, and our insurance documentation — that's what lets a committee move from discussion to a decision without a second round of questions. We prepare the quote so it can go straight into an AGM or committee meeting agenda, itemised enough that owners can see exactly what's included before they vote on it."}},{"@type":"Question","name":"Can the work be staged across a large building or multiple buildings?","acceptedAnswer":{"@type":"Answer","text":"Yes. Staging is standard on occupied strata property, not an exception — we typically work wing by wing or level by level so entries, stairwells and car park access stay usable throughout, rather than closing the whole building down for the length of the project. For multi-building complexes, we can quote the works as a single staged program or building by building, whichever suits the committee's budget and timing."}},{"@type":"Question","name":"What access equipment do you use for multi-storey buildings?","acceptedAnswer":{"@type":"Answer","text":"The access equipment depends on the building's height and site constraints — scaffolding, elevated work platforms or scissor lifts, chosen for what the specific façade and access conditions actually need rather than a default option. We factor site access, boom reach and any strata bylaws around common property access into the quote up front, so there's no surprise equipment cost once work starts."}},{"@type":"Question","name":"How do you communicate with residents during the project?","acceptedAnswer":{"@type":"Answer","text":"Through the committee or strata manager, with a schedule they can circulate to owners and tenants ahead of time — which areas are affected and when, so residents aren't caught off guard by scaffolding or a closed stairwell. Low-odour products are used as standard in occupied common areas, and access ways are kept safe and usable throughout rather than closed off entirely."}}]}</script>

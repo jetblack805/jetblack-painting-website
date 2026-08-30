@@ -24,6 +24,34 @@
   <!-- Ahrefs Web Analytics. Mirrored from client/index.html, which only
        covers "/" -- these generated pages carry their own head. -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="9ssEuDuvkUrK+tFjvsjy4A" async></script>
+  <!-- GA4. Mirrored from client/index.html for the same reason as the Ahrefs tag
+       above: that file only serves "/", and every other page is built here.
+       Until 2026-08-30 this block was missing, so GA4 fired on the homepage
+       alone and recorded nothing from the 95 suburb pages or the 9 service
+       pages -- which is also every page carrying a quote form. lib/analytics.ts
+       queues events onto dataLayer when gtag has not loaded, so without this the
+       generate_lead and phone_call_click events sat in an array that was never
+       sent. Keep the two copies in step. -->
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <script>
+    function _loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6NC2597W9L';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-6NC2597W9L');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(_loadGA);
+    } else {
+      window.addEventListener('load', _loadGA);
+    }
+  </script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Prepare Your Home for Painting","description":"Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.","inLanguage":"en-AU","datePublished":"2026-06-23","dateModified":"2026-08-13","articleSection":"Guide","image":"https://jetblackpainting.com/og-image.jpg","author":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com"},"publisher":{"@type":"Organization","name":"Jetblack Painting","url":"https://jetblackpainting.com","logo":{"@type":"ImageObject","url":"https://jetblackpainting.com/logo.jpg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jetblackpainting.com/blog/prepare-home-for-painting/"}}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"HowTo","name":"How to Prepare Your Melbourne Home for Professional Painting","description":"Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 18+ years of painting Melbourne homes.","totalTime":"PT1H","step":[{"@type":"HowToStep","name":"Clear the Rooms","text":"Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers so painters have full access to work efficiently."},{"@type":"HowToStep","name":"Identify Problem Areas","text":"Walk through your home and note any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Point these out to your painter at the quote stage."},{"@type":"HowToStep","name":"Exterior Preparation","text":"Trim garden beds back 30cm from walls, move outdoor furniture and pot plants away, park cars away from the house, unlock gates for access, and secure pets inside or in a separate area."}]}</script>
   <script type="application/ld+json" data-static-schema>{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the best time of year to paint the exterior of a home in Melbourne?","acceptedAnswer":{"@type":"Answer","text":"Exterior painting is best done between October and April when conditions are drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days, since they affect how the paint cures."}},{"@type":"Question","name":"Do I need to move all my furniture out before painting?","acceptedAnswer":{"@type":"Answer","text":"No. Furniture just needs to be moved away from walls or into the centre of the room — we cover it with drop sheets along with the flooring. Most households stay in the home throughout an interior repaint."}},{"@type":"Question","name":"How far back should garden beds be trimmed before exterior painting?","acceptedAnswer":{"@type":"Answer","text":"About 30cm clearance from the walls gives our painters safe, unobstructed access to weatherboards, render or brick. It's worth doing this along with moving outdoor furniture and pot plants before we arrive."}},{"@type":"Question","name":"What should I point out to the painter during the quote?","acceptedAnswer":{"@type":"Answer","text":"Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Flagging these at the quote stage means the preparation work is accounted for in the price from the start."}}]}</script>

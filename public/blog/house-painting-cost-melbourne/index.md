@@ -45,7 +45,7 @@ The best way to get an accurate painting quote is to have a professional painter
 
 ## Why Choose Jetblack Painting?
 
-With 5-star Google reviews, 13+ years of experience, and $10M public liability insurance, Jetblack Painting is Melbourne's most trusted painting company. We service all suburbs including Malvern, Camberwell, Hawthorn, and Keysborough.
+With 5-star Google reviews, 18+ years of experience, and $10M public liability insurance, Jetblack Painting is Melbourne's most trusted painting company. We service all suburbs including Malvern, Camberwell, Hawthorn, and Keysborough.
 
 ## Frequently Asked Questions
 

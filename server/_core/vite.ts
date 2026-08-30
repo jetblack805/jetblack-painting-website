@@ -373,7 +373,7 @@ const FAQ_SCHEMA = JSON.stringify({
   mainEntity: [
     { "@type": "Question", name: "Do you offer free quotes?", acceptedAnswer: { "@type": "Answer", text: "Yes! We provide completely free, no-obligation quotes. We'll visit your property, assess the work, and provide a detailed written quote." } },
     { "@type": "Question", name: "Are you licensed and insured?", acceptedAnswer: { "@type": "Answer", text: "Yes, Jetblack Painting is fully licensed and carries $10 million public liability insurance for your complete peace of mind." } },
-    { "@type": "Question", name: "How long have you been in business?", acceptedAnswer: { "@type": "Answer", text: "Jetblack Painting has been serving Melbourne for over 13 years, building a reputation for quality workmanship and reliability." } },
+    { "@type": "Question", name: "How long have you been in business?", acceptedAnswer: { "@type": "Answer", text: "Jetblack Painting has been serving Melbourne for over 18 years, building a reputation for quality workmanship and reliability." } },
     { "@type": "Question", name: "Do you provide references?", acceptedAnswer: { "@type": "Answer", text: "Absolutely! We're happy to provide references from previous customers. We also have a 5-star Google rating with many verified reviews." } },
     { "@type": "Question", name: "What areas do you serve?", acceptedAnswer: { "@type": "Answer", text: "We serve all Melbourne suburbs including Mordialloc, Mentone, Sandringham, Brighton, Hampton, and the Mornington Peninsula." } },
     { "@type": "Question", name: "Do you travel outside Melbourne?", acceptedAnswer: { "@type": "Answer", text: "We primarily serve the Melbourne metropolitan area including the Mornington Peninsula. Contact us to discuss your location." } },

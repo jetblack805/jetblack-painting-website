@@ -38,7 +38,7 @@ Test with large sample patches rather than small chips — colour looks dramatic
 
 Let the architecture guide you: heritage homes suit warm, earthy tones, while modern homes carry bold, dramatic colours well. If the property sits in a heritage precinct, check any overlay requirements before committing to an exterior scheme.
 
-Jetblack Painting offers a free colour consultation with every painting quote, drawing on 13+ years of Melbourne experience to match colours to your home's architecture, natural light and style.
+Jetblack Painting offers a free colour consultation with every painting quote, drawing on 18+ years of Melbourne experience to match colours to your home's architecture, natural light and style.
 
 ## Frequently Asked Questions
 
@@ -56,7 +56,7 @@ Test large sample patches on more than one wall or elevation and look at them at
 
 ### Does Jetblack Painting help with colour selection?
 
-Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 13+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.
+Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 18+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.
 
 **Jetblack Painting** — Best Paint Colours for Melbourne Homes 2026 | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

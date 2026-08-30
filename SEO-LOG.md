@@ -24,8 +24,28 @@ Re-verify against the live site before cementing any of them again.
 | Public liability | $10 million | — |
 | Workmanship guarantee | 5 years, written | — |
 | Base | Mordialloc VIC 3195 | 2026-08-27 |
-| Years trading | 13+ | — |
+| **Years experience** | **18+** | 2026-08-30 |
 | Quote turnaround / enquiry response | 24–48 hours | — |
+
+### Years experience — 18+, not 13+
+
+**Jimmy confirmed on 2026-08-30 that 18 is correct**, and asked the site to match his Google
+Business Profile, which states 18+. Every occurrence was changed across 23 source files. **Do not
+revert this to 13.** An earlier version of the daily brief says 13+; that is now stale.
+
+Three other figures were live and are all wrong or need care:
+
+| Where | Said | Status |
+| --- | --- | --- |
+| Site, llms.txt, schema | 13+ | **corrected to 18+** |
+| `TrustBadges.tsx` | "trusted since 2011" (implies 15) | **year claim removed** — not replaced with an invented founding year |
+| Google Business Profile | 18+ | the source of truth Jimmy nominated |
+| Google's record of the business opening | March 2015 (11) | **unresolved, and Google can see it** |
+
+Phrasing throughout is deliberately "18+ years of **experience**", not "the business is 18 years
+old" — that is what the Business Profile says and it is the reading that does not contradict
+Google's own opening date. If the intent is business age, that conflict has to be settled at the
+Business Profile end, not in the repo.
 
 ### Review count — read this before touching it
 
@@ -2309,3 +2329,83 @@ and neither can the effect of the quote form. Both need a run with ranking data.
 
 Authority work requires measurement to target it, and there was none. The brief's own guidance:
 a run that investigates, finds nothing worth changing, and says so is a successful run.
+
+---
+
+## 2026-08-30 — Third-party page-structure advice checked; the real gap is evidence, not words
+
+Jimmy supplied a further set of recommendations (buyer-intent pages, trust pages, technical SEO,
+suburb-page quality). Checked claim by claim against the live site.
+
+### ⚠️ Finding: the crawler layer carries no images at all
+
+**All 95 suburb pages and all 9 service pages emit zero `<img>` tags in their static HTML** — only
+an `og:image` meta tag. Every photo is React-only, imported as an ES module and rendered
+client-side. The homepage shell is the sole page with an `<img>` in the served HTML.
+
+Two consequences, both previously mis-attributed:
+
+1. An earlier audit noted "almost no Google Images or Lens visibility" and put it down to generic
+   photography. That is not the cause. **Google cannot see any image on those pages.**
+2. The same advice set asks for "no JavaScript-only key content". Images are exactly that here.
+
+Separately, the same **three** gallery files render on all 95 suburb pages
+(`gallery-exterior-navy-weatherboard`, `gallery-commercial-comfortel-building`,
+`gallery-roof-victorian-restoration`) — zero suburb-specific imagery anywhere.
+
+Emitting the existing three into the static layer is possible without new photography, but it
+would publish identical images across 95 pages, which is marginal. The valuable version needs real
+per-suburb photos and is blocked on Jimmy.
+
+### Suburb pages scored against the advice's seven criteria
+
+| Criterion | Status |
+| --- | --- |
+| Original copy about the work performed there | **Met** — near-duplicate 34.3% avg, all 95 under the 45% gate |
+| Links to the matching service page | **Met** — 8 service links per page |
+| Direct request-a-quote CTA | **Met** as of PR #229 |
+| A genuine reason clients there choose you | Partial — prose covers housing stock, not the business |
+| Two or more actual local projects | **Zero, on all 95** |
+| Unique before-and-after images | **Zero unique**, and none in the crawler layer |
+| Testimonial with approval | **None** |
+
+The advice warns against "50 nearly identical pages where only the suburb name changes". Measured,
+these are not that — the text is genuinely distinct. **The gap is evidence, not words.** Three
+independent advisers have now converged on the same missing thing: photographs and job details.
+That single input blocks case studies, suburb-page proof, service-page proof and a gallery page.
+
+### Technical checklist — verified clean
+
+One H1 per page (0 with none, 0 with more than one, across 116) · self-referencing canonical
+**116/116** · 0 duplicate titles/descriptions/H1s/canonicals · sitemap 106/106 at 200 with zero
+redirect hops and no noindexed URL listed · **0 orphan pages** · `http://` → `https://` 301 ·
+no image over 250KB, WebP, lazy-loaded, TTFB 0.146s · 0 JSON-LD parse errors and 0
+schema-vs-visible mismatches · quote reachable in one click from every page type · conversion
+events present in code (`generate_lead`, `quote_form_undelivered`, `phone_call_click`,
+`email_click`).
+
+**`www.` could not be tested** — this session's egress policy returns 403 on that host. Verified
+from source instead: `worker/index.js:164` strips `www.` and forces https with a 301.
+
+### Minor finding: phone format differs between layers
+
+Homepage schema publishes `+61432077782`; every other page publishes `0432 077 782`. Same number,
+two formats. Low severity, and the homepage's E.164 form is arguably the more correct one for
+schema, so normalising should pick a direction deliberately rather than assume the homepage is
+wrong. Not changed.
+
+### Pages that genuinely do not exist
+
+**About**, **insurance/warranty**, and **gallery/projects**. Note that `/about`, `/contact` and
+`/our-work` are *not* broken pages — they are legacy hash-anchor routes that all rendered the
+homepage, and `worker/index.js` 301s them to `/` deliberately because Google was treating them as
+duplicates. That redirect is correct; do not "restore" those routes.
+
+Both new pages are blocked on facts only Jimmy holds: the written guarantee's terms, exclusions and
+claim process, and which years-trading figure is true (llms.txt says 13+, a GBP post says 18+,
+Google records the opening as March 2015 — 11).
+
+### Pushed back on
+
+A separate **"House Painters Melbourne"** page. The homepage already targets that intent; a second
+page would compete with it.

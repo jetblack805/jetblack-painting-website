@@ -225,7 +225,7 @@ export default function WeatherboardPaintingGuide() {
 
             <p className="text-[#B4B4B8] mb-6">
               Jetblack Painting has painted weatherboard homes across Melbourne's bayside, southeast, inner east and
-              the Mornington Peninsula for over 13 years. Every exterior job is quoted in writing with the preparation
+              the Mornington Peninsula for over 18 years. Every exterior job is quoted in writing with the preparation
               itemised, and backed by $10M public liability insurance and a 5-year written workmanship guarantee.
             </p>
 

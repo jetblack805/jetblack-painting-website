@@ -10,7 +10,7 @@ Coastal house painters in Aspendale — mid-century brick veneer and contemporar
 
 ## Local painting services in Aspendale
 
-Aspendale is a quiet coastal suburb in the City of Kingston, sharing its northern edge with Mordialloc. We are based in Mordialloc, so Aspendale is part of our core local area. Jimmy Demirci has been painting homes here for over 13 years. He knows the weatherboard beach houses, the 1950s brick homes and the modern townhouses inside out.
+Aspendale is a quiet coastal suburb in the City of Kingston, sharing its northern edge with Mordialloc. We are based in Mordialloc, so Aspendale is part of our core local area. Jimmy Demirci has been painting homes here for over 18 years. He knows the weatherboard beach houses, the 1950s brick homes and the modern townhouses inside out.
 
 A mix of classic weatherboard homes, mid-century brick veneer, and contemporary townhouses and units. Many are a short walk from the beach. Coastal properties here need preparation and paint systems built for the bay: salt washing, flexible primers and weather-resistant topcoats.
 
@@ -85,7 +85,7 @@ Explore nearby suburb pages for neighbouring areas around Aspendale.
 
 ### Who are the best painters in Aspendale?
 
-Jetblack Painting is the most highly rated local painting company serving Aspendale. We are based in nearby Mordialloc, and owner Jimmy Demirci has over 13 years painting homes across Aspendale and the Bayside area. We hold 5-star Google reviews, carry $10 million public liability insurance, and back every job with a 5-year written workmanship guarantee.
+Jetblack Painting is the most highly rated local painting company serving Aspendale. We are based in nearby Mordialloc, and owner Jimmy Demirci has over 18 years painting homes across Aspendale and the Bayside area. We hold 5-star Google reviews, carry $10 million public liability insurance, and back every job with a 5-year written workmanship guarantee.
 
 ### Do you paint interiors and exteriors in Aspendale?
 

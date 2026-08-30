@@ -21,7 +21,7 @@ export function organizationSchema() {
     "email": "jimmy@jetblackpainting.com",
     "logo": "https://jetblackpainting.com/logo.jpg",
     "image": "https://jetblackpainting.com/og-image.jpg",
-    "description": "Melbourne's top-rated residential and commercial painting company with 13+ years experience",
+    "description": "Melbourne's top-rated residential and commercial painting company with 18+ years experience",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Mordialloc",

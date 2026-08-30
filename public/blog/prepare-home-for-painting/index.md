@@ -4,7 +4,7 @@
 
 # How to Prepare Your Home for Painting
 
-Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 13+ years of painting Melbourne homes.
+Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 18+ years of painting Melbourne homes.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 

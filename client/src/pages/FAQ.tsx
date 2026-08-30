@@ -23,7 +23,7 @@ export default function FAQ() {
         },
         {
           q: "How long have you been in business?",
-          a: "We've been serving Melbourne for over 13 years, building a reputation for quality workmanship and customer satisfaction."
+          a: "We've been serving Melbourne for over 18 years, building a reputation for quality workmanship and customer satisfaction."
         },
         {
           q: "Do you provide references?",

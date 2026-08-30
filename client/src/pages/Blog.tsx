@@ -177,7 +177,7 @@ export default function Blog() {
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Expert advice on interior, exterior, and commercial painting for Melbourne homes and businesses. 
-              Written by our team with 13+ years of experience.
+              Written by our team with 18+ years of experience.
             </p>
           </motion.div>
         </div>

@@ -1091,7 +1091,7 @@ const servicePages = [
     ],
     paragraphs: [
       "Every interior project starts with thorough preparation: furniture protection, filling and sanding, gap sealing, and priming where needed, so the final coats look sharp and last longer.",
-      "Jetblack Painting is a 5-star rated Melbourne painting business with 13+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every interior project.",
+      "Jetblack Painting is a 5-star rated Melbourne painting business with 18+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every interior project.",
     ],
     extraSections: [
       {
@@ -1549,7 +1549,7 @@ const servicePages = [
     ],
     paragraphs: [
       "Jetblack Painting coats and resurfaces concrete floors across Melbourne — decorative flake finishes, solid colour coatings and clear-sealed concrete, in everything from single domestic garages to full warehouse floors. It's the same trade discipline as the rest of our work: the finish people see is the last few hours of the job, and the preparation underneath it is the part that decides how long it lasts.",
-      "Jetblack Painting is a 5-star rated Melbourne business with 13+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every project.",
+      "Jetblack Painting is a 5-star rated Melbourne business with 18+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every project.",
     ],
     extraSections: [
       {
@@ -1870,7 +1870,7 @@ const articlePages = [
         paragraphs: [
           "Test with large sample patches rather than small chips — colour looks dramatically different under Melbourne's natural light compared with artificial light, and changes again between seasons as the angle of the sun shifts.",
           "Let the architecture guide you: heritage homes suit warm, earthy tones, while modern homes carry bold, dramatic colours well. If the property sits in a heritage precinct, check any overlay requirements before committing to an exterior scheme.",
-          "Jetblack Painting offers a free colour consultation with every painting quote, drawing on 13+ years of Melbourne experience to match colours to your home's architecture, natural light and style.",
+          "Jetblack Painting offers a free colour consultation with every painting quote, drawing on 18+ years of Melbourne experience to match colours to your home's architecture, natural light and style.",
         ],
       },
     ],
@@ -1889,7 +1889,7 @@ const articlePages = [
       },
       {
         question: "Does Jetblack Painting help with colour selection?",
-        answer: "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 13+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
+        answer: "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 18+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
       },
     ],
   },
@@ -1946,7 +1946,7 @@ const articlePages = [
       {
         heading: "Why Choose Jetblack Painting?",
         paragraphs: [
-          "With 5-star Google reviews, 13+ years of experience, and $10M public liability insurance, Jetblack Painting is Melbourne's most trusted painting company. We service all suburbs including Malvern, Camberwell, Hawthorn, and Keysborough.",
+          "With 5-star Google reviews, 18+ years of experience, and $10M public liability insurance, Jetblack Painting is Melbourne's most trusted painting company. We service all suburbs including Malvern, Camberwell, Hawthorn, and Keysborough.",
         ],
       },
     ],
@@ -1976,7 +1976,7 @@ const articlePages = [
     description:
       "Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.",
     intro:
-      "Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 13+ years of painting Melbourne homes.",
+      "Getting your home ready for professional painters ensures the best results and helps the job run smoothly. Here's our complete checklist from 18+ years of painting Melbourne homes.",
     howTo: {
       name: "How to Prepare Your Melbourne Home for Professional Painting",
       totalTime: "PT1H",
@@ -2249,7 +2249,7 @@ const articlePages = [
         heading: "When to call a professional",
         paragraphs: [
           "Call a professional when the home was built before 1970 and may contain lead paint, when there is visible rot or boards need replacing, when the house is two storeys or needs scaffolding, or when previous paint is peeling in large sheets — which usually signals an underlying moisture problem.",
-          "Jetblack Painting has painted weatherboard homes across Melbourne's bayside, southeast, inner east and the Mornington Peninsula for over 13 years. Every exterior job is quoted in writing with the preparation itemised, and backed by $10M public liability insurance and a 5-year written workmanship guarantee.",
+          "Jetblack Painting has painted weatherboard homes across Melbourne's bayside, southeast, inner east and the Mornington Peninsula for over 18 years. Every exterior job is quoted in writing with the preparation itemised, and backed by $10M public liability insurance and a 5-year written workmanship guarantee.",
         ],
       },
     ],
@@ -2451,7 +2451,7 @@ const faqCategories = [
       },
       {
         question: "How long have you been in business?",
-        answer: "We've been serving Melbourne for over 13 years, building a reputation for quality workmanship and customer satisfaction.",
+        answer: "We've been serving Melbourne for over 18 years, building a reputation for quality workmanship and customer satisfaction.",
       },
       {
         question: "Do you provide references?",

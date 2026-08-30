@@ -6,6 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import { lazy, Suspense } from "react";
+// Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
+// out of the initial payload and the form loads below the fold.
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 import imgService from "@/assets/images/gallery-interior-staged-living.webp";
 import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.webp";
 import imgOpenLiving from "@/assets/images/gallery-interior-open-living.webp";
@@ -369,6 +373,11 @@ export default function RealEstatePainting() {
           </motion.div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm compact serviceType="Real Estate Painting" />
+      </Suspense>
+
       <Footer />
     </div>
   );

@@ -18,6 +18,14 @@ export default function CaulfieldPainters() {
     {
       question: `Do you offer free quotes in ${suburb}?`,
       answer: `Yes. We provide free written quotes across ${suburb}, with the preparation, products and number of coats itemised so you can compare against other quotes properly. Call Jimmy on 0432 077 782.`
+    },
+    {
+      question: `Why would a rendered period home need a different paint system?`,
+      answer: `Because a lot of ${suburb}'s period housing is solid masonry rather than brick veneer, and solid walls release moisture back out through the surface. A hard, non-breathable coating traps it, and the paint is pushed off in patches low on the wall. Breathable systems let the wall do what it was built to do.`
+    },
+    {
+      question: `Do you work with owners corporations on ${suburb} apartment blocks?`,
+      answer: `Yes. Common property around the station and the racecourse is a regular part of our work. We quote it with a written scope a committee can read and compare, and we stage the job around residents — one stairwell at a time, notice before we start, and equipment packed down at the end of each day.`
     }
   ];
 
@@ -50,6 +58,20 @@ export default function CaulfieldPainters() {
           body: [
             `${suburb}'s Edwardian and interwar homes need proper preparation to maintain their character and protect their value — crack filling on rendered surfaces, bare timber priming, careful colour choices that suit the era and the street. We handle all of this as part of our standard approach, not as an afterthought.`,
             `For ${suburb}'s modern townhouses and apartment buildings, including body corporate and strata repaints, we deliver clean contemporary finishes using premium Dulux and Taubmans systems rated for Melbourne's conditions. Projects are scoped clearly, communicated throughout and completed to a standard that lasts.`,
+          ],
+        },
+        {
+          heading: `Solid Brick, Render, and Why Breathability Matters Here`,
+          body: [
+            `A good deal of ${suburb}'s period housing is solid masonry rather than brick veneer — double brick, frequently rendered, built before cavity construction became the norm. Solid walls handle moisture differently to modern ones. They take water up and release it back out through the surface, which means whatever sits on that surface has to let vapour through.`,
+            `Seal a solid wall with a hard, non-breathable film and the moisture still finds its way in but can no longer get out. It gathers behind the coating and pushes it off, usually in patches low on the wall where the damp settles. On rendered period homes here we specify breathable systems for that reason, and we repair the render itself before coating rather than bridging cracks with paint and hoping they stay shut.`,
+          ],
+        },
+        {
+          heading: `Apartment Blocks and Common Property Near the Station`,
+          body: [
+            `${suburb} carries a dense band of low-rise apartment stock around the station and the racecourse, much of it interwar and post-war walk-ups with shared entries, stairwells and balconies. Common property is a different exercise to a house. The work is scoped for a committee rather than an owner, priced as a whole, and carried out while every resident is still living there.`,
+            `That means staging it properly: one stairwell at a time, notice before anything is touched, and equipment that comes down at the end of the day rather than occupying a shared entry for a fortnight. We quote this work with a written scope a committee can actually read, compare against another quote and sign off, without needing anyone to interpret it for them.`,
           ],
         },
       ]}

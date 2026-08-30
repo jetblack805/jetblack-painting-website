@@ -23,7 +23,7 @@ export default function AspendalePainters() {
       "@type": "City",
       "name": suburb
     },
-    "description": `Jetblack Painting provides professional interior, exterior and commercial painting services in ${suburb}. Specialist Bayside painters with 13+ years experience and a 5-year written guarantee.`,
+    "description": `Jetblack Painting provides professional interior, exterior and commercial painting services in ${suburb}. Specialist Bayside painters with 18+ years experience and a 5-year written guarantee.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://jetblackpainting.com/painter-aspendale/`
@@ -33,7 +33,7 @@ export default function AspendalePainters() {
   const faqs = [
     {
       question: `Who are the best painters in ${suburb}?`,
-      answer: `Jetblack Painting is the most highly rated local painting company serving ${suburb}. We are based in nearby Mordialloc, and owner Jimmy Demirci has over 13 years painting homes across ${suburb} and the Bayside area. We hold 5-star Google reviews, carry $10 million public liability insurance, and back every job with a 5-year written workmanship guarantee.`
+      answer: `Jetblack Painting is the most highly rated local painting company serving ${suburb}. We are based in nearby Mordialloc, and owner Jimmy Demirci has over 18 years painting homes across ${suburb} and the Bayside area. We hold 5-star Google reviews, carry $10 million public liability insurance, and back every job with a 5-year written workmanship guarantee.`
     },
     {
       question: `Do you paint interiors and exteriors in ${suburb}?`,
@@ -65,7 +65,7 @@ export default function AspendalePainters() {
         { name: "Chelsea", link: "/painter-chelsea" },
         { name: "Kingston", link: "/painter-kingston" },
       ]}
-      localExpertise={`${suburb} is a quiet coastal suburb in the City of Kingston, sharing its northern edge with Mordialloc. We are based in Mordialloc, so ${suburb} is part of our core local area. Jimmy Demirci has been painting homes here for over 13 years. He knows the weatherboard beach houses, the 1950s brick homes and the modern townhouses inside out.`}
+      localExpertise={`${suburb} is a quiet coastal suburb in the City of Kingston, sharing its northern edge with Mordialloc. We are based in Mordialloc, so ${suburb} is part of our core local area. Jimmy Demirci has been painting homes here for over 18 years. He knows the weatherboard beach houses, the 1950s brick homes and the modern townhouses inside out.`}
       propertyTypes={`A mix of classic weatherboard homes, mid-century brick veneer, and contemporary townhouses and units. Many are a short walk from the beach. Coastal properties here need preparation and paint systems built for the bay: salt washing, flexible primers and weather-resistant topcoats.`}
       localContent={[
         {

@@ -6,6 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import { lazy, Suspense } from "react";
+// Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
+// out of the initial payload and the form loads below the fold.
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 import imgService from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
 import imgService900 from "@/assets/images/gallery-exterior-navy-weatherboard-900.webp";
 
@@ -147,7 +151,7 @@ export default function ExteriorPainting() {
               Melbourne's Expert Exterior House Painters
             </h2>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
-              Jetblack Painting provides premium exterior painting services across Melbourne. We specialise in protecting and beautifying homes with weather-resistant coatings that withstand Melbourne's harsh UV, rain, and coastal conditions. Our 13+ years of experience means we understand exactly what your home needs.
+              Jetblack Painting provides premium exterior painting services across Melbourne. We specialise in protecting and beautifying homes with weather-resistant coatings that withstand Melbourne's harsh UV, rain, and coastal conditions. Our 18+ years of experience means we understand exactly what your home needs.
             </p>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               Every exterior project includes thorough surface preparation including power washing, scraping, sanding, and priming. We handle all surface types including weatherboard, rendered walls, brick, timber, metal roofing, and concrete.
@@ -294,6 +298,11 @@ export default function ExteriorPainting() {
           </motion.div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm compact serviceType="Exterior Painting" />
+      </Suspense>
+
       <Footer />
     </div>
   );

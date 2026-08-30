@@ -6,6 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import { lazy, Suspense } from "react";
+// Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
+// out of the initial payload and the form loads below the fold.
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 // After shot. Already in the repo and used in Gallery.tsx — reused rather than
 // re-imported as a second copy of the same photo.
 import imgEpoxyAfter from "@/assets/images/gallery-commercial-epoxy-floor.webp";
@@ -352,6 +356,11 @@ export default function EpoxyFlooring() {
           </motion.div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm compact serviceType="Epoxy Flooring" />
+      </Suspense>
+
       <Footer />
     </div>
   );

@@ -6,6 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import { lazy, Suspense } from "react";
+// Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
+// out of the initial payload and the form loads below the fold.
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 import imgHallway from "@/assets/images/service-interior-painting.webp";
 import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.webp";
 import imgKitchenTimber from "@/assets/images/gallery-interior-kitchen-timber.webp";
@@ -222,7 +226,7 @@ export default function InteriorPainting() {
               Melbourne's Trusted Interior Painting Specialists
             </h2>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
-              Jetblack Painting delivers premium interior painting services across Melbourne. With 13+ years of experience and a 5-star Google rating, we transform homes with expert craftsmanship and premium materials. Our professional team handles everything from single rooms to complete home repaints.
+              Jetblack Painting delivers premium interior painting services across Melbourne. With 18+ years of experience and a 5-star Google rating, we transform homes with expert craftsmanship and premium materials. Our professional team handles everything from single rooms to complete home repaints.
             </p>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               We specialise in residential interior painting including living rooms, bedrooms, kitchens, bathrooms, hallways, and ceilings. Every project includes thorough surface preparation, premium primers, and top-quality topcoats for a flawless, long-lasting finish.
@@ -369,6 +373,11 @@ export default function InteriorPainting() {
           </motion.div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm compact serviceType="Interior Painting" />
+      </Suspense>
+
       <Footer />
     </div>
   );

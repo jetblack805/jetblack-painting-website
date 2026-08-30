@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Does Jetblack Painting help with colour selection?",
     answer:
-      "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 13+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
+      "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 18+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function BestPaintColours2026() {
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-[#A3A3A8] mb-8">
               Choosing the right paint colour for your Melbourne home can feel overwhelming with thousands of options available. 
-              As professional <strong>house painters in Melbourne</strong> with over 13 years of experience, we've seen what works 
+              As professional <strong>house painters in Melbourne</strong> with over 18 years of experience, we've seen what works 
               and what doesn't in our unique climate and architectural styles. Here's our guide to the best paint colours trending in 2026.
             </p>
 
@@ -208,7 +208,7 @@ export default function BestPaintColours2026() {
             
             <p className="text-[#B4B4B8] mb-6">
               Overwhelmed by colour choices? Jetblack Painting offers <strong>free, in-home colour consultations</strong> with 
-              every painting quote. Our 13+ years of Melbourne experience means we can recommend colours that suit your home's 
+              every painting quote. Our 18+ years of Melbourne experience means we can recommend colours that suit your home's 
               architecture, natural light, and personal style — while considering 2026 trends.
             </p>
 

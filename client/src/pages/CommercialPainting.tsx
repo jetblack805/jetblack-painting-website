@@ -6,6 +6,10 @@ import { serviceSchema } from "@/lib/serviceSchema";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MidPageCTA from "@/components/MidPageCTA";
+import { lazy, Suspense } from "react";
+// Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
+// out of the initial payload and the form loads below the fold.
+const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 import imgService from "@/assets/images/gallery-commercial-comfortel-building.webp";
 import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.webp";
 import imgBeforeAfter900 from "@/assets/images/gallery-commercial-before-after-900.webp";
@@ -187,7 +191,7 @@ export default function CommercialPainting() {
           >
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Melbourne's Trusted Commercial Painters</h2>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
-              Jetblack Painting delivers large-scale commercial painting projects across Melbourne. With 13+ years of experience and full insurance coverage, we handle everything from small office repaints to major warehouse and factory projects. Our team works efficiently to minimise disruption to your business operations.
+              Jetblack Painting delivers large-scale commercial painting projects across Melbourne. With 18+ years of experience and full insurance coverage, we handle everything from small office repaints to major warehouse and factory projects. Our team works efficiently to minimise disruption to your business operations.
             </p>
           </motion.div>
 
@@ -330,6 +334,11 @@ export default function CommercialPainting() {
           </motion.div>
         </div>
       </section>
+
+      <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
+        <QuoteForm compact serviceType="Commercial Painting" />
+      </Suspense>
+
       <Footer />
     </div>
   );

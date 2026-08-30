@@ -138,7 +138,7 @@ export default function Contact() {
                   </div>
                   <div className="w-px h-8 bg-white/10" />
                   <div className="text-center">
-                    <div className="text-[#E9BE6C] font-bold text-lg" >13+</div>
+                    <div className="text-[#E9BE6C] font-bold text-lg" >18+</div>
                     <div className="text-white/60 text-xs">Years Experience</div>
                   </div>
                   <div className="w-px h-8 bg-white/10" />

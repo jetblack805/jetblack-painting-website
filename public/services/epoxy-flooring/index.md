@@ -30,7 +30,7 @@ Spalled, pitted or repeatedly patched surfaces made good first, so the new finis
 
 Jetblack Painting coats and resurfaces concrete floors across Melbourne — decorative flake finishes, solid colour coatings and clear-sealed concrete, in everything from single domestic garages to full warehouse floors. It's the same trade discipline as the rest of our work: the finish people see is the last few hours of the job, and the preparation underneath it is the part that decides how long it lasts.
 
-Jetblack Painting is a 5-star rated Melbourne business with 13+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every project.
+Jetblack Painting is a 5-star rated Melbourne business with 18+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every project.
 
 ## Preparation Is the Whole Job
 

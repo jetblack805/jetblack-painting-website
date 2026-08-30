@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
 
+  <!-- Critical, and it must stay inline and stay first. The body margin reset
+       lives in Tailwind's preflight inside the built stylesheet, which is an
+       external file and therefore arrives AFTER the first paint. Until it does,
+       the browser applies its default 8px body margin, and when the sheet lands
+       #root jumps up 8px. Measured on a throttled mobile profile (4x CPU,
+       slow 4G) that single shift is CLS 0.133 — effectively the homepage's
+       entire Cumulative Layout Shift, and enough to fail Core Web Vitals.
+       The generated pages never had this because the static generator already
+       emits margin:0 in their own inline <style> block. -->
+  <style>html,body{margin:0;padding:0;background:#060607}</style>
+
   <title>Jetblack Painting | House &amp; Commercial Painters Melbourne</title>
   <meta name="title" content="Jetblack Painting | House &amp; Commercial Painters Melbourne" />
   <meta name="description" content="Melbourne painters for interior, exterior, commercial and roof work. Servicing 90+ suburbs from Mordialloc. $10M insured, 5-year guarantee. Call 0432 077 782." />

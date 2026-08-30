@@ -9,9 +9,9 @@ import siteConfig from "@/site-config.json";
 export default function TrustBadges() {
   const badges = [
     {
-      mark: "13+",
+      mark: "18+",
       title: "Years Experience",
-      description: "Over a decade delivering high-quality finishes across Melbourne, trusted since 2011.",
+      description: "Eighteen years delivering high-quality finishes across Melbourne homes and commercial sites.",
     },
     {
       mark: "✦",

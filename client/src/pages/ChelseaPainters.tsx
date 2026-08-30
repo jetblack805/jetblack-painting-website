@@ -23,7 +23,7 @@ export default function ChelseaPainters() {
       "@type": "City",
       "name": suburb
     },
-    "description": `Jetblack Painting provides professional interior, exterior and commercial painting services in ${suburb}. Specialist coastal painters with 13+ years experience and a 5-year written guarantee.`,
+    "description": `Jetblack Painting provides professional interior, exterior and commercial painting services in ${suburb}. Specialist coastal painters with 18+ years experience and a 5-year written guarantee.`,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://jetblackpainting.com/painter-chelsea/`

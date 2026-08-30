@@ -30,7 +30,7 @@ Whole-house interior repaints staged room by room to minimise disruption for you
 
 Every interior project starts with thorough preparation: furniture protection, filling and sanding, gap sealing, and priming where needed, so the final coats look sharp and last longer.
 
-Jetblack Painting is a 5-star rated Melbourne painting business with 13+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every interior project.
+Jetblack Painting is a 5-star rated Melbourne painting business with 18+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every interior project.
 
 ## How an interior painting project runs
 

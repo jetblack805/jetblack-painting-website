@@ -191,7 +191,7 @@ export default function CommercialPainting() {
           >
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Melbourne's Trusted Commercial Painters</h2>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
-              Jetblack Painting delivers large-scale commercial painting projects across Melbourne. With 13+ years of experience and full insurance coverage, we handle everything from small office repaints to major warehouse and factory projects. Our team works efficiently to minimise disruption to your business operations.
+              Jetblack Painting delivers large-scale commercial painting projects across Melbourne. With 18+ years of experience and full insurance coverage, we handle everything from small office repaints to major warehouse and factory projects. Our team works efficiently to minimise disruption to your business operations.
             </p>
           </motion.div>
 

@@ -26,7 +26,7 @@ Yes. Jetblack Painting is fully licensed and carries $10 million public liabilit
 
 ### How long have you been in business?
 
-We've been serving Melbourne for over 13 years, building a reputation for quality workmanship and customer satisfaction.
+We've been serving Melbourne for over 18 years, building a reputation for quality workmanship and customer satisfaction.
 
 ### Do you provide references?
 

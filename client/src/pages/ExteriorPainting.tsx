@@ -151,7 +151,7 @@ export default function ExteriorPainting() {
               Melbourne's Expert Exterior House Painters
             </h2>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
-              Jetblack Painting provides premium exterior painting services across Melbourne. We specialise in protecting and beautifying homes with weather-resistant coatings that withstand Melbourne's harsh UV, rain, and coastal conditions. Our 13+ years of experience means we understand exactly what your home needs.
+              Jetblack Painting provides premium exterior painting services across Melbourne. We specialise in protecting and beautifying homes with weather-resistant coatings that withstand Melbourne's harsh UV, rain, and coastal conditions. Our 18+ years of experience means we understand exactly what your home needs.
             </p>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               Every exterior project includes thorough surface preparation including power washing, scraping, sanding, and priming. We handle all surface types including weatherboard, rendered walls, brick, timber, metal roofing, and concrete.

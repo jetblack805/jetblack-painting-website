@@ -66,7 +66,7 @@ export default function Hero() {
             className="hero-fade-in text-[#EDEDEF]/70 text-base sm:text-lg font-light leading-relaxed mb-10 max-w-xl"
             style={{ animationDelay: "0.4s" }}
           >
-            Thirteen years on Melbourne's period homes, new builds and commercial sites &mdash; Brighton, Toorak, Bayside and the inner east. Every job scoped, checked and signed off by Jimmy himself. Fully insured, five-year written guarantee.
+            Eighteen years on Melbourne's period homes, new builds and commercial sites &mdash; Brighton, Toorak, Bayside and the inner east. Every job scoped, checked and signed off by Jimmy himself. Fully insured, five-year written guarantee.
           </p>
 
           {/* CTAs */}

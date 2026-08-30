@@ -226,7 +226,7 @@ export default function InteriorPainting() {
               Melbourne's Trusted Interior Painting Specialists
             </h2>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
-              Jetblack Painting delivers premium interior painting services across Melbourne. With 13+ years of experience and a 5-star Google rating, we transform homes with expert craftsmanship and premium materials. Our professional team handles everything from single rooms to complete home repaints.
+              Jetblack Painting delivers premium interior painting services across Melbourne. With 18+ years of experience and a 5-star Google rating, we transform homes with expert craftsmanship and premium materials. Our professional team handles everything from single rooms to complete home repaints.
             </p>
             <p className="text-lg text-[#B4B4B8] mb-4 leading-relaxed">
               We specialise in residential interior painting including living rooms, bedrooms, kitchens, bathrooms, hallways, and ceilings. Every project includes thorough surface preparation, premium primers, and top-quality topcoats for a flawless, long-lasting finish.

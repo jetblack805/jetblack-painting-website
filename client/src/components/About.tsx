@@ -60,7 +60,7 @@ export default function About() {
                 />
               </div>
               <div className="absolute -top-4 -left-4 bg-[#D0A050] text-[#060607] px-5 py-3 shadow-lg">
-                <div className="text-2xl" style={{ fontFamily: "Georgia, serif" }}>13+</div>
+                <div className="text-2xl" style={{ fontFamily: "Georgia, serif" }}>18+</div>
                 <div className="text-[10px] font-semibold uppercase tracking-[0.18em]">Years Exp.</div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function About() {
           >
             <span className="lux-eyebrow">Meet Jimmy</span>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.9rem] text-[#FCFCFC] leading-[1.18] mb-6">
-              Thirteen years.{" "}
+              Eighteen years.{" "}
               <span className="text-[#D0A050]">One name on every job.</span>
             </h2>
             <p className="text-[#EDEDEF]/75 text-lg font-light leading-[1.8] mb-5">
@@ -82,7 +82,7 @@ export default function About() {
               by painters who rushed prep, used cheap materials, and disappeared after being paid.
             </p>
             <p className="text-[#EDEDEF]/60 font-light leading-[1.8] mb-5">
-              For over 13 years I've been painting homes across Mordialloc, Brighton, Toorak,
+              For over 18 years I've been painting homes across Mordialloc, Brighton, Toorak,
               Bayside, and the Mornington Peninsula. The difference with Jetblack is simple:
               I personally visit every job — to scope the work, check in during the project,
               and do the final quality walkthrough before we leave. You won't be handed off

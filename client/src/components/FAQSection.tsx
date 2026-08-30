@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "How long has Jetblack Painting been operating in Melbourne?",
-    answer: "We have over 13 years of experience providing premium painting services across Melbourne. Our long-standing reputation is built on quality craftsmanship and exceptional customer service."
+    answer: "We have over 18 years of experience providing premium painting services across Melbourne. Our long-standing reputation is built on quality craftsmanship and exceptional customer service."
   },
 ];
 

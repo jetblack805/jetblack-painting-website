@@ -39,7 +39,7 @@ Repaint when you see chalking, flaking, bare timber or gaps opening at the joint
 
 Call a professional when the home was built before 1970 and may contain lead paint, when there is visible rot or boards need replacing, when the house is two storeys or needs scaffolding, or when previous paint is peeling in large sheets — which usually signals an underlying moisture problem.
 
-Jetblack Painting has painted weatherboard homes across Melbourne's bayside, southeast, inner east and the Mornington Peninsula for over 13 years. Every exterior job is quoted in writing with the preparation itemised, and backed by $10M public liability insurance and a 5-year written workmanship guarantee.
+Jetblack Painting has painted weatherboard homes across Melbourne's bayside, southeast, inner east and the Mornington Peninsula for over 18 years. Every exterior job is quoted in writing with the preparation itemised, and backed by $10M public liability insurance and a 5-year written workmanship guarantee.
 
 ## Frequently Asked Questions
 

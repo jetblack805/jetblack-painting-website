@@ -99,7 +99,7 @@ export default function PrepareHomePainting() {
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-[#A3A3A8] mb-8">
               Getting your home ready for professional painters ensures the best results and helps the job run smoothly. 
-              Here's our complete checklist from 13+ years of painting Melbourne homes.
+              Here's our complete checklist from 18+ years of painting Melbourne homes.
             </p>
 
             <h2 className="text-2xl font-bold text-[#EDEDEF] mt-10 mb-4">Before the Painters Arrive</h2>

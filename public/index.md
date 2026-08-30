@@ -48,7 +48,7 @@ Peninsula. Being close to the job matters on a repaint — it makes it practical
 property before quoting, to start when the weather allows rather than when the diary allows, and
 to come back if something needs attention under the 5-year guarantee.
 
-Thirteen years working this side of Melbourne also means knowing what the local housing stock
+Eighteen years working this side of Melbourne also means knowing what the local housing stock
 does. Bayside and Peninsula homes take salt air and hard UV on the exposed elevations, so the
 weather side of a house ages years faster than the sheltered side. Weatherboard needs bare-timber
 priming where the old film has let go, not just a coat over the top. Period homes through Glen
@@ -62,10 +62,10 @@ See [painters in Mordialloc](/painter-mordialloc/) for local work.
 
 ## Why Jetblack Painting
 
-Jetblack Painting was founded by Jimmy Demirci and has spent 13+ years painting homes and businesses across Melbourne's southeast, Bayside, City of Casey, Glen Eira, Stonnington and the Mornington Peninsula. The business holds a 5.0-star rating from 17 verified Google reviews, and every project — residential or commercial — is covered by $10 million public liability insurance and a 5-year written workmanship guarantee.
+Jetblack Painting was founded by Jimmy Demirci and has spent 18+ years painting homes and businesses across Melbourne's southeast, Bayside, City of Casey, Glen Eira, Stonnington and the Mornington Peninsula. The business holds a 5.0-star rating from 17 verified Google reviews, and every project — residential or commercial — is covered by $10 million public liability insurance and a 5-year written workmanship guarantee.
 
 - 5.0-star rating from 17 Google reviews
-- 13+ years of experience painting Melbourne homes and businesses
+- 18+ years of experience painting Melbourne homes and businesses
 - $10 million public liability insurance
 - 5-year written workmanship guarantee
 - Based in Mordialloc, VIC 3195
@@ -78,7 +78,7 @@ Every job starts with a free, no-obligation site visit and a written quote that 
 ## Common Questions
 
 **Who are the best painters in Melbourne?**
-Jetblack Painting is a 5-star rated Melbourne painting company founded by Jimmy Demirci with 13+ years of experience, servicing 90+ suburbs including Mordialloc, Brighton, Toorak, Bentleigh and the Mornington Peninsula. All work is backed by a 5-year workmanship guarantee.
+Jetblack Painting is a 5-star rated Melbourne painting company founded by Jimmy Demirci with 18+ years of experience, servicing 90+ suburbs including Mordialloc, Brighton, Toorak, Bentleigh and the Mornington Peninsula. All work is backed by a 5-year workmanship guarantee.
 
 **Are you licensed and insured?**
 Yes. Jetblack Painting carries $10 million public liability insurance and every job is backed by a 5-year written workmanship guarantee.

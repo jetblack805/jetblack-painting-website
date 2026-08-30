@@ -2473,3 +2473,86 @@ the quote forms, and whether the suburb-page depth moved anything.
 | Near-duplicate avg | 25.5% | **34.3%** (different implementation — see the 2026-08-29 entry before acting) |
 
 Review count **17** is correct in the brief and unchanged.
+
+---
+
+## 2026-08-30 — SEOptimer social/local findings: one false negative, two decisions for Jimmy, no code change
+
+Second batch of SEOptimer screenshots (Social Results + Local SEO). Every item checked against what
+the site actually serves. **No change made** — nothing here was a defect I should fix unilaterally.
+
+### "No Local Business Schema identified on the page" — FALSE NEGATIVE, do not re-investigate
+
+The homepage **does** carry it. Parsed from the live HTML (not the source), the single JSON-LD block
+is a 4-node `@graph`:
+
+| `@id` | `@type` |
+| --- | --- |
+| `#website` | `WebSite` |
+| `#webpage` | `WebPage` |
+| `#business` | `["HomeAndConstructionBusiness", "LocalBusiness"]` |
+| `#faq` | `FAQPage` |
+
+The business node carries 23 properties including `address`, `geo`, `telephone`,
+`openingHoursSpecification`, `aggregateRating`, `sameAs`, `hasOfferCatalog`.
+
+SEOptimer misses it because the type is an **array inside an `@graph`**, which its parser does not
+flatten. Google's Rich Results Test handles both. **Do not "fix" this by adding a second flat
+`LocalBusiness` block** — two business entities on one page is a real problem, where this is only a
+reporting artifact.
+
+### "Phone: +1 0432077…" — also a parser artifact
+
+Schema `telephone` is `+61432077782`, correct E.164. SEOptimer read the *visible* `0432 077 782` and
+assumed +1. Displaying the local form is right for an Australian local business. No change.
+
+### "Address & Phone Shown on Website — Missing: Address" — real, but likely correct as-is
+
+Neither the visible page nor the schema `PostalAddress` carries a `streetAddress`. The address is
+`Mordialloc / VIC / 3195 / AU`, and the visible copy says "Based in Mordialloc".
+
+For a **service-area business** — one that works at the customer's property rather than receiving
+customers at its own — Google's own guidance is to hide the street address. So the omission is
+plausibly deliberate and correct.
+
+**It is not mine to decide, because it has to match GBP.** The rule that matters is NAP consistency:
+whatever Google Business Profile shows, the site must show the same. Asked Jimmy. **No address
+invented** — inventing one would be a fabricated business fact.
+
+### `sameAs` — 7 profiles declared, none verifiable from here
+
+`instagram.com/jetblack_painting`, `facebook.com/jetblackpainting`, `youtube.com/@jetblackpaint`,
+`tiktok.com/@jetblack_painting`, `patreon.com/jetblack_painting`,
+`au.pinterest.com/jetblackpainting/`, plus the Google Maps place URL.
+
+All six social URLs returned **403 CONNECT** — the session's egress policy blocks those hosts. Per
+the proxy rules these are policy denials, not transient failures: **not retried, reported instead.**
+A `sameAs` pointing at a dead profile is a worse trust signal than no `sameAs`, so Jimmy should
+eyeball the list. The Patreon entry is the one worth a second look — unusual for a trade business.
+
+### "X Account Linked ✗" and "LinkedIn Page Linked ✗" — not defects
+
+No X or LinkedIn profile is known to exist. **A `sameAs` must point at a profile the business
+actually controls**; adding a guessed URL would be a fabricated claim and a broken link. If either
+account exists, Jimmy supplies the URL and it goes in `sameAs` and the footer. Otherwise this stays
+permanently red on SEOptimer, correctly.
+
+### "Facebook Pixel not detected" — deliberate, Jimmy's call
+
+Only useful if Meta ads run, and it is a third-party tracker with consent implications. Not added
+unilaterally. Asked.
+
+### "YouTube Channel Activity — low subscribers (0)" — not a code issue
+
+### Checked and deliberately left alone: 3.4KB of HTML comments in the head
+
+Nine comments, 3,426 bytes on a 36KB page. Each explains _why_ something is the way it is — why
+hreflang was removed, why the AEO meta tags went, why the static hero stays in the DOM after
+hydration. They gzip to very little and they are the reason past decisions do not get silently
+reversed. **Kept.**
+
+### Method note
+
+`SEO-LOG.md` is **not** prettier-maintained — it fails `prettier --check` on main. Running
+`prettier --write` on it rewraps the whole file (535+/446- of pure noise) and buries the actual
+entry. Append by hand; do not format it.

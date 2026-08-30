@@ -108,6 +108,10 @@ Because a lot of Caulfield's period housing is solid masonry rather than brick v
 
 Yes. Common property around the station and the racecourse is a regular part of our work. We quote it with a written scope a committee can read and compare, and we stage the job around residents — one stairwell at a time, notice before we start, and equipment packed down at the end of each day.
 
+## Recent work in Caulfield
+
+Exterior repaints on rendered homes in Caulfield. The before-and-after below is one of them: the render, parapet, fascia and garage door were repainted. The gate, letterbox and planting visible in that frame are not painting work.
+
 **Jetblack Painting** — House Painters Caulfield | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

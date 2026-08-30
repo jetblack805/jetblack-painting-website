@@ -376,7 +376,7 @@ function suburbDirectoryHtml(currentCanonical) {
   );
 }
 
-function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots, projectImages = [], projectSummary = "" }) {
+function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots, projectImages = [], projectSummary = "", projectHeading = "Recent work" }) {
   // Utility pages pass robots: "noindex, follow". A thin page left indexable
   // reads to Google as a soft 404; "follow" keeps link equity flowing.
   const robotsContent =
@@ -391,7 +391,7 @@ function pageHtml({ title, description, canonical, heroTitle, heroBody, sections
   // therefore invisible to crawlers; these are the only ones Google can see.
   const projectHtml = projectImages.length
     ? `  <section>
-    <h2>Recent work</h2>
+    <h2>${escapeHtml(projectHeading)}</h2>
 ${projectSummary ? `    <p>${escapeHtml(projectSummary)}</p>\n` : ""}${projectImages
         .map(
           (img) => `    <figure>
@@ -778,6 +778,7 @@ function generateSuburbPage(route, sourceFile) {
       robots: noindex ? "noindex, follow" : undefined,
       projectImages,
       projectSummary,
+      projectHeading: `Recent work in ${suburb}`,
       heroTitle: `House Painters ${suburb}`,
       heroBody: `${description} Searching for painters near you in ${suburb}? Jetblack Painting are your trusted local ${suburb} painters, servicing ${suburb} and the surrounding suburbs.`,
       schema: [

@@ -498,7 +498,7 @@ export default function SuburbPageTemplate({
           {projectImages.length > 0 && (
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">
-                A Recent {suburb} Job
+                Recent work in {suburb}
               </h2>
               {projectSummary && (
                 <p className="text-[#B4B4B8] mb-6 max-w-3xl">{projectSummary}</p>

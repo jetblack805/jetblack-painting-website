@@ -2792,3 +2792,46 @@ a suburb page's map should show that suburb, not Jetblack's office. Correct as t
 116 pages, **0 JSON-LD parse errors**, 95 carry the new listing URL, **0 stale**. Homepage schema
 re-parsed: `hasMap` correct, 8 `sameAs` entries with the listing URL last. Zero occurrences of any
 name-constructed Maps URL left in source. Markdown twins unchanged.
+
+---
+
+## 2026-08-31 (evening) — daily audit: all clean, no change made
+
+Ran after a heavy change day (PRs #231–#234 all merged and deployed).
+
+**Steps 0–6 clean.** Three layers regenerate to **0 diffs**. Review count **17 confirmed in all eight
+places**, zero stray 14/15 claims. **0 `aggregateRating` in static pages** — the rating still lives
+only in `client/index.html`, as required. Real pages 200; `/nope`, `/nope.zip` and `/assets/nope.js`
+all 404 while the live hashed bundle serves 200 as `text/javascript` (both directions checked).
+**TTFB 0.253s, `cf-cache-status: HIT`.** Production confirmed serving the newest commit: Maps
+listing URL ×2, LinkedIn `/in/`, and the CLS critical style all present.
+
+### ⚠️ No ranking data — again
+
+GSC Wizard, Windsor.ai, Supermetrics and Semrush were **all disconnected at run time**. Per the
+brief's own rule, **no position, striking-distance or indexing claim is made this run.** "I could not
+see" is not "nothing moved". This is now the fourth consecutive run where connector flap blocked
+Step 1; it is the single biggest gap in this routine's usefulness.
+
+### Open item raised by Jimmy this session: Trustindex review widget
+
+Jimmy set up a Trustindex widget and supplied
+`<script defer async src='https://cdn.trustindex.io/loader.js?69aeb5c8016c376414168031c49'></script>`.
+
+**Not shipped, and the reason is a verification blocker, not a judgement call.**
+`cdn.trustindex.io` returns **403 CONNECT** under this session's egress policy. That means three
+things cannot be checked before shipping:
+
+1. **Whether it injects its own `aggregateRating`.** The site already carries one. Two on a rendered
+   page is a structured-data conflict that can cost the star rating outright — and Step 2.5 of this
+   very audit exists to keep that markup singular.
+2. **Its CLS cost.** A network-loaded widget that renders cards after paint is the textbook cause of
+   the exact regression fixed this morning (0.1332 → 0.0337).
+3. **That it renders at all.**
+
+Also note the site is **not** short of review UI: `Reviews.tsx` already renders six real Google
+reviews in a carousel on the homepage, with no third-party JS. The widget's genuine advantage is
+that it self-updates, which would end the recurring hardcoded-count drift — a real benefit, but a
+different trade than "the site has no reviews on it".
+
+Put to Jimmy: where it should go, and whether to ship something that cannot be tested from here.

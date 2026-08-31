@@ -19,7 +19,7 @@ const SOCIALS = [
   { label: "YouTube",   href: "https://www.youtube.com/@jetblackpaint",       Icon: Youtube },
   { label: "Facebook",  href: "https://www.facebook.com/jetblackpainting",    Icon: Facebook },
   { label: "TikTok",    href: "https://www.tiktok.com/@jetblack_painting",    Icon: TikTokIcon },
-  { label: "LinkedIn",  href: "https://www.linkedin.com/company/jetblackpainting/", Icon: Linkedin },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/in/jetblackpainting", Icon: Linkedin },
 ];
 
 const SERVICE_AREAS = [

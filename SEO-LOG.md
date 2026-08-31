@@ -2686,3 +2686,50 @@ directory shells, and the npm registry is unreachable. The supporting evidence i
 `Youtube` and `Facebook` are already imported from lucide-react at this same pinned version
 (`^0.453.0`) and build fine, so brand icons exist in it. The Cloudflare build is the real gate; if it
 fails on that import, replace it with an inline SVG the way `TikTokIcon` already is in the same file.
+
+---
+
+## 2026-08-31 (correction) — the LinkedIn URL was wrong: `/in/`, not `/company/`
+
+The entry above records `https://www.linkedin.com/company/jetblackpainting/`. **That was wrong and
+shipped to production.** Jimmy corrected it to `https://www.linkedin.com/in/jetblackpainting`.
+
+`/company/` is a LinkedIn **Company Page**; `/in/` is a **personal profile**. Jetblack's LinkedIn
+presence is the personal profile. The URL I shipped almost certainly 404s — which is the exact
+failure mode the previous entry warned about ("a `sameAs` pointing at a dead profile is a worse
+trust signal than no `sameAs`"), and I shipped it anyway.
+
+**How it happened, and the lesson.** Jimmy said only "I have LinkedIn" and later pasted the URL. I
+had already written `/company/` into the draft before he sent it — inferring the shape from the
+other entries, all of which are business handles — and then did not re-read his message against
+what I had. He supplied the correct URL; I did not use it. **Take the URL exactly as given, never
+the shape you expected.** Nothing about a business having a LinkedIn implies a Company Page.
+
+It was live for roughly 20 minutes across 96 pages. Not long enough for Google to have recrawled
+much, so no lasting harm expected.
+
+### Fixed in all five source locations, one `sed`, then regenerated
+
+`client/index.html`, `scripts/generate-static-pages.mjs`, `SuburbPageTemplate.tsx`,
+`organizationSchema.ts`, `Footer.tsx`.
+
+Verified: **0 occurrences of the `/company/` URL anywhere outside this log**, 116 pages parse with
+**0 JSON-LD errors**, 95 carry the corrected `/in/` URL, **0 stale**. Homepage schema re-parsed: 8
+`sameAs` entries with the corrected URL. This log keeps the old URL on purpose — it is the record of
+what went wrong, not a live reference.
+
+### Still unverified, same as before
+
+`linkedin.com` returns 403 CONNECT under this session's egress policy, so I cannot load
+`/in/jetblackpainting` to confirm it resolves either. This URL came directly from Jimmy, which is
+better authority than the one I invented, but it has still never been machine-checked from here.
+
+### A judgement call left as-is
+
+A **personal** profile sits on the business `sameAs` rather than on the `founder` Person node.
+Strictly, `sameAs` on a `LocalBusiness` should carry the business's own profiles, and a personal
+profile of the owner belongs on the founder. Left as Jimmy intends it: the profile is named
+`jetblackpainting` and functions as the business's LinkedIn presence, so it does unambiguously
+identify the entity, which is the test Google actually applies. Worth revisiting only if a Company
+Page is ever created — at which point the Company Page goes on the business and this one moves to
+`founder`.

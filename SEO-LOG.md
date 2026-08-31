@@ -2617,3 +2617,72 @@ enforces this harder than Google; repeated breaches restrict the ad account.
 **Not yet verifiable end-to-end.** `connect.facebook.net` is blocked by this session's egress
 policy, and the React-side calls cannot run until Cloudflare builds the bundle. Jimmy must confirm
 receipt in Meta Events Manager → Test Events once the ID is in.
+
+---
+
+## 2026-08-31 — LinkedIn added to sameAs and the footer
+
+Jimmy supplied `https://www.linkedin.com/company/jetblackpainting/`, closing the item left open in the
+2026-08-30 SEOptimer entry. Added on his word, which is the only acceptable basis — a `sameAs` must
+point at a profile the business actually controls, and it was correctly left out while unverified.
+
+**Could not confirm the URL resolves.** `linkedin.com` returns 403 CONNECT under this session's
+egress policy. Per the proxy rules that is a policy denial, not a transient failure: not retried,
+reported. Jimmy should eyeball it once, since a `sameAs` pointing at a dead profile is a worse
+signal than none.
+
+### It lives in FIVE places, not the two I first said
+
+Worth writing down, because the first sweep found only three and the count was wrong twice:
+
+| File | What it feeds |
+| --- | --- |
+| `client/index.html` | the homepage's own JSON-LD — **serves `/` only** |
+| `scripts/generate-static-pages.mjs` | the crawler HTML of the 95 suburb pages |
+| `client/src/components/SuburbPageTemplate.tsx` | the React copy of the same, for parity |
+| `client/src/lib/organizationSchema.ts` | the Organization schema |
+| `client/src/components/Footer.tsx` | the visible social row |
+
+`client/index.html` was missed by the first grep because it only covered `client/src` and
+`scripts/*.mjs`. **That file is the homepage** — the single highest-value page for schema — and it
+is the same blind spot that let GA4 ship to one layer on 2026-08-30. Any future `sameAs` or
+business-fact edit must include it.
+
+### The three sameAs lists have pre-existing drift — not introduced here, not fixed here
+
+They do not agree with each other, and did not before this change:
+
+| Entry | index.html | generator | SuburbPageTemplate | organizationSchema |
+| --- | --- | --- | --- | --- |
+| Patreon | yes | yes | yes | **no** |
+| Pinterest | yes | yes | yes | **no** |
+| Oneflare | **no** | **no** | **no** | yes |
+
+Left alone deliberately: reconciling them means deciding which profiles are real, and Patreon is
+still unverified. Do that in one pass once Jimmy confirms the list, not piecemeal.
+
+### Verification
+
+- 116 generated pages scanned: **0 JSON-LD parse errors**, 95 carry `sameAs`, **all 95 now carry
+  LinkedIn, 0 duplicates**. The 21 without `sameAs` are service and utility pages, which never had it.
+- Homepage JSON-LD re-parsed after the edit: 8 `sameAs` entries, LinkedIn present.
+- Source diff is **5 lines**. Generated diff is one line per page — the schema is emitted minified.
+- Markdown twins unchanged.
+
+### Method note, second time in two days
+
+`prettier --write` on these files produces 310 lines of churn that buries a 5-line change.
+`Footer.tsx`, `SuburbPageTemplate.tsx`, `organizationSchema.ts` and `generate-static-pages.mjs` are
+all **NOT prettier-clean on main** — same as `SEO-LOG.md`. Do not format them; edit by hand.
+
+Also: the JSON-LD check regex must allow attributes. Generated pages emit
+`<script type="application/ld+json" data-static-schema>`, so a pattern requiring `>` straight after
+the quote silently matches **zero** blocks and reports a false all-clear.
+
+### One thing not verified
+
+`Linkedin` could not be confirmed as a lucide-react export — `node_modules` holds only empty
+directory shells, and the npm registry is unreachable. The supporting evidence is that `Instagram`,
+`Youtube` and `Facebook` are already imported from lucide-react at this same pinned version
+(`^0.453.0`) and build fine, so brand icons exist in it. The Cloudflare build is the real gate; if it
+fails on that import, replace it with an inline SVG the way `TikTokIcon` already is in the same file.

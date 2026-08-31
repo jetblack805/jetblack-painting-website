@@ -1,7 +1,7 @@
 /*
  * Design: Bold Contrast — Footer on jet black background
  */
-import { Phone, Instagram, MapPin, Youtube, Facebook } from "lucide-react";
+import { Phone, Instagram, MapPin, Youtube, Facebook, Linkedin } from "lucide-react";
 import LOGO_URL from "@/assets/images/logo-dark-bg.png";
 import siteConfig from "@/site-config.json";
 
@@ -19,6 +19,7 @@ const SOCIALS = [
   { label: "YouTube",   href: "https://www.youtube.com/@jetblackpaint",       Icon: Youtube },
   { label: "Facebook",  href: "https://www.facebook.com/jetblackpainting",    Icon: Facebook },
   { label: "TikTok",    href: "https://www.tiktok.com/@jetblack_painting",    Icon: TikTokIcon },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/company/jetblackpainting/", Icon: Linkedin },
 ];
 
 const SERVICE_AREAS = [

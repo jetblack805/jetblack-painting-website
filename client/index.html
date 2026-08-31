@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
 
+  <!-- Critical, and it must stay inline and stay first. The body margin reset
+       lives in Tailwind's preflight inside the built stylesheet, which is an
+       external file and therefore arrives AFTER the first paint. Until it does,
+       the browser applies its default 8px body margin, and when the sheet lands
+       #root jumps up 8px. Measured on a throttled mobile profile (4x CPU,
+       slow 4G) that single shift is CLS 0.133 — effectively the homepage's
+       entire Cumulative Layout Shift, and enough to fail Core Web Vitals.
+       The generated pages never had this because the static generator already
+       emits margin:0 in their own inline <style> block. -->
+  <style>html,body{margin:0;padding:0;background:#060607}</style>
+
   <title>Jetblack Painting | House &amp; Commercial Painters Melbourne</title>
   <meta name="title" content="Jetblack Painting | House &amp; Commercial Painters Melbourne" />
   <meta name="description" content="Melbourne painters for interior, exterior, commercial and roof work. Servicing 90+ suburbs from Mordialloc. $10M insured, 5-year guarantee. Call 0432 077 782." />
@@ -81,6 +92,46 @@
     } else {
       window.addEventListener('load', _loadGA);
     }
+  </script>
+
+  <!-- Meta (Facebook) Pixel. Mirrored into scripts/generate-static-pages.mjs --
+       this file only serves "/", every other page is built there. Keep the two
+       copies in step; GA4 was in exactly one of them until 2026-08-30 and so
+       recorded nothing from the 116 pages that carry the quote form.
+
+       Fill in the Pixel ID from Meta Events Manager > Data Sources. While it is
+       empty this block installs nothing at all: no stub, no network request, no
+       fbq. Every trackMetaEvent call in lib/analytics.ts becomes a no-op.
+
+       The fbq stub is installed synchronously on purpose -- it does no I/O, and
+       it gives Meta's own queue somewhere to buffer a phone tap that happens in
+       the first second. Only fbevents.js itself is deferred to idle, so this
+       cannot compete with the LCP hero image.
+
+       No <noscript> tracking pixel. It cannot be gated on the ID being set the
+       way this block can, so it would fire a third-party request on every
+       crawler fetch of all 117 pages in exchange for the vanishingly small
+       share of real customers browsing with JavaScript off. -->
+  <script>
+    (function () {
+      var PIXEL_ID = '';
+      if (!PIXEL_ID) return;
+      var n = window.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!window._fbq) window._fbq = n;
+      n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+      function _loadFB() {
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        document.head.appendChild(t);
+      }
+      if ('requestIdleCallback' in window) { requestIdleCallback(_loadFB); }
+      else { window.addEventListener('load', _loadFB); }
+    })();
   </script>
 
   <link rel="dns-prefetch" href="https://www.google-analytics.com" />

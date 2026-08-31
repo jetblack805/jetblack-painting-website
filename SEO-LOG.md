@@ -2409,3 +2409,211 @@ Google records the opening as March 2015 — 11).
 
 A separate **"House Painters Melbourne"** page. The homepage already targets that intent; a second
 page would compete with it.
+
+---
+
+## 2026-08-30 (evening) — daily audit after the largest change day: all clean, no ranking data
+
+Run fired 20:05 UTC after nine commits merged across PRs #229 and #230 — service-page
+forms, three deepened suburb pages, 18+ years sitewide, the first project photographs, and the
+GA4 fix. **No change made this run.**
+
+### The check that mattered: the new images actually serve
+
+Twenty files were added under `public/projects/` today, referenced from the crawler HTML of two
+suburb pages. If they 404'd, both pages would show broken images to Google and to visitors.
+
+**All 20 return 200 with `content-type: image/webp`.** Verified individually, not by spot check.
+
+### Steps 0–6 — all clean
+
+- **Build health**: `main` at `0daaadf`; production serving today's commits. Deps **77/77**.
+- **Three layers** → **0 diffs**.
+- **Sitemap**: **106/106 at 200, zero redirect hops.**
+- **404s both directions**: `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404, and the current hashed bundle and stylesheet both 200 with correct content types.
+- **Schema**: 116 pages, 491 FAQ questions, 0 parse errors, 0 schema-vs-visible mismatches, 0 `aggregateRating` in static pages.
+- **Metadata**: 0 duplicate titles / descriptions / H1s / canonicals, 0 missing, 0 keywords tags, 0 over 158, 1 title over 60 (the known `/painter-hastings/`).
+- **AEO**: markdown negotiation correct on a page that gained content today; llms.txt's three `$` matches all read and all the legitimate $10M insurance.
+- **Speed**: TTFB **0.150s**, `cf-cache-status: HIT`, **0 images over 250KB** — including the 20 new ones.
+- **og:image** resolves 200.
+
+### Two false failures I generated, and what caused them
+
+Both are method errors worth recording, because both looked like real regressions.
+
+**"38/77 dependencies missing."** My check matched bare YAML keys only. pnpm-lock quotes scoped
+names (`'@radix-ui/react-slot':`), so every scoped package read as missing. A second attempt
+returned **0/77** — shell quoting mangled the regex that time. The correct check scans only the
+`importers:` block (the rest of the file is the resolved tree and would produce false *passes*) and
+matches quoted or bare keys: **77/77**. The version run earlier today was right; tonight's rewrite
+dropped a clause.
+
+**"Real bundle 404."** I tested `/assets/index-Bfj2cCGE.js`, a hash captured before today's
+deploys. Hashes change on every build. Reading the current one off the live homepage first:
+`/assets/index-DrxnzHHw.js` → 200. **Always read the hash from the live page, never from notes.**
+
+### ⚠️ Step 1 — no ranking data
+
+GSC Wizard, Windsor.ai and Supermetrics were all disconnected at run time. Semrush was probed
+earlier today and returned its documented units-zero response; not retried, since nothing changes
+within hours. **No position, striking-distance or indexing claims are made this run.**
+
+Still unmeasured, and now accumulating: the impressions drop from the Casey noindex, any effect of
+the quote forms, and whether the suburb-page depth moved anything.
+
+### Baselines after today — the brief is stale on six figures
+
+| Figure | Brief | Actual |
+| --- | --- | --- |
+| Years experience | 13+ | **18+** |
+| Suburb pages | 96 | **95** |
+| Static pages | 117 | **116** |
+| FAQ questions | 489 | **491** |
+| Sitemap URLs | 115 | **106** |
+| Near-duplicate avg | 25.5% | **34.3%** (different implementation — see the 2026-08-29 entry before acting) |
+
+Review count **17** is correct in the brief and unchanged.
+
+---
+
+## 2026-08-30 — SEOptimer social/local findings: one false negative, two decisions for Jimmy, no code change
+
+Second batch of SEOptimer screenshots (Social Results + Local SEO). Every item checked against what
+the site actually serves. **No change made** — nothing here was a defect I should fix unilaterally.
+
+### "No Local Business Schema identified on the page" — FALSE NEGATIVE, do not re-investigate
+
+The homepage **does** carry it. Parsed from the live HTML (not the source), the single JSON-LD block
+is a 4-node `@graph`:
+
+| `@id` | `@type` |
+| --- | --- |
+| `#website` | `WebSite` |
+| `#webpage` | `WebPage` |
+| `#business` | `["HomeAndConstructionBusiness", "LocalBusiness"]` |
+| `#faq` | `FAQPage` |
+
+The business node carries 23 properties including `address`, `geo`, `telephone`,
+`openingHoursSpecification`, `aggregateRating`, `sameAs`, `hasOfferCatalog`.
+
+SEOptimer misses it because the type is an **array inside an `@graph`**, which its parser does not
+flatten. Google's Rich Results Test handles both. **Do not "fix" this by adding a second flat
+`LocalBusiness` block** — two business entities on one page is a real problem, where this is only a
+reporting artifact.
+
+### "Phone: +1 0432077…" — also a parser artifact
+
+Schema `telephone` is `+61432077782`, correct E.164. SEOptimer read the *visible* `0432 077 782` and
+assumed +1. Displaying the local form is right for an Australian local business. No change.
+
+### "Address & Phone Shown on Website — Missing: Address" — real, but likely correct as-is
+
+Neither the visible page nor the schema `PostalAddress` carries a `streetAddress`. The address is
+`Mordialloc / VIC / 3195 / AU`, and the visible copy says "Based in Mordialloc".
+
+For a **service-area business** — one that works at the customer's property rather than receiving
+customers at its own — Google's own guidance is to hide the street address. So the omission is
+plausibly deliberate and correct.
+
+**It is not mine to decide, because it has to match GBP.** The rule that matters is NAP consistency:
+whatever Google Business Profile shows, the site must show the same. Asked Jimmy. **No address
+invented** — inventing one would be a fabricated business fact.
+
+### `sameAs` — 7 profiles declared, none verifiable from here
+
+`instagram.com/jetblack_painting`, `facebook.com/jetblackpainting`, `youtube.com/@jetblackpaint`,
+`tiktok.com/@jetblack_painting`, `patreon.com/jetblack_painting`,
+`au.pinterest.com/jetblackpainting/`, plus the Google Maps place URL.
+
+All six social URLs returned **403 CONNECT** — the session's egress policy blocks those hosts. Per
+the proxy rules these are policy denials, not transient failures: **not retried, reported instead.**
+A `sameAs` pointing at a dead profile is a worse trust signal than no `sameAs`, so Jimmy should
+eyeball the list. The Patreon entry is the one worth a second look — unusual for a trade business.
+
+### "X Account Linked ✗" and "LinkedIn Page Linked ✗" — not defects
+
+No X or LinkedIn profile is known to exist. **A `sameAs` must point at a profile the business
+actually controls**; adding a guessed URL would be a fabricated claim and a broken link. If either
+account exists, Jimmy supplies the URL and it goes in `sameAs` and the footer. Otherwise this stays
+permanently red on SEOptimer, correctly.
+
+### "Facebook Pixel not detected" — deliberate, Jimmy's call
+
+Only useful if Meta ads run, and it is a third-party tracker with consent implications. Not added
+unilaterally. Asked.
+
+### "YouTube Channel Activity — low subscribers (0)" — not a code issue
+
+### Checked and deliberately left alone: 3.4KB of HTML comments in the head
+
+Nine comments, 3,426 bytes on a 36KB page. Each explains _why_ something is the way it is — why
+hreflang was removed, why the AEO meta tags went, why the static hero stays in the DOM after
+hydration. They gzip to very little and they are the reason past decisions do not get silently
+reversed. **Kept.**
+
+### Method note
+
+`SEO-LOG.md` is **not** prettier-maintained — it fails `prettier --check` on main. Running
+`prettier --write` on it rewraps the whole file (535+/446- of pure noise) and buries the actual
+entry. Append by hand; do not format it.
+
+### 2026-08-30 (later) — Jimmy answered the three questions above
+
+Superseding what the entry above says was pending:
+
+**Address — CONFIRMED CORRECT, close this out.** GBP is set to *service area, address hidden*. The
+site already matches: no `streetAddress` in the schema, "Based in Mordialloc" in the copy. NAP is
+consistent. **No change made, and none should be.** SEOptimer will keep reporting "Missing:
+Address" on every future run — that is the tool not modelling service-area businesses, not a
+defect. Do not add a street address to satisfy it.
+
+**Facebook Pixel — approved, built this commit.** Jimmy plans to run Meta ads.
+
+**LinkedIn — exists, URL not yet supplied.** Still to do: add it to the `sameAs` array in the
+homepage schema and to the footer, once Jimmy sends the URL. Not guessed.
+
+**X — not raised.** Stays absent. **Patreon — not raised**; the `sameAs` entry stands unverified.
+
+### Meta Pixel implementation notes
+
+Mirrored into **both** heads — `client/index.html` (serves `/` only) and
+`scripts/generate-static-pages.mjs` (the other 116 pages). This is the one mistake this codebase has
+already made once: GA4 lived in only one of them until 2026-08-30 and so recorded nothing from every
+page that carries a quote form. **Two `PIXEL_ID` literals now exist and must be changed together.**
+
+**Currently inert.** Both literals are `""` pending the ID from Meta Events Manager → Data Sources.
+With an empty ID the block returns before doing anything: no stub, no `window.fbq`, no network
+request, and every `trackMetaEvent` call no-ops. Verified by executing the emitted block in a
+sandbox — `window.fbq` stayed `undefined`.
+
+**Verified with a real ID too**, since testing only the disabled state would prove nothing. Ran the
+actual emitted block in headless Chromium with a test ID and `fbevents.js` stubbed at the network
+layer: `fbq` installs synchronously, buffers `["init", …]` and `["track","PageView"]`, and a
+`Contact` event fired *before* the library loaded was replayed correctly on load. That replay path
+is the one that matters — it is the visitor who taps the sticky call bar in the first second.
+
+**Why the stub is synchronous while the library is deferred.** The stub does no I/O, so it costs
+nothing at parse time, and it gives Meta's own queue somewhere to buffer early taps. Only
+`fbevents.js` waits for `requestIdleCallback`, so it cannot compete with the LCP hero image. Note
+the deferral *timing* is by construction, not measured — the test fixture is trivial enough that
+idle arrives almost immediately, so it confirms the queue mechanics, not the scheduling.
+
+**No `<noscript>` tracking pixel.** Unlike the script block it cannot be gated on the ID being set,
+so it would fire a third-party request on every crawler fetch of all 117 pages in exchange for the
+vanishingly small share of real customers running with JavaScript off.
+
+**Event mapping.** GA4 and Meta deliberately do not share names — Meta only optimises against its
+standard vocabulary, so a GA4 name sent to Meta becomes a custom event its bidding cannot use.
+
+| Action | GA4 | Meta |
+| --- | --- | --- |
+| Quote form, delivery confirmed | `generate_lead` | `Lead` |
+| Quote form, delivery failed | `quote_form_undelivered` | *(none — diagnostic, not a conversion)* |
+| Phone or email tap | `phone_call_click` / `email_click` | `Contact` |
+
+**PII:** swept both call sites — no visitor name, email or phone reaches either tracker. Meta
+enforces this harder than Google; repeated breaches restrict the ad account.
+
+**Not yet verifiable end-to-end.** `connect.facebook.net` is blocked by this session's egress
+policy, and the React-side calls cannot run until Cloudflare builds the bundle. Jimmy must confirm
+receipt in Meta Events Manager → Test Events once the ID is in.

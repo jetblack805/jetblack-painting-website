@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackMetaEvent } from "@/lib/analytics";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -52,7 +52,8 @@ const serviceTypes = [
 
 import siteConfig from "@/site-config.json";
 
-const QUOTE_DESTINATION_EMAIL = siteConfig.email || "jimmy@jetblackpainting.com";
+const QUOTE_DESTINATION_EMAIL =
+  siteConfig.email || "jimmy@jetblackpainting.com";
 const PHONE_DISPLAY = siteConfig.phoneDisplay || "0432 077 782";
 const PHONE_TEL = siteConfig.phoneHref || "0432077782";
 // International form for the SMS link
@@ -67,7 +68,9 @@ function summariseRequest(data: QuoteFormData) {
     `Service: ${data.serviceType}`,
     data.preferredDate ? `Preferred date: ${data.preferredDate}` : null,
     data.budget ? `Budget: ${data.budget}` : null,
-    data.projectDescription ? `\nProject description:\n${data.projectDescription}` : null,
+    data.projectDescription
+      ? `\nProject description:\n${data.projectDescription}`
+      : null,
   ]
     .filter(Boolean)
     .join("\n");
@@ -92,7 +95,11 @@ interface QuoteFormProps {
   serviceType?: string;
 }
 
-export default function QuoteForm({ suburb: pageSuburb, compact = false, serviceType: pageService }: QuoteFormProps = {}) {
+export default function QuoteForm({
+  suburb: pageSuburb,
+  compact = false,
+  serviceType: pageService,
+}: QuoteFormProps = {}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Holds the completed request so the details stay on screen after submitting.
   // This form used to call reset() and fire a mailto: immediately, which meant
@@ -117,7 +124,10 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
     resolver: zodResolver(quoteFormSchema),
     defaultValues:
       pageSuburb || pageService
-        ? { ...(pageSuburb ? { suburb: pageSuburb } : {}), ...(pageService ? { serviceType: pageService } : {}) }
+        ? {
+            ...(pageSuburb ? { suburb: pageSuburb } : {}),
+            ...(pageService ? { serviceType: pageService } : {}),
+          }
         : undefined,
   });
 
@@ -172,8 +182,21 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
       method: "quote_form",
       suburb: data.suburb,
       service_type: data.serviceType,
-      source_page: typeof window !== "undefined" ? window.location.pathname : "",
+      source_page:
+        typeof window !== "undefined" ? window.location.pathname : "",
     });
+
+    // Meta's equivalent. Only on confirmed delivery, and only the standard
+    // `Lead` name -- a custom name here would not be optimisable by Meta's
+    // bidding, which is the entire reason for running the pixel. There is
+    // deliberately no Meta counterpart to quote_form_undelivered: that is a
+    // diagnostic for us, not a conversion to bid towards.
+    if (confirmed) {
+      trackMetaEvent("Lead", {
+        content_category: data.serviceType,
+        content_name: data.suburb,
+      });
+    }
 
     setDelivered(confirmed);
     setSubmitted(data);
@@ -197,7 +220,9 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
     } catch {
       // Clipboard access is blocked in some mobile browsers and in any non-HTTPS
       // context; the details are already on screen to copy by hand.
-      toast.error("Couldn't copy automatically - select the text above instead.");
+      toast.error(
+        "Couldn't copy automatically - select the text above instead.",
+      );
     }
   };
 
@@ -207,16 +232,17 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
     // call-Jimmy block, and this form sits directly beneath it — two elements
     // with the same id would be invalid and the anchor would jump to whichever
     // came first.
-    <section id={pageSuburb ? undefined : "quote"} className="py-20 bg-[#131316]">
+    <section
+      id={pageSuburb ? undefined : "quote"}
+      className="py-20 bg-[#131316]"
+    >
       <div className="container">
         <div
           ref={wrapper.ref}
           className={`reveal up max-w-4xl mx-auto ${wrapper.visible ? "visible" : ""}`}
         >
           <div className="text-center mb-12">
-            <span className="lux-eyebrow">
-              Get Your Quote
-            </span>
+            <span className="lux-eyebrow">Get Your Quote</span>
             <h2 className="text-3xl sm:text-4xl text-[#EDEDEF] mb-4">
               {pageSuburb
                 ? `Request a Free Painting Quote in ${pageSuburb}`
@@ -274,7 +300,9 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
 
                   <div className="border border-[#2A2A30] rounded-lg p-5 bg-[#131316]">
                     <div className="flex items-center justify-between mb-3 gap-4">
-                      <p className="text-sm font-semibold text-[#EDEDEF]">Your request</p>
+                      <p className="text-sm font-semibold text-[#EDEDEF]">
+                        Your request
+                      </p>
                       <button
                         type="button"
                         onClick={() => copyDetails(summary)}
@@ -299,196 +327,242 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
               );
             })()
           ) : (
-          <form onSubmit={handleSubmit(onSubmit)} className="bg-[#060607] rounded-xl p-8 sm:p-12">
-            {/*
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="bg-[#060607] rounded-xl p-8 sm:p-12"
+            >
+              {/*
               Honeypot. Hidden from people (and from screen readers via
               aria-hidden + tabIndex -1) but visible to naive bots, which fill
               every field they find. Anything arriving with this set is dropped
               server-side. Cheaper and less hostile to real customers than a
               CAPTCHA.
             */}
-            <div className="absolute w-px h-px -m-px overflow-hidden" aria-hidden="true">
-              <label htmlFor="quote-company">Company (leave blank)</label>
-              <input
-                type="text"
-                id="quote-company"
-                name="company"
-                tabIndex={-1}
-                autoComplete="off"
-                value={honeypot}
-                onChange={(e) => setHoneypot(e.target.value)}
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              {/* Name */}
-              <div>
-                <label htmlFor="quote-name" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                  Full Name *
-                </label>
+              <div
+                className="absolute w-px h-px -m-px overflow-hidden"
+                aria-hidden="true"
+              >
+                <label htmlFor="quote-company">Company (leave blank)</label>
                 <input
                   type="text"
-                  placeholder="John Doe"
-                  id="quote-name"
-                  {...register("name")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                  id="quote-company"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
                 />
-                {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {/* Name */}
+                <div>
+                  <label
+                    htmlFor="quote-name"
+                    className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                  >
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="John Doe"
+                    id="quote-name"
+                    {...register("name")}
+                    className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                  />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.name.message}
+                    </p>
+                  )}
+                </div>
+
+                {!compact && (
+                  <>
+                    {/* Email */}
+                    <div>
+                      <label
+                        htmlFor="quote-email"
+                        className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                      >
+                        Email Address (optional)
+                      </label>
+                      <input
+                        type="email"
+                        placeholder="john@example.com"
+                        id="quote-email"
+                        {...register("email")}
+                        className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                      />
+                      {errors.email && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {errors.email.message}
+                        </p>
+                      )}
+                    </div>
+                  </>
+                )}
+                {/* Phone */}
+                <div>
+                  <label
+                    htmlFor="quote-phone"
+                    className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                  >
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="0432 077 782"
+                    id="quote-phone"
+                    {...register("phone")}
+                    className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                  />
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.phone.message}
+                    </p>
+                  )}
+                </div>
+
+                {/* Suburb */}
+                <div>
+                  <label
+                    htmlFor="quote-suburb"
+                    className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                  >
+                    Suburb/Area *
+                  </label>
+                  <select
+                    id="quote-suburb"
+                    {...register("suburb")}
+                    className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                  >
+                    <option value="">Select a suburb</option>
+                    {suburbOptions.map((suburb) => (
+                      <option key={suburb} value={suburb}>
+                        {suburb}
+                      </option>
+                    ))}
+                    <option value="Other">Other (Melbourne metro)</option>
+                  </select>
+                  {errors.suburb && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.suburb.message}
+                    </p>
+                  )}
+                </div>
+
+                {/* Service Type */}
+                <div>
+                  <label
+                    htmlFor="quote-service"
+                    className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                  >
+                    Service Type *
+                  </label>
+                  <select
+                    id="quote-service"
+                    {...register("serviceType")}
+                    className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                  >
+                    <option value="">Select a service</option>
+                    {serviceOptions.map((service) => (
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.serviceType && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.serviceType.message}
+                    </p>
+                  )}
+                </div>
+
+                {!compact && (
+                  <>
+                    {/* Preferred Date */}
+                    <div>
+                      <label
+                        htmlFor="quote-date"
+                        className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                      >
+                        Preferred Quote Date
+                      </label>
+                      <input
+                        type="date"
+                        id="quote-date"
+                        {...register("preferredDate")}
+                        className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                      />
+                    </div>
+
+                    {/* Budget */}
+                    <div>
+                      <label
+                        htmlFor="quote-budget"
+                        className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                      >
+                        Budget Range (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g., $5,000 - $10,000"
+                        id="quote-budget"
+                        {...register("budget")}
+                        className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
+                      />
+                    </div>
+                  </>
                 )}
               </div>
 
               {!compact && (
-              <>
-              {/* Email */}
-              <div>
-                <label htmlFor="quote-email" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                  Email Address (optional)
-                </label>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  id="quote-email"
-                  {...register("email")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-                )}
-              </div>
-              </>
-            )}
-              {/* Phone */}
-              <div>
-                <label htmlFor="quote-phone" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  placeholder="0432 077 782"
-                  id="quote-phone"
-                  {...register("phone")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
-                />
-                {errors.phone && (
-                  <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
-                )}
-              </div>
-
-              {/* Suburb */}
-              <div>
-                <label htmlFor="quote-suburb" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                  Suburb/Area *
-                </label>
-                <select
-                  id="quote-suburb"
-                  {...register("suburb")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
-                >
-                  <option value="">Select a suburb</option>
-                  {suburbOptions.map((suburb) => (
-                    <option key={suburb} value={suburb}>
-                      {suburb}
-                    </option>
-                  ))}
-                  <option value="Other">Other (Melbourne metro)</option>
-                </select>
-                {errors.suburb && (
-                  <p className="text-red-500 text-sm mt-1">{errors.suburb.message}</p>
-                )}
-              </div>
-
-              {/* Service Type */}
-              <div>
-                <label htmlFor="quote-service" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                  Service Type *
-                </label>
-                <select
-                  id="quote-service"
-                  {...register("serviceType")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
-                >
-                  <option value="">Select a service</option>
-                  {serviceOptions.map((service) => (
-                    <option key={service} value={service}>
-                      {service}
-                    </option>
-                  ))}
-                </select>
-                {errors.serviceType && (
-                  <p className="text-red-500 text-sm mt-1">{errors.serviceType.message}</p>
-                )}
-              </div>
-
-              {!compact && (
-              <>
-              {/* Preferred Date */}
-              <div>
-                <label htmlFor="quote-date" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                  Preferred Quote Date
-                </label>
-                <input
-                  type="date"
-                  id="quote-date"
-                  {...register("preferredDate")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
-                />
-              </div>
-
-              {/* Budget */}
-              <div>
-                <label htmlFor="quote-budget" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                  Budget Range (Optional)
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g., $5,000 - $10,000"
-                  id="quote-budget"
-                  {...register("budget")}
-                  className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition"
-                />
-              </div>
-              </>
-            )}
-            </div>
-
-            {!compact && (
-              <>
-            {/* Project Description */}
-            <div className="mb-6">
-              <label htmlFor="quote-description" className="block text-sm font-semibold text-[#EDEDEF] mb-2">
-                Project Description (optional)
-              </label>
-              <textarea
-                placeholder="Tell us about your painting project. Include details like room size, current condition, color preferences, etc."
-                rows={5}
-                id="quote-description"
-                {...register("projectDescription")}
-                className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition resize-none"
-              />
-              {errors.projectDescription && (
-                <p className="text-red-500 text-sm mt-1">{errors.projectDescription.message}</p>
+                <>
+                  {/* Project Description */}
+                  <div className="mb-6">
+                    <label
+                      htmlFor="quote-description"
+                      className="block text-sm font-semibold text-[#EDEDEF] mb-2"
+                    >
+                      Project Description (optional)
+                    </label>
+                    <textarea
+                      placeholder="Tell us about your painting project. Include details like room size, current condition, color preferences, etc."
+                      rows={5}
+                      id="quote-description"
+                      {...register("projectDescription")}
+                      className="w-full px-4 py-3 rounded-lg border border-[#2A2A30] bg-[#131316] text-[#EDEDEF] placeholder-[#8B8B90] focus:outline-none focus:ring-2 focus:ring-[#E9BE6C] focus:border-transparent transition resize-none"
+                    />
+                    {errors.projectDescription && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.projectDescription.message}
+                      </p>
+                    )}
+                  </div>
+                </>
               )}
-            </div>
-              </>
-            )}
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] font-bold py-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-[#E9BE6C]/30"
-            >
-              {isSubmitting ? "Submitting..." : "Request Free Quote"}
-            </button>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[#D0A050] hover:bg-[#B0863C] text-[#0A0A0B] font-bold py-4 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-[#E9BE6C]/30"
+              >
+                {isSubmitting ? "Submitting..." : "Request Free Quote"}
+              </button>
 
-            <p className="text-center text-[#A3A3A8] text-sm mt-4">
-              Prefer to talk? Call Jimmy on{" "}
-              <a href={`tel:${PHONE_TEL}`} className="text-[#D0A050] hover:underline font-semibold">
-                {PHONE_DISPLAY}
-              </a>
-              . We respect your privacy — your information is only used to provide your quote.
-            </p>
-          </form>
+              <p className="text-center text-[#A3A3A8] text-sm mt-4">
+                Prefer to talk? Call Jimmy on{" "}
+                <a
+                  href={`tel:${PHONE_TEL}`}
+                  className="text-[#D0A050] hover:underline font-semibold"
+                >
+                  {PHONE_DISPLAY}
+                </a>
+                . We respect your privacy — your information is only used to
+                provide your quote.
+              </p>
+            </form>
           )}
 
           {/* Trust Indicators */}
@@ -497,8 +571,12 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
               <div className="flex justify-center mb-3">
                 <Phone className="w-8 h-8 text-[#D0A050]" />
               </div>
-              <p className="text-[#EDEDEF] font-semibold">24–48 Hour Response</p>
-              <p className="text-[#A3A3A8] text-sm">We'll call you within 24–48 hours</p>
+              <p className="text-[#EDEDEF] font-semibold">
+                24–48 Hour Response
+              </p>
+              <p className="text-[#A3A3A8] text-sm">
+                We'll call you within 24–48 hours
+              </p>
             </div>
 
             <div className="text-center">
@@ -506,7 +584,9 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
                 <Mail className="w-8 h-8 text-[#D0A050]" />
               </div>
               <p className="text-[#EDEDEF] font-semibold">No Obligation</p>
-              <p className="text-[#A3A3A8] text-sm">Free quote with no hidden costs</p>
+              <p className="text-[#A3A3A8] text-sm">
+                Free quote with no hidden costs
+              </p>
             </div>
 
             <div className="text-center">
@@ -514,7 +594,9 @@ export default function QuoteForm({ suburb: pageSuburb, compact = false, service
                 <MapPin className="w-8 h-8 text-[#D0A050]" />
               </div>
               <p className="text-[#EDEDEF] font-semibold">Local Experts</p>
-              <p className="text-[#A3A3A8] text-sm">Serving all Melbourne suburbs</p>
+              <p className="text-[#A3A3A8] text-sm">
+                Serving all Melbourne suburbs
+              </p>
             </div>
           </div>
         </div>

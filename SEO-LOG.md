@@ -2733,3 +2733,62 @@ profile of the owner belongs on the founder. Left as Jimmy intends it: the profi
 identify the entity, which is the test Google actually applies. Worth revisiting only if a Company
 Page is ever created — at which point the Company Page goes on the business and this one moves to
 `founder`.
+
+---
+
+## 2026-08-31 — Google Maps: replaced a constructed search URL with the real listing
+
+Jimmy supplied `https://maps.app.goo.gl/hD8DdS6poZYLb83E6?g_st=ic` from Maps' own Share button.
+
+### What was there before was mine, and it was wrong in the same way as the LinkedIn URL
+
+| Where | Was |
+| --- | --- |
+| `sameAs` × 5 | `https://www.google.com/maps/place/Jetblack+Painting` |
+| `hasMap` (index.html) | `https://www.google.com/maps/place/Jetblack+Painting/@-38.0131,145.0965,17z` |
+| Contact section link | `https://maps.google.com/?q=Jetblack+Painting+Mordialloc+VIC+3195` |
+
+None of these were real place URLs. All three were **assembled from the business name** — a
+name-search URL that resolves to a Maps *search*, not to a specific listing, and would land on a
+different business entirely if another painter shared the name. This is the third time in two days
+that a URL I constructed from a pattern turned out to be wrong where the real one was obtainable by
+asking. **Ask for the URL; never build it.**
+
+It matters more here than for the other `sameAs` entries: `sameAs` and `hasMap` are the statements
+that bind the website to the Google Business Profile carrying the 5.0/17 reviews. A vague URL
+weakens exactly the association local ranking depends on.
+
+### The one deliberate change to what Jimmy sent
+
+Dropped the `?g_st=ic` query parameter. That is Google's share-source attribution tag recording that
+the link was copied from the app — a session artifact, not part of the place's identity. Publishing
+it on 96 pages would embed one share event's telemetry in the site's structured data forever. The
+path alone is the whole short code. **The URL itself was used exactly as given.**
+
+### Not resolved to a canonical URL, and why
+
+A short link is a redirect; a resolved `?cid=` or full `/maps/place/...!1s0x...` URL would be
+marginally better as a stable identifier. `maps.app.goo.gl` returns **403 CONNECT** under this
+session's egress policy — a policy denial, not a transient failure, tried once and not retried. So
+the short link stands. Google follows its own redirect and this is the exact URL its Share button
+produces, so this is fine; noted only so nobody assumes it was checked.
+
+### Applied to all seven occurrences, across five files
+
+`client/index.html` (`sameAs` + `hasMap`), `organizationSchema.ts`, `SuburbPageTemplate.tsx`
+(`sameAs` + a visible link), `scripts/generate-static-pages.mjs`, `Contact.tsx` (the visible
+"Address" link in the contact section). All seven are statements about the business's Maps presence,
+so all seven had to move together — leaving any behind would recreate the drift already logged in
+the `sameAs` entry above.
+
+### Deliberately untouched: the two embed iframes
+
+`maps.google.com/maps?q=Mordialloc+VIC+3195+Australia&...&output=embed` and the per-suburb
+`maps?q=${lat},${lng}&z=13&output=embed`. These are **functional area maps**, not identity claims —
+a suburb page's map should show that suburb, not Jetblack's office. Correct as they are.
+
+### Verification
+
+116 pages, **0 JSON-LD parse errors**, 95 carry the new listing URL, **0 stale**. Homepage schema
+re-parsed: `hasMap` correct, 8 `sameAs` entries with the listing URL last. Zero occurrences of any
+name-constructed Maps URL left in source. Markdown twins unchanged.

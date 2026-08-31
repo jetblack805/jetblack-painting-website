@@ -41,7 +41,7 @@ export function organizationSchema() {
       "https://www.youtube.com/@jetblackpaint",
       "https://www.tiktok.com/@jetblack_painting",
       "https://www.linkedin.com/in/jetblackpainting",
-      "https://www.google.com/maps/place/Jetblack+Painting",
+      "https://maps.app.goo.gl/hD8DdS6poZYLb83E6",
       "https://www.oneflare.com.au/painter/vic/mordialloc/jetblack-painting"
     ],
     "contactPoint": {

@@ -3071,3 +3071,40 @@ query-level evidence.
 TrueLocal (2) point at the DEAD Manus site. Those are existing citations actively pointing away from
 the live domain. Editing them — not creating new ones — costs nothing and repairs both authority and
 local prominence.
+
+### 2026-09-01 — second GSC export: "Excluded by 'noindex' tag" — correct, and a prediction
+
+Jimmy supplied the second Coverage Drilldown. **Two URLs: `/terms/` and `/privacy/`.** Flat at 2
+since 2026-08-22.
+
+That looked short — **eleven** pages carry `noindex`, not two. Checked rather than assumed:
+
+| Layer | Result |
+| --- | --- |
+| Crawler HTML carrying `noindex` | **11** — 8 Casey suburb pages + `/privacy/`, `/review-us/`, `/terms/` |
+| React source declaring it | same 11, both layers agree |
+| Live headers | `/painter-berwick/`, `/painter-cranbourne/`, `/painter-dandenong/`, `/review-us/` all 200 with `robots: noindex, follow` |
+| Present in sitemap | **0 of 11** — correct, no contradictory signal |
+
+**The gap is timing, not a defect.** This export's data ends **2026-08-28**. The Casey corridor
+noindex shipped **2026-08-29** (`Suburb consolidation step one`). Google had not recrawled those
+eight pages when the report was generated, so they cannot appear in the bucket yet.
+
+`/review-us/` is absent for a different reason: a URL only enters this bucket once Google has
+crawled it *and* found the tag. It is in no sitemap and linked from only 8 pages, so it may simply
+never have been crawled. Benign either way.
+
+**No action.** The eight are each linked from **115** crawler pages (the footer directory), so
+recrawl is assured. Deliberately **not** re-adding them to the sitemap to hurry it along: a sitemap
+listing a noindexed URL is a contradictory signal, which CLAUDE.md forbids for exactly this reason.
+
+### ⚠️ Prediction — read this before reacting to the next impressions drop
+
+**This bucket should grow from 2 to about 10 over the coming weeks** as Google recrawls the Casey
+pages. That is the change working, not breaking.
+
+**Impressions will fall when it does, and that is intended.** Eight suburb pages leaving the index
+removes their impressions. They were deliberately retired as low-value Casey corridor pages. A
+future run seeing a sustained impressions drop must not read it as a regression or attempt to undo
+it — check this entry first. The clicks figure is the one that matters, and it was already zero on
+every non-brand query.

@@ -3021,3 +3021,53 @@ marginal crawl-efficiency gain on five legacy URL shapes that real visitors esse
 
 Google follows 301 chains of this length and consolidates signals through them; the cost is crawl
 budget, not ranking.
+
+### Indexability audit — one real defect found and fixed
+
+Jimmy asked for the site to be "GSC index ready". Checked properly rather than assumed:
+
+| Check | Result |
+| --- | --- |
+| Sitemap URLs | 106 |
+| Sitemap URLs that are `noindex` (contradictory signal) | **0** |
+| `noindex` pages leaking into the sitemap | **0** |
+| Canonical mismatches across 116 pages | **0** |
+| robots.txt | allows all, `Disallow: /api/` only, sitemap declared |
+| sitemap.xml | 200, `application/xml` |
+
+**The one real defect: stale `lastmod`.** `/painter-aspendale/` and `/painter-caulfield/` each gained
+**five real project photographs with captions on 2026-08-30** — the most substantial content added to
+any suburb page — and their sitemap `lastmod` still read **2026-08-18**. The photo commits never ran
+`generate-sitemap.mjs`.
+
+That is not cosmetic. `lastmod` is how a sitemap tells Google a page is worth recrawling; leaving it
+stale actively tells Google *nothing changed here*, on the two pages where something most did.
+Bumped both to 2026-09-01. **Diff is exactly two lines** — the generator preserves every other
+`lastmod`, which is why only genuinely-changed pages get bumped.
+
+**Deliberately NOT bumped: the other 104.** They changed on 2026-08-31 too, but only in JSON-LD (the
+LinkedIn and Maps URLs). `lastmod` is meant to signal a significant *content* change; bumping the
+whole sitemap because a `sameAs` string moved would be false signalling, and a sitemap whose
+`lastmod` is unreliable gets discounted wholesale. Two honest bumps are worth more than 106 dishonest
+ones.
+
+### On "ranking page 1 immediately" — what the evidence supports
+
+Recorded because it will be asked again. **There is no on-site change available that moves this site
+to page 1 quickly**, and today's data says so directly:
+
+- Positions **improved across the tracked set with no content change at all** this period —
+  Mordialloc 29.18 → ~20.5, Collingwood 17.65 → 16.10, Highett 17.32 → ~14.9. The slope is right.
+- **Zero clicks on 120 non-brand queries** and nothing holding top-5 on a term with volume. The
+  ceiling is the problem.
+- Backlinks **44 / 31 domains / authority 2** (2026-08-13). That is the binding constraint, and it
+  is unchanged.
+
+The diagnosis settled 2026-08-19 stands and nothing in this run contradicts it. **Adding or rewriting
+site content now would be motion, not progress**, and the brief explicitly forbids it without
+query-level evidence.
+
+**Tier 0 is still undone and is still the cheapest legitimate win:** Yellow Pages AU (4 listings) and
+TrueLocal (2) point at the DEAD Manus site. Those are existing citations actively pointing away from
+the live domain. Editing them — not creating new ones — costs nothing and repairs both authority and
+local prominence.

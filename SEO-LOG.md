@@ -2792,3 +2792,117 @@ a suburb page's map should show that suburb, not Jetblack's office. Correct as t
 116 pages, **0 JSON-LD parse errors**, 95 carry the new listing URL, **0 stale**. Homepage schema
 re-parsed: `hasMap` correct, 8 `sameAs` entries with the listing URL last. Zero occurrences of any
 name-constructed Maps URL left in source. Markdown twins unchanged.
+
+---
+
+## 2026-08-31 (evening) — daily audit: all clean, no change made
+
+Ran after a heavy change day (PRs #231–#234 all merged and deployed).
+
+**Steps 0–6 clean.** Three layers regenerate to **0 diffs**. Review count **17 confirmed in all eight
+places**, zero stray 14/15 claims. **0 `aggregateRating` in static pages** — the rating still lives
+only in `client/index.html`, as required. Real pages 200; `/nope`, `/nope.zip` and `/assets/nope.js`
+all 404 while the live hashed bundle serves 200 as `text/javascript` (both directions checked).
+**TTFB 0.253s, `cf-cache-status: HIT`.** Production confirmed serving the newest commit: Maps
+listing URL ×2, LinkedIn `/in/`, and the CLS critical style all present.
+
+### ⚠️ No ranking data — again
+
+GSC Wizard, Windsor.ai, Supermetrics and Semrush were **all disconnected at run time**. Per the
+brief's own rule, **no position, striking-distance or indexing claim is made this run.** "I could not
+see" is not "nothing moved". This is now the fourth consecutive run where connector flap blocked
+Step 1; it is the single biggest gap in this routine's usefulness.
+
+### Open item raised by Jimmy this session: Trustindex review widget
+
+Jimmy set up a Trustindex widget and supplied
+`<script defer async src='https://cdn.trustindex.io/loader.js?69aeb5c8016c376414168031c49'></script>`.
+
+**Not shipped, and the reason is a verification blocker, not a judgement call.**
+`cdn.trustindex.io` returns **403 CONNECT** under this session's egress policy. That means three
+things cannot be checked before shipping:
+
+1. **Whether it injects its own `aggregateRating`.** The site already carries one. Two on a rendered
+   page is a structured-data conflict that can cost the star rating outright — and Step 2.5 of this
+   very audit exists to keep that markup singular.
+2. **Its CLS cost.** A network-loaded widget that renders cards after paint is the textbook cause of
+   the exact regression fixed this morning (0.1332 → 0.0337).
+3. **That it renders at all.**
+
+Also note the site is **not** short of review UI: `Reviews.tsx` already renders six real Google
+reviews in a carousel on the homepage, with no third-party JS. The widget's genuine advantage is
+that it self-updates, which would end the recurring hardcoded-count drift — a real benefit, but a
+different trade than "the site has no reviews on it".
+
+Put to Jimmy: where it should go, and whether to ship something that cannot be tested from here.
+
+### Same run, later — connectors came back; ranking data DID get measured
+
+The entry above says no ranking data. **Superseded.** GSC Wizard and Windsor.ai reconnected
+minutes later and Step 1 was completed. Leaving the original text as the record of the run's state
+at the time.
+
+**⚠️ GSC Wizard is now DEAD, not flapping.** Every call returns
+`payment_required: Your GSC Wizard trial has ended or you have no active subscription.` This is a
+permanent change, not the usual connector flap — it has been the documented PRIMARY ranking source
+since 2026-08-27. **Windsor.ai `searchconsole` is now the primary.** It worked first try:
+`get_data(connector="searchconsole", fields=["query","impressions","clicks","position"],
+date_preset="last_28d", filters=[["impressions","gte",20]])`. Jimmy must decide whether GSC Wizard
+is worth subscribing to; the Windsor route covers query/position/impressions but not the indexing
+tracker, anomaly detection or change-point tools.
+
+### Last 28 days, 121 queries at 20+ impressions
+
+**Eight clicks in total, all on `jetblack painting` (brand, position 2.98). Every single non-brand
+query: ZERO clicks.** That is unchanged from the baseline and is the whole problem in one line.
+
+**Striking distance (8–18) ranked by impressions — the real target list:**
+
+| Query | Impr | Position |
+| --- | --- | --- |
+| painters collingwood | **175** | 16.10 |
+| painters sorrento | **140** | 13.30 |
+| house painters caulfield | **99** | 16.79 |
+| painters murrumbeena | 82 | 16.76 |
+| painters caulfield | 56 | 17.93 |
+| house painters collingwood | 43 | 17.07 |
+| house painters highett | 41 | 16.00 |
+| house painters cheltenham | 41 | 16.27 |
+| painter highett | 39 | 14.77 |
+| painters highett | 37 | 13.92 |
+| painter collingwood | 31 | 17.77 |
+| painters sorrento bay | 29 | **5.83** |
+| house painters mckinnon | 26 | 10.81 |
+| house painters donvale | 26 | 15.50 |
+| interior painters donvale | 26 | 15.69 |
+| painter murrumbeena | 25 | 16.60 |
+| painter sandringham | 23 | 15.78 |
+| painters chelsea | 21 | 12.90 |
+
+**`painters sorrento bay` sits at 5.83 — genuinely page one — with 29 impressions and zero clicks.**
+That is the first case on this property where CTR is actually testable rather than theoretical.
+
+**Movement against the 2026-05-21→08-16 baseline:**
+
+| Suburb | Baseline | Now | |
+| --- | --- | --- | --- |
+| Mordialloc | 77 @ 29.18 | 61 @ ~20.5 | **much better position** |
+| Collingwood | 129 @ 17.65 | 175 @ 16.10 | better on both |
+| Highett | 85 @ 17.32 | 117 @ ~14.9 | better on both |
+| Sorrento | 100 @ **7.13** | 140 @ **13.30** | impressions up, **position materially worse** |
+| Murrumbeena | 86 @ 17.00 | 107 @ ~16.7 | flat |
+| McKinnon | 57 @ 11.19 | 26 @ 10.81 | position held, impressions down |
+
+**Sorrento going 7.13 → 13.30 is the one regression worth watching.** Not acted on: single-property
+GSC data at this volume moves on few samples, and the brief's rule is to treat a mover as real only
+at 20+ impressions — this clears that bar, so re-check it next run before concluding anything.
+
+**On Jimmy's nine priority suburbs:** **Caulfield is closest to page one** — 176 impressions across
+three variants at 16.8–18.9, his best-placed priority. **Bentleigh has the most impressions of any
+suburb (~570 across a dozen variants) and the worst positions (29–50)** — the biggest raw
+opportunity and the furthest away. Oakleigh, Chadstone and Rowville do not appear at all above 20
+impressions; Rowville still has no page.
+
+**No change made.** The settled diagnosis holds: this is an off-page authority problem, and nothing
+in this data contradicts it. Positions improved across most of the tracked set without any content
+change, which is consistent with that. Content work here would be the wrong lever.

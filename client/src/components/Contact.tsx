@@ -24,7 +24,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Address",
     value: "Mordialloc VIC 3195",
-    href: "https://maps.app.goo.gl/hD8DdS6poZYLb83E6",
+    href: "https://maps.google.com/maps?cid=5159340262454594349",
   },
   {
     icon: Clock,

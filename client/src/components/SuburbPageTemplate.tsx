@@ -239,7 +239,7 @@ export default function SuburbPageTemplate({
       "https://www.linkedin.com/in/jetblackpainting",
       "https://www.patreon.com/jetblack_painting",
       "https://au.pinterest.com/jetblackpainting/",
-      "https://maps.app.goo.gl/hD8DdS6poZYLb83E6",
+      "https://maps.google.com/maps?cid=5159340262454594349",
     ],
   };
 
@@ -580,7 +580,7 @@ export default function SuburbPageTemplate({
                 </p>
               </div>
               <a
-                href="https://maps.app.goo.gl/hD8DdS6poZYLb83E6"
+                href="https://maps.google.com/maps?cid=5159340262454594349"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "#0A0A0B", WebkitTextFillColor: "#0A0A0B" }}

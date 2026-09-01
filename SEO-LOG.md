@@ -2906,3 +2906,54 @@ impressions; Rowville still has no page.
 **No change made.** The settled diagnosis holds: this is an off-page authority problem, and nothing
 in this data contradicts it. Positions improved across most of the tracked set without any content
 change, which is consistent with that. Content work here would be the wrong lever.
+
+### Trustindex — decided: NOT shipped. Do not re-open without new information.
+
+Jimmy chose the recommended option. **No code change.** The hand-built `Reviews.tsx` carousel stays:
+six real Google reviews, no third-party JS, styled to the site, always renders.
+
+Reasoning, recorded so this is not re-litigated every time the widget resurfaces:
+
+1. **It cannot be verified from here.** `cdn.trustindex.io` returns **403 CONNECT** under this
+   session's egress policy. Cannot check whether it injects a second `aggregateRating`, cannot
+   measure its CLS cost, cannot confirm it renders.
+2. **The `aggregateRating` risk is the serious one.** The site carries exactly one. Two on a
+   rendered page is a structured-data conflict that can cost the star rating outright — and Step 2.5
+   of this audit exists specifically to keep that markup singular. Shipping a script that might
+   silently add a second one would be defeating our own guard.
+3. **CLS.** A network-loaded widget rendering cards after paint is the textbook cause of the
+   regression fixed this same morning (0.1332 → 0.0337).
+4. **The gap it fills is small.** The site is not short of review UI. Its genuine advantage —
+   self-updating, ending the hardcoded-count drift — is real but does not outweigh the above.
+
+**If it is ever revisited**, the preconditions are: Trustindex's own schema output switched OFF in
+their dashboard, a reserved-height container, idle loading, and a before/after CLS measurement under
+4× CPU + slow 4G. Not before.
+
+### ⚠️ BOTH PAID DATA TOOLS HAVE NOW EXPIRED — update the brief
+
+| Tool | Status | What is lost |
+| --- | --- | --- |
+| **GSC Wizard** | `payment_required`, trial ended | indexing tracker, anomaly detection, change points, `score_opportunities` |
+| **Supermetrics** | `TRIAL_EXPIRED` on team 1902861, **expired 2026-08-25** | **GMB / Maps data — it was the ONLY source** |
+| **Semrush / Ahrefs** | already unavailable | competitor + backlink intelligence |
+| **Windsor.ai** | **working** | Search Console: query, position, impressions, clicks |
+
+The brief still lists GSC Wizard as PRIMARY and Supermetrics as the fallback. **Both are wrong now.**
+Windsor.ai `searchconsole` is the only working ranking source and it delivered this run's data.
+
+**GMB is the real casualty.** The brief calls the Map Pack "the binding constraint on actual leads",
+and there is now no automated read of it at all — no views, no calls, no direction requests, and no
+review count.
+
+**Fix, and it costs nothing:** Jetblack already has Windsor.ai, and Windsor supports
+`google_my_business` as an OAuth connector. Connecting it restores GMB coverage without a
+subscription. Link obtained from Windsor's own tool rather than constructed:
+`https://onboard.windsor.ai/connect?connector=google_my_business&client=CLAUDE&next=/google_my_business/authorize`
+
+### Review count: still 17, still unverified this run
+
+Attempted a live read via Supermetrics GMB `total_review_count` (report type `ReviewsTotals`,
+location `116052022854905862269_3960754871142365330`) specifically to check whether 17 has grown.
+**Blocked by the trial expiry.** The locked fact stands at 17 and all eight places agree; nothing was
+changed. Re-attempt once GBP is connected to Windsor.

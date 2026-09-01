@@ -3238,3 +3238,50 @@ uses, zero category searches) says the gap is prominence. **No location setting 
 Minor, not actioned: 20 areas is Google's cap, and "Melbourne VIC" is redundant against 19 specific
 suburbs already inside it. It is the candidate to drop if a slot is ever needed. Not worth an edit on
 its own — every edit to a trades listing is a re-review, and this one is currently clean.
+
+### 2026-09-01 — GBP description rewrite, and why it will not move rankings
+
+Jimmy asked for the Business Profile description to be rewritten "to show up and rank better".
+
+**Told him plainly it will not affect ranking.** The GBP business description is **not a local
+ranking factor** — it is read after someone has already found the profile. Rewriting it cannot touch
+the discovery problem the keyword data exposed this morning. **Do not let a future run present a
+description rewrite as ranking work.**
+
+What it *can* move is conversion: Aug was 172 impressions → 14 website clicks → 0 calls.
+
+**Proposed text — 725 characters, verified against Google's 750 cap:**
+
+> Jetblack Painting is a Mordialloc-based painting company working across Bayside, Kingston and
+> Stonnington — from Brighton and Bentleigh to Malvern, Oakleigh and the Mornington Peninsula.
+>
+> Jimmy has 18 years in the trade. The team handles interior and exterior repaints, roof and fence
+> painting, render and weatherboard restoration, plaster repairs, and 2-pack kitchen cabinet
+> resurfacing. Vacant properties are spray-finished for a glass-smooth result; occupied homes are
+> brushed and rolled so you can live around the work.
+>
+> Agents and property managers use us for pre-sale refreshes and between-tenancy turnarounds.
+>
+> Fully insured to $10 million public liability, with a five-year written workmanship guarantee on
+> every job.
+
+**Checked before proposing:** 725 chars, **0 superlatives**, **0 URLs / phone numbers / emails**
+(Google's description policy prohibits those and promotional content).
+
+Every factual claim is a locked fact already on the site: $10M public liability, five-year written
+workmanship guarantee, 18 years, Mordialloc base, the real service-area suburbs, and the
+spray-when-vacant / brush-when-occupied method. **Nothing invented.**
+
+**What was removed and why:** "Melbourne's premier" (unverifiable superlative; Google's policy
+discourages promotional language); "across all suburbs" (untrue — 20 areas); "Contact us today for a
+free quote!" (Google discourages calls-to-action, and the phone number is its own field).
+
+**⚠️ Opening date vs 18 years — not a contradiction, but watch the wording.** GBP shows the business
+opened **2 March 2015** (11 years). The site says **18 years**, which is *Jimmy's* time in the trade,
+and the site already words it in first person ("18 years I've been painting..."). The proposed text
+says "**Jimmy has** 18 years in the trade" so it attaches to the person, not the company's age. Any
+future copy must keep that distinction — "Jetblack Painting has 18 years" would be false.
+
+**Not applied by me** — GBP edits are Jimmy's to make, and every edit to a trades listing triggers a
+re-review. Advised changing the description alone rather than bundling it with other edits, since the
+listing is currently in good standing.

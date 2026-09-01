@@ -2957,3 +2957,67 @@ Attempted a live read via Supermetrics GMB `total_review_count` (report type `Re
 location `116052022854905862269_3960754871142365330`) specifically to check whether 17 has grown.
 **Blocked by the trial expiry.** The locked fact stands at 17 and all eight places agree; nothing was
 changed. Re-attempt once GBP is connected to Windsor.
+
+---
+
+## 2026-09-01 — GSC "Page with redirect" export: confirmed benign, with one correction
+
+Jimmy supplied a Coverage Drilldown export (`Sitemap: All known pages`, `Issue: Page with redirect`,
+62 URLs, generated 2026-09-01). This is the first real indexing data since GSC Wizard expired, and it
+arrived by hand rather than by API.
+
+### The bucket is stable, not growing
+
+| Date | Affected |
+| --- | --- |
+| 2026-06-05 | 1 |
+| 2026-07-11 | 41 |
+| 2026-08-06 | 61 |
+| **2026-08-08 → 08-28** | **62, flat** |
+
+Flat for three weeks. The step-ups track the deliberate redirect work, not a regression.
+
+### Every testable URL behaves correctly
+
+Checked **all 57** non-`www` URLs individually, not sampled. **52 are exactly one 301 → 200.**
+Destinations all correct: `/interior-painting` → `/services/interior-painting/`,
+`/services/rental-property-painting` and `/services/pre-sale-property-painting` →
+`/services/real-estate-painting/`, `/painters-hawthorn` → `/painter-hawthorn/`, `/au/` → `/`,
+non-slash suburb paths → their slashed form. **The brief's 2026-08-17 conclusion holds: these are
+redirects by design and there is nothing to fix.**
+
+The remaining **5 URLs are `www.`, which cannot be tested from here** — `www.jetblackpainting.com`
+returns 403 CONNECT under this session's egress policy. Policy denial, not retried.
+
+### ⚠️ CORRECTION — I told Jimmy "exactly one hop" and that was wrong for 5 URLs
+
+On 2026-08-30, reviewing SEOptimer's "avoid multiple page redirects", I reported it as *"the
+mandatory http→https upgrade, exactly one hop"*. **For five URL shapes there are genuinely two.**
+
+Traced hop by hop:
+
+| Hop | Issued by | Does |
+| --- | --- | --- |
+| 1 | **Cloudflare edge** (`server: cloudflare`, worker not yet invoked) | `http:` → `https:`, **path unchanged** |
+| 2 | **The worker** | adds the trailing slash / applies `PATH_REDIRECTS` |
+
+Control case proves the mechanism: `http://…/services/roof-fence-painting/` — http plus an
+*already-canonical* path — is **one** hop, because Cloudflare's upgrade lands somewhere the worker
+does not need to touch.
+
+So the two-hop set is exactly **http:// + a path that also needs normalising**:
+`/services/pre-sale-property-painting` (and its slashed form), `/services/roof-fence-painting`,
+`/services/kitchen-cabinet-resurfacing`, `/painter-greater-dandenong`.
+
+### Not fixed, deliberately
+
+The worker cannot collapse this. Cloudflare's "Always Use HTTPS" fires at the edge **before** the
+worker runs, so by the time our code sees the request the first 301 has already been sent. The only
+way to issue a single hop would be to **turn that setting off** and have the worker handle the
+protocol upgrade itself — a Cloudflare dashboard change, not a code change, and one that moves
+HTTPS enforcement from Cloudflare's edge into our own code. That is a security-relevant trade for a
+marginal crawl-efficiency gain on five legacy URL shapes that real visitors essentially never type.
+**Recommend leaving it.** Raised with Jimmy rather than actioned.
+
+Google follows 301 chains of this length and consolidates signals through them; the cost is crawl
+budget, not ranking.

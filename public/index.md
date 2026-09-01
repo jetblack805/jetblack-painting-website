@@ -41,12 +41,13 @@ Jetblack Painting works out of Mordialloc, VIC 3195, on Melbourne's southeast ba
 service-area business rather than a shopfront — the team travels to the property, so quotes are
 done on site rather than estimated over the phone.
 
-Working from Mordialloc means most of the surrounding coverage is a short drive: Kingston and
-Bayside to the north and west, Glen Eira and Stonnington through the inner southeast, Greater
-Dandenong and the City of Casey to the east, and down the Nepean Highway through the Mornington
-Peninsula. Being close to the job matters on a repaint — it makes it practical to look at the
-property before quoting, to start when the weather allows rather than when the diary allows, and
-to come back if something needs attention under the 5-year guarantee.
+Working from Mordialloc means most of the coverage is a short drive. Kingston and Bayside sit
+to the north and west. Glen Eira and Stonnington run through the inner southeast. Greater
+Dandenong and the City of Casey are east, and the Nepean Highway runs south through the
+Mornington Peninsula. Being close to the job matters on a repaint. It makes it practical to
+look at the property before quoting. It means starting when the weather allows rather than
+when the diary allows. And it means coming back if something needs attention under the
+5-year guarantee.
 
 Eighteen years working this side of Melbourne also means knowing what the local housing stock
 does. Bayside and Peninsula homes take salt air and hard UV on the exposed elevations, so the
@@ -62,7 +63,7 @@ See [painters in Mordialloc](/painter-mordialloc/) for local work.
 
 ## Why Jetblack Painting
 
-Jetblack Painting was founded by Jimmy Demirci and has spent 18+ years painting homes and businesses across Melbourne's southeast, Bayside, City of Casey, Glen Eira, Stonnington and the Mornington Peninsula. The business holds a 5.0-star rating from 17 verified Google reviews, and every project — residential or commercial — is covered by $10 million public liability insurance and a 5-year written workmanship guarantee.
+Jetblack Painting was founded by Jimmy Demirci, who has spent 18+ years painting homes and businesses across Melbourne. The work covers the southeast, Bayside, City of Casey, Glen Eira, Stonnington and the Mornington Peninsula. The business holds a 5.0-star rating from 17 verified Google reviews. Every project, residential or commercial, is covered by $10 million public liability insurance and a 5-year written workmanship guarantee.
 
 - 5.0-star rating from 17 Google reviews
 - 18+ years of experience painting Melbourne homes and businesses
@@ -78,13 +79,13 @@ Every job starts with a free, no-obligation site visit and a written quote that 
 ## Common Questions
 
 **Who are the best painters in Melbourne?**
-Jetblack Painting is a 5-star rated Melbourne painting company founded by Jimmy Demirci with 18+ years of experience, servicing 90+ suburbs including Mordialloc, Brighton, Toorak, Bentleigh and the Mornington Peninsula. All work is backed by a 5-year workmanship guarantee.
+Jetblack Painting is a 5-star rated Melbourne painting company, founded by Jimmy Demirci, who has 18+ years of experience. We service 90+ suburbs including Mordialloc, Brighton, Toorak, Bentleigh and the Mornington Peninsula. All work is backed by a 5-year workmanship guarantee.
 
 **Are you licensed and insured?**
 Yes. Jetblack Painting carries $10 million public liability insurance and every job is backed by a 5-year written workmanship guarantee.
 
 **How much does house painting cost in Melbourne?**
-House painting costs in Melbourne depend on the size of the property, the condition of the surfaces and how much preparation is needed, so we quote after a site visit rather than over the phone. As a budgeting guide, a whole-house interior repaint typically runs $5,000 to $12,000 for a 3-bedroom home, and an exterior repaint $4,000 to $8,000 for a single-storey home or $8,000 to $15,000 for a double-storey. These are indicative ranges only. Jetblack Painting offers free no-obligation written quotes — call 0432 077 782.
+House painting costs in Melbourne depend on three things: the size of the property, the condition of the surfaces, and how much preparation is needed. That is why we quote after a site visit rather than over the phone. As a budgeting guide: a whole-house interior repaint typically runs $5,000 to $12,000 for a 3-bedroom home. An exterior repaint runs $4,000 to $8,000 for a single-storey home, or $8,000 to $15,000 for a double-storey. These are indicative ranges only. Jetblack Painting offers free no-obligation written quotes — call 0432 077 782.
 
 **What painting services does Jetblack Painting offer?**
 Interior painting, exterior painting, commercial painting, roof painting, roof and fence painting, kitchen cabinet resurfacing, real estate and pre-sale painting, and body corporate and strata painting — for homeowners, landlords, property managers and businesses across Melbourne.

@@ -46,23 +46,23 @@ export default function CommercialPainting() {
     },
     {
       question: "How much does commercial painting cost in Melbourne?",
-      answer: "Commercial painting cost depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area alone, so we walk the site and give you an itemised written quote rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.",
+      answer: "Commercial painting cost depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area does. So we walk the site and give you an itemised written quote, rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.",
     },
     {
       question: "How long will a commercial repaint take?",
-      answer: "A single office suite or shopfront is usually a few days; a warehouse or a staged multi-area repaint runs longer, and after-hours work spreads the same hours across more calendar days. You get a schedule with the quote, including which zones are affected on which days.",
+      answer: "A single office suite or shopfront is usually a few days. A warehouse or a staged multi-area repaint runs longer. After-hours work spreads the same hours across more calendar days. You get a schedule with the quote, including which zones are affected on which days.",
     },
     {
       question: "Can you paint while staff and customers are still on site?",
-      answer: "Yes, and much of our commercial work is done in occupied premises. We zone the work so only one area is affected at a time, keep access ways safe and clear, use low-odour water-based products where the specification allows, and leave each area clean at the end of every shift.",
+      answer: "Yes, and much of our commercial work is done in occupied premises. We zone the work so only one area is affected at a time. Access ways stay safe and clear. Low-odour water-based products go on wherever the specification allows. Every area is left clean at the end of each shift.",
     },
     {
       question: "What paint do you use on commercial buildings?",
-      answer: "Premium Dulux and Taubmans commercial systems, specified to the surface and the traffic it takes — washable low-sheen for corridors and offices, hard-wearing enamels or two-pack on doors, frames and handrails, and appropriate primers for steel, block and previously unsealed substrates. The products are named in your written quote.",
+      answer: "Premium Dulux and Taubmans commercial systems, specified to the surface and the traffic it takes. Washable low-sheen goes on corridors and offices. Doors, frames and handrails get hard-wearing enamels or two-pack. Steel, block and previously unsealed substrates each get the right primer. The products are named in your written quote.",
     },
     {
       question: "Do you work with owners corporations and strata managers?",
-      answer: "Yes. We provide detailed scopes, transparent pricing, insurance documentation and clear schedules for owners corporations, body corporate committees and strata managers, and can run repaints as a staged maintenance program across a building or portfolio.",
+      answer: "Yes. We provide detailed scopes, transparent pricing, insurance documentation and clear schedules for owners corporations, body corporate committees and strata managers. Repaints can run as a staged maintenance program across a building or a whole portfolio.",
     },
   ];
 
@@ -266,10 +266,10 @@ export default function CommercialPainting() {
               Area is the obvious factor, but it's rarely the one that moves a commercial quote most. Substrate condition matters more: sound painted plasterboard is quick, while flaking render, water-damaged ceilings, rusted steel or previously unsealed block all add preparation hours before a single topcoat goes on.
             </p>
             <p className="text-[#B4B4B8] mb-4 leading-relaxed">
-              Access is the second driver. Ground-floor office suites are straightforward; warehouse walls and ceilings at height, atriums, stairwells and external facades need scaffold, boom lifts or rope access, and that equipment is a real line in the quote rather than an afterthought.
+              Access is the second driver. Ground-floor office suites are straightforward. Warehouse walls and ceilings at height, atriums, stairwells and external facades are not — they need scaffold, boom lifts or rope access. That equipment is a real line in the quote, not an afterthought.
             </p>
             <p className="text-[#B4B4B8] mb-4 leading-relaxed">
-              The third is downtime. Painting a premises that stays open — staged zones, after-hours shifts, faster-drying low-odour systems — costs more per square metre than an empty tenancy handed over for a week, but it's usually far cheaper than closing. Product specification is the fourth: a hard-wearing washable system in a high-traffic corridor costs more to supply than a builder's-grade wall paint and lasts several times longer, which is the calculation worth making on a building you'll still own in ten years.
+              The third is downtime. Painting a premises that stays open costs more per square metre than an empty tenancy handed over for a week. Staged zones, after-hours shifts and faster-drying low-odour systems all add cost. It is still usually far cheaper than closing. Product specification is the fourth. A hard-wearing washable system in a high-traffic corridor costs more to supply than builder's-grade wall paint, and lasts several times longer. On a building you will still own in ten years, that is the calculation worth making.
             </p>
             <p className="text-[#B4B4B8] leading-relaxed">
               We don't publish a rate per square metre for commercial work, because a number quoted without seeing the substrate is a number that changes later. The site walk-through and written quote are free — call Jimmy on 0432 077 782.

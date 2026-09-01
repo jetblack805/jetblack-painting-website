@@ -34,33 +34,33 @@ We understand real estate timelines and work to your campaign and settlement dat
 
 ## How a repaint fits into the campaign timeline
 
-Painting is always the first trade on site before a campaign, not the last. We work backwards from the photography date: the property needs to be fully painted, dry and properly ventilated with days to spare, so the stylist can move furniture in without working around wet paint or a lingering smell, and so the final coat isn't rushed the night before a shoot to hit a deadline it was never going to comfortably meet.
+Painting is always the first trade on site before a campaign, not the last. We work backwards from the photography date. The property needs to be painted, dry and properly ventilated with days to spare. That way the stylist can move furniture in without working around wet paint or a lingering smell. It also means the final coat is not rushed the night before a shoot, to hit a deadline it was never going to meet comfortably.
 
-That sequencing matters more than people expect. A property painted after styling means working around furniture, rugs and staged decor — slower, riskier for the stylist's pieces, and harder to get a clean, even finish into corners and skirting that are now partly obstructed. Painting first keeps every trade that follows moving on schedule instead of waiting on a coat of paint that should have been finished a week earlier.
+That sequencing matters more than people expect. Painting after styling means working around furniture, rugs and staged decor. It is slower, riskier for the stylist's pieces, and harder to get a clean finish into corners and skirting that are now partly obstructed. Painting first keeps every trade that follows moving on schedule instead of waiting on a coat of paint that should have been finished a week earlier.
 
 ## Why paint condition affects what buyers offer
 
-Scuffed walls, dated colours and a tired façade don't just look worse in photos — they get priced against you at the negotiation table. Buyers read visible wear as a proxy for how well the rest of the property has been maintained, whether or not that's actually true, and a flat, even repaint removes that signal before it can work against the sale price.
+Scuffed walls, dated colours and a tired façade don't just look worse in photos — they get priced against you at the negotiation table. Buyers read visible wear as a sign of how well the rest of the property has been maintained, whether or not that is true. An even repaint removes that signal before it can work against the sale price.
 
-A patchy DIY touch-up can do more damage than no touch-up at all. A slightly-off colour match or a different sheen catches the eye under listing photography and open-home lighting just as clearly as the original mark did, and reads to a buyer as a sign of corners cut rather than care taken. Where a wall or room has visible marks going into a campaign, a full, even repaint of the affected area is almost always the safer call.
+A patchy DIY touch-up can do more damage than no touch-up at all. A slightly-off colour match or a different sheen catches the eye under listing photography and open-home lighting, just as clearly as the original mark did. To a buyer it reads as corners cut rather than care taken. Where a wall or room has visible marks going into a campaign, a full, even repaint of the affected area is almost always the safer call.
 
 ## Choosing colours that sell, not just colours you'd live with
 
-A bold feature wall is a personal choice, and every personal choice a buyer has to mentally undo is one more reason they picture someone else's home instead of their own. Warm whites and soft, broad-appeal neutrals let the widest range of buyers imagine their own furniture in the room, which is the entire job of a listing photo and an open home — removing friction between the buyer and the sale, not adding character for its own sake.
+A bold feature wall is a personal choice, and every personal choice a buyer has to mentally undo is one more reason they picture someone else's home instead of their own. Warm whites and soft, broad-appeal neutrals let the widest range of buyers picture their own furniture in the room. That is the entire job of a listing photo and an open home: removing friction between the buyer and the sale, rather than adding character for its own sake.
 
-Neutral palettes also photograph more evenly. Strong or dark colours shift under different light sources and camera settings in a way flat whites and soft neutrals don't, which is part of why they're the default for listing photography specifically, separate from the buyer-appeal argument. We choose the scheme to suit the property's own light and finishes, not a single stock colour applied to every listing regardless of the home.
+Neutral palettes also photograph more evenly. Strong or dark colours shift under different light sources and camera settings in a way soft whites and neutrals do not. That is part of why they are the default for listing photography, separate from the buyer-appeal argument. We choose the scheme to suit the property's own light and finishes, not a single stock colour applied to every listing regardless of the home.
 
 ## Rental turnarounds between tenants
 
-The window between an outgoing tenant leaving and a new lease starting is usually tight, and every day it runs into is a day of vacant rent. We coordinate directly with property managers on the exact dates so the repaint fits the vacancy period rather than extending it, and we prioritise durable, washable finishes over a presentation-only one, because a rental property has to hold up through the next tenancy, not just look good for the next inspection.
+The window between an outgoing tenant leaving and a new lease starting is usually tight, and every day it runs into is a day of vacant rent. We coordinate directly with property managers on the exact dates, so the repaint fits the vacancy period rather than extending it. We also prioritise durable, washable finishes over presentation-only ones. A rental has to hold up through the next tenancy, not just look good at the next inspection.
 
-Repainting on a regular cycle rather than only when damage becomes visible protects the asset and reduces disputes at the end of a tenancy — it's easier to assess fair wear and tear against a recent, known paint job than one nobody can date. For landlords managing several properties, we can coordinate turnarounds across a portfolio rather than treating each one as a one-off job.
+Repainting on a regular cycle, rather than only when damage shows, protects the asset and reduces disputes at the end of a tenancy. Fair wear and tear is easier to assess against a recent, known paint job than against one nobody can date. For landlords managing several properties, we can coordinate turnarounds across a portfolio rather than treating each one as a one-off job.
 
 ## Real Estate Painting FAQs
 
 ### Do you work directly with real estate agents and vendors?
 
-Yes. We regularly coordinate directly with real estate agents, vendors and property stylists across Melbourne — handling quotes, access, scheduling and invoicing so the repaint is finished on time for photography, styling and the first open home.
+Yes. We coordinate directly with real estate agents, vendors and property stylists across Melbourne. We handle quotes, access, scheduling and invoicing, so the repaint is finished in time for photography, styling and the first open home.
 
 ### How quickly can you paint a property before it goes on the market?
 
@@ -72,11 +72,11 @@ Warm whites and soft, broad-appeal neutrals photograph well and help the widest 
 
 ### Is painting worth it before selling a property?
 
-In most cases yes. A professional repaint is one of the highest-return improvements before a sale — it addresses scuffs, dated colours and tired façades that buyers otherwise price against you, and lifts the quality of listing photography and inspections.
+In most cases yes. A professional repaint is one of the highest-return improvements before a sale. It deals with the scuffs, dated colours and tired façades that buyers otherwise price against you. It also lifts the quality of listing photography and inspections.
 
 ### When in the campaign should painting happen?
 
-Before styling and before photography — painting is always the first trade on site, not the last. We work backwards from your photography date so paint is finished, dry and ventilated with time to spare for the stylist to move furniture in, rather than painting around styled rooms or rushing the final coat the night before a shoot.
+Before styling and before photography — painting is always the first trade on site, not the last. We work backwards from your photography date. Paint is finished, dry and ventilated with time to spare for the stylist to move furniture in. Nobody is painting around styled rooms, or rushing the final coat the night before a shoot.
 
 ### Should I paint a feature wall or keep it neutral for a sale?
 
@@ -84,11 +84,11 @@ Keep it neutral for a sale. A bold feature wall reads as a personal choice a buy
 
 ### Can you paint between a tenant moving out and a new lease starting?
 
-Yes, and vacancy turnarounds are a regular part of our rental and investment work. We coordinate directly with property managers on the exact window between the outgoing and incoming tenant, and use durable, washable finishes suited to rental wear rather than a presentation-only finish, since the property needs to hold up through the next tenancy, not just the next inspection.
+Yes, and vacancy turnarounds are a regular part of our rental and investment work. We coordinate directly with property managers on the exact window between the outgoing and incoming tenant. Finishes are durable and washable, suited to rental wear rather than presentation alone. The property has to hold up through the next tenancy, not just the next inspection.
 
 ### Does a patchy DIY touch-up look better or worse than not painting at all?
 
-Often worse. A touch-up in slightly the wrong colour or sheen shows up under listing photography and open-home lighting as clearly as an unpainted mark does, and can read to a buyer as a sign of deferred maintenance rather than care. A full, even repaint of the affected walls or room is usually the safer call before a campaign starts.
+Often worse. A touch-up in slightly the wrong colour or sheen shows up under listing photography and open-home lighting as clearly as an unpainted mark. To a buyer it can read as deferred maintenance rather than care. A full, even repaint of the affected walls or room is usually the safer call before a campaign starts.
 
 ## Suburbs we service
 

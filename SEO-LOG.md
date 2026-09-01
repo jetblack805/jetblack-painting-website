@@ -2835,3 +2835,74 @@ that it self-updates, which would end the recurring hardcoded-count drift — a 
 different trade than "the site has no reviews on it".
 
 Put to Jimmy: where it should go, and whether to ship something that cannot be tested from here.
+
+### Same run, later — connectors came back; ranking data DID get measured
+
+The entry above says no ranking data. **Superseded.** GSC Wizard and Windsor.ai reconnected
+minutes later and Step 1 was completed. Leaving the original text as the record of the run's state
+at the time.
+
+**⚠️ GSC Wizard is now DEAD, not flapping.** Every call returns
+`payment_required: Your GSC Wizard trial has ended or you have no active subscription.` This is a
+permanent change, not the usual connector flap — it has been the documented PRIMARY ranking source
+since 2026-08-27. **Windsor.ai `searchconsole` is now the primary.** It worked first try:
+`get_data(connector="searchconsole", fields=["query","impressions","clicks","position"],
+date_preset="last_28d", filters=[["impressions","gte",20]])`. Jimmy must decide whether GSC Wizard
+is worth subscribing to; the Windsor route covers query/position/impressions but not the indexing
+tracker, anomaly detection or change-point tools.
+
+### Last 28 days, 121 queries at 20+ impressions
+
+**Eight clicks in total, all on `jetblack painting` (brand, position 2.98). Every single non-brand
+query: ZERO clicks.** That is unchanged from the baseline and is the whole problem in one line.
+
+**Striking distance (8–18) ranked by impressions — the real target list:**
+
+| Query | Impr | Position |
+| --- | --- | --- |
+| painters collingwood | **175** | 16.10 |
+| painters sorrento | **140** | 13.30 |
+| house painters caulfield | **99** | 16.79 |
+| painters murrumbeena | 82 | 16.76 |
+| painters caulfield | 56 | 17.93 |
+| house painters collingwood | 43 | 17.07 |
+| house painters highett | 41 | 16.00 |
+| house painters cheltenham | 41 | 16.27 |
+| painter highett | 39 | 14.77 |
+| painters highett | 37 | 13.92 |
+| painter collingwood | 31 | 17.77 |
+| painters sorrento bay | 29 | **5.83** |
+| house painters mckinnon | 26 | 10.81 |
+| house painters donvale | 26 | 15.50 |
+| interior painters donvale | 26 | 15.69 |
+| painter murrumbeena | 25 | 16.60 |
+| painter sandringham | 23 | 15.78 |
+| painters chelsea | 21 | 12.90 |
+
+**`painters sorrento bay` sits at 5.83 — genuinely page one — with 29 impressions and zero clicks.**
+That is the first case on this property where CTR is actually testable rather than theoretical.
+
+**Movement against the 2026-05-21→08-16 baseline:**
+
+| Suburb | Baseline | Now | |
+| --- | --- | --- | --- |
+| Mordialloc | 77 @ 29.18 | 61 @ ~20.5 | **much better position** |
+| Collingwood | 129 @ 17.65 | 175 @ 16.10 | better on both |
+| Highett | 85 @ 17.32 | 117 @ ~14.9 | better on both |
+| Sorrento | 100 @ **7.13** | 140 @ **13.30** | impressions up, **position materially worse** |
+| Murrumbeena | 86 @ 17.00 | 107 @ ~16.7 | flat |
+| McKinnon | 57 @ 11.19 | 26 @ 10.81 | position held, impressions down |
+
+**Sorrento going 7.13 → 13.30 is the one regression worth watching.** Not acted on: single-property
+GSC data at this volume moves on few samples, and the brief's rule is to treat a mover as real only
+at 20+ impressions — this clears that bar, so re-check it next run before concluding anything.
+
+**On Jimmy's nine priority suburbs:** **Caulfield is closest to page one** — 176 impressions across
+three variants at 16.8–18.9, his best-placed priority. **Bentleigh has the most impressions of any
+suburb (~570 across a dozen variants) and the worst positions (29–50)** — the biggest raw
+opportunity and the furthest away. Oakleigh, Chadstone and Rowville do not appear at all above 20
+impressions; Rowville still has no page.
+
+**No change made.** The settled diagnosis holds: this is an off-page authority problem, and nothing
+in this data contradicts it. Positions improved across most of the tracked set without any content
+change, which is consistent with that. Content work here would be the wrong lever.

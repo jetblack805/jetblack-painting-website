@@ -7,10 +7,18 @@
 # ai-input: used for real-time grounding/citation when an assistant answers a
 #           direct question (e.g. "who are good painters in Melbourne?") — yes,
 #           this is the actual mechanism by which the site gets recommended.
-# ai-train: baked into a future model's weights during training — no. This is
-#           a separate, much longer-horizon use from being cited in an answer
-#           today, and opting out of it doesn't affect real-time visibility.
-Content-Signal: search=yes, ai-train=no, ai-input=yes
+# ai-train: baked into a future model's weights during training — yes, changed
+#           2026-09-01 on Jimmy's decision. Previously no. The earlier reasoning
+#           was correct that opting out does not affect real-time citation, but
+#           it closed the one route by which an assistant can name this business
+#           WITHOUT searching first. Jetblack's whole problem is that nobody
+#           knows it exists: GBP recorded one search keyword in six months, the
+#           brand, and Search Console shows zero clicks on 120 non-brand
+#           queries. The upside here is small — models learn brands from many
+#           third-party mentions, not from one site's own pages — but it costs
+#           nothing. Note this is not reversible in practice: a model already
+#           trained cannot be untrained.
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
 
 # ── Default: allow all crawlers everywhere except the API ─────────────────────
 User-agent: *

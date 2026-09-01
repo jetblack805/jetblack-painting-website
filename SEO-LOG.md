@@ -3285,3 +3285,47 @@ future copy must keep that distinction — "Jetblack Painting has 18 years" woul
 **Not applied by me** — GBP edits are Jimmy's to make, and every edit to a trades listing triggers a
 re-review. Advised changing the description alone rather than bundling it with other edits, since the
 listing is currently in good standing.
+
+---
+
+## 2026-09-01 — `ai-train` flipped to yes, on Jimmy's decision
+
+`Content-Signal: search=yes, ai-train=`**`yes`**`, ai-input=yes` — changed from `no` in **both**
+`robots.txt` and `public/robots.txt` (byte-identical; only `public/` deploys, but they must stay in
+step). The explanatory comment above the directive was rewritten too, so the file does not carry
+reasoning that contradicts its own directive.
+
+**The earlier reasoning was not wrong** — opting out of training genuinely does not affect real-time
+citation, and that entry stands. What it missed is that it closed the one route by which an assistant
+can name this business **without searching first**. For a business whose measured problem is that
+nobody knows it exists — one GBP search keyword in six months (the brand), zero clicks on 120
+non-brand Search Console queries — that route is worth having open.
+
+**Stated to Jimmy before he decided: the upside is small.** Models learn brands from many
+third-party mentions, not from one site's own pages, so this will probably not make an assistant
+recommend Jetblack on its own. It costs nothing, which is the whole case for it.
+
+**⚠️ Effectively irreversible.** A model already trained cannot be untrained. Setting this back to
+`no` would only affect future training runs. Do not flip it back and forth.
+
+### Nothing else to do on AI visibility — verified, not assumed
+
+| Check | State |
+| --- | --- |
+| GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot(-Extended) | all explicitly `Allow: /` |
+| Markdown twins via `Accept: text/markdown` | working — `text/markdown` vs `text/html` on the same URL |
+| `llms.txt` | 200, 22.5KB |
+
+**The technical AEO surface is complete.** Any future run proposing "AI optimisation" work on this
+site should check this table first and stop. Four invented AEO meta tags were already removed once in
+PR #194; do not reintroduce that class of thing.
+
+**Could not measure actual AI visibility.** Ahrefs Brand Radar (`brand-radar-mentions-overview`,
+data_source `chatgpt`) returns **"Insufficient plan"**, consistent with every other Ahrefs endpoint.
+No claim is made about whether Jetblack is currently cited by any assistant.
+
+**The mechanic, recorded because it will be asked again:** AI visibility is not a separate channel.
+Assistants that search read the same index Google does, so at positions 16–30 the site sits below
+where citations are drawn from; assistants answering from memory name brands with many third-party
+mentions, and the site has 31 referring domains. **Both rails are gated by the same authority
+problem.** "Improve AI visibility" and "improve rankings" are one task, not two.

@@ -3200,3 +3200,41 @@ today, this one came from Google via the API — though it still cannot be loade
 `c=$(grep -c "$X" "$f" || echo 0)` emits `0` from grep *and* `0` from the fallback, so `$c` became
 `"0\n0"` and the `[ "$c" -gt 0 ]` guard errored out for every later file. Caught by verifying the
 count afterwards rather than trusting the loop. **Never pair `grep -c` with an `|| echo 0` fallback.**
+
+### 2026-09-01 (later) — GBP service area CONFIRMED set. Suspension question answered.
+
+Jimmy reported that adding his location to GBP gets him suspended every time, and supplied a
+screenshot of **Business information → Location**. This closes the "could not verify" item logged
+above.
+
+**Business location: "No location; deliveries and home services only."** Correct. This is the
+address field, and it is properly empty for a service-area business.
+
+**Service area: SET, 20 entries** — Bayside, Kew, Melbourne, Toorak, Hampton, Malvern, Mentone,
+Stonnington, Armadale, Brighton, Hawthorn, Oakleigh, Bentleigh, Doncaster, Camberwell, Canterbury,
+**Mordialloc**, Mornington, Keysborough, Narre Warren.
+
+**The earlier null readings were an API artifact, exactly as suspected — not an empty service area.**
+`location_service_area`, locality, postcode, lat and long all return null through the Windsor
+connector for this hidden-address listing. **Do not read those nulls as missing data again.**
+
+### The suspension answer
+
+**Mordialloc is already in the service area — there is nothing to add.** What Jimmy keeps editing is
+the *Business location* field, and changing that from "No location" to a street address is what
+triggers the suspension: Google only permits a displayed address where customers are served at it
+during staffed hours. A painter works at the customer's property, so he is not eligible, and trades
+are a high-scrutiny category where this is enforced quickly.
+
+**Told him to leave both fields alone.** The listing reports `voice_of_merchant: true` — verified and
+in good standing — and repeated suspension attempts escalate. Also warned against a second listing:
+he has prior duplicate history (`17466191655420256122`, deleted).
+
+**The underlying misconception, worth keeping:** neither the address nor the service area is a
+ranking lever. The service area governs *eligibility* to appear, not *prominence*. He is already
+eligible across all 20 areas — and the keyword data from earlier today (one term, "jetblack", 207
+uses, zero category searches) says the gap is prominence. **No location setting fixes that.**
+
+Minor, not actioned: 20 areas is Google's cap, and "Melbourne VIC" is redundant against 19 specific
+suburbs already inside it. It is the candidate to drop if a slot is ever needed. Not worth an edit on
+its own — every edit to a trades listing is a re-review, and this one is currently clean.

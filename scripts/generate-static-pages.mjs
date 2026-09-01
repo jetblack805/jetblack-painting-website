@@ -188,7 +188,7 @@ function localBusinessSchema() {
       "https://www.linkedin.com/in/jetblackpainting",
       "https://www.patreon.com/jetblack_painting",
       "https://au.pinterest.com/jetblackpainting/",
-      "https://maps.app.goo.gl/hD8DdS6poZYLb83E6"
+      "https://maps.google.com/maps?cid=5159340262454594349"
     ],
     "address": {
       "@type": "PostalAddress",

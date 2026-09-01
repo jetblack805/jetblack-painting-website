@@ -3108,3 +3108,95 @@ removes their impressions. They were deliberately retired as low-value Casey cor
 future run seeing a sustained impressions drop must not read it as a regression or attempt to undo
 it — check this entry first. The clicks figure is the one that matters, and it was already zero on
 every non-brand query.
+
+---
+
+## 2026-09-01 — Google Business Profile connected to Windsor. The single clearest finding yet.
+
+Jimmy connected `google_my_business` (location `locations/3960754871142365330`, "Jetblack Painting").
+GMB data is readable again for the first time since Supermetrics expired on 2026-08-25.
+
+### ⚠️ THE FINDING: one keyword. Six months. It is the brand.
+
+`search_keyword` over the **last 6 months**, filtered to values above Google's reporting threshold:
+
+| Keyword | Uses |
+| --- | --- |
+| **jetblack** | **207** |
+
+**That is the entire list.** Not one category search — no "painter mordialloc", no "house painters
+near me", nothing. Every discoverable search that surfaced this profile was somebody typing the
+business name.
+
+Set beside Search Console — 8 clicks in 28 days, **all** on `jetblack painting`, zero on all 120
+non-brand queries — **both channels now say the same thing independently: Jetblack is found only by
+people who already know it exists.** The brief inferred this ("only people who already know the name
+find the profile"); this is the first direct measurement of it.
+
+It also settles the causal question. The Map Pack is not underperforming because of the website or
+the listing. **The profile does not enter the consideration set for category searches at all.**
+
+### Review count VERIFIED — 17, and 5.0. No change needed.
+
+`review_total_count` **17**, `review_average_rating_total` **5.0**. First independent confirmation
+since 2026-08-26. The locked fact and all eight hardcoded places are correct. **Nothing was
+changed**, and nobody should change it.
+
+### Six months of profile performance
+
+| Month | Impressions | Call clicks | Website clicks | Directions |
+| --- | --- | --- | --- | --- |
+| Mar 2026 | 178 | 5 | 22 | 74 |
+| Apr 2026 | 158 | 5 | 9 | 36 |
+| May 2026 | 146 | 1 | 11 | 0 |
+| Jun 2026 | 143 | 4 | 5 | 0 |
+| Jul 2026 | **46** | 1 | 6 | 1 |
+| Aug 2026 | 172 | **0** | 14 | 0 |
+
+Read carefully, because the numbers are small enough to mislead:
+
+- **Call clicks 5,5,1,4,1,0 is a noisy series, not an established decline.** August's zero is the low
+  end of that range. Do not report it as a trend without another month.
+- **Direction requests collapsing 74 → 36 → 0 and staying there is a real level shift**, and the
+  most likely explanation is benign: hiding the address on a service-area business removes the
+  directions affordance. Consistent with the configuration the brief describes. Not a defect.
+- **July's 46 impressions** against a ~150 baseline, recovering to 172, looks like a data gap rather
+  than a real collapse. Flagged, not diagnosed.
+- **~150 impressions a month is the actual story.** That is the ceiling, and the keyword data says
+  why.
+
+### The listing itself is NOT the problem — do not "optimise" it
+
+Checked because low visibility usually means a thin profile. It is the opposite:
+
+- Primary category **Painter and Decorator**, plus **Painting** and **Property maintenance**
+- **60+ service items**, most with written descriptions
+- A full, specific profile description
+- `location_open_info_status` **OPEN**, `has_voice_of_merchant` **true** (verified, good standing)
+
+**There is no relevance work left to do here.** Adding more service items would be motion.
+
+### Could NOT verify: service area
+
+`location_service_area` returns **null** — but so do `location_address_locality`,
+`postal_code`, `address_lines`, `latitude` and `longitude`. **All geo fields are null uniformly**,
+including latitude, which certainly exists. That points at an API/connector limitation for
+hidden-address service-area businesses, **not** at an empty service area. **Do not report the service
+area as unset** — it is unverified, not absent. Jimmy can confirm it in his GBP dashboard in a
+minute, and it is worth confirming, because for a service-area business the service area is what
+tells Google where to show the listing.
+
+### Canonical Maps URL obtained from Google's own API
+
+`location_metadata_maps_uri` → `https://maps.google.com/maps?cid=5159340262454594349`
+
+This is the stable `cid` form flagged as preferable when the short link went in earlier today.
+Replaced all **7** occurrences (`client/index.html` `sameAs` + `hasMap`, `organizationSchema.ts`,
+`SuburbPageTemplate.tsx` `sameAs` + visible link, `generate-static-pages.mjs`, `Contact.tsx`).
+95 pages now carry it, **0 stale, 0 JSON-LD parse errors**. Unlike the three URLs guessed earlier
+today, this one came from Google via the API — though it still cannot be loaded from here to confirm.
+
+**Method note:** the first attempt at this replacement silently patched only `client/index.html`.
+`c=$(grep -c "$X" "$f" || echo 0)` emits `0` from grep *and* `0` from the fallback, so `$c` became
+`"0\n0"` and the `[ "$c" -gt 0 ]` guard errored out for every later file. Caught by verifying the
+count afterwards rather than trusting the loop. **Never pair `grep -c` with an `|| echo 0` fallback.**

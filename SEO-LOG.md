@@ -2906,3 +2906,168 @@ impressions; Rowville still has no page.
 **No change made.** The settled diagnosis holds: this is an off-page authority problem, and nothing
 in this data contradicts it. Positions improved across most of the tracked set without any content
 change, which is consistent with that. Content work here would be the wrong lever.
+
+### Trustindex — decided: NOT shipped. Do not re-open without new information.
+
+Jimmy chose the recommended option. **No code change.** The hand-built `Reviews.tsx` carousel stays:
+six real Google reviews, no third-party JS, styled to the site, always renders.
+
+Reasoning, recorded so this is not re-litigated every time the widget resurfaces:
+
+1. **It cannot be verified from here.** `cdn.trustindex.io` returns **403 CONNECT** under this
+   session's egress policy. Cannot check whether it injects a second `aggregateRating`, cannot
+   measure its CLS cost, cannot confirm it renders.
+2. **The `aggregateRating` risk is the serious one.** The site carries exactly one. Two on a
+   rendered page is a structured-data conflict that can cost the star rating outright — and Step 2.5
+   of this audit exists specifically to keep that markup singular. Shipping a script that might
+   silently add a second one would be defeating our own guard.
+3. **CLS.** A network-loaded widget rendering cards after paint is the textbook cause of the
+   regression fixed this same morning (0.1332 → 0.0337).
+4. **The gap it fills is small.** The site is not short of review UI. Its genuine advantage —
+   self-updating, ending the hardcoded-count drift — is real but does not outweigh the above.
+
+**If it is ever revisited**, the preconditions are: Trustindex's own schema output switched OFF in
+their dashboard, a reserved-height container, idle loading, and a before/after CLS measurement under
+4× CPU + slow 4G. Not before.
+
+### ⚠️ BOTH PAID DATA TOOLS HAVE NOW EXPIRED — update the brief
+
+| Tool | Status | What is lost |
+| --- | --- | --- |
+| **GSC Wizard** | `payment_required`, trial ended | indexing tracker, anomaly detection, change points, `score_opportunities` |
+| **Supermetrics** | `TRIAL_EXPIRED` on team 1902861, **expired 2026-08-25** | **GMB / Maps data — it was the ONLY source** |
+| **Semrush / Ahrefs** | already unavailable | competitor + backlink intelligence |
+| **Windsor.ai** | **working** | Search Console: query, position, impressions, clicks |
+
+The brief still lists GSC Wizard as PRIMARY and Supermetrics as the fallback. **Both are wrong now.**
+Windsor.ai `searchconsole` is the only working ranking source and it delivered this run's data.
+
+**GMB is the real casualty.** The brief calls the Map Pack "the binding constraint on actual leads",
+and there is now no automated read of it at all — no views, no calls, no direction requests, and no
+review count.
+
+**Fix, and it costs nothing:** Jetblack already has Windsor.ai, and Windsor supports
+`google_my_business` as an OAuth connector. Connecting it restores GMB coverage without a
+subscription. Link obtained from Windsor's own tool rather than constructed:
+`https://onboard.windsor.ai/connect?connector=google_my_business&client=CLAUDE&next=/google_my_business/authorize`
+
+### Review count: still 17, still unverified this run
+
+Attempted a live read via Supermetrics GMB `total_review_count` (report type `ReviewsTotals`,
+location `116052022854905862269_3960754871142365330`) specifically to check whether 17 has grown.
+**Blocked by the trial expiry.** The locked fact stands at 17 and all eight places agree; nothing was
+changed. Re-attempt once GBP is connected to Windsor.
+
+---
+
+## 2026-09-01 — GSC "Page with redirect" export: confirmed benign, with one correction
+
+Jimmy supplied a Coverage Drilldown export (`Sitemap: All known pages`, `Issue: Page with redirect`,
+62 URLs, generated 2026-09-01). This is the first real indexing data since GSC Wizard expired, and it
+arrived by hand rather than by API.
+
+### The bucket is stable, not growing
+
+| Date | Affected |
+| --- | --- |
+| 2026-06-05 | 1 |
+| 2026-07-11 | 41 |
+| 2026-08-06 | 61 |
+| **2026-08-08 → 08-28** | **62, flat** |
+
+Flat for three weeks. The step-ups track the deliberate redirect work, not a regression.
+
+### Every testable URL behaves correctly
+
+Checked **all 57** non-`www` URLs individually, not sampled. **52 are exactly one 301 → 200.**
+Destinations all correct: `/interior-painting` → `/services/interior-painting/`,
+`/services/rental-property-painting` and `/services/pre-sale-property-painting` →
+`/services/real-estate-painting/`, `/painters-hawthorn` → `/painter-hawthorn/`, `/au/` → `/`,
+non-slash suburb paths → their slashed form. **The brief's 2026-08-17 conclusion holds: these are
+redirects by design and there is nothing to fix.**
+
+The remaining **5 URLs are `www.`, which cannot be tested from here** — `www.jetblackpainting.com`
+returns 403 CONNECT under this session's egress policy. Policy denial, not retried.
+
+### ⚠️ CORRECTION — I told Jimmy "exactly one hop" and that was wrong for 5 URLs
+
+On 2026-08-30, reviewing SEOptimer's "avoid multiple page redirects", I reported it as *"the
+mandatory http→https upgrade, exactly one hop"*. **For five URL shapes there are genuinely two.**
+
+Traced hop by hop:
+
+| Hop | Issued by | Does |
+| --- | --- | --- |
+| 1 | **Cloudflare edge** (`server: cloudflare`, worker not yet invoked) | `http:` → `https:`, **path unchanged** |
+| 2 | **The worker** | adds the trailing slash / applies `PATH_REDIRECTS` |
+
+Control case proves the mechanism: `http://…/services/roof-fence-painting/` — http plus an
+*already-canonical* path — is **one** hop, because Cloudflare's upgrade lands somewhere the worker
+does not need to touch.
+
+So the two-hop set is exactly **http:// + a path that also needs normalising**:
+`/services/pre-sale-property-painting` (and its slashed form), `/services/roof-fence-painting`,
+`/services/kitchen-cabinet-resurfacing`, `/painter-greater-dandenong`.
+
+### Not fixed, deliberately
+
+The worker cannot collapse this. Cloudflare's "Always Use HTTPS" fires at the edge **before** the
+worker runs, so by the time our code sees the request the first 301 has already been sent. The only
+way to issue a single hop would be to **turn that setting off** and have the worker handle the
+protocol upgrade itself — a Cloudflare dashboard change, not a code change, and one that moves
+HTTPS enforcement from Cloudflare's edge into our own code. That is a security-relevant trade for a
+marginal crawl-efficiency gain on five legacy URL shapes that real visitors essentially never type.
+**Recommend leaving it.** Raised with Jimmy rather than actioned.
+
+Google follows 301 chains of this length and consolidates signals through them; the cost is crawl
+budget, not ranking.
+
+### Indexability audit — one real defect found and fixed
+
+Jimmy asked for the site to be "GSC index ready". Checked properly rather than assumed:
+
+| Check | Result |
+| --- | --- |
+| Sitemap URLs | 106 |
+| Sitemap URLs that are `noindex` (contradictory signal) | **0** |
+| `noindex` pages leaking into the sitemap | **0** |
+| Canonical mismatches across 116 pages | **0** |
+| robots.txt | allows all, `Disallow: /api/` only, sitemap declared |
+| sitemap.xml | 200, `application/xml` |
+
+**The one real defect: stale `lastmod`.** `/painter-aspendale/` and `/painter-caulfield/` each gained
+**five real project photographs with captions on 2026-08-30** — the most substantial content added to
+any suburb page — and their sitemap `lastmod` still read **2026-08-18**. The photo commits never ran
+`generate-sitemap.mjs`.
+
+That is not cosmetic. `lastmod` is how a sitemap tells Google a page is worth recrawling; leaving it
+stale actively tells Google *nothing changed here*, on the two pages where something most did.
+Bumped both to 2026-09-01. **Diff is exactly two lines** — the generator preserves every other
+`lastmod`, which is why only genuinely-changed pages get bumped.
+
+**Deliberately NOT bumped: the other 104.** They changed on 2026-08-31 too, but only in JSON-LD (the
+LinkedIn and Maps URLs). `lastmod` is meant to signal a significant *content* change; bumping the
+whole sitemap because a `sameAs` string moved would be false signalling, and a sitemap whose
+`lastmod` is unreliable gets discounted wholesale. Two honest bumps are worth more than 106 dishonest
+ones.
+
+### On "ranking page 1 immediately" — what the evidence supports
+
+Recorded because it will be asked again. **There is no on-site change available that moves this site
+to page 1 quickly**, and today's data says so directly:
+
+- Positions **improved across the tracked set with no content change at all** this period —
+  Mordialloc 29.18 → ~20.5, Collingwood 17.65 → 16.10, Highett 17.32 → ~14.9. The slope is right.
+- **Zero clicks on 120 non-brand queries** and nothing holding top-5 on a term with volume. The
+  ceiling is the problem.
+- Backlinks **44 / 31 domains / authority 2** (2026-08-13). That is the binding constraint, and it
+  is unchanged.
+
+The diagnosis settled 2026-08-19 stands and nothing in this run contradicts it. **Adding or rewriting
+site content now would be motion, not progress**, and the brief explicitly forbids it without
+query-level evidence.
+
+**Tier 0 is still undone and is still the cheapest legitimate win:** Yellow Pages AU (4 listings) and
+TrueLocal (2) point at the DEAD Manus site. Those are existing citations actively pointing away from
+the live domain. Editing them — not creating new ones — costs nothing and repairs both authority and
+local prominence.

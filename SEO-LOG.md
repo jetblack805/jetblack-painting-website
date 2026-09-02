@@ -3542,3 +3542,89 @@ checklist — holds its own copy of the claim and will keep asserting it after t
 The brief already carries the right instruction at the top (*"If this brief and the log disagree, the
 log wins"*), but that only helps a run that reads the log carefully enough to notice a contradiction
 it was not looking for. **Fix the replaying copy, not just the record.**
+
+---
+
+## 2026-09-02 (20:05 UTC run) — Daily audit. Both paid ranking sources expired; Windsor.ai carried the run.
+
+### Steps 0–6: all clean
+
+| Check | Result |
+| --- | --- |
+| Dependency parity | **77/77** present in `pnpm-lock.yaml` |
+| Production serving latest `main` | 200, `cf-cache HIT`, homepage serves the corrected *"who has spent 18+ years"* |
+| Three-layer regeneration | **ZERO diffs** — idempotent |
+| Schema vs visible text | **116 pages, 491 questions, 0 mismatches** |
+| JSON-LD | 0 parse errors · 0 `aggregateRating` in static pages · 0 missing required fields |
+| Metadata | 0 duplicate titles/descriptions/H1s/canonicals · 0 missing · 0 over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted) · 0 keywords tags |
+| Site health | real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; real hashed bundles 200 with correct MIME |
+| Sitemap sweep | **106/106 → 200, ZERO redirect hops** |
+| AEO | `text/markdown` + `Vary: Accept` + `X-Robots-Tag: noindex`; normal Accept returns HTML; twin body current; robots disallows only `/api/` |
+| `llms.txt` | byte-identical to `public/`; the three `$` matches are all the legitimate $10M liability. **No prices.** |
+| `robots.txt` | byte-identical; `Content-Signal: … ai-train=yes` intact |
+| Review count | **17** everywhere checked |
+
+### Two brief figures are stale — the log supersedes them
+
+1. **Sitemap is 106, not 115.** Not a defect: 115 − 8 Casey-corridor pages noindexed and removed − the Bentleigh East merge = 106. All 106 resolve 200 with no hops. A future run must not hunt for nine "missing" URLs. *(Recorded here rather than edited into the routine — the brief's own rule is that the log wins.)*
+2. **Suburb-page count is 95**, and **8 of them are noindexed** (dandenong, clyde, greater-dandenong, hampton-park, endeavour-hills, berwick, clyde-north, cranbourne), leaving **87 indexable**.
+
+### ⚠️ A near-duplicate FALSE FAILURE I generated and caught
+
+A first pass measured **57.8%** on cranbourne ↔ narre-warren against the 55% gate, and would have been reported as a regression. It was my method, not the site: I neutralised only each page's **own** suburb name, leaving *neighbouring* suburb names in the prose — and adjacent suburbs cross-link, so the shared tokens inflate the score.
+
+With suburb names neutralised **globally**, as "suburb names neutralised" actually means:
+
+| Population | avg worst-twin | max | Gate 45% / 55% |
+| --- | --- | --- | --- |
+| All 95 suburb pages | **31.0%** | 52.3% | PASS |
+| 87 indexable only | **30.4%** | 48.3% | PASS |
+
+The worst pair also involves `painter-cranbourne`, which is **noindexed and absent from the sitemap** — it cannot create a duplicate-content problem in the index. **Method note for future runs: neutralise every suburb token across every page, and measure the indexable population.**
+
+### ⚠️ BOTH paid ranking sources are dead
+
+- **GSC Wizard** — `payment_required`, trial ended. This was the brief's **PRIMARY** source.
+- **Supermetrics** — `TRIAL_EXPIRED`, expired **2026-08-25** (team 1902861). The brief predicted ~08-24 and said to tell Jimmy. **Telling him.**
+- **Windsor.ai `searchconsole` WORKS** and carried this run — 1,631 queries returned. It is not listed as a ranking source in the brief; it should be. Windsor is now the only working ranking source.
+
+### THE FINDING: 14,486 non-brand impressions, ZERO clicks
+
+87 days (2026-06-04 → 08-30), the same window length as the baseline, shifted two weeks later.
+
+**1,631 queries. Exactly ONE earns clicks.**
+
+| | impressions | clicks |
+| --- | --- | --- |
+| `jetblack painting` (brand) | 203 | **35** |
+| Everything else (1,630 queries) | **14,486** | **0** |
+
+**100% of the site's clicks come from one branded query.** This is the brief's off-page-authority diagnosis, measured harder than before.
+
+### Impressions roughly DOUBLED while positions diluted
+
+| Suburb | impr now | impr base | pos now | pos base | move |
+| --- | --- | --- | --- | --- | --- |
+| Collingwood | 347 | 129 | 17.1 | 17.65 | ↑ +0.6 |
+| Sorrento | 254 | 100 | 14.1 | 7.13 | ↓ −7.0 |
+| Murrumbeena | 200 | 86 | 18.6 | 17.00 | ↓ −1.6 |
+| Highett | 165 | 85 | 17.2 | 17.32 | · +0.2 |
+| Donvale | 169 | 49 | 20.7 | 16.63 | ↓ −4.1 |
+| Mordialloc | 158 | 77 | 25.8 | 29.18 | ↑ +3.4 |
+| Patterson Lakes | 157 | 39 | 22.2 | 6.83 | ↓ −15.4 |
+| Mentone | 102 | 61 | 23.2 | 24.82 | ↑ +1.6 |
+| McKinnon | 84 | 57 | 14.0 | 11.19 | ↓ −2.9 |
+| Dromana | 49 | 38 | 22.1 | 19.53 | ↓ −2.5 |
+| Aspendale | 31 | 21 | 13.5 | 10.00 | ↓ −3.5 |
+
+**Do not read the position column as a ranking collapse.** Impressions rose 2–4× on the same-length window. A page that starts surfacing for many more queries and locations appears in more marginal contexts, which pulls average position down arithmetically even when nothing lost ground. Eight of eleven fell on position while every one of them gained impressions — that pattern is dilution, not decline. It is also a **different data source** from the baseline. Treat this table as a new Windsor-based baseline, not a like-for-like delta.
+
+### Striking distance (8–18, ≥20 impressions)
+
+`painters collingwood` 189 @ 16.2 · `painters sorrento` 147 @ 13.3 · `painters murrumbeena` 107 @ 17.5 · `painter highett` 53 @ 15.7 · `painters highett` 50 @ 16.7 · `house painters mckinnon` 36 @ 11.0 · `house painters sorrento` 21 @ **8.8** (closest to page 1).
+
+Nothing crossed into the top 10, so **CTR remains untestable** — consistent with every prior run.
+
+### Verdict
+
+No defect found; nothing changed on the site. The run's value is the measurement: **98.6% of impressions earn nothing**, and the constraint is unchanged — authority, and the map pack. With Yellow Pages closed, **reviews remain the top authority priority.**

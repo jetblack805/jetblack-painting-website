@@ -3504,3 +3504,41 @@ Neither is worth a phone call; both are free if he is ever logged in there anywa
 2. **The listing image is a generic stock shopfront illustration**, not his logo or a real job.
    Given the knowledge-panel image problem already logged, using real work photos wherever a profile
    allows one is a standing improvement.
+
+---
+
+### 2026-09-02 — The daily audit brief itself was corrected. Four stale claims removed.
+
+Closing Yellow Pages in this log was not enough. The **daily SEO audit routine**
+(`trig_01FUpfmKU1BRp5CDgoEhjbU9`, fires 20:05 UTC) carries a ~24,000-character brief in its prompt,
+and that brief still contained the disproven claim. It spawns a **fresh session** each night with no
+memory of this conversation, so it would have told Jimmy to ring the Yellow Pages merge line every
+morning indefinitely.
+
+Audited the whole brief line by line against the repo. **Four claims were stale**, each verified
+before editing:
+
+| Brief said | Repo says | Risk if left |
+| --- | --- | --- |
+| Tier 0: YP **4 listings** on the dead Manus site, "cheapest legitimate win", merge line 1800 359 321 | **1** listing, correct NAP, live URL | Daily advice to fix a non-existent problem |
+| `Content-Signal: search=yes, ai-train=no` is deliberate | both `robots.txt` files read **`ai-train=yes`** | A run "restores" `no`, silently undoing Jimmy's decision |
+| LOCKED FACTS: **"13+ years"** | `13+ years` appears **nowhere**; `18+ years` appears **27×** | A run "corrects" the site down to a false lower figure |
+| Readability poor site-wide, "open, unqueued, do not start without go-ahead" | done and merged (PR #241) | A run redoes a finished rewrite, or extends it to the 95 suburb pages and breaches the duplicate gate |
+
+The `13+ years` one is the most dangerous of the four: it is a **locked fact**, so a run is
+instructed to enforce it across eight files. It would have overwritten a true figure with a false
+one, sitewide, with a green build. The replacement now also states *whose* 18 years they are —
+Jimmy's time in the trade, **not** the business's age (opened 2 March 2015) — which is the exact trap
+PR #241 caught on the homepage.
+
+**Applied via `update_trigger`, prompt only.** Name, cron, model and enabled state untouched; verified
+byte-identical to the intended text; 4 lines changed of 167, everything else preserved. Also deleted
+the finished check-in routine for the merged PR #241, which was recirculating the same stale Tier 0
+paragraph on its own schedule, and unsubscribed from that PR.
+
+**The general failure, which is the point of this entry.** A correction is not finished when the log
+is updated. Anything that **replays** — a routine's stored prompt, a scheduled brief, a saved
+checklist — holds its own copy of the claim and will keep asserting it after the log has moved on.
+The brief already carries the right instruction at the top (*"If this brief and the log disagree, the
+log wins"*), but that only helps a run that reads the log carefully enough to notice a contradiction
+it was not looking for. **Fix the replaying copy, not just the record.**

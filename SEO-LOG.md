@@ -3406,3 +3406,48 @@ array in `scripts/generate-static-pages.mjs`, which duplicates the same copy.
 only the first file on the first attempt. Caught by verifying counts afterwards. Also: a
 case-sensitive grep for `low-odour` reported 0 when the text was sentence-cased to `Low-odour` —
 the false-failure mode the brief documents. **Always `-i`.**
+
+---
+
+## 2026-09-02 — CORRECTION: the Yellow Pages listing already points at the live site
+
+**The brief's Tier 0 item is stale and has been driving wrong advice.** It states: *"Yellow Pages AU
+(4 listings) and TrueLocal (2) still point at the DEAD Manus site. Cheapest legitimate win
+available."* That was measured **2026-08-19**.
+
+Jimmy checked today and reports that
+`https://www.yellowpages.com.au/mordialloc-vic/bpp/jetblack-painting-581728104` **links to the live
+site**. His live check supersedes the audit note, per the brief's own rule that if it contradicts
+measured reality, suspect the brief.
+
+**Not independently verified** — `yellowpages.com.au` returns connection failure (status 000) from
+this sandbox, exactly as the standing context says it blocks automated fetching. Recorded on Jimmy's
+word, which is the best evidence available.
+
+### What this changes
+
+I had repeatedly named the dead-URL fix as the cheapest available win, and ranked it above reviews
+and accreditation. **That ranking was based on a stale figure.** If the URLs are already correct,
+the remaining value is smaller than advertised.
+
+### What still stands
+
+**Duplicate consolidation, which is a different problem from the dead URL.** The note says four
+Yellow Pages listings and two TrueLocal. Jimmy has verified **one**. Two things remain open:
+
+1. **The other three Yellow Pages entries** — unverified; some may still carry the old URL. He was
+   asked to search `yellowpages.com.au` for "Jetblack Painting" and check each result before calling.
+2. **Four listings for one business is itself a defect**, independent of what they link to.
+   Duplicates split citation signals and create inconsistent NAP. Consolidating to one is the actual
+   remaining win.
+
+**Advice revised accordingly:** ask for a *merge*, not a URL correction, and above all do not create
+a new listing — the standing note that Jimmy has a repeated pattern of creating duplicates instead of
+editing is the reason that warning exists.
+
+### Lesson
+
+**Re-verify a Tier 0 item before citing it as the top priority.** This one was quoted as settled fact
+several times in one day on the strength of a two-week-old measurement, against sources this sandbox
+cannot reach. Where a claim cannot be machine-checked here, say so at the point of giving the advice,
+not only in the log.

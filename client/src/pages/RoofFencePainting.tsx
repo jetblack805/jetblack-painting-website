@@ -52,7 +52,7 @@ export default function RoofFencePainting() {
   const faqs = [
     {
       question: "Can you do the roof and fences in one project?",
-      answer: "Yes, and it's usually the cheaper way to do it. The access equipment, the site setup and the weather window are shared across both, so quoting them together costs less than booking two separate jobs — and the exterior reads as one finished thing from the street rather than a new roof above a tired fence."
+      answer: "Yes, and it's usually the cheaper way to do it. The access equipment, the site setup and the weather window are shared across both. Quoting them together costs less than booking two separate jobs. The exterior also reads as one finished thing from the street, rather than a new roof above a tired fence."
     },
     {
       question: "Should timber be painted, stained or oiled?",
@@ -60,7 +60,7 @@ export default function RoofFencePainting() {
     },
     {
       question: "Can Colorbond fences and roofs be painted?",
-      answer: "Yes. Colorbond and Zincalume take a new colour well, but they need different preparation from timber — a thorough wash to remove chalked factory coating, a scuff to give the surface a key, and a primer made for metal. Skipping any of that is why repainted Colorbond sometimes peels in sheets a year later."
+      answer: "Yes. Colorbond and Zincalume take a new colour well, but they need different preparation from timber. A thorough wash removes chalked factory coating. A scuff gives the surface a key. Then a primer made for metal goes on. Skipping any of that is why repainted Colorbond sometimes peels in sheets a year later."
     },
     {
       question: "Does my fence need repairs before painting?",
@@ -348,10 +348,10 @@ export default function RoofFencePainting() {
           >
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">What Preparation Actually Involves</h2>
             <p className="text-[#B4B4B8] mb-4 leading-relaxed">
-              Fences collect everything the weather throws at them, plus what grows on them. Mould, lichen and algae on the shaded southern side all have to come off, and washing alone doesn't kill the spores — left underneath a fresh coat they keep growing and push it away from the timber. Dirt, cobwebs and old flaking coating come off in the same pass.
+              Fences collect everything the weather throws at them, plus what grows on them. Mould, lichen and algae on the shaded southern side all have to come off. Washing alone does not kill the spores. Left underneath a fresh coat they keep growing, and push it away from the timber. Dirt, cobwebs and old flaking coating come off in the same pass.
             </p>
             <p className="text-[#B4B4B8] mb-4 leading-relaxed">
-              Then the repairs. Loose palings get refixed, popped nails punched and filled, and anything rotted through gets replaced before a brush is opened — a coating doesn't hold a failing fence together, it just hides the failure for a season. The bottom of a timber fence is always the first thing we look at, because ground moisture wicks straight up into the exposed end grain of each paling and rots it from underneath while the top three-quarters still looks fine.
+              Then the repairs. Loose palings get refixed. Popped nails are punched and filled. Anything rotted through is replaced before a brush is opened. A coating does not hold a failing fence together; it hides the failure for a season. The bottom of a timber fence is always the first thing we look at. Ground moisture wicks straight up into the exposed end grain of each paling. It rots the fence from underneath while the top three-quarters still looks fine.
             </p>
             <p className="text-[#B4B4B8] leading-relaxed">
               Access is the last thing to sort out, and it's the one that catches people. A boundary fence has two sides and one of them belongs to next door. Coating only your side leaves the other face raw, which weathers unevenly and encourages the palings to cup toward the wet side. It's worth asking your neighbour before the quote rather than discovering on the day that half the fence is off limits.
@@ -384,7 +384,7 @@ export default function RoofFencePainting() {
           >
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Why We Quote Roof and Fence Together</h2>
             <p className="text-[#B4B4B8] mb-4 leading-relaxed">
-              These two get bundled for practical reasons, not as an upsell. Both need the same run of dry weather, both need the site set up once, and roof work needs height access that is already paid for whether the fence is done in the same visit or three months later. Splitting them means paying to mobilise twice.
+              These two get bundled for practical reasons, not as an upsell. Both need the same run of dry weather, and both need the site set up once. Roof work needs height access, and that is already paid for whether the fence is done in the same visit or three months later. Splitting them means paying to mobilise twice.
             </p>
             <p className="text-[#B4B4B8] leading-relaxed">
               There's a presentation argument too. A restored roof above a grey, splitting fence draws the eye straight to the fence — the improvement makes the untouched part look worse than it did before. Done together, with colours chosen to work against each other rather than in isolation, the whole exterior lifts at once. That matters most before a sale or a rental listing, where the first impression is a photograph taken from the kerb.

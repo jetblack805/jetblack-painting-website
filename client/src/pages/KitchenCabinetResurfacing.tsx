@@ -289,10 +289,10 @@ export default function KitchenCabinetResurfacing() {
           >
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Which Kitchen Cabinets Can Be Resurfaced</h2>
             <p className="text-[#B4B4B8] mb-4 leading-relaxed">
-              Most Melbourne kitchens built in the last thirty years can be resurfaced. Laminate and melamine doors, vinyl-wrapped MDF, timber and timber-veneer, and existing 2-pack polyurethane all take a new 2-pack finish once they have been properly prepared — the substrate matters far less than its condition. Vinyl-wrapped doors are the most common candidate we see: the wrap lifts and bubbles around the oven and the dishwasher long before anything structural fails, and resurfacing deals with that permanently instead of replacing doors that are otherwise sound.
+              Most Melbourne kitchens built in the last thirty years can be resurfaced. Laminate and melamine doors, vinyl-wrapped MDF, timber and timber-veneer, and existing 2-pack polyurethane all take a new 2-pack finish once they have been properly prepared — the substrate matters far less than its condition. Vinyl-wrapped doors are the most common candidate we see. The wrap lifts and bubbles around the oven and the dishwasher long before anything structural fails. Resurfacing deals with that permanently, instead of replacing doors that are otherwise sound.
             </p>
             <p className="text-[#B4B4B8] leading-relaxed">
-              What can't be saved is board that has taken water. If the MDF under the sink or beside the dishwasher has swollen, gone soft or crumbled at the edges, no coating will hide it — that door or panel needs replacing before the rest of the kitchen is finished, and we'll tell you that at the quote rather than after the job has started. The same applies to doors that have delaminated badly or carcasses that have dropped out of square. Resurfacing renews surfaces; it doesn't repair failed board or fix a layout that never worked.
+              What can't be saved is board that has taken water. If the MDF under the sink or beside the dishwasher has swollen, gone soft or crumbled at the edges, no coating will hide it. That door or panel needs replacing before the rest of the kitchen is finished. We will tell you at the quote, not after the job has started. The same applies to doors that have delaminated badly or carcasses that have dropped out of square. Resurfacing renews surfaces; it doesn't repair failed board or fix a layout that never worked.
             </p>
           </motion.div>
 
@@ -310,7 +310,7 @@ export default function KitchenCabinetResurfacing() {
               2-pack polyurethane cures chemically rather than simply drying out, which is why it ends up hard, non-porous and genuinely wipeable. It's the same class of finish used on factory-made cabinetry, and sprayed properly it lays down without a single brush mark.
             </p>
             <p className="text-[#B4B4B8] leading-relaxed">
-              How it goes on matters as much as what goes on. Doors, drawer fronts and end panels come off and are sprayed in our booth, where dust and airflow are controlled and every face can be laid flat. The carcasses and face frames that stay in your kitchen are masked and sprayed on site. Preparation is where the job is won or lost: every surface is degreased first, because years of cooking residue is the single most common reason cabinet paint fails to stick, then sanded to a key and primed with an adhesion primer matched to the substrate underneath.
+              How it goes on matters as much as what goes on. Doors, drawer fronts and end panels come off and are sprayed in our booth, where dust and airflow are controlled and every face can be laid flat. The carcasses and face frames that stay in your kitchen are masked and sprayed on site. Preparation is where the job is won or lost. Every surface is degreased first. Years of cooking residue is the single most common reason cabinet paint fails to stick. Surfaces are then sanded to a key and primed with an adhesion primer matched to the substrate underneath.
             </p>
           </motion.div>
 
@@ -328,7 +328,7 @@ export default function KitchenCabinetResurfacing() {
               Two-tone kitchens remain the most reliable way to modernise a dated layout — lighter uppers to keep the room feeling open, a deeper colour on the lower cabinets and the island where marks show least. Warm whites and greiges photograph well and date slowly. Strong colours are best kept to an island or a pantry door, where they can be changed later without redoing the whole kitchen.
             </p>
             <p className="text-[#B4B4B8] leading-relaxed">
-              Handles change the look more than most people expect, and swapping them is far easier while the doors are already off and in the booth. If you're planning new hardware, mention it at quoting stage — the hole spacing on new handles rarely matches the old, and it is a much cleaner job to sort that out before the finish goes on than to drill through it afterwards. Colour consultation is included with every quote.
+              Handles change the look more than most people expect, and swapping them is far easier while the doors are already off and in the booth. If you are planning new hardware, mention it at quoting stage. The hole spacing on new handles rarely matches the old. It is a much cleaner job to sort that out before the finish goes on than to drill through it afterwards. Colour consultation is included with every quote.
             </p>
           </motion.div>
 

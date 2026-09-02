@@ -3329,3 +3329,80 @@ Assistants that search read the same index Google does, so at positions 16–30 
 where citations are drawn from; assistants answering from memory name brands with many third-party
 mentions, and the site has 31 referring domains. **Both rails are gated by the same authority
 problem.** "Improve AI visibility" and "improve rankings" are one task, not two.
+
+---
+
+## 2026-09-01 — Readability rewrite: homepage + 9 service pages
+
+Jimmy gave explicit go-ahead (scope: "Homepage + 9 service pages"), which is the approval the
+standing context required before this work could start. **The 95 suburb pages were deliberately
+excluded** — they are held apart by a hard near-duplicate gate (45% avg / 55% any page), and
+rewriting them all plainer tends to make them *more* alike. That risk is worse than the readability
+problem.
+
+### Measured, before and after
+
+| Page | Before | After |
+| --- | --- | --- |
+| body-corporate-painting | **28.6** | **41.5** |
+| real-estate-painting | 36.4 | 45.0 |
+| exterior-painting | 37.1 | 43.9 |
+| commercial-painting | 37.8 | 42.9 |
+| roof-painting | 40.4 | 49.4 |
+| interior-painting | 41.8 | 47.6 |
+| homepage (`client/index.html`) | 44.5 | **49.5** |
+| kitchen-cabinet-resurfacing | 48.5 | 51.0 |
+| epoxy-flooring | 48.5 | 51.3 |
+| roof-fence-painting | 56.3 | 59.4 |
+| **average (9 service pages)** | **41.7** | **48.0** |
+
+Flesch reading ease. 60–70 is plain English; 30–50 is university level.
+
+### Method — sentence length, not vocabulary
+
+The dominant driver was sentence length: **22–31 words per sentence**, against 15–18 for plain
+English. Long comma-chained lists were the pattern, e.g. a **61-word** sentence on real-estate and a
+**58-word** one on interior. Every page is now **15.9–23.2**.
+
+Nothing was cut. No fact, figure, product name or claim changed — the same information is delivered
+in shorter sentences. **Zero titles and zero meta descriptions were touched**, per the standing rule
+that Google needs a stable title to settle a page's ranking.
+
+### ⚠️ A factual error found and fixed while rewriting
+
+The homepage read: *"Jetblack Painting was founded by Jimmy Demirci **and has spent 18+ years**
+painting homes and businesses…"* — attributing 18 years to the **business**. Jimmy's GBP records the
+business as opening **2 March 2015**, eleven years. The 18 years is **Jimmy's** time in the trade,
+which is how the site words it everywhere else (first person: "18 years I've been painting…").
+
+Rewritten to *"founded by Jimmy Demirci, **who has spent** 18+ years…"*. This is the same trap
+flagged in the GBP description entry earlier today. **"Jetblack Painting has 18 years" is false and
+must never be written.**
+
+### Preserved deliberately
+
+- **"glass-smooth"** on sprayed finishes — verified present after the rewrite. Not "flat", which is
+  a sheen level.
+- **Spray when maskable / brush when occupied.** "Cut in by hand" survives on the interior page but
+  correctly framed as the *occupied-property alternative*, not the default method — which is what
+  the standing context actually requires.
+- All five price figures on the homepage ($4,000 / $5,000 / $8,000 / $12,000 / $15,000) unchanged.
+  **`llms.txt` re-checked and still carries no price figures** — only the legitimate $10 million
+  public liability.
+
+### Verification
+
+Three layers regenerate **idempotently** (30 files changed, stable across two runs) · **491
+questions, 0 schema-vs-visible mismatches, 0 JSON-LD parse errors** · all 9 `.tsx` files and the
+generator pass a Prettier parse · **0 title and 0 description lines changed** · locked facts intact
+across 116 pages.
+
+Both layers were edited for every page: `client/src/pages/<Name>.tsx` **and** the `servicePages`
+array in `scripts/generate-static-pages.mjs`, which duplicates the same copy.
+
+### Method note
+
+`grep -c` paired with `|| echo 0` returns `"0\n0"` and breaks a numeric guard — it silently patched
+only the first file on the first attempt. Caught by verifying counts afterwards. Also: a
+case-sensitive grep for `low-odour` reported 0 when the text was sentence-cased to `Low-odour` —
+the false-failure mode the brief documents. **Always `-i`.**

@@ -3411,6 +3411,10 @@ the false-failure mode the brief documents. **Always `-i`.**
 
 ## 2026-09-02 — CORRECTION: the Yellow Pages listing already points at the live site
 
+> **Superseded the same day.** This entry revised the advice to "merge the duplicates" on the
+> assumption there were four listings. There is one. See the next entry — Yellow Pages is closed,
+> and there is nothing to merge.
+
 **The brief's Tier 0 item is stale and has been driving wrong advice.** It states: *"Yellow Pages AU
 (4 listings) and TrueLocal (2) still point at the DEAD Manus site. Cheapest legitimate win
 available."* That was measured **2026-08-19**.
@@ -3451,3 +3455,52 @@ editing is the reason that warning exists.
 several times in one day on the strength of a two-week-old measurement, against sources this sandbox
 cannot reach. Where a claim cannot be machine-checked here, say so at the point of giving the advice,
 not only in the log.
+
+---
+
+### 2026-09-02 — Yellow Pages Tier 0 is CLOSED. The brief was wrong on both counts.
+
+Jimmy searched `yellowpages.com.au` for "Jetblack Painting" in Australia and supplied screenshots.
+**"Showing 1-1 of 1". One listing. Correct details.**
+
+| Brief said | Actual |
+| --- | --- |
+| **4** Yellow Pages listings | **1** |
+| all pointing at the dead Manus site | correct website, plus working Call and Visit Website buttons |
+
+**There are no duplicates to merge and no URL to fix. Do not raise Yellow Pages again, and do not
+call them.** The listing shows name "Jetblack Painting", category "Painters & Decorators", "Serving
+Australia", OPEN until 5:00 pm.
+
+**Still unverified: TrueLocal.** The brief claims 2 listings pointing at the dead site. Given it was
+wrong about Yellow Pages on both count and content, **treat the TrueLocal figure as unverified
+until Jimmy checks it the same way** — search `truelocal.com.au` for "Jetblack Painting" and read
+the result count. Do not send him to phone them on the strength of this brief.
+
+### ⚠️ Process failure worth recording
+
+Tier 0 was quoted as "the cheapest legitimate win available" and ranked **above reviews and trade
+accreditation** in several messages across one day. It was based on a 2026-08-19 measurement of a
+site this sandbox cannot reach, and it was **wrong in every particular**. A phone script was drafted
+and Jimmy was told to ring 1800 359 321.
+
+**The rule going forward:** when advice rests on a figure that cannot be machine-checked from here,
+say so *in the advice*, and ask the user to confirm the figure **before** acting on it — not after.
+Thirty seconds of his checking beat two weeks of my confident repetition.
+
+### What this changes in priority order
+
+With Yellow Pages closed and TrueLocal unverified, **reviews are now the top item**, not second.
+That is consistent with everything else measured: GBP returned one search keyword in six months (the
+brand), Search Console shows zero clicks on 120 non-brand queries, and the listing sits at 17
+reviews.
+
+### Two small, optional improvements on the Yellow Pages listing itself
+
+Neither is worth a phone call; both are free if he is ever logged in there anyway.
+
+1. **"Serving Australia"** is very broad for a Mordialloc painter and does not match the 20 specific
+   service areas on his GBP. Narrowing it to Melbourne would be more consistent.
+2. **The listing image is a generic stock shopfront illustration**, not his logo or a real job.
+   Given the knowledge-panel image problem already logged, using real work photos wherever a profile
+   allows one is a standing improvement.

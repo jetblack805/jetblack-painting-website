@@ -35,7 +35,7 @@ export default function SprayVsBrushPaintingMelbourne() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Spray or Brush? When Each Belongs | Jetblack"
+        title="Spray or Brush? When Each Method Belongs | Jetblack"
         description="When spraying beats brushing and rolling on a Melbourne repaint — and when it doesn't. The trade-off is finish quality against disruption."
         canonical="https://jetblackpainting.com/blog/spray-vs-brush-painting-melbourne/"
         schema={articleSchema({

@@ -1,8 +1,8 @@
-<!-- Spray or Brush? When Each Belongs | Jetblack -->
+<!-- Spray or Brush? When Each Method Belongs | Jetblack -->
 <!-- Source: https://jetblackpainting.com/blog/spray-vs-brush-painting-melbourne/ -->
 <!-- When spraying beats brushing and rolling on a Melbourne repaint — and when it doesn't. The trade-off is finish quality against disruption. -->
 
-# Spray or Brush? When Each Belongs
+# Spray or Brush? When Each Method Belongs
 
 Homeowners often ask whether we spray or brush, expecting one to be the professional answer and the other the shortcut. It isn't like that. Both are proper methods, and the choice is decided by whether anyone is living in the house. Here is the rule we work to, and what each method actually does to the finish.
 
@@ -70,7 +70,7 @@ Yes, generally. Some material is lost to overspray and to the masking itself. Th
 
 On porous or textured exterior surfaces it helps. Spraying deposits the paint and back-rolling works it into the surface profile, which improves adhesion and evenness. On smooth, sound surfaces it is less critical.
 
-**Jetblack Painting** — Spray or Brush? When Each Belongs | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
+**Jetblack Painting** — Spray or Brush? When Each Method Belongs | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Blog](/blog/) | [Interior Painting](/services/interior-painting/) | [Kitchen Cabinet Resurfacing](/services/kitchen-cabinet-resurfacing/) | [Contact](/review-us/)
 

@@ -65,6 +65,18 @@ export function validatePost(p, file) {
     `${where}: description ${p.description.length} chars, max 158`,
   );
   assert(p.headline, `${where}: missing headline`);
+  // The static generator derives the article H1 and the BlogPosting headline
+  // from `title` with the brand suffix stripped (generate-static-pages.mjs),
+  // while the React page renders `headline`. If they differ, a crawler and the
+  // rendered pass see DIFFERENT H1s on the same URL. Caught live on
+  // 2026-09-03: "Spray or Brush? When Each Belongs" vs "...When Each Method
+  // Belongs". Enforced here so it cannot recur silently.
+  const derived = p.title.replace(/\s*\|\s*Jetblack(?: Painting)?$/, "").trim();
+  assert(
+    derived === p.headline,
+    `${where}: headline must equal title minus the brand suffix, or the static and React layers disagree.\n` +
+      `      title   -> ${JSON.stringify(derived)}\n      headline-> ${JSON.stringify(p.headline)}`,
+  );
   assert(p.excerpt, `${where}: missing excerpt (used on the blog index)`);
   assert(p.published && /^\d{4}-\d{2}-\d{2}$/.test(p.published), `${where}: bad published date`);
   assert(p.modified && /^\d{4}-\d{2}-\d{2}$/.test(p.modified), `${where}: bad modified date`);

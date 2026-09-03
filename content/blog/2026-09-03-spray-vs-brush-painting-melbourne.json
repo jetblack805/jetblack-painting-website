@@ -1,6 +1,6 @@
 {
   "slug": "spray-vs-brush-painting-melbourne",
-  "title": "Spray or Brush? When Each Belongs | Jetblack",
+  "title": "Spray or Brush? When Each Method Belongs | Jetblack",
   "headline": "Spray or Brush? When Each Method Belongs",
   "description": "When spraying beats brushing and rolling on a Melbourne repaint — and when it doesn't. The trade-off is finish quality against disruption.",
   "excerpt": "Spraying gives a finish brushing cannot match, but it needs an empty, maskable room. Here is the rule we actually work to, and why an occupied house is usually brushed and rolled.",
@@ -74,7 +74,13 @@
     }
   ],
   "serviceLinks": [
-    { "label": "Interior Painting", "href": "/services/interior-painting/" },
-    { "label": "Kitchen Cabinet Resurfacing", "href": "/services/kitchen-cabinet-resurfacing/" }
+    {
+      "label": "Interior Painting",
+      "href": "/services/interior-painting/"
+    },
+    {
+      "label": "Kitchen Cabinet Resurfacing",
+      "href": "/services/kitchen-cabinet-resurfacing/"
+    }
   ]
 }

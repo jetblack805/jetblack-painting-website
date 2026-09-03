@@ -3628,3 +3628,67 @@ Nothing crossed into the top 10, so **CTR remains untestable** — consistent wi
 ### Verdict
 
 No defect found; nothing changed on the site. The run's value is the measurement: **98.6% of impressions earn nothing**, and the constraint is unchanged — authority, and the map pack. With Yellow Pages closed, **reviews remain the top authority priority.**
+
+---
+
+## 2026-09-03 (20:05 UTC run) — Daily audit. Steps 0–6 clean. Review count verified at source.
+
+### Branch
+
+Started from `origin/main` (fd8ab81) carrying ONE unmerged commit — the coverage map
+(3418810, PR #245). Kept and rebased per the brief's rule, not discarded. `main` is
+already an ancestor, so no rebase was needed.
+
+### Steps 0–6: all clean, no site change made
+
+| Check | Result |
+| --- | --- |
+| Dependency parity | **77/77** in `pnpm-lock.yaml` |
+| Production | 200, `cf-cache HIT`, TTFB 0.51s |
+| Four-layer regeneration | **ZERO diffs** — idempotent |
+| Schema vs visible text | **119 pages, 506 questions, 0 mismatches** |
+| JSON-LD | 0 parse errors · **0 `aggregateRating` in static pages** |
+| Metadata | 0 duplicate titles/descriptions/H1s/canonicals · 0 missing · 0 over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted) · 0 keywords tags |
+| Near-duplicate (all 95) | avg **31.0%**, max **52.3%** — PASS (gate 45/55) |
+| Near-duplicate (87 indexable) | avg **30.4%**, max **48.3%** — PASS |
+| Site health | real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; real bundle 200 `text/javascript` |
+| Sitemap sweep | **109/109 → 200, ZERO redirect hops** |
+| AEO | `text/markdown` + `Vary: Accept` + `X-Robots-Tag: noindex`; normal Accept returns HTML; robots disallows only `/api/`; `ai-train=yes` intact |
+| `llms.txt` | byte-identical to `public/`; the three `$` matches are all the legitimate $10M liability. **No prices.** |
+
+### Step 7 — entity consistency, and one genuinely useful confirmation
+
+**REVIEW COUNT VERIFIED AT SOURCE.** Windsor's `google_my_business` connector returns
+`review_total_count: 17`, `review_average_rating_total: 5` — straight from Google's own
+API. Every hardcoded place on the site reads 17 and no stray 14/15 remains. This is now
+verified three independent ways (hardcoded audit, Jimmy's knowledge-panel screenshot,
+and now the GBP API). The brief's warning against ever lowering it to 15 stands, and is
+now backed by the authoritative source.
+
+**`location_service_area` returned `null` — NOT reported as a defect.** Jimmy's own GBP
+screenshot (logged 2026-09-01) shows **20 service areas set**, including Mordialloc, with
+"No location; deliveries and home services only". A null from one connector field does not
+outweigh a screenshot of the actual profile. Treating this as a Windsor field-population
+gap, not an empty profile. **Do not tell Jimmy his service areas are missing on the
+strength of this null** — that is exactly the false-alarm shape this log keeps recording.
+
+**Open, worth Jimmy's eye but unverified from here:** the site now lists **73** serviced
+suburbs (coverage map, PR #245) while GBP reportedly carries **20** service areas. If both
+figures are right that is a real consistency gap, and GBP service areas feed map
+prominence more directly than the site does. It cannot be confirmed from this sandbox —
+ask him rather than asserting it.
+
+### Data access
+
+GSC Wizard and Supermetrics both remain expired (confirmed 2026-09-02). **Windsor.ai is
+the only working source** and it covers Search Console AND Google Business Profile — the
+brief's claim that Supermetrics is "the ONLY source for GMB/Maps data" is now wrong, and
+Windsor should be treated as the primary for both. No fresh ranking sweep this run: one
+type of work per run, and this run's was entity consistency.
+
+### Verdict
+
+No defect found; nothing changed on the site. The coverage map shipped earlier today is
+live and serving 73 crawlable suburb links in the static layer. Constraint unchanged:
+authority and map prominence. **Reviews remain the top priority** — and the count is now
+confirmed at 17 from Google itself, so the target is unambiguous.

@@ -18,6 +18,11 @@ const articleMeta: Record<string, { published: string; modified: string; section
   "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
+  // <generated-blog-meta>
+  "/blog/spray-vs-brush-painting-melbourne": { published: "2026-09-03", modified: "2026-09-03", section: "Method" },
+  "/blog/painting-melbourne-winter": { published: "2026-09-04", modified: "2026-09-04", section: "Method" },
+  "/blog/paint-sheen-levels-explained": { published: "2026-09-05", modified: "2026-09-05", section: "Guide" },
+// </generated-blog-meta>
 };
 
 export default function Blog() {
@@ -102,7 +107,36 @@ export default function Blog() {
       category: "Exterior",
       readTime: "7 min read",
       slug: "/services/exterior-painting"
-    }
+    },
+    // <generated-blog-cards>
+    {
+      id: 1000,
+      title: "Matt, Low Sheen, Satin, Gloss: Which Goes Where",
+      excerpt: "Sheen decides how a wall handles light, scrubbing and imperfection. Picking it by appearance alone is how people end up with a hallway they cannot clean.",
+      date: "September 2026",
+      category: "Guide",
+      readTime: "6 min read",
+      slug: "/blog/paint-sheen-levels-explained"
+    },
+    {
+      id: 1001,
+      title: "Can You Paint Through a Melbourne Winter?",
+      excerpt: "Most exterior work can continue through winter, but the limits are real. Surface temperature and overnight condensation decide the day, not the month on the calendar.",
+      date: "September 2026",
+      category: "Method",
+      readTime: "6 min read",
+      slug: "/blog/painting-melbourne-winter"
+    },
+    {
+      id: 1002,
+      title: "Spray or Brush? When Each Method Belongs",
+      excerpt: "Spraying gives a finish brushing cannot match, but it needs an empty, maskable room. Here is the rule we actually work to, and why an occupied house is usually brushed and rolled.",
+      date: "September 2026",
+      category: "Method",
+      readTime: "6 min read",
+      slug: "/blog/spray-vs-brush-painting-melbourne"
+    },
+// </generated-blog-cards>
   ];
 
   return (

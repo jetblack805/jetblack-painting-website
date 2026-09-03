@@ -1,0 +1,234 @@
+{
+  "_readme": [
+    "Queue for the daily blog routine. It takes the first entry with status 'queued',",
+    "writes the post as content/blog/<slug>.json, runs the duplicate gate, and on a",
+    "pass marks it 'published'. On a gate failure it marks it 'rejected' with the",
+    "score and moves to the next topic — a rejected topic is one that turned out to",
+    "be a restatement of something already on the site.",
+    "",
+    "HONEST CEILING — read before adding filler.",
+    "These topics are things a Melbourne painter of 18 years actually knows and a",
+    "homeowner actually searches. That supply is finite. There are perhaps 60-80",
+    "genuinely distinct, genuinely useful articles about residential painting in one",
+    "city. At 30 posts a month this queue is exhausted in roughly ten to twelve",
+    "weeks. After that the choices are: slow down, expand scope (commercial, strata,",
+    "trade-facing), or start publishing recombinations that the duplicate gate will",
+    "reject anyway. Do not pad the queue to hit a number - an empty queue is a",
+    "signal, not a bug, and the routine reports it rather than inventing topics.",
+    "",
+    "Each topic carries an 'angle' because the topic alone is not enough to keep",
+    "posts distinct. The angle is the specific claim the article makes."
+  ],
+  "topics": [
+    {
+      "slug": "spray-vs-brush-painting-melbourne",
+      "title": "Spray or Brush? When Each Belongs",
+      "angle": "Jetblack's actual working rule: spray when the property is empty and maskable, brush and roll when people are living in it. The trade-off is finish quality against disruption, not one method being better.",
+      "section": "Method",
+      "status": "queued"
+    },
+    {
+      "slug": "painting-melbourne-winter",
+      "title": "Can You Paint Through a Melbourne Winter?",
+      "angle": "Yes, with constraints. Surface temperature and dew point matter more than air temperature; the real limits are drying windows and overnight condensation, not the calendar.",
+      "section": "Method",
+      "status": "queued"
+    },
+    {
+      "slug": "paint-sheen-levels-explained",
+      "title": "Matt, Low Sheen, Satin, Gloss: Which Goes Where",
+      "angle": "Sheen is a durability and light decision, not a taste one. Where each belongs room by room, and why 'flat' is a sheen level rather than a description of a smooth finish.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "why-exterior-paint-fails",
+      "title": "Why Exterior Paint Fails: Reading the Symptoms",
+      "angle": "Blistering, flaking, chalking and cracking each have a different cause and a different fix. Diagnosing which one you have before repainting is what stops it recurring.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "painting-over-dark-walls",
+      "title": "Painting Over Dark Walls Without Six Coats",
+      "angle": "Coverage is a primer problem, not a paint-quality problem. Tinted undercoat does in one coat what three topcoats will not.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "timber-window-frames-melbourne",
+      "title": "Why Timber Window Frames Fail First",
+      "angle": "Sills and lower rails take standing water and the most UV, so they fail years before the wall does. Spot repair versus full strip, and when each is right.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "low-odour-paint-family-home",
+      "title": "Painting With Kids and Pets in the House",
+      "angle": "Low-VOC and low-odour paints have closed most of the gap on durability. What actually reduces disruption is sequencing rooms and ventilation, not the product alone.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "rental-repaint-between-tenants",
+      "title": "Repainting a Rental Between Tenants",
+      "angle": "The brief is different from an owner-occupier repaint: turnaround and durability beat colour ambition, and a washable low sheen outlives a fashionable matt.",
+      "section": "Investment",
+      "status": "queued"
+    },
+    {
+      "slug": "cracks-that-keep-coming-back",
+      "title": "Cracks That Keep Coming Back",
+      "angle": "Cornice and join cracks are movement, not paint failure. Filler alone will always reopen; the fix depends on whether the movement is seasonal or structural.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "painting-render-melbourne",
+      "title": "Painting Rendered Walls Without Trapping Moisture",
+      "angle": "Render needs to breathe. Sealing it with the wrong membrane traps moisture behind the coating and causes the blistering people blame on the paint.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "choosing-a-white-paint",
+      "title": "Why Every White Looks Different in Your House",
+      "angle": "Whites carry undertones that shift with orientation and light. North and south facing rooms need different whites to read as the same colour.",
+      "section": "Design Tips",
+      "status": "queued"
+    },
+    {
+      "slug": "lead-paint-older-melbourne-homes",
+      "title": "Lead Paint in Pre-1970 Melbourne Homes",
+      "angle": "Sanding old paint without testing is the actual risk. How to identify likely lead layers and what changes about preparation when they are present.",
+      "section": "Safety",
+      "status": "queued"
+    },
+    {
+      "slug": "heritage-overlay-exterior-painting",
+      "title": "Painting a Home Under a Heritage Overlay",
+      "angle": "An overlay constrains colour and sometimes method. Check before quoting, because repainting a non-compliant scheme twice is the expensive outcome.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "paint-drying-versus-curing",
+      "title": "Dry to Touch Is Not Cured",
+      "angle": "Paint is touch-dry in hours and fully cured in weeks. Washing, taping or reinstalling hardware too early is a common way to ruin a good job.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "bathroom-painting-moisture",
+      "title": "Painting a Bathroom That Stays Painted",
+      "angle": "Ventilation decides the outcome more than the paint does. What to fix before painting, and why anti-mould primer is not optional on a bathroom ceiling.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "painting-brick-is-it-reversible",
+      "title": "Painting Brick: Know That It Is Permanent",
+      "angle": "Paint on brick is effectively irreversible - stripping is costly and rarely complete. Worth doing deliberately, not as a quick cosmetic fix.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "body-corporate-painting-process",
+      "title": "How a Body Corporate Repaint Actually Runs",
+      "angle": "The painting is the easy part. Scope agreement, access to occupied units and staged scheduling are what determine whether it finishes on time.",
+      "section": "Commercial",
+      "status": "queued"
+    },
+    {
+      "slug": "commercial-painting-after-hours",
+      "title": "Painting a Trading Business Without Closing It",
+      "angle": "After-hours and staged work costs more per hour and less overall, because the alternative is lost trading days.",
+      "section": "Commercial",
+      "status": "queued"
+    },
+    {
+      "slug": "front-door-repaint",
+      "title": "Repainting a Front Door Properly",
+      "angle": "A door is a small job with unusually visible failure. Removing hardware, working horizontally where possible, and respecting cure time before closing it.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "colour-matching-existing-paint",
+      "title": "Matching a Colour You No Longer Have",
+      "angle": "Scanning a chip gets close but ages and fades mislead the reader. Where to take the sample from, and why a patch test still matters.",
+      "section": "Design Tips",
+      "status": "queued"
+    },
+    {
+      "slug": "eaves-and-fascia-painting",
+      "title": "Eaves and Fascia: The Part Everyone Skips",
+      "angle": "Eaves are shaded, rarely washed by rain, and collect mould and dust. Skipping them is why a freshly painted house still looks tired.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "how-many-coats-do-you-need",
+      "title": "How Many Coats Do You Actually Need?",
+      "angle": "Two topcoats over a correct primer is the honest answer for most surfaces. Where a third genuinely earns its place, and where it is padding.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "fence-painting-versus-staining",
+      "title": "Fence: Paint It or Stain It?",
+      "angle": "Stain fails gracefully and recoats easily; paint looks sharper and fails badly. The right choice depends on how often you will maintain it.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "plasterboard-nail-pops",
+      "title": "Nail Pops and Visible Joins",
+      "angle": "New-build settlement pushes fixings through the surface in the first years. Fixing the fixing, not just the dent, is what stops it returning.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "second-storey-access-painting",
+      "title": "What Access Does to an Exterior Quote",
+      "angle": "Height, pitch and clearance drive scaffolding, and scaffolding drives cost more than paint does. Why two similar-looking houses quote very differently.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "rust-and-tannin-bleed-through",
+      "title": "Stains That Bleed Back Through Fresh Paint",
+      "angle": "Rust, tannin from cedar and water stains all reappear through water-based topcoats. A stain-blocking primer is the only reliable answer.",
+      "section": "Guide",
+      "status": "queued"
+    },
+    {
+      "slug": "kitchen-cabinet-finish-quality",
+      "title": "What Makes a Cabinet Finish Look Factory-Made",
+      "angle": "The glass-smooth look on cabinetry comes from spray application and dust control, not from a premium tin. Why brushed cabinet doors always read as brushed.",
+      "section": "Kitchen",
+      "status": "queued"
+    },
+    {
+      "slug": "preparing-a-house-for-sale-painting",
+      "title": "Painting Before You Sell: Where the Return Is",
+      "angle": "Buyers price visible condition. Entry, main living and street-facing exterior carry the return; repainting every bedroom rarely does.",
+      "section": "Investment",
+      "status": "queued"
+    },
+    {
+      "slug": "weatherboard-maintenance-cycle",
+      "title": "How Often Weatherboards Really Need Repainting",
+      "angle": "Orientation decides the cycle. The north and west elevations fail years before the south, and spot-recoating them beats waiting for the whole house.",
+      "section": "Exterior",
+      "status": "queued"
+    },
+    {
+      "slug": "what-a-painting-quote-should-contain",
+      "title": "Reading a Painting Quote Line by Line",
+      "angle": "Scope, not price, is where quotes differ. What each line should specify, and which omissions predict a dispute.",
+      "section": "Guide",
+      "status": "queued"
+    }
+  ]
+}

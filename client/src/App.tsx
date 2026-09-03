@@ -49,6 +49,11 @@ const KitchenCabinetResurfacingBlog = lazy(() => import("./pages/blog/KitchenCab
 const MouldRemediationPainting = lazy(() => import("./pages/blog/MouldRemediationPainting"));
 const ChoosingAPainterMelbourne = lazy(() => import("./pages/blog/ChoosingAPainterMelbourne"));
 const WeatherboardPaintingGuide = lazy(() => import("./pages/blog/WeatherboardPaintingGuide"));
+// <generated-blog-imports>
+const SprayVsBrushPaintingMelbourne = lazy(() => import("./pages/blog/SprayVsBrushPaintingMelbourne"));
+const PaintingMelbourneWinter = lazy(() => import("./pages/blog/PaintingMelbourneWinter"));
+const PaintSheenLevelsExplained = lazy(() => import("./pages/blog/PaintSheenLevelsExplained"));
+// </generated-blog-imports>
 const ArmadalePainters = lazy(() => import("./pages/ArmadalePainters"));
 const BerwickPainters = lazy(() => import("./pages/BerwickPainters"));
 const DandenongPainters = lazy(() => import("./pages/DandenongPainters"));
@@ -340,6 +345,11 @@ function Router() {
       <Route path={"/blog/mould-remediation-painting-melbourne"} component={MouldRemediationPainting} />
       <Route path={"/blog/how-to-choose-a-painter-melbourne"} component={ChoosingAPainterMelbourne} />
       <Route path={"/blog/how-to-paint-a-weatherboard-house-melbourne"} component={WeatherboardPaintingGuide} />
+      {/* <generated-blog-routes> */}
+      <Route path={"/blog/spray-vs-brush-painting-melbourne"} component={SprayVsBrushPaintingMelbourne} />
+      <Route path={"/blog/painting-melbourne-winter"} component={PaintingMelbourneWinter} />
+      <Route path={"/blog/paint-sheen-levels-explained"} component={PaintSheenLevelsExplained} />
+{/* </generated-blog-routes> */}
       <Route path={"/blog/best-paint-colors-melbourne"} component={BestPaintColours2025} />
       <Route path={"/blog/brighton-painters-guide"} component={BrightonPainters} />
       <Route path={"/blog/camberwell-painters-guide"} component={CamberwellPainters} />

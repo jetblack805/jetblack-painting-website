@@ -110,6 +110,11 @@ const ROUTES = [
   { path: "/blog/mould-remediation-painting-melbourne/",         priority: "0.5", changefreq: "yearly"  },
   { path: "/blog/how-to-choose-a-painter-melbourne/",            priority: "0.5", changefreq: "yearly"  },
   { path: "/blog/how-to-paint-a-weatherboard-house-melbourne/", priority: "0.5", changefreq: "yearly"  },
+  // <generated-blog-routes>
+  { path: "/blog/spray-vs-brush-painting-melbourne/", priority: "0.5", changefreq: "yearly" },
+  { path: "/blog/painting-melbourne-winter/", priority: "0.5", changefreq: "yearly" },
+  { path: "/blog/paint-sheen-levels-explained/", priority: "0.5", changefreq: "yearly" },
+// </generated-blog-routes>
   { path: "/faq/",                                              priority: "0.5", changefreq: "monthly" },
   // /review-us/ is deliberately absent: it is noindex (a thin utility page),
   // and listing a noindex URL in the sitemap sends Google contradictory signals.

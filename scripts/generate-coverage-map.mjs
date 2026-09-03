@@ -28,7 +28,14 @@
 //    The previous component hardcoded its own 90-entry coordinate list beside
 //    the existing 81-entry one. Two lists drift. This reads the real one.
 //
-// 4. NOINDEXED SUBURBS ARE EXCLUDED.
+// 4. SUBURBS JIMMY HAS TAKEN OFF THE HOMEPAGE ARE EXCLUDED.
+//    Toorak is organically unreachable from Mordialloc and Jimmy moved it to
+//    off-page channels on 2026-08-17, then asked twice for it off the homepage.
+//    The first version of this map put it back AND gave it a printed label.
+//    HOMEPAGE_EXCLUDED below is the list; the /painter-toorak/ page itself stays
+//    live, it is simply not featured from the homepage.
+//
+// 5. NOINDEXED SUBURBS ARE EXCLUDED.
 //    The eight Casey-corridor pages are deliberately noindex and absent from the
 //    sitemap. Linking them prominently from the homepage contradicts that.
 
@@ -77,9 +84,16 @@ function pageFor(key, name) {
   return null;
 }
 
+// Suburbs deliberately not featured on the homepage. Their pages stay live.
+const HOMEPAGE_EXCLUDED = new Set(["Toorak"]);
+
 const served = [];
-const skipped = { nopage: [], noindex: [] };
+const skipped = { nopage: [], noindex: [], excluded: [] };
 for (const e of entries) {
+  if (HOMEPAGE_EXCLUDED.has(e.name)) {
+    skipped.excluded.push(e.name);
+    continue;
+  }
   const p = pageFor(e.key, e.name);
   if (!p) {
     skipped.nopage.push(e.name);
@@ -135,7 +149,7 @@ const hqy = py(HQ.lat).toFixed(1);
 // Mordialloc is deliberately absent: the HQ marker already labels it, and
 // including it here printed the name twice, overlapping itself.
 const LABELLED = new Set([
-  "Brighton", "Toorak", "Sorrento", "Box Hill",
+  "Brighton", "Sorrento", "Box Hill", "Mentone",
   "Collingwood", "Bentleigh", "Camberwell", "Mornington", "Sandringham", "Frankston",
 ]);
 
@@ -228,7 +242,8 @@ if (changed) fs.writeFileSync(idxPath, next);
 
 console.log(
   `[coverage-map] ${served.length} suburbs plotted · ` +
-    `skipped ${skipped.noindex.length} noindexed (${skipped.noindex.join(", ") || "none"}) · ` +
+    `skipped ${skipped.noindex.length} noindexed · ` +
+    `${skipped.excluded.length} excluded from homepage (${skipped.excluded.join(", ") || "none"}) · ` +
     `${skipped.nopage.length} without a page · ` +
     `index.html ${changed ? "updated" : "unchanged"}`,
 );

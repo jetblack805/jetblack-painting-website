@@ -89,7 +89,6 @@ const homeSchema = [
       { "@type": "City", "name": "South Yarra" },
       { "@type": "City", "name": "Stonnington" },
       { "@type": "City", "name": "Templestowe" },
-      { "@type": "City", "name": "Toorak" },
       { "@type": "City", "name": "Wheelers Hill" }
     ],
     "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
@@ -146,7 +145,7 @@ export default function Home() {
           </h1>
           <p className="text-[#98989D] text-sm md:text-base font-light leading-relaxed">
             5-star rated, fully insured, and servicing 90+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.
-            Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and surrounding areas.
+            Based in Mordialloc, covering Bayside, Kingston, Greater Dandenong, Mentone, Parkdale, Aspendale, Brighton, Keysborough, and surrounding areas.
             Free quotes — call 0432 077 782.
           </p>
         </div>

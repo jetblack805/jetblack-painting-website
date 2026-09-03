@@ -8,7 +8,7 @@
 
 Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 90+ suburbs.
 We offer interior, exterior, commercial, roof, and cabinet painting for homeowners, landlords, and businesses.
-Based in Mordialloc, we cover Bayside, Kingston, Greater Dandenong, Brighton, Toorak, Keysborough, Dandenong, and all surrounding areas.
+Based in Mordialloc, we cover Bayside, Kingston, Greater Dandenong, Mentone, Parkdale, Aspendale, Brighton, Keysborough, and all surrounding areas.
 Call 0432 077 782 for a free painting quote.
 
 ## Services
@@ -28,7 +28,6 @@ Jetblack Painting services 90+ Melbourne suburbs across the southeast, Bayside, 
 
 - [Mordialloc](/painter-mordialloc/)
 - [Brighton](/painter-brighton/)
-- [Toorak](/painter-toorak/)
 - [Bentleigh](/painter-bentleigh/)
 - [Mornington Peninsula](/painter-mornington-peninsula/)
 - [Keysborough](/keysborough-painters/)
@@ -37,7 +36,7 @@ Jetblack Painting services 90+ Melbourne suburbs across the southeast, Bayside, 
 
 ## Service Area Coverage Map
 
-Jetblack Painting is based in Mordialloc VIC 3195 and services 73 Melbourne suburbs across
+Jetblack Painting is based in Mordialloc VIC 3195 and services 72 Melbourne suburbs across
 Bayside, Kingston, Glen Eira, Stonnington, the inner east, the southeast and the Mornington Peninsula.
 The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings measured from our Mordialloc base.
 
@@ -113,7 +112,6 @@ The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings me
 - [South Yarra](/painter-south-yarra/)
 - [St Kilda](/painter-st-kilda/)
 - [Thornbury](/painter-thornbury/)
-- [Toorak](/painter-toorak/)
 - [Waterways](/painter-waterways/)
 - [Windsor](/painter-windsor/)
 
@@ -161,7 +159,7 @@ Every job starts with a free, no-obligation site visit and a written quote that 
 ## Common Questions
 
 **Who are the best painters in Melbourne?**
-Jetblack Painting is a 5-star rated Melbourne painting company, founded by Jimmy Demirci, who has 18+ years of experience. We service 90+ suburbs including Mordialloc, Brighton, Toorak, Bentleigh and the Mornington Peninsula. All work is backed by a 5-year workmanship guarantee.
+Jetblack Painting is a 5-star rated Melbourne painting company, founded by Jimmy Demirci, who has 18+ years of experience. We service 90+ suburbs including Mordialloc, Mentone, Parkdale, Brighton, Bentleigh and the Mornington Peninsula. All work is backed by a 5-year workmanship guarantee.
 
 **Are you licensed and insured?**
 Yes. Jetblack Painting carries $10 million public liability insurance and every job is backed by a 5-year written workmanship guarantee.

@@ -3406,3 +3406,225 @@ array in `scripts/generate-static-pages.mjs`, which duplicates the same copy.
 only the first file on the first attempt. Caught by verifying counts afterwards. Also: a
 case-sensitive grep for `low-odour` reported 0 when the text was sentence-cased to `Low-odour` —
 the false-failure mode the brief documents. **Always `-i`.**
+
+---
+
+## 2026-09-02 — CORRECTION: the Yellow Pages listing already points at the live site
+
+> **Superseded the same day.** This entry revised the advice to "merge the duplicates" on the
+> assumption there were four listings. There is one. See the next entry — Yellow Pages is closed,
+> and there is nothing to merge.
+
+**The brief's Tier 0 item is stale and has been driving wrong advice.** It states: *"Yellow Pages AU
+(4 listings) and TrueLocal (2) still point at the DEAD Manus site. Cheapest legitimate win
+available."* That was measured **2026-08-19**.
+
+Jimmy checked today and reports that
+`https://www.yellowpages.com.au/mordialloc-vic/bpp/jetblack-painting-581728104` **links to the live
+site**. His live check supersedes the audit note, per the brief's own rule that if it contradicts
+measured reality, suspect the brief.
+
+**Not independently verified** — `yellowpages.com.au` returns connection failure (status 000) from
+this sandbox, exactly as the standing context says it blocks automated fetching. Recorded on Jimmy's
+word, which is the best evidence available.
+
+### What this changes
+
+I had repeatedly named the dead-URL fix as the cheapest available win, and ranked it above reviews
+and accreditation. **That ranking was based on a stale figure.** If the URLs are already correct,
+the remaining value is smaller than advertised.
+
+### What still stands
+
+**Duplicate consolidation, which is a different problem from the dead URL.** The note says four
+Yellow Pages listings and two TrueLocal. Jimmy has verified **one**. Two things remain open:
+
+1. **The other three Yellow Pages entries** — unverified; some may still carry the old URL. He was
+   asked to search `yellowpages.com.au` for "Jetblack Painting" and check each result before calling.
+2. **Four listings for one business is itself a defect**, independent of what they link to.
+   Duplicates split citation signals and create inconsistent NAP. Consolidating to one is the actual
+   remaining win.
+
+**Advice revised accordingly:** ask for a *merge*, not a URL correction, and above all do not create
+a new listing — the standing note that Jimmy has a repeated pattern of creating duplicates instead of
+editing is the reason that warning exists.
+
+### Lesson
+
+**Re-verify a Tier 0 item before citing it as the top priority.** This one was quoted as settled fact
+several times in one day on the strength of a two-week-old measurement, against sources this sandbox
+cannot reach. Where a claim cannot be machine-checked here, say so at the point of giving the advice,
+not only in the log.
+
+---
+
+### 2026-09-02 — Yellow Pages Tier 0 is CLOSED. The brief was wrong on both counts.
+
+Jimmy searched `yellowpages.com.au` for "Jetblack Painting" in Australia and supplied screenshots.
+**"Showing 1-1 of 1". One listing. Correct details.**
+
+| Brief said | Actual |
+| --- | --- |
+| **4** Yellow Pages listings | **1** |
+| all pointing at the dead Manus site | correct website, plus working Call and Visit Website buttons |
+
+**There are no duplicates to merge and no URL to fix. Do not raise Yellow Pages again, and do not
+call them.** The listing shows name "Jetblack Painting", category "Painters & Decorators", "Serving
+Australia", OPEN until 5:00 pm.
+
+**Still unverified: TrueLocal.** The brief claims 2 listings pointing at the dead site. Given it was
+wrong about Yellow Pages on both count and content, **treat the TrueLocal figure as unverified
+until Jimmy checks it the same way** — search `truelocal.com.au` for "Jetblack Painting" and read
+the result count. Do not send him to phone them on the strength of this brief.
+
+### ⚠️ Process failure worth recording
+
+Tier 0 was quoted as "the cheapest legitimate win available" and ranked **above reviews and trade
+accreditation** in several messages across one day. It was based on a 2026-08-19 measurement of a
+site this sandbox cannot reach, and it was **wrong in every particular**. A phone script was drafted
+and Jimmy was told to ring 1800 359 321.
+
+**The rule going forward:** when advice rests on a figure that cannot be machine-checked from here,
+say so *in the advice*, and ask the user to confirm the figure **before** acting on it — not after.
+Thirty seconds of his checking beat two weeks of my confident repetition.
+
+### What this changes in priority order
+
+With Yellow Pages closed and TrueLocal unverified, **reviews are now the top item**, not second.
+That is consistent with everything else measured: GBP returned one search keyword in six months (the
+brand), Search Console shows zero clicks on 120 non-brand queries, and the listing sits at 17
+reviews.
+
+### Two small, optional improvements on the Yellow Pages listing itself
+
+Neither is worth a phone call; both are free if he is ever logged in there anyway.
+
+1. **"Serving Australia"** is very broad for a Mordialloc painter and does not match the 20 specific
+   service areas on his GBP. Narrowing it to Melbourne would be more consistent.
+2. **The listing image is a generic stock shopfront illustration**, not his logo or a real job.
+   Given the knowledge-panel image problem already logged, using real work photos wherever a profile
+   allows one is a standing improvement.
+
+---
+
+### 2026-09-02 — The daily audit brief itself was corrected. Four stale claims removed.
+
+Closing Yellow Pages in this log was not enough. The **daily SEO audit routine**
+(`trig_01FUpfmKU1BRp5CDgoEhjbU9`, fires 20:05 UTC) carries a ~24,000-character brief in its prompt,
+and that brief still contained the disproven claim. It spawns a **fresh session** each night with no
+memory of this conversation, so it would have told Jimmy to ring the Yellow Pages merge line every
+morning indefinitely.
+
+Audited the whole brief line by line against the repo. **Four claims were stale**, each verified
+before editing:
+
+| Brief said | Repo says | Risk if left |
+| --- | --- | --- |
+| Tier 0: YP **4 listings** on the dead Manus site, "cheapest legitimate win", merge line 1800 359 321 | **1** listing, correct NAP, live URL | Daily advice to fix a non-existent problem |
+| `Content-Signal: search=yes, ai-train=no` is deliberate | both `robots.txt` files read **`ai-train=yes`** | A run "restores" `no`, silently undoing Jimmy's decision |
+| LOCKED FACTS: **"13+ years"** | `13+ years` appears **nowhere**; `18+ years` appears **27×** | A run "corrects" the site down to a false lower figure |
+| Readability poor site-wide, "open, unqueued, do not start without go-ahead" | done and merged (PR #241) | A run redoes a finished rewrite, or extends it to the 95 suburb pages and breaches the duplicate gate |
+
+The `13+ years` one is the most dangerous of the four: it is a **locked fact**, so a run is
+instructed to enforce it across eight files. It would have overwritten a true figure with a false
+one, sitewide, with a green build. The replacement now also states *whose* 18 years they are —
+Jimmy's time in the trade, **not** the business's age (opened 2 March 2015) — which is the exact trap
+PR #241 caught on the homepage.
+
+**Applied via `update_trigger`, prompt only.** Name, cron, model and enabled state untouched; verified
+byte-identical to the intended text; 4 lines changed of 167, everything else preserved. Also deleted
+the finished check-in routine for the merged PR #241, which was recirculating the same stale Tier 0
+paragraph on its own schedule, and unsubscribed from that PR.
+
+**The general failure, which is the point of this entry.** A correction is not finished when the log
+is updated. Anything that **replays** — a routine's stored prompt, a scheduled brief, a saved
+checklist — holds its own copy of the claim and will keep asserting it after the log has moved on.
+The brief already carries the right instruction at the top (*"If this brief and the log disagree, the
+log wins"*), but that only helps a run that reads the log carefully enough to notice a contradiction
+it was not looking for. **Fix the replaying copy, not just the record.**
+
+---
+
+## 2026-09-02 (20:05 UTC run) — Daily audit. Both paid ranking sources expired; Windsor.ai carried the run.
+
+### Steps 0–6: all clean
+
+| Check | Result |
+| --- | --- |
+| Dependency parity | **77/77** present in `pnpm-lock.yaml` |
+| Production serving latest `main` | 200, `cf-cache HIT`, homepage serves the corrected *"who has spent 18+ years"* |
+| Three-layer regeneration | **ZERO diffs** — idempotent |
+| Schema vs visible text | **116 pages, 491 questions, 0 mismatches** |
+| JSON-LD | 0 parse errors · 0 `aggregateRating` in static pages · 0 missing required fields |
+| Metadata | 0 duplicate titles/descriptions/H1s/canonicals · 0 missing · 0 over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted) · 0 keywords tags |
+| Site health | real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; real hashed bundles 200 with correct MIME |
+| Sitemap sweep | **106/106 → 200, ZERO redirect hops** |
+| AEO | `text/markdown` + `Vary: Accept` + `X-Robots-Tag: noindex`; normal Accept returns HTML; twin body current; robots disallows only `/api/` |
+| `llms.txt` | byte-identical to `public/`; the three `$` matches are all the legitimate $10M liability. **No prices.** |
+| `robots.txt` | byte-identical; `Content-Signal: … ai-train=yes` intact |
+| Review count | **17** everywhere checked |
+
+### Two brief figures are stale — the log supersedes them
+
+1. **Sitemap is 106, not 115.** Not a defect: 115 − 8 Casey-corridor pages noindexed and removed − the Bentleigh East merge = 106. All 106 resolve 200 with no hops. A future run must not hunt for nine "missing" URLs. *(Recorded here rather than edited into the routine — the brief's own rule is that the log wins.)*
+2. **Suburb-page count is 95**, and **8 of them are noindexed** (dandenong, clyde, greater-dandenong, hampton-park, endeavour-hills, berwick, clyde-north, cranbourne), leaving **87 indexable**.
+
+### ⚠️ A near-duplicate FALSE FAILURE I generated and caught
+
+A first pass measured **57.8%** on cranbourne ↔ narre-warren against the 55% gate, and would have been reported as a regression. It was my method, not the site: I neutralised only each page's **own** suburb name, leaving *neighbouring* suburb names in the prose — and adjacent suburbs cross-link, so the shared tokens inflate the score.
+
+With suburb names neutralised **globally**, as "suburb names neutralised" actually means:
+
+| Population | avg worst-twin | max | Gate 45% / 55% |
+| --- | --- | --- | --- |
+| All 95 suburb pages | **31.0%** | 52.3% | PASS |
+| 87 indexable only | **30.4%** | 48.3% | PASS |
+
+The worst pair also involves `painter-cranbourne`, which is **noindexed and absent from the sitemap** — it cannot create a duplicate-content problem in the index. **Method note for future runs: neutralise every suburb token across every page, and measure the indexable population.**
+
+### ⚠️ BOTH paid ranking sources are dead
+
+- **GSC Wizard** — `payment_required`, trial ended. This was the brief's **PRIMARY** source.
+- **Supermetrics** — `TRIAL_EXPIRED`, expired **2026-08-25** (team 1902861). The brief predicted ~08-24 and said to tell Jimmy. **Telling him.**
+- **Windsor.ai `searchconsole` WORKS** and carried this run — 1,631 queries returned. It is not listed as a ranking source in the brief; it should be. Windsor is now the only working ranking source.
+
+### THE FINDING: 14,486 non-brand impressions, ZERO clicks
+
+87 days (2026-06-04 → 08-30), the same window length as the baseline, shifted two weeks later.
+
+**1,631 queries. Exactly ONE earns clicks.**
+
+| | impressions | clicks |
+| --- | --- | --- |
+| `jetblack painting` (brand) | 203 | **35** |
+| Everything else (1,630 queries) | **14,486** | **0** |
+
+**100% of the site's clicks come from one branded query.** This is the brief's off-page-authority diagnosis, measured harder than before.
+
+### Impressions roughly DOUBLED while positions diluted
+
+| Suburb | impr now | impr base | pos now | pos base | move |
+| --- | --- | --- | --- | --- | --- |
+| Collingwood | 347 | 129 | 17.1 | 17.65 | ↑ +0.6 |
+| Sorrento | 254 | 100 | 14.1 | 7.13 | ↓ −7.0 |
+| Murrumbeena | 200 | 86 | 18.6 | 17.00 | ↓ −1.6 |
+| Highett | 165 | 85 | 17.2 | 17.32 | · +0.2 |
+| Donvale | 169 | 49 | 20.7 | 16.63 | ↓ −4.1 |
+| Mordialloc | 158 | 77 | 25.8 | 29.18 | ↑ +3.4 |
+| Patterson Lakes | 157 | 39 | 22.2 | 6.83 | ↓ −15.4 |
+| Mentone | 102 | 61 | 23.2 | 24.82 | ↑ +1.6 |
+| McKinnon | 84 | 57 | 14.0 | 11.19 | ↓ −2.9 |
+| Dromana | 49 | 38 | 22.1 | 19.53 | ↓ −2.5 |
+| Aspendale | 31 | 21 | 13.5 | 10.00 | ↓ −3.5 |
+
+**Do not read the position column as a ranking collapse.** Impressions rose 2–4× on the same-length window. A page that starts surfacing for many more queries and locations appears in more marginal contexts, which pulls average position down arithmetically even when nothing lost ground. Eight of eleven fell on position while every one of them gained impressions — that pattern is dilution, not decline. It is also a **different data source** from the baseline. Treat this table as a new Windsor-based baseline, not a like-for-like delta.
+
+### Striking distance (8–18, ≥20 impressions)
+
+`painters collingwood` 189 @ 16.2 · `painters sorrento` 147 @ 13.3 · `painters murrumbeena` 107 @ 17.5 · `painter highett` 53 @ 15.7 · `painters highett` 50 @ 16.7 · `house painters mckinnon` 36 @ 11.0 · `house painters sorrento` 21 @ **8.8** (closest to page 1).
+
+Nothing crossed into the top 10, so **CTR remains untestable** — consistent with every prior run.
+
+### Verdict
+
+No defect found; nothing changed on the site. The run's value is the measurement: **98.6% of impressions earn nothing**, and the constraint is unchanged — authority, and the map pack. With Yellow Pages closed, **reviews remain the top authority priority.**

@@ -115,16 +115,35 @@ export function validatePost(p, file) {
 /** Load every post, oldest first. */
 export function loadPosts() {
   if (!fs.existsSync(POSTS_DIR)) return [];
-  return fs
+  const posts = fs
     .readdirSync(POSTS_DIR)
     .filter((f) => f.endsWith(".json"))
     .sort()
     .map((f) => {
       const full = path.join(POSTS_DIR, f);
       const p = JSON.parse(fs.readFileSync(full, "utf8"));
+      p._file = f;
       return validatePost(p, full);
     })
     .sort((a, b) => (a.published < b.published ? -1 : a.published > b.published ? 1 : 0));
+
+  // Two JSON files claiming the same slug would silently overwrite one another's
+  // page and register the same route twice. This is a live risk because the daily
+  // routine names files <date>-<slug>.json: if a topic is left marked "queued"
+  // after it has already been published, the next run writes it again under a new
+  // date. Caught on 2026-09-03 with all three seeded topics still marked queued.
+  const seen = new Map();
+  for (const p of posts) {
+    if (seen.has(p.slug)) {
+      throw new Error(
+        `[blog-posts] duplicate slug "${p.slug}" in ${seen.get(p.slug)} and ${p._file} — ` +
+          `a topic was published twice. Delete the newer file and mark the topic "published" ` +
+          `in content/blog-topics.json.`,
+      );
+    }
+    seen.set(p.slug, p._file);
+  }
+  return posts;
 }
 
 export const route = (p) => `/blog/${p.slug}`;

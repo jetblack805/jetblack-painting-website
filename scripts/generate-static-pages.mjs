@@ -1,5 +1,18 @@
 import fs from "node:fs";
 import path from "node:path";
+import {
+  loadPosts,
+  toArticlePages,
+  toArticleMeta,
+  toArticleServiceLinks,
+  toBlogIndexArticles,
+} from "./blog-posts.mjs";
+
+// Programmatically published posts (content/blog/*.json). The seven
+// hand-written articles below predate this and stay as literals; generated
+// posts are merged into the same four structures so downstream code cannot
+// tell the difference.
+const generatedPosts = loadPosts();
 
 // Load site-wide constants from client/src/site-config.json so the same
 // values can be used by both the static generator and the client app.
@@ -1807,6 +1820,7 @@ const articleMeta = {
   "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
   "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
+  ...toArticleMeta(generatedPosts),
 };
 
 // The service page(s) each article should point at. Previously every article
@@ -1844,6 +1858,7 @@ const articleServiceLinks = {
     { label: "Exterior Painting", href: "/services/exterior-painting/" },
     { label: "Roof & Fence Painting", href: "/services/roof-fence-painting/" },
   ],
+  ...toArticleServiceLinks(generatedPosts),
 };
 
 // Titles and bodies must match the `posts` array in client/src/pages/Blog.tsx
@@ -1887,6 +1902,7 @@ const blogIndexArticles = [
     href: "/blog/how-to-paint-a-weatherboard-house-melbourne/",
     body: "Preparation, priming bare timber, caulking and the right exterior paints — how weatherboard is painted so it lasts 7-10 years, not one season.",
   },
+  ...toBlogIndexArticles(generatedPosts),
 ];
 
 writePage(
@@ -2487,6 +2503,7 @@ const articlePages = [
       },
     ],
   },
+  ...toArticlePages(generatedPosts),
 ];
 
 for (const article of articlePages) {

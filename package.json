@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "generate-static-pages": "node scripts/generate-static-pages.mjs",
     "generate-blog": "node scripts/generate-blog.mjs",
+    "generate-coverage-map": "node scripts/generate-coverage-map.mjs",
     "check-blog-duplicates": "node scripts/check-blog-duplicates.mjs",
     "generate-images": "node scripts/generate-images.mjs",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",

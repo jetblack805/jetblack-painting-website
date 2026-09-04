@@ -10,18 +10,21 @@ import { lazy, Suspense } from "react";
 
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
-// Jimmy's own job, supplied 2026-09-04: a shower base and a bathtub whose
-// original coating had failed back to the pink undercoat, stripped and
-// refinished. Real before/after of THIS service — it replaced a spray-booth
-// stand-in that only showed the process. The pair is the most persuasive thing
-// on the page, so it sits above the copy.
+// Jimmy's own job: a bathtub whose original coating had worn back to the pink
+// undercoat, stripped and refinished. Same tub, same viewpoint, so the pair
+// carries the argument on its own — this is the most persuasive thing on the
+// page and it sits above the copy.
 //
-// Still a .jpg rather than the .webp + 900w pair every other gallery image
-// uses: this environment has no image tooling at all (no PIL, ImageMagick,
-// cwebp or sharp, and both PyPI and npm are blocked), so it could not be
-// converted or given responsive variants. At 1024x1365 and 228KB that is
-// acceptable, but it should be converted when tooling is available.
-import imgBeforeAfter from "@/assets/images/bathroom-resurfacing-before-after.jpg";
+// These replaced a phone-composite JPEG with a marker-pen caption burnt into
+// it. Both originals were 5712x4284 and ~3.5MB with EXIF orientation 6, and
+// this environment has no image tooling, so they sat unusable until
+// scripts/convert-photo.mjs started using headless Chromium as the pipeline.
+// That script applies the EXIF rotation during decode — without it the pair
+// would have shipped sideways.
+import imgBathBefore from "@/assets/images/gallery-bathroom-bath-before.webp";
+import imgBathBefore900 from "@/assets/images/gallery-bathroom-bath-before-900.webp";
+import imgBathAfter from "@/assets/images/gallery-bathroom-bath-after.webp";
+import imgBathAfter900 from "@/assets/images/gallery-bathroom-bath-after-900.webp";
 
 const DESCRIPTION =
   "Bathroom vanity, tile and bathtub resurfacing across Melbourne. Durable 2-pack coatings that renew a dated bathroom without a full strip-out. Free quotes.";
@@ -111,23 +114,42 @@ export default function BathroomTileResurfacing() {
 
       <section className="py-12 bg-[#131316]">
         <div className="container">
-          <figure className="m-0 max-w-2xl">
-            <img
-              src={imgBeforeAfter}
-              width={1024}
-              height={1365}
-              loading="lazy"
-              decoding="async"
-              alt="Before and after of a Melbourne bathroom resurfaced by Jetblack Painting: a shower base and a bathtub whose original coating had worn back to the pink undercoat, refinished in white"
-              className="w-full rounded-lg"
-            />
-            <figcaption className="text-[#8B8B90] text-sm mt-3">
-              A shower base and bathtub on the same job. The original coating had worn through to
-              the pink undercoat in the wet zones — the areas that take standing water always fail
-              first. Stripped back, prepared and refinished, with the tiling and the plumbing left
-              exactly where they were.
-            </figcaption>
-          </figure>
+          <div className="grid gap-4 md:grid-cols-2">
+            <figure className="m-0">
+              <img
+                src={imgBathBefore}
+                srcSet={`${imgBathBefore900} 900w, ${imgBathBefore} 1400w`}
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1400}
+                height={1867}
+                loading="lazy"
+                decoding="async"
+                alt="A Melbourne bathtub before resurfacing, its original coating worn through to the pink undercoat across the base"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-[#8B8B90] text-sm mt-3">
+                Before. The original coating has worn through to the pink undercoat across the
+                base — the part that holds standing water always fails first.
+              </figcaption>
+            </figure>
+            <figure className="m-0">
+              <img
+                src={imgBathAfter}
+                srcSet={`${imgBathAfter900} 900w, ${imgBathAfter} 1400w`}
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1400}
+                height={1867}
+                loading="lazy"
+                decoding="async"
+                alt="The same bathtub after resurfacing by Jetblack Painting, refinished in white with the tiling and plumbing left in place"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-[#8B8B90] text-sm mt-3">
+                After. Stripped, prepared and refinished. The tiling, the tapware and the plumbing
+                are exactly where they were — nothing was removed.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

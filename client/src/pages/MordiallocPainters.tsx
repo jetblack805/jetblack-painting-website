@@ -143,6 +143,18 @@ export default function MordiallocPainters() {
       suburb={suburb}
       title="Mordialloc Painters | Coastal Painting | Jetblack Painting"
       description="Mordialloc painters based in the 3195 — beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782."
+      projectSummary={`Jimmy on an exterior repaint here in ${suburb}. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a ${suburb} quote gets done on site rather than estimated over the phone.`}
+      projectImages={[
+        {
+          src: "/projects/project-mordialloc-exterior-repaint-jimmy.webp",
+          small: "/projects/project-mordialloc-exterior-repaint-jimmy-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Jimmy Demirci of Jetblack Painting cutting in by hand around a downpipe during an exterior repaint in ${suburb}, with Dulux masking film protecting the windows`,
+          caption:
+            "Cutting in around the downpipe by hand. The windows are masked before a brush is opened — the preparation is most of the day, and it is what decides whether the edges still look sharp in five years.",
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Waterways", link: "/painter-waterways" },
         { name: "Parkdale", link: "/painter-parkdale" },

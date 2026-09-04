@@ -3817,3 +3817,53 @@ variant, matching every other gallery image. Both carry **EXIF orientation 6**
 while resizing will silently land them sideways.
 
 `/services/property-maintenance/` still has no photograph of its own work.
+
+### 2026-09-04 (later still) — image pipeline solved, four real photos live
+
+The blocker was that this environment has **no image tooling at all** — no
+ImageMagick, PIL, vips, cwebp or sharp, with PyPI and npm both blocked. Phone
+photos arrive at 4032x3024 / 5712x4284 and 3.5-4.5MB, which cannot go on pages
+tuned for LCP.
+
+**Solution: `scripts/convert-photo.mjs` uses headless Chromium as the image
+pipeline.** Playwright's Chromium is installed, and a `<canvas>` resizes and
+encodes WebP. `OUT=projects` switches between the repo's two conventions
+(`client/src/assets/images` + `-900` for imported gallery images,
+`public/projects` + `-800` for suburb project photos referenced by URL).
+
+**EXIF orientation was the trap, and it was live.** Jimmy's Safety Beach pair
+had orientation **6 on the BEFORE and 1 on the AFTER** — a naive resize would
+have shipped one sideways and one upright, and the pair would not have matched.
+Loading through an `<img>` makes Chromium apply the flag during decode, so
+`naturalWidth/Height` report corrected dimensions and the rotation is baked into
+the output pixels. Verified by rendering the outputs and looking at them, not by
+trusting the dimensions.
+
+| Photo | Original | Output |
+| --- | --- | --- |
+| Safety Beach before | 4032x3024, 4.54MB, orient 6 | 1400x1867 + 800w, 395KB |
+| Safety Beach after | 4032x3024, 3.57MB, orient 1 | 1400x1050 + 800w, 221KB |
+| Bath before | 5712x4284, 3.66MB, orient 6 | 1400x1867 + 900w, 62KB |
+| Bath after | 5712x4284, 3.44MB, orient 6 | 1400x1867 + 900w, 38KB |
+
+8.1MB of originals became 716KB of full-size WebP.
+
+**Placed:** the bath pair replaced the phone-composite JPEG on
+`/services/bathroom-tile-resurfacing/` — matched viewpoint, no burnt-in marker
+caption, proper WebP with a srcSet. The Safety Beach render-and-roof pair went
+to `/painter-safety-beach/` via `projectImages`, which the static generator also
+emits, so both layers carry the images with alt text.
+
+**Not usable:** Jimmy also sent two Instagram screenshots (1206x2622) of the same
+Safety Beach job, carrying the iOS status bar, the post counter and a "Boost
+post" button. Those were declined and the originals requested instead.
+
+`/services/property-maintenance/` still has no photograph of its own work.
+
+**Mordialloc got its first photo.** Jimmy on an exterior repaint in the home
+suburb — branded workwear, Dulux masking film on the windows, cutting in by hand
+around a downpipe. 2048x1536, EXIF orientation 6, converted to 1400x1867 + 800w
+WebP (171KB). `/painter-mordialloc/` had no images at all, which mattered because
+it is the highest-priority page on the site: the map-pack strategy rests on
+proximity to Mordialloc, and the owner visibly working there is the most direct
+trust signal available for it.

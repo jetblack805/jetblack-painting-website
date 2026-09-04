@@ -113,6 +113,7 @@ const ROUTES = [
   // <generated-blog-routes>
   { path: "/blog/spray-vs-brush-painting-melbourne/", priority: "0.5", changefreq: "yearly" },
   { path: "/blog/painting-melbourne-winter/", priority: "0.5", changefreq: "yearly" },
+  { path: "/blog/why-exterior-paint-fails/", priority: "0.5", changefreq: "yearly" },
   { path: "/blog/paint-sheen-levels-explained/", priority: "0.5", changefreq: "yearly" },
 // </generated-blog-routes>
   { path: "/faq/",                                              priority: "0.5", changefreq: "monthly" },

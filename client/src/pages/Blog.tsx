@@ -21,6 +21,7 @@ const articleMeta: Record<string, { published: string; modified: string; section
   // <generated-blog-meta>
   "/blog/spray-vs-brush-painting-melbourne": { published: "2026-09-03", modified: "2026-09-03", section: "Method" },
   "/blog/painting-melbourne-winter": { published: "2026-09-04", modified: "2026-09-04", section: "Method" },
+  "/blog/why-exterior-paint-fails": { published: "2026-09-04", modified: "2026-09-04", section: "Guide" },
   "/blog/paint-sheen-levels-explained": { published: "2026-09-05", modified: "2026-09-05", section: "Guide" },
 // </generated-blog-meta>
 };
@@ -120,6 +121,15 @@ export default function Blog() {
     },
     {
       id: 1001,
+      title: "Why Exterior Paint Fails: Reading the Symptoms",
+      excerpt: "Exterior paint does not just wear out. It fails in specific patterns, and each pattern points at a different cause. Here is how to read what your walls are telling you before anyone opens a tin.",
+      date: "September 2026",
+      category: "Guide",
+      readTime: "7 min read",
+      slug: "/blog/why-exterior-paint-fails"
+    },
+    {
+      id: 1002,
       title: "Can You Paint Through a Melbourne Winter?",
       excerpt: "Most exterior work can continue through winter, but the limits are real. Surface temperature and overnight condensation decide the day, not the month on the calendar.",
       date: "September 2026",
@@ -128,7 +138,7 @@ export default function Blog() {
       slug: "/blog/painting-melbourne-winter"
     },
     {
-      id: 1002,
+      id: 1003,
       title: "Spray or Brush? When Each Method Belongs",
       excerpt: "Spraying gives a finish brushing cannot match, but it needs an empty, maskable room. Here is the rule we actually work to, and why an occupied house is usually brushed and rolled.",
       date: "September 2026",

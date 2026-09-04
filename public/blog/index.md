@@ -52,6 +52,10 @@ Spraying gives a finish brushing cannot match, but it needs an empty, maskable r
 
 Most exterior work can continue through winter, but the limits are real. Surface temperature and overnight condensation decide the day, not the month on the calendar.
 
+### Why Exterior Paint Fails: Reading the Symptoms
+
+Exterior paint does not just wear out. It fails in specific patterns, and each pattern points at a different cause. Here is how to read what your walls are telling you before anyone opens a tin.
+
 ### Matt, Low Sheen, Satin, Gloss: Which Goes Where
 
 Sheen decides how a wall handles light, scrubbing and imperfection. Picking it by appearance alone is how people end up with a hallway they cannot clean.
@@ -69,6 +73,7 @@ Open any article below for the full guide.
 - [How to Paint a Weatherboard House: A Melbourne Guide](/blog/how-to-paint-a-weatherboard-house-melbourne/)
 - [Spray or Brush? When Each Method Belongs](/blog/spray-vs-brush-painting-melbourne/)
 - [Can You Paint Through a Melbourne Winter?](/blog/painting-melbourne-winter/)
+- [Why Exterior Paint Fails: Reading the Symptoms](/blog/why-exterior-paint-fails/)
 - [Matt, Low Sheen, Satin, Gloss: Which Goes Where](/blog/paint-sheen-levels-explained/)
 
 **Jetblack Painting** — Jetblack Painting Blog | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)

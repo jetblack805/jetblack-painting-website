@@ -3692,3 +3692,39 @@ No defect found; nothing changed on the site. The coverage map shipped earlier t
 live and serving 73 crawlable suburb links in the static layer. Constraint unchanged:
 authority and map prominence. **Reviews remain the top priority** — and the count is now
 confirmed at 17 from Google itself, so the target is unambiguous.
+
+---
+
+### 2026-09-04 — Weekly GBP posting routine (`trig_01CYjqUXPSeJTBAVvC5mKa51`)
+
+Jimmy asked for a Google Business Profile post every week. Fires **Tuesdays 23:00 UTC**
+(Wednesday ~9am Melbourne), first run 2026-09-09.
+
+**It is bound to the interactive session, not a fresh one, and that is deliberate.**
+`create_trigger` rejected the `connectors` parameter on this account — fresh-session
+routines here cannot carry the Windsor.ai connector, and Windsor is the only route to the
+GBP write actions. A fresh-session routine would have fired with no way to reach the
+profile and produced nothing, which is exactly how the daily blog routine failed twice.
+Self-binding keeps the connector.
+
+**Do not create a second posting routine.** The daily SEO audit and the daily blog routine
+must not publish GBP posts; posting is this routine's job alone.
+
+Guardrails written into it: read the last twelve months of posts and refuse to repeat a
+theme from the most recent eight; **no prices, discounts or percentages** in any post (the
+28 Jul 2026 post carried a "save 10%" offer — that was Jimmy's, not ours to repeat);
+never mention Toorak, Kew, Camberwell, Hawthorn or Malvern; verify any `LEARN_MORE` URL
+returns 200 before linking it; text only, no photo, because picking blind from the gallery
+risks re-surfacing the empty-warehouse-floor image; and confirm the published post id
+before reporting success.
+
+An honest skip is an allowed outcome. Fifty-two posts a year about one trade converge
+fast, and a recycled post is worse than none.
+
+### Why posting matters here, and how much
+
+GBP posts are an **activity/prominence** signal, which is a real but modest map-pack
+factor. They are not a substitute for the binding constraint. Recorded so nobody oversells
+it later: as at 2026-09-03 Jimmy had posted **three times in six months** (24 May, 28 Jul,
+4 Aug), so weekly is a genuine step up from dormant — but it will not on its own move him
+into a map pack he is not otherwise close to.

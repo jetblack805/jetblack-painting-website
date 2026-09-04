@@ -108,6 +108,10 @@ Yes — a large share of our Brighton work now is new architect-designed builds 
 
 Full drop sheeting, furniture moved and covered rather than worked around, and floors protected before anything is opened. On a high-value property we walk the scope with you first so there's no ambiguity about what's being painted and what isn't, and the crew works room by room so the rest of the house stays liveable. Every job finishes with a walk-through before we consider it done.
 
+## Recent work in Brighton
+
+Interior repaint in Brighton. Walls rolled out in a room emptied of furniture but with the carpet, skirting and cornice still in place \\u2014 which is exactly when rolling beats spraying.
+
 **Jetblack Painting** — House Painters Brighton | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -84,6 +84,10 @@ Absolutely. Armadale is one of Melbourne's most sought-after inner suburbs and s
 
 Yes. We provide free, no-obligation written quotes across Armadale and the surrounding Stonnington area, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 or submit a request online.
 
+## Recent work in Armadale
+
+Commercial facade work in Armadale. Render repaint on a shopfront and office building, worked off an elevated platform so the upper wall gets the same preparation as the parts people can reach.
+
 **Jetblack Painting** — House Painters Armadale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

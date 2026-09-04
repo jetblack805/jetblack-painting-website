@@ -77,7 +77,7 @@ const url = `data:${mime};base64,${fs.readFileSync(path.resolve(input)).toString
 
 async function render(width) {
   return page.evaluate(
-    async ({ url, width }) => {
+    async ({ url, width, cropLetterbox }) => {
       const img = new Image();
       img.decoding = "sync";
       await new Promise((res, rej) => {
@@ -86,8 +86,38 @@ async function render(width) {
         img.src = url;
       });
       // naturalWidth/Height are post-EXIF-rotation in Chromium.
-      const sw = img.naturalWidth;
-      const sh = img.naturalHeight;
+      let sx = 0,
+        sy = 0,
+        sw = img.naturalWidth,
+        sh = img.naturalHeight;
+
+      // Optional letterbox trim. Screen grabs of video arrive with black bars
+      // top and bottom; shipping those would put black stripes across the page.
+      // Scan inward for the first row that is not near-black. Opt-in, because a
+      // genuinely dark photograph would otherwise lose real content.
+      if (cropLetterbox) {
+        const probe = document.createElement("canvas");
+        probe.width = sw;
+        probe.height = sh;
+        const pctx = probe.getContext("2d", { willReadFrequently: true });
+        pctx.drawImage(img, 0, 0);
+        const rowIsDark = (y) => {
+          const d = pctx.getImageData(0, y, sw, 1).data;
+          for (let i = 0; i < d.length; i += 4 * 16) {
+            if (d[i] > 24 || d[i + 1] > 24 || d[i + 2] > 24) return false;
+          }
+          return true;
+        };
+        let top = 0;
+        while (top < sh / 3 && rowIsDark(top)) top++;
+        let bottom = sh - 1;
+        while (bottom > (sh * 2) / 3 && rowIsDark(bottom)) bottom--;
+        if (top > 0 || bottom < sh - 1) {
+          sy = top;
+          sh = bottom - top + 1;
+        }
+      }
+
       const scale = Math.min(1, width / sw);
       const w = Math.round(sw * scale);
       const h = Math.round(sh * scale);
@@ -97,10 +127,10 @@ async function render(width) {
       const ctx = c.getContext("2d");
       ctx.imageSmoothingEnabled = true;
       ctx.imageSmoothingQuality = "high";
-      ctx.drawImage(img, 0, 0, w, h);
-      return { data: c.toDataURL("image/webp", 0.82), w, h, sw, sh };
+      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
+      return { data: c.toDataURL("image/webp", 0.82), w, h, sw, sh, sy };
     },
-    { url, width },
+    { url, width, cropLetterbox: process.env.CROP === "letterbox" },
   );
 }
 
@@ -118,7 +148,7 @@ for (const [suffix, width] of [
 await browser.close();
 
 const first = results[0];
-console.log(`source ${first.sw}x${first.sh} (after EXIF rotation)`);
+console.log(`source ${first.sw}x${first.sh} (after EXIF rotation${first.sy ? `, letterbox trimmed ${first.sy}px` : ""})`);
 for (const r of results) {
   console.log(`  ${path.basename(r.out)}  ${r.w}x${r.h}  ${(r.bytes / 1024).toFixed(0)} KB`);
 }

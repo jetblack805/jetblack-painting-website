@@ -62,6 +62,18 @@ export default function BrightonPainters() {
       suburb={suburb}
       title="Brighton Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Brighton — heritage homes, modern beachside residences and premium materials. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`Interior repaint in ${suburb}. Walls rolled out in a room emptied of furniture but with the carpet, skirting and cornice still in place \u2014 which is exactly when rolling beats spraying.`}
+      projectImages={[
+        {
+          src: "/projects/project-brighton-interior-rolling.webp",
+          small: "/projects/project-brighton-interior-rolling-800.webp",
+          width: 1206,
+          height: 2146,
+          alt: `Jimmy Demirci of Jetblack Painting rolling a wall with an extension pole during an interior repaint in ${suburb}`,
+          caption:
+            "Rolling out a wall on an extension pole. The room is clear of furniture but the carpet and trim are staying, so it is rolled rather than sprayed \u2014 spraying here would mean masking every surface in the room to save an hour on the walls.",
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Brighton East", link: "/painter-brighton-east" },
         { name: "Hampton", link: "/painter-hampton" },

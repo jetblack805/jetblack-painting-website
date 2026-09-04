@@ -3867,3 +3867,21 @@ WebP (171KB). `/painter-mordialloc/` had no images at all, which mattered becaus
 it is the highest-priority page on the site: the map-pack strategy rests on
 proximity to Mordialloc, and the owner visibly working there is the most direct
 trust signal available for it.
+
+**Armadale and Brighton got their first photos**, from screen grabs of video —
+1206x2622 with black letterbox bars top and bottom. `scripts/convert-photo.mjs`
+gained an opt-in `CROP=letterbox` pass that scans inward for the first row that
+is not near-black and trims it (239px and 238px here). Opt-in rather than
+automatic, because a genuinely dark photograph would otherwise lose real content.
+
+Both are video frames, so slightly softer than a photograph, but at 1206px wide
+they carry the two things those pages needed: branded workwear and a real crew.
+Armadale shows commercial facade work from an elevated platform — height access
+is the honest differentiator on commercial quotes. Brighton shows walls being
+rolled in a room emptied of furniture but with the carpet and trim still down,
+which is consistent with the method claim made everywhere else on the site
+(spray a vacant maskable property, roll when masking would cost more than it
+saves).
+
+Suburb pages carrying photos: Mordialloc, Safety Beach, Armadale, Brighton,
+plus Aspendale and Caulfield which already had them.

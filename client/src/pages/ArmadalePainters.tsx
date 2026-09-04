@@ -22,6 +22,18 @@ export default function ArmadalePainters() {
       suburb={suburb}
       title="Armadale Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Armadale — Victorian, Edwardian terraces and renovated period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`Commercial facade work in ${suburb}. Render repaint on a shopfront and office building, worked off an elevated platform so the upper wall gets the same preparation as the parts people can reach.`}
+      projectImages={[
+        {
+          src: "/projects/project-armadale-commercial-facade.webp",
+          small: "/projects/project-armadale-commercial-facade-800.webp",
+          width: 1206,
+          height: 2145,
+          alt: `Two Jetblack Painting painters in branded workwear repainting a rendered commercial facade in ${suburb} from an elevated work platform`,
+          caption:
+            "Commercial render repaint worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one \u2014 the painting is the same, the getting to it is not.",
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Windsor", link: "/painter-windsor" },
         { name: "Toorak", link: "/painter-toorak" },

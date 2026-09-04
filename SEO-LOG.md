@@ -3728,3 +3728,74 @@ factor. They are not a substitute for the binding constraint. Recorded so nobody
 it later: as at 2026-09-03 Jimmy had posted **three times in six months** (24 May, 28 Jul,
 4 Aug), so weekly is a genuine step up from dormant — but it will not on its own move him
 into a map pack he is not otherwise close to.
+
+---
+
+## 2026-09-04 — Site audit: homepage FAQ violation fixed, two missing services built
+
+Full-site audit against a lead-generation brief (homeowners, agents, property managers, body
+corporates across Bayside and the southeast).
+
+### The defect that mattered
+
+**The homepage declared five `FAQPage` questions in JSON-LD while only two matched visible text.**
+Google requires FAQ content to be visible on the page. The other three were either paraphrased in
+the crawlable prose ("Are you licensed and insured?" vs the schema's "Are Jetblack Painting painters
+licensed and insured?") or absent entirely ("Which Melbourne suburbs does Jetblack Painting
+service?"). Worse, *no* FAQ was visible to real visitors at all: the static block in
+`client/index.html` is discarded the moment React hydrates, and `Home.tsx` rendered no FAQ section.
+
+Fixed structurally rather than by hand:
+
+| File | Role |
+| --- | --- |
+| `client/src/homeFaqs.ts` | single source, 8 FAQs |
+| `client/src/components/HomeFAQ.tsx` | renders them for real visitors |
+| `scripts/generate-home-faq.mjs` | writes visible copy **and** FAQPage schema into `client/index.html` |
+
+The generator refuses to write if any question or answer is missing from the visible text, or if the
+schema count diverges from the source. Same idiom as the coverage map. **Sitewide check after the
+fix: 119 pages carry FAQ schema, 0 have invisible FAQ text.**
+
+The FAQ schema sits inside a JSON-LD `@graph`, where an HTML comment would break parsing, so the
+FAQPage node is located by brace matching and only that object is rewritten — the rest of the file
+stays byte-identical.
+
+### Prices: deliberately untouched
+
+The cost answer carries `$5,000 to $12,000` etc. These were **kept and caveated** by the earlier
+price audit (see "Kept, each now caveated" above) and are Jimmy's, not invented. They were carried
+through verbatim. Do not remove them as "unverified figures" — that has already been decided.
+
+### Two requested services had no page at all
+
+`/services/bathroom-tile-resurfacing/` and `/services/property-maintenance/`, both built across all
+layers: page component, route, `servicePages` generator entry, `serviceSuburbLinks`, sitemap,
+known-paths, Footer, crawlable homepage list. Both target the eight named suburbs.
+
+**"Residential repaints" was deliberately NOT built as a separate page.** Its content is the
+interior and exterior painting pages; a third page saying the same things would be a near-duplicate
+of two existing ranking pages, which is the exact failure the blog duplicate gate exists to prevent.
+
+### Quote form was losing enquiries
+
+`serviceTypes` offered 6 options while the site had 9 service pages. Anyone landing on epoxy
+flooring, real estate or body corporate had to describe their own job as "Other". Expanded to 12 so
+every landing page has a matching option.
+
+### Not done, and why
+
+- **No local build.** `node_modules` is empty and the registry returns 403. Cloudflare's build
+  remains the only real gate.
+- **No visual verification.** Chromium cannot reach jetblackpainting.com from this environment
+  (`ERR_CONNECTION_RESET`), so nothing here was seen rendered.
+- **No photographs exist** for bathroom resurfacing or property maintenance. The bathroom page uses
+  the spray-booth shot with alt text describing what it actually pictures (the 2-pack process, not a
+  finished bathroom); property maintenance uses the team-at-work photo. Putting a finished kitchen on
+  a bathroom page would sell work the picture does not show. **These two pages need real job photos.**
+- **`areaServed` schema bloat left alone.** 97 `City` entries per suburb page, ~9.7KB of a 34KB page,
+  identical on all 95. It dilutes local relevance and contradicts the "broad service areas dilute
+  rather than extend" principle, but trimming it touches every page's schema and deserves its own
+  reviewed change.
+- **Alt text was already complete** — 47 of 49 `<img>` tags carry alt, and the 2 without are inside
+  code comments. The brief assumed a gap that does not exist.

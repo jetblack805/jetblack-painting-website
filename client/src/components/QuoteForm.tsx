@@ -40,13 +40,23 @@ const suburbs = [
   "Hampton",
 ];
 
+// Must cover every service that has a landing page. A visitor who arrives on
+// /services/epoxy-flooring/ and cannot pick "Epoxy Flooring" here is being asked
+// to describe their own job as "Other", which loses the routing signal on the
+// enquiry and reads as though we do not offer what they just read about.
 const serviceTypes = [
   "Interior Painting",
   "Exterior Painting",
+  "Residential Repaint",
   "Commercial Painting",
   "Roof Painting",
   "Fence Painting",
   "Kitchen Cabinet Resurfacing",
+  "Bathroom & Tile Resurfacing",
+  "Epoxy Flooring",
+  "Real Estate / Pre-Sale Painting",
+  "Body Corporate / Strata",
+  "Property Maintenance",
   "Other",
 ];
 

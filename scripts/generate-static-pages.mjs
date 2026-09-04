@@ -1140,6 +1140,26 @@ const popularSuburbLinks = [
 //   real estate → Murrumbeena and Mordialloc, where rental turnover and
 //     pre-sale work is a real part of the local mix.
 const serviceSuburbLinks = {
+  "/services/bathroom-tile-resurfacing": [
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Cheltenham", href: "/painter-cheltenham/" },
+    { label: "Painters Sandringham", href: "/painter-sandringham/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Brighton", href: "/painter-brighton/" },
+    { label: "Painters Caulfield", href: "/painter-caulfield/" },
+    { label: "Painters Keysborough", href: "/keysborough-painters/" },
+  ],
+  "/services/property-maintenance": [
+    { label: "Painters Mordialloc", href: "/painter-mordialloc/" },
+    { label: "Painters Mentone", href: "/painter-mentone/" },
+    { label: "Painters Cheltenham", href: "/painter-cheltenham/" },
+    { label: "Painters Sandringham", href: "/painter-sandringham/" },
+    { label: "Painters Bentleigh", href: "/painter-bentleigh/" },
+    { label: "Painters Brighton", href: "/painter-brighton/" },
+    { label: "Painters Caulfield", href: "/painter-caulfield/" },
+    { label: "Painters Keysborough", href: "/keysborough-painters/" },
+  ],
   "/services/interior-painting": [
     { label: "Painters McKinnon", href: "/painter-mckinnon/" },
     { label: "Painters Highett", href: "/painter-highett/" },
@@ -1740,6 +1760,116 @@ const servicePages = [
       { question: "What's the difference between epoxy coating and concrete resurfacing?", answer: "Coating puts a new wearing surface on top of a sound slab, while resurfacing rebuilds the surface of a slab that's damaged. If the concrete is structurally fine but stained, dusty or tired, a coating is the right answer. If the surface itself is spalling, pitted or has been patched repeatedly, it needs making good before any coating goes on — otherwise the new finish just follows the shape of the damage underneath." },
       { question: "Do you do warehouse and commercial floors as well as domestic garages?", answer: "Yes, both. The difference is mostly scale, access and downtime rather than the finish itself — a warehouse floor has to be staged around the business still operating, and a retail or showroom floor usually has to be done outside trading hours. We work to a schedule agreed up front so you know exactly when the space is out of use." },
       { question: "Will the coating hide cracks in my concrete?", answer: "The coating will hide fine surface cracking, but it will not fix a moving crack. A crack that's still moving will telegraph straight back through a new coating, sometimes within months, so it has to be cut out and filled properly first rather than coated over. We'd rather point that out at the quote than have it reappear through a finished floor." },
+    ],
+  },
+  {
+    route: "/services/bathroom-tile-resurfacing",
+    name: "Bathroom & Tile Resurfacing",
+    title:
+      "Bathroom & Tile Resurfacing Melbourne | Jetblack Painting",
+    description:
+      "Bathroom vanity, tile and bathtub resurfacing across Melbourne. Durable 2-pack coatings that renew a dated bathroom without a full strip-out. Free quotes.",
+    heroTitle: "Bathroom & Tile Resurfacing Melbourne",
+    heroBody:
+      "Renew a dated bathroom without the strip-out. Vanities, wall and floor tiles and bathtubs resurfaced in durable 2-pack coatings — days rather than weeks, and no demolition.",
+    cards: [
+      { title: "Vanity resurfacing", body: "Doors, drawer fronts and carcasses sprayed in 2-pack polyurethane for a hard, factory-grade finish that survives daily family use." },
+      { title: "Wall and floor tiles", body: "Bonding primer built for glazed surfaces, then a topcoat rated for moisture and foot traffic — colour changed without lifting a single tile." },
+      { title: "Bathtub resurfacing", body: "Enamel and acrylic tubs with chips filled and faired first, so the repair does not telegraph through the finished surface." },
+      { title: "Rental turnarounds", body: "Between-tenancy bathroom refreshes scoped backwards from the date the property has to be back on the market." },
+    ],
+    paragraphs: [
+      "Resurfacing recoats the surfaces you already have rather than removing them. The vanity, the wall and floor tiles and the bath are cleaned back, abraded, primed with a bonding system made for non-porous surfaces, and finished in a hard 2-pack topcoat. The layout, the plumbing and the waterproofing are untouched — which is why a bathroom that works but looks twenty years old can be changed in days rather than weeks.",
+      "Jetblack Painting is a 5-star rated Melbourne business with 18+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every project.",
+    ],
+    extraSections: [
+      {
+        heading: "Preparation Decides Whether It Lasts",
+        paragraphs: [
+          "Bathrooms carry soap film, body oils and silicone residue on every surface, and a coating applied over any of that is bonded to the residue rather than to the tile. That is the whole reason resurfacing has a mixed reputation: the failures people have seen were preparation failures, not product failures.",
+          "Proper preparation means stripping the surfaces back chemically, abrading the glaze so the primer has a profile to key into, and removing every trace of old silicone before priming. It is slower and less visible than the coating itself, and it is what separates a bathroom that still looks right in five years from one that peels at the shower edge in twelve months.",
+          "Cure time matters just as much. Coatings need clean, dry air while they harden, and a bathroom put back into service before the finish has cured will carry that mistake permanently. Touch-dry is not cured — we give you the real return-to-service date rather than the best case.",
+        ],
+      },
+      {
+        heading: "When Resurfacing Is the Wrong Answer",
+        paragraphs: [
+          "We would rather turn work down than coat a bathroom that should not be coated. Tiles that sound hollow when tapped have lost their bond to the substrate and will move regardless of what goes on top of them.",
+          "Active water damage, failed waterproofing or persistent mould growing behind the tiling are structural problems. A coating hides them rather than fixing them, and hiding them makes the eventual repair more expensive, not less.",
+          "If that is what we find at the site visit, we say so. Resurfacing is the right call when the bones are sound and the finish is simply dated — which, in most Melbourne bathrooms built from the nineties onward, it is.",
+        ],
+      },
+      {
+        heading: "For Landlords, Agents and Body Corporates",
+        paragraphs: [
+          "Bathrooms decide how a property shows. For a between-tenancy turnaround or a pre-sale refresh, resurfacing is often the highest-return work available, because it changes the room a buyer or tenant reacts to most strongly, inside a window a renovation could never meet.",
+          "We quote with the scope itemised so managers and committees can compare like for like, and we work to the date that cannot move. The site visit and written quote are free — call Jimmy on 0432 077 782.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "Can you really paint over bathroom tiles?", answer: "Yes, with the right system and honest preparation. Tile resurfacing uses a bonding primer designed to grip glazed surfaces, followed by a hard-wearing 2-pack topcoat. What decides the result is not the paint but the preparation: the tiles have to be stripped of soap residue and body oils, the glaze abraded so the primer has something to key into, and every trace of silicone removed. Skip any of that and it will peel at the edges within a year." },
+      { question: "How long does a resurfaced bathroom last?", answer: "A properly prepared vanity or tile resurface holds up for years in normal family use. The two things that shorten it are standing water sitting on a horizontal surface and abrasive cleaners. We hand over care instructions with the job, because how a resurfaced bathroom is cleaned matters more to its lifespan than anything else after we leave." },
+      { question: "Is resurfacing cheaper than a bathroom renovation?", answer: "Substantially, and it is faster. A full renovation means demolition, waterproofing, trades in sequence and weeks without a bathroom. Resurfacing changes the colour and finish of what is already there in a matter of days. It is the right choice when the layout works and the surfaces are sound but dated. It is the wrong choice when tiles are drummy, waterproofing has failed, or the layout itself is the problem — we will tell you if that is what we find." },
+      { question: "Can you resurface a bathtub?", answer: "Yes. Bath resurfacing suits enamel and acrylic tubs that are structurally sound but stained, chipped or an outdated colour. Chips are filled and faired before coating so the repair does not telegraph through the finish. A tub with a crack through it or flex in the base is not a resurfacing candidate." },
+      { question: "How long is the bathroom out of use?", answer: "Typically two to four days depending on the scope, and the room is genuinely unusable for that period — coatings need clean air and no moisture while they cure. Touch-dry is not cured. We give you the real return-to-service date with the quote rather than the best case, which matters if it is the only bathroom in the house." },
+      { question: "Do you resurface bathrooms in rental properties?", answer: "Regularly. It is a common between-tenancy choice for property managers because it lifts a tired bathroom inside a short vacancy window without the cost and programme of a renovation. Tell us the date the property has to be back on the market and we will scope the work backwards from it." },
+      { question: "Which Melbourne suburbs do you cover for bathroom resurfacing?", answer: "We work across Bayside, Kingston, Glen Eira, Stonnington, the southeast and the Mornington Peninsula from our base in Mordialloc — including Brighton, Bentleigh, Caulfield, Mentone, Sandringham, Cheltenham, Keysborough and surrounding suburbs." },
+    ],
+  },
+  {
+    route: "/services/property-maintenance",
+    name: "Property Maintenance",
+    title:
+      "Property Maintenance Melbourne | Jetblack Painting",
+    description:
+      "Painting and property maintenance for Melbourne landlords, agents and body corporates. Repairs, touch-ups, repaints and scheduled upkeep. Free quotes.",
+    heroTitle: "Property Maintenance Melbourne",
+    heroBody:
+      "Painting and upkeep for landlords, property managers and body corporates — make-goods, repairs, touch-ups and scheduled maintenance across Bayside and Melbourne's southeast.",
+    cards: [
+      { title: "Between-tenancy make-goods", body: "Touch-ups, patching and repaints scoped backwards from a fixed re-letting date rather than quoted as an open duration." },
+      { title: "Repairs and water damage", body: "Plaster, cornice and nail-pop repair, plus stain-blocking primer so a water mark does not bleed back through the new coat." },
+      { title: "Exterior upkeep", body: "Washing, mould treatment and spot recoating on the weathered elevations, before a full repaint becomes the only option." },
+      { title: "Common areas and facades", body: "Staged work for owners' corporations that keeps residents with access to their own front door throughout." },
+    ],
+    paragraphs: [
+      "Most painting businesses are set up for the big job — the full interior, the whole exterior. A managed property rarely needs that. It needs the hallway made good before the next tenant, the ceiling stain that came back after the roof was fixed, the fence that has gone grey on the street side. Those jobs are small individually and constant in aggregate, and Jetblack Painting takes them on as ongoing work rather than filler between larger projects.",
+      "Jetblack Painting is a 5-star rated Melbourne business with 18+ years of experience, $10 million public liability insurance, and a 5-year workmanship guarantee on every project, regardless of its size.",
+    ],
+    extraSections: [
+      {
+        heading: "For Property Managers and Agencies",
+        paragraphs: [
+          "The brief on a managed property is different from an owner-occupier repaint. Turnaround and durability beat colour ambition: a washable low sheen outlives a fashionable matt, and a finish that survives the next tenancy is worth more than one that photographs well and marks within a month.",
+          "For agencies with several properties we work to a standing scope, so each job does not need requoting from scratch. That means consistent pricing, one point of contact, and a tradesperson who already knows the buildings — usually worth more than a marginally cheaper one-off quote.",
+          "We report back when something found on site changes the picture, before doing the extra work rather than after it appears on an invoice.",
+        ],
+      },
+      {
+        heading: "For Body Corporates and Owners' Corporations",
+        paragraphs: [
+          "Committees are buying predictability. Scope agreement up front, access arrangements that respect occupied units, and staged scheduling are what determine whether a building programme finishes on time. The painting itself is the straightforward part.",
+          "Quotes are itemised so a committee can compare like for like, and the work can run to a maintenance schedule across the year rather than a single annual shutdown that disrupts every resident at once.",
+        ],
+      },
+      {
+        heading: "What Gets Maintained",
+        paragraphs: [
+          "Between-tenancy make-goods and touch-ups, plaster and cornice repair, water damage made good and sealed, exterior washing and mould treatment, timber window frames and sills, fence and gate recoating including rust treatment, and concrete sealing for driveways, paths and garage floors.",
+          "Timber window frames and sills are worth singling out. They take standing water and the most direct UV, so they fail years before the wall around them does. Catching them at the spot-repair stage rather than the full-replacement stage is most of what planned maintenance is for.",
+          "Enquiries are answered within 24 to 48 hours and written quotes follow in the same window. Call Jimmy on 0432 077 782.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "What does property maintenance painting cover?", answer: "Everything that keeps a building presentable and weathertight between full repaints: touch-ups and make-goods between tenancies, plaster and cornice repairs, water damage and stain blocking, exterior washing, timber and window frame repair, fence and gate recoating, and concrete sealing. It is planned upkeep rather than one large job." },
+      { question: "Do you take on ongoing maintenance for a portfolio?", answer: "Yes. For agencies and owners' corporations with several properties we work to a standing scope so each job does not need requoting from scratch. You get consistent pricing, one point of contact and a tradesperson who already knows the buildings, which is usually worth more than a marginally cheaper one-off quote." },
+      { question: "How quickly can you attend a maintenance job?", answer: "Enquiries are answered within 24 to 48 hours and written quotes follow in the same window. For a between-tenancy make-good with a fixed re-letting date, tell us the date at the outset and we scope the work backwards from it rather than quoting a duration and hoping it fits." },
+      { question: "Can you work in occupied buildings?", answer: "Routinely. Occupied work is brushed and rolled rather than sprayed, staged so residents keep access to their own entrances, and cleaned down at the end of each day. In apartment buildings we sequence common areas and stairwells so no one is cut off from their front door at any point." },
+      { question: "Do you handle insurance and water damage repairs?", answer: "Yes. Water-damaged ceilings and walls need the cause resolved first, then the substrate dried, the damage made good and the stain blocked with a sealing primer before any topcoat. Painting over a water stain with standard paint simply lets it bleed back through, which is the most common reason a repair reappears weeks later." },
+      { question: "Is maintenance work covered by the same guarantee?", answer: "Yes. Every job carries the same 5-year written workmanship guarantee and the same $10 million public liability cover, regardless of size. A half-day make-good is guaranteed on the same terms as a full exterior repaint." },
+      { question: "Which Melbourne suburbs do you cover for property maintenance?", answer: "We work across Bayside, Kingston, Glen Eira, Stonnington, the southeast and the Mornington Peninsula from our base in Mordialloc — including Brighton, Bentleigh, Caulfield, Mentone, Sandringham, Cheltenham, Keysborough and surrounding suburbs." },
     ],
   },
 ];

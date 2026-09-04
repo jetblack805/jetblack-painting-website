@@ -21,6 +21,8 @@ Call 0432 077 782 for a free painting quote.
 - [Kitchen Cabinet Resurfacing Melbourne](/services/kitchen-cabinet-resurfacing/)
 - [Real Estate & Pre-Sale Painting Melbourne](/services/real-estate-painting/)
 - [Body Corporate & Strata Painting Melbourne](/services/body-corporate-painting/)
+- [Bathroom & Tile Resurfacing Melbourne](/services/bathroom-tile-resurfacing/)
+- [Property Maintenance Melbourne](/services/property-maintenance/)
 
 ## Suburbs We Service
 
@@ -158,20 +160,29 @@ Every job starts with a free, no-obligation site visit and a written quote that 
 
 ## Common Questions
 
-**Who are the best painters in Melbourne?**
-Jetblack Painting is a 5-star rated Melbourne painting company, founded by Jimmy Demirci, who has 18+ years of experience. We service 90+ suburbs including Mordialloc, Mentone, Parkdale, Brighton, Bentleigh and the Mornington Peninsula. All work is backed by a 5-year workmanship guarantee.
-
-**Are you licensed and insured?**
-Yes. Jetblack Painting carries $10 million public liability insurance and every job is backed by a 5-year written workmanship guarantee.
-
 **How much does house painting cost in Melbourne?**
 House painting costs in Melbourne depend on three things: the size of the property, the condition of the surfaces, and how much preparation is needed. That is why we quote after a site visit rather than over the phone. As a budgeting guide: a whole-house interior repaint typically runs $5,000 to $12,000 for a 3-bedroom home. An exterior repaint runs $4,000 to $8,000 for a single-storey home, or $8,000 to $15,000 for a double-storey. These are indicative ranges only. Jetblack Painting offers free no-obligation written quotes — call 0432 077 782.
 
-**What painting services does Jetblack Painting offer?**
-Interior painting, exterior painting, commercial painting, roof painting, roof and fence painting, kitchen cabinet resurfacing, real estate and pre-sale painting, and body corporate and strata painting — for homeowners, landlords, property managers and businesses across Melbourne.
+**Are Jetblack Painting painters licensed and insured?**
+Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance. All work comes with a 5-year workmanship guarantee.
 
-**How do I get a free quote?**
-Call Jimmy on 0432 077 782 or email jimmy@jetblackpainting.com. Free written quotes are available 7 days a week, with the full scope and preparation itemised before any work begins.
+**Do we need to move out while you paint?**
+Almost never. If a property is vacant and can be masked properly we spray it, which gives a finish brushing cannot match. If you are living in the house we brush and roll instead, working room by room so the kitchen and bedrooms stay usable and the place is handed back tidy each evening. Removable items such as cabinet doors can be taken away, sprayed and returned, so you still get the better finish where it shows most.
+
+**How long does a repaint take?**
+A single room is usually a day. A whole-house interior repaint on a 3-bedroom home typically runs 4 to 8 working days, and a single-storey exterior 5 to 10, depending on how much preparation and repair the surfaces need. Weather moves exterior timelines in winter — surface temperature and overnight condensation matter more than the calendar. We give you a realistic sequence with the quote rather than a best case.
+
+**Can you work around tenants and settlement dates?**
+Yes — this is a large part of what we do for agents and property managers across Bayside and the southeast. We handle between-tenancy turnarounds where the window is short and the finish has to be durable rather than fashionable, and pre-sale refreshes timed to photography and campaign dates. Tell us the date that cannot move and we will scope the work backwards from it.
+
+**How does a body corporate or strata repaint work?**
+The painting is the straightforward part. What decides whether it finishes on time is scope agreement up front, access to occupied units, and staged scheduling so residents are never cut off from their own front door. We quote with the scope itemised so committees can compare like for like, and we stage common areas, stairwells and facades in an order that keeps the building usable throughout.
+
+**Which Melbourne suburbs does Jetblack Painting service?**
+Jetblack Painting is based in Mordialloc and services all Melbourne suburbs including Mordialloc, Mentone, Sandringham, Brighton, Hampton, Bentleigh, Keysborough, Parkdale, Dandenong, Bayside, Kingston, Malvern, Camberwell, Hawthorn, Caulfield, Kew, Carlton, Armadale, Berwick, Box Hill, Doncaster, Glen Waverley, Moorabbin, Stonnington, Wheelers Hill, Ringwood, Croydon, Templestowe, Mornington Peninsula and more.
+
+**How do I get a free painting quote in Melbourne?**
+Call Jetblack Painting on 0432 077 782 or use the online quote form at jetblackpainting.com. Free quotes are available 7 days for all painting services across Melbourne.
 
 More: [Full FAQ](/faq/) ·
 [Painting Blog](/blog/) ·

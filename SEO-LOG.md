@@ -3799,3 +3799,21 @@ every landing page has a matching option.
   reviewed change.
 - **Alt text was already complete** — 47 of 49 `<img>` tags carry alt, and the 2 without are inside
   code comments. The brief assumed a gap that does not exist.
+
+### 2026-09-04 (later) — real bathroom photos landed
+
+Jimmy supplied before/after photos of an actual resurfacing job. The composite
+(shower base + bathtub, 1024x1365, 228KB, EXIF orientation 1) replaced the
+spray-booth stand-in on `/services/bathroom-tile-resurfacing/`. That page now
+shows the service it sells.
+
+**Two full-resolution originals could NOT be used.** Both are 5712x4284 and
+~3.5MB, and this environment has no image tooling whatsoever — no PIL,
+ImageMagick, cwebp, vips or sharp, with both PyPI and npm registries blocked.
+Shipping 7MB of JPEG onto a page tuned for LCP would trade a ranking factor for
+a picture. They need resizing to ~1400px wide and converting to webp with a 900w
+variant, matching every other gallery image. Both carry **EXIF orientation 6**
+(rotate 90 CW) — browsers honour that by default, but any tool that strips EXIF
+while resizing will silently land them sideways.
+
+`/services/property-maintenance/` still has no photograph of its own work.

@@ -104,6 +104,10 @@ Yes. The foreshore and creek area has a strong club scene, boating, bowls and li
 
 Yes. We are based in Mordialloc, and we paint shopfronts, cafes and hospitality venues along Main Street and the Nepean Highway strip as well as homes. Commercial jobs get a clear written scope. We then schedule around your trading hours, so you lose as little business as possible.
 
+## Recent work in Mordialloc
+
+Jimmy on an exterior repaint here in Mordialloc. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a Mordialloc quote gets done on site rather than estimated over the phone.
+
 **Jetblack Painting** — House Painters Mordialloc | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

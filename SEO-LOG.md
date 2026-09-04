@@ -3859,3 +3859,11 @@ Safety Beach job, carrying the iOS status bar, the post counter and a "Boost
 post" button. Those were declined and the originals requested instead.
 
 `/services/property-maintenance/` still has no photograph of its own work.
+
+**Mordialloc got its first photo.** Jimmy on an exterior repaint in the home
+suburb — branded workwear, Dulux masking film on the windows, cutting in by hand
+around a downpipe. 2048x1536, EXIF orientation 6, converted to 1400x1867 + 800w
+WebP (171KB). `/painter-mordialloc/` had no images at all, which mattered because
+it is the highest-priority page on the site: the map-pack strategy rests on
+proximity to Mordialloc, and the owner visibly working there is the most direct
+trust signal available for it.

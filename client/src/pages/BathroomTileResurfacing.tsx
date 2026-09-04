@@ -10,12 +10,18 @@ import { lazy, Suspense } from "react";
 
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
-// The spray booth shot is the honest image for this page: bathroom resurfacing
-// runs through the same 2-pack spray process as kitchen cabinetry, and this
-// photograph shows that process. There is no finished-bathroom photograph in
-// the library yet, and putting a kitchen on a bathroom page would be selling
-// work the picture does not show. Alt text describes what is actually pictured.
-import imgSprayBooth from "@/assets/images/gallery-cabinet-doors-spray-booth.webp";
+// Jimmy's own job, supplied 2026-09-04: a shower base and a bathtub whose
+// original coating had failed back to the pink undercoat, stripped and
+// refinished. Real before/after of THIS service — it replaced a spray-booth
+// stand-in that only showed the process. The pair is the most persuasive thing
+// on the page, so it sits above the copy.
+//
+// Still a .jpg rather than the .webp + 900w pair every other gallery image
+// uses: this environment has no image tooling at all (no PIL, ImageMagick,
+// cwebp or sharp, and both PyPI and npm are blocked), so it could not be
+// converted or given responsive variants. At 1024x1365 and 228KB that is
+// acceptable, but it should be converted when tooling is available.
+import imgBeforeAfter from "@/assets/images/bathroom-resurfacing-before-after.jpg";
 
 const DESCRIPTION =
   "Bathroom vanity, tile and bathtub resurfacing across Melbourne. Durable 2-pack coatings that renew a dated bathroom without a full strip-out. Free quotes.";
@@ -105,20 +111,21 @@ export default function BathroomTileResurfacing() {
 
       <section className="py-12 bg-[#131316]">
         <div className="container">
-          <figure className="m-0 max-w-3xl">
+          <figure className="m-0 max-w-2xl">
             <img
-              src={imgSprayBooth}
-              width={1400}
-              height={1050}
+              src={imgBeforeAfter}
+              width={1024}
+              height={1365}
               loading="lazy"
               decoding="async"
-              alt="Cabinet doors hanging in Jetblack Painting's spray booth — the same 2-pack spray process used to resurface bathroom vanities"
+              alt="Before and after of a Melbourne bathroom resurfaced by Jetblack Painting: a shower base and a bathtub whose original coating had worn back to the pink undercoat, refinished in white"
               className="w-full rounded-lg"
             />
             <figcaption className="text-[#8B8B90] text-sm mt-3">
-              Bathroom vanities run through the same controlled 2-pack spray process as kitchen
-              cabinetry. Spraying in a dust-controlled environment is what produces a finish that
-              reads as factory-made rather than brushed.
+              A shower base and bathtub on the same job. The original coating had worn through to
+              the pink undercoat in the wet zones — the areas that take standing water always fail
+              first. Stripped back, prepared and refinished, with the tiling and the plumbing left
+              exactly where they were.
             </figcaption>
           </figure>
         </div>

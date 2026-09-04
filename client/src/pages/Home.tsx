@@ -13,6 +13,8 @@ import CoverageMap from "@/components/CoverageMap";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import HomeFAQ from "@/components/HomeFAQ";
+import MidPageCTA from "@/components/MidPageCTA";
 
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
@@ -153,11 +155,21 @@ export default function Home() {
       <TrustBadges />
       <Services />
       <PremiumServices />
+      {/* Every service page and every suburb page carries a MidPageCTA; the
+          homepage did not, so its only conversion point was a form twelve
+          sections down. Placed straight after the service sections, where the
+          visitor has just learned what we do. */}
+      <div className="bg-[#060607]">
+        <div className="container">
+          <MidPageCTA heading="Want a price on your place?" />
+        </div>
+      </div>
       <Gallery />
       <Reviews />
       <ProcessSection />
       <About />
       <CoverageMap />
+      <HomeFAQ />
       <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
         <QuoteForm />
       </Suspense>

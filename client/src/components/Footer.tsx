@@ -130,6 +130,8 @@ const SERVICES = [
   { label: "Body Corporate Painting", href: "/services/body-corporate-painting/" },
   { label: "Epoxy Flooring", href: "/services/epoxy-flooring/" },
   { label: "Real Estate Painting", href: "/services/real-estate-painting/" },
+  { label: "Bathroom & Tile Resurfacing", href: "/services/bathroom-tile-resurfacing/" },
+  { label: "Property Maintenance", href: "/services/property-maintenance/" },
 ];
 
 export default function Footer() {

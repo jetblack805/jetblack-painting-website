@@ -3885,3 +3885,69 @@ saves).
 
 Suburb pages carrying photos: Mordialloc, Safety Beach, Armadale, Brighton,
 plus Aspendale and Caulfield which already had them.
+
+---
+
+## 2026-09-04 20:06 UTC — daily audit run
+
+Steps 0-6 run in full. **One real defect found, and it was from this same day's
+own work.**
+
+### DEFECT: an image shipped over the 250KB ceiling
+
+`public/projects/project-safety-beach-render-roof-before.webp` was **395KB**,
+against the standing baseline of *zero images in public/ over 250KB*. Foliage,
+textured render and cloud compress badly in webp, and the converter's default
+1400w/q0.82 was not enough for that frame.
+
+Lowering quality alone did not get there — q0.66 still landed at 266KB and would
+have started showing artefacts. Reducing dimensions alone did not either (1100w
+at q0.80 = 259KB). The fix was both: **1200x1600 at q0.72 = 232KB**, which sits
+alongside the existing project photos (aspendale 233KB, caulfield 231KB) rather
+than being an outlier. `scripts/convert-photo.mjs` gained a `QUALITY` env var so
+this is tunable per photo instead of dropping the whole library's quality.
+Dimensions corrected in `SafetyBeachPainters.tsx` to match. Re-rendered and
+looked at: no visible artefacts.
+
+### Everything else clean
+
+| Check | Result |
+| --- | --- |
+| Build / production serving newest commit | ✅ armadale photo live |
+| Lockfile | **77/77** |
+| Three layers regenerated | **0 diffs** |
+| FAQ schema vs visible text | **119 pages, 534 questions, 0 invisible** |
+| JSON-LD parse errors | 0 |
+| aggregateRating in static pages | **0** (correct — lives only in client/index.html) |
+| Metadata | 0 dup titles/descs/canonicals/H1s · 0 missing · 0 keywords · 0 descs >158 · 1 title >60 (hastings 64, accepted) |
+| Near-duplicate | **12.8% avg, 32.3% max** (gate 45/55) — worst pair cranbourne/narre-warren, as before |
+| Bad URLs 404 | extensionless, `.zip`, and under `/assets/` all 404 |
+| Real hashed bundles | still 200, `text/javascript` / `text/css` |
+| Redirects | 301, not 307 |
+| Markdown negotiation | `text/markdown` on Accept, `text/html` otherwise |
+| llms.txt prices | none |
+| robots.txt | `ai-train=yes` intact |
+| TTFB / cache | 0.22s, cf-cache HIT |
+| og:image | 200, 163KB |
+
+### Sitemap reconciled — 112, not 115
+
+The brief's 115 baseline predates the Casey-corridor noindexing. Current maths:
+**122 static pages − 11 noindexed + homepage = 112**, and the sitemap is exactly
+112. The 11 are the 8 Casey suburbs plus privacy/review-us/terms. **Zero
+noindexed pages appear in the sitemap** — no contradictory signals. Not a defect.
+
+### A false failure worth recording
+
+The first lockfile check reported **38/77**. That was wrong: pnpm quotes scoped
+package names in the importers block (`'@radix-ui/react-accordion':`) and the
+naive pattern missed every one. Cloudflare had built the repo successfully four
+times that day with a frozen lockfile, which is what prompted the re-check. The
+corrected check reports 77/77. *A failing check on a repo that is demonstrably
+building is a bug in the check until proven otherwise.*
+
+### Step 7 — no authority work this run
+
+Steps 0-6 turned up a real defect, so per the brief the run fixed that and
+stopped. Ranking data was not pulled. Tier 0 remains closed; growing past 17
+reviews remains the top authority priority.

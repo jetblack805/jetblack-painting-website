@@ -62,6 +62,11 @@ if (!input || !basename) {
   process.exit(1);
 }
 const MAX_WIDTH = Number(maxWidthArg) || 1400;
+// The repo rule is that no image in public/ exceeds 250KB (speed baseline in
+// SEO-LOG.md). Detailed scenes — foliage, textured render, cloud — blow past
+// that at the default quality even at sensible dimensions, so allow it to be
+// tuned per photo rather than dropping the whole library's quality.
+const QUALITY = Number(process.env.QUALITY) || 0.82;
 if (!fs.existsSync(input)) throw new Error(`input not found: ${input}`);
 
 const pw = loadPlaywright();
@@ -77,7 +82,7 @@ const url = `data:${mime};base64,${fs.readFileSync(path.resolve(input)).toString
 
 async function render(width) {
   return page.evaluate(
-    async ({ url, width, cropLetterbox }) => {
+    async ({ url, width, quality, cropLetterbox }) => {
       const img = new Image();
       img.decoding = "sync";
       await new Promise((res, rej) => {
@@ -128,9 +133,9 @@ async function render(width) {
       ctx.imageSmoothingEnabled = true;
       ctx.imageSmoothingQuality = "high";
       ctx.drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
-      return { data: c.toDataURL("image/webp", 0.82), w, h, sw, sh, sy };
+      return { data: c.toDataURL("image/webp", quality), w, h, sw, sh, sy };
     },
-    { url, width, cropLetterbox: process.env.CROP === "letterbox" },
+    { url, width, quality: QUALITY, cropLetterbox: process.env.CROP === "letterbox" },
   );
 }
 

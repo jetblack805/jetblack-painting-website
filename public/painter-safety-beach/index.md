@@ -85,6 +85,10 @@ Exposed coastal homes here generally need repainting more often than inland ones
 
 Yes. We service the Mornington Peninsula and provide free written quotes across Safety Beach with the full coastal preparation and products listed. Call Jimmy on 0432 077 782 or request a quote online.
 
+## Recent work in Safety Beach
+
+A Safety Beach render and roof repaint. The house had gone the way most Peninsula exteriors do — cream render dulled by salt air and hard UV, and a green Colorbond roof well past its best. Repainted in a mid grey with the roof brought to a dark charcoal, which is what changes the whole reading of the house from the street.
+
 **Jetblack Painting** — House Painters Safety Beach | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -26,6 +26,27 @@ export default function SafetyBeachPainters() {
       suburb={suburb}
       title="Safety Beach Painters | Coastal | Jetblack Painting"
       description="Coastal house painters in Safety Beach — salt-resistant exterior systems for beachfront and Martha Cove homes. Free quotes. Call 0432 077 782."
+      projectSummary={`A ${suburb} render and roof repaint. The house had gone the way most Peninsula exteriors do — cream render dulled by salt air and hard UV, and a green Colorbond roof well past its best. Repainted in a mid grey with the roof brought to a dark charcoal, which is what changes the whole reading of the house from the street.`}
+      projectImages={[
+        {
+          src: "/projects/project-safety-beach-render-roof-before.webp",
+          small: "/projects/project-safety-beach-render-roof-before-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Cream rendered entry and green Colorbond roof of a ${suburb} home before repainting`,
+          caption:
+            "Before. Cream render and a green roof — sound underneath, but the colour dates the house and the north and west elevations had taken the most sun.",
+        },
+        {
+          src: "/projects/project-safety-beach-render-roof-after.webp",
+          small: "/projects/project-safety-beach-render-roof-after-800.webp",
+          width: 1400,
+          height: 1050,
+          alt: `The same ${suburb} home after repainting, with grey render and a dark charcoal roof`,
+          caption:
+            "After. Render in a mid grey, roof and gutters in a dark charcoal. Same house, same garden — the colour is doing all the work.",
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Dromana", link: "/painter-dromana" },
         { name: "Mount Martha", link: "/painter-mount-martha" },

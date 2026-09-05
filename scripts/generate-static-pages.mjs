@@ -188,7 +188,15 @@ function localBusinessSchema() {
     "@id": `${SITE_URL}/#business`,
     "name": "Jetblack Painting",
     "image": `${SITE_URL}/og-image.jpg`,
-    "logo": `${SITE_URL}/logo.jpg`,
+    // Kept in step with client/src/lib/organizationSchema.ts — see the note
+    // there. ImageObject, not a bare URL string.
+    "logo": {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/logo.jpg`,
+      width: 1080,
+      height: 1080,
+      caption: "Jetblack Painting",
+    },
     "telephone": PHONE_DISPLAY,
     "email": EMAIL,
     "url": SITE_URL,

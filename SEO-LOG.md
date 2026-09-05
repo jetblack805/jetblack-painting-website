@@ -3951,3 +3951,76 @@ building is a bug in the check until proven otherwise.*
 Steps 0-6 turned up a real defect, so per the brief the run fixed that and
 stopped. Ranking data was not pulled. Tier 0 remains closed; growing past 17
 reviews remains the top authority priority.
+
+---
+
+## 2026-09-05 — Jimmy's GSC export: logo, coverage, links
+
+### The monogram: the SITE is already correct, Google's cache is not
+
+Jimmy reported Search Console still showing the old gold "JB" monogram and asked
+for it replaced with the real logo. **Every icon on the site is already right** —
+verified by extracting and rendering each one:
+
+| File | Contents |
+| --- | --- |
+| `favicon.ico` (48x48 PNG inside) | the real blue/black paintbrush mark |
+| `favicon.png` (192x192) | same |
+| `apple-touch-icon.png` (180x180) | same |
+| `logo.jpg` (1080x1080) | full "JET BLACK PAINTING" wordmark |
+
+No monogram file exists anywhere in the repo. The 2026-08-26 replacement worked.
+What Jimmy is seeing is **Google's cached favicon**, which refreshes on its own
+schedule and can lag months. Nothing in the codebase can force it; re-requesting
+indexing of the homepage in GSC is the only lever, and it is his to pull.
+
+⚠️ **Do NOT "fix" the favicon by swapping in the full wordmark.** At 48x48 a
+wordmark is an unreadable smudge. The paintbrush is lifted from the "T" of his
+own logo and is the correct mark for that size. Changing it would be a downgrade
+dressed as a fix.
+
+**What was actually changed:** the schema `logo` was a bare URL string in three
+places. Now an `ImageObject` with width, height and caption in all of them
+(`client/index.html`, `organizationSchema.ts`, `generate-static-pages.mjs`),
+matching what `articleSchema.ts` already did. 107 pages now carry it, 0 bare
+strings, 0 parse errors. A bare string leaves Google guessing at the brand image;
+this is the half of the signal that *is* in our control.
+
+### Backlinks: GSC sees ONE linking page, and it is junk
+
+The Latest Links export contains exactly one row:
+`https://www.addurl.in/domains/141469/...` last crawled 2026-05-08 — an
+auto-submit directory. **This is the authority diagnosis confirmed from Google's
+own mouth.** Ahrefs reported 44 links / 31 domains; GSC, which is authoritative
+for what Google actually counts, reports one, and it is spam-adjacent. Nothing
+about the site's content or internal links will move rankings while that is true.
+
+### Coverage: indexing is growing, the issues are historical
+
+**39 indexed on 2026-07-07 → 117 on 2026-08-28.** Not-indexed 93.
+
+| Reason | Pages | Assessment |
+| --- | --- | --- |
+| Page with redirect | 62 | BY DESIGN — every `/painters-x` 301s to `/painter-x/`. Settled 2026-08-17. |
+| Redirect error | 13 | Redirect map checked: **120 rules, 0 chains, 0 loops, 0 dead targets.** Stale. |
+| Soft 404 | 6 | Thinnest live page is 533 words (`/review-us/`, noindexed); median 1,236. Not live pages. |
+| Not found (404) | 2 | — |
+| Crawled, not indexed | 8 | Normal at this authority level. |
+
+**Every one shows `Validation: Started`** — already submitted for recheck. No
+repo defect found behind any of them.
+
+### Performance: one query earns every click
+
+3 months: `jetblack painting` 35 clicks. Every other query **zero** clicks on
+170-247 impressions each — fitzroy, bentleigh, collingwood, carlton, brunswick,
+cheltenham, caulfield, camberwell.
+
+28 days surfaced something new: **four fence queries in the top nine by
+impressions** — `fence painting melbourne` (highest), `fence painters melbourne`,
+`fence painting services melbourne`, `melbourne fence painting`. Fence is
+currently served only by `/services/roof-fence-painting/`, a combined page whose
+title and H1 split between two services, while **roof has its own dedicated page
+as well**. That asymmetry is worth raising with Jimmy — but a dedicated fence
+page overlaps an existing ranking page, so it is an architecture decision, not a
+drive-by change. Raised, not actioned.

@@ -31,8 +31,12 @@ export default function SafetyBeachPainters() {
         {
           src: "/projects/project-safety-beach-render-roof-before.webp",
           small: "/projects/project-safety-beach-render-roof-before-800.webp",
-          width: 1400,
-          height: 1867,
+          // 1200x1600 at quality 0.72 rather than the 1400x1867 default: this
+          // frame is foliage, textured render and cloud, which webp compresses
+          // badly, and at the default it was 395KB — over the 250KB ceiling the
+          // speed baseline sets for anything in public/.
+          width: 1200,
+          height: 1600,
           alt: `Cream rendered entry and green Colorbond roof of a ${suburb} home before repainting`,
           caption:
             "Before. Cream render and a green roof — sound underneath, but the colour dates the house and the north and west elevations had taken the most sun.",

@@ -56,7 +56,7 @@ export default function ArmadalePainters() {
           height: 2145,
           alt: `Two Jetblack Painting painters in branded workwear repainting a rendered commercial facade in ${suburb} from an elevated work platform`,
           caption:
-            "Commercial render repaint worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one \u2014 the painting is the same, the getting to it is not.",
+            "Commercial render repaint worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one — the painting is the same, the getting to it is not.",
         },
       ]}
       neighbouringSuburbs={[

@@ -72,14 +72,18 @@ function canonicalForRoute(route) {
 
 function writePage(route, html) {
   const destination =
-    route === "/" ? path.join(PUBLIC_DIR, "index.html") : path.join(PUBLIC_DIR, route.replace(/^\//, ""), "index.html");
+    route === "/"
+      ? path.join(PUBLIC_DIR, "index.html")
+      : path.join(PUBLIC_DIR, route.replace(/^\//, ""), "index.html");
   fs.mkdirSync(path.dirname(destination), { recursive: true });
   fs.writeFileSync(destination, html, "utf8");
 }
 
 function extractProp(source, propName) {
   // Props may be written as name="...", name=`...`, or name={`...`}
-  const pattern = new RegExp(`${propName}=\\{?(?:"([\\s\\S]*?)"|\\\`([\\s\\S]*?)\\\`)\\}?`);
+  const pattern = new RegExp(
+    `${propName}=\\{?(?:"([\\s\\S]*?)"|\\\`([\\s\\S]*?)\\\`)\\}?`,
+  );
   const match = source.match(pattern);
   return match ? (match[1] ?? match[2] ?? "").trim() : "";
 }
@@ -90,15 +94,30 @@ function extractQuotedValue(source, variableName) {
 }
 
 function normalizeTemplate(value, replacements) {
-  return value
-    .replace(/\$\{suburb\}/g, replacements.suburb ?? "")
-    .replace(/\s+/g, " ")
-    .trim();
+  return (
+    value
+      .replace(/\$\{suburb\}/g, replacements.suburb ?? "")
+      // Decode JS escape sequences. This generator reads the .tsx files as TEXT
+      // and never executes them, so an escape written in a source string stays
+      // an escape here even though the React layer renders it correctly. That
+      // split shipped: on 2026-09-06 the live /painter-armadale/ page served
+      // crawlers the literal seven characters \u2014 in place of an em dash,
+      // while browsers saw the dash and nothing looked wrong. Sources now use
+      // real characters, and this decode stops the next paste re-creating it.
+      .replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) =>
+        String.fromCharCode(parseInt(hex, 16)),
+      )
+      .replace(/\\n/g, " ")
+      .replace(/\\"/g, '"')
+      .replace(/\s+/g, " ")
+      .trim()
+  );
 }
 
 function extractFaqs(source, suburb) {
   const block = source.match(/const faqs = \[(.*?)\];/s)?.[1] ?? "";
-  const regex = /question:\s*(?:"([^"]*)"|`([^`]*)`)\s*,\s*answer:\s*(?:"([^"]*)"|`([^`]*)`)/gs;
+  const regex =
+    /question:\s*(?:"([^"]*)"|`([^`]*)`)\s*,\s*answer:\s*(?:"([^"]*)"|`([^`]*)`)/gs;
   const faqs = [];
   for (const match of block.matchAll(regex)) {
     const question = normalizeTemplate(match[1] ?? match[2] ?? "", { suburb });
@@ -152,16 +171,22 @@ function extractLocalContent(source, suburb) {
       const strRegex = /(?:"((?:[^"\\]|\\.)*)"|`((?:[^`\\]|\\.)*)`)\s*,?/g;
       for (const strMatch of bodyRaw.matchAll(strRegex)) {
         const text = normalizeTemplate(
-          (strMatch[1] ?? strMatch[2] ?? "").replace(/\\"/g, '"').replace(/\\`/g, "`"),
+          (strMatch[1] ?? strMatch[2] ?? "")
+            .replace(/\\"/g, '"')
+            .replace(/\\`/g, "`"),
           { suburb },
         );
         if (text) paragraphs.push(text);
       }
     } else {
-      const strMatch = bodyRaw.match(/^(?:"((?:[^"\\]|\\.)*)"|`((?:[^`\\]|\\.)*)`)$/);
+      const strMatch = bodyRaw.match(
+        /^(?:"((?:[^"\\]|\\.)*)"|`((?:[^`\\]|\\.)*)`)$/,
+      );
       if (strMatch) {
         const text = normalizeTemplate(
-          (strMatch[1] ?? strMatch[2] ?? "").replace(/\\"/g, '"').replace(/\\`/g, "`"),
+          (strMatch[1] ?? strMatch[2] ?? "")
+            .replace(/\\"/g, '"')
+            .replace(/\\`/g, "`"),
           { suburb },
         );
         if (text) paragraphs.push(text);
@@ -186,22 +211,22 @@ function localBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
-    "name": "Jetblack Painting",
-    "image": `${SITE_URL}/og-image.jpg`,
+    name: "Jetblack Painting",
+    image: `${SITE_URL}/og-image.jpg`,
     // Kept in step with client/src/lib/organizationSchema.ts — see the note
     // there. ImageObject, not a bare URL string.
-    "logo": {
+    logo: {
       "@type": "ImageObject",
       url: `${SITE_URL}/logo.jpg`,
       width: 1080,
       height: 1080,
       caption: "Jetblack Painting",
     },
-    "telephone": PHONE_DISPLAY,
-    "email": EMAIL,
-    "url": SITE_URL,
-    "priceRange": "$$",
-    "sameAs": [
+    telephone: PHONE_DISPLAY,
+    email: EMAIL,
+    url: SITE_URL,
+    priceRange: "$$",
+    sameAs: [
       "https://www.instagram.com/jetblack_painting",
       "https://www.facebook.com/jetblackpainting",
       "https://www.youtube.com/@jetblackpaint",
@@ -209,125 +234,133 @@ function localBusinessSchema() {
       "https://www.linkedin.com/in/jetblackpainting",
       "https://www.patreon.com/jetblack_painting",
       "https://au.pinterest.com/jetblackpainting/",
-      "https://maps.google.com/maps?cid=5159340262454594349"
+      "https://maps.google.com/maps?cid=5159340262454594349",
     ],
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Mordialloc",
-      "addressRegion": "VIC",
-      "postalCode": "3195",
-      "addressCountry": "AU"
+      addressLocality: "Mordialloc",
+      addressRegion: "VIC",
+      postalCode: "3195",
+      addressCountry: "AU",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": -38.0131,
-      "longitude": 145.0965
+      latitude: -38.0131,
+      longitude: 145.0965,
     },
-    "areaServed": [
-      { "@type": "City", "name": "Mordialloc" },
-      { "@type": "City", "name": "Armadale" },
-      { "@type": "City", "name": "Aspendale" },
-      { "@type": "City", "name": "Aspendale Gardens" },
-      { "@type": "City", "name": "Bayside" },
-      { "@type": "City", "name": "Beaumaris" },
-      { "@type": "City", "name": "Bentleigh" },
-      { "@type": "City", "name": "Bentleigh East" },
-      { "@type": "City", "name": "Berwick" },
-      { "@type": "City", "name": "Black Rock" },
-      { "@type": "City", "name": "Bonbeach" },
-      { "@type": "City", "name": "Box Hill" },
-      { "@type": "City", "name": "Brighton" },
-      { "@type": "City", "name": "Brighton East" },
-      { "@type": "City", "name": "Camberwell" },
-      { "@type": "City", "name": "Carlton" },
-      { "@type": "City", "name": "Carrum" },
-      { "@type": "City", "name": "Caulfield" },
-      { "@type": "City", "name": "Chadstone" },
-      { "@type": "City", "name": "Chelsea" },
-      { "@type": "City", "name": "Chelsea Heights" },
-      { "@type": "City", "name": "Cheltenham" },
-      { "@type": "City", "name": "Clarinda" },
-      { "@type": "City", "name": "Dingley Village" },
-      { "@type": "City", "name": "Cranbourne" },
-      { "@type": "City", "name": "Croydon" },
-      { "@type": "City", "name": "Dandenong" },
-      { "@type": "City", "name": "Doncaster" },
-      { "@type": "City", "name": "Donvale" },
-      { "@type": "City", "name": "Dromana" },
-      { "@type": "City", "name": "Edithvale" },
-      { "@type": "City", "name": "Elsternwick" },
-      { "@type": "City", "name": "Glen Waverley" },
-      { "@type": "City", "name": "Greater Dandenong" },
-      { "@type": "City", "name": "Hampton" },
-      { "@type": "City", "name": "Hampton East" },
-      { "@type": "City", "name": "Hawthorn" },
-      { "@type": "City", "name": "Heatherton" },
-      { "@type": "City", "name": "Highett" },
-      { "@type": "City", "name": "Keysborough" },
-      { "@type": "City", "name": "Kew" },
-      { "@type": "City", "name": "Kingston" },
-      { "@type": "City", "name": "Malvern" },
-      { "@type": "City", "name": "Malvern East" },
-      { "@type": "City", "name": "McKinnon" },
-      { "@type": "City", "name": "Mentone" },
-      { "@type": "City", "name": "Moorabbin" },
-      { "@type": "City", "name": "Mornington Peninsula" },
-      { "@type": "City", "name": "Murrumbeena" },
-      { "@type": "City", "name": "Narre Warren" },
-      { "@type": "City", "name": "Oakleigh" },
-      { "@type": "City", "name": "Ormond" },
-      { "@type": "City", "name": "Parkdale" },
-      { "@type": "City", "name": "Patterson Lakes" },
-      { "@type": "City", "name": "Ringwood" },
-      { "@type": "City", "name": "Rosebud" },
-      { "@type": "City", "name": "Sandringham" },
-      { "@type": "City", "name": "Seaford" },
-      { "@type": "City", "name": "South Yarra" },
-      { "@type": "City", "name": "Stonnington" },
-      { "@type": "City", "name": "Templestowe" },
-      { "@type": "City", "name": "Thornbury" },
-      { "@type": "City", "name": "Toorak" },
-      { "@type": "City", "name": "Wheelers Hill" },
-      { "@type": "City", "name": "Windsor" },
-      { "@type": "City", "name": "Frankston" },
-      { "@type": "City", "name": "Frankston South" },
-      { "@type": "City", "name": "Mornington" },
-      { "@type": "City", "name": "Mount Eliza" },
-      { "@type": "City", "name": "Glen Iris" },
-      { "@type": "City", "name": "Prahran" },
-      { "@type": "City", "name": "Balwyn" },
-      { "@type": "City", "name": "Mount Martha" },
-      { "@type": "City", "name": "Elwood" },
-      { "@type": "City", "name": "St Kilda" },
-      { "@type": "City", "name": "Port Melbourne" },
-      { "@type": "City", "name": "Albert Park" },
-      { "@type": "City", "name": "Fitzroy" },
-      { "@type": "City", "name": "Clyde North" },
-      { "@type": "City", "name": "Collingwood" },
-      { "@type": "City", "name": "Richmond" },
-      { "@type": "City", "name": "Northcote" },
-      { "@type": "City", "name": "Brunswick" },
-      { "@type": "City", "name": "South Melbourne" },
-      { "@type": "City", "name": "Carnegie" },
-      { "@type": "City", "name": "Hughesdale" },
-      { "@type": "City", "name": "Braeside" },
-      { "@type": "City", "name": "Waterways" },
-      { "@type": "City", "name": "Safety Beach" },
-      { "@type": "City", "name": "Rye" },
-      { "@type": "City", "name": "Hampton Park" },
-      { "@type": "City", "name": "Endeavour Hills" },
-      { "@type": "City", "name": "Sorrento" },
-      { "@type": "City", "name": "Somerville" },
-      { "@type": "City", "name": "Clyde" },
-      { "@type": "City", "name": "Hastings" }
+    areaServed: [
+      { "@type": "City", name: "Mordialloc" },
+      { "@type": "City", name: "Armadale" },
+      { "@type": "City", name: "Aspendale" },
+      { "@type": "City", name: "Aspendale Gardens" },
+      { "@type": "City", name: "Bayside" },
+      { "@type": "City", name: "Beaumaris" },
+      { "@type": "City", name: "Bentleigh" },
+      { "@type": "City", name: "Bentleigh East" },
+      { "@type": "City", name: "Berwick" },
+      { "@type": "City", name: "Black Rock" },
+      { "@type": "City", name: "Bonbeach" },
+      { "@type": "City", name: "Box Hill" },
+      { "@type": "City", name: "Brighton" },
+      { "@type": "City", name: "Brighton East" },
+      { "@type": "City", name: "Camberwell" },
+      { "@type": "City", name: "Carlton" },
+      { "@type": "City", name: "Carrum" },
+      { "@type": "City", name: "Caulfield" },
+      { "@type": "City", name: "Chadstone" },
+      { "@type": "City", name: "Chelsea" },
+      { "@type": "City", name: "Chelsea Heights" },
+      { "@type": "City", name: "Cheltenham" },
+      { "@type": "City", name: "Clarinda" },
+      { "@type": "City", name: "Dingley Village" },
+      { "@type": "City", name: "Cranbourne" },
+      { "@type": "City", name: "Croydon" },
+      { "@type": "City", name: "Dandenong" },
+      { "@type": "City", name: "Doncaster" },
+      { "@type": "City", name: "Donvale" },
+      { "@type": "City", name: "Dromana" },
+      { "@type": "City", name: "Edithvale" },
+      { "@type": "City", name: "Elsternwick" },
+      { "@type": "City", name: "Glen Waverley" },
+      { "@type": "City", name: "Greater Dandenong" },
+      { "@type": "City", name: "Hampton" },
+      { "@type": "City", name: "Hampton East" },
+      { "@type": "City", name: "Hawthorn" },
+      { "@type": "City", name: "Heatherton" },
+      { "@type": "City", name: "Highett" },
+      { "@type": "City", name: "Keysborough" },
+      { "@type": "City", name: "Kew" },
+      { "@type": "City", name: "Kingston" },
+      { "@type": "City", name: "Malvern" },
+      { "@type": "City", name: "Malvern East" },
+      { "@type": "City", name: "McKinnon" },
+      { "@type": "City", name: "Mentone" },
+      { "@type": "City", name: "Moorabbin" },
+      { "@type": "City", name: "Mornington Peninsula" },
+      { "@type": "City", name: "Murrumbeena" },
+      { "@type": "City", name: "Narre Warren" },
+      { "@type": "City", name: "Oakleigh" },
+      { "@type": "City", name: "Ormond" },
+      { "@type": "City", name: "Parkdale" },
+      { "@type": "City", name: "Patterson Lakes" },
+      { "@type": "City", name: "Ringwood" },
+      { "@type": "City", name: "Rosebud" },
+      { "@type": "City", name: "Sandringham" },
+      { "@type": "City", name: "Seaford" },
+      { "@type": "City", name: "South Yarra" },
+      { "@type": "City", name: "Stonnington" },
+      { "@type": "City", name: "Templestowe" },
+      { "@type": "City", name: "Thornbury" },
+      { "@type": "City", name: "Toorak" },
+      { "@type": "City", name: "Wheelers Hill" },
+      { "@type": "City", name: "Windsor" },
+      { "@type": "City", name: "Frankston" },
+      { "@type": "City", name: "Frankston South" },
+      { "@type": "City", name: "Mornington" },
+      { "@type": "City", name: "Mount Eliza" },
+      { "@type": "City", name: "Glen Iris" },
+      { "@type": "City", name: "Prahran" },
+      { "@type": "City", name: "Balwyn" },
+      { "@type": "City", name: "Mount Martha" },
+      { "@type": "City", name: "Elwood" },
+      { "@type": "City", name: "St Kilda" },
+      { "@type": "City", name: "Port Melbourne" },
+      { "@type": "City", name: "Albert Park" },
+      { "@type": "City", name: "Fitzroy" },
+      { "@type": "City", name: "Clyde North" },
+      { "@type": "City", name: "Collingwood" },
+      { "@type": "City", name: "Richmond" },
+      { "@type": "City", name: "Northcote" },
+      { "@type": "City", name: "Brunswick" },
+      { "@type": "City", name: "South Melbourne" },
+      { "@type": "City", name: "Carnegie" },
+      { "@type": "City", name: "Hughesdale" },
+      { "@type": "City", name: "Braeside" },
+      { "@type": "City", name: "Waterways" },
+      { "@type": "City", name: "Safety Beach" },
+      { "@type": "City", name: "Rye" },
+      { "@type": "City", name: "Hampton Park" },
+      { "@type": "City", name: "Endeavour Hills" },
+      { "@type": "City", name: "Sorrento" },
+      { "@type": "City", name: "Somerville" },
+      { "@type": "City", name: "Clyde" },
+      { "@type": "City", name: "Hastings" },
     ],
-    "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
-    "openingHoursSpecification": {
+    description:
+      "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
+    openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "07:00",
-      "closes": "18:00"
-    }
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "07:00",
+      closes: "18:00",
+    },
   };
 }
 
@@ -338,11 +371,11 @@ function breadcrumbTrail(trail) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": trail.map((entry, index) => ({
+    itemListElement: trail.map((entry, index) => ({
       "@type": "ListItem",
-      "position": index + 1,
-      "name": entry.name,
-      "item": entry.item.startsWith("http") ? entry.item : SITE_URL + entry.item,
+      position: index + 1,
+      name: entry.name,
+      item: entry.item.startsWith("http") ? entry.item : SITE_URL + entry.item,
     })),
   };
 }
@@ -370,11 +403,11 @@ function speakableSchema(canonical) {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${canonical}#webpage-speakable`,
-    "url": canonical,
-    "speakable": {
+    url: canonical,
+    speakable: {
       "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", ".hero p"]
-    }
+      cssSelector: ["h1", ".hero p"],
+    },
   };
 }
 
@@ -393,7 +426,10 @@ function speakableSchema(canonical) {
 function suburbDirectoryHtml(currentCanonical) {
   const items = suburbDirectory
     .filter((entry) => canonicalForRoute(entry.route) !== currentCanonical)
-    .map((entry) => `      <li><a href="${entry.route}/">Painters ${escapeHtml(entry.name)}</a></li>`)
+    .map(
+      (entry) =>
+        `      <li><a href="${entry.route}/">Painters ${escapeHtml(entry.name)}</a></li>`,
+    )
     .join("\n");
   if (!items) return "";
   return (
@@ -404,14 +440,36 @@ function suburbDirectoryHtml(currentCanonical) {
   );
 }
 
-function pageHtml({ title, description, canonical, heroTitle, heroBody, sections, footerLinks, schema, ogImage, robots, projectImages = [], projectSummary = "", projectHeading = "Recent work" }) {
+function pageHtml({
+  title,
+  description,
+  canonical,
+  heroTitle,
+  heroBody,
+  sections,
+  footerLinks,
+  schema,
+  ogImage,
+  robots,
+  projectImages = [],
+  projectSummary = "",
+  projectHeading = "Recent work",
+}) {
   // Utility pages pass robots: "noindex, follow". A thin page left indexable
   // reads to Google as a soft 404; "follow" keeps link equity flowing.
   const robotsContent =
-    robots || "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
-  const schemaScripts = (Array.isArray(schema) ? [...schema, speakableSchema(canonical)] : [schema, speakableSchema(canonical)])
+    robots ||
+    "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
+  const schemaScripts = (
+    Array.isArray(schema)
+      ? [...schema, speakableSchema(canonical)]
+      : [schema, speakableSchema(canonical)]
+  )
     .filter(Boolean)
-    .map((item) => `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`)
+    .map(
+      (item) =>
+        `  <script type="application/ld+json" data-static-schema>${JSON.stringify(item)}</script>`,
+    )
     .join("\n");
 
   // Real project photographs, emitted as genuine <img> with descriptive alt text
@@ -425,7 +483,7 @@ ${projectSummary ? `    <p>${escapeHtml(projectSummary)}</p>\n` : ""}${projectIm
           (img) => `    <figure>
       <img src="${img.src}"${img.small ? ` srcset="${img.small} 800w, ${img.src} ${img.width}w" sizes="(max-width: 768px) 100vw, 50vw"` : ""} width="${img.width}" height="${img.height}" alt="${escapeHtml(img.alt)}" loading="lazy" decoding="async">
       <figcaption>${escapeHtml(img.caption)}</figcaption>
-    </figure>`
+    </figure>`,
         )
         .join("\n")}
   </section>`
@@ -439,7 +497,8 @@ ${projectSummary ? `    <p>${escapeHtml(projectSummary)}</p>\n` : ""}${projectIm
     <div class="grid">
 ${section.items
   .map(
-    (item) => `      <div class="card"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></div>`
+    (item) =>
+      `      <div class="card"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></div>`,
   )
   .join("\n")}
     </div>
@@ -452,7 +511,10 @@ ${section.items
     ${section.body ? `<p>${escapeHtml(section.body)}</p>` : ""}
     <div class="link-list">
 ${section.items
-  .map((item) => `      <a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`)
+  .map(
+    (item) =>
+      `      <a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`,
+  )
   .join("\n")}
     </div>
   </section>`;
@@ -463,7 +525,8 @@ ${section.items
     <h2>${escapeHtml(section.heading)}</h2>
 ${section.items
   .map(
-    (item) => `    <h3>${escapeHtml(item.question)}</h3>\n    <p>${escapeHtml(item.answer)}</p>`
+    (item) =>
+      `    <h3>${escapeHtml(item.question)}</h3>\n    <p>${escapeHtml(item.answer)}</p>`,
   )
   .join("\n")}
   </section>`;
@@ -656,7 +719,12 @@ function suburbSchema({ suburb, title, description, canonical }) {
       "@context": "https://schema.org",
       "@type": "Service",
       name: `Painters ${suburb}`,
-      serviceType: ["Interior painting", "Exterior painting", "Commercial painting", "Roof painting"],
+      serviceType: [
+        "Interior painting",
+        "Exterior painting",
+        "Commercial painting",
+        "Roof painting",
+      ],
       provider: {
         "@type": "HomeAndConstructionBusiness",
         name: "Jetblack Painting",
@@ -716,7 +784,9 @@ function reviewSchema(reviews) {
     datePublished: reviews[0].datePublished || undefined,
     reviewRating: {
       "@type": "Rating",
-      ratingValue: String(reviews[0].rating || (AGGREGATE_RATING.ratingValue || "5")),
+      ratingValue: String(
+        reviews[0].rating || AGGREGATE_RATING.ratingValue || "5",
+      ),
       bestRating: "5",
     },
   };
@@ -741,9 +811,11 @@ const SUBURB_TRAITS = {
   // and still matches on those — verified across all 96 suburb pages, where
   // dropping this token changed exactly one page.
   coastal: /coastal|salt air|beach|seaside|foreshore|waterfront/i,
-  heritage: /heritage|period home|victorian|edwardian|federation|californian bungalow|art deco/i,
+  heritage:
+    /heritage|period home|victorian|edwardian|federation|californian bungalow|art deco/i,
   weatherboard: /weatherboard/i,
-  modern: /contemporary|modern home|new build|newly built|new estate|new-build/i,
+  modern:
+    /contemporary|modern home|new build|newly built|new estate|new-build/i,
   strata: /apartment|unit block|townhouse|strata|body corporate/i,
   render: /render|brick veneer|masonry/i,
 };
@@ -751,7 +823,10 @@ const SUBURB_TRAITS = {
 function suburbServiceCards({ suburb, localExpertise, propertyTypes }) {
   const text = `${localExpertise} ${propertyTypes}`;
   const has = Object.fromEntries(
-    Object.entries(SUBURB_TRAITS).map(([trait, pattern]) => [trait, pattern.test(text)])
+    Object.entries(SUBURB_TRAITS).map(([trait, pattern]) => [
+      trait,
+      pattern.test(text),
+    ]),
   );
 
   let interior;
@@ -802,10 +877,17 @@ function suburbServiceCards({ suburb, localExpertise, propertyTypes }) {
 function extractProjectImages(source, suburb) {
   const start = source.indexOf("projectImages={[");
   if (start === -1) return [];
-  let depth = 0, end = -1;
+  let depth = 0,
+    end = -1;
   for (let i = source.indexOf("[", start); i < source.length; i++) {
     if (source[i] === "[") depth++;
-    else if (source[i] === "]") { depth--; if (depth === 0) { end = i; break; } }
+    else if (source[i] === "]") {
+      depth--;
+      if (depth === 0) {
+        end = i;
+        break;
+      }
+    }
   }
   if (end === -1) return [];
   const block = source.slice(start, end + 1);
@@ -817,16 +899,27 @@ function extractProjectImages(source, suburb) {
   const marks = [...block.matchAll(/\bsrc:\s*"/g)].map((m) => m.index);
   const out = [];
   for (let i = 0; i < marks.length; i++) {
-    const body = block.slice(marks[i], i + 1 < marks.length ? marks[i + 1] : block.length);
+    const body = block.slice(
+      marks[i],
+      i + 1 < marks.length ? marks[i + 1] : block.length,
+    );
     const pick = (key) => {
-      const hit = body.match(new RegExp(key + ':\\s*(?:"([^"]*)"|`([^`]*)`|(\\d+))'));
-      return hit ? normalizeTemplate(hit[1] ?? hit[2] ?? hit[3] ?? "", { suburb }) : "";
+      const hit = body.match(
+        new RegExp(key + ':\\s*(?:"([^"]*)"|`([^`]*)`|(\\d+))'),
+      );
+      return hit
+        ? normalizeTemplate(hit[1] ?? hit[2] ?? hit[3] ?? "", { suburb })
+        : "";
     };
     const src = pick("src");
     if (!src) continue;
     out.push({
-      src, small: pick("small"), width: pick("width"), height: pick("height"),
-      alt: pick("alt"), caption: pick("caption"),
+      src,
+      small: pick("small"),
+      width: pick("width"),
+      height: pick("height"),
+      alt: pick("alt"),
+      caption: pick("caption"),
     });
   }
   return out;
@@ -839,12 +932,25 @@ function extractProjectSummary(source, suburb) {
 
 function generateSuburbPage(route, sourceFile) {
   const source = fs.readFileSync(sourceFile, "utf8");
-  const suburb = extractQuotedValue(source, "suburb") || titleCaseFromSlug(route.replace("/painter-", ""));
+  const suburb =
+    extractQuotedValue(source, "suburb") ||
+    titleCaseFromSlug(route.replace("/painter-", ""));
   const title = normalizeTemplate(extractProp(source, "title"), { suburb });
-  const description = normalizeTemplate(extractProp(source, "description"), { suburb });
-  const localExpertise = normalizeTemplate(extractProp(source, "localExpertise"), { suburb });
-  const propertyTypes = normalizeTemplate(extractProp(source, "propertyTypes"), { suburb });
-  const neighbours = extractNeighbours(source).map((item) => ({ label: item.name, href: `${item.link}/` }));
+  const description = normalizeTemplate(extractProp(source, "description"), {
+    suburb,
+  });
+  const localExpertise = normalizeTemplate(
+    extractProp(source, "localExpertise"),
+    { suburb },
+  );
+  const propertyTypes = normalizeTemplate(
+    extractProp(source, "propertyTypes"),
+    { suburb },
+  );
+  const neighbours = extractNeighbours(source).map((item) => ({
+    label: item.name,
+    href: `${item.link}/`,
+  }));
   const faqs = extractFaqs(source, suburb);
   const localContent = extractLocalContent(source, suburb);
   const projectImages = extractProjectImages(source, suburb);
@@ -855,15 +961,21 @@ function generateSuburbPage(route, sourceFile) {
   // needs sharp, so on any build where it hasn't run this would otherwise point
   // every suburb page at a 404 and break its social preview. Undefined falls
   // back to the site-wide og-image.jpg in pageHtml().
-  const ogImageFile = path.join(PUBLIC_DIR, "og", `${route.replace(/^\//, "")}.jpg`);
-  const ogImage = fs.existsSync(ogImageFile) ? `${SITE_URL}/og${route}.jpg` : undefined;
+  const ogImageFile = path.join(
+    PUBLIC_DIR,
+    "og",
+    `${route.replace(/^\//, "")}.jpg`,
+  );
+  const ogImage = fs.existsSync(ogImageFile)
+    ? `${SITE_URL}/og${route}.jpg`
+    : undefined;
   // Read the noindex flag off the same source the React layer uses, rather
   // than keeping a second list here. A page that carries `noindex` in its
   // SuburbPageTemplate props must say "noindex, follow" in the crawler HTML
   // too — the two layers disagreeing is the whole failure mode this generator
   // exists to avoid.
   const noindex = /\bnoindex(\s*=\s*\{\s*true\s*\}|\s*[/>\n])/.test(source);
- 
+
   writePage(
     route,
     pageHtml({
@@ -898,7 +1010,10 @@ function generateSuburbPage(route, sourceFile) {
         // the reason two suburb pages don't read as near-duplicates of each
         // other. Placed right after the generic intro and ahead of the
         // templated cards/FAQ sections below.
-        ...localContent.map((block) => ({ heading: block.heading, paragraphs: block.paragraphs })),
+        ...localContent.map((block) => ({
+          heading: block.heading,
+          paragraphs: block.paragraphs,
+        })),
         {
           type: "cards",
           heading: `What we paint in ${suburb}`,
@@ -916,21 +1031,52 @@ function generateSuburbPage(route, sourceFile) {
           heading: `Painting Services in ${suburb}`,
           body: `Every service below is available in ${suburb}. Follow a link for service details and to request a quote.`,
           items: [
-            { label: `Interior house painting ${suburb}`, href: "/services/interior-painting/" },
-            { label: `Exterior house painting ${suburb}`, href: "/services/exterior-painting/" },
-            { label: `Commercial painting ${suburb}`, href: "/services/commercial-painting/" },
-            { label: `Kitchen cabinet resurfacing ${suburb}`, href: "/services/kitchen-cabinet-resurfacing/" },
-            { label: `Roof painting ${suburb}`, href: "/services/roof-painting/" },
-            { label: `Real estate painting ${suburb}`, href: "/services/real-estate-painting/" },
-            { label: `Body corporate painting ${suburb}`, href: "/services/body-corporate-painting/" },
-            { label: `Epoxy flooring ${suburb}`, href: "/services/epoxy-flooring/" },
+            {
+              label: `Interior house painting ${suburb}`,
+              href: "/services/interior-painting/",
+            },
+            {
+              label: `Exterior house painting ${suburb}`,
+              href: "/services/exterior-painting/",
+            },
+            {
+              label: `Commercial painting ${suburb}`,
+              href: "/services/commercial-painting/",
+            },
+            {
+              label: `Kitchen cabinet resurfacing ${suburb}`,
+              href: "/services/kitchen-cabinet-resurfacing/",
+            },
+            {
+              label: `Roof painting ${suburb}`,
+              href: "/services/roof-painting/",
+            },
+            {
+              label: `Real estate painting ${suburb}`,
+              href: "/services/real-estate-painting/",
+            },
+            {
+              label: `Body corporate painting ${suburb}`,
+              href: "/services/body-corporate-painting/",
+            },
+            {
+              label: `Epoxy flooring ${suburb}`,
+              href: "/services/epoxy-flooring/",
+            },
           ],
         },
         {
           type: "links",
           heading: `Nearby suburbs we also service`,
           body: `Explore nearby suburb pages for neighbouring areas around ${suburb}.`,
-          items: neighbours.length ? neighbours : [{ label: "Melbourne painting services", href: "/services/interior-painting/" }],
+          items: neighbours.length
+            ? neighbours
+            : [
+                {
+                  label: "Melbourne painting services",
+                  href: "/services/interior-painting/",
+                },
+              ],
         },
         {
           type: "faqs",
@@ -954,7 +1100,7 @@ function generateSuburbPage(route, sourceFile) {
         { label: "Interior Painting", href: "/services/interior-painting/" },
         { label: "Exterior Painting", href: "/services/exterior-painting/" },
       ],
-    })
+    }),
   );
 }
 
@@ -975,7 +1121,10 @@ const allSuburbPages = [
   { route: "/painter-donvale", source: "DonvalePainters.tsx" },
   { route: "/painter-dromana", source: "DromanaPainters.tsx" },
   { route: "/painter-glen-waverley", source: "GlenWaverleyPainters.tsx" },
-  { route: "/painter-greater-dandenong", source: "GreaterDandenongPainters.tsx" },
+  {
+    route: "/painter-greater-dandenong",
+    source: "GreaterDandenongPainters.tsx",
+  },
   { route: "/painter-hampton", source: "HamptonPainters.tsx" },
   { route: "/painter-hampton-east", source: "HamptonEastPainters.tsx" },
   { route: "/painter-hawthorn", source: "HawthornPainters.tsx" },
@@ -988,7 +1137,10 @@ const allSuburbPages = [
   { route: "/painter-mentone", source: "MentonePainters.tsx" },
   { route: "/painter-moorabbin", source: "MoorabbinPainters.tsx" },
   { route: "/painter-mordialloc", source: "MordiallocPainters.tsx" },
-  { route: "/painter-mornington-peninsula", source: "MorningtonPeninsulaPainters.tsx" },
+  {
+    route: "/painter-mornington-peninsula",
+    source: "MorningtonPeninsulaPainters.tsx",
+  },
   { route: "/painter-murrumbeena", source: "MurrumbeenaPainters.tsx" },
   { route: "/painter-narre-warren", source: "NarreWarrenPainters.tsx" },
   { route: "/painter-ormond", source: "OrmondPainters.tsx" },
@@ -1006,7 +1158,10 @@ const allSuburbPages = [
   { route: "/painter-parkdale", source: "ParkdalePainters.tsx" },
   { route: "/painter-patterson-lakes", source: "PattersonLakesPainters.tsx" },
   { route: "/painter-aspendale", source: "AspendalePainters.tsx" },
-  { route: "/painter-aspendale-gardens", source: "AspendaleGardensPainters.tsx" },
+  {
+    route: "/painter-aspendale-gardens",
+    source: "AspendaleGardensPainters.tsx",
+  },
   { route: "/painter-chelsea", source: "ChelseaPainters.tsx" },
   { route: "/painter-chelsea-heights", source: "ChelseaHeightsPainters.tsx" },
   { route: "/painter-south-yarra", source: "SouthYarraPainters.tsx" },
@@ -1062,8 +1217,13 @@ const suburbDirectory = allSuburbPages
   .map((page) => ({
     route: page.route,
     name:
-      extractQuotedValue(fs.readFileSync(path.join(PAGE_DIR, page.source), "utf8"), "suburb") ||
-      titleCaseFromSlug(page.route.replace("/painter-", "").replace("-painters", "")),
+      extractQuotedValue(
+        fs.readFileSync(path.join(PAGE_DIR, page.source), "utf8"),
+        "suburb",
+      ) ||
+      titleCaseFromSlug(
+        page.route.replace("/painter-", "").replace("-painters", ""),
+      ),
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -1258,18 +1418,29 @@ const servicePages = [
   {
     route: "/services/interior-painting",
     name: "Interior Painting",
-    title:
-      "Interior Painting Melbourne | Jetblack Painting",
+    title: "Interior Painting Melbourne | Jetblack Painting",
     description:
       "Professional interior painting in Melbourne. Premium Dulux paints, expert colour advice, 5-star rated. All Melbourne suburbs. Free quotes.",
     heroTitle: "Interior Painting Melbourne",
     heroBody:
       "Professional interior house painting across Melbourne — walls, ceilings, trims, doors, and full home repaints finished with premium Dulux and Taubmans systems and meticulous preparation.",
     cards: [
-      { title: "Walls and ceilings", body: "Smooth, even finishes with proper surface preparation, patching, and premium low-sheen and matt systems." },
-      { title: "Trims, doors and skirting", body: "Crisp enamel finishes on architraves, skirting boards, doors, and window frames." },
-      { title: "Feature walls and colour consulting", body: "Help choosing colours and sheens that suit the room's light, furniture, and style." },
-      { title: "Full home repaints", body: "Whole-house interior repaints staged room by room to minimise disruption for your household." },
+      {
+        title: "Walls and ceilings",
+        body: "Smooth, even finishes with proper surface preparation, patching, and premium low-sheen and matt systems.",
+      },
+      {
+        title: "Trims, doors and skirting",
+        body: "Crisp enamel finishes on architraves, skirting boards, doors, and window frames.",
+      },
+      {
+        title: "Feature walls and colour consulting",
+        body: "Help choosing colours and sheens that suit the room's light, furniture, and style.",
+      },
+      {
+        title: "Full home repaints",
+        body: "Whole-house interior repaints staged room by room to minimise disruption for your household.",
+      },
     ],
     paragraphs: [
       "Every interior project starts with thorough preparation: furniture protection, filling and sanding, gap sealing, and priming where needed, so the final coats look sharp and last longer.",
@@ -1280,12 +1451,30 @@ const servicePages = [
         type: "steps",
         heading: "How an interior painting project runs",
         items: [
-          { title: "Quote and colour consultation", body: "We walk through the home with you, note the condition of every wall and ceiling, and talk through colours, sheens and any feature walls. The written quote itemises rooms, surfaces, prep and the specific products, so there's no guessing later." },
-          { title: "Furniture protection and setup", body: "Furniture is moved to the centre of the room or covered in place. Floors and fixtures are protected with drop sheets. The work area is sealed off from the rest of the house to control dust." },
-          { title: "Patching, sanding and priming", body: "Nail holes, cracks, water stains and old repairs are filled and sanded back smooth. Bare plaster, water-stained patches and any repaired sections are spot-primed so they don't flash through the topcoats." },
-          { title: "Edges, trims and doors — sprayed or cut in by hand", body: "How the detail work goes on depends on the room. Where a space can be properly masked and sealed off, we spray. That means empty rooms, and doors, trims and built-in joinery in particular. Spraying lays the finish down glass-smooth: no brush marks, and no roller texture on surfaces where every stroke would otherwise show. Where spraying isn't practical, because you're living in the room or an adjacent finish can't be masked cleanly, edges, corners and cornices are cut in by hand before the broad areas are rolled. Either way this is the step that separates a sharp finish from a messy one, and it's where an experienced painter earns their keep." },
-          { title: "Topcoats", body: "Two full coats go on to the specified sheen. Most walls take low-sheen or matt; trims and doors take semi-gloss or gloss enamel. Drying time between coats is respected rather than rushed." },
-          { title: "Walkthrough and handover", body: "We walk the finished rooms with you, touch up anything that needs it, remove all protection and clean up thoroughly. The 5-year written workmanship guarantee applies from this point." },
+          {
+            title: "Quote and colour consultation",
+            body: "We walk through the home with you, note the condition of every wall and ceiling, and talk through colours, sheens and any feature walls. The written quote itemises rooms, surfaces, prep and the specific products, so there's no guessing later.",
+          },
+          {
+            title: "Furniture protection and setup",
+            body: "Furniture is moved to the centre of the room or covered in place. Floors and fixtures are protected with drop sheets. The work area is sealed off from the rest of the house to control dust.",
+          },
+          {
+            title: "Patching, sanding and priming",
+            body: "Nail holes, cracks, water stains and old repairs are filled and sanded back smooth. Bare plaster, water-stained patches and any repaired sections are spot-primed so they don't flash through the topcoats.",
+          },
+          {
+            title: "Edges, trims and doors — sprayed or cut in by hand",
+            body: "How the detail work goes on depends on the room. Where a space can be properly masked and sealed off, we spray. That means empty rooms, and doors, trims and built-in joinery in particular. Spraying lays the finish down glass-smooth: no brush marks, and no roller texture on surfaces where every stroke would otherwise show. Where spraying isn't practical, because you're living in the room or an adjacent finish can't be masked cleanly, edges, corners and cornices are cut in by hand before the broad areas are rolled. Either way this is the step that separates a sharp finish from a messy one, and it's where an experienced painter earns their keep.",
+          },
+          {
+            title: "Topcoats",
+            body: "Two full coats go on to the specified sheen. Most walls take low-sheen or matt; trims and doors take semi-gloss or gloss enamel. Drying time between coats is respected rather than rushed.",
+          },
+          {
+            title: "Walkthrough and handover",
+            body: "We walk the finished rooms with you, touch up anything that needs it, remove all protection and clean up thoroughly. The 5-year written workmanship guarantee applies from this point.",
+          },
         ],
       },
       {
@@ -1299,31 +1488,74 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "How long does interior painting take?", answer: "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required. A single room is usually a day or two; a full home repaint is staged across a working week or more." },
-      { question: "Do I need to move out during interior painting?", answer: "No. We stage the work room by room, use low-odour premium paints, and keep living areas usable throughout the project. Most households stay in the home for the full job." },
-      { question: "Which paint brands do you use for interiors?", answer: "We use premium Australian brands including Dulux and Taubmans, matched to each surface and traffic level — washable low-sheen for living areas, durable enamels for trims and doors." },
-      { question: "How much does interior painting cost in Melbourne?", answer: "Interior painting cost depends on the number of rooms, the condition of the walls and ceilings, whether you're changing colour significantly, and the finish level you choose. Those factors move the price more than room size alone, so we quote after a site visit rather than a rate sight-unseen. Quotes are free — call 0432 077 782." },
-      { question: "Do you paint ceilings as well as walls?", answer: "Yes. Ceiling painting is included where specified — flat or low-sheen finishes are standard, and we address any cracking, water staining or previous patch repairs as part of the preparation." },
-      { question: "Can you match or change to a completely different colour?", answer: "Yes. Significant colour changes — especially dark to light — sometimes need a tinted primer or an extra coat for even coverage. We account for this in the quote so there are no surprises once the job starts." },
-      { question: "Do you paint rental properties between tenants?", answer: "Yes. We regularly repaint rental properties for landlords and property managers between tenancies, working to a fixed turnaround with durable, easy-clean finishes in neutral colours that suit the widest range of tenants." },
-      { question: "Can you help if I don't know what colours to choose?", answer: "Yes. Colour consultation is included with every quote — we look at the room's natural light, existing furniture and finishes, and talk through options rather than leaving you to guess from a paint chart." },
+      {
+        question: "How long does interior painting take?",
+        answer:
+          "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required. A single room is usually a day or two; a full home repaint is staged across a working week or more.",
+      },
+      {
+        question: "Do I need to move out during interior painting?",
+        answer:
+          "No. We stage the work room by room, use low-odour premium paints, and keep living areas usable throughout the project. Most households stay in the home for the full job.",
+      },
+      {
+        question: "Which paint brands do you use for interiors?",
+        answer:
+          "We use premium Australian brands including Dulux and Taubmans, matched to each surface and traffic level — washable low-sheen for living areas, durable enamels for trims and doors.",
+      },
+      {
+        question: "How much does interior painting cost in Melbourne?",
+        answer:
+          "Interior painting cost depends on the number of rooms, the condition of the walls and ceilings, whether you're changing colour significantly, and the finish level you choose. Those factors move the price more than room size alone, so we quote after a site visit rather than a rate sight-unseen. Quotes are free — call 0432 077 782.",
+      },
+      {
+        question: "Do you paint ceilings as well as walls?",
+        answer:
+          "Yes. Ceiling painting is included where specified — flat or low-sheen finishes are standard, and we address any cracking, water staining or previous patch repairs as part of the preparation.",
+      },
+      {
+        question: "Can you match or change to a completely different colour?",
+        answer:
+          "Yes. Significant colour changes — especially dark to light — sometimes need a tinted primer or an extra coat for even coverage. We account for this in the quote so there are no surprises once the job starts.",
+      },
+      {
+        question: "Do you paint rental properties between tenants?",
+        answer:
+          "Yes. We regularly repaint rental properties for landlords and property managers between tenancies, working to a fixed turnaround with durable, easy-clean finishes in neutral colours that suit the widest range of tenants.",
+      },
+      {
+        question: "Can you help if I don't know what colours to choose?",
+        answer:
+          "Yes. Colour consultation is included with every quote — we look at the room's natural light, existing furniture and finishes, and talk through options rather than leaving you to guess from a paint chart.",
+      },
     ],
   },
   {
     route: "/services/exterior-painting",
     name: "Exterior Painting",
-    title:
-      "Exterior Painting Melbourne | Jetblack Painting",
+    title: "Exterior Painting Melbourne | Jetblack Painting",
     description:
       "Expert exterior house painting in Melbourne. Weather-resistant coatings, professional preparation, 5-star rated. Servicing all Melbourne suburbs. Free quotes.",
     heroTitle: "Exterior Painting Melbourne",
     heroBody:
       "Weather-resistant exterior house painting across Melbourne — weatherboards, render, brick, eaves, fascias, and fences prepared properly so the finish lasts through Melbourne's changing conditions.",
     cards: [
-      { title: "Weatherboard homes", body: "Sanding, priming, gap sealing, and durable topcoats that protect timber weatherboards from moisture and UV." },
-      { title: "Render and brick", body: "Membrane and acrylic systems for rendered and masonry exteriors, matched to the substrate." },
-      { title: "Eaves, fascias and gutters", body: "Detail work on trims and high areas completed safely with the right access equipment." },
-      { title: "Fences and outdoor structures", body: "Fence painting and staining that finishes the property's street appeal." },
+      {
+        title: "Weatherboard homes",
+        body: "Sanding, priming, gap sealing, and durable topcoats that protect timber weatherboards from moisture and UV.",
+      },
+      {
+        title: "Render and brick",
+        body: "Membrane and acrylic systems for rendered and masonry exteriors, matched to the substrate.",
+      },
+      {
+        title: "Eaves, fascias and gutters",
+        body: "Detail work on trims and high areas completed safely with the right access equipment.",
+      },
+      {
+        title: "Fences and outdoor structures",
+        body: "Fence painting and staining that finishes the property's street appeal.",
+      },
     ],
     paragraphs: [
       "Melbourne exteriors need real preparation: pressure washing, scraping and sanding back failing coatings, priming bare timber, and sealing gaps before any topcoat is applied.",
@@ -1334,12 +1566,30 @@ const servicePages = [
         type: "steps",
         heading: "How an exterior painting project runs",
         items: [
-          { title: "Quote and assessment", body: "We walk the exterior with you, checking the condition of weatherboard, render, brick and trim, noting access and height requirements, and talking through colour options. The written quote itemises the surfaces, preparation and specific products before any work begins." },
-          { title: "Pressure washing", body: "Every surface is pressure washed to remove dirt, mould, chalking paint and loose debris. This step matters more than any other. A new coat applied over a dirty or chalky surface never bonds properly, no matter how good the paint is." },
-          { title: "Scraping, sanding and repairs", body: "Failing paint is scraped and sanded back to a sound edge so the new coating doesn't telegraph old cracks. Damaged weatherboards are repaired or replaced, and cracks in render are filled before anything else happens." },
-          { title: "Priming and caulking", body: "Bare timber, repaired sections and any previously unpainted metal are spot-primed, and gaps and joints are caulked to keep water out. This step is what stops a repaint failing early at the edges and joins." },
-          { title: "Topcoats", body: "Two full coats of exterior-grade Dulux or Taubmans product go on to the specified sheen. Drying time between coats is respected, and the work is planned around Melbourne's weather rather than rushed to finish early." },
-          { title: "Walkthrough and handover", body: "We walk the finished exterior with you, touch up anything that needs it, and clean up the site completely. The 5-year written workmanship guarantee applies from this point." },
+          {
+            title: "Quote and assessment",
+            body: "We walk the exterior with you, checking the condition of weatherboard, render, brick and trim, noting access and height requirements, and talking through colour options. The written quote itemises the surfaces, preparation and specific products before any work begins.",
+          },
+          {
+            title: "Pressure washing",
+            body: "Every surface is pressure washed to remove dirt, mould, chalking paint and loose debris. This step matters more than any other. A new coat applied over a dirty or chalky surface never bonds properly, no matter how good the paint is.",
+          },
+          {
+            title: "Scraping, sanding and repairs",
+            body: "Failing paint is scraped and sanded back to a sound edge so the new coating doesn't telegraph old cracks. Damaged weatherboards are repaired or replaced, and cracks in render are filled before anything else happens.",
+          },
+          {
+            title: "Priming and caulking",
+            body: "Bare timber, repaired sections and any previously unpainted metal are spot-primed, and gaps and joints are caulked to keep water out. This step is what stops a repaint failing early at the edges and joins.",
+          },
+          {
+            title: "Topcoats",
+            body: "Two full coats of exterior-grade Dulux or Taubmans product go on to the specified sheen. Drying time between coats is respected, and the work is planned around Melbourne's weather rather than rushed to finish early.",
+          },
+          {
+            title: "Walkthrough and handover",
+            body: "We walk the finished exterior with you, touch up anything that needs it, and clean up the site completely. The 5-year written workmanship guarantee applies from this point.",
+          },
         ],
       },
       {
@@ -1353,29 +1603,66 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "How often should I repaint my home's exterior in Melbourne?", answer: "Most Melbourne homes need an exterior repaint every 7 to 10 years, though coastal and heavily sun-exposed properties can need it sooner. Weatherboard and timber usually need attention before rendered or brick surfaces. During your free quote we'll assess the current condition and give you an honest recommendation." },
-      { question: "What preparation is included in your exterior painting?", answer: "Proper preparation is where a lasting exterior finish is won or lost, so it's always included in our quote — never added later. That means pressure washing, scraping and sanding back flaking paint, filling and repairing surfaces, spot-priming bare timber and metal, and caulking gaps before any topcoats go on." },
-      { question: "What time of year is best for exterior painting in Melbourne?", answer: "Spring and autumn are ideal. But Melbourne's weather is variable, so we paint year-round and work to the conditions. Coatings go on in suitable temperatures and humidity, with proper drying time between coats. We simply schedule around wet spells so your finish cures correctly." },
-      { question: "How much does exterior painting cost in Melbourne?", answer: "The size of the house is only part of it. Substrate condition, the number of storeys, and how much timber repair or colour change is needed all move the price more than square metreage does. A single-storey weatherboard in good condition costs far less to repaint than a two-storey render job with cracked and flaking paint. We quote after a free site visit rather than a rate sight-unseen — call 0432 077 782." },
-      { question: "What paint brands do you use for exterior painting?", answer: "Premium exterior-grade Dulux and Taubmans systems, matched to the substrate and its exposure. Weatherproof acrylics go on weatherboard and render. Bare timber, previously unpainted brick, and metal fascias and gutters each get the primer they need. The specific products are named in your written quote." },
-      { question: "Do you paint weatherboard homes differently to rendered or brick homes?", answer: "Yes. Weatherboard needs more preparation: sanding back flaking coatings, replacing or filling damaged boards, and priming bare timber. Timber moves with moisture, so it needs a flexible, well-adhered system. Render and brick are usually more stable but can chalk or crack over time, and previously unpainted masonry needs a specific sealer. We assess the actual substrate during the quote rather than treating every exterior the same." },
+      {
+        question: "How often should I repaint my home's exterior in Melbourne?",
+        answer:
+          "Most Melbourne homes need an exterior repaint every 7 to 10 years, though coastal and heavily sun-exposed properties can need it sooner. Weatherboard and timber usually need attention before rendered or brick surfaces. During your free quote we'll assess the current condition and give you an honest recommendation.",
+      },
+      {
+        question: "What preparation is included in your exterior painting?",
+        answer:
+          "Proper preparation is where a lasting exterior finish is won or lost, so it's always included in our quote — never added later. That means pressure washing, scraping and sanding back flaking paint, filling and repairing surfaces, spot-priming bare timber and metal, and caulking gaps before any topcoats go on.",
+      },
+      {
+        question:
+          "What time of year is best for exterior painting in Melbourne?",
+        answer:
+          "Spring and autumn are ideal. But Melbourne's weather is variable, so we paint year-round and work to the conditions. Coatings go on in suitable temperatures and humidity, with proper drying time between coats. We simply schedule around wet spells so your finish cures correctly.",
+      },
+      {
+        question: "How much does exterior painting cost in Melbourne?",
+        answer:
+          "The size of the house is only part of it. Substrate condition, the number of storeys, and how much timber repair or colour change is needed all move the price more than square metreage does. A single-storey weatherboard in good condition costs far less to repaint than a two-storey render job with cracked and flaking paint. We quote after a free site visit rather than a rate sight-unseen — call 0432 077 782.",
+      },
+      {
+        question: "What paint brands do you use for exterior painting?",
+        answer:
+          "Premium exterior-grade Dulux and Taubmans systems, matched to the substrate and its exposure. Weatherproof acrylics go on weatherboard and render. Bare timber, previously unpainted brick, and metal fascias and gutters each get the primer they need. The specific products are named in your written quote.",
+      },
+      {
+        question:
+          "Do you paint weatherboard homes differently to rendered or brick homes?",
+        answer:
+          "Yes. Weatherboard needs more preparation: sanding back flaking coatings, replacing or filling damaged boards, and priming bare timber. Timber moves with moisture, so it needs a flexible, well-adhered system. Render and brick are usually more stable but can chalk or crack over time, and previously unpainted masonry needs a specific sealer. We assess the actual substrate during the quote rather than treating every exterior the same.",
+      },
     ],
   },
   {
     route: "/services/roof-painting",
     name: "Roof Painting",
-    title:
-      "Roof Painting Melbourne | Jetblack Painting",
+    title: "Roof Painting Melbourne | Jetblack Painting",
     description:
       "Professional roof painting and restoration in Melbourne. Extends roof life 10-15 years. All roof types serviced. 5-star rated, fully insured. Free quotes.",
     heroTitle: "Roof Painting Melbourne",
     heroBody:
       "Professional roof painting and restoration across Melbourne — cleaning, repairs, priming, and membrane coatings that extend the life of tile and metal roofs by 10–15 years.",
     cards: [
-      { title: "Tile roof restoration", body: "High-pressure cleaning, rebedding and repointing where needed, then primer and flexible membrane topcoats." },
-      { title: "Metal and Colorbond roofs", body: "Rust treatment, priming, and roof-grade coatings that restore colour and protection." },
-      { title: "Heat-reflective coatings", body: "Lighter, heat-reflective roof colours that can reduce summer heat load." },
-      { title: "Roof inspections and quotes", body: "Honest assessments of whether painting, restoration, or repairs are the right call for your roof." },
+      {
+        title: "Tile roof restoration",
+        body: "High-pressure cleaning, rebedding and repointing where needed, then primer and flexible membrane topcoats.",
+      },
+      {
+        title: "Metal and Colorbond roofs",
+        body: "Rust treatment, priming, and roof-grade coatings that restore colour and protection.",
+      },
+      {
+        title: "Heat-reflective coatings",
+        body: "Lighter, heat-reflective roof colours that can reduce summer heat load.",
+      },
+      {
+        title: "Roof inspections and quotes",
+        body: "Honest assessments of whether painting, restoration, or repairs are the right call for your roof.",
+      },
     ],
     paragraphs: [
       "Roof painting is as much about preparation as paint: thorough cleaning, repairs, and the correct primer are what make the coating system last.",
@@ -1408,30 +1695,70 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "How long does a professional roof painting last?", answer: "A properly prepared and coated roof typically lasts 10 to 15 years before it needs redoing. The key is preparation — cleaning, rust treatment, repairs and the right primer — followed by quality membrane or roof coatings applied at the correct thickness. We include all of that in every roof painting quote." },
-      { question: "What roof types can you paint?", answer: "We paint and restore all common Melbourne roof types, including Colorbond and Zincalume metal roofing, concrete and terracotta tiles, and cement sheet. Each surface needs a specific preparation and coating system, and we match the right one to your roof so the finish bonds properly and lasts." },
-      { question: "Can roof painting help keep my home cooler?", answer: "Yes. Lighter colours and modern heat-reflective roof coatings can reduce how much heat your roof absorbs, helping keep the home more comfortable in Melbourne summers and easing the load on cooling. We're happy to recommend suitable heat-reflective options during your quote." },
-      { question: "Do you repair a roof or just paint over problems?", answer: "We assess and repair first. Cracked or slipped tiles, failed ridge capping, rusted-through sheeting and blocked valleys are structural problems, not paint problems, and coating over them just seals the fault in where you can't see it happening. If a roof needs repair work, we say so at the quote rather than after the job has started." },
-      { question: "How is a tile roof different from a metal roof to paint?", answer: "Tile is porous and metal isn't, so they fail differently and need different systems. Tiles absorb water as their surface wears, so they need a sealer under the topcoat. Metal roofing is different. It is stable across its face and vulnerable at fixings, cut edges and valleys. That is why rust treatment targets those points rather than the whole sheet." },
-      { question: "What does the roof cleaning and preparation actually involve?", answer: "High-pressure cleaning removes moss, lichen and built-up grime first, because a coating applied over any of that peels within a season. On tile roofs this often reveals cracked or slipped tiles and failed ridge capping that need fixing before anything else happens. On metal roofs it's followed by a rust check at every fixing point, cut edge and valley, since that's where corrosion actually starts." },
-      { question: "How does a roof membrane coating work?", answer: "A roof membrane is a flexible, waterproof coating, not a standard paint film. It moves with the roof through Melbourne's temperature swings instead of cracking. It also bridges small surface imperfections that a thin topcoat would simply sit on top of. It's applied in multiple coats at a specified thickness, which is what actually determines how many years it lasts, not just how many coats go on." },
+      {
+        question: "How long does a professional roof painting last?",
+        answer:
+          "A properly prepared and coated roof typically lasts 10 to 15 years before it needs redoing. The key is preparation — cleaning, rust treatment, repairs and the right primer — followed by quality membrane or roof coatings applied at the correct thickness. We include all of that in every roof painting quote.",
+      },
+      {
+        question: "What roof types can you paint?",
+        answer:
+          "We paint and restore all common Melbourne roof types, including Colorbond and Zincalume metal roofing, concrete and terracotta tiles, and cement sheet. Each surface needs a specific preparation and coating system, and we match the right one to your roof so the finish bonds properly and lasts.",
+      },
+      {
+        question: "Can roof painting help keep my home cooler?",
+        answer:
+          "Yes. Lighter colours and modern heat-reflective roof coatings can reduce how much heat your roof absorbs, helping keep the home more comfortable in Melbourne summers and easing the load on cooling. We're happy to recommend suitable heat-reflective options during your quote.",
+      },
+      {
+        question: "Do you repair a roof or just paint over problems?",
+        answer:
+          "We assess and repair first. Cracked or slipped tiles, failed ridge capping, rusted-through sheeting and blocked valleys are structural problems, not paint problems, and coating over them just seals the fault in where you can't see it happening. If a roof needs repair work, we say so at the quote rather than after the job has started.",
+      },
+      {
+        question: "How is a tile roof different from a metal roof to paint?",
+        answer:
+          "Tile is porous and metal isn't, so they fail differently and need different systems. Tiles absorb water as their surface wears, so they need a sealer under the topcoat. Metal roofing is different. It is stable across its face and vulnerable at fixings, cut edges and valleys. That is why rust treatment targets those points rather than the whole sheet.",
+      },
+      {
+        question:
+          "What does the roof cleaning and preparation actually involve?",
+        answer:
+          "High-pressure cleaning removes moss, lichen and built-up grime first, because a coating applied over any of that peels within a season. On tile roofs this often reveals cracked or slipped tiles and failed ridge capping that need fixing before anything else happens. On metal roofs it's followed by a rust check at every fixing point, cut edge and valley, since that's where corrosion actually starts.",
+      },
+      {
+        question: "How does a roof membrane coating work?",
+        answer:
+          "A roof membrane is a flexible, waterproof coating, not a standard paint film. It moves with the roof through Melbourne's temperature swings instead of cracking. It also bridges small surface imperfections that a thin topcoat would simply sit on top of. It's applied in multiple coats at a specified thickness, which is what actually determines how many years it lasts, not just how many coats go on.",
+      },
     ],
   },
   {
     route: "/services/commercial-painting",
     name: "Commercial Painting",
-    title:
-      "Commercial Painting Melbourne | Jetblack Painting",
+    title: "Commercial Painting Melbourne | Jetblack Painting",
     description:
       "Professional commercial painting services in Melbourne. Offices, retail, warehouses, strata. After-hours available. 5-star rated, fully insured. Free quotes.",
     heroTitle: "Commercial Painting Melbourne",
     heroBody:
       "Commercial painting for Melbourne offices, retail fit-outs, warehouses, and strata properties — scheduled around your trading hours with after-hours and weekend availability.",
     cards: [
-      { title: "Offices and retail", body: "Clean, low-disruption repaints for offices, shops, and hospitality venues, including after-hours work." },
-      { title: "Warehouses and industrial", body: "Large-area wall and ceiling painting plus epoxy floor coatings for industrial spaces." },
-      { title: "Strata and body corporate", body: "Common areas, external facades, and scheduled maintenance painting for strata managers." },
-      { title: "Maintenance programs", body: "Ongoing repaint and touch-up programs that keep commercial premises presentable." },
+      {
+        title: "Offices and retail",
+        body: "Clean, low-disruption repaints for offices, shops, and hospitality venues, including after-hours work.",
+      },
+      {
+        title: "Warehouses and industrial",
+        body: "Large-area wall and ceiling painting plus epoxy floor coatings for industrial spaces.",
+      },
+      {
+        title: "Strata and body corporate",
+        body: "Common areas, external facades, and scheduled maintenance painting for strata managers.",
+      },
+      {
+        title: "Maintenance programs",
+        body: "Ongoing repaint and touch-up programs that keep commercial premises presentable.",
+      },
     ],
     paragraphs: [
       "Commercial projects run on clear scope, fixed schedules, and tidy sites. We coordinate with managers and tenants so painting never gets in the way of business.",
@@ -1442,12 +1769,30 @@ const servicePages = [
         type: "steps",
         heading: "How a commercial painting project runs",
         items: [
-          { title: "Site walk-through and scope", body: "We walk the site with you, measure the areas, check the condition of every substrate and note the practical constraints — access, height, trading hours, tenant impact. That's what the written quote is built from, rather than a rate applied blind to a floor plan." },
-          { title: "Written scope and product specification", body: "You get an itemised quote listing the surfaces included, the preparation, the number of coats and the specific products. Naming the product matters commercially: a washable low-sheen in a corridor and a two-pack on a handrail are very different costs and very different service lives." },
-          { title: "Scheduling around your trading hours", body: "We agree the staging up front — which areas are painted when, what stays open, and whether the work runs after hours or over a weekend. Multi-area sites are split into zones so only one part of the premises is affected at a time." },
-          { title: "Site setup and preparation", body: "Floors, fittings and stock are protected before anything is opened. Preparation is where a commercial repaint is won or lost: washing down, filling and sanding, spot-priming bare or patched substrate, and masking to a clean line." },
-          { title: "Application", body: "Coats go on to the specified film build, with drying and recoat times respected rather than compressed to finish early. Areas are returned to use progressively as they're completed and cured enough to take normal traffic." },
-          { title: "Walk-through and sign-off", body: "We walk the finished work with you, list and complete any touch-ups, remove all protection and rubbish, and hand back a clean site. The 5-year written workmanship guarantee applies from completion." },
+          {
+            title: "Site walk-through and scope",
+            body: "We walk the site with you, measure the areas, check the condition of every substrate and note the practical constraints — access, height, trading hours, tenant impact. That's what the written quote is built from, rather than a rate applied blind to a floor plan.",
+          },
+          {
+            title: "Written scope and product specification",
+            body: "You get an itemised quote listing the surfaces included, the preparation, the number of coats and the specific products. Naming the product matters commercially: a washable low-sheen in a corridor and a two-pack on a handrail are very different costs and very different service lives.",
+          },
+          {
+            title: "Scheduling around your trading hours",
+            body: "We agree the staging up front — which areas are painted when, what stays open, and whether the work runs after hours or over a weekend. Multi-area sites are split into zones so only one part of the premises is affected at a time.",
+          },
+          {
+            title: "Site setup and preparation",
+            body: "Floors, fittings and stock are protected before anything is opened. Preparation is where a commercial repaint is won or lost: washing down, filling and sanding, spot-priming bare or patched substrate, and masking to a clean line.",
+          },
+          {
+            title: "Application",
+            body: "Coats go on to the specified film build, with drying and recoat times respected rather than compressed to finish early. Areas are returned to use progressively as they're completed and cured enough to take normal traffic.",
+          },
+          {
+            title: "Walk-through and sign-off",
+            body: "We walk the finished work with you, list and complete any touch-ups, remove all protection and rubbish, and hand back a clean site. The 5-year written workmanship guarantee applies from completion.",
+          },
         ],
       },
       {
@@ -1461,31 +1806,74 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "Can you paint outside business hours to avoid disruption?", answer: "Yes. We regularly complete commercial painting after hours, overnight and on weekends so trading isn't disrupted. The staging is agreed before we start, so you know which areas are affected and when they're back in use." },
-      { question: "What types of commercial premises do you paint?", answer: "Offices, retail and hospitality fit-outs, warehouses and industrial units, and strata and body-corporate common areas across Melbourne. Coatings and access are matched to the building rather than applied from a standard template." },
-      { question: "Are you licensed and insured for commercial work?", answer: "Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and we can provide documentation for building managers, owners corporations and site inductions before work begins." },
-      { question: "How much does commercial painting cost in Melbourne?", answer: "Commercial painting cost depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area does. So we walk the site and give you an itemised written quote, rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782." },
-      { question: "How long will a commercial repaint take?", answer: "A single office suite or shopfront is usually a few days. A warehouse or a staged multi-area repaint runs longer. After-hours work spreads the same hours across more calendar days. You get a schedule with the quote, including which zones are affected on which days." },
-      { question: "Can you paint while staff and customers are still on site?", answer: "Yes, and much of our commercial work is done in occupied premises. We zone the work so only one area is affected at a time. Access ways stay safe and clear. Low-odour water-based products go on wherever the specification allows. Every area is left clean at the end of each shift." },
-      { question: "What paint do you use on commercial buildings?", answer: "Premium Dulux and Taubmans commercial systems, specified to the surface and the traffic it takes. Washable low-sheen goes on corridors and offices. Doors, frames and handrails get hard-wearing enamels or two-pack. Steel, block and previously unsealed substrates each get the right primer. The products are named in your written quote." },
-      { question: "Do you work with owners corporations and strata managers?", answer: "Yes. We provide detailed scopes, transparent pricing, insurance documentation and clear schedules for owners corporations, body corporate committees and strata managers. Repaints can run as a staged maintenance program across a building or a whole portfolio." },
+      {
+        question: "Can you paint outside business hours to avoid disruption?",
+        answer:
+          "Yes. We regularly complete commercial painting after hours, overnight and on weekends so trading isn't disrupted. The staging is agreed before we start, so you know which areas are affected and when they're back in use.",
+      },
+      {
+        question: "What types of commercial premises do you paint?",
+        answer:
+          "Offices, retail and hospitality fit-outs, warehouses and industrial units, and strata and body-corporate common areas across Melbourne. Coatings and access are matched to the building rather than applied from a standard template.",
+      },
+      {
+        question: "Are you licensed and insured for commercial work?",
+        answer:
+          "Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and we can provide documentation for building managers, owners corporations and site inductions before work begins.",
+      },
+      {
+        question: "How much does commercial painting cost in Melbourne?",
+        answer:
+          "Commercial painting cost depends on the area, the condition of the substrate, the access required and whether the premises stays open during the work. Those variables move a commercial quote far more than floor area does. So we walk the site and give you an itemised written quote, rather than a rate applied sight-unseen. Quotes are free — call 0432 077 782.",
+      },
+      {
+        question: "How long will a commercial repaint take?",
+        answer:
+          "A single office suite or shopfront is usually a few days. A warehouse or a staged multi-area repaint runs longer. After-hours work spreads the same hours across more calendar days. You get a schedule with the quote, including which zones are affected on which days.",
+      },
+      {
+        question: "Can you paint while staff and customers are still on site?",
+        answer:
+          "Yes, and much of our commercial work is done in occupied premises. We zone the work so only one area is affected at a time. Access ways stay safe and clear. Low-odour water-based products go on wherever the specification allows. Every area is left clean at the end of each shift.",
+      },
+      {
+        question: "What paint do you use on commercial buildings?",
+        answer:
+          "Premium Dulux and Taubmans commercial systems, specified to the surface and the traffic it takes. Washable low-sheen goes on corridors and offices. Doors, frames and handrails get hard-wearing enamels or two-pack. Steel, block and previously unsealed substrates each get the right primer. The products are named in your written quote.",
+      },
+      {
+        question: "Do you work with owners corporations and strata managers?",
+        answer:
+          "Yes. We provide detailed scopes, transparent pricing, insurance documentation and clear schedules for owners corporations, body corporate committees and strata managers. Repaints can run as a staged maintenance program across a building or a whole portfolio.",
+      },
     ],
   },
   {
     route: "/services/roof-fence-painting",
     name: "Roof & Fence Painting",
-    title:
-      "Roof & Fence Painting Melbourne | Jetblack Painting",
+    title: "Roof & Fence Painting Melbourne | Jetblack Painting",
     description:
       "Roof and fence painting in Melbourne. Extends roof life 10-15 years with weather-resistant coatings. Free quotes — call 0432 077 782.",
     heroTitle: "Roof & Fence Painting Melbourne",
     heroBody:
       "Roof restoration and fence painting across Melbourne — weather-resistant coating systems that protect the biggest exposed surfaces on your property and lift its street appeal.",
     cards: [
-      { title: "Roof restoration", body: "Cleaning, repairs, priming, and membrane coatings for tile and metal roofs." },
-      { title: "Timber fence painting", body: "Preparation, priming, and exterior finishes or stains for timber paling and picket fences." },
-      { title: "Metal and Colorbond fences", body: "Rust treatment and durable coatings that bring metal fencing back to life." },
-      { title: "Combined packages", body: "Roof and fence work quoted together for a complete exterior refresh." },
+      {
+        title: "Roof restoration",
+        body: "Cleaning, repairs, priming, and membrane coatings for tile and metal roofs.",
+      },
+      {
+        title: "Timber fence painting",
+        body: "Preparation, priming, and exterior finishes or stains for timber paling and picket fences.",
+      },
+      {
+        title: "Metal and Colorbond fences",
+        body: "Rust treatment and durable coatings that bring metal fencing back to life.",
+      },
+      {
+        title: "Combined packages",
+        body: "Roof and fence work quoted together for a complete exterior refresh.",
+      },
     ],
     paragraphs: [
       "Roofs and fences take the most weather of any surface on a property. The right preparation and exterior-grade coatings protect them for years and transform how the property presents from the street.",
@@ -1525,31 +1913,74 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "Can you do the roof and fences in one project?", answer: "Yes, and it's usually the cheaper way to do it. The access equipment, the site setup and the weather window are shared across both. Quoting them together costs less than booking two separate jobs. The exterior also reads as one finished thing from the street, rather than a new roof above a tired fence." },
-      { question: "Should timber be painted, stained or oiled?", answer: "Whether to paint, stain or oil depends on the timber and how much upkeep you want. Paint gives the longest protection and full colour control, but once timber is painted it stays painted — stripping it back later is a big job. Stain lets the grain show and weathers back gradually rather than peeling. Hardwoods like merbau are usually oiled instead, because paint struggles to hold on their dense, oily surface." },
-      { question: "Can Colorbond fences and roofs be painted?", answer: "Yes. Colorbond and Zincalume take a new colour well, but they need different preparation from timber. A thorough wash removes chalked factory coating. A scuff gives the surface a key. Then a primer made for metal goes on. Skipping any of that is why repainted Colorbond sometimes peels in sheets a year later." },
-      { question: "Does my fence need repairs before painting?", answer: "Often, yes. Loose or rotted palings, popped nails and posts that have shifted all get dealt with before any coating goes on — paint doesn't hold a failing fence together. The bottom of a timber fence fails first because ground moisture wicks up into the end grain, so that's the first place we check at the quote." },
-      { question: "Do you paint both sides of the fence?", answer: "Where we can get access, yes — and it's worth doing, because a fence coated on one side only weathers unevenly and can cup. A boundary fence needs your neighbour's agreement for us to work on their side, so it's worth asking them before the quote rather than after we're booked in." },
-      { question: "How long does fence painting last?", answer: "With proper preparation and exterior-grade products, fence coatings typically last 5–10 years depending on exposure. A north or west-facing fence takes far more UV than a shaded one and will always be first to need attention." },
-      { question: "When does a roof need repairs rather than painting?", answer: "When the problem is structural rather than cosmetic. Cracked or slipped tiles, failed ridge capping, rusted-through sheeting and blocked valleys all need fixing before a coating goes near them — paint over a leak and you've sealed the problem in. We assess this at the quote and tell you plainly if the roof needs repair work first." },
-      { question: "What does roof painting actually protect against?", answer: "UV, moisture absorption and moss regrowth. Concrete tiles are porous and soak up water as they age, which makes them heavier and slower to dry; a sealed, coated roof sheds water instead. On metal roofs the coating protects the fixings and cut edges where rust starts. Done properly it extends roof life by 10–15 years." },
+      {
+        question: "Can you do the roof and fences in one project?",
+        answer:
+          "Yes, and it's usually the cheaper way to do it. The access equipment, the site setup and the weather window are shared across both. Quoting them together costs less than booking two separate jobs. The exterior also reads as one finished thing from the street, rather than a new roof above a tired fence.",
+      },
+      {
+        question: "Should timber be painted, stained or oiled?",
+        answer:
+          "Whether to paint, stain or oil depends on the timber and how much upkeep you want. Paint gives the longest protection and full colour control, but once timber is painted it stays painted — stripping it back later is a big job. Stain lets the grain show and weathers back gradually rather than peeling. Hardwoods like merbau are usually oiled instead, because paint struggles to hold on their dense, oily surface.",
+      },
+      {
+        question: "Can Colorbond fences and roofs be painted?",
+        answer:
+          "Yes. Colorbond and Zincalume take a new colour well, but they need different preparation from timber. A thorough wash removes chalked factory coating. A scuff gives the surface a key. Then a primer made for metal goes on. Skipping any of that is why repainted Colorbond sometimes peels in sheets a year later.",
+      },
+      {
+        question: "Does my fence need repairs before painting?",
+        answer:
+          "Often, yes. Loose or rotted palings, popped nails and posts that have shifted all get dealt with before any coating goes on — paint doesn't hold a failing fence together. The bottom of a timber fence fails first because ground moisture wicks up into the end grain, so that's the first place we check at the quote.",
+      },
+      {
+        question: "Do you paint both sides of the fence?",
+        answer:
+          "Where we can get access, yes — and it's worth doing, because a fence coated on one side only weathers unevenly and can cup. A boundary fence needs your neighbour's agreement for us to work on their side, so it's worth asking them before the quote rather than after we're booked in.",
+      },
+      {
+        question: "How long does fence painting last?",
+        answer:
+          "With proper preparation and exterior-grade products, fence coatings typically last 5–10 years depending on exposure. A north or west-facing fence takes far more UV than a shaded one and will always be first to need attention.",
+      },
+      {
+        question: "When does a roof need repairs rather than painting?",
+        answer:
+          "When the problem is structural rather than cosmetic. Cracked or slipped tiles, failed ridge capping, rusted-through sheeting and blocked valleys all need fixing before a coating goes near them — paint over a leak and you've sealed the problem in. We assess this at the quote and tell you plainly if the roof needs repair work first.",
+      },
+      {
+        question: "What does roof painting actually protect against?",
+        answer:
+          "UV, moisture absorption and moss regrowth. Concrete tiles are porous and soak up water as they age, which makes them heavier and slower to dry; a sealed, coated roof sheds water instead. On metal roofs the coating protects the fixings and cut edges where rust starts. Done properly it extends roof life by 10–15 years.",
+      },
     ],
   },
   {
     route: "/services/kitchen-cabinet-resurfacing",
     name: "Kitchen Cabinet Resurfacing",
-    title:
-      "Kitchen Cabinet Resurfacing Melbourne | Jetblack Painting",
+    title: "Kitchen Cabinet Resurfacing Melbourne | Jetblack Painting",
     description:
       "Kitchen cabinet resurfacing in Melbourne. Premium 2-pack finishes at a fraction of renovation cost. Free quotes — call 0432 077 782.",
     heroTitle: "Kitchen Cabinet Resurfacing Melbourne",
     heroBody:
       "Transform your kitchen for a fraction of renovation cost — premium 2-pack finishes applied to existing cabinetry for a factory-quality result without demolition.",
     cards: [
-      { title: "2-pack polyurethane finishes", body: "Durable, factory-style 2-pack coatings sprayed for a smooth, hard-wearing finish." },
-      { title: "Doors, panels and drawers", body: "Complete resurfacing of cabinet doors, drawer fronts, and end panels in your chosen colour." },
-      { title: "Colour transformation", body: "Update dated timber or coloured cabinetry to modern whites, neutrals, or bold feature tones." },
-      { title: "Laundry and built-in cabinetry", body: "The same resurfacing process applied to laundries, wardrobes, and built-in units." },
+      {
+        title: "2-pack polyurethane finishes",
+        body: "Durable, factory-style 2-pack coatings sprayed for a smooth, hard-wearing finish.",
+      },
+      {
+        title: "Doors, panels and drawers",
+        body: "Complete resurfacing of cabinet doors, drawer fronts, and end panels in your chosen colour.",
+      },
+      {
+        title: "Colour transformation",
+        body: "Update dated timber or coloured cabinetry to modern whites, neutrals, or bold feature tones.",
+      },
+      {
+        title: "Laundry and built-in cabinetry",
+        body: "The same resurfacing process applied to laundries, wardrobes, and built-in units.",
+      },
     ],
     paragraphs: [
       "Resurfacing keeps your existing kitchen layout and cabinetry carcasses and renews the visible surfaces — typically at a fraction of the cost and downtime of a full renovation.",
@@ -1588,31 +2019,75 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "How much cheaper is resurfacing than a new kitchen?", answer: "Resurfacing typically costs 30–50% less than a full kitchen renovation, because the layout, carcasses and benchtops all stay in place. You're paying for preparation, materials and spraying rather than demolition, new cabinetry and multiple trades. The saving is largest in kitchens where the existing layout still works and only the surfaces look dated." },
-      { question: "Can laminate or vinyl-wrapped cabinets be painted?", answer: "Yes. Laminate, melamine and vinyl-wrapped MDF all take a 2-pack finish once they have been degreased, sanded to a key and primed with the right adhesion primer. Vinyl-wrapped doors that have started lifting around the oven or dishwasher are among the most common kitchens we resurface — the wrap fails long before the door underneath does." },
-      { question: "Are the doors sprayed in my kitchen or taken away?", answer: "Doors, drawer fronts and end panels come off and are sprayed in our booth, where dust and airflow are controlled and every face can be laid flat. The carcasses and face frames that can't be removed are masked and sprayed in place. That combination is what gives the finish its glass-smooth look instead of the texture you get from brushing everything on site." },
-      { question: "How long does cabinet resurfacing take?", answer: "Most kitchens take 5–10 days from first preparation to refitting the doors, depending on the number of doors and the coats specified. Preparation and priming take up more of that time than the topcoats do." },
-      { question: "Can I use my kitchen while the cabinets are being resurfaced?", answer: "Yes. The carcasses, benchtops and appliances stay where they are, so the sink, oven and fridge remain usable throughout. You'll have open shelving while the doors are off, and the benches need to be clear on the days the frames are being sprayed." },
-      { question: "Is a 2-pack finish durable in a kitchen?", answer: "Yes. 2-pack polyurethane cures chemically rather than simply drying, which leaves it hard, non-porous and genuinely wipeable — the same class of finish used on factory-made cabinetry. It stands up to daily wiping, hand contact and cooking steam far better than a brush-applied enamel." },
-      { question: "Which sheen is best for kitchen cabinets?", answer: "Satin or low-sheen suits most kitchens. High gloss looks striking but shows fingerprints and wipe marks constantly, especially in darker colours. Satin handles daily contact far better and still wipes clean. If you want gloss, it works best on upper doors, which get touched least." },
-      { question: "What can't cabinet resurfacing fix?", answer: "Water damage and structural problems. If the board under the sink or beside the dishwasher has swollen or gone soft, or a carcass has dropped out of square, a coating won't hide it — that section needs replacing first. Resurfacing renews the visible surfaces; it doesn't repair failed board or change the kitchen's layout." },
+      {
+        question: "How much cheaper is resurfacing than a new kitchen?",
+        answer:
+          "Resurfacing typically costs 30–50% less than a full kitchen renovation, because the layout, carcasses and benchtops all stay in place. You're paying for preparation, materials and spraying rather than demolition, new cabinetry and multiple trades. The saving is largest in kitchens where the existing layout still works and only the surfaces look dated.",
+      },
+      {
+        question: "Can laminate or vinyl-wrapped cabinets be painted?",
+        answer:
+          "Yes. Laminate, melamine and vinyl-wrapped MDF all take a 2-pack finish once they have been degreased, sanded to a key and primed with the right adhesion primer. Vinyl-wrapped doors that have started lifting around the oven or dishwasher are among the most common kitchens we resurface — the wrap fails long before the door underneath does.",
+      },
+      {
+        question: "Are the doors sprayed in my kitchen or taken away?",
+        answer:
+          "Doors, drawer fronts and end panels come off and are sprayed in our booth, where dust and airflow are controlled and every face can be laid flat. The carcasses and face frames that can't be removed are masked and sprayed in place. That combination is what gives the finish its glass-smooth look instead of the texture you get from brushing everything on site.",
+      },
+      {
+        question: "How long does cabinet resurfacing take?",
+        answer:
+          "Most kitchens take 5–10 days from first preparation to refitting the doors, depending on the number of doors and the coats specified. Preparation and priming take up more of that time than the topcoats do.",
+      },
+      {
+        question:
+          "Can I use my kitchen while the cabinets are being resurfaced?",
+        answer:
+          "Yes. The carcasses, benchtops and appliances stay where they are, so the sink, oven and fridge remain usable throughout. You'll have open shelving while the doors are off, and the benches need to be clear on the days the frames are being sprayed.",
+      },
+      {
+        question: "Is a 2-pack finish durable in a kitchen?",
+        answer:
+          "Yes. 2-pack polyurethane cures chemically rather than simply drying, which leaves it hard, non-porous and genuinely wipeable — the same class of finish used on factory-made cabinetry. It stands up to daily wiping, hand contact and cooking steam far better than a brush-applied enamel.",
+      },
+      {
+        question: "Which sheen is best for kitchen cabinets?",
+        answer:
+          "Satin or low-sheen suits most kitchens. High gloss looks striking but shows fingerprints and wipe marks constantly, especially in darker colours. Satin handles daily contact far better and still wipes clean. If you want gloss, it works best on upper doors, which get touched least.",
+      },
+      {
+        question: "What can't cabinet resurfacing fix?",
+        answer:
+          "Water damage and structural problems. If the board under the sink or beside the dishwasher has swollen or gone soft, or a carcass has dropped out of square, a coating won't hide it — that section needs replacing first. Resurfacing renews the visible surfaces; it doesn't repair failed board or change the kitchen's layout.",
+      },
     ],
   },
   {
     route: "/services/real-estate-painting",
     name: "Real Estate Painting",
-    title:
-      "Real Estate Painting Melbourne | Jetblack Painting",
+    title: "Real Estate Painting Melbourne | Jetblack Painting",
     description:
       "Pre-sale and pre-lease painting in Melbourne for agents, vendors and investors. Fast turnarounds, neutral colours. Free quotes — 0432 077 782.",
     heroTitle: "Real Estate Painting Melbourne",
     heroBody:
       "Presentation-ready repaints for agents, vendors and investors — fast, sale-ready interior and exterior painting that lifts value and buyer appeal, scheduled around your campaign.",
     cards: [
-      { title: "Pre-sale repaints", body: "Fast interior and exterior refreshes that deal with scuffs, dated colours and tired façades before photography and open homes." },
-      { title: "Neutral colour consultation", body: "Broad-appeal, photograph-friendly colour schemes that help the widest range of buyers and tenants picture themselves in the home." },
-      { title: "Agent and stylist coordination", body: "Direct coordination with real estate agents, vendors and property stylists on quotes, access and timing." },
-      { title: "Investment and pre-lease refreshes", body: "Durable, presentation-ready repaints for investors preparing a property to lease or re-list." },
+      {
+        title: "Pre-sale repaints",
+        body: "Fast interior and exterior refreshes that deal with scuffs, dated colours and tired façades before photography and open homes.",
+      },
+      {
+        title: "Neutral colour consultation",
+        body: "Broad-appeal, photograph-friendly colour schemes that help the widest range of buyers and tenants picture themselves in the home.",
+      },
+      {
+        title: "Agent and stylist coordination",
+        body: "Direct coordination with real estate agents, vendors and property stylists on quotes, access and timing.",
+      },
+      {
+        title: "Investment and pre-lease refreshes",
+        body: "Durable, presentation-ready repaints for investors preparing a property to lease or re-list.",
+      },
     ],
     paragraphs: [
       "A professional repaint is one of the highest-return improvements before a sale or lease — it lifts listing photography, inspection appeal and buyer perception, often returning far more than it costs.",
@@ -1649,31 +2124,78 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "Do you work directly with real estate agents and vendors?", answer: "Yes. We coordinate directly with real estate agents, vendors and property stylists across Melbourne. We handle quotes, access, scheduling and invoicing, so the repaint is finished in time for photography, styling and the first open home." },
-      { question: "How quickly can you paint a property before it goes on the market?", answer: "Most pre-sale and pre-lease repaints are completed within a few days to a week, depending on the size and scope. We build the schedule around your campaign dates and settlement deadlines so the property is ready when it needs to be." },
-      { question: "What colours work best for selling or leasing a property?", answer: "Warm whites and soft, broad-appeal neutrals photograph well and help the widest range of buyers and tenants picture themselves in the home. We provide colour consultation to choose a scheme that suits the property and maximises presentation." },
-      { question: "Is painting worth it before selling a property?", answer: "In most cases yes. A professional repaint is one of the highest-return improvements before a sale. It deals with the scuffs, dated colours and tired façades that buyers otherwise price against you. It also lifts the quality of listing photography and inspections." },
-      { question: "When in the campaign should painting happen?", answer: "Before styling and before photography — painting is always the first trade on site, not the last. We work backwards from your photography date. Paint is finished, dry and ventilated with time to spare for the stylist to move furniture in. Nobody is painting around styled rooms, or rushing the final coat the night before a shoot." },
-      { question: "Should I paint a feature wall or keep it neutral for a sale?", answer: "Keep it neutral for a sale. A bold feature wall reads as a personal choice a buyer has to mentally undo before they can picture their own furniture in the room, which narrows your buyer pool rather than widening it. Neutral, broad-appeal palettes photograph more evenly under listing lighting too, which is a separate reason they're the default for a sale campaign." },
-      { question: "Can you paint between a tenant moving out and a new lease starting?", answer: "Yes, and vacancy turnarounds are a regular part of our rental and investment work. We coordinate directly with property managers on the exact window between the outgoing and incoming tenant. Finishes are durable and washable, suited to rental wear rather than presentation alone. The property has to hold up through the next tenancy, not just the next inspection." },
-      { question: "Does a patchy DIY touch-up look better or worse than not painting at all?", answer: "Often worse. A touch-up in slightly the wrong colour or sheen shows up under listing photography and open-home lighting as clearly as an unpainted mark. To a buyer it can read as deferred maintenance rather than care. A full, even repaint of the affected walls or room is usually the safer call before a campaign starts." },
+      {
+        question: "Do you work directly with real estate agents and vendors?",
+        answer:
+          "Yes. We coordinate directly with real estate agents, vendors and property stylists across Melbourne. We handle quotes, access, scheduling and invoicing, so the repaint is finished in time for photography, styling and the first open home.",
+      },
+      {
+        question:
+          "How quickly can you paint a property before it goes on the market?",
+        answer:
+          "Most pre-sale and pre-lease repaints are completed within a few days to a week, depending on the size and scope. We build the schedule around your campaign dates and settlement deadlines so the property is ready when it needs to be.",
+      },
+      {
+        question: "What colours work best for selling or leasing a property?",
+        answer:
+          "Warm whites and soft, broad-appeal neutrals photograph well and help the widest range of buyers and tenants picture themselves in the home. We provide colour consultation to choose a scheme that suits the property and maximises presentation.",
+      },
+      {
+        question: "Is painting worth it before selling a property?",
+        answer:
+          "In most cases yes. A professional repaint is one of the highest-return improvements before a sale. It deals with the scuffs, dated colours and tired façades that buyers otherwise price against you. It also lifts the quality of listing photography and inspections.",
+      },
+      {
+        question: "When in the campaign should painting happen?",
+        answer:
+          "Before styling and before photography — painting is always the first trade on site, not the last. We work backwards from your photography date. Paint is finished, dry and ventilated with time to spare for the stylist to move furniture in. Nobody is painting around styled rooms, or rushing the final coat the night before a shoot.",
+      },
+      {
+        question:
+          "Should I paint a feature wall or keep it neutral for a sale?",
+        answer:
+          "Keep it neutral for a sale. A bold feature wall reads as a personal choice a buyer has to mentally undo before they can picture their own furniture in the room, which narrows your buyer pool rather than widening it. Neutral, broad-appeal palettes photograph more evenly under listing lighting too, which is a separate reason they're the default for a sale campaign.",
+      },
+      {
+        question:
+          "Can you paint between a tenant moving out and a new lease starting?",
+        answer:
+          "Yes, and vacancy turnarounds are a regular part of our rental and investment work. We coordinate directly with property managers on the exact window between the outgoing and incoming tenant. Finishes are durable and washable, suited to rental wear rather than presentation alone. The property has to hold up through the next tenancy, not just the next inspection.",
+      },
+      {
+        question:
+          "Does a patchy DIY touch-up look better or worse than not painting at all?",
+        answer:
+          "Often worse. A touch-up in slightly the wrong colour or sheen shows up under listing photography and open-home lighting as clearly as an unpainted mark. To a buyer it can read as deferred maintenance rather than care. A full, even repaint of the affected walls or room is usually the safer call before a campaign starts.",
+      },
     ],
   },
   {
     route: "/services/body-corporate-painting",
     name: "Body Corporate Painting",
-    title:
-      "Body Corporate Painting Melbourne | Jetblack Painting",
+    title: "Body Corporate Painting Melbourne | Jetblack Painting",
     description:
       "Body corporate and strata painting in Melbourne. Common areas, facades and maintenance programs. Fully insured. Free quotes — 0432 077 782.",
     heroTitle: "Body Corporate Painting Melbourne",
     heroBody:
       "Professional painting for owners corporations and strata-managed properties — common areas and façades repainted with minimal disruption to residents, fully insured and on schedule.",
     cards: [
-      { title: "Common areas", body: "Entry lobbies, hallways, corridors, stairwells and shared amenities repainted with durable, low-maintenance finishes." },
-      { title: "External façades", body: "Rendered walls, eaves, balconies and building exteriors prepared and coated to protect the structure and its value." },
-      { title: "Owners corporation coordination", body: "Detailed scopes, transparent pricing and insurance documentation so committees and strata managers can approve works with confidence." },
-      { title: "Maintenance programs", body: "Scheduled repaint and maintenance programs across single or multiple buildings, staged around residents." },
+      {
+        title: "Common areas",
+        body: "Entry lobbies, hallways, corridors, stairwells and shared amenities repainted with durable, low-maintenance finishes.",
+      },
+      {
+        title: "External façades",
+        body: "Rendered walls, eaves, balconies and building exteriors prepared and coated to protect the structure and its value.",
+      },
+      {
+        title: "Owners corporation coordination",
+        body: "Detailed scopes, transparent pricing and insurance documentation so committees and strata managers can approve works with confidence.",
+      },
+      {
+        title: "Maintenance programs",
+        body: "Scheduled repaint and maintenance programs across single or multiple buildings, staged around residents.",
+      },
     ],
     paragraphs: [
       "Body corporate painting keeps apartment blocks, unit complexes and townhouse developments presenting well and protects shared property against wear and weather. We repaint common areas and façades with hard-wearing systems built for high-traffic spaces.",
@@ -1703,31 +2225,76 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "Do you work with owners corporations and strata managers?", answer: "Yes. We work directly with owners corporations, body corporate committees and strata managers across Melbourne. You get a detailed quote, a written scope of work, insurance documentation and a clear schedule. That gives a committee what it needs to approve the job and plan around it." },
-      { question: "What areas of an apartment or unit complex do you paint?", answer: "We paint all common property. That means entry lobbies, hallways and corridors, stairwells, car parks, external façades and rendered walls, balconies, eaves and shared amenities. We can quote it as one full repaint, or as a staged maintenance program across several buildings." },
-      { question: "How do you minimise disruption to residents?", answer: "We plan the work around residents and tenants. Access ways stay safe and open. We stage the work so entries and stairwells remain usable. Low-odour products go on in occupied buildings. And the schedule goes out in advance, so nobody is caught out." },
-      { question: "Are you insured for body corporate and strata work?", answer: "Yes. Jetblack Painting carries $10 million public liability insurance and follows proper site safety and access procedures. We provide insurance certificates, safe work documentation and detailed scopes before work begins. Committees and building managers only have to ask." },
-      { question: "What does a committee actually need to approve the work?", answer: "A committee needs three things: a written scope broken down by area, a clear price, and our insurance documentation. With those, it can move from discussion to decision without a second round of questions. We write the quote so it goes straight onto an AGM or committee agenda. It is itemised enough that owners can see what is included before they vote." },
-      { question: "Can the work be staged across a large building or multiple buildings?", answer: "Yes. On occupied strata property, staging is standard rather than an exception. We usually work wing by wing or level by level, so entries, stairwells and car park access stay usable throughout. Nothing shuts the whole building down for the length of the job. For multi-building complexes we can quote one staged program, or building by building — whichever suits the committee's budget and timing." },
-      { question: "What access equipment do you use for multi-storey buildings?", answer: "It depends on the building's height and the site. Scaffolding, elevated work platforms or scissor lifts — chosen for what that façade and those access conditions actually need, not a default. Site access, boom reach and any strata bylaws about common property all go into the quote up front. There is no surprise equipment cost once work starts." },
-      { question: "How do you communicate with residents during the project?", answer: "Through the committee or strata manager. We give them a schedule to circulate to owners and tenants ahead of time: which areas are affected, and when. Nobody gets caught out by scaffolding or a closed stairwell. Low-odour products are standard in occupied common areas, and access ways stay safe and usable rather than closed off." },
+      {
+        question: "Do you work with owners corporations and strata managers?",
+        answer:
+          "Yes. We work directly with owners corporations, body corporate committees and strata managers across Melbourne. You get a detailed quote, a written scope of work, insurance documentation and a clear schedule. That gives a committee what it needs to approve the job and plan around it.",
+      },
+      {
+        question: "What areas of an apartment or unit complex do you paint?",
+        answer:
+          "We paint all common property. That means entry lobbies, hallways and corridors, stairwells, car parks, external façades and rendered walls, balconies, eaves and shared amenities. We can quote it as one full repaint, or as a staged maintenance program across several buildings.",
+      },
+      {
+        question: "How do you minimise disruption to residents?",
+        answer:
+          "We plan the work around residents and tenants. Access ways stay safe and open. We stage the work so entries and stairwells remain usable. Low-odour products go on in occupied buildings. And the schedule goes out in advance, so nobody is caught out.",
+      },
+      {
+        question: "Are you insured for body corporate and strata work?",
+        answer:
+          "Yes. Jetblack Painting carries $10 million public liability insurance and follows proper site safety and access procedures. We provide insurance certificates, safe work documentation and detailed scopes before work begins. Committees and building managers only have to ask.",
+      },
+      {
+        question: "What does a committee actually need to approve the work?",
+        answer:
+          "A committee needs three things: a written scope broken down by area, a clear price, and our insurance documentation. With those, it can move from discussion to decision without a second round of questions. We write the quote so it goes straight onto an AGM or committee agenda. It is itemised enough that owners can see what is included before they vote.",
+      },
+      {
+        question:
+          "Can the work be staged across a large building or multiple buildings?",
+        answer:
+          "Yes. On occupied strata property, staging is standard rather than an exception. We usually work wing by wing or level by level, so entries, stairwells and car park access stay usable throughout. Nothing shuts the whole building down for the length of the job. For multi-building complexes we can quote one staged program, or building by building — whichever suits the committee's budget and timing.",
+      },
+      {
+        question:
+          "What access equipment do you use for multi-storey buildings?",
+        answer:
+          "It depends on the building's height and the site. Scaffolding, elevated work platforms or scissor lifts — chosen for what that façade and those access conditions actually need, not a default. Site access, boom reach and any strata bylaws about common property all go into the quote up front. There is no surprise equipment cost once work starts.",
+      },
+      {
+        question: "How do you communicate with residents during the project?",
+        answer:
+          "Through the committee or strata manager. We give them a schedule to circulate to owners and tenants ahead of time: which areas are affected, and when. Nobody gets caught out by scaffolding or a closed stairwell. Low-odour products are standard in occupied common areas, and access ways stay safe and usable rather than closed off.",
+      },
     ],
   },
   {
     route: "/services/epoxy-flooring",
     name: "Epoxy Flooring",
-    title:
-      "Epoxy Flooring Melbourne | Jetblack Painting",
+    title: "Epoxy Flooring Melbourne | Jetblack Painting",
     description:
       "Epoxy flake flooring, garage floor coatings and concrete resurfacing across Melbourne. Warehouses, workshops and garages. Fully insured. Free quotes.",
     heroTitle: "Epoxy Flooring & Concrete Resurfacing Melbourne",
     heroBody:
       "Decorative epoxy flake floors, garage floor coatings and concrete resurfacing for warehouses, workshops and homes across Melbourne — ground back properly, then built up in layers.",
     cards: [
-      { title: "Decorative epoxy flake", body: "Vinyl flake broadcast into the base coat and sealed under a clear topcoat, from subtle grey blends to high-contrast black and white." },
-      { title: "Garage floor coatings", body: "Stained, dusty domestic slabs turned into a finished floor that stops shedding concrete dust onto everything stored on it." },
-      { title: "Warehouse and commercial floors", body: "Staged around a business that keeps operating, section by section, with cure times protected from traffic." },
-      { title: "Concrete resurfacing", body: "Spalled, pitted or repeatedly patched surfaces made good first, so the new finish doesn't just follow the damage underneath." },
+      {
+        title: "Decorative epoxy flake",
+        body: "Vinyl flake broadcast into the base coat and sealed under a clear topcoat, from subtle grey blends to high-contrast black and white.",
+      },
+      {
+        title: "Garage floor coatings",
+        body: "Stained, dusty domestic slabs turned into a finished floor that stops shedding concrete dust onto everything stored on it.",
+      },
+      {
+        title: "Warehouse and commercial floors",
+        body: "Staged around a business that keeps operating, section by section, with cure times protected from traffic.",
+      },
+      {
+        title: "Concrete resurfacing",
+        body: "Spalled, pitted or repeatedly patched surfaces made good first, so the new finish doesn't just follow the damage underneath.",
+      },
     ],
     paragraphs: [
       "Jetblack Painting coats and resurfaces concrete floors across Melbourne — decorative flake finishes, solid colour coatings and clear-sealed concrete, in everything from single domestic garages to full warehouse floors. It's the same trade discipline as the rest of our work: the finish people see is the last few hours of the job, and the preparation underneath it is the part that decides how long it lasts.",
@@ -1760,31 +2327,77 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "What is epoxy flake flooring?", answer: "Epoxy flake flooring is a layered floor coating with decorative vinyl flakes broadcast into it, then sealed under a clear topcoat. The flake does two jobs at once — it gives the floor its speckled, terrazzo-like appearance, and it builds texture into the surface so the finished floor isn't a flat sheet of gloss. It's the finish most people picture when they think of a modern garage or showroom floor." },
-      { question: "Can you coat an existing concrete slab, or does it need replacing?", answer: "Most existing slabs can be coated. Age, stains and old paint are usually not the problem people expect — grinding removes the surface layer along with them. What does need assessing first is structural cracking, moisture coming up through the slab, and whether the concrete was previously sealed, because those change the preparation and sometimes the coating system. We check all three before quoting rather than after starting." },
-      { question: "Why does the floor have to be ground before coating?", answer: "Grinding is what makes the coating bond to the slab instead of sitting on it. Bare concrete has a smooth, dense surface layer, and any coating rolled straight onto it is relying on grip it doesn't have — which is why cheap garage floor jobs peel up in sheets under a hot tyre. Mechanical preparation opens that surface up so the first coat keys into the concrete itself." },
-      { question: "Is an epoxy floor slippery when wet?", answer: "A flake floor has texture built into it from the flake itself, which gives it more grip than a smooth gloss coating. Where a floor needs more than that — a workshop that gets wet, a commercial entry, a ramp — an anti-slip additive can be worked into the topcoat. Tell us how the space actually gets used and we'll match the finish to it." },
-      { question: "How long before I can walk on it and park on it?", answer: "Foot traffic and vehicle traffic return at different times, and both depend on the coating system and the temperature while it cures. Vehicle traffic always waits considerably longer than foot traffic, because a tyre puts far more stress on a coating that hasn't fully hardened than a shoe does. We give you the exact timings for your floor and the conditions on the day as part of the quote, rather than a general figure that may not apply." },
-      { question: "What's the difference between epoxy coating and concrete resurfacing?", answer: "Coating puts a new wearing surface on top of a sound slab, while resurfacing rebuilds the surface of a slab that's damaged. If the concrete is structurally fine but stained, dusty or tired, a coating is the right answer. If the surface itself is spalling, pitted or has been patched repeatedly, it needs making good before any coating goes on — otherwise the new finish just follows the shape of the damage underneath." },
-      { question: "Do you do warehouse and commercial floors as well as domestic garages?", answer: "Yes, both. The difference is mostly scale, access and downtime rather than the finish itself — a warehouse floor has to be staged around the business still operating, and a retail or showroom floor usually has to be done outside trading hours. We work to a schedule agreed up front so you know exactly when the space is out of use." },
-      { question: "Will the coating hide cracks in my concrete?", answer: "The coating will hide fine surface cracking, but it will not fix a moving crack. A crack that's still moving will telegraph straight back through a new coating, sometimes within months, so it has to be cut out and filled properly first rather than coated over. We'd rather point that out at the quote than have it reappear through a finished floor." },
+      {
+        question: "What is epoxy flake flooring?",
+        answer:
+          "Epoxy flake flooring is a layered floor coating with decorative vinyl flakes broadcast into it, then sealed under a clear topcoat. The flake does two jobs at once — it gives the floor its speckled, terrazzo-like appearance, and it builds texture into the surface so the finished floor isn't a flat sheet of gloss. It's the finish most people picture when they think of a modern garage or showroom floor.",
+      },
+      {
+        question:
+          "Can you coat an existing concrete slab, or does it need replacing?",
+        answer:
+          "Most existing slabs can be coated. Age, stains and old paint are usually not the problem people expect — grinding removes the surface layer along with them. What does need assessing first is structural cracking, moisture coming up through the slab, and whether the concrete was previously sealed, because those change the preparation and sometimes the coating system. We check all three before quoting rather than after starting.",
+      },
+      {
+        question: "Why does the floor have to be ground before coating?",
+        answer:
+          "Grinding is what makes the coating bond to the slab instead of sitting on it. Bare concrete has a smooth, dense surface layer, and any coating rolled straight onto it is relying on grip it doesn't have — which is why cheap garage floor jobs peel up in sheets under a hot tyre. Mechanical preparation opens that surface up so the first coat keys into the concrete itself.",
+      },
+      {
+        question: "Is an epoxy floor slippery when wet?",
+        answer:
+          "A flake floor has texture built into it from the flake itself, which gives it more grip than a smooth gloss coating. Where a floor needs more than that — a workshop that gets wet, a commercial entry, a ramp — an anti-slip additive can be worked into the topcoat. Tell us how the space actually gets used and we'll match the finish to it.",
+      },
+      {
+        question: "How long before I can walk on it and park on it?",
+        answer:
+          "Foot traffic and vehicle traffic return at different times, and both depend on the coating system and the temperature while it cures. Vehicle traffic always waits considerably longer than foot traffic, because a tyre puts far more stress on a coating that hasn't fully hardened than a shoe does. We give you the exact timings for your floor and the conditions on the day as part of the quote, rather than a general figure that may not apply.",
+      },
+      {
+        question:
+          "What's the difference between epoxy coating and concrete resurfacing?",
+        answer:
+          "Coating puts a new wearing surface on top of a sound slab, while resurfacing rebuilds the surface of a slab that's damaged. If the concrete is structurally fine but stained, dusty or tired, a coating is the right answer. If the surface itself is spalling, pitted or has been patched repeatedly, it needs making good before any coating goes on — otherwise the new finish just follows the shape of the damage underneath.",
+      },
+      {
+        question:
+          "Do you do warehouse and commercial floors as well as domestic garages?",
+        answer:
+          "Yes, both. The difference is mostly scale, access and downtime rather than the finish itself — a warehouse floor has to be staged around the business still operating, and a retail or showroom floor usually has to be done outside trading hours. We work to a schedule agreed up front so you know exactly when the space is out of use.",
+      },
+      {
+        question: "Will the coating hide cracks in my concrete?",
+        answer:
+          "The coating will hide fine surface cracking, but it will not fix a moving crack. A crack that's still moving will telegraph straight back through a new coating, sometimes within months, so it has to be cut out and filled properly first rather than coated over. We'd rather point that out at the quote than have it reappear through a finished floor.",
+      },
     ],
   },
   {
     route: "/services/bathroom-tile-resurfacing",
     name: "Bathroom & Tile Resurfacing",
-    title:
-      "Bathroom & Tile Resurfacing Melbourne | Jetblack Painting",
+    title: "Bathroom & Tile Resurfacing Melbourne | Jetblack Painting",
     description:
       "Bathroom vanity, tile and bathtub resurfacing across Melbourne. Durable 2-pack coatings that renew a dated bathroom without a full strip-out. Free quotes.",
     heroTitle: "Bathroom & Tile Resurfacing Melbourne",
     heroBody:
       "Renew a dated bathroom without the strip-out. Vanities, wall and floor tiles and bathtubs resurfaced in durable 2-pack coatings — days rather than weeks, and no demolition.",
     cards: [
-      { title: "Vanity resurfacing", body: "Doors, drawer fronts and carcasses sprayed in 2-pack polyurethane for a hard, factory-grade finish that survives daily family use." },
-      { title: "Wall and floor tiles", body: "Bonding primer built for glazed surfaces, then a topcoat rated for moisture and foot traffic — colour changed without lifting a single tile." },
-      { title: "Bathtub resurfacing", body: "Enamel and acrylic tubs with chips filled and faired first, so the repair does not telegraph through the finished surface." },
-      { title: "Rental turnarounds", body: "Between-tenancy bathroom refreshes scoped backwards from the date the property has to be back on the market." },
+      {
+        title: "Vanity resurfacing",
+        body: "Doors, drawer fronts and carcasses sprayed in 2-pack polyurethane for a hard, factory-grade finish that survives daily family use.",
+      },
+      {
+        title: "Wall and floor tiles",
+        body: "Bonding primer built for glazed surfaces, then a topcoat rated for moisture and foot traffic — colour changed without lifting a single tile.",
+      },
+      {
+        title: "Bathtub resurfacing",
+        body: "Enamel and acrylic tubs with chips filled and faired first, so the repair does not telegraph through the finished surface.",
+      },
+      {
+        title: "Rental turnarounds",
+        body: "Between-tenancy bathroom refreshes scoped backwards from the date the property has to be back on the market.",
+      },
     ],
     paragraphs: [
       "Resurfacing recoats the surfaces you already have rather than removing them. The vanity, the wall and floor tiles and the bath are cleaned back, abraded, primed with a bonding system made for non-porous surfaces, and finished in a hard 2-pack topcoat. The layout, the plumbing and the waterproofing are untouched — which is why a bathroom that works but looks twenty years old can be changed in days rather than weeks.",
@@ -1816,30 +2429,70 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "Can you really paint over bathroom tiles?", answer: "Yes, with the right system and honest preparation. Tile resurfacing uses a bonding primer designed to grip glazed surfaces, followed by a hard-wearing 2-pack topcoat. What decides the result is not the paint but the preparation: the tiles have to be stripped of soap residue and body oils, the glaze abraded so the primer has something to key into, and every trace of silicone removed. Skip any of that and it will peel at the edges within a year." },
-      { question: "How long does a resurfaced bathroom last?", answer: "A properly prepared vanity or tile resurface holds up for years in normal family use. The two things that shorten it are standing water sitting on a horizontal surface and abrasive cleaners. We hand over care instructions with the job, because how a resurfaced bathroom is cleaned matters more to its lifespan than anything else after we leave." },
-      { question: "Is resurfacing cheaper than a bathroom renovation?", answer: "Substantially, and it is faster. A full renovation means demolition, waterproofing, trades in sequence and weeks without a bathroom. Resurfacing changes the colour and finish of what is already there in a matter of days. It is the right choice when the layout works and the surfaces are sound but dated. It is the wrong choice when tiles are drummy, waterproofing has failed, or the layout itself is the problem — we will tell you if that is what we find." },
-      { question: "Can you resurface a bathtub?", answer: "Yes. Bath resurfacing suits enamel and acrylic tubs that are structurally sound but stained, chipped or an outdated colour. Chips are filled and faired before coating so the repair does not telegraph through the finish. A tub with a crack through it or flex in the base is not a resurfacing candidate." },
-      { question: "How long is the bathroom out of use?", answer: "Typically two to four days depending on the scope, and the room is genuinely unusable for that period — coatings need clean air and no moisture while they cure. Touch-dry is not cured. We give you the real return-to-service date with the quote rather than the best case, which matters if it is the only bathroom in the house." },
-      { question: "Do you resurface bathrooms in rental properties?", answer: "Regularly. It is a common between-tenancy choice for property managers because it lifts a tired bathroom inside a short vacancy window without the cost and programme of a renovation. Tell us the date the property has to be back on the market and we will scope the work backwards from it." },
-      { question: "Which Melbourne suburbs do you cover for bathroom resurfacing?", answer: "We work across Bayside, Kingston, Glen Eira, Stonnington, the southeast and the Mornington Peninsula from our base in Mordialloc — including Brighton, Bentleigh, Caulfield, Mentone, Sandringham, Cheltenham, Keysborough and surrounding suburbs." },
+      {
+        question: "Can you really paint over bathroom tiles?",
+        answer:
+          "Yes, with the right system and honest preparation. Tile resurfacing uses a bonding primer designed to grip glazed surfaces, followed by a hard-wearing 2-pack topcoat. What decides the result is not the paint but the preparation: the tiles have to be stripped of soap residue and body oils, the glaze abraded so the primer has something to key into, and every trace of silicone removed. Skip any of that and it will peel at the edges within a year.",
+      },
+      {
+        question: "How long does a resurfaced bathroom last?",
+        answer:
+          "A properly prepared vanity or tile resurface holds up for years in normal family use. The two things that shorten it are standing water sitting on a horizontal surface and abrasive cleaners. We hand over care instructions with the job, because how a resurfaced bathroom is cleaned matters more to its lifespan than anything else after we leave.",
+      },
+      {
+        question: "Is resurfacing cheaper than a bathroom renovation?",
+        answer:
+          "Substantially, and it is faster. A full renovation means demolition, waterproofing, trades in sequence and weeks without a bathroom. Resurfacing changes the colour and finish of what is already there in a matter of days. It is the right choice when the layout works and the surfaces are sound but dated. It is the wrong choice when tiles are drummy, waterproofing has failed, or the layout itself is the problem — we will tell you if that is what we find.",
+      },
+      {
+        question: "Can you resurface a bathtub?",
+        answer:
+          "Yes. Bath resurfacing suits enamel and acrylic tubs that are structurally sound but stained, chipped or an outdated colour. Chips are filled and faired before coating so the repair does not telegraph through the finish. A tub with a crack through it or flex in the base is not a resurfacing candidate.",
+      },
+      {
+        question: "How long is the bathroom out of use?",
+        answer:
+          "Typically two to four days depending on the scope, and the room is genuinely unusable for that period — coatings need clean air and no moisture while they cure. Touch-dry is not cured. We give you the real return-to-service date with the quote rather than the best case, which matters if it is the only bathroom in the house.",
+      },
+      {
+        question: "Do you resurface bathrooms in rental properties?",
+        answer:
+          "Regularly. It is a common between-tenancy choice for property managers because it lifts a tired bathroom inside a short vacancy window without the cost and programme of a renovation. Tell us the date the property has to be back on the market and we will scope the work backwards from it.",
+      },
+      {
+        question:
+          "Which Melbourne suburbs do you cover for bathroom resurfacing?",
+        answer:
+          "We work across Bayside, Kingston, Glen Eira, Stonnington, the southeast and the Mornington Peninsula from our base in Mordialloc — including Brighton, Bentleigh, Caulfield, Mentone, Sandringham, Cheltenham, Keysborough and surrounding suburbs.",
+      },
     ],
   },
   {
     route: "/services/property-maintenance",
     name: "Property Maintenance",
-    title:
-      "Property Maintenance Melbourne | Jetblack Painting",
+    title: "Property Maintenance Melbourne | Jetblack Painting",
     description:
       "Painting and property maintenance for Melbourne landlords, agents and body corporates. Repairs, touch-ups, repaints and scheduled upkeep. Free quotes.",
     heroTitle: "Property Maintenance Melbourne",
     heroBody:
       "Painting and upkeep for landlords, property managers and body corporates — make-goods, repairs, touch-ups and scheduled maintenance across Bayside and Melbourne's southeast.",
     cards: [
-      { title: "Between-tenancy make-goods", body: "Touch-ups, patching and repaints scoped backwards from a fixed re-letting date rather than quoted as an open duration." },
-      { title: "Repairs and water damage", body: "Plaster, cornice and nail-pop repair, plus stain-blocking primer so a water mark does not bleed back through the new coat." },
-      { title: "Exterior upkeep", body: "Washing, mould treatment and spot recoating on the weathered elevations, before a full repaint becomes the only option." },
-      { title: "Common areas and facades", body: "Staged work for owners' corporations that keeps residents with access to their own front door throughout." },
+      {
+        title: "Between-tenancy make-goods",
+        body: "Touch-ups, patching and repaints scoped backwards from a fixed re-letting date rather than quoted as an open duration.",
+      },
+      {
+        title: "Repairs and water damage",
+        body: "Plaster, cornice and nail-pop repair, plus stain-blocking primer so a water mark does not bleed back through the new coat.",
+      },
+      {
+        title: "Exterior upkeep",
+        body: "Washing, mould treatment and spot recoating on the weathered elevations, before a full repaint becomes the only option.",
+      },
+      {
+        title: "Common areas and facades",
+        body: "Staged work for owners' corporations that keeps residents with access to their own front door throughout.",
+      },
     ],
     paragraphs: [
       "Most painting businesses are set up for the big job — the full interior, the whole exterior. A managed property rarely needs that. It needs the hallway made good before the next tenant, the ceiling stain that came back after the roof was fixed, the fence that has gone grey on the street side. Those jobs are small individually and constant in aggregate, and Jetblack Painting takes them on as ongoing work rather than filler between larger projects.",
@@ -1871,13 +2524,42 @@ const servicePages = [
       },
     ],
     faqs: [
-      { question: "What does property maintenance painting cover?", answer: "Everything that keeps a building presentable and weathertight between full repaints: touch-ups and make-goods between tenancies, plaster and cornice repairs, water damage and stain blocking, exterior washing, timber and window frame repair, fence and gate recoating, and concrete sealing. It is planned upkeep rather than one large job." },
-      { question: "Do you take on ongoing maintenance for a portfolio?", answer: "Yes. For agencies and owners' corporations with several properties we work to a standing scope so each job does not need requoting from scratch. You get consistent pricing, one point of contact and a tradesperson who already knows the buildings, which is usually worth more than a marginally cheaper one-off quote." },
-      { question: "How quickly can you attend a maintenance job?", answer: "Enquiries are answered within 24 to 48 hours and written quotes follow in the same window. For a between-tenancy make-good with a fixed re-letting date, tell us the date at the outset and we scope the work backwards from it rather than quoting a duration and hoping it fits." },
-      { question: "Can you work in occupied buildings?", answer: "Routinely. Occupied work is brushed and rolled rather than sprayed, staged so residents keep access to their own entrances, and cleaned down at the end of each day. In apartment buildings we sequence common areas and stairwells so no one is cut off from their front door at any point." },
-      { question: "Do you handle insurance and water damage repairs?", answer: "Yes. Water-damaged ceilings and walls need the cause resolved first, then the substrate dried, the damage made good and the stain blocked with a sealing primer before any topcoat. Painting over a water stain with standard paint simply lets it bleed back through, which is the most common reason a repair reappears weeks later." },
-      { question: "Is maintenance work covered by the same guarantee?", answer: "Yes. Every job carries the same 5-year written workmanship guarantee and the same $10 million public liability cover, regardless of size. A half-day make-good is guaranteed on the same terms as a full exterior repaint." },
-      { question: "Which Melbourne suburbs do you cover for property maintenance?", answer: "We work across Bayside, Kingston, Glen Eira, Stonnington, the southeast and the Mornington Peninsula from our base in Mordialloc — including Brighton, Bentleigh, Caulfield, Mentone, Sandringham, Cheltenham, Keysborough and surrounding suburbs." },
+      {
+        question: "What does property maintenance painting cover?",
+        answer:
+          "Everything that keeps a building presentable and weathertight between full repaints: touch-ups and make-goods between tenancies, plaster and cornice repairs, water damage and stain blocking, exterior washing, timber and window frame repair, fence and gate recoating, and concrete sealing. It is planned upkeep rather than one large job.",
+      },
+      {
+        question: "Do you take on ongoing maintenance for a portfolio?",
+        answer:
+          "Yes. For agencies and owners' corporations with several properties we work to a standing scope so each job does not need requoting from scratch. You get consistent pricing, one point of contact and a tradesperson who already knows the buildings, which is usually worth more than a marginally cheaper one-off quote.",
+      },
+      {
+        question: "How quickly can you attend a maintenance job?",
+        answer:
+          "Enquiries are answered within 24 to 48 hours and written quotes follow in the same window. For a between-tenancy make-good with a fixed re-letting date, tell us the date at the outset and we scope the work backwards from it rather than quoting a duration and hoping it fits.",
+      },
+      {
+        question: "Can you work in occupied buildings?",
+        answer:
+          "Routinely. Occupied work is brushed and rolled rather than sprayed, staged so residents keep access to their own entrances, and cleaned down at the end of each day. In apartment buildings we sequence common areas and stairwells so no one is cut off from their front door at any point.",
+      },
+      {
+        question: "Do you handle insurance and water damage repairs?",
+        answer:
+          "Yes. Water-damaged ceilings and walls need the cause resolved first, then the substrate dried, the damage made good and the stain blocked with a sealing primer before any topcoat. Painting over a water stain with standard paint simply lets it bleed back through, which is the most common reason a repair reappears weeks later.",
+      },
+      {
+        question: "Is maintenance work covered by the same guarantee?",
+        answer:
+          "Yes. Every job carries the same 5-year written workmanship guarantee and the same $10 million public liability cover, regardless of size. A half-day make-good is guaranteed on the same terms as a full exterior repaint.",
+      },
+      {
+        question:
+          "Which Melbourne suburbs do you cover for property maintenance?",
+        answer:
+          "We work across Bayside, Kingston, Glen Eira, Stonnington, the southeast and the Mornington Peninsula from our base in Mordialloc — including Brighton, Bentleigh, Caulfield, Mentone, Sandringham, Cheltenham, Keysborough and surrounding suburbs.",
+      },
     ],
   },
 ];
@@ -1893,7 +2575,12 @@ for (const service of servicePages) {
       heroTitle: service.heroTitle,
       heroBody: service.heroBody,
       schema: [
-        ...serviceSchema({ name: service.name, title: service.title, description: service.description, canonical }),
+        ...serviceSchema({
+          name: service.name,
+          title: service.title,
+          description: service.description,
+          canonical,
+        }),
         faqSchema(service.faqs),
         breadcrumbTrail([
           { name: "Home", item: "/" },
@@ -1939,7 +2626,7 @@ for (const service of servicePages) {
         { label: "FAQ", href: "/faq/" },
         { label: "Blog", href: "/blog/" },
       ],
-    })
+    }),
   );
 }
 
@@ -1951,13 +2638,41 @@ for (const service of servicePages) {
 // `blogPost` entries from this map at module-execution time; a `const` declared
 // further down would still be in the temporal dead zone and throw.
 const articleMeta = {
-  "/blog/best-paint-colours-melbourne-2025": { published: "2026-06-23", modified: "2026-07-26", section: "Design Tips" },
-  "/blog/house-painting-cost-melbourne": { published: "2026-06-23", modified: "2026-08-13", section: "Price Guide" },
-  "/blog/prepare-home-for-painting": { published: "2026-06-23", modified: "2026-08-13", section: "Guide" },
-  "/blog/kitchen-cabinet-resurfacing-vs-replacement": { published: "2026-06-23", modified: "2026-08-13", section: "Kitchen" },
-  "/blog/mould-remediation-painting-melbourne": { published: "2026-07-17", modified: "2026-07-26", section: "Guide" },
-  "/blog/how-to-choose-a-painter-melbourne": { published: "2026-07-21", modified: "2026-07-26", section: "Guide" },
-  "/blog/how-to-paint-a-weatherboard-house-melbourne": { published: "2026-07-26", modified: "2026-08-13", section: "Guide" },
+  "/blog/best-paint-colours-melbourne-2025": {
+    published: "2026-06-23",
+    modified: "2026-07-26",
+    section: "Design Tips",
+  },
+  "/blog/house-painting-cost-melbourne": {
+    published: "2026-06-23",
+    modified: "2026-08-13",
+    section: "Price Guide",
+  },
+  "/blog/prepare-home-for-painting": {
+    published: "2026-06-23",
+    modified: "2026-08-13",
+    section: "Guide",
+  },
+  "/blog/kitchen-cabinet-resurfacing-vs-replacement": {
+    published: "2026-06-23",
+    modified: "2026-08-13",
+    section: "Kitchen",
+  },
+  "/blog/mould-remediation-painting-melbourne": {
+    published: "2026-07-17",
+    modified: "2026-07-26",
+    section: "Guide",
+  },
+  "/blog/how-to-choose-a-painter-melbourne": {
+    published: "2026-07-21",
+    modified: "2026-07-26",
+    section: "Guide",
+  },
+  "/blog/how-to-paint-a-weatherboard-house-melbourne": {
+    published: "2026-07-26",
+    modified: "2026-08-13",
+    section: "Guide",
+  },
   ...toArticleMeta(generatedPosts),
 };
 
@@ -1981,7 +2696,10 @@ const articleServiceLinks = {
     { label: "Exterior Painting", href: "/services/exterior-painting/" },
   ],
   "/blog/kitchen-cabinet-resurfacing-vs-replacement": [
-    { label: "Kitchen Cabinet Resurfacing", href: "/services/kitchen-cabinet-resurfacing/" },
+    {
+      label: "Kitchen Cabinet Resurfacing",
+      href: "/services/kitchen-cabinet-resurfacing/",
+    },
     { label: "Interior Painting", href: "/services/interior-painting/" },
   ],
   "/blog/mould-remediation-painting-melbourne": [
@@ -2021,7 +2739,8 @@ const blogIndexArticles = [
     body: "Proper preparation is key to a successful painting project. Learn our expert tips for preparing your home to ensure the best results.",
   },
   {
-    title: "Kitchen Cabinet Resurfacing vs Replacement: What Melbourne Homeowners Need to Know",
+    title:
+      "Kitchen Cabinet Resurfacing vs Replacement: What Melbourne Homeowners Need to Know",
     href: "/blog/kitchen-cabinet-resurfacing-vs-replacement/",
     body: "Transform your kitchen for a fraction of the cost of a full renovation. Learn about 2-pack cabinet resurfacing and when it's the right choice.",
   },
@@ -2047,10 +2766,12 @@ writePage(
   "/blog",
   pageHtml({
     title: "Painting Tips & Guides Melbourne | Jetblack Painting Blog",
-    description: "Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting.",
+    description:
+      "Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting.",
     canonical: canonicalForRoute("/blog"),
     heroTitle: "Jetblack Painting Blog",
-    heroBody: "Read practical painting advice for Melbourne homeowners, landlords, and businesses — from colour ideas and cost guides to preparation tips and cabinet resurfacing insights.",
+    heroBody:
+      "Read practical painting advice for Melbourne homeowners, landlords, and businesses — from colour ideas and cost guides to preparation tips and cabinet resurfacing insights.",
     schema: [
       {
         "@context": "https://schema.org",
@@ -2083,7 +2804,11 @@ writePage(
             url: `${SITE_URL}${article.href}`,
             inLanguage: "en-AU",
             ...(meta
-              ? { datePublished: meta.published, dateModified: meta.modified, articleSection: meta.section }
+              ? {
+                  datePublished: meta.published,
+                  dateModified: meta.modified,
+                  articleSection: meta.section,
+                }
               : {}),
             image: `${SITE_URL}/og-image.jpg`,
             author: {
@@ -2110,13 +2835,19 @@ writePage(
       {
         type: "cards",
         heading: "Recent painting guides",
-        items: blogIndexArticles.map((article) => ({ title: article.title, body: article.body })),
+        items: blogIndexArticles.map((article) => ({
+          title: article.title,
+          body: article.body,
+        })),
       },
       {
         type: "links",
         heading: "Read the full articles",
         body: "Open any article below for the full guide.",
-        items: blogIndexArticles.map((article) => ({ label: article.title, href: article.href })),
+        items: blogIndexArticles.map((article) => ({
+          label: article.title,
+          href: article.href,
+        })),
       },
     ],
     footerLinks: [
@@ -2124,7 +2855,7 @@ writePage(
       { label: "Interior Painting", href: "/services/interior-painting/" },
       { label: "Quote Request", href: "/faq/" },
     ],
-  })
+  }),
 );
 
 const articlePages = [
@@ -2171,27 +2902,32 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "What are the best interior paint colours for Melbourne homes in 2026?",
-        answer: "Warm terracotta and burnt orange, deep forest green, soft blush and warm mauve, and charcoal black are the standout 2026 interior trends, while creamy whites and natural off-whites remain the timeless choice for main living areas.",
+        question:
+          "What are the best interior paint colours for Melbourne homes in 2026?",
+        answer:
+          "Warm terracotta and burnt orange, deep forest green, soft blush and warm mauve, and charcoal black are the standout 2026 interior trends, while creamy whites and natural off-whites remain the timeless choice for main living areas.",
       },
       {
-        question: "What exterior paint colours suit Melbourne conditions in 2026?",
-        answer: "Charcoal and dark greys, warm terracotta and earthy reds on heritage homes, greige and warm grey-beige, and cool whites with contrasting dark trim all perform well. Melbourne exteriors face strong UV, moisture and temperature swings, so the coating system matters as much as the colour.",
+        question:
+          "What exterior paint colours suit Melbourne conditions in 2026?",
+        answer:
+          "Charcoal and dark greys, warm terracotta and earthy reds on heritage homes, greige and warm grey-beige, and cool whites with contrasting dark trim all perform well. Melbourne exteriors face strong UV, moisture and temperature swings, so the coating system matters as much as the colour.",
       },
       {
         question: "How do I choose a paint colour with confidence?",
-        answer: "Test large sample patches on more than one wall or elevation and look at them at different times of day, because Melbourne light changes dramatically through the day and between seasons. Let the home's architecture guide the palette, and check heritage overlay requirements before committing to an exterior scheme.",
+        answer:
+          "Test large sample patches on more than one wall or elevation and look at them at different times of day, because Melbourne light changes dramatically through the day and between seasons. Let the home's architecture guide the palette, and check heritage overlay requirements before committing to an exterior scheme.",
       },
       {
         question: "Does Jetblack Painting help with colour selection?",
-        answer: "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 18+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
+        answer:
+          "Yes. Jetblack Painting offers a free colour consultation with every painting quote, using 18+ years of Melbourne experience to recommend colours that suit the home's architecture, natural light and the owner's style. Call 0432 077 782.",
       },
     ],
   },
   {
     route: "/blog/house-painting-cost-melbourne",
-    title:
-      "House Painting Cost Melbourne 2026 | Jetblack Painting",
+    title: "House Painting Cost Melbourne 2026 | Jetblack Painting",
     description:
       "Learn how much house painting costs in Melbourne with Jetblack Painting’s 2026 pricing guide for interior, exterior and commercial projects.",
     intro:
@@ -2211,8 +2947,16 @@ const articlePages = [
         type: "table",
         columns: ["Home Size", "Price Range", "Includes"],
         rows: [
-          ["Small (single storey, under 150m²)", "$4,000 - $8,000", "Walls, fascia, gutters"],
-          ["Medium (double storey, 150-250m²)", "$8,000 - $15,000", "Walls, fascia, gutters, trim"],
+          [
+            "Small (single storey, under 150m²)",
+            "$4,000 - $8,000",
+            "Walls, fascia, gutters",
+          ],
+          [
+            "Medium (double storey, 150-250m²)",
+            "$8,000 - $15,000",
+            "Walls, fascia, gutters, trim",
+          ],
           ["Large (250m²+)", "$15,000 - $30,000+", "Full exterior package"],
         ],
         paragraphs: [
@@ -2224,12 +2968,30 @@ const articlePages = [
         heading: "Factors That Affect Painting Costs",
         type: "steps",
         items: [
-          { title: "Surface condition", body: "Peeling paint, cracks, or water damage require more preparation." },
-          { title: "Number of coats", body: "Dark-to-light colour changes may need 3+ coats." },
-          { title: "Height & access", body: "Multi-storey homes need scaffolding or edge protection, which adds cost." },
-          { title: "Paint quality", body: "Premium paints cost more but last 10-15 years vs. 5-7 for budget options." },
-          { title: "Trim & detail work", body: "Heritage homes with ornate trim cost more due to detailed preparation." },
-          { title: "Location", body: "Premium suburbs like Toorak and Brighton often have larger homes." },
+          {
+            title: "Surface condition",
+            body: "Peeling paint, cracks, or water damage require more preparation.",
+          },
+          {
+            title: "Number of coats",
+            body: "Dark-to-light colour changes may need 3+ coats.",
+          },
+          {
+            title: "Height & access",
+            body: "Multi-storey homes need scaffolding or edge protection, which adds cost.",
+          },
+          {
+            title: "Paint quality",
+            body: "Premium paints cost more but last 10-15 years vs. 5-7 for budget options.",
+          },
+          {
+            title: "Trim & detail work",
+            body: "Heritage homes with ornate trim cost more due to detailed preparation.",
+          },
+          {
+            title: "Location",
+            body: "Premium suburbs like Toorak and Brighton often have larger homes.",
+          },
         ],
       },
       {
@@ -2247,27 +3009,31 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "How much does it cost to paint an average 3-bedroom house in Melbourne?",
-        answer: "A whole-house interior repaint for a 3-bedroom home typically runs $5,000 to $12,000, depending on wall and ceiling condition, trim work, and the finish level chosen. That's for interior only — exterior painting is quoted separately based on the home's size and access.",
+        question:
+          "How much does it cost to paint an average 3-bedroom house in Melbourne?",
+        answer:
+          "A whole-house interior repaint for a 3-bedroom home typically runs $5,000 to $12,000, depending on wall and ceiling condition, trim work, and the finish level chosen. That's for interior only — exterior painting is quoted separately based on the home's size and access.",
       },
       {
         question: "Why do quotes vary so much between painters?",
-        answer: "Surface condition, the number of coats needed, height and access requirements, and paint quality all move the price more than floor area alone. A quote that looks cheap often has less preparation built in, which is where paint failure usually starts.",
+        answer:
+          "Surface condition, the number of coats needed, height and access requirements, and paint quality all move the price more than floor area alone. A quote that looks cheap often has less preparation built in, which is where paint failure usually starts.",
       },
       {
         question: "Is a written, itemised quote necessary?",
-        answer: "Yes. A proper quote should include a detailed written breakdown of costs, the paint brand and product specifications, a timeline, and warranty information. A one-line price with no scope makes it hard to compare against other quotes fairly.",
+        answer:
+          "Yes. A proper quote should include a detailed written breakdown of costs, the paint brand and product specifications, a timeline, and warranty information. A one-line price with no scope makes it hard to compare against other quotes fairly.",
       },
       {
         question: "Do you charge extra for scaffolding on multi-storey homes?",
-        answer: "Multi-storey homes often need scaffolding or edge protection for safe access, and that adds to the cost. How much depends on the height, the ground conditions and how much of the building needs to be reached, so we price it after seeing the property. It is itemised in your written quote rather than hidden in the total.",
+        answer:
+          "Multi-storey homes often need scaffolding or edge protection for safe access, and that adds to the cost. How much depends on the height, the ground conditions and how much of the building needs to be reached, so we price it after seeing the property. It is itemised in your written quote rather than hidden in the total.",
       },
     ],
   },
   {
     route: "/blog/prepare-home-for-painting",
-    title:
-      "How to Prepare Your Home for Painting | Jetblack Painting",
+    title: "How to Prepare Your Home for Painting | Jetblack Painting",
     description:
       "Prepare your Melbourne home for professional painting with this practical checklist from Jetblack Painting for smoother, higher-quality results.",
     intro:
@@ -2276,9 +3042,18 @@ const articlePages = [
       name: "How to Prepare Your Melbourne Home for Professional Painting",
       totalTime: "PT1H",
       steps: [
-        { name: "Clear the Rooms", text: "Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers so painters have full access to work efficiently." },
-        { name: "Identify Problem Areas", text: "Walk through your home and note any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Point these out to your painter at the quote stage." },
-        { name: "Exterior Preparation", text: "Trim garden beds back 30cm from walls, move outdoor furniture and pot plants away, park cars away from the house, unlock gates for access, and secure pets inside or in a separate area." },
+        {
+          name: "Clear the Rooms",
+          text: "Move furniture away from walls or into the centre of the room. Remove wall hangings, curtains, and light switch covers so painters have full access to work efficiently.",
+        },
+        {
+          name: "Identify Problem Areas",
+          text: "Walk through your home and note any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Point these out to your painter at the quote stage.",
+        },
+        {
+          name: "Exterior Preparation",
+          text: "Trim garden beds back 30cm from walls, move outdoor furniture and pot plants away, park cars away from the house, unlock gates for access, and secure pets inside or in a separate area.",
+        },
       ],
     },
     sections: [
@@ -2305,12 +3080,30 @@ const articlePages = [
         heading: "What Professional Painters Handle",
         type: "steps",
         items: [
-          { title: "Surface washing", body: "High-pressure cleaning for exteriors." },
-          { title: "Sanding", body: "Smoothing rough surfaces for a flawless finish." },
-          { title: "Filling", body: "Repairing cracks, holes, and imperfections." },
-          { title: "Priming", body: "Applying primer to bare surfaces and stained areas." },
-          { title: "Masking", body: "Protecting floors, fixtures, and surfaces not being painted." },
-          { title: "Drop sheets", body: "Covering all furniture and flooring." },
+          {
+            title: "Surface washing",
+            body: "High-pressure cleaning for exteriors.",
+          },
+          {
+            title: "Sanding",
+            body: "Smoothing rough surfaces for a flawless finish.",
+          },
+          {
+            title: "Filling",
+            body: "Repairing cracks, holes, and imperfections.",
+          },
+          {
+            title: "Priming",
+            body: "Applying primer to bare surfaces and stained areas.",
+          },
+          {
+            title: "Masking",
+            body: "Protecting floors, fixtures, and surfaces not being painted.",
+          },
+          {
+            title: "Drop sheets",
+            body: "Covering all furniture and flooring.",
+          },
         ],
       },
       {
@@ -2323,27 +3116,32 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "What's the best time of year to paint the exterior of a home in Melbourne?",
-        answer: "Exterior painting is best done between October and April when conditions are drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days, since they affect how the paint cures.",
+        question:
+          "What's the best time of year to paint the exterior of a home in Melbourne?",
+        answer:
+          "Exterior painting is best done between October and April when conditions are drier and warmer. We avoid days below 10°C or above 35°C, and high-humidity days, since they affect how the paint cures.",
       },
       {
         question: "Do I need to move all my furniture out before painting?",
-        answer: "No. Furniture just needs to be moved away from walls or into the centre of the room — we cover it with drop sheets along with the flooring. Most households stay in the home throughout an interior repaint.",
+        answer:
+          "No. Furniture just needs to be moved away from walls or into the centre of the room — we cover it with drop sheets along with the flooring. Most households stay in the home throughout an interior repaint.",
       },
       {
-        question: "How far back should garden beds be trimmed before exterior painting?",
-        answer: "About 30cm clearance from the walls gives our painters safe, unobstructed access to weatherboards, render or brick. It's worth doing this along with moving outdoor furniture and pot plants before we arrive.",
+        question:
+          "How far back should garden beds be trimmed before exterior painting?",
+        answer:
+          "About 30cm clearance from the walls gives our painters safe, unobstructed access to weatherboards, render or brick. It's worth doing this along with moving outdoor furniture and pot plants before we arrive.",
       },
       {
         question: "What should I point out to the painter during the quote?",
-        answer: "Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Flagging these at the quote stage means the preparation work is accounted for in the price from the start.",
+        answer:
+          "Any peeling or flaking paint, cracks in walls or ceilings, water stains or mould, nail holes or dents, and areas where paint has yellowed. Flagging these at the quote stage means the preparation work is accounted for in the price from the start.",
       },
     ],
   },
   {
     route: "/blog/kitchen-cabinet-resurfacing-vs-replacement",
-    title:
-      "Kitchen Cabinet Resurfacing vs Replacement | Jetblack",
+    title: "Kitchen Cabinet Resurfacing vs Replacement | Jetblack",
     description:
       "Compare kitchen cabinet resurfacing vs replacement costs and outcomes for Melbourne homes with advice from Jetblack Painting.",
     intro:
@@ -2361,7 +3159,12 @@ const articlePages = [
         columns: ["Option", "Average Cost", "Timeframe", "Disruption"],
         rows: [
           ["Cabinet Resurfacing", "$3,500 - $8,000", "3-5 days", "Minimal"],
-          ["Full Kitchen Renovation", "$15,000 - $60,000", "4-8 weeks", "Major"],
+          [
+            "Full Kitchen Renovation",
+            "$15,000 - $60,000",
+            "4-8 weeks",
+            "Major",
+          ],
         ],
         paragraphs: [
           "That's a substantial saving compared with a full renovation, with results that look just as good. Renovation figures are an industry estimate, not a Jetblack price — resurfacing is quoted after seeing the kitchen.",
@@ -2378,12 +3181,30 @@ const articlePages = [
         heading: "Our 2-Pack Cabinet Resurfacing Process",
         type: "steps",
         items: [
-          { title: "Consultation & colour selection", body: "We visit your home and help you choose the perfect colour and finish." },
-          { title: "Door removal", body: "All doors and drawer fronts are carefully removed and labelled." },
-          { title: "Surface preparation", body: "Thorough sanding, cleaning, and priming of all surfaces." },
-          { title: "2-pack application", body: "Professional spray application of 2-pack polyurethane in our controlled environment." },
-          { title: "Reinstallation", body: "Doors are rehung with new hardware if requested." },
-          { title: "Final inspection", body: "We ensure every surface is perfect before sign-off." },
+          {
+            title: "Consultation & colour selection",
+            body: "We visit your home and help you choose the perfect colour and finish.",
+          },
+          {
+            title: "Door removal",
+            body: "All doors and drawer fronts are carefully removed and labelled.",
+          },
+          {
+            title: "Surface preparation",
+            body: "Thorough sanding, cleaning, and priming of all surfaces.",
+          },
+          {
+            title: "2-pack application",
+            body: "Professional spray application of 2-pack polyurethane in our controlled environment.",
+          },
+          {
+            title: "Reinstallation",
+            body: "Doors are rehung with new hardware if requested.",
+          },
+          {
+            title: "Final inspection",
+            body: "We ensure every surface is perfect before sign-off.",
+          },
         ],
       },
       {
@@ -2395,27 +3216,31 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "How much can I save by resurfacing instead of replacing my kitchen?",
-        answer: "Cabinet resurfacing typically costs $3,500 to $8,000 compared with $15,000 to $60,000 depending on size and finish for a full kitchen renovation — a fraction of the cost — because your cabinet boxes, layout and benchtops stay in place.",
+        question:
+          "How much can I save by resurfacing instead of replacing my kitchen?",
+        answer:
+          "Cabinet resurfacing typically costs $3,500 to $8,000 compared with $15,000 to $60,000 depending on size and finish for a full kitchen renovation — a fraction of the cost — because your cabinet boxes, layout and benchtops stay in place.",
       },
       {
         question: "Can any kitchen cabinets be resurfaced?",
-        answer: "Resurfacing works well when the cabinet boxes are structurally sound, you're happy with the layout, and the cabinets are solid timber or quality MDF. If the boxes are water-damaged, warped, or made from deteriorating particleboard, replacement is the better option.",
+        answer:
+          "Resurfacing works well when the cabinet boxes are structurally sound, you're happy with the layout, and the cabinets are solid timber or quality MDF. If the boxes are water-damaged, warped, or made from deteriorating particleboard, replacement is the better option.",
       },
       {
         question: "How long does cabinet resurfacing take?",
-        answer: "Most kitchen cabinet resurfacing projects take 3 to 5 days, compared to 4 to 8 weeks for a full renovation, with far less disruption to your household in the meantime.",
+        answer:
+          "Most kitchen cabinet resurfacing projects take 3 to 5 days, compared to 4 to 8 weeks for a full renovation, with far less disruption to your household in the meantime.",
       },
       {
         question: "What finish do you use for cabinet resurfacing?",
-        answer: "We use 2-pack polyurethane, the same professional-grade finish used on luxury new kitchens, sprayed on in a controlled environment after thorough sanding, cleaning and priming for a factory-quality result.",
+        answer:
+          "We use 2-pack polyurethane, the same professional-grade finish used on luxury new kitchens, sprayed on in a controlled environment after thorough sanding, cleaning and priming for a factory-quality result.",
       },
     ],
   },
   {
     route: "/blog/mould-remediation-painting-melbourne",
-    title:
-      "Mould Remediation & Painting Guide Melbourne | Jetblack",
+    title: "Mould Remediation & Painting Guide Melbourne | Jetblack",
     description:
       "How to identify, treat and paint over mould in Melbourne homes — bathroom mould, render mould, prep steps and anti-mould paints.",
     intro:
@@ -2424,10 +3249,22 @@ const articlePages = [
       name: "How to Treat Mould Before Painting",
       totalTime: "PT2D",
       steps: [
-        { name: "Identify the moisture source", text: "Mould only grows where there is a persistent moisture source, so find and fix the cause — poor ventilation, a leak, or rising damp — before treating the surface, or the mould will return." },
-        { name: "Kill the mould", text: "Treat the affected surface with a bleach solution diluted 1:4 with water, or a purpose-made product such as Zinsser Mold Killing Primer or Dulux Mouldshield. Heavy or deeply embedded mould may require substrate replacement rather than surface treatment." },
-        { name: "Allow complete drying", text: "Let the treated surface dry completely for 24-48 hours before priming or painting. Painting over a damp surface will trap moisture and cause the mould to return underneath the new coating." },
-        { name: "Prime with an anti-mould primer", text: "Seal the surface with an anti-mould primer such as Zinsser BIN Shellac Primer or Dulux Mouldshield Primer before applying the topcoat, to stop staining bleeding through and inhibit future mould growth." },
+        {
+          name: "Identify the moisture source",
+          text: "Mould only grows where there is a persistent moisture source, so find and fix the cause — poor ventilation, a leak, or rising damp — before treating the surface, or the mould will return.",
+        },
+        {
+          name: "Kill the mould",
+          text: "Treat the affected surface with a bleach solution diluted 1:4 with water, or a purpose-made product such as Zinsser Mold Killing Primer or Dulux Mouldshield. Heavy or deeply embedded mould may require substrate replacement rather than surface treatment.",
+        },
+        {
+          name: "Allow complete drying",
+          text: "Let the treated surface dry completely for 24-48 hours before priming or painting. Painting over a damp surface will trap moisture and cause the mould to return underneath the new coating.",
+        },
+        {
+          name: "Prime with an anti-mould primer",
+          text: "Seal the surface with an anti-mould primer such as Zinsser BIN Shellac Primer or Dulux Mouldshield Primer before applying the topcoat, to stop staining bleeding through and inhibit future mould growth.",
+        },
       ],
     },
     sections: [
@@ -2471,19 +3308,24 @@ const articlePages = [
     faqs: [
       {
         question: "Can I just paint over mould instead of treating it?",
-        answer: "No. Painting over mould without killing it first guarantees it comes back — usually within 3 to 12 months — turning a fresh paint job into a blotchy, failed surface. The mould spores are still there under the paint even if you can't see them.",
+        answer:
+          "No. Painting over mould without killing it first guarantees it comes back — usually within 3 to 12 months — turning a fresh paint job into a blotchy, failed surface. The mould spores are still there under the paint even if you can't see them.",
       },
       {
         question: "How long does anti-mould paint last?",
-        answer: "Properly treated and painted surfaces, where the moisture source has been fixed, typically stay mould-free for 5 to 10 years. High-moisture environments like poorly ventilated bathrooms may need retreatment sooner, around 3 to 5 years.",
+        answer:
+          "Properly treated and painted surfaces, where the moisture source has been fixed, typically stay mould-free for 5 to 10 years. High-moisture environments like poorly ventilated bathrooms may need retreatment sooner, around 3 to 5 years.",
       },
       {
-        question: "When should I call a professional instead of treating mould myself?",
-        answer: "Call a professional when mould covers more than 1 square metre, it's on external render or masonry, it has returned after previous DIY treatment, there's visible substrate damage like soft plaster or rotted timber, or the moisture source is unclear.",
+        question:
+          "When should I call a professional instead of treating mould myself?",
+        answer:
+          "Call a professional when mould covers more than 1 square metre, it's on external render or masonry, it has returned after previous DIY treatment, there's visible substrate damage like soft plaster or rotted timber, or the moisture source is unclear.",
       },
       {
         question: "What primer actually stops mould coming back?",
-        answer: "Standard primers won't prevent regrowth. A dedicated anti-mould primer — we use Zinsser BIN Shellac Primer or Dulux Mouldshield Primer most often — seals the surface and includes fungicides that inhibit mould, which is essential on bathroom ceilings and external render with a history of mould.",
+        answer:
+          "Standard primers won't prevent regrowth. A dedicated anti-mould primer — we use Zinsser BIN Shellac Primer or Dulux Mouldshield Primer most often — seals the surface and includes fungicides that inhibit mould, which is essential on bathroom ceilings and external render with a history of mould.",
       },
     ],
   },
@@ -2498,12 +3340,30 @@ const articlePages = [
       name: "How to Paint a Weatherboard House",
       totalTime: "P5D",
       steps: [
-        { name: "Wash the surface", text: "Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber." },
-        { name: "Scrape and sand back failing paint", text: "Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it." },
-        { name: "Repair damaged timber", text: "Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two." },
-        { name: "Prime all bare timber", text: "Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes." },
-        { name: "Fill and caulk", text: "Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves." },
-        { name: "Apply two topcoats", text: "Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain." },
+        {
+          name: "Wash the surface",
+          text: "Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber.",
+        },
+        {
+          name: "Scrape and sand back failing paint",
+          text: "Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it.",
+        },
+        {
+          name: "Repair damaged timber",
+          text: "Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two.",
+        },
+        {
+          name: "Prime all bare timber",
+          text: "Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes.",
+        },
+        {
+          name: "Fill and caulk",
+          text: "Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves.",
+        },
+        {
+          name: "Apply two topcoats",
+          text: "Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain.",
+        },
       ],
     },
     sections: [
@@ -2518,12 +3378,30 @@ const articlePages = [
         heading: "The Preparation Process",
         type: "steps",
         items: [
-          { title: "Wash the surface", body: "Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber." },
-          { title: "Scrape and sand back failing paint", body: "Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it." },
-          { title: "Repair damaged timber", body: "Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two." },
-          { title: "Prime all bare timber", body: "Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes." },
-          { title: "Fill and caulk", body: "Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves." },
-          { title: "Apply two topcoats", body: "Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain." },
+          {
+            title: "Wash the surface",
+            body: "Pressure wash to remove dirt, chalking, salt deposits and mould. Bayside homes carry a film of salt that stops paint adhering. Use care — too much pressure drives water behind the boards and damages soft timber.",
+          },
+          {
+            title: "Scrape and sand back failing paint",
+            body: "Remove all loose, flaking and blistered paint back to a sound edge and feather the edges so repairs don't telegraph through. On homes built before 1970, test for lead paint first and never dry-sand it.",
+          },
+          {
+            title: "Repair damaged timber",
+            body: "Check bottom boards, sun-facing walls and areas near downpipes for rot. Soft or spongy timber must be cut out and replaced — filler over rotten weatherboard fails within a year or two.",
+          },
+          {
+            title: "Prime all bare timber",
+            body: "Spot-prime every patch of exposed timber with an oil-based or alkyd primer that soaks into and seals the grain. Skipping this is the single biggest cause of premature peeling on weatherboard homes.",
+          },
+          {
+            title: "Fill and caulk",
+            body: "Fill nail holes and splits, then caulk gaps at board joints, window and door frames and corner trims with a flexible exterior sealant that can stretch as the timber moves.",
+          },
+          {
+            title: "Apply two topcoats",
+            body: "Apply two full topcoats of a quality flexible exterior acrylic over the primed surface. The second coat builds the film thickness that resists Melbourne's UV and rain.",
+          },
         ],
       },
       {
@@ -2550,31 +3428,37 @@ const articlePages = [
     ],
     faqs: [
       {
-        question: "How often should a weatherboard house be repainted in Melbourne?",
-        answer: "Most Melbourne weatherboard homes need repainting every 7 to 10 years. Bayside and coastal homes exposed to salt air and full sun often sit at the shorter end of that range, while sheltered south-facing walls can last longer. Flaking, chalking, bare timber and gaps opening at the joints are the signs it is due.",
+        question:
+          "How often should a weatherboard house be repainted in Melbourne?",
+        answer:
+          "Most Melbourne weatherboard homes need repainting every 7 to 10 years. Bayside and coastal homes exposed to salt air and full sun often sit at the shorter end of that range, while sheltered south-facing walls can last longer. Flaking, chalking, bare timber and gaps opening at the joints are the signs it is due.",
       },
       {
         question: "Do I need to prime bare timber on weatherboards?",
-        answer: "Yes. Any bare or newly exposed timber must be spot-primed before topcoats, using an oil-based or alkyd primer that penetrates the grain. Skipping this is the most common cause of early peeling on weatherboard homes, because water gets behind the paint film through the unsealed timber.",
+        answer:
+          "Yes. Any bare or newly exposed timber must be spot-primed before topcoats, using an oil-based or alkyd primer that penetrates the grain. Skipping this is the most common cause of early peeling on weatherboard homes, because water gets behind the paint film through the unsealed timber.",
       },
       {
         question: "What paint is best for weatherboard houses in Melbourne?",
-        answer: "A flexible, water-based acrylic exterior system such as Dulux Weathershield or Taubmans All Weather suits most Melbourne weatherboards. Flexibility matters because timber expands and contracts with temperature and moisture, and a brittle coating cracks at the board edges.",
+        answer:
+          "A flexible, water-based acrylic exterior system such as Dulux Weathershield or Taubmans All Weather suits most Melbourne weatherboards. Flexibility matters because timber expands and contracts with temperature and moisture, and a brittle coating cracks at the board edges.",
       },
       {
         question: "Can weatherboards be painted in winter?",
-        answer: "Exterior painting needs dry timber and moderate temperatures, so Melbourne winter work is weather-dependent. Most exterior acrylics need above roughly 10 degrees Celsius and a dry surface to cure properly. Jetblack Painting schedules exterior weatherboard work around the forecast rather than pushing on in unsuitable conditions.",
+        answer:
+          "Exterior painting needs dry timber and moderate temperatures, so Melbourne winter work is weather-dependent. Most exterior acrylics need above roughly 10 degrees Celsius and a dry surface to cure properly. Jetblack Painting schedules exterior weatherboard work around the forecast rather than pushing on in unsuitable conditions.",
       },
       {
-        question: "Should I paint over lead paint on an older weatherboard home?",
-        answer: "Homes built before 1970 may have lead-based paint. It should not be dry-sanded or power-sanded, as that releases lead dust. Testing first and using safe preparation methods is essential — this is a job for an experienced painter rather than a DIY sander.",
+        question:
+          "Should I paint over lead paint on an older weatherboard home?",
+        answer:
+          "Homes built before 1970 may have lead-based paint. It should not be dry-sanded or power-sanded, as that releases lead dust. Testing first and using safe preparation methods is essential — this is a job for an experienced painter rather than a DIY sander.",
       },
     ],
   },
   {
     route: "/blog/how-to-choose-a-painter-melbourne",
-    title:
-      "How to Choose a Painter in Melbourne | Jetblack Painting",
+    title: "How to Choose a Painter in Melbourne | Jetblack Painting",
     description:
       "What to check before hiring a Melbourne painter — insurance, written quotes, guarantees and red flags to avoid. A practical checklist.",
     intro:
@@ -2654,7 +3538,13 @@ for (const article of articlePages) {
     headline,
     description: article.description,
     inLanguage: "en-AU",
-    ...(meta ? { datePublished: meta.published, dateModified: meta.modified, articleSection: meta.section } : {}),
+    ...(meta
+      ? {
+          datePublished: meta.published,
+          dateModified: meta.modified,
+          articleSection: meta.section,
+        }
+      : {}),
     image: `${SITE_URL}/og-image.jpg`,
     author: {
       "@type": "Organization",
@@ -2695,7 +3585,12 @@ for (const article of articlePages) {
     { name: "Blog", item: "/blog/" },
     { name: headline, item: canonical },
   ]);
-  const schemaList = [articleSchema, howToSchema, articleFaqSchema, articleBreadcrumb].filter(Boolean);
+  const schemaList = [
+    articleSchema,
+    howToSchema,
+    articleFaqSchema,
+    articleBreadcrumb,
+  ].filter(Boolean);
   // Render FAQs as a visible section too, so the FAQPage schema has matching
   // on-page content (Google requires FAQ Q&A to be visible on the source page).
   const articleSections = article.faqs
@@ -2725,7 +3620,7 @@ for (const article of articlePages) {
         ]),
         { label: "Contact", href: "/review-us/" },
       ],
-    })
+    }),
   );
 }
 
@@ -2739,19 +3634,23 @@ const faqCategories = [
     items: [
       {
         question: "Do you offer free quotes?",
-        answer: "Yes. We provide completely free, no-obligation quotes. We'll visit your property, assess your needs, and provide a competitive written price estimate. Call Jimmy on 0432 077 782 or email jimmy@jetblackpainting.com.",
+        answer:
+          "Yes. We provide completely free, no-obligation quotes. We'll visit your property, assess your needs, and provide a competitive written price estimate. Call Jimmy on 0432 077 782 or email jimmy@jetblackpainting.com.",
       },
       {
         question: "Are you licensed and insured?",
-        answer: "Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and every job is backed by a 5-year written workmanship guarantee. We're happy to provide documentation before work begins.",
+        answer:
+          "Yes. Jetblack Painting is fully licensed and carries $10 million public liability insurance, and every job is backed by a 5-year written workmanship guarantee. We're happy to provide documentation before work begins.",
       },
       {
         question: "How long have you been in business?",
-        answer: "We've been serving Melbourne for over 18 years, building a reputation for quality workmanship and customer satisfaction.",
+        answer:
+          "We've been serving Melbourne for over 18 years, building a reputation for quality workmanship and customer satisfaction.",
       },
       {
         question: "Do you provide references?",
-        answer: "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 17 Google reviews.",
+        answer:
+          "Absolutely. We're happy to provide references from previous customers, and Jetblack Painting holds a 5.0-star rating from 17 Google reviews.",
       },
     ],
   },
@@ -2760,27 +3659,35 @@ const faqCategories = [
     items: [
       {
         question: "What areas do you serve?",
-        answer: "We serve all Melbourne suburbs including Keysborough, Brighton, Toorak, Mordialloc, Hawthorn, Mentone, Sandringham, Camberwell, Bentleigh, and the Mornington Peninsula.",
+        answer:
+          "We serve all Melbourne suburbs including Keysborough, Brighton, Toorak, Mordialloc, Hawthorn, Mentone, Sandringham, Camberwell, Bentleigh, and the Mornington Peninsula.",
       },
       {
         question: "Do you travel outside Melbourne?",
-        answer: "We primarily serve the Melbourne metropolitan area. For projects outside our usual service area, please contact us to discuss availability.",
+        answer:
+          "We primarily serve the Melbourne metropolitan area. For projects outside our usual service area, please contact us to discuss availability.",
       },
       {
         question: "Is there a minimum project size?",
-        answer: "No, we welcome projects of all sizes, from small room touch-ups to large commercial projects.",
+        answer:
+          "No, we welcome projects of all sizes, from small room touch-ups to large commercial projects.",
       },
       {
-        question: "Do you offer painting services specifically for Mordialloc's coastal homes?",
-        answer: "Yes, we specialise in painting homes in coastal areas like Mordialloc. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and harsh UV rays, ensuring a durable and beautiful finish for your bayside property.",
+        question:
+          "Do you offer painting services specifically for Mordialloc's coastal homes?",
+        answer:
+          "Yes, we specialise in painting homes in coastal areas like Mordialloc. We use premium weather-resistant paints and techniques to protect against salt air, humidity, and harsh UV rays, ensuring a durable and beautiful finish for your bayside property.",
       },
       {
         question: "What types of homes do you paint in Mordialloc?",
-        answer: "In Mordialloc, we paint a variety of homes, including classic weatherboard houses, modern residences, and period homes. Our team is experienced with the diverse architectural styles found in the area, providing tailored painting solutions for each.",
+        answer:
+          "In Mordialloc, we paint a variety of homes, including classic weatherboard houses, modern residences, and period homes. Our team is experienced with the diverse architectural styles found in the area, providing tailored painting solutions for each.",
       },
       {
-        question: "How do you protect homes from coastal conditions in Mordialloc?",
-        answer: "We protect Mordialloc homes from coastal conditions through meticulous surface preparation, high-quality flexible and breathable paints, and specialised techniques. Our approach prevents cracking, peeling, and fading caused by salt spray, strong winds, and sun exposure.",
+        question:
+          "How do you protect homes from coastal conditions in Mordialloc?",
+        answer:
+          "We protect Mordialloc homes from coastal conditions through meticulous surface preparation, high-quality flexible and breathable paints, and specialised techniques. Our approach prevents cracking, peeling, and fading caused by salt spray, strong winds, and sun exposure.",
       },
     ],
   },
@@ -2789,19 +3696,23 @@ const faqCategories = [
     items: [
       {
         question: "How long does interior painting take?",
-        answer: "Most interior painting projects take 3-7 days depending on the size and complexity. We'll provide a detailed timeline during your free quote.",
+        answer:
+          "Most interior painting projects take 3-7 days depending on the size and complexity. We'll provide a detailed timeline during your free quote.",
       },
       {
         question: "Do you move furniture?",
-        answer: "Yes, we move and protect your furniture as part of our service. We use drop cloths and plastic sheeting to protect floors and belongings.",
+        answer:
+          "Yes, we move and protect your furniture as part of our service. We use drop cloths and plastic sheeting to protect floors and belongings.",
       },
       {
         question: "Can you help with colour selection?",
-        answer: "Absolutely! Our team has extensive experience with colour trends and can help you choose colours that complement your home's style.",
+        answer:
+          "Absolutely! Our team has extensive experience with colour trends and can help you choose colours that complement your home's style.",
       },
       {
         question: "What paint do you use?",
-        answer: "We use premium quality paints from leading brands like Dulux and Taubmans. We can recommend the best products for your specific needs.",
+        answer:
+          "We use premium quality paints from leading brands like Dulux and Taubmans. We can recommend the best products for your specific needs.",
       },
     ],
   },
@@ -2810,19 +3721,23 @@ const faqCategories = [
     items: [
       {
         question: "How often should I repaint my exterior?",
-        answer: "Most exterior paint jobs last 5-10 years depending on weather conditions and paint quality. We can assess your home and recommend a timeline.",
+        answer:
+          "Most exterior paint jobs last 5-10 years depending on weather conditions and paint quality. We can assess your home and recommend a timeline.",
       },
       {
         question: "Can you paint in all weather conditions?",
-        answer: "We can paint in most conditions, but avoid extreme heat, cold, or rain. We'll schedule your project during optimal weather windows.",
+        answer:
+          "We can paint in most conditions, but avoid extreme heat, cold, or rain. We'll schedule your project during optimal weather windows.",
       },
       {
         question: "Do you prepare surfaces before painting?",
-        answer: "Yes, proper preparation is essential. We clean, sand, and prime surfaces to ensure long-lasting, professional results.",
+        answer:
+          "Yes, proper preparation is essential. We clean, sand, and prime surfaces to ensure long-lasting, professional results.",
       },
       {
         question: "What's included in exterior painting?",
-        answer: "Our exterior service includes surface preparation, priming, painting, and cleanup. We can also paint gutters, fascia, and trim.",
+        answer:
+          "Our exterior service includes surface preparation, priming, painting, and cleanup. We can also paint gutters, fascia, and trim.",
       },
     ],
   },
@@ -2831,15 +3746,18 @@ const faqCategories = [
     items: [
       {
         question: "Can you handle large commercial projects?",
-        answer: "Yes! We have experience with commercial painting projects of all sizes, from small offices to large retail spaces.",
+        answer:
+          "Yes! We have experience with commercial painting projects of all sizes, from small offices to large retail spaces.",
       },
       {
         question: "Can you work after hours?",
-        answer: "We can arrange after-hours or weekend work to minimise disruption to your business operations.",
+        answer:
+          "We can arrange after-hours or weekend work to minimise disruption to your business operations.",
       },
       {
         question: "Do you provide project management?",
-        answer: "Yes, we handle all aspects of your commercial painting project, including scheduling, coordination, and quality control.",
+        answer:
+          "Yes, we handle all aspects of your commercial painting project, including scheduling, coordination, and quality control.",
       },
     ],
   },
@@ -2848,15 +3766,18 @@ const faqCategories = [
     items: [
       {
         question: "How much does painting cost?",
-        answer: "Pricing depends on project size, surface condition, paint quality, and location. We provide free quotes with no hidden costs.",
+        answer:
+          "Pricing depends on project size, surface condition, paint quality, and location. We provide free quotes with no hidden costs.",
       },
       {
         question: "Do you offer payment plans?",
-        answer: "We accept various payment methods. For large projects, we can discuss payment arrangements during your quote.",
+        answer:
+          "We accept various payment methods. For large projects, we can discuss payment arrangements during your quote.",
       },
       {
         question: "What if I need additional work?",
-        answer: "We'll discuss any additional work and provide updated pricing before proceeding. No surprises!",
+        answer:
+          "We'll discuss any additional work and provide updated pricing before proceeding. No surprises!",
       },
     ],
   },
@@ -2865,15 +3786,18 @@ const faqCategories = [
     items: [
       {
         question: "Do you offer kitchen cabinet resurfacing?",
-        answer: "Yes! We specialise in luxury kitchen cabinet resurfacing with 2-pack finishes that look brand new.",
+        answer:
+          "Yes! We specialise in luxury kitchen cabinet resurfacing with 2-pack finishes that look brand new.",
       },
       {
         question: "Can you paint roofs?",
-        answer: "Yes, we provide professional roof painting and restoration services to protect and enhance your home.",
+        answer:
+          "Yes, we provide professional roof painting and restoration services to protect and enhance your home.",
       },
       {
         question: "Do you do pre-sale property painting?",
-        answer: "Absolutely! We specialise in pre-sale painting to maximise your property's appeal and value.",
+        answer:
+          "Absolutely! We specialise in pre-sale painting to maximise your property's appeal and value.",
       },
     ],
   },
@@ -2889,7 +3813,8 @@ writePage(
       "Frequently asked questions about Jetblack Painting services in Melbourne, including quotes, service areas, interior, exterior and commercial painting.",
     canonical: canonicalForRoute("/faq"),
     heroTitle: "Frequently Asked Questions",
-    heroBody: "Get answers to the common questions Melbourne homeowners, landlords, and businesses ask before booking a painting project.",
+    heroBody:
+      "Get answers to the common questions Melbourne homeowners, landlords, and businesses ask before booking a painting project.",
     schema: [
       faqSchema(faqItems),
       breadcrumbTrail([
@@ -2919,7 +3844,7 @@ writePage(
       { label: "Blog", href: "/blog/" },
       { label: "Review Us", href: "/review-us/" },
     ],
-  })
+  }),
 );
 
 writePage(
@@ -2931,7 +3856,8 @@ writePage(
     canonical: canonicalForRoute("/review-us"),
     robots: "noindex, follow",
     heroTitle: "Leave a Review for Jetblack Painting",
-    heroBody: "Your feedback helps other Melbourne homeowners and businesses find a painter they can trust for quality preparation, clear communication, and durable finishes.",
+    heroBody:
+      "Your feedback helps other Melbourne homeowners and businesses find a painter they can trust for quality preparation, clear communication, and durable finishes.",
     schema: [
       {
         "@context": "https://schema.org",
@@ -2958,10 +3884,22 @@ writePage(
         type: "steps",
         heading: "How to leave a Google review",
         items: [
-          { title: "Open our review link", body: `Visit ${GOOGLE_REVIEW_LINK} on your phone or computer.` },
-          { title: "Choose your star rating", body: "Select the star rating that matches your experience working with Jetblack Painting." },
-          { title: "Add a short comment", body: "Mention the type of painting service, your suburb, and what stood out about the job." },
-          { title: "Submit the review", body: "Post the review so other Melbourne property owners can read your feedback." },
+          {
+            title: "Open our review link",
+            body: `Visit ${GOOGLE_REVIEW_LINK} on your phone or computer.`,
+          },
+          {
+            title: "Choose your star rating",
+            body: "Select the star rating that matches your experience working with Jetblack Painting.",
+          },
+          {
+            title: "Add a short comment",
+            body: "Mention the type of painting service, your suburb, and what stood out about the job.",
+          },
+          {
+            title: "Submit the review",
+            body: "Post the review so other Melbourne property owners can read your feedback.",
+          },
         ],
       },
     ],
@@ -2970,9 +3908,8 @@ writePage(
       { label: "FAQ", href: "/faq/" },
       { label: "Blog", href: "/blog/" },
     ],
-  })
+  }),
 );
-
 
 // Legal pages. Both are noindex, follow for the same reason as /review-us: a
 // short legal page nobody searches for reads to Google as a soft 404 when
@@ -2992,7 +3929,8 @@ writePage(
     canonical: canonicalForRoute("/privacy"),
     robots: "noindex, follow",
     heroTitle: "Privacy Policy",
-    heroBody: "How Jetblack Painting collects, uses and protects the personal information you give us. Last updated 24 August 2026.",
+    heroBody:
+      "How Jetblack Painting collects, uses and protects the personal information you give us. Last updated 24 August 2026.",
     schema: [
       {
         "@context": "https://schema.org",
@@ -3088,7 +4026,7 @@ writePage(
       { label: "FAQ", href: "/faq/" },
       { label: "Contact", href: "/#contact" },
     ],
-  })
+  }),
 );
 
 writePage(
@@ -3100,7 +4038,8 @@ writePage(
     canonical: canonicalForRoute("/terms"),
     robots: "noindex, follow",
     heroTitle: "Terms of Use",
-    heroBody: "The terms that apply to using the Jetblack Painting website. Last updated 24 August 2026.",
+    heroBody:
+      "The terms that apply to using the Jetblack Painting website. Last updated 24 August 2026.",
     schema: [
       {
         "@context": "https://schema.org",
@@ -3157,7 +4096,9 @@ writePage(
       },
       {
         heading: "Governing law",
-        paragraphs: [`These terms are governed by the laws of Victoria, Australia.`],
+        paragraphs: [
+          `These terms are governed by the laws of Victoria, Australia.`,
+        ],
       },
       {
         heading: "Contact",
@@ -3172,7 +4113,7 @@ writePage(
       { label: "FAQ", href: "/faq/" },
       { label: "Contact", href: "/#contact" },
     ],
-  })
+  }),
 );
 
 console.log("Static pages generated for missing canonical routes.");

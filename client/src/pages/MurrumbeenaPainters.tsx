@@ -5,24 +5,24 @@ export default function MurrumbeenaPainters() {
   const faqs = [
     {
       question: `Do you paint Californian bungalows and interwar homes in ${suburb}?`,
-      answer: `Yes. ${suburb} has a fine run of Californian bungalows and interwar homes, and we know them well. Render gets prepared properly. Bare timber gets primed. Colours are chosen to suit the age of the house and the street. We do not skip preparation, which is why the finish lasts.`
+      answer: `Yes. ${suburb} has a fine run of Californian bungalows and interwar homes, and we know them well. Render gets prepared properly. Bare timber gets primed. Colours are chosen to suit the age of the house and the street. We do not skip preparation, which is why the finish lasts.`,
     },
     {
       question: `Can you do pre-sale painting in ${suburb}?`,
-      answer: `Yes. Presentation matters at sale time in a suburb like this one. A fresh neutral repaint, tight cutting-in and clean fascias change how a house shows to buyers. We can scope the work and finish it in time for your campaign.`
+      answer: `Yes. Presentation matters at sale time in a suburb like this one. A fresh neutral repaint, tight cutting-in and clean fascias change how a house shows to buyers. We can scope the work and finish it in time for your campaign.`,
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. Quotes are free, written, and carry no obligation, across ${suburb} and the surrounding Glen Eira suburbs. The full scope and the preparation are set out up front. Call Jimmy on 0432 077 782 or ask for one online.`
+      answer: `Yes. Quotes are free, written, and carry no obligation, across ${suburb} and the surrounding Glen Eira suburbs. The full scope and the preparation are set out up front. Call Jimmy on 0432 077 782 or ask for one online.`,
     },
     {
       question: `Do you paint townhouses and new unit developments in ${suburb}?`,
-      answer: `Yes. Many of ${suburb}'s larger blocks have been subdivided into townhouses and units in recent years, especially near the station and ${suburb} Park. These builds use render, Colorbond cladding and feature cladding rather than the timber and brick of the old bungalows. The preparation and coatings change to match. We are used to working with owners corporations and with several unit owners at once.`
+      answer: `Yes. Many of ${suburb}'s larger blocks have been subdivided into townhouses and units in recent years, especially near the station and ${suburb} Park. These builds use render, Colorbond cladding and feature cladding rather than the timber and brick of the old bungalows. The preparation and coatings change to match. We are used to working with owners corporations and with several unit owners at once.`,
     },
     {
       question: `Do you handle investment property and rental turnover painting in ${suburb}?`,
-      answer: `Regularly. ${suburb} sits close to Chadstone Shopping Centre and on the train line, which makes it popular with renters and investors. A good share of our work here is turnover painting between tenancies. Quick, tidy, and priced sensibly, without cutting the preparation short.`
-    }
+      answer: `Regularly. ${suburb} sits close to Chadstone Shopping Centre and on the train line, which makes it popular with renters and investors. A good share of our work here is turnover painting between tenancies. Quick, tidy, and priced sensibly, without cutting the preparation short.`,
+    },
   ];
 
   return (
@@ -30,6 +30,18 @@ export default function MurrumbeenaPainters() {
       suburb={suburb}
       title="Murrumbeena Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Murrumbeena — Californian bungalows and interwar. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`An exterior repaint on a Tudor-style ${suburb} home with a first-floor addition. Only the render and the trim changed — the tile roof and the original red brick were left exactly as they were, because on a house of this era those are the two things worth keeping.`}
+      projectImages={[
+        {
+          src: "/projects/project-murrumbeena-tudor-exterior.webp",
+          small: "/projects/project-murrumbeena-tudor-exterior-800.webp",
+          width: 1400,
+          height: 1050,
+          alt: `Tudor-style ${suburb} home after an exterior repaint, pale grey render with charcoal picked out through the half-timbering, fascias and gutters, above original red brick and a terracotta tile roof`,
+          caption:
+            "Pale grey on the render with the charcoal taken through the half-timbering, the fascias, the gutters and the downpipes. The brick and the terracotta roof were not touched — picking out the timbering in a dark colour is what modernises a house like this, and painting the brick would have thrown away the part that gives it its character.",
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Hughesdale", link: "/painter-hughesdale" },
         { name: "Carnegie", link: "/painter-carnegie" },

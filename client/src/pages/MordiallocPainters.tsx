@@ -7,135 +7,144 @@ export default function MordiallocPainters() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "@id": "https://jetblackpainting.com/#business",
-      "name": "Jetblack Painting",
-      "image": "https://jetblackpainting.com/og-image.jpg",
-      "telephone": "0432 077 782",
-      "email": "jimmy@jetblackpainting.com",
-      "url": "https://jetblackpainting.com",
-      "priceRange": "$$",
-      "address": {
+      name: "Jetblack Painting",
+      image: "https://jetblackpainting.com/og-image.jpg",
+      telephone: "0432 077 782",
+      email: "jimmy@jetblackpainting.com",
+      url: "https://jetblackpainting.com",
+      priceRange: "$$",
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "Mordialloc",
-        "addressRegion": "VIC",
-        "postalCode": "3195",
-        "addressCountry": "AU"
+        addressLocality: "Mordialloc",
+        addressRegion: "VIC",
+        postalCode: "3195",
+        addressCountry: "AU",
       },
-      "geo": {
+      geo: {
         "@type": "GeoCoordinates",
-        "latitude": -38.0131,
-        "longitude": 145.0965
+        latitude: -38.0131,
+        longitude: 145.0965,
       },
-      "areaServed": [
-        { "@type": "City", "name": "Mordialloc" },
-        { "@type": "City", "name": "Armadale" },
-        { "@type": "City", "name": "Aspendale" },
-        { "@type": "City", "name": "Bayside" },
-        { "@type": "City", "name": "Beaumaris" },
-        { "@type": "City", "name": "Bentleigh" },
-        { "@type": "City", "name": "Berwick" },
-        { "@type": "City", "name": "Black Rock" },
-        { "@type": "City", "name": "Bonbeach" },
-        { "@type": "City", "name": "Box Hill" },
-        { "@type": "City", "name": "Brighton" },
-        { "@type": "City", "name": "Brighton East" },
-        { "@type": "City", "name": "Camberwell" },
-        { "@type": "City", "name": "Carlton" },
-        { "@type": "City", "name": "Carrum" },
-        { "@type": "City", "name": "Caulfield" },
-        { "@type": "City", "name": "Chadstone" },
-        { "@type": "City", "name": "Chelsea" },
-        { "@type": "City", "name": "Cheltenham" },
-        { "@type": "City", "name": "Clarinda" },
-        { "@type": "City", "name": "Croydon" },
-        { "@type": "City", "name": "Dandenong" },
-        { "@type": "City", "name": "Doncaster" },
-        { "@type": "City", "name": "Donvale" },
-        { "@type": "City", "name": "Edithvale" },
-        { "@type": "City", "name": "Elsternwick" },
-        { "@type": "City", "name": "Glen Waverley" },
-        { "@type": "City", "name": "Greater Dandenong" },
-        { "@type": "City", "name": "Hampton" },
-        { "@type": "City", "name": "Hawthorn" },
-        { "@type": "City", "name": "Heatherton" },
-        { "@type": "City", "name": "Highett" },
-        { "@type": "City", "name": "Keysborough" },
-        { "@type": "City", "name": "Kew" },
-        { "@type": "City", "name": "Kingston" },
-        { "@type": "City", "name": "Malvern" },
-        { "@type": "City", "name": "McKinnon" },
-        { "@type": "City", "name": "Mentone" },
-        { "@type": "City", "name": "Moorabbin" },
-        { "@type": "City", "name": "Mornington Peninsula" },
-        { "@type": "City", "name": "Murrumbeena" },
-        { "@type": "City", "name": "Oakleigh" },
-        { "@type": "City", "name": "Ormond" },
-        { "@type": "City", "name": "Parkdale" },
-        { "@type": "City", "name": "Ringwood" },
-        { "@type": "City", "name": "Sandringham" },
-        { "@type": "City", "name": "South Yarra" },
-        { "@type": "City", "name": "Stonnington" },
-        { "@type": "City", "name": "Templestowe" },
-        { "@type": "City", "name": "Toorak" },
-        { "@type": "City", "name": "Wheelers Hill" }
+      areaServed: [
+        { "@type": "City", name: "Mordialloc" },
+        { "@type": "City", name: "Armadale" },
+        { "@type": "City", name: "Aspendale" },
+        { "@type": "City", name: "Bayside" },
+        { "@type": "City", name: "Beaumaris" },
+        { "@type": "City", name: "Bentleigh" },
+        { "@type": "City", name: "Berwick" },
+        { "@type": "City", name: "Black Rock" },
+        { "@type": "City", name: "Bonbeach" },
+        { "@type": "City", name: "Box Hill" },
+        { "@type": "City", name: "Brighton" },
+        { "@type": "City", name: "Brighton East" },
+        { "@type": "City", name: "Camberwell" },
+        { "@type": "City", name: "Carlton" },
+        { "@type": "City", name: "Carrum" },
+        { "@type": "City", name: "Caulfield" },
+        { "@type": "City", name: "Chadstone" },
+        { "@type": "City", name: "Chelsea" },
+        { "@type": "City", name: "Cheltenham" },
+        { "@type": "City", name: "Clarinda" },
+        { "@type": "City", name: "Croydon" },
+        { "@type": "City", name: "Dandenong" },
+        { "@type": "City", name: "Doncaster" },
+        { "@type": "City", name: "Donvale" },
+        { "@type": "City", name: "Edithvale" },
+        { "@type": "City", name: "Elsternwick" },
+        { "@type": "City", name: "Glen Waverley" },
+        { "@type": "City", name: "Greater Dandenong" },
+        { "@type": "City", name: "Hampton" },
+        { "@type": "City", name: "Hawthorn" },
+        { "@type": "City", name: "Heatherton" },
+        { "@type": "City", name: "Highett" },
+        { "@type": "City", name: "Keysborough" },
+        { "@type": "City", name: "Kew" },
+        { "@type": "City", name: "Kingston" },
+        { "@type": "City", name: "Malvern" },
+        { "@type": "City", name: "McKinnon" },
+        { "@type": "City", name: "Mentone" },
+        { "@type": "City", name: "Moorabbin" },
+        { "@type": "City", name: "Mornington Peninsula" },
+        { "@type": "City", name: "Murrumbeena" },
+        { "@type": "City", name: "Oakleigh" },
+        { "@type": "City", name: "Ormond" },
+        { "@type": "City", name: "Parkdale" },
+        { "@type": "City", name: "Ringwood" },
+        { "@type": "City", name: "Sandringham" },
+        { "@type": "City", name: "South Yarra" },
+        { "@type": "City", name: "Stonnington" },
+        { "@type": "City", name: "Templestowe" },
+        { "@type": "City", name: "Toorak" },
+        { "@type": "City", name: "Wheelers Hill" },
       ],
-      "description": "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
-      "openingHoursSpecification": {
+      description:
+        "Jetblack Painting is a Mordialloc-based house painting business providing interior, exterior and commercial painting services across 90+ Melbourne suburbs.",
+      openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "07:00",
-        "closes": "18:00"
-      }
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "07:00",
+        closes: "18:00",
+      },
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": `Professional House Painting Services in ${suburb}`,
-      "provider": {
+      name: `Professional House Painting Services in ${suburb}`,
+      provider: {
         "@type": "HomeAndConstructionBusiness",
-        "name": "Jetblack Painting",
-        "telephone": "0432 077 782",
-        "url": "https://jetblackpainting.com",
-        "address": {
+        name: "Jetblack Painting",
+        telephone: "0432 077 782",
+        url: "https://jetblackpainting.com",
+        address: {
           "@type": "PostalAddress",
-          "addressLocality": "Mordialloc",
-          "addressRegion": "VIC",
-          "postalCode": "3195",
-          "addressCountry": "AU"
-        }
+          addressLocality: "Mordialloc",
+          addressRegion: "VIC",
+          postalCode: "3195",
+          addressCountry: "AU",
+        },
       },
-      "areaServed": {
+      areaServed: {
         "@type": "City",
-        "name": suburb
+        name: suburb,
       },
-      "description": `Jetblack Painting provides premium interior, exterior, and commercial painting services in ${suburb}. Specializing in coastal home protection and heritage property restoration.`,
-      "mainEntityOfPage": {
+      description: `Jetblack Painting provides premium interior, exterior, and commercial painting services in ${suburb}. Specializing in coastal home protection and heritage property restoration.`,
+      mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}/`
-      }
-    }
+        "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}/`,
+      },
+    },
   ];
 
   const faqs = [
     {
       question: `How do you protect ${suburb} homes from coastal salt air?`,
-      answer: `We start by washing the salt off. That matters more than anything else here, because paint will not hold over a salt film. After the wash we use flexible primers, then coastal-grade topcoats from Dulux and Taubmans. Those products are built for this kind of exposure. Skip the wash and even the best paint lets go early.`
+      answer: `We start by washing the salt off. That matters more than anything else here, because paint will not hold over a salt film. After the wash we use flexible primers, then coastal-grade topcoats from Dulux and Taubmans. Those products are built for this kind of exposure. Skip the wash and even the best paint lets go early.`,
     },
     {
       question: `What types of properties do you paint in ${suburb}?`,
-      answer: `All of them. Weatherboard beach houses, Victorian-era heritage homes, modern architect-designed places, and the shops and offices along Main Street. We have worked on each type here in ${suburb}.`
+      answer: `All of them. Weatherboard beach houses, Victorian-era heritage homes, modern architect-designed places, and the shops and offices along Main Street. We have worked on each type here in ${suburb}.`,
     },
     {
       question: "How long does a typical house painting project take?",
-      answer: "Most homes in Mordialloc take 5 to 10 working days. What moves that number is the size of the house and how much prep it needs. You get a timeline with your quote, so you know what to expect before we start."
+      answer:
+        "Most homes in Mordialloc take 5 to 10 working days. What moves that number is the size of the house and how much prep it needs. You get a timeline with your quote, so you know what to expect before we start.",
     },
     {
       question: `Do you paint boat clubs, bowls clubs or other community buildings near ${suburb}'s foreshore?`,
-      answer: `Yes. The foreshore and creek area has a strong club scene, boating, bowls and life saving among them, and we have painted that kind of building as well as houses. These jobs mean bigger surfaces, heavier salt air right on the water, and club events to schedule around. We are set up for all three.`
+      answer: `Yes. The foreshore and creek area has a strong club scene, boating, bowls and life saving among them, and we have painted that kind of building as well as houses. These jobs mean bigger surfaces, heavier salt air right on the water, and club events to schedule around. We are set up for all three.`,
     },
     {
       question: `Do you do commercial painting for shops and hospitality venues on ${suburb}'s Main Street?`,
-      answer: `Yes. We are based in ${suburb}, and we paint shopfronts, cafes and hospitality venues along Main Street and the Nepean Highway strip as well as homes. Commercial jobs get a clear written scope. We then schedule around your trading hours, so you lose as little business as possible.`
-    }
+      answer: `Yes. We are based in ${suburb}, and we paint shopfronts, cafes and hospitality venues along Main Street and the Nepean Highway strip as well as homes. Commercial jobs get a clear written scope. We then schedule around your trading hours, so you lose as little business as possible.`,
+    },
   ];
 
   return (
@@ -143,8 +152,44 @@ export default function MordiallocPainters() {
       suburb={suburb}
       title="Mordialloc Painters | Coastal Painting | Jetblack Painting"
       description="Mordialloc painters based in the 3195 — beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782."
-      projectSummary={`Jimmy on an exterior repaint here in ${suburb}. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a ${suburb} quote gets done on site rather than estimated over the phone.`}
+      projectSummary={`A ${suburb} weatherboard exterior taken from pale grey to charcoal, plus Jimmy on the tools on another job here. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a ${suburb} quote gets done on site rather than estimated over the phone.`}
       projectImages={[
+        {
+          // Split out of a single 1819x1819 side-by-side Jimmy composed himself.
+          // The seam was measured, not guessed: scanning columns either side of
+          // the midpoint for vertical-edge strength puts it at x=944, not the
+          // 909 an even split would assume. Both halves are cropped to the same
+          // 874x880 window so the pair lines up in the grid.
+          //
+          // Kept at 874px, which is under the usual 1200-1400, because that is
+          // the real resolution of the composite — upscaling would only invent
+          // detail. Jimmy has the two originals if a sharper pair is ever wanted.
+          src: "/projects/project-mordialloc-weatherboard-before.webp",
+          small: "/projects/project-mordialloc-weatherboard-before-800.webp",
+          width: 874,
+          height: 880,
+          alt: `Weatherboard ${suburb} home in pale grey with a grey roof before repainting, behind a white picket fence`,
+          caption:
+            "Before. Pale grey weatherboard and a grey roof — nothing wrong with it, but every line on the house disappears into the one tone.",
+        },
+        {
+          src: "/projects/project-mordialloc-weatherboard-after.webp",
+          small: "/projects/project-mordialloc-weatherboard-after-800.webp",
+          width: 874,
+          height: 880,
+          alt: `The same ${suburb} weatherboard home after repainting in charcoal with white eaves, fretwork and window frames`,
+          caption:
+            "After, same spot, same fence. Charcoal on the boards with the eaves, fretwork and window frames in white — the gables and the verandah detail only exist as shapes once there is something for them to sit against.",
+        },
+        {
+          src: "/projects/project-mordialloc-weatherboard-deck.webp",
+          small: "/projects/project-mordialloc-weatherboard-deck-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Rear elevation of the same ${suburb} home after repainting, charcoal weatherboard and white trim above a timber deck`,
+          caption:
+            "Round the back, where nobody from the street will ever see it. The cut between the charcoal and the white is the same here as it is on the front.",
+        },
         {
           src: "/projects/project-mordialloc-exterior-repaint-jimmy.webp",
           small: "/projects/project-mordialloc-exterior-repaint-jimmy-800.webp",

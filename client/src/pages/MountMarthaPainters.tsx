@@ -50,7 +50,7 @@ export default function MountMarthaPainters() {
       suburb={suburb}
       title="Mount Martha Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Mount Martha — fibro cottages near the lower foreshore. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`A ${suburb} exterior repaint on a hillside home above the bay. Grey walls with every post, beam, fascia and window surround cut in white — on a house shaped like this one the trim is what does the work, because the eye follows the horizontal lines of the balconies rather than the wall colour.`}
+      projectSummary={`A ${suburb} exterior repaint on a hillside home above the bay. Grey walls with every post, beam, fascia and window surround cut in white — on a house shaped like this one the trim is what does the work, because the eye follows the horizontal lines of the balconies rather than the wall colour. Inside, grey through the hall above white beaded panelling, with the timber floors and stairs left as timber.`}
       projectImages={[
         {
           src: "/projects/project-mount-martha-entry-portico.webp",
@@ -81,6 +81,23 @@ export default function MountMarthaPainters() {
           height: 1600,
           alt: `White painted cladding and fascia meeting the original brickwork on the upper gable of a ${suburb} home, with Port Phillip Bay behind`,
           caption: `Up at the gable, with the bay behind it. The brick was left as it was and the cladding, fascia and barge board cut in white against it — a line that has to be straight, because on a ${suburb} hillside it is read from a long way off.`,
+        },
+        {
+          // Supplied separately from the three exteriors above and captioned
+          // so it does not claim to be the same house. Jimmy's Instagram entry
+          // B4wtiXald0h records a Mount Martha holiday house as a "complete
+          // interior & exterior repaint", which probably is this one — but
+          // probably is not good enough to assert on the site.
+          //
+          // Makes four images, which fills the
+          // two-column grid as two clean rows — keep it even if a fifth is ever
+          // added, rather than stranding one on a row of its own.
+          src: "/projects/project-mount-martha-hall-panelling.webp",
+          small: "/projects/project-mount-martha-hall-panelling-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Entry hall of a ${suburb} home mid-repaint, grey walls above white beaded panelling, with timber stairs and floorboards and a ladder and drop sheet in place`,
+          caption: `Inside a ${suburb} job. Grey above, white beaded panelling below, and the timber left as timber. Panelling like this is the slowest thing in the house to paint — every groove has to be cut and laid off individually, and a roller alone leaves the grooves starved.`,
         },
       ]}
       neighbouringSuburbs={[

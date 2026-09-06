@@ -15,17 +15,17 @@ Not published — root `.md` files 404 on the live site (only `dist/public` is s
 The daily routine's brief carries a stale copy of these. Its own rule is that **this log wins**.
 Re-verify against the live site before cementing any of them again.
 
-| Fact | Value | Verified |
-| --- | --- | --- |
-| Google rating | 5.0 | 2026-08-27 |
-| **Google review count** | **17** | 2026-08-27 |
-| Phone | 0432 077 782 | 2026-08-27 |
-| Email | jimmy@jetblackpainting.com | 2026-08-27 |
-| Public liability | $10 million | — |
-| Workmanship guarantee | 5 years, written | — |
-| Base | Mordialloc VIC 3195 | 2026-08-27 |
-| **Years experience** | **18+** | 2026-08-30 |
-| Quote turnaround / enquiry response | 24–48 hours | — |
+| Fact                                | Value                      | Verified   |
+| ----------------------------------- | -------------------------- | ---------- |
+| Google rating                       | 5.0                        | 2026-08-27 |
+| **Google review count**             | **17**                     | 2026-08-27 |
+| Phone                               | 0432 077 782               | 2026-08-27 |
+| Email                               | jimmy@jetblackpainting.com | 2026-08-27 |
+| Public liability                    | $10 million                | —          |
+| Workmanship guarantee               | 5 years, written           | —          |
+| Base                                | Mordialloc VIC 3195        | 2026-08-27 |
+| **Years experience**                | **18+**                    | 2026-08-30 |
+| Quote turnaround / enquiry response | 24–48 hours                | —          |
 
 ### Years experience — 18+, not 13+
 
@@ -35,12 +35,12 @@ revert this to 13.** An earlier version of the daily brief says 13+; that is now
 
 Three other figures were live and are all wrong or need care:
 
-| Where | Said | Status |
-| --- | --- | --- |
-| Site, llms.txt, schema | 13+ | **corrected to 18+** |
-| `TrustBadges.tsx` | "trusted since 2011" (implies 15) | **year claim removed** — not replaced with an invented founding year |
-| Google Business Profile | 18+ | the source of truth Jimmy nominated |
-| Google's record of the business opening | March 2015 (11) | **unresolved, and Google can see it** |
+| Where                                   | Said                              | Status                                                               |
+| --------------------------------------- | --------------------------------- | -------------------------------------------------------------------- |
+| Site, llms.txt, schema                  | 13+                               | **corrected to 18+**                                                 |
+| `TrustBadges.tsx`                       | "trusted since 2011" (implies 15) | **year claim removed** — not replaced with an invented founding year |
+| Google Business Profile                 | 18+                               | the source of truth Jimmy nominated                                  |
+| Google's record of the business opening | March 2015 (11)                   | **unresolved, and Google can see it**                                |
 
 Phrasing throughout is deliberately "18+ years of **experience**", not "the business is 18 years
 old" — that is what the Business Profile says and it is the reading that does not contradict
@@ -70,8 +70,8 @@ comments and `<Reviews />`. Do not go hunting for a count there.
 
 Two decoys, both of which must be left alone:
 
-- `ChoosingAPainterMelbourne.tsx` contains *"a 5.0 rating with 3 reviews tells you less than a 4.8
-  with 100"*. That is generic advice about judging any painter, **not** a Jetblack claim.
+- `ChoosingAPainterMelbourne.tsx` contains _"a 5.0 rating with 3 reviews tells you less than a 4.8
+  with 100"_. That is generic advice about judging any painter, **not** a Jetblack claim.
 - The `15` / `14` matches in `Reviews.tsx` are SVG path coordinates (`14.09`, `14.97`).
 
 The `client/index.html` prose drifted to "14" once and was fixed on 2026-08-18 — re-check it each run.
@@ -98,16 +98,16 @@ A run that investigates, finds nothing worth changing, and says so is a successf
 
 ## Data access — what is actually reachable
 
-| Source | Status | Notes |
-|---|---|---|
-| Google Search Console | ✅ **GSC Wizard (primary)** | Connected and verified 2026-08-27. Supermetrics `ds_id="GW"` is the fallback |
-| Google Business Profile | ⚠️ Via Supermetrics MCP only | `ds_id="GMB"`, **read-only** — cannot post. GSC Wizard does NOT cover GBP |
-| GA4 | ❌ Effectively broken | Connected property `545100608` has **zero data in 20 months**; site fires `G-6NC2597W9L`. GSC Wizard has a GA4 suite but it reads the same empty property — the gap is upstream, not tooling |
-| **Bing Webmaster Tools** | ⚠️ **Now reachable, untested** | GSC Wizard ships a Bing suite (`get_bing_query_stats`, `get_bing_crawl_issues`, …). Never exercised — verify before quoting |
-| **Apple Business Connect** | ❌ **No access** | No connector exists |
-| Competitor intelligence | ❌ Largely unavailable | Semrush out of API units; Ahrefs returns "Insufficient plan" |
-| Instagram | ✅ **Metadata yes / pixels no** — Windsor `instagram`, connected 2026-09-06 | See the note below before promising Jimmy a photo |
-| The site itself | ✅ Full | curl + repo. Most reliable source |
+| Source                     | Status                                                                      | Notes                                                                                                                                                                                        |
+| -------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Google Search Console      | ✅ **GSC Wizard (primary)**                                                 | Connected and verified 2026-08-27. Supermetrics `ds_id="GW"` is the fallback                                                                                                                 |
+| Google Business Profile    | ⚠️ Via Supermetrics MCP only                                                | `ds_id="GMB"`, **read-only** — cannot post. GSC Wizard does NOT cover GBP                                                                                                                    |
+| GA4                        | ❌ Effectively broken                                                       | Connected property `545100608` has **zero data in 20 months**; site fires `G-6NC2597W9L`. GSC Wizard has a GA4 suite but it reads the same empty property — the gap is upstream, not tooling |
+| **Bing Webmaster Tools**   | ⚠️ **Now reachable, untested**                                              | GSC Wizard ships a Bing suite (`get_bing_query_stats`, `get_bing_crawl_issues`, …). Never exercised — verify before quoting                                                                  |
+| **Apple Business Connect** | ❌ **No access**                                                            | No connector exists                                                                                                                                                                          |
+| Competitor intelligence    | ❌ Largely unavailable                                                      | Semrush out of API units; Ahrefs returns "Insufficient plan"                                                                                                                                 |
+| Instagram                  | ✅ **Metadata yes / pixels no** — Windsor `instagram`, connected 2026-09-06 | See the note below before promising Jimmy a photo                                                                                                                                            |
+| The site itself            | ✅ Full                                                                     | curl + repo. Most reliable source                                                                                                                                                            |
 
 ### Instagram — you can read the catalogue, you cannot download the photos
 
@@ -122,11 +122,11 @@ Jimmy asked repeatedly for photos to be pulled off `instagram.com/jetblack_paint
   which the egress proxy refuses at CONNECT (`403`). Verified against a live signed URL, not
   assumed. There is no workaround and none should be attempted.
 - **vidIQ `vidiq_ig_profile_reels`** returns Reels with cover thumbnails rendered inline. Useful
-  for *seeing* what a clip contains. **Reels only** — it rejects image posts
+  for _seeing_ what a clip contains. **Reels only** — it rejects image posts
   (`not a video (mediaType=Image)`), and the covers are small thumbnails, not publishable files.
 - `curl`, `WebFetch` and the Graph API are all blocked at the domain.
 
-> **The practical rule:** read Instagram to decide *which* photo is wanted, then ask Jimmy to send
+> **The practical rule:** read Instagram to decide _which_ photo is wanted, then ask Jimmy to send
 > that original from his phone. That is the only path that has ever put a photo on the site.
 
 Windsor's Instagram connector also exposes **write** actions (`create_image_post`,
@@ -194,7 +194,15 @@ Review count is hardcoded in nine places — see `CLAUDE.md`. The "15"/"14" matc
 - **Similarity gate.** Revert if average worst-twin > 45% or any page > 55%. Current: **23.1%**, 0 over 55%.
 - **Schema vs visible text.** Every FAQPage Q and A must appear as visible text. Current: **474 questions, 0 problems**.
 - **Orphan check.** No suburb page may reach zero inbound links. Current: **0 orphans**.
-- ⚠️ **Cloudflare deploys on every branch push.** A draft PR gates nothing. Pushing *is* deploying.
+- ⚠️ **Cloudflare deploys on every branch push.** A draft PR gates nothing. Pushing _is_ deploying.
+- 🔍 **Every supplied photo gets a privacy pass at full resolution before it ships.** Zoom the gate
+  post, the letterbox, the kerb, parked cars and any glass that could hold a reflection. Across six
+  batches on 2026-09-06 this caught a "One" on brickwork, an enamel "11" on a gate post, a "7" on a
+  post _and_ a second "7" painted on the kerb, two legible number plates, a member of the public at
+  a bus stop, and a customer's street number and road name painted on a wall. **Also read the
+  workwear**: two Brighton interiors were withheld because the crew wore _Quest Paintings LTD_
+  shirts with an 021 number, not Jetblack's. Jimmy confirmed 2026-09-06 to publish that job's pool
+  exterior only — do not add those two interiors later.
 - `pnpm check` / `pnpm build` **cannot run locally**: pnpm is a corepack shim that 403s fetching
   itself, `node_modules` is absent, and **there is no `tsconfig.json`** so `tsc --noEmit` compiles
   nothing regardless. Cloudflare is the only real build.
@@ -208,11 +216,11 @@ traffic 5 July; then 12/day → 131 → 350+, average position ~85 → **38–42
 
 **28-day comparison** (2026-07-18→08-14 vs prior 28), same method both periods:
 
-| | Prior | Latest |
-|---|---|---|
-| Impressions | 661 | **7,503** (11.3×) |
-| Clicks | 23 | **31** |
-| Avg position | 76.3 | **53.1** |
+|              | Prior | Latest            |
+| ------------ | ----- | ----------------- |
+| Impressions  | 661   | **7,503** (11.3×) |
+| Clicks       | 23    | **31**            |
+| Avg position | 76.3  | **53.1**          |
 
 Clicks stay low because position ~40 is page 4. **The next real threshold is top 10–20.**
 
@@ -256,27 +264,29 @@ bio, location, CTA and website link. But **4 posts in 3 months** and **zero busi
 
 ## Completed work — do not repeat
 
-| Date | PR | What | Result |
-|---|---|---|---|
-| 08-13 | #176/#177 | Suburb-directory nav, `/assets/` soft-404 | Fixed; do not revert nav to a `<p>` |
-| 08-15 | #184 | Linked 17 orphaned suburb pages from real neighbours | Orphans 17 → 0 |
-| 08-16 | #185 | Depth: Brighton, Toorak, Hawthorn, Camberwell | ~650w → 1,012–1,202w |
-| 08-16 | #186 | Internal link rebalance toward winnable suburbs | Geography-checked; Camberwell left alone, no honest option |
-| 08-16 | #187 | Depth: Murrumbeena, Mentone, Mordialloc | ~700w → ~1,100w |
-| 08-16 | #188 | llms.txt: payment, colour consultation, access Q&A | Sourced from existing site facts |
-| 08-17 | #189 | Blog index BlogPosting missing dates/image/author | 14 missing fields → 0 |
-| 08-17 | #190 | **Homepage declared aggregateRating twice** | Shell + React both declared same `@id`. Now exactly one site-wide |
-| 08-17 | #191 | **Cache regex was inert — every JS/CSS served `max-age=0`** | Vite emits `name-HASH.ext`; regex expected `name.hash.ext`. Now `immutable` |
-| 08-17 | #192 | Depth: Donvale, Aspendale, Clyde North | ~700–750w → ~1,185–1,223w |
-| 08-18 | #193 | **Service→suburb and blog→service links were wrong** | 40 links into unreachable suburbs → 0; 8/8 service pages now distinct; blog posts now link to the service they discuss |
-| 08-18 | `e85f073` | Invented AI meta tags, keyword-stuffed schema, fake streetAddress, hreflang, low-value meta | **Committed, not yet pushed** |
+| Date  | PR        | What                                                                                        | Result                                                                                                                 |
+| ----- | --------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 08-13 | #176/#177 | Suburb-directory nav, `/assets/` soft-404                                                   | Fixed; do not revert nav to a `<p>`                                                                                    |
+| 08-15 | #184      | Linked 17 orphaned suburb pages from real neighbours                                        | Orphans 17 → 0                                                                                                         |
+| 08-16 | #185      | Depth: Brighton, Toorak, Hawthorn, Camberwell                                               | ~650w → 1,012–1,202w                                                                                                   |
+| 08-16 | #186      | Internal link rebalance toward winnable suburbs                                             | Geography-checked; Camberwell left alone, no honest option                                                             |
+| 08-16 | #187      | Depth: Murrumbeena, Mentone, Mordialloc                                                     | ~700w → ~1,100w                                                                                                        |
+| 08-16 | #188      | llms.txt: payment, colour consultation, access Q&A                                          | Sourced from existing site facts                                                                                       |
+| 08-17 | #189      | Blog index BlogPosting missing dates/image/author                                           | 14 missing fields → 0                                                                                                  |
+| 08-17 | #190      | **Homepage declared aggregateRating twice**                                                 | Shell + React both declared same `@id`. Now exactly one site-wide                                                      |
+| 08-17 | #191      | **Cache regex was inert — every JS/CSS served `max-age=0`**                                 | Vite emits `name-HASH.ext`; regex expected `name.hash.ext`. Now `immutable`                                            |
+| 08-17 | #192      | Depth: Donvale, Aspendale, Clyde North                                                      | ~700–750w → ~1,185–1,223w                                                                                              |
+| 08-18 | #193      | **Service→suburb and blog→service links were wrong**                                        | 40 links into unreachable suburbs → 0; 8/8 service pages now distinct; blog posts now link to the service they discuss |
+| 08-18 | `e85f073` | Invented AI meta tags, keyword-stuffed schema, fake streetAddress, hreflang, low-value meta | **Committed, not yet pushed**                                                                                          |
 
 ### Suburb depth already done — check word count before touching
+
 McKinnon 1,396 · Collingwood 1,444 · Highett 1,344 · Aspendale 1,223 · Brighton 1,202 ·
 Donvale 1,185 · Clyde North 1,185 · Hawthorn 1,165 · Toorak 1,107 · Mentone 1,102 ·
 Mordialloc 1,100 · Murrumbeena 1,062 · Camberwell 1,012 (all exclude the shared nav)
 
 ### Remaining content queue
+
 Patterson Lakes 807w · Dromana 841w · Mount Eliza 899w · Sorrento 964w.
 ⚠️ All approaching ~1,000w. Once a page is over that, **stop padding** and recommend GBP/off-page
 work instead — that is the honest answer, not more words.
@@ -307,6 +317,7 @@ work instead — that is the honest answer, not more words.
 ## Open items
 
 **Needs Jimmy:**
+
 1. **GA4** — which property `G-6NC2597W9L` reports into. The connected one is empty.
 2. **Search Console** — re-run validation on the duplicate-rating fix now it is live.
 3. **Push `e85f073`?** — Batch 1 held pending approval.
@@ -314,6 +325,7 @@ work instead — that is the honest answer, not more words.
 5. **GBP + Instagram posting** — captions delivered; publishing is manual.
 
 **Available work:**
+
 - Batch 2 of the Next Priorities brief: commercial-intent cost content (items 6) and contextual
   in-body internal links (item 7).
 - Missing `tsconfig.json` — `pnpm check` prints help text instead of type-checking. Small fix,
@@ -327,6 +339,7 @@ work instead — that is the honest answer, not more words.
 ## Run log
 
 ### 2026-08-18 — Batch 1, Next Priorities brief
+
 **Investigated:** all 10 items against the code. **Found:** items 1, 2, 3, 8, 9 all genuinely
 present. **Changed:** removed 4 invented AI meta tags (shell had been contradicting SEOHead, which
 dropped them long ago); removed "Best Painters Melbourne" from `alternateName` (a keyword asserted
@@ -340,19 +353,20 @@ instructed. **Risk:** low — metadata and schema only, no URLs, no content, no 
 consumed signal, so none expected).
 
 ### 2026-08-18 (run 2) — GSC review, opportunity identified: **Sorrento**
+
 **Investigated:** GSC query data 2026-07-22 → 08-15, 500 rows, ranked by the brief's priority
 order (page-2→page-1 first, then position 4–10, then high-impression/low-CTR).
 
 **Data — suburb clusters in the 11–20 band:**
 
-| Suburb | Impressions | Best position | Depth | Verdict |
-|---|---|---|---|---|
-| Collingwood | 100 | 17.50 | **1,444w** | Content is NOT the lever — deepest page on the site |
-| **Sorrento** | **87** | **7.29** | **964w** | **Shortest gap to page 1 + genuine room** |
-| Highett | 80 | 17.38 | 1,344w | Already deepened |
-| Murrumbeena | 59 | 17.07 | 1,062w | Already deepened |
-| Elwood | 57 | 21.42 | 952w | Thin, but furthest from page 1 |
-| Chelsea | 33 | 20.18 | 860w | Thinnest overall, lowest volume |
+| Suburb       | Impressions | Best position | Depth      | Verdict                                             |
+| ------------ | ----------- | ------------- | ---------- | --------------------------------------------------- |
+| Collingwood  | 100         | 17.50         | **1,444w** | Content is NOT the lever — deepest page on the site |
+| **Sorrento** | **87**      | **7.29**      | **964w**   | **Shortest gap to page 1 + genuine room**           |
+| Highett      | 80          | 17.38         | 1,344w     | Already deepened                                    |
+| Murrumbeena  | 59          | 17.07         | 1,062w     | Already deepened                                    |
+| Elwood       | 57          | 21.42         | 952w       | Thin, but furthest from page 1                      |
+| Chelsea      | 33          | 20.18         | 860w       | Thinnest overall, lowest volume                     |
 
 **Opportunity found:** Sorrento. `painters sorrento` sits at **14.33 with 57 impressions** — only
 4.3 positions off page 1, the shortest gap of any high-volume term. The cluster totals 87
@@ -387,12 +401,12 @@ genuine defect rather than a marginal gain.
 Two new sections, deliberately on angles no other bayside page uses (the coastal-salt paragraph
 pattern was not repeated):
 
-- *Why Sorrento's Two Coastlines Need Different Specifications* — front beach salt settles as a
+- _Why Sorrento's Two Coastlines Need Different Specifications_ — front beach salt settles as a
   film; back beach salt arrives wind-driven off Bass Strait carrying sand, which abrades as well
   as attacks. Consequence: elevations on one house age at very different rates, so they are
   assessed separately and noted in the quote, and exposed faces often have to be brushed and
   rolled rather than sprayed because overspray carries.
-- *Seasons, Access and Getting a Sorrento Job Scheduled Properly* — a holiday town's population
+- _Seasons, Access and Getting a Sorrento Job Scheduled Properly_ — a holiday town's population
   swing versus the weather window (autumn/spring for exteriors, winter for interiors), plus steep
   blocks falling to the water and narrow front-beach streets with summer parking pressure.
 
@@ -403,10 +417,10 @@ steep/narrow blocks. No prices, timeframes, reviews, awards or capabilities were
 **Lever 2 — internal links. Sorrento 5 → 8 inbound (excluding the shared nav).**
 The investigation found the cause, and it was a real error, not a shortage:
 
-| Page | Was linking to | Problem |
-|---|---|---|
+| Page                             | Was linking to                                             | Problem                                                                                                                                                                      |
+| -------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/painter-mornington-peninsula/` | Berwick, Dandenong, Greater Dandenong, Kingston, Moorabbin | **None of these are on the Mornington Peninsula.** The regional hub page linked to no Peninsula town at all, while naming Sorrento, Portsea and Blairgowrie in its own prose |
-| `/painter-mount-martha/` | …Berwick | ~55 km inland, across a different region |
+| `/painter-mount-martha/`         | …Berwick                                                   | ~55 km inland, across a different region                                                                                                                                     |
 
 Corrected to the actual bay-side run: Peninsula hub now links to Sorrento, Rye, Rosebud, Dromana,
 Safety Beach, Mount Martha, Mornington, Mount Eliza, Frankston. Mount Martha drops Berwick and
@@ -441,16 +455,16 @@ page, schema, internal links and supporting service pages, with the highest-valu
 
 **Audit of `/painter-mordialloc/`**
 
-| Signal | State | Verdict |
-|---|---|---|
-| Inbound internal links | **26** (vs Mentone 16, Highett 15) | Strongest on the site — **not** the gap |
-| Word count | 1,107 | Mid-pack, not thin |
-| "We are based here" signalling | 6 explicit statements, incl. "Mordialloc is our home", "based right here in the 3195" | Already strong |
-| Schema | LocalBusiness + Service + FAQPage + Breadcrumb + speakable | Sound |
-| Outbound service links | **2 of 8** | **Gap** |
-| Roof / kitchen cabinet / fence / body corporate | **0 mentions each** | **Gap** — 4 of the brief's 10 named intents |
-| Meta description | *"…contemporary bayside residences and ensuring a flawless."* | **Broken sentence fragment** |
-| GSC | `painters mordialloc` **regressed 19.7 → 29.2** | The term the brief is about is going backwards |
+| Signal                                          | State                                                                                 | Verdict                                        |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Inbound internal links                          | **26** (vs Mentone 16, Highett 15)                                                    | Strongest on the site — **not** the gap        |
+| Word count                                      | 1,107                                                                                 | Mid-pack, not thin                             |
+| "We are based here" signalling                  | 6 explicit statements, incl. "Mordialloc is our home", "based right here in the 3195" | Already strong                                 |
+| Schema                                          | LocalBusiness + Service + FAQPage + Breadcrumb + speakable                            | Sound                                          |
+| Outbound service links                          | **2 of 8**                                                                            | **Gap**                                        |
+| Roof / kitchen cabinet / fence / body corporate | **0 mentions each**                                                                   | **Gap** — 4 of the brief's 10 named intents    |
+| Meta description                                | _"…contemporary bayside residences and ensuring a flawless."_                         | **Broken sentence fragment**                   |
+| GSC                                             | `painters mordialloc` **regressed 19.7 → 29.2**                                       | The term the brief is about is going backwards |
 
 **Root cause found — and it is site-wide, not Mordialloc-specific.**
 `SuburbPageTemplate.tsx` renders a `coreServices` grid of **six** service links ("Painting Services
@@ -474,7 +488,7 @@ inside the gate (revert only above 45% avg or 55% any page). The rise is expecte
 an identical block on 96 pages, in exchange for 384 links into the money pages. Schema-vs-visible
 477 questions / 0 problems. 0 broken links. Sitemap bumped for the 96 pages that genuinely changed.
 
-**Not done, deliberately.** *Epoxy flooring Mordialloc* appears in the brief's target list but
+**Not done, deliberately.** _Epoxy flooring Mordialloc_ appears in the brief's target list but
 Jetblack has no epoxy flooring service page and no evidence of offering it. Adding it would be
 inventing a capability, which the standing rules forbid — **Jimmy to confirm whether this is a real
 service** before it goes anywhere near the site.
@@ -515,25 +529,25 @@ so AI assistants were being given the wrong review count. Regeneration propagate
 
 **Everything else checked, all clean, no change needed:**
 
-| Step | Check | Result |
-|---|---|---|
-| 0 | pnpm-lock completeness | **77/77** deps present |
-| 0 | Production serves current code | Verified — new service block live |
-| 2 | Three-layer regeneration | **0 diffs** |
-| 2 | Schema vs visible text | 114 pages, **477 questions, 0 problems** |
-| 2 | Near-duplicate (96 pages incl. Keysborough) | 25.6% avg, worst 46.4%, **0 over 55%** |
-| 2 | Bad URLs 404 | `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404 |
-| 2 | Real hashed bundles still 200 | `text/javascript` / `text/css` — both directions verified |
-| 2 | Redirects | 301 not 307; `/painters-toorak` and `/au/` correct |
-| 2 | Sitemap | **114/114 return 200 with zero redirect hops** |
-| 2 | Structured data | 0 parse errors, 0 required-field gaps, **0 aggregateRating in static pages** |
-| 3 | Metadata | 0 duplicate titles/descriptions/H1s; 1 title >60 (`/painter-hastings/` 64 — baseline, unchanged) |
-| 4 | Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`; HTML on normal Accept |
-| 4 | Markdown body parity | 95.9–97.1% across 5 sampled pages — in the 92–99% band |
-| 4 | llms.txt prices | 3 `$` matches, **all read**: all are "$10 million public liability". No prices. |
-| 4 | robots.txt | Disallows only `/api/` |
-| 5 | TTFB | 0.18–0.26s, `cf-cache-status: HIT` |
-| 6 | og:image | 200 `image/jpeg` |
+| Step | Check                                       | Result                                                                                           |
+| ---- | ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| 0    | pnpm-lock completeness                      | **77/77** deps present                                                                           |
+| 0    | Production serves current code              | Verified — new service block live                                                                |
+| 2    | Three-layer regeneration                    | **0 diffs**                                                                                      |
+| 2    | Schema vs visible text                      | 114 pages, **477 questions, 0 problems**                                                         |
+| 2    | Near-duplicate (96 pages incl. Keysborough) | 25.6% avg, worst 46.4%, **0 over 55%**                                                           |
+| 2    | Bad URLs 404                                | `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404                                       |
+| 2    | Real hashed bundles still 200               | `text/javascript` / `text/css` — both directions verified                                        |
+| 2    | Redirects                                   | 301 not 307; `/painters-toorak` and `/au/` correct                                               |
+| 2    | Sitemap                                     | **114/114 return 200 with zero redirect hops**                                                   |
+| 2    | Structured data                             | 0 parse errors, 0 required-field gaps, **0 aggregateRating in static pages**                     |
+| 3    | Metadata                                    | 0 duplicate titles/descriptions/H1s; 1 title >60 (`/painter-hastings/` 64 — baseline, unchanged) |
+| 4    | Markdown negotiation                        | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`; HTML on normal Accept                  |
+| 4    | Markdown body parity                        | 95.9–97.1% across 5 sampled pages — in the 92–99% band                                           |
+| 4    | llms.txt prices                             | 3 `$` matches, **all read**: all are "$10 million public liability". No prices.                  |
+| 4    | robots.txt                                  | Disallows only `/api/`                                                                           |
+| 5    | TTFB                                        | 0.18–0.26s, `cf-cache-status: HIT`                                                               |
+| 6    | og:image                                    | 200 `image/jpeg`                                                                                 |
 
 ⚠️ **Step 1 (GSC ranking data) could not be measured this run — the Supermetrics connector is not
 available in this chat.** Its tools are absent from the session, so no GSC, GMB, GA4, PSI or
@@ -550,19 +564,19 @@ page-2 → page-1 movement. Diagnose the limiting factor before changing anythin
 
 ### Diagnosis of the 11 tracked suburbs — GSC, 2026-05-21 → 2026-08-16 (90 days)
 
-| Suburb | Impressions | Best position | Clicks |
-|---|---|---|---|
-| Collingwood | 129 | 17.65 | **0** |
-| Sorrento | 100 | **7.13** | **0** |
-| Murrumbeena | 86 | 17.00 | **0** |
-| Highett | 85 | 17.32 | **0** |
-| Mordialloc | 77 | 29.18 | **0** |
-| Mentone | 61 | 24.82 | **0** |
-| McKinnon | 57 | 11.19 | **0** |
-| Donvale | 49 | 16.63 | **0** |
-| Patterson Lakes | 39 | **6.83** | **0** |
-| Dromana | 38 | 19.53 | **0** |
-| Aspendale | 21 | 10.00 | **0** |
+| Suburb          | Impressions | Best position | Clicks |
+| --------------- | ----------- | ------------- | ------ |
+| Collingwood     | 129         | 17.65         | **0**  |
+| Sorrento        | 100         | **7.13**      | **0**  |
+| Murrumbeena     | 86          | 17.00         | **0**  |
+| Highett         | 85          | 17.32         | **0**  |
+| Mordialloc      | 77          | 29.18         | **0**  |
+| Mentone         | 61          | 24.82         | **0**  |
+| McKinnon        | 57          | 11.19         | **0**  |
+| Donvale         | 49          | 16.63         | **0**  |
+| Patterson Lakes | 39          | **6.83**      | **0**  |
+| Dromana         | 38          | 19.53         | **0**  |
+| Aspendale       | 21          | 10.00         | **0**  |
 
 ~742 impressions across the eleven, **zero clicks**. Every click the site earns is brand:
 `jetblack painting` 123 imp / 33 clicks / pos 3.9.
@@ -577,7 +591,7 @@ page-2 → page-1 movement. Diagnose the limiting factor before changing anythin
   crawler-visible service links, so this lever is now spent.
 - **Not CTR.** Nothing is on page 1 to have a CTR. Positions run 7–29. Three queries do sit at
   3–7 (`house painter clarinda` 3.6, `bedroom painting patterson lakes` 6.8, `painters sorrento
-  bay` 7.1) with zero clicks — but each has only 5–8 impressions, far too little to read a CTR
+bay` 7.1) with zero clicks — but each has only 5–8 impressions, far too little to read a CTR
   signal from. **Do not treat this as a title/description problem.** Re-test when a page holds
   the top 10 on a term with real volume.
 - **Is authority.** 44 links / 31 domains / authority 2 (measured 2026-08-13). The head terms
@@ -595,7 +609,7 @@ first-appearance positions, not stalled ones.
 ### Backlink targets — researched and verified 2026-08-19
 
 ⚠️ **Semrush Backlink Gap could not be run.** Every Semrush report returns units-zero; Ahrefs
-returns "Insufficient plan". So this list is *not* a competitor gap analysis — it is researched
+returns "Insufficient plan". So this list is _not_ a competitor gap analysis — it is researched
 industry-standard targets, each verified to exist. The competitor-gap step still needs Semrush
 units: https://www.semrush.com/mcp-access
 
@@ -606,12 +620,12 @@ Yellow Pages duplicate merge: 1800 359 321. **Edit the existing entries — do n
 
 **Tier 1 — trade accreditation. Highest topical relevance available in Australia.**
 
-| Target | Notes |
-|---|---|
-| **Master Painters Association of Victoria** — `mpav.com.au/find-a-master-painter/` | The painting trade body for this state. Membership-gated directory. 03 9813 5922, Dandenong South. Highest-relevance Australian link there is for this business. |
+| Target                                                                                       | Notes                                                                                                                                                                             |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Master Painters Association of Victoria** — `mpav.com.au/find-a-master-painter/`           | The painting trade body for this state. Membership-gated directory. 03 9813 5922, Dandenong South. Highest-relevance Australian link there is for this business.                  |
 | **Dulux Accredited Painter** — `duluxtrade.com.au` + `dulux.com.au/services/find-a-painter/` | **Invite-only**; requires sufficient public liability, which Jetblack has ($10M). Two of the strongest painting domains in the country, plus consumer leads. Enquire on 13 25 25. |
-| **Haymes Paint Trade Applicator** — `applicators.haymespaint.com.au` | Australian-owned, 350+ stockists. Sign-up is open, not invite-only. |
-| **Taubmans Trade** — `taubmans.com.au/for-painters` | PPG trade program. |
+| **Haymes Paint Trade Applicator** — `applicators.haymespaint.com.au`                         | Australian-owned, 350+ stockists. Sign-up is open, not invite-only.                                                                                                               |
+| **Taubmans Trade** — `taubmans.com.au/for-painters`                                          | PPG trade program.                                                                                                                                                                |
 
 **Tier 2 — genuine local authority. Also feeds Maps prominence, which is the real lead constraint.**
 Kingston City Council business support (`kingston.vic.gov.au/services/business`) · local chamber of
@@ -637,37 +651,37 @@ Tier 0 and Tier 1 above are the highest-leverage work available, and none of it 
 First run under the authority phase. Steps 0–6 all clean, so by rule no fix was needed; Step 7
 content work was **not** done, for two independent reasons given below.
 
-| Step | Check | Result |
-|---|---|---|
-| 0 | Latest main | `e33710e` (PR #194 squash), merged 14:02 UTC |
-| 0 | pnpm-lock completeness | **77/77** deps present |
-| 0 | Production serves current main | Verified two ways — service block live on Mordialloc, homepage reads "15 Google reviews" |
-| 2.1 | Three-layer regeneration | **0 diffs** |
-| 2.2 | Schema vs visible text | 114 pages, **477 questions, 0 problems** |
-| 2.3 | Near-duplicate, 96 pages | 25.6% avg, worst 46.4% (cranbourne/narre-warren), **0 over 55%** |
-| 2.4 | Bad URLs 404 | `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` — all 404 |
-| 2.4 | Real hashed bundles | 200 `text/css` / `text/javascript` — both directions verified |
-| 2.4 | Redirects | 301 on `/painter-toorak`, `/painters-toorak`, `/au/` |
-| 2.4 | Sitemap | **114/114 at 200 with zero redirect hops** |
-| 2.5 | Structured data | 0 parse errors, 0 required-field gaps, **0 aggregateRating in static pages** |
-| 3 | Metadata | 0 dup titles/descriptions/H1s/canonicals, 0 missing descriptions, 0 keywords tags; 1 title >60 (`/painter-hastings/` 64 — baseline) |
-| 4 | Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`; HTML on normal Accept |
-| 4 | robots.txt | Disallows only `/api/` |
-| 4 | llms.txt prices | 3 `$` matches, **all read**: all "$10 million/\$10M public liability". No prices. |
-| 5 | TTFB | 0.154–0.196s, `cf-cache-status: HIT` |
-| 6 | og:image · /review-us/ | 200 `image/jpeg` · noindex and correctly absent from sitemap |
+| Step | Check                          | Result                                                                                                                              |
+| ---- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 0    | Latest main                    | `e33710e` (PR #194 squash), merged 14:02 UTC                                                                                        |
+| 0    | pnpm-lock completeness         | **77/77** deps present                                                                                                              |
+| 0    | Production serves current main | Verified two ways — service block live on Mordialloc, homepage reads "15 Google reviews"                                            |
+| 2.1  | Three-layer regeneration       | **0 diffs**                                                                                                                         |
+| 2.2  | Schema vs visible text         | 114 pages, **477 questions, 0 problems**                                                                                            |
+| 2.3  | Near-duplicate, 96 pages       | 25.6% avg, worst 46.4% (cranbourne/narre-warren), **0 over 55%**                                                                    |
+| 2.4  | Bad URLs 404                   | `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` — all 404                                                                        |
+| 2.4  | Real hashed bundles            | 200 `text/css` / `text/javascript` — both directions verified                                                                       |
+| 2.4  | Redirects                      | 301 on `/painter-toorak`, `/painters-toorak`, `/au/`                                                                                |
+| 2.4  | Sitemap                        | **114/114 at 200 with zero redirect hops**                                                                                          |
+| 2.5  | Structured data                | 0 parse errors, 0 required-field gaps, **0 aggregateRating in static pages**                                                        |
+| 3    | Metadata                       | 0 dup titles/descriptions/H1s/canonicals, 0 missing descriptions, 0 keywords tags; 1 title >60 (`/painter-hastings/` 64 — baseline) |
+| 4    | Markdown negotiation           | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`; HTML on normal Accept                                                     |
+| 4    | robots.txt                     | Disallows only `/api/`                                                                                                              |
+| 4    | llms.txt prices                | 3 `$` matches, **all read**: all "$10 million/\$10M public liability". No prices.                                                   |
+| 5    | TTFB                           | 0.154–0.196s, `cf-cache-status: HIT`                                                                                                |
+| 6    | og:image · /review-us/         | 200 `image/jpeg` · noindex and correctly absent from sitemap                                                                        |
 
 **⚠️ The daily brief's Step 7 queue is stale on 4 of 7 entries.** Measured live, excluding nav:
 
-| Suburb | Brief says | Actual | |
-|---|---|---|---|
-| Donvale | 702w | **1,236w** | stale |
-| Aspendale | 738w | **1,274w** | stale |
-| Clyde North | 752w | **1,245w** | stale |
-| Sorrento | 964w | **1,794w** | stale |
-| Patterson Lakes | 807w | 865w | current |
-| Dromana | 841w | 892w | current |
-| Mount Eliza | 899w | 959w | current |
+| Suburb          | Brief says | Actual     |         |
+| --------------- | ---------- | ---------- | ------- |
+| Donvale         | 702w       | **1,236w** | stale   |
+| Aspendale       | 738w       | **1,274w** | stale   |
+| Clyde North     | 752w       | **1,245w** | stale   |
+| Sorrento        | 964w       | **1,794w** | stale   |
+| Patterson Lakes | 807w       | 865w       | current |
+| Dromana         | 841w       | 892w       | current |
+| Mount Eliza     | 899w       | 959w       | current |
 
 This is the failure mode the brief itself warns about. Four queue entries were deepened by PRs
 #192 and #194 and would have been re-deepened by a run that trusted the figures.
@@ -712,14 +726,14 @@ generous than Google's — on the pages closest to page 1: Sorrento, Collingwood
 Checked the installed list and searched the registry. **No connector exists for Google Search
 Console, Google Business Profile, Bing Webmaster Tools or Apple Business Connect.**
 
-| Connector | State | Action |
-|---|---|---|
-| **Supermetrics** | Connected, working | ⚠️ **TRIAL ENDS ~2026-08-24.** Sole route to GSC and GBP data. No substitute. Renew. |
-| **Local Falcon** | Installed, `enabledInChat: false`, state unknown | 37 tools incl. grid-based map-pack scans. Measures the binding constraint. Paywalled — highest-value new spend. |
-| Semrush | Connected, **0 API units** | Not an auth problem. Only for competitor Backlink Gap. |
-| Ahrefs | Connected, "Insufficient plan" | Overlaps Semrush. Do not pay for both. |
-| Cloudflare | Connected | **No DNS tools** — DMARC must be added by hand. |
-| Gmail, Resend, GitHub | Connected, working | Outreach drafts created 2026-08-20. |
+| Connector             | State                                            | Action                                                                                                          |
+| --------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| **Supermetrics**      | Connected, working                               | ⚠️ **TRIAL ENDS ~2026-08-24.** Sole route to GSC and GBP data. No substitute. Renew.                            |
+| **Local Falcon**      | Installed, `enabledInChat: false`, state unknown | 37 tools incl. grid-based map-pack scans. Measures the binding constraint. Paywalled — highest-value new spend. |
+| Semrush               | Connected, **0 API units**                       | Not an auth problem. Only for competitor Backlink Gap.                                                          |
+| Ahrefs                | Connected, "Insufficient plan"                   | Overlaps Semrush. Do not pay for both.                                                                          |
+| Cloudflare            | Connected                                        | **No DNS tools** — DMARC must be added by hand.                                                                 |
+| Gmail, Resend, GitHub | Connected, working                               | Outreach drafts created 2026-08-20.                                                                             |
 
 **DMARC is genuinely missing** (SPF exists: `v=spf1 include:_spf.google.com ~all`). Add TXT
 `_dmarc` = `v=DMARC1; p=none; rua=mailto:jimmy@jetblackpainting.com`. Start at `p=none` so it
@@ -804,7 +818,7 @@ exits **2** for network failure versus **1** for a genuine API rejection.
 
 **Real defect found and fixed — one I introduced the day before.**
 
-The 2026-08-20 entry below records that IndexNow was *deliberately* not wired into the build. On
+The 2026-08-20 entry below records that IndexNow was _deliberately_ not wired into the build. On
 2026-08-21 a `postbuild` hook was added anyway (`"postbuild": "node scripts/indexnow-on-deploy.mjs"`),
 which contradicted that decision and was wrong on two counts:
 
@@ -816,7 +830,7 @@ which contradicted that decision and was wrong on two counts:
    touched no `public/*.html`, so the diff was empty and the hook exited 0. **The first deploy that
    touched a suburb page would have failed.**
 2. **It would not have worked anyway.** Cloudflare clones shallow (`git rev-parse
-   --is-shallow-repository` = true here too), so `HEAD~1` may not resolve on the build machine and
+--is-shallow-repository` = true here too), so `HEAD~1` may not resolve on the build machine and
    the diff would find nothing on every deploy.
 
 Fix: removed the `postbuild` hook; the tool is now explicit (`pnpm indexnow:changed`). Added
@@ -827,8 +841,9 @@ now states the reasoning so it does not get re-wired a third time.
 Indexing is best-effort; deploying is not. **Do not put a third-party API call in the build chain.**
 
 **Checks — all clean, no other change made.**
+
 - Build health: 77/77 package.json deps present in pnpm-lock.yaml. (First check scripted this wrong
-  and reported 77/77 *missing* — scoped names are single-quoted in the lockfile's `importers` block.
+  and reported 77/77 _missing_ — scoped names are single-quoted in the lockfile's `importers` block.
   Read the lockfile before believing a dependency alarm.)
 - Three layers regenerate to **zero diffs** (static pages → markdown → known paths).
 - 114 pages · 477 FAQ questions · 0 not visible as text · 0 JSON-LD parse errors · 0 aggregateRating
@@ -837,7 +852,7 @@ Indexing is best-effort; deploying is not. **Do not put a third-party API call i
   · 0 descriptions over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted).
 - Near-duplicate: 96 suburb pages, avg worst-twin **25.8%** (baseline 25.6%), worst **45.2%**
   chelsea-heights/dingley-village, **zero over 55%**. Mordialloc is **18.3%** — the readability
-  rewrite made it *less* templated, not more.
+  rewrite made it _less_ templated, not more.
 - Site health: real pages 200; `/nope-not-a-page/`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css`
   all 404 **and** real hashed bundles still 200 with `text/javascript` / `text/css`; redirects 301;
   sitemap **114/114 all 200, zero redirect hops**.
@@ -912,6 +927,7 @@ Everything in steps 0–6 passes. No defect found, so nothing was changed. Recor
 more importantly, the ways the trigger brief has gone stale.
 
 **Checks — all clean.**
+
 - Build health: local HEAD == origin/main; 77/77 package.json deps present in pnpm-lock.yaml;
   production serves the newest commit (the Ahrefs tag from PR #204 is live).
 - Three layers regenerate to **zero diffs**.
@@ -936,6 +952,7 @@ re-measure this run** — no GSC positions, no GBP figures. Semrush was probed o
 allows and still returns units-zero. ⚠️ The Supermetrics trial expires **2026-08-25**, two days out.
 
 **The trigger brief is now stale in six places.** The log wins, per the brief's own rule:
+
 1. Review count is **17**, not 15. Updated everywhere and verified live (PR #198).
 2. Epoxy flooring is **real and shipped**. Jimmy confirmed with job photos; `/services/epoxy-flooring/`
    is live (PRs #199, #201). The brief still says "do not add until Jimmy confirms".
@@ -946,9 +963,10 @@ allows and still returns units-zero. ⚠️ The Supermetrics trial expires **202
 6. Tier 0 Yellow Pages is **done** (Jimmy called; logged 2026-08-23). TrueLocal's two listings remain.
 
 **Authority work this run: reporting only, nothing to change.**
+
 - Yellow Pages: done, unverifiable from here (`yellowpages.com.au` is egress-blocked).
 - **TrueLocal: still outstanding**, two listings still pointing at the dead Manus site.
-- **Dulux: route in identified.** Jimmy has a Dulux *trade account*, which is a purchasing
+- **Dulux: route in identified.** Jimmy has a Dulux _trade account_, which is a purchasing
   arrangement, not the Accredited Painter programme that feeds dulux.com.au Find a Painter. He meets
   every published criterion — registered business, 2+ years, current public liability, track record.
   What remains is their training and a site assessment. The programme is invite-only, so the trade
@@ -980,12 +998,12 @@ GSC access, and it wants project evidence rather than word count.
 
 Every query cluster with meaningful volume already has a page pointed at it:
 
-| Cluster | 90-day impressions | Best position | Page |
-| --- | --- | --- | --- |
-| Suburb + painters (top 20) | ~1,900 | 13.3 (Sorrento) | all present |
-| Body corporate / strata | 74 | 49.0 | `/services/body-corporate-painting/` |
-| Kitchen / cabinet resurfacing | ~74 | 74.1 | `/services/kitchen-cabinet-resurfacing/` |
-| Roof painting | ~28 | 15.3 | `/services/roof-painting/` |
+| Cluster                       | 90-day impressions | Best position   | Page                                     |
+| ----------------------------- | ------------------ | --------------- | ---------------------------------------- |
+| Suburb + painters (top 20)    | ~1,900             | 13.3 (Sorrento) | all present                              |
+| Body corporate / strata       | 74                 | 49.0            | `/services/body-corporate-painting/`     |
+| Kitchen / cabinet resurfacing | ~74                | 74.1            | `/services/kitchen-cabinet-resurfacing/` |
+| Roof painting                 | ~28                | 15.3            | `/services/roof-painting/`               |
 
 Only two suburbs in the top 50 queries have no dedicated page — **Brunswick East** (58 impressions
 @ 47.3) and **Fitzroy North** (54 @ 36.5) — and the parent Brunswick/Fitzroy pages already serve
@@ -1015,7 +1033,7 @@ Same template, same title pattern, same word count — 80 positions apart. That 
 competitor authority, not keywords.
 
 Note the first list is (almost exactly) the eleven pages rewritten in PR #202. **That is selection,
-not effect** — those pages were picked *because* they were already the closest to page one, and this
+not effect** — those pages were picked _because_ they were already the closest to page one, and this
 window closes 2026-08-20, before the rewrite shipped. The rewrite's effect is not yet measurable.
 
 ### What was actually wrong: two service pages had zero inbound internal links
@@ -1029,11 +1047,12 @@ Counting inbound internal links across all 115 generated pages:
 96 /services/real-estate-painting/      ← the other six sit at 96–111
 ```
 
-Both were reachable only from `sitemap.xml`. The homepage *names* both ("Concrete & Epoxy Flooring",
+Both were reachable only from `sitemap.xml`. The homepage _names_ both ("Concrete & Epoxy Flooring",
 "Strata & Body Corporate Painting", "Garage Floor Coatings") in a list that was plain strings with no
 links. The epoxy page was my own omission when it shipped.
 
 **Fixed:**
+
 1. `PremiumServices.tsx` — `allServices` converted from strings to `{name, link?}`; every entry with
    a page now links to it.
 2. `Footer.tsx` — added a Services column listing all nine service pages. The footer previously
@@ -1105,22 +1124,22 @@ factually wrong about the site.
 
 **Every factual claim in the privacy page was checked against the code, not assumed:**
 
-| Claim | Verified against |
-| --- | --- |
-| Form fields, which are required vs optional | `worker/quote.js` `FIELD_LIMITS` + `validate()` |
-| Anti-spam signals (honeypot, fill timing) | `worker/quote.js` lines 141–152 |
-| "The website does not store your enquiry" | `worker/quote.js` uses **no** Cloudflare bindings — no KV, no D1. It validates and forwards. |
-| Enquiries emailed via Resend | `worker/quote.js` `sendViaResend` → `api.resend.com` |
-| Google Analytics + Ahrefs Web Analytics | `client/index.html` (GA4 `G-6NC2597W9L`, `analytics.ahrefs.com`) |
-| Google Maps embed sees visitors | `client/src/components/GoogleMap.tsx` — `maps.google.com` iframe |
-| Social icons send nothing until clicked | `Footer.tsx` — plain `<a>` links, not embeds |
-| Photos name suburbs, never customers or addresses | `Gallery.tsx` alt/location strings |
-| Five-year record retention | Australian tax law record-keeping period |
+| Claim                                             | Verified against                                                                             |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Form fields, which are required vs optional       | `worker/quote.js` `FIELD_LIMITS` + `validate()`                                              |
+| Anti-spam signals (honeypot, fill timing)         | `worker/quote.js` lines 141–152                                                              |
+| "The website does not store your enquiry"         | `worker/quote.js` uses **no** Cloudflare bindings — no KV, no D1. It validates and forwards. |
+| Enquiries emailed via Resend                      | `worker/quote.js` `sendViaResend` → `api.resend.com`                                         |
+| Google Analytics + Ahrefs Web Analytics           | `client/index.html` (GA4 `G-6NC2597W9L`, `analytics.ahrefs.com`)                             |
+| Google Maps embed sees visitors                   | `client/src/components/GoogleMap.tsx` — `maps.google.com` iframe                             |
+| Social icons send nothing until clicked           | `Footer.tsx` — plain `<a>` links, not embeds                                                 |
+| Photos name suburbs, never customers or addresses | `Gallery.tsx` alt/location strings                                                           |
+| Five-year record retention                        | Australian tax law record-keeping period                                                     |
 
 **Deliberately not done: a cookie consent banner.** The audit recommended one. Australia has no
 cookie-consent law, and GDPR applies to offering goods or services to people in the EU — which a
 Melbourne painting business does not. A banner would cost conversions for no legal gain. What GA4's
-own terms *do* require is a privacy policy disclosing cookie use, and that is now in place. If the
+own terms _do_ require is a privacy policy disclosing cookie use, and that is now in place. If the
 business ever markets into the EU or UK, this changes.
 
 **Both pages are `noindex, follow`,** matching the reasoning already established for `/review-us/`:
@@ -1156,7 +1175,7 @@ fixed overlay, so it cannot shift page layout. Correctly left alone.
 **35 legacy JPEG/PNG files left in place, deliberately.** 33 are unreferenced and total ~7.1MB, but
 Vite only emits imported assets, so **they add nothing to page weight** — the cost is repo size
 only. Checked whether they were higher-resolution masters worth keeping: every one has a WebP pair
-at *identical* dimensions, none larger. They are same-size duplicates from a one-time conversion,
+at _identical_ dimensions, none larger. They are same-size duplicates from a one-time conversion,
 not originals. Deleting them is safe and reversible from git history, but the gain is cosmetic and
 they are the owner's photographs, so this is his call rather than a silent cleanup.
 
@@ -1205,15 +1224,15 @@ page remains the largest single speed win available and the largest open item.
 
 Crawled all 115 sitemap URLs on the live site.
 
-| Check | Result |
-| --- | --- |
-| Non-200 status | **0** |
-| `noindex` while in the sitemap | **0** |
-| Missing canonical | **0** |
-| Canonical ≠ sitemap URL | **0** |
-| Missing title / description / H1 | **0** |
-| Missing JSON-LD | **0** |
-| Duplicate titles / descriptions / canonicals | **0** |
+| Check                                        | Result |
+| -------------------------------------------- | ------ |
+| Non-200 status                               | **0**  |
+| `noindex` while in the sitemap               | **0**  |
+| Missing canonical                            | **0**  |
+| Canonical ≠ sitemap URL                      | **0**  |
+| Missing title / description / H1             | **0**  |
+| Missing JSON-LD                              | **0**  |
+| Duplicate titles / descriptions / canonicals | **0**  |
 
 Redirects verified: `/painters-<suburb>` → singular, 1 hop. Non-slash → slash, 1 hop. `http://` → `https://` → slash, 2 hops (Cloudflare upgrades, the worker canonicalises) — normal and all landing 200. `robots.txt` correct, sitemap referenced, `/api/` disallowed.
 
@@ -1223,7 +1242,7 @@ Compression and caching are right: brotli everywhere, hashed assets `max-age=315
 
 `/services/pre-sale-property-painting/` earns 6 impressions and **2 clicks** at position 27 and 301s to `/services/real-estate-painting/`. Working as intended.
 
-**14 sitemap URLs had zero impressions in 90 days.** The only surprising one was `/services/interior-painting/`, which has 111 inbound internal links. Checked it directly: HTTP 200, indexable, correct canonical, 1,403 words — *more* than `/services/exterior-painting/`, which does get impressions. No defect. It is losing a very competitive term, which is the standing authority problem, not an indexing one.
+**14 sitemap URLs had zero impressions in 90 days.** The only surprising one was `/services/interior-painting/`, which has 111 inbound internal links. Checked it directly: HTTP 200, indexable, correct canonical, 1,403 words — _more_ than `/services/exterior-painting/`, which does get impressions. No defect. It is losing a very competitive term, which is the standing authority problem, not an indexing one.
 
 **Bing could not be checked.** `www.bing.com` and `www.google.com` are both refused by this session's egress policy (403 on CONNECT), so no `site:` queries and no Bing Webmaster Tools. `api.indexnow.org` is still blocked too. Bing indexing remains unverified from here.
 
@@ -1251,13 +1270,14 @@ framer-motion is imported by **exactly 11 source files, all of them service/blog
 
 ### Why the object form failed, and what replaced it
 
-`"vendor-react": ["react", "react-dom"]` looks like it should work. It does not, because the object form assigns only the **exact module ids listed**. `"react"` resolves to `react/index.js`, but React's implementation lives in `react/cjs/react.production.js` — a *dependency* of the listed id, not the id itself. Unlisted dependencies fall to Rollup's default assignment and land in whichever chunk reaches them first: framer-motion's.
+`"vendor-react": ["react", "react-dom"]` looks like it should work. It does not, because the object form assigns only the **exact module ids listed**. `"react"` resolves to `react/index.js`, but React's implementation lives in `react/cjs/react.production.js` — a _dependency_ of the listed id, not the id itself. Unlisted dependencies fall to Rollup's default assignment and land in whichever chunk reaches them first: framer-motion's.
 
 That is also why adding `react/jsx-runtime` to the list was completely inert — it was the wrong lever.
 
 Replaced with the **function form**, which is called for every module id including the cjs implementation files, so a path match catches them. React is matched first, before framer-motion, the form libraries or Radix can claim it.
 
 **Verified without a build** (this repo still cannot run `pnpm build` — registry 403, no `node_modules`):
+
 - `vite.config.ts` parses cleanly under Prettier's TypeScript parser; brace balance checked
 - The function was **extracted from the real file and executed** against 25 realistic module ids — every case correct
 - Critically, the traps pass: `react-hook-form`, `react-day-picker`, `react-resizable-panels`, `@radix-ui/react-dialog` and `lucide-react` are **not** captured by the React rule, and app source is never chunked
@@ -1290,11 +1310,11 @@ it at all.
 **Per suburb page** (identical browser method both sides, brotli computed locally at quality 11 so
 the two are directly comparable):
 
-| | before | after |
-| --- | --- | --- |
-| JS files | 14 | 13 |
-| raw | 524 KB | **404 KB** |
-| brotli | 140 KB | **106 KB** |
+|          | before | after      |
+| -------- | ------ | ---------- |
+| JS files | 14     | 13         |
+| raw      | 524 KB | **404 KB** |
+| brotli   | 140 KB | **106 KB** |
 
 **34KB less compressed JavaScript on every suburb page — 24% of the payload — and 120KB less to
 parse.**
@@ -1310,7 +1330,7 @@ OLD build: LCP 508, 488, 488 ms   long tasks 0, 0, 0
 NEW build: LCP 472, 452, 448 ms   long tasks 0, 0, 0
 ```
 
-Same LCP element (`P.text-xl`) in both. The new build is slightly *faster*, and neither build has
+Same LCP element (`P.text-xl`) in both. The new build is slightly _faster_, and neither build has
 long tasks. **The earlier "before LCP 88ms" figure was the unreliable one** — a single run where the
 observer had not settled. Single-run LCP off a zero-latency local mirror should not be trusted; only
 the repeated comparison is meaningful.
@@ -1343,28 +1363,28 @@ This is exactly what the Step 2.1 three-layer check exists to catch, and it caug
 
 ### Everything else checked and clean
 
-| Check | Result | Baseline |
-| --- | --- | --- |
-| Pages | **117** | was 114 (privacy, terms, epoxy added since) |
-| FAQ questions | **485** | was 477 |
-| Schema vs visible text | 0 problems | 0 |
-| JSON-LD parse errors | 0 | 0 |
-| BlogPosting/HowTo missing fields | 0 | 0 |
-| aggregateRating in static pages | **0** | 0 — still lives only in client/index.html |
-| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
-| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
-| Titles over 60 | 1 (`/painter-hastings/` 64) | 1, accepted |
-| Keywords tags | 0 | 0 |
-| Near-duplicate avg worst-twin | **25.7%** | 25.6% (gate 45%) |
-| Near-duplicate worst single | **46.1%** chelsea-heights/dingley-village | 46.4% (gate 55%) |
-| Pages over 55% | 0 | 0 |
-| Lockfile vs package.json | **77/77** | 77/77 |
-| Negative URLs 404 (extensionless, .zip, /assets/) | all 404 | — |
-| Real hashed bundles still 200 + correct MIME | js `text/javascript`, css `text/css` | — |
-| Redirects | all 301, none 307 | — |
-| Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex` | — |
-| llms.txt prices | none — all three `$` matches are the $10M public liability | clean |
-| TTFB | 0.20–0.22s, cf-cache HIT | 0.15–0.40s |
+| Check                                              | Result                                                     | Baseline                                    |
+| -------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------- |
+| Pages                                              | **117**                                                    | was 114 (privacy, terms, epoxy added since) |
+| FAQ questions                                      | **485**                                                    | was 477                                     |
+| Schema vs visible text                             | 0 problems                                                 | 0                                           |
+| JSON-LD parse errors                               | 0                                                          | 0                                           |
+| BlogPosting/HowTo missing fields                   | 0                                                          | 0                                           |
+| aggregateRating in static pages                    | **0**                                                      | 0 — still lives only in client/index.html   |
+| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0                                              | 0                                           |
+| Missing descriptions · over 158 chars              | 0 · 0                                                      | 0 · 0                                       |
+| Titles over 60                                     | 1 (`/painter-hastings/` 64)                                | 1, accepted                                 |
+| Keywords tags                                      | 0                                                          | 0                                           |
+| Near-duplicate avg worst-twin                      | **25.7%**                                                  | 25.6% (gate 45%)                            |
+| Near-duplicate worst single                        | **46.1%** chelsea-heights/dingley-village                  | 46.4% (gate 55%)                            |
+| Pages over 55%                                     | 0                                                          | 0                                           |
+| Lockfile vs package.json                           | **77/77**                                                  | 77/77                                       |
+| Negative URLs 404 (extensionless, .zip, /assets/)  | all 404                                                    | —                                           |
+| Real hashed bundles still 200 + correct MIME       | js `text/javascript`, css `text/css`                       | —                                           |
+| Redirects                                          | all 301, none 307                                          | —                                           |
+| Markdown negotiation                               | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`   | —                                           |
+| llms.txt prices                                    | none — all three `$` matches are the $10M public liability | clean                                       |
+| TTFB                                               | 0.20–0.22s, cf-cache HIT                                   | 0.15–0.40s                                  |
 
 **Adding identical footer text to all 117 pages did not move the near-duplicate figure** (25.6% → 25.7%).
 
@@ -1411,7 +1431,7 @@ top, and asked for a comparison.
 **colourway.com.au could not be fetched** — refused by this session's egress policy (403 on CONNECT) via
 both `curl` and `WebFetch`, and not routed around. Everything known about them comes from the screenshot.
 
-**Their placement is a Google Ad, not an organic result.** Labelled *Sponsored Result*. Hook: "Calculate
+**Their placement is a Google Ad, not an organic result.** Labelled _Sponsored Result_. Hook: "Calculate
 Painting Cost Online — 60-Second Instant Estimate", sitelink "Transparent Fixed Pricing". That is what they
 are buying, not how they rank.
 
@@ -1426,19 +1446,19 @@ Jimmy's decision: **take down the risky specifics, keep broad ranges with clear 
 
 **Removed** (firm commitments a customer could hold him to):
 
-| Removed | Was |
-| --- | --- |
-| Roof painting starting price | `roof painting from $3,500` |
-| Interior per-m² rate card | $20–35 / $25–45 / $35–55 per m², plus a "Typical Room Cost" column |
-| Scaffolding surcharge (body **and** FAQ answer) | `scaffolding ($500-$2,000 extra)` / "typically add $500 to $2,000" |
-| Cherry-picked saving claim | "a saving of up to 85%" — arithmetic on the two extremes ($3,500 vs $60,000 = 94%; $8,000 vs $15,000 = 47%) |
+| Removed                                         | Was                                                                                                         |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Roof painting starting price                    | `roof painting from $3,500`                                                                                 |
+| Interior per-m² rate card                       | $20–35 / $25–45 / $35–55 per m², plus a "Typical Room Cost" column                                          |
+| Scaffolding surcharge (body **and** FAQ answer) | `scaffolding ($500-$2,000 extra)` / "typically add $500 to $2,000"                                          |
+| Cherry-picked saving claim                      | "a saving of up to 85%" — arithmetic on the two extremes ($3,500 vs $60,000 = 94%; $8,000 vs $15,000 = 47%) |
 
 **Kept, each now caveated:** whole-house interior $5,000–12,000 (3-bed) and $8,000–18,000 (4-bed); exterior
 by house size $4,000–8,000 / $8,000–15,000 / $15,000–30,000+; kitchen cabinet resurfacing $3,500–8,000.
 
-Standard caveat now sits beside the figures: *"These are indicative Melbourne ranges to help you budget.
+Standard caveat now sits beside the figures: _"These are indicative Melbourne ranges to help you budget.
 Every quote is priced after a site visit — condition, access and scope move the number more than floor area
-does."*
+does."_
 
 The per-m² table was replaced with prose explaining **why** a per-m² rate quoted sight-unseen is misleading
 and what actually drives interior cost. That answers the "rates per m²" intent more honestly than a
@@ -1456,17 +1476,17 @@ fabricated number, and the page grew 874 → 947 words in the process.
 
 ### Verification
 
-| Check | Result |
-| --- | --- |
-| Removed strings across HTML, markdown and source | `from $3,500`, `per m²`, `$500-$2,000`, `up to 85%` — **0 in all three layers** |
-| Pages · FAQ questions | 117 · 485 |
-| Schema vs visible text | **0 problems** — every edited FAQ answer still matches its rendered copy |
-| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0 |
-| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 |
-| Near-duplicate avg · worst | **25.7% · 46.1%** — unchanged despite five pages sharing price wording (gates 45% / 55%) |
-| All three generators re-run | static, **markdown**, known-paths |
+| Check                                                             | Result                                                                                   |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Removed strings across HTML, markdown and source                  | `from $3,500`, `per m²`, `$500-$2,000`, `up to 85%` — **0 in all three layers**          |
+| Pages · FAQ questions                                             | 117 · 485                                                                                |
+| Schema vs visible text                                            | **0 problems** — every edited FAQ answer still matches its rendered copy                 |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0                                                                                |
+| Duplicate titles / descriptions / canonicals / H1s                | 0 / 0 / 0 / 0                                                                            |
+| Near-duplicate avg · worst                                        | **25.7% · 46.1%** — unchanged despite five pages sharing price wording (gates 45% / 55%) |
+| All three generators re-run                                       | static, **markdown**, known-paths                                                        |
 
-`QuoteForm.tsx:381` left alone — `"e.g., $5,000 - $10,000"` is a placeholder asking the customer for *their*
+`QuoteForm.tsx:381` left alone — `"e.g., $5,000 - $10,000"` is a placeholder asking the customer for _their_
 budget, not a Jetblack price.
 
 ### Recommendation given, and taken: do the price work and stop
@@ -1504,10 +1524,10 @@ added later. It never calls `preventDefault`; the call has to connect.
 
 **`client/src/components/QuoteForm.tsx`** — fires on the `confirmed` flag the submit handler already computes:
 
-| Outcome | Event | Reasoning |
-| --- | --- | --- |
-| delivery confirmed | `generate_lead` | The enquiry actually reached Jimmy. **This is the only event to import into Ads.** |
-| delivery failed | `quote_form_undelivered` | Visitor was dropped onto call/text/email fallbacks. Counting it as a lead would overstate conversions; tracked separately it also surfaces the delivery failure rate. |
+| Outcome            | Event                    | Reasoning                                                                                                                                                             |
+| ------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| delivery confirmed | `generate_lead`          | The enquiry actually reached Jimmy. **This is the only event to import into Ads.**                                                                                    |
+| delivery failed    | `quote_form_undelivered` | Visitor was dropped onto call/text/email fallbacks. Counting it as a lead would overstate conversions; tracked separately it also surfaces the delivery failure rate. |
 
 **No PII.** The form collects name, email, phone and project description; the event sends only `suburb`,
 `service_type` and `source_page`. Sending personal data to GA4 breaches Google's policy and can get a
@@ -1515,15 +1535,15 @@ property terminated — and suburb-plus-service is what ad targeting actually ne
 
 ### Verified in headless Chromium, both code paths
 
-| Test | Result |
-| --- | --- |
-| gtag **absent** (lazy-load window) | queued to `dataLayer`: `["event","phone_call_click",{method:"phone",source_page:"/",link_text:"Call Jimmy — 0432 077 782"}]` |
-| gtag **present** (normal case) | 1 `gtag()` call, **0** dataLayer fallback entries — correct path taken |
-| click on a nested `<span>` inside the anchor | caught via `closest()` |
-| click on a non-contact link | **no event** — exactly 2 entries from 3 clicks |
-| `preventDefault` | not called; `href="tel:0432077782"` intact and the browser did navigate |
-| PII in payload | none — name, email, phone, description all absent |
-| generated layers | **zero diffs** — React-only change, as expected |
+| Test                                         | Result                                                                                                                       |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| gtag **absent** (lazy-load window)           | queued to `dataLayer`: `["event","phone_call_click",{method:"phone",source_page:"/",link_text:"Call Jimmy — 0432 077 782"}]` |
+| gtag **present** (normal case)               | 1 `gtag()` call, **0** dataLayer fallback entries — correct path taken                                                       |
+| click on a nested `<span>` inside the anchor | caught via `closest()`                                                                                                       |
+| click on a non-contact link                  | **no event** — exactly 2 entries from 3 clicks                                                                               |
+| `preventDefault`                             | not called; `href="tel:0432077782"` intact and the browser did navigate                                                      |
+| PII in payload                               | none — name, email, phone, description all absent                                                                            |
+| generated layers                             | **zero diffs** — React-only change, as expected                                                                              |
 
 ### ⚠️ Not verified, and Jimmy must check before spending
 
@@ -1557,7 +1577,7 @@ Proceeded on his instruction, doing the pages that actually earn clicks first.
 ### An eighth invented price — missed yesterday
 
 The homepage FAQ carried **"Interior painting typically starts from $1,500 for a standard room. Full
-exterior painting for an average home ranges from $4,000–$10,000."** In the visible copy *and* in the
+exterior painting for an average home ranges from $4,000–$10,000."** In the visible copy _and_ in the
 homepage `FAQPage` JSON-LD.
 
 Yesterday's sweep sampled `public/**/index.html`. **The homepage is served from `client/index.html`, which
@@ -1584,7 +1604,7 @@ from** (5 phone calls from 328 GBP views in 88 days, against zero clicks on ever
 
 ### Mordialloc: nothing added, deliberately
 
-The page already opens *"Mordialloc is our home. Jetblack Painting is based here in the 3195"* and runs
+The page already opens _"Mordialloc is our home. Jetblack Painting is based here in the 3195"_ and runs
 1,368 words across coastal weather, the fishing-village housing stock around the pier and creek, the boat
 and bowls clubs, and Main Street commercial. It was in the readability rewrite (PR #202). It sits at
 position 19.05 with 2 clicks — one of the few pages earning any.
@@ -1596,13 +1616,13 @@ tracked eleven. Adding words to it would be padding. Nothing changed.
 
 Not "these pages are short" — they were **built to a lesser template than their siblings**:
 
-| | Words | FAQs | Custom sections |
-| --- | --- | --- | --- |
-| Kew *(before)* | 943 | **3** | **2** |
-| Malvern *(before)* | 952 | **3** | **2** |
-| Toorak / Hawthorn / Brighton / Mordialloc | 1,297–1,487 | 5–6 | 4 |
-| Kew *(after)* | **1,457** | **5** | **4** |
-| Malvern *(after)* | **1,407** | **5** | **4** |
+|                                           | Words       | FAQs  | Custom sections |
+| ----------------------------------------- | ----------- | ----- | --------------- |
+| Kew _(before)_                            | 943         | **3** | **2**           |
+| Malvern _(before)_                        | 952         | **3** | **2**           |
+| Toorak / Hawthorn / Brighton / Mordialloc | 1,297–1,487 | 5–6   | 4               |
+| Kew _(after)_                             | **1,457**   | **5** | **4**           |
+| Malvern _(after)_                         | **1,407**   | **5** | **4**           |
 
 Both pages were also generic — "prestige", "elevated expectations" — where the strong pages are concrete
 about the work. The new sections follow the strong pages:
@@ -1621,15 +1641,15 @@ Also fixed on Kew, both pre-existing: **US spelling** (`specialize`/`Specializin
 
 ### Gates
 
-| Check | Result |
-| --- | --- |
-| Pages · FAQ questions | 117 · **489** (was 485) |
-| Schema vs visible text | **0 problems** |
-| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0 |
-| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 |
-| Descriptions over 158 | 0 |
-| Near-duplicate avg · worst | **25.6% · 46.1%** — unchanged, still under 45%/55% |
-| All three generators re-run | static, markdown, known-paths |
+| Check                                                             | Result                                             |
+| ----------------------------------------------------------------- | -------------------------------------------------- |
+| Pages · FAQ questions                                             | 117 · **489** (was 485)                            |
+| Schema vs visible text                                            | **0 problems**                                     |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0                                          |
+| Duplicate titles / descriptions / canonicals / H1s                | 0 / 0 / 0 / 0                                      |
+| Descriptions over 158                                             | 0                                                  |
+| Near-duplicate avg · worst                                        | **25.6% · 46.1%** — unchanged, still under 45%/55% |
+| All three generators re-run                                       | static, markdown, known-paths                      |
 
 ### Access — asked how to unblock the sandbox
 
@@ -1648,25 +1668,25 @@ A run that investigates, finds nothing worth changing, and says so. Nothing was 
 
 ### Steps 0–6: all clean
 
-| Check | Result | Baseline |
-| --- | --- | --- |
-| Three layers regenerate to zero diffs | **ZERO** | — |
-| Lockfile vs package.json | **77/77** | 77/77 |
-| Production serves current main | yes — Mordialloc section live, `$1,500` gone, Kew at 5 FAQ entities | — |
-| Pages · FAQ questions | **117 · 489** | was 114 · 477 |
-| Schema vs visible text | **0 problems** | 0 |
-| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0 | 0 |
-| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
-| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
-| Titles over 60 | 1 (`/painter-hastings/` 64) | 1, accepted |
-| Near-duplicate avg · worst | **25.6% · 46.1%** | 25.6% · 46.4% (gates 45% / 55%) |
-| Negative URLs 404 (extensionless, `.zip`, `/assets/`) | all 404 | — |
-| Real bundles 200 + correct MIME | `text/javascript`, `text/css` | — |
-| Redirects | all 301 | — |
-| Markdown negotiation | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex` | — |
-| llms.txt prices | none — all `$` matches read, all are the $10M public liability | clean |
-| Review count across all nine locations | **17 everywhere**, no drift | — |
-| TTFB | 0.23–0.41s, cf-cache HIT | 0.15–0.40s |
+| Check                                                             | Result                                                              | Baseline                        |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------- |
+| Three layers regenerate to zero diffs                             | **ZERO**                                                            | —                               |
+| Lockfile vs package.json                                          | **77/77**                                                           | 77/77                           |
+| Production serves current main                                    | yes — Mordialloc section live, `$1,500` gone, Kew at 5 FAQ entities | —                               |
+| Pages · FAQ questions                                             | **117 · 489**                                                       | was 114 · 477                   |
+| Schema vs visible text                                            | **0 problems**                                                      | 0                               |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · 0                                                           | 0                               |
+| Duplicate titles / descriptions / canonicals / H1s                | 0 / 0 / 0 / 0                                                       | 0                               |
+| Missing descriptions · over 158 chars                             | 0 · 0                                                               | 0 · 0                           |
+| Titles over 60                                                    | 1 (`/painter-hastings/` 64)                                         | 1, accepted                     |
+| Near-duplicate avg · worst                                        | **25.6% · 46.1%**                                                   | 25.6% · 46.4% (gates 45% / 55%) |
+| Negative URLs 404 (extensionless, `.zip`, `/assets/`)             | all 404                                                             | —                               |
+| Real bundles 200 + correct MIME                                   | `text/javascript`, `text/css`                                       | —                               |
+| Redirects                                                         | all 301                                                             | —                               |
+| Markdown negotiation                                              | `text/markdown`, `Vary: Accept`, `X-Robots-Tag: noindex`            | —                               |
+| llms.txt prices                                                   | none — all `$` matches read, all are the $10M public liability      | clean                           |
+| Review count across all nine locations                            | **17 everywhere**, no drift                                         | —                               |
+| TTFB                                                              | 0.23–0.41s, cf-cache HIT                                            | 0.15–0.40s                      |
 
 ### Step 1 could not run — all three ranking sources are gone
 
@@ -1688,16 +1708,16 @@ blocks automated access from here. Not actioned.
 
 Per its own rule that this log wins:
 
-| Brief says | Reality |
-| --- | --- |
-| 5.0 from **15** Google reviews | **17**, verified in all nine locations today |
-| **114** pages, **477** FAQ questions | **117** · **489** |
-| Mordialloc 1,154w @ 29.18 | **1,368w**, and 19.05 in the last GSC pull (2026-08-24) |
-| Epoxy flooring — "do not add until Jimmy confirms" | shipped, `/services/epoxy-flooring/` live |
-| Readability rewrite — "do not start without go-ahead" | authorised and done (#202) |
-| Yellow Pages Tier 0 outstanding | done — Jimmy called 2026-08-23 |
-| PageSpeed "unused JS 144 KiB, most tractable" | **fixed** — suburb pages dropped 120KB raw / 34KB brotli; `vendor-animation` importers 120 → 11 |
-| "3 long main-thread tasks", CLS | **0 long tasks, CLS 0.000** (was 0.084) |
+| Brief says                                            | Reality                                                                                         |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| 5.0 from **15** Google reviews                        | **17**, verified in all nine locations today                                                    |
+| **114** pages, **477** FAQ questions                  | **117** · **489**                                                                               |
+| Mordialloc 1,154w @ 29.18                             | **1,368w**, and 19.05 in the last GSC pull (2026-08-24)                                         |
+| Epoxy flooring — "do not add until Jimmy confirms"    | shipped, `/services/epoxy-flooring/` live                                                       |
+| Readability rewrite — "do not start without go-ahead" | authorised and done (#202)                                                                      |
+| Yellow Pages Tier 0 outstanding                       | done — Jimmy called 2026-08-23                                                                  |
+| PageSpeed "unused JS 144 KiB, most tractable"         | **fixed** — suburb pages dropped 120KB raw / 34KB brotli; `vendor-animation` importers 120 → 11 |
+| "3 long main-thread tasks", CLS                       | **0 long tasks, CLS 0.000** (was 0.084)                                                         |
 
 Also worth adding to the brief's locked facts: **the site publishes indicative price ranges** on the cost
 guide, five suburb pages and the homepage, each carrying a site-visit caveat. Eight invented figures were
@@ -1746,16 +1766,16 @@ table rows respectively where they previously carried none.
 
 ### Gap 2 — 23 FAQ answers opened with an unresolvable pronoun
 
-Retrieved as a standalone chunk, *"It depends on the timber and how much upkeep you want"* has lost its
-subject entirely. Same for *"It can be. Homes built before 1970…"* and *"That is almost always mould and
-lichen…"*. Every one now opens with the subject:
+Retrieved as a standalone chunk, _"It depends on the timber and how much upkeep you want"_ has lost its
+subject entirely. Same for _"It can be. Homes built before 1970…"_ and _"That is almost always mould and
+lichen…"_. Every one now opens with the subject:
 
-| Was | Now |
-| --- | --- |
-| "It depends on the timber…" | "Whether to paint, stain or oil depends on the timber…" |
-| "It can be. Homes built before 1970…" | "Lead paint can be a concern on older ${suburb} homes. Homes built before 1970…" |
-| "That is almost always mould and lichen…" | "Green or black growth on a shaded wall is almost always mould and lichen…" |
-| "It will hide fine surface cracking…" | "The coating will hide fine surface cracking…" |
+| Was                                       | Now                                                                              |
+| ----------------------------------------- | -------------------------------------------------------------------------------- |
+| "It depends on the timber…"               | "Whether to paint, stain or oil depends on the timber…"                          |
+| "It can be. Homes built before 1970…"     | "Lead paint can be a concern on older ${suburb} homes. Homes built before 1970…" |
+| "That is almost always mould and lichen…" | "Green or black growth on a shaded wall is almost always mould and lichen…"      |
+| "It will hide fine surface cracking…"     | "The coating will hide fine surface cracking…"                                   |
 
 Only the leading clause changed, so answer length and the rest of the copy are untouched.
 
@@ -1787,16 +1807,16 @@ and multi-engine citation dominance, neither appropriate here.
 
 ### Gates
 
-| Check | Result |
-| --- | --- |
-| Pages · FAQ questions | 117 · 489 |
-| Ambiguous pronoun openings | **0** (was 23 in source) |
-| Schema vs visible text | **0 problems** |
-| JSON-LD errors · missing fields · aggregateRating in static | 0 · 0 · 0 |
-| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 |
-| Descriptions over 158 | 0 |
-| Near-duplicate avg · worst | **25.5% · 45.8%** — both improved (gates 45% / 55%) |
-| Parse | 17 `.tsx` files + both generators clean |
+| Check                                                       | Result                                              |
+| ----------------------------------------------------------- | --------------------------------------------------- |
+| Pages · FAQ questions                                       | 117 · 489                                           |
+| Ambiguous pronoun openings                                  | **0** (was 23 in source)                            |
+| Schema vs visible text                                      | **0 problems**                                      |
+| JSON-LD errors · missing fields · aggregateRating in static | 0 · 0 · 0                                           |
+| Duplicate titles / descriptions / canonicals / H1s          | 0 / 0 / 0 / 0                                       |
+| Descriptions over 158                                       | 0                                                   |
+| Near-duplicate avg · worst                                  | **25.5% · 45.8%** — both improved (gates 45% / 55%) |
+| Parse                                                       | 17 `.tsx` files + both generators clean             |
 
 ---
 
@@ -1808,11 +1828,11 @@ recorded below — the log wins, so future runs should trust this entry over the
 
 ### Step 0 — build health
 
-| Check | Result |
-| --- | --- |
-| package.json deps present in pnpm-lock.yaml | **77 / 77** |
-| Production serving current main | yes — `70b09ce`, confirmed by a string unique to that lineage |
-| TTFB · edge cache | 0.18–0.45 s · `cf-cache-status: HIT` |
+| Check                                       | Result                                                        |
+| ------------------------------------------- | ------------------------------------------------------------- |
+| package.json deps present in pnpm-lock.yaml | **77 / 77**                                                   |
+| Production serving current main             | yes — `70b09ce`, confirmed by a string unique to that lineage |
+| TTFB · edge cache                           | 0.18–0.45 s · `cf-cache-status: HIT`                          |
 
 Build health was confirmed from deployment evidence rather than the check-run API: the live
 site serves `glass-smooth` on `/services/interior-painting/`, a string that exists only from
@@ -1820,24 +1840,24 @@ site serves `glass-smooth` on `/services/interior-painting/`, a string that exis
 
 ### Steps 2–6 — regressions, metadata, AEO, speed, indexing
 
-| Check | Result | Baseline |
-| --- | --- | --- |
-| Three layers regenerated → git diff | **0 files** | 0 |
-| Schema vs visible text | 117 pages · 489 questions · **0 problems** | 0 |
-| Near-duplicate (nav included) | 25.5% avg · worst 47.0% cranbourne/narre-warren · 0 over 55% | gate 45% / 55% |
-| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · **0** | 0 · 0 · 0 |
-| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
-| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
-| Titles over 60 | 1 — `/painter-hastings/` (64), accepted | 1 |
-| `keywords` meta tags | 0 | 0 |
-| Sitemap | **115 / 115** all 200, **zero** redirect hops | see note |
-| Bad URLs 404 (extensionless, `/nope.zip`, `/assets/*`) | all 404 | 404 |
-| Real hashed bundles still served | `.js` 200 `text/javascript` · `.css` 200 `text/css` | 200 |
-| Redirect status | `/painters-brighton` → 301 → `/painter-brighton/` | 301 |
-| Markdown negotiation | `text/markdown` + `Vary: Accept` + `Cache-Control: no-store` + `X-Robots-Tag: noindex`; plain Accept → `text/html` | correct |
-| robots.txt | `Disallow: /api/` only; GPTBot/ClaudeBot/PerplexityBot allowed; `Content-Signal: search=yes, ai-train=no, ai-input=yes` | correct |
-| llms.txt price figures | **none** — all three `$` matches read and confirmed as the $10 million public liability figure | none |
-| og:image / twitter:image | one URL, resolves 200 | 200 |
+| Check                                                             | Result                                                                                                                  | Baseline       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------- |
+| Three layers regenerated → git diff                               | **0 files**                                                                                                             | 0              |
+| Schema vs visible text                                            | 117 pages · 489 questions · **0 problems**                                                                              | 0              |
+| Near-duplicate (nav included)                                     | 25.5% avg · worst 47.0% cranbourne/narre-warren · 0 over 55%                                                            | gate 45% / 55% |
+| JSON-LD parse errors · missing fields · aggregateRating in static | 0 · 0 · **0**                                                                                                           | 0 · 0 · 0      |
+| Duplicate titles / descriptions / canonicals / H1s                | 0 / 0 / 0 / 0                                                                                                           | 0              |
+| Missing descriptions · over 158 chars                             | 0 · 0                                                                                                                   | 0 · 0          |
+| Titles over 60                                                    | 1 — `/painter-hastings/` (64), accepted                                                                                 | 1              |
+| `keywords` meta tags                                              | 0                                                                                                                       | 0              |
+| Sitemap                                                           | **115 / 115** all 200, **zero** redirect hops                                                                           | see note       |
+| Bad URLs 404 (extensionless, `/nope.zip`, `/assets/*`)            | all 404                                                                                                                 | 404            |
+| Real hashed bundles still served                                  | `.js` 200 `text/javascript` · `.css` 200 `text/css`                                                                     | 200            |
+| Redirect status                                                   | `/painters-brighton` → 301 → `/painter-brighton/`                                                                       | 301            |
+| Markdown negotiation                                              | `text/markdown` + `Vary: Accept` + `Cache-Control: no-store` + `X-Robots-Tag: noindex`; plain Accept → `text/html`      | correct        |
+| robots.txt                                                        | `Disallow: /api/` only; GPTBot/ClaudeBot/PerplexityBot allowed; `Content-Signal: search=yes, ai-train=no, ai-input=yes` | correct        |
+| llms.txt price figures                                            | **none** — all three `$` matches read and confirmed as the $10 million public liability figure                          | none           |
+| og:image / twitter:image                                          | one URL, resolves 200                                                                                                   | 200            |
 
 ### Step 7 — entity consistency (verified, nothing changed)
 
@@ -1847,17 +1867,17 @@ tracked eleven could not be re-measured and no ranking claim is made in this run
 
 Review count audited across every place it is hardcoded, plus both deployed layers:
 
-| Location | Value |
-| --- | --- |
-| `client/index.html` JSON-LD `reviewCount` | 17 |
-| `client/index.html` prose | 17 |
-| `lib/aggregateRatingSchema.ts` default | 17 |
-| `site-config.json` | 17 |
-| `pages/FAQ.tsx` | 17 |
-| `blog/ChoosingAPainterMelbourne.tsx` | 17 |
-| `generate-static-pages.mjs` AGGREGATE_RATING | 17 |
-| `generate-static-pages.mjs` duplicate FAQ answer | 17 |
-| `llms.txt` and `public/llms.txt` (byte-identical) | 17 |
+| Location                                          | Value |
+| ------------------------------------------------- | ----- |
+| `client/index.html` JSON-LD `reviewCount`         | 17    |
+| `client/index.html` prose                         | 17    |
+| `lib/aggregateRatingSchema.ts` default            | 17    |
+| `site-config.json`                                | 17    |
+| `pages/FAQ.tsx`                                   | 17    |
+| `blog/ChoosingAPainterMelbourne.tsx`              | 17    |
+| `generate-static-pages.mjs` AGGREGATE_RATING      | 17    |
+| `generate-static-pages.mjs` duplicate FAQ answer  | 17    |
+| `llms.txt` and `public/llms.txt` (byte-identical) | 17    |
 
 A regex sweep for any stale count (`1[0-6] … reviews`) across all `index.html` **and**
 `index.md` files returned **zero hits**. NAP agrees across HTML, markdown twins and llms.txt:
@@ -1898,10 +1918,10 @@ session. GSC Wizard is now the primary path; see the Data access section above.
 
 ### Anomalies · 28 days to 2026-08-24
 
-| Signal | Date | Detail |
-| --- | --- | --- |
+| Signal            | Date           | Detail                                                                      |
+| ----------------- | -------------- | --------------------------------------------------------------------------- |
 | Impressions spike | **2026-08-22** | 645 actual vs 358 expected — **+79.9%**, modified Z 3.52, severity critical |
-| Clicks step-down | **2026-08-11** | mean 3/day → **0/day**, **−87.5%**, sustained level shift |
+| Clicks step-down  | **2026-08-11** | mean 3/day → **0/day**, **−87.5%**, sustained level shift                   |
 
 No clicks anomalies; no impressions change points.
 
@@ -1922,21 +1942,21 @@ all on **1–8 impressions**. This is the interpretation trap recorded above; it
 
 The one mover with enough volume to mean something:
 
-| Query | Impressions | Position | Prior |
-| --- | --- | --- | --- |
-| painter narre warren | 31 | **18.5** | 58.3 |
+| Query                | Impressions | Position | Prior |
+| -------------------- | ----------- | -------- | ----- |
+| painter narre warren | 31          | **18.5** | 58.3  |
 
 ### Striking distance
 
 Top opportunities by impression-weighted score, 28 days to 2026-08-24:
 
-| Query | Position | Impressions | Est. extra clicks | Score |
-| --- | --- | --- | --- | --- |
-| painters sorrento | 13.4 | 116 | 29 | 93 |
-| painters collingwood | 16.3 | 144 | 36 | 72 |
-| painters elwood | 19.8 | 108 | 27 | 54 |
-| house painters caulfield | 18.3 | 87 | 22 | 44 |
-| painters murrumbeena | 18.4 | 81 | 20 | 41 |
+| Query                    | Position | Impressions | Est. extra clicks | Score |
+| ------------------------ | -------- | ----------- | ----------------- | ----- |
+| painters sorrento        | 13.4     | 116         | 29                | 93    |
+| painters collingwood     | 16.3     | 144         | 36                | 72    |
+| painters elwood          | 19.8     | 108         | 27                | 54    |
+| house painters caulfield | 18.3     | 87          | 22                | 44    |
+| painters murrumbeena     | 18.4     | 81          | 20                | 41    |
 
 Every one is a suburb head term with real volume and **zero clicks**. None sit in a 8–12 band.
 
@@ -1966,27 +1986,27 @@ Steps 0–6 all passed. Step 7 → **option 4: nothing**. No site change.
 
 ### Steps 0–6
 
-| Check | Result | Baseline |
-| --- | --- | --- |
-| Deps in lockfile | 77 / 77 | 77 / 77 |
-| Production serving current main | yes — `c86974c` | — |
-| Three layers regenerated → git diff | **0 files** | 0 |
-| Schema vs visible text | 117 pages · 489 questions · **0 problems** | 117 · 489 · 0 |
-| Near-duplicate (nav incl.) | 25.5% avg · worst 47.0% · 0 over 55% | gate 45% / 55% |
-| JSON-LD errors · missing fields · aggregateRating in static | 0 · 0 · 0 | 0 · 0 · 0 |
-| Duplicate titles / descriptions / canonicals / H1s | 0 / 0 / 0 / 0 | 0 |
-| Missing descriptions · over 158 chars | 0 · 0 | 0 · 0 |
-| Titles over 60 | 1 — `/painter-hastings/` (64), accepted | 1 |
-| `keywords` meta tags | 0 | 0 |
-| Sitemap | **115 / 115** at 200, zero redirect hops | 115 |
-| Bad URLs 404 (extensionless · `.zip` · `/assets/*`) | all 404 | 404 |
-| Real hashed bundles | `.js` 200 `text/javascript` · `.css` 200 `text/css` | 200 |
-| Redirect status | `/painters-brighton` → 301 | 301 |
-| Markdown negotiation headers | 4 / 4 present | 4 |
-| robots.txt | `Disallow: /api/` only | correct |
-| llms.txt price figures | none — both `$` matches are the $10M public liability | none |
-| Images over 250KB | **0** | 0 |
-| TTFB | 0.55 s first hit, 200 | 0.15–0.45 s |
+| Check                                                       | Result                                                | Baseline       |
+| ----------------------------------------------------------- | ----------------------------------------------------- | -------------- |
+| Deps in lockfile                                            | 77 / 77                                               | 77 / 77        |
+| Production serving current main                             | yes — `c86974c`                                       | —              |
+| Three layers regenerated → git diff                         | **0 files**                                           | 0              |
+| Schema vs visible text                                      | 117 pages · 489 questions · **0 problems**            | 117 · 489 · 0  |
+| Near-duplicate (nav incl.)                                  | 25.5% avg · worst 47.0% · 0 over 55%                  | gate 45% / 55% |
+| JSON-LD errors · missing fields · aggregateRating in static | 0 · 0 · 0                                             | 0 · 0 · 0      |
+| Duplicate titles / descriptions / canonicals / H1s          | 0 / 0 / 0 / 0                                         | 0              |
+| Missing descriptions · over 158 chars                       | 0 · 0                                                 | 0 · 0          |
+| Titles over 60                                              | 1 — `/painter-hastings/` (64), accepted               | 1              |
+| `keywords` meta tags                                        | 0                                                     | 0              |
+| Sitemap                                                     | **115 / 115** at 200, zero redirect hops              | 115            |
+| Bad URLs 404 (extensionless · `.zip` · `/assets/*`)         | all 404                                               | 404            |
+| Real hashed bundles                                         | `.js` 200 `text/javascript` · `.css` 200 `text/css`   | 200            |
+| Redirect status                                             | `/painters-brighton` → 301                            | 301            |
+| Markdown negotiation headers                                | 4 / 4 present                                         | 4              |
+| robots.txt                                                  | `Disallow: /api/` only                                | correct        |
+| llms.txt price figures                                      | none — both `$` matches are the $10M public liability | none           |
+| Images over 250KB                                           | **0**                                                 | 0              |
+| TTFB                                                        | 0.55 s first hit, 200                                 | 0.15–0.45 s    |
 
 ### ⚠️ NO RANKING DATA THIS RUN
 
@@ -2013,9 +2033,9 @@ made minutes after this entry was first written, succeeded.** The brief's Step 1
 - **Supermetrics as FALLBACK**, flagged as still the only source of GMB / Maps data
 - the 20+ impressions interpretation rule
 - striking distance corrected to **8–18**
-- and, from the two runs lost to it: *"connectors flap constantly, including mid-session … if
+- and, from the two runs lost to it: _"connectors flap constantly, including mid-session … if
   neither is reachable, make no ranking claim at all. 'Nothing moved' and 'I could not see' are
-  different findings and must not be reported the same way."*
+  different findings and must not be reported the same way."_
 
 The 2026-08-11 clicks cliff and the zero-click `jetblack` query were carried into the brief's
 standing context so the next run inherits them.
@@ -2053,19 +2073,19 @@ from the homepage, so lead tracking is blind on every page that carries the impr
 `/painter-black-rock` → 301, `/painter-black-rock/` → 200, verified live — but Search Console
 still carries impressions against BOTH forms, and against `http://`:
 
-| Non-slash | Slash | http:// |
-| --- | --- | --- |
-| painter-black-rock 30 | painter-black-rock/ 5 | `http://` homepage 2 imp / **2 clicks** |
-| painter-caulfield 21 | painter-caulfield/ 276 | `http://painter-greater-dandenong` 13 imp / **1 click** |
-| painter-mount-eliza 2 | painter-mount-eliza/ 313 | |
-| painter-mornington-peninsula **136** | painter-mornington-peninsula/ **165** | |
-| painter-sandringham 16 | painter-sandringham/ 235 | |
-| services/commercial-painting 8 | .../ 266 | |
+| Non-slash                            | Slash                                 | http://                                                 |
+| ------------------------------------ | ------------------------------------- | ------------------------------------------------------- |
+| painter-black-rock 30                | painter-black-rock/ 5                 | `http://` homepage 2 imp / **2 clicks**                 |
+| painter-caulfield 21                 | painter-caulfield/ 276                | `http://painter-greater-dandenong` 13 imp / **1 click** |
+| painter-mount-eliza 2                | painter-mount-eliza/ 313              |                                                         |
+| painter-mornington-peninsula **136** | painter-mornington-peninsula/ **165** |                                                         |
+| painter-sandringham 16               | painter-sandringham/ 235              |                                                         |
+| services/commercial-painting 8       | .../ 266                              |                                                         |
 
 Mornington Peninsula is a near-even split — real signal dilution. This is **legacy index data on a
 correctly-configured site**, not a live redirect defect, so it should consolidate on its own. The
-standing "trailing slashes are not a defect" note remains right about the *serving* behaviour and
-should not be used to dismiss the *index* state.
+standing "trailing slashes are not a defect" note remains right about the _serving_ behaviour and
+should not be used to dismiss the _index_ state.
 
 ### ❌ NOT CONFIRMED — do not act on these
 
@@ -2107,16 +2127,16 @@ log records about review count being the map-pack constraint.
 
 The brief's "tracked eleven" are **not** this site's high-impression pages. The real ones:
 
-| Page | Impressions | Clicks | Position |
-| --- | --- | --- | --- |
-| /painter-clyde-north/ | **1,356** | 0 | 32.8 |
-| /painter-doncaster/ | 803 | 0 | 76.7 |
-| /painter-narre-warren/ | 608 | 0 | 36.6 |
-| /painter-bentleigh/ | 603 | 1 | 49.4 |
-| /painter-camberwell/ | 603 | 0 | 84.9 |
-| /painter-malvern-east/ | 557 | 0 | 56.9 |
-| / (homepage) | 510 | 35 | 15.8 |
-| /painter-toorak/ | 485 | **3** | 79.3 |
+| Page                   | Impressions | Clicks | Position |
+| ---------------------- | ----------- | ------ | -------- |
+| /painter-clyde-north/  | **1,356**   | 0      | 32.8     |
+| /painter-doncaster/    | 803         | 0      | 76.7     |
+| /painter-narre-warren/ | 608         | 0      | 36.6     |
+| /painter-bentleigh/    | 603         | 1      | 49.4     |
+| /painter-camberwell/   | 603         | 0      | 84.9     |
+| /painter-malvern-east/ | 557         | 0      | 56.9     |
+| / (homepage)           | 510         | 35     | 15.8     |
+| /painter-toorak/       | 485         | **3**  | 79.3     |
 
 ⚠️ **Two standing instructions are contradicted by this.** The brief says Toorak, Kew, Camberwell,
 Hawthorn and Malvern are "organically unreachable — do not re-queue for content". Camberwell has
@@ -2150,10 +2170,10 @@ On 2026-08-28 this log argued the routine brief was wrong to write off Camberwel
 flagged Clyde North — the site's biggest page by impressions — as untracked. **The audit pulled
 query-level data and that reframing is correct; total impressions were the wrong number.**
 
-| Page | Total impressions | Head-term ("painters + suburb") | Clicks |
-| --- | --- | --- | --- |
-| `/painter-clyde-north/` | 1,406 | **2** | 0 |
-| `/painter-mordialloc/` | 131 | **122** | some |
+| Page                    | Total impressions | Head-term ("painters + suburb") | Clicks |
+| ----------------------- | ----------------- | ------------------------------- | ------ |
+| `/painter-clyde-north/` | 1,406             | **2**                           | 0      |
+| `/painter-mordialloc/`  | 131               | **122**                         | some   |
 
 Clyde North's 1,406 impressions are ~540 distinct machine-generated query combinations at 1–6
 impressions each ("balustrade and railing painting clyde north"). Mordialloc's 131 come from 21
@@ -2161,22 +2181,22 @@ real queries. **Judge suburb pages on head-term impressions, not total.**
 
 One genuine limitation of that metric, since this log previously relied on the opposite reading:
 it scores only "painters/painter/house painters + suburb". Clyde North was linked from the
-commercial and body-corporate service pages precisely because it ranked 15–18 on *commercial*
+commercial and body-corporate service pages precisely because it ranked 15–18 on _commercial_
 queries, which the metric ignores by construction. That does not overturn the call — those
 queries are Melbourne-wide and the service pages can hold them directly — but it is why both
 service links were repointed rather than simply dropped.
 
 ### Verified against the live site before acting
 
-| Audit claim | Verdict |
-| --- | --- |
-| GBP listing has no phone number | **Second independent source.** Still unverifiable from here — Google is sandbox-blocked. Jimmy's to fix |
-| Suburb pages have no quote form | **True.** 0 `<form>` on all 95 |
-| 96 suburb pages, 115 sitemap URLs | **True** (both now reduced — see below) |
+| Audit claim                                               | Verdict                                                                                                                                                                                   |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GBP listing has no phone number                           | **Second independent source.** Still unverifiable from here — Google is sandbox-blocked. Jimmy's to fix                                                                                   |
+| Suburb pages have no quote form                           | **True.** 0 `<form>` on all 95                                                                                                                                                            |
+| 96 suburb pages, 115 sitemap URLs                         | **True** (both now reduced — see below)                                                                                                                                                   |
 | "No GA4 tag — no gtag, no dataLayer, no googletagmanager" | **FALSE.** Live homepage: `gtag` ×6, `dataLayer` ×3, `googletagmanager` ×2, `G-6NC2597W9L` ×2. Lazy-loaded in `requestIdleCallback`. **Second audit in two days to make this same error** |
-| "Suburb pages only carry LocalBusiness + WebPage" | **FALSE.** Already carry BreadcrumbList, FAQPage, Service, HomeAndConstructionBusiness. `aggregateRating` genuinely is off (`manus:disable-auto-review-schema`) |
-| Trailing-slash / `http://` duplicates need fixing | **Already fixed.** Verified working; what GSC shows is legacy index state |
-| Hughesdale "check that URL is actually indexed" | **No defect.** 200, `index, follow`, in the sitemap |
+| "Suburb pages only carry LocalBusiness + WebPage"         | **FALSE.** Already carry BreadcrumbList, FAQPage, Service, HomeAndConstructionBusiness. `aggregateRating` genuinely is off (`manus:disable-auto-review-schema`)                           |
+| Trailing-slash / `http://` duplicates need fixing         | **Already fixed.** Verified working; what GSC shows is legacy index state                                                                                                                 |
+| Hughesdale "check that URL is actually indexed"           | **No defect.** 200, `index, follow`, in the sitemap                                                                                                                                       |
 
 **The implementation pack ships redirect config for Apache, Nginx, Netlify and Vercel. This site
 runs on Cloudflare Workers.** None of it applies as written; the redirect map was sound and was
@@ -2241,7 +2261,6 @@ against the live knowledge panel before any run cements it again.
 Business Profile post says **18+**, and Google records the business opening as **March 2015 (11)**.
 Not resolved here — Jimmy has to pick the true one before it is propagated further.
 
-
 ### Addendum, same day — a third PDF supersedes the inner-north decision
 
 Jimmy then supplied `jetblackpaintingseoaudit.pdf` (11 pages). It is **the same audit, byte-identical
@@ -2261,7 +2280,7 @@ stand; §8.9a explicitly reconfirms `/painter-hampton-park/` belongs in the cut 
 > have 17.
 
 The audit's own consequence: the inner north "isn't structurally closed to you. Revisit it once
-reviews are past 50." So the correct action on those 11 pages is now the §8.5 *"only for a big job"*
+reviews are past 50." So the correct action on those 11 pages is now the §8.5 _"only for a big job"_
 outcome — **leave them up and unchanged** — not noindex. **A future run must not execute the
 noindex that the entry above originally queued.** Jimmy's decision was sound on the information he
 had; the information changed.
@@ -2295,13 +2314,13 @@ correction, #227 quote form + Hampton). **No change made this run.**
 Today's merges moved five figures the brief still quotes. A future run comparing against the brief
 will see false regressions. Current, measured this run:
 
-| Figure | Brief says | Actual now | Why |
-| --- | --- | --- | --- |
-| Sitemap URLs | 115 | **106** | 8 Casey pages noindexed + Bentleigh East merged |
-| Suburb pages | 96 | **95** | Bentleigh East merged into Bentleigh |
-| Static pages | 117 | **116** | same |
-| FAQ questions | 489 | **485** | same |
-| Pages noindexed | — | **8** | Casey/Cardinia corridor, live but out of the index |
+| Figure          | Brief says | Actual now | Why                                                |
+| --------------- | ---------- | ---------- | -------------------------------------------------- |
+| Sitemap URLs    | 115        | **106**    | 8 Casey pages noindexed + Bentleigh East merged    |
+| Suburb pages    | 96         | **95**     | Bentleigh East merged into Bentleigh               |
+| Static pages    | 117        | **116**    | same                                               |
+| FAQ questions   | 489        | **485**    | same                                               |
+| Pages noindexed | —          | **8**      | Casey/Cardinia corridor, live but out of the index |
 
 ### Steps 0–6 — all clean
 
@@ -2322,11 +2341,11 @@ brief's "25.5% avg, worst ~47%, zero over 55%". **It is not a regression — it 
 implementation.** My first pass compared the full page text, which on a suburb page includes the
 93-link suburb directory and the footer that all 95 pages share. Stripping that shared template:
 
-| Measure | Full page | Boilerplate stripped |
-| --- | --- | --- |
-| Average worst-twin | 42.3% | **34.6%** |
-| Pages over 55% | 4 | **2** |
-| Worst pair | cranbourne~narre-warren 61.2% | cranbourne~narre-warren **55.2%** |
+| Measure            | Full page                     | Boilerplate stripped              |
+| ------------------ | ----------------------------- | --------------------------------- |
+| Average worst-twin | 42.3%                         | **34.6%**                         |
+| Pages over 55%     | 4                             | **2**                             |
+| Worst pair         | cranbourne~narre-warren 61.2% | cranbourne~narre-warren **55.2%** |
 
 Both variants pass the 45% average gate. The one pair still near the line is
 cranbourne~narre-warren — **already named in the brief as the known worst pair**, and neither page
@@ -2384,15 +2403,15 @@ per-suburb photos and is blocked on Jimmy.
 
 ### Suburb pages scored against the advice's seven criteria
 
-| Criterion | Status |
-| --- | --- |
+| Criterion                                    | Status                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
 | Original copy about the work performed there | **Met** — near-duplicate 34.3% avg, all 95 under the 45% gate |
-| Links to the matching service page | **Met** — 8 service links per page |
-| Direct request-a-quote CTA | **Met** as of PR #229 |
-| A genuine reason clients there choose you | Partial — prose covers housing stock, not the business |
-| Two or more actual local projects | **Zero, on all 95** |
-| Unique before-and-after images | **Zero unique**, and none in the crawler layer |
-| Testimonial with approval | **None** |
+| Links to the matching service page           | **Met** — 8 service links per page                            |
+| Direct request-a-quote CTA                   | **Met** as of PR #229                                         |
+| A genuine reason clients there choose you    | Partial — prose covers housing stock, not the business        |
+| Two or more actual local projects            | **Zero, on all 95**                                           |
+| Unique before-and-after images               | **Zero unique**, and none in the crawler layer                |
+| Testimonial with approval                    | **None**                                                      |
 
 The advice warns against "50 nearly identical pages where only the suburb name changes". Measured,
 these are not that — the text is genuinely distinct. **The gap is evidence, not words.** Three
@@ -2422,7 +2441,7 @@ wrong. Not changed.
 ### Pages that genuinely do not exist
 
 **About**, **insurance/warranty**, and **gallery/projects**. Note that `/about`, `/contact` and
-`/our-work` are *not* broken pages — they are legacy hash-anchor routes that all rendered the
+`/our-work` are _not_ broken pages — they are legacy hash-anchor routes that all rendered the
 homepage, and `worker/index.js` 301s them to `/` deliberately because Google was treating them as
 duplicates. That redirect is correct; do not "restore" those routes.
 
@@ -2469,7 +2488,7 @@ Both are method errors worth recording, because both looked like real regression
 **"38/77 dependencies missing."** My check matched bare YAML keys only. pnpm-lock quotes scoped
 names (`'@radix-ui/react-slot':`), so every scoped package read as missing. A second attempt
 returned **0/77** — shell quoting mangled the regex that time. The correct check scans only the
-`importers:` block (the rest of the file is the resolved tree and would produce false *passes*) and
+`importers:` block (the rest of the file is the resolved tree and would produce false _passes_) and
 matches quoted or bare keys: **77/77**. The version run earlier today was right; tonight's rewrite
 dropped a clause.
 
@@ -2488,13 +2507,13 @@ the quote forms, and whether the suburb-page depth moved anything.
 
 ### Baselines after today — the brief is stale on six figures
 
-| Figure | Brief | Actual |
-| --- | --- | --- |
-| Years experience | 13+ | **18+** |
-| Suburb pages | 96 | **95** |
-| Static pages | 117 | **116** |
-| FAQ questions | 489 | **491** |
-| Sitemap URLs | 115 | **106** |
+| Figure             | Brief | Actual                                                                        |
+| ------------------ | ----- | ----------------------------------------------------------------------------- |
+| Years experience   | 13+   | **18+**                                                                       |
+| Suburb pages       | 96    | **95**                                                                        |
+| Static pages       | 117   | **116**                                                                       |
+| FAQ questions      | 489   | **491**                                                                       |
+| Sitemap URLs       | 115   | **106**                                                                       |
 | Near-duplicate avg | 25.5% | **34.3%** (different implementation — see the 2026-08-29 entry before acting) |
 
 Review count **17** is correct in the brief and unchanged.
@@ -2511,12 +2530,12 @@ the site actually serves. **No change made** — nothing here was a defect I sho
 The homepage **does** carry it. Parsed from the live HTML (not the source), the single JSON-LD block
 is a 4-node `@graph`:
 
-| `@id` | `@type` |
-| --- | --- |
-| `#website` | `WebSite` |
-| `#webpage` | `WebPage` |
+| `@id`       | `@type`                                            |
+| ----------- | -------------------------------------------------- |
+| `#website`  | `WebSite`                                          |
+| `#webpage`  | `WebPage`                                          |
 | `#business` | `["HomeAndConstructionBusiness", "LocalBusiness"]` |
-| `#faq` | `FAQPage` |
+| `#faq`      | `FAQPage`                                          |
 
 The business node carries 23 properties including `address`, `geo`, `telephone`,
 `openingHoursSpecification`, `aggregateRating`, `sameAs`, `hasOfferCatalog`.
@@ -2528,7 +2547,7 @@ reporting artifact.
 
 ### "Phone: +1 0432077…" — also a parser artifact
 
-Schema `telephone` is `+61432077782`, correct E.164. SEOptimer read the *visible* `0432 077 782` and
+Schema `telephone` is `+61432077782`, correct E.164. SEOptimer read the _visible_ `0432 077 782` and
 assumed +1. Displaying the local form is right for an Australian local business. No change.
 
 ### "Address & Phone Shown on Website — Missing: Address" — real, but likely correct as-is
@@ -2586,7 +2605,7 @@ entry. Append by hand; do not format it.
 
 Superseding what the entry above says was pending:
 
-**Address — CONFIRMED CORRECT, close this out.** GBP is set to *service area, address hidden*. The
+**Address — CONFIRMED CORRECT, close this out.** GBP is set to _service area, address hidden_. The
 site already matches: no `streetAddress` in the schema, "Based in Mordialloc" in the copy. NAP is
 consistent. **No change made, and none should be.** SEOptimer will keep reporting "Missing:
 Address" on every future run — that is the tool not modelling service-area businesses, not a
@@ -2614,13 +2633,13 @@ sandbox — `window.fbq` stayed `undefined`.
 **Verified with a real ID too**, since testing only the disabled state would prove nothing. Ran the
 actual emitted block in headless Chromium with a test ID and `fbevents.js` stubbed at the network
 layer: `fbq` installs synchronously, buffers `["init", …]` and `["track","PageView"]`, and a
-`Contact` event fired *before* the library loaded was replayed correctly on load. That replay path
+`Contact` event fired _before_ the library loaded was replayed correctly on load. That replay path
 is the one that matters — it is the visitor who taps the sticky call bar in the first second.
 
 **Why the stub is synchronous while the library is deferred.** The stub does no I/O, so it costs
 nothing at parse time, and it gives Meta's own queue somewhere to buffer early taps. Only
 `fbevents.js` waits for `requestIdleCallback`, so it cannot compete with the LCP hero image. Note
-the deferral *timing* is by construction, not measured — the test fixture is trivial enough that
+the deferral _timing_ is by construction, not measured — the test fixture is trivial enough that
 idle arrives almost immediately, so it confirms the queue mechanics, not the scheduling.
 
 **No `<noscript>` tracking pixel.** Unlike the script block it cannot be gated on the ID being set,
@@ -2630,11 +2649,11 @@ vanishingly small share of real customers running with JavaScript off.
 **Event mapping.** GA4 and Meta deliberately do not share names — Meta only optimises against its
 standard vocabulary, so a GA4 name sent to Meta becomes a custom event its bidding cannot use.
 
-| Action | GA4 | Meta |
-| --- | --- | --- |
-| Quote form, delivery confirmed | `generate_lead` | `Lead` |
-| Quote form, delivery failed | `quote_form_undelivered` | *(none — diagnostic, not a conversion)* |
-| Phone or email tap | `phone_call_click` / `email_click` | `Contact` |
+| Action                         | GA4                                | Meta                                    |
+| ------------------------------ | ---------------------------------- | --------------------------------------- |
+| Quote form, delivery confirmed | `generate_lead`                    | `Lead`                                  |
+| Quote form, delivery failed    | `quote_form_undelivered`           | _(none — diagnostic, not a conversion)_ |
+| Phone or email tap             | `phone_call_click` / `email_click` | `Contact`                               |
 
 **PII:** swept both call sites — no visitor name, email or phone reaches either tracker. Meta
 enforces this harder than Google; repeated breaches restrict the ad account.
@@ -2660,13 +2679,13 @@ signal than none.
 
 Worth writing down, because the first sweep found only three and the count was wrong twice:
 
-| File | What it feeds |
-| --- | --- |
-| `client/index.html` | the homepage's own JSON-LD — **serves `/` only** |
-| `scripts/generate-static-pages.mjs` | the crawler HTML of the 95 suburb pages |
-| `client/src/components/SuburbPageTemplate.tsx` | the React copy of the same, for parity |
-| `client/src/lib/organizationSchema.ts` | the Organization schema |
-| `client/src/components/Footer.tsx` | the visible social row |
+| File                                           | What it feeds                                    |
+| ---------------------------------------------- | ------------------------------------------------ |
+| `client/index.html`                            | the homepage's own JSON-LD — **serves `/` only** |
+| `scripts/generate-static-pages.mjs`            | the crawler HTML of the 95 suburb pages          |
+| `client/src/components/SuburbPageTemplate.tsx` | the React copy of the same, for parity           |
+| `client/src/lib/organizationSchema.ts`         | the Organization schema                          |
+| `client/src/components/Footer.tsx`             | the visible social row                           |
 
 `client/index.html` was missed by the first grep because it only covered `client/src` and
 `scripts/*.mjs`. **That file is the homepage** — the single highest-value page for schema — and it
@@ -2677,11 +2696,11 @@ business-fact edit must include it.
 
 They do not agree with each other, and did not before this change:
 
-| Entry | index.html | generator | SuburbPageTemplate | organizationSchema |
-| --- | --- | --- | --- | --- |
-| Patreon | yes | yes | yes | **no** |
-| Pinterest | yes | yes | yes | **no** |
-| Oneflare | **no** | **no** | **no** | yes |
+| Entry     | index.html | generator | SuburbPageTemplate | organizationSchema |
+| --------- | ---------- | --------- | ------------------ | ------------------ |
+| Patreon   | yes        | yes       | yes                | **no**             |
+| Pinterest | yes        | yes       | yes                | **no**             |
+| Oneflare  | **no**     | **no**    | **no**             | yes                |
 
 Left alone deliberately: reconciling them means deciding which profiles are real, and Patreon is
 still unverified. Do that in one pass once Jimmy confirms the list, not piecemeal.
@@ -2767,14 +2786,14 @@ Jimmy supplied `https://maps.app.goo.gl/hD8DdS6poZYLb83E6?g_st=ic` from Maps' ow
 
 ### What was there before was mine, and it was wrong in the same way as the LinkedIn URL
 
-| Where | Was |
-| --- | --- |
-| `sameAs` × 5 | `https://www.google.com/maps/place/Jetblack+Painting` |
+| Where                 | Was                                                                          |
+| --------------------- | ---------------------------------------------------------------------------- |
+| `sameAs` × 5          | `https://www.google.com/maps/place/Jetblack+Painting`                        |
 | `hasMap` (index.html) | `https://www.google.com/maps/place/Jetblack+Painting/@-38.0131,145.0965,17z` |
-| Contact section link | `https://maps.google.com/?q=Jetblack+Painting+Mordialloc+VIC+3195` |
+| Contact section link  | `https://maps.google.com/?q=Jetblack+Painting+Mordialloc+VIC+3195`           |
 
 None of these were real place URLs. All three were **assembled from the business name** — a
-name-search URL that resolves to a Maps *search*, not to a specific listing, and would land on a
+name-search URL that resolves to a Maps _search_, not to a specific listing, and would land on a
 different business entirely if another painter shared the name. This is the third time in two days
 that a URL I constructed from a pattern turned out to be wrong where the real one was obtainable by
 asking. **Ask for the URL; never build it.**
@@ -2883,40 +2902,40 @@ query: ZERO clicks.** That is unchanged from the baseline and is the whole probl
 
 **Striking distance (8–18) ranked by impressions — the real target list:**
 
-| Query | Impr | Position |
-| --- | --- | --- |
-| painters collingwood | **175** | 16.10 |
-| painters sorrento | **140** | 13.30 |
-| house painters caulfield | **99** | 16.79 |
-| painters murrumbeena | 82 | 16.76 |
-| painters caulfield | 56 | 17.93 |
-| house painters collingwood | 43 | 17.07 |
-| house painters highett | 41 | 16.00 |
-| house painters cheltenham | 41 | 16.27 |
-| painter highett | 39 | 14.77 |
-| painters highett | 37 | 13.92 |
-| painter collingwood | 31 | 17.77 |
-| painters sorrento bay | 29 | **5.83** |
-| house painters mckinnon | 26 | 10.81 |
-| house painters donvale | 26 | 15.50 |
-| interior painters donvale | 26 | 15.69 |
-| painter murrumbeena | 25 | 16.60 |
-| painter sandringham | 23 | 15.78 |
-| painters chelsea | 21 | 12.90 |
+| Query                      | Impr    | Position |
+| -------------------------- | ------- | -------- |
+| painters collingwood       | **175** | 16.10    |
+| painters sorrento          | **140** | 13.30    |
+| house painters caulfield   | **99**  | 16.79    |
+| painters murrumbeena       | 82      | 16.76    |
+| painters caulfield         | 56      | 17.93    |
+| house painters collingwood | 43      | 17.07    |
+| house painters highett     | 41      | 16.00    |
+| house painters cheltenham  | 41      | 16.27    |
+| painter highett            | 39      | 14.77    |
+| painters highett           | 37      | 13.92    |
+| painter collingwood        | 31      | 17.77    |
+| painters sorrento bay      | 29      | **5.83** |
+| house painters mckinnon    | 26      | 10.81    |
+| house painters donvale     | 26      | 15.50    |
+| interior painters donvale  | 26      | 15.69    |
+| painter murrumbeena        | 25      | 16.60    |
+| painter sandringham        | 23      | 15.78    |
+| painters chelsea           | 21      | 12.90    |
 
 **`painters sorrento bay` sits at 5.83 — genuinely page one — with 29 impressions and zero clicks.**
 That is the first case on this property where CTR is actually testable rather than theoretical.
 
 **Movement against the 2026-05-21→08-16 baseline:**
 
-| Suburb | Baseline | Now | |
-| --- | --- | --- | --- |
-| Mordialloc | 77 @ 29.18 | 61 @ ~20.5 | **much better position** |
-| Collingwood | 129 @ 17.65 | 175 @ 16.10 | better on both |
-| Highett | 85 @ 17.32 | 117 @ ~14.9 | better on both |
-| Sorrento | 100 @ **7.13** | 140 @ **13.30** | impressions up, **position materially worse** |
-| Murrumbeena | 86 @ 17.00 | 107 @ ~16.7 | flat |
-| McKinnon | 57 @ 11.19 | 26 @ 10.81 | position held, impressions down |
+| Suburb      | Baseline       | Now             |                                               |
+| ----------- | -------------- | --------------- | --------------------------------------------- |
+| Mordialloc  | 77 @ 29.18     | 61 @ ~20.5      | **much better position**                      |
+| Collingwood | 129 @ 17.65    | 175 @ 16.10     | better on both                                |
+| Highett     | 85 @ 17.32     | 117 @ ~14.9     | better on both                                |
+| Sorrento    | 100 @ **7.13** | 140 @ **13.30** | impressions up, **position materially worse** |
+| Murrumbeena | 86 @ 17.00     | 107 @ ~16.7     | flat                                          |
+| McKinnon    | 57 @ 11.19     | 26 @ 10.81      | position held, impressions down               |
 
 **Sorrento going 7.13 → 13.30 is the one regression worth watching.** Not acted on: single-property
 GSC data at this volume moves on few samples, and the brief's rule is to treat a mover as real only
@@ -2957,12 +2976,12 @@ their dashboard, a reserved-height container, idle loading, and a before/after C
 
 ### ⚠️ BOTH PAID DATA TOOLS HAVE NOW EXPIRED — update the brief
 
-| Tool | Status | What is lost |
-| --- | --- | --- |
-| **GSC Wizard** | `payment_required`, trial ended | indexing tracker, anomaly detection, change points, `score_opportunities` |
-| **Supermetrics** | `TRIAL_EXPIRED` on team 1902861, **expired 2026-08-25** | **GMB / Maps data — it was the ONLY source** |
-| **Semrush / Ahrefs** | already unavailable | competitor + backlink intelligence |
-| **Windsor.ai** | **working** | Search Console: query, position, impressions, clicks |
+| Tool                 | Status                                                  | What is lost                                                              |
+| -------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **GSC Wizard**       | `payment_required`, trial ended                         | indexing tracker, anomaly detection, change points, `score_opportunities` |
+| **Supermetrics**     | `TRIAL_EXPIRED` on team 1902861, **expired 2026-08-25** | **GMB / Maps data — it was the ONLY source**                              |
+| **Semrush / Ahrefs** | already unavailable                                     | competitor + backlink intelligence                                        |
+| **Windsor.ai**       | **working**                                             | Search Console: query, position, impressions, clicks                      |
 
 The brief still lists GSC Wizard as PRIMARY and Supermetrics as the fallback. **Both are wrong now.**
 Windsor.ai `searchconsole` is the only working ranking source and it delivered this run's data.
@@ -2993,11 +3012,11 @@ arrived by hand rather than by API.
 
 ### The bucket is stable, not growing
 
-| Date | Affected |
-| --- | --- |
-| 2026-06-05 | 1 |
-| 2026-07-11 | 41 |
-| 2026-08-06 | 61 |
+| Date                   | Affected     |
+| ---------------------- | ------------ |
+| 2026-06-05             | 1            |
+| 2026-07-11             | 41           |
+| 2026-08-06             | 61           |
 | **2026-08-08 → 08-28** | **62, flat** |
 
 Flat for three weeks. The step-ups track the deliberate redirect work, not a regression.
@@ -3016,18 +3035,18 @@ returns 403 CONNECT under this session's egress policy. Policy denial, not retri
 
 ### ⚠️ CORRECTION — I told Jimmy "exactly one hop" and that was wrong for 5 URLs
 
-On 2026-08-30, reviewing SEOptimer's "avoid multiple page redirects", I reported it as *"the
-mandatory http→https upgrade, exactly one hop"*. **For five URL shapes there are genuinely two.**
+On 2026-08-30, reviewing SEOptimer's "avoid multiple page redirects", I reported it as _"the
+mandatory http→https upgrade, exactly one hop"_. **For five URL shapes there are genuinely two.**
 
 Traced hop by hop:
 
-| Hop | Issued by | Does |
-| --- | --- | --- |
-| 1 | **Cloudflare edge** (`server: cloudflare`, worker not yet invoked) | `http:` → `https:`, **path unchanged** |
-| 2 | **The worker** | adds the trailing slash / applies `PATH_REDIRECTS` |
+| Hop | Issued by                                                          | Does                                               |
+| --- | ------------------------------------------------------------------ | -------------------------------------------------- |
+| 1   | **Cloudflare edge** (`server: cloudflare`, worker not yet invoked) | `http:` → `https:`, **path unchanged**             |
+| 2   | **The worker**                                                     | adds the trailing slash / applies `PATH_REDIRECTS` |
 
 Control case proves the mechanism: `http://…/services/roof-fence-painting/` — http plus an
-*already-canonical* path — is **one** hop, because Cloudflare's upgrade lands somewhere the worker
+_already-canonical_ path — is **one** hop, because Cloudflare's upgrade lands somewhere the worker
 does not need to touch.
 
 So the two-hop set is exactly **http:// + a path that also needs normalising**:
@@ -3051,14 +3070,14 @@ budget, not ranking.
 
 Jimmy asked for the site to be "GSC index ready". Checked properly rather than assumed:
 
-| Check | Result |
-| --- | --- |
-| Sitemap URLs | 106 |
-| Sitemap URLs that are `noindex` (contradictory signal) | **0** |
-| `noindex` pages leaking into the sitemap | **0** |
-| Canonical mismatches across 116 pages | **0** |
-| robots.txt | allows all, `Disallow: /api/` only, sitemap declared |
-| sitemap.xml | 200, `application/xml` |
+| Check                                                  | Result                                               |
+| ------------------------------------------------------ | ---------------------------------------------------- |
+| Sitemap URLs                                           | 106                                                  |
+| Sitemap URLs that are `noindex` (contradictory signal) | **0**                                                |
+| `noindex` pages leaking into the sitemap               | **0**                                                |
+| Canonical mismatches across 116 pages                  | **0**                                                |
+| robots.txt                                             | allows all, `Disallow: /api/` only, sitemap declared |
+| sitemap.xml                                            | 200, `application/xml`                               |
 
 **The one real defect: stale `lastmod`.** `/painter-aspendale/` and `/painter-caulfield/` each gained
 **five real project photographs with captions on 2026-08-30** — the most substantial content added to
@@ -3066,12 +3085,12 @@ any suburb page — and their sitemap `lastmod` still read **2026-08-18**. The p
 `generate-sitemap.mjs`.
 
 That is not cosmetic. `lastmod` is how a sitemap tells Google a page is worth recrawling; leaving it
-stale actively tells Google *nothing changed here*, on the two pages where something most did.
+stale actively tells Google _nothing changed here_, on the two pages where something most did.
 Bumped both to 2026-09-01. **Diff is exactly two lines** — the generator preserves every other
 `lastmod`, which is why only genuinely-changed pages get bumped.
 
 **Deliberately NOT bumped: the other 104.** They changed on 2026-08-31 too, but only in JSON-LD (the
-LinkedIn and Maps URLs). `lastmod` is meant to signal a significant *content* change; bumping the
+LinkedIn and Maps URLs). `lastmod` is meant to signal a significant _content_ change; bumping the
 whole sitemap because a `sameAs` string moved would be false signalling, and a sitemap whose
 `lastmod` is unreliable gets discounted wholesale. Two honest bumps are worth more than 106 dishonest
 ones.
@@ -3104,19 +3123,19 @@ since 2026-08-22.
 
 That looked short — **eleven** pages carry `noindex`, not two. Checked rather than assumed:
 
-| Layer | Result |
-| --- | --- |
-| Crawler HTML carrying `noindex` | **11** — 8 Casey suburb pages + `/privacy/`, `/review-us/`, `/terms/` |
-| React source declaring it | same 11, both layers agree |
-| Live headers | `/painter-berwick/`, `/painter-cranbourne/`, `/painter-dandenong/`, `/review-us/` all 200 with `robots: noindex, follow` |
-| Present in sitemap | **0 of 11** — correct, no contradictory signal |
+| Layer                           | Result                                                                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Crawler HTML carrying `noindex` | **11** — 8 Casey suburb pages + `/privacy/`, `/review-us/`, `/terms/`                                                    |
+| React source declaring it       | same 11, both layers agree                                                                                               |
+| Live headers                    | `/painter-berwick/`, `/painter-cranbourne/`, `/painter-dandenong/`, `/review-us/` all 200 with `robots: noindex, follow` |
+| Present in sitemap              | **0 of 11** — correct, no contradictory signal                                                                           |
 
 **The gap is timing, not a defect.** This export's data ends **2026-08-28**. The Casey corridor
 noindex shipped **2026-08-29** (`Suburb consolidation step one`). Google had not recrawled those
 eight pages when the report was generated, so they cannot appear in the bucket yet.
 
 `/review-us/` is absent for a different reason: a URL only enters this bucket once Google has
-crawled it *and* found the tag. It is in no sitemap and linked from only 8 pages, so it may simply
+crawled it _and_ found the tag. It is in no sitemap and linked from only 8 pages, so it may simply
 never have been crawled. Benign either way.
 
 **No action.** The eight are each linked from **115** crawler pages (the footer directory), so
@@ -3145,8 +3164,8 @@ GMB data is readable again for the first time since Supermetrics expired on 2026
 
 `search_keyword` over the **last 6 months**, filtered to values above Google's reporting threshold:
 
-| Keyword | Uses |
-| --- | --- |
+| Keyword      | Uses    |
+| ------------ | ------- |
 | **jetblack** | **207** |
 
 **That is the entire list.** Not one category search — no "painter mordialloc", no "house painters
@@ -3169,14 +3188,14 @@ changed**, and nobody should change it.
 
 ### Six months of profile performance
 
-| Month | Impressions | Call clicks | Website clicks | Directions |
-| --- | --- | --- | --- | --- |
-| Mar 2026 | 178 | 5 | 22 | 74 |
-| Apr 2026 | 158 | 5 | 9 | 36 |
-| May 2026 | 146 | 1 | 11 | 0 |
-| Jun 2026 | 143 | 4 | 5 | 0 |
-| Jul 2026 | **46** | 1 | 6 | 1 |
-| Aug 2026 | 172 | **0** | 14 | 0 |
+| Month    | Impressions | Call clicks | Website clicks | Directions |
+| -------- | ----------- | ----------- | -------------- | ---------- |
+| Mar 2026 | 178         | 5           | 22             | 74         |
+| Apr 2026 | 158         | 5           | 9              | 36         |
+| May 2026 | 146         | 1           | 11             | 0          |
+| Jun 2026 | 143         | 4           | 5              | 0          |
+| Jul 2026 | **46**      | 1           | 6              | 1          |
+| Aug 2026 | 172         | **0**       | 14             | 0          |
 
 Read carefully, because the numbers are small enough to mislead:
 
@@ -3222,7 +3241,7 @@ Replaced all **7** occurrences (`client/index.html` `sameAs` + `hasMap`, `organi
 today, this one came from Google via the API — though it still cannot be loaded from here to confirm.
 
 **Method note:** the first attempt at this replacement silently patched only `client/index.html`.
-`c=$(grep -c "$X" "$f" || echo 0)` emits `0` from grep *and* `0` from the fallback, so `$c` became
+`c=$(grep -c "$X" "$f" || echo 0)` emits `0` from grep _and_ `0` from the fallback, so `$c` became
 `"0\n0"` and the `[ "$c" -gt 0 ]` guard errored out for every later file. Caught by verifying the
 count afterwards rather than trusting the loop. **Never pair `grep -c` with an `|| echo 0` fallback.**
 
@@ -3246,7 +3265,7 @@ connector for this hidden-address listing. **Do not read those nulls as missing 
 ### The suspension answer
 
 **Mordialloc is already in the service area — there is nothing to add.** What Jimmy keeps editing is
-the *Business location* field, and changing that from "No location" to a street address is what
+the _Business location_ field, and changing that from "No location" to a street address is what
 triggers the suspension: Google only permits a displayed address where customers are served at it
 during staffed hours. A painter works at the customer's property, so he is not eligible, and trades
 are a high-scrutiny category where this is enforced quickly.
@@ -3256,7 +3275,7 @@ in good standing — and repeated suspension attempts escalate. Also warned agai
 he has prior duplicate history (`17466191655420256122`, deleted).
 
 **The underlying misconception, worth keeping:** neither the address nor the service area is a
-ranking lever. The service area governs *eligibility* to appear, not *prominence*. He is already
+ranking lever. The service area governs _eligibility_ to appear, not _prominence_. He is already
 eligible across all 20 areas — and the keyword data from earlier today (one term, "jetblack", 207
 uses, zero category searches) says the gap is prominence. **No location setting fixes that.**
 
@@ -3273,7 +3292,7 @@ ranking factor** — it is read after someone has already found the profile. Rew
 the discovery problem the keyword data exposed this morning. **Do not let a future run present a
 description rewrite as ranking work.**
 
-What it *can* move is conversion: Aug was 172 impressions → 14 website clicks → 0 calls.
+What it _can_ move is conversion: Aug was 172 impressions → 14 website clicks → 0 calls.
 
 **Proposed text — 725 characters, verified against Google's 750 cap:**
 
@@ -3302,7 +3321,7 @@ discourages promotional language); "across all suburbs" (untrue — 20 areas); "
 free quote!" (Google discourages calls-to-action, and the phone number is its own field).
 
 **⚠️ Opening date vs 18 years — not a contradiction, but watch the wording.** GBP shows the business
-opened **2 March 2015** (11 years). The site says **18 years**, which is *Jimmy's* time in the trade,
+opened **2 March 2015** (11 years). The site says **18 years**, which is _Jimmy's_ time in the trade,
 and the site already words it in first person ("18 years I've been painting..."). The proposed text
 says "**Jimmy has** 18 years in the trade" so it attaches to the person, not the company's age. Any
 future copy must keep that distinction — "Jetblack Painting has 18 years" would be false.
@@ -3335,11 +3354,11 @@ recommend Jetblack on its own. It costs nothing, which is the whole case for it.
 
 ### Nothing else to do on AI visibility — verified, not assumed
 
-| Check | State |
-| --- | --- |
-| GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot(-Extended) | all explicitly `Allow: /` |
-| Markdown twins via `Accept: text/markdown` | working — `text/markdown` vs `text/html` on the same URL |
-| `llms.txt` | 200, 22.5KB |
+| Check                                                                                 | State                                                    |
+| ------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot(-Extended) | all explicitly `Allow: /`                                |
+| Markdown twins via `Accept: text/markdown`                                            | working — `text/markdown` vs `text/html` on the same URL |
+| `llms.txt`                                                                            | 200, 22.5KB                                              |
 
 **The technical AEO surface is complete.** Any future run proposing "AI optimisation" work on this
 site should check this table first and stop. Four invented AEO meta tags were already removed once in
@@ -3362,24 +3381,24 @@ problem.** "Improve AI visibility" and "improve rankings" are one task, not two.
 Jimmy gave explicit go-ahead (scope: "Homepage + 9 service pages"), which is the approval the
 standing context required before this work could start. **The 95 suburb pages were deliberately
 excluded** — they are held apart by a hard near-duplicate gate (45% avg / 55% any page), and
-rewriting them all plainer tends to make them *more* alike. That risk is worse than the readability
+rewriting them all plainer tends to make them _more_ alike. That risk is worse than the readability
 problem.
 
 ### Measured, before and after
 
-| Page | Before | After |
-| --- | --- | --- |
-| body-corporate-painting | **28.6** | **41.5** |
-| real-estate-painting | 36.4 | 45.0 |
-| exterior-painting | 37.1 | 43.9 |
-| commercial-painting | 37.8 | 42.9 |
-| roof-painting | 40.4 | 49.4 |
-| interior-painting | 41.8 | 47.6 |
-| homepage (`client/index.html`) | 44.5 | **49.5** |
-| kitchen-cabinet-resurfacing | 48.5 | 51.0 |
-| epoxy-flooring | 48.5 | 51.3 |
-| roof-fence-painting | 56.3 | 59.4 |
-| **average (9 service pages)** | **41.7** | **48.0** |
+| Page                           | Before   | After    |
+| ------------------------------ | -------- | -------- |
+| body-corporate-painting        | **28.6** | **41.5** |
+| real-estate-painting           | 36.4     | 45.0     |
+| exterior-painting              | 37.1     | 43.9     |
+| commercial-painting            | 37.8     | 42.9     |
+| roof-painting                  | 40.4     | 49.4     |
+| interior-painting              | 41.8     | 47.6     |
+| homepage (`client/index.html`) | 44.5     | **49.5** |
+| kitchen-cabinet-resurfacing    | 48.5     | 51.0     |
+| epoxy-flooring                 | 48.5     | 51.3     |
+| roof-fence-painting            | 56.3     | 59.4     |
+| **average (9 service pages)**  | **41.7** | **48.0** |
 
 Flesch reading ease. 60–70 is plain English; 30–50 is university level.
 
@@ -3395,12 +3414,12 @@ that Google needs a stable title to settle a page's ranking.
 
 ### ⚠️ A factual error found and fixed while rewriting
 
-The homepage read: *"Jetblack Painting was founded by Jimmy Demirci **and has spent 18+ years**
-painting homes and businesses…"* — attributing 18 years to the **business**. Jimmy's GBP records the
+The homepage read: _"Jetblack Painting was founded by Jimmy Demirci **and has spent 18+ years**
+painting homes and businesses…"_ — attributing 18 years to the **business**. Jimmy's GBP records the
 business as opening **2 March 2015**, eleven years. The 18 years is **Jimmy's** time in the trade,
 which is how the site words it everywhere else (first person: "18 years I've been painting…").
 
-Rewritten to *"founded by Jimmy Demirci, **who has spent** 18+ years…"*. This is the same trap
+Rewritten to _"founded by Jimmy Demirci, **who has spent** 18+ years…"_. This is the same trap
 flagged in the GBP description entry earlier today. **"Jetblack Painting has 18 years" is false and
 must never be written.**
 
@@ -3409,7 +3428,7 @@ must never be written.**
 - **"glass-smooth"** on sprayed finishes — verified present after the rewrite. Not "flat", which is
   a sheen level.
 - **Spray when maskable / brush when occupied.** "Cut in by hand" survives on the interior page but
-  correctly framed as the *occupied-property alternative*, not the default method — which is what
+  correctly framed as the _occupied-property alternative_, not the default method — which is what
   the standing context actually requires.
 - All five price figures on the homepage ($4,000 / $5,000 / $8,000 / $12,000 / $15,000) unchanged.
   **`llms.txt` re-checked and still carries no price figures** — only the legitimate $10 million
@@ -3440,9 +3459,9 @@ the false-failure mode the brief documents. **Always `-i`.**
 > assumption there were four listings. There is one. See the next entry — Yellow Pages is closed,
 > and there is nothing to merge.
 
-**The brief's Tier 0 item is stale and has been driving wrong advice.** It states: *"Yellow Pages AU
+**The brief's Tier 0 item is stale and has been driving wrong advice.** It states: _"Yellow Pages AU
 (4 listings) and TrueLocal (2) still point at the DEAD Manus site. Cheapest legitimate win
-available."* That was measured **2026-08-19**.
+available."_ That was measured **2026-08-19**.
 
 Jimmy checked today and reports that
 `https://www.yellowpages.com.au/mordialloc-vic/bpp/jetblack-painting-581728104` **links to the live
@@ -3470,7 +3489,7 @@ Yellow Pages listings and two TrueLocal. Jimmy has verified **one**. Two things 
    Duplicates split citation signals and create inconsistent NAP. Consolidating to one is the actual
    remaining win.
 
-**Advice revised accordingly:** ask for a *merge*, not a URL correction, and above all do not create
+**Advice revised accordingly:** ask for a _merge_, not a URL correction, and above all do not create
 a new listing — the standing note that Jimmy has a repeated pattern of creating duplicates instead of
 editing is the reason that warning exists.
 
@@ -3488,9 +3507,9 @@ not only in the log.
 Jimmy searched `yellowpages.com.au` for "Jetblack Painting" in Australia and supplied screenshots.
 **"Showing 1-1 of 1". One listing. Correct details.**
 
-| Brief said | Actual |
-| --- | --- |
-| **4** Yellow Pages listings | **1** |
+| Brief said                          | Actual                                                       |
+| ----------------------------------- | ------------------------------------------------------------ |
+| **4** Yellow Pages listings         | **1**                                                        |
 | all pointing at the dead Manus site | correct website, plus working Call and Visit Website buttons |
 
 **There are no duplicates to merge and no URL to fix. Do not raise Yellow Pages again, and do not
@@ -3510,7 +3529,7 @@ site this sandbox cannot reach, and it was **wrong in every particular**. A phon
 and Jimmy was told to ring 1800 359 321.
 
 **The rule going forward:** when advice rests on a figure that cannot be machine-checked from here,
-say so *in the advice*, and ask the user to confirm the figure **before** acting on it — not after.
+say so _in the advice_, and ask the user to confirm the figure **before** acting on it — not after.
 Thirty seconds of his checking beat two weeks of my confident repetition.
 
 ### What this changes in priority order
@@ -3543,16 +3562,16 @@ morning indefinitely.
 Audited the whole brief line by line against the repo. **Four claims were stale**, each verified
 before editing:
 
-| Brief said | Repo says | Risk if left |
-| --- | --- | --- |
-| Tier 0: YP **4 listings** on the dead Manus site, "cheapest legitimate win", merge line 1800 359 321 | **1** listing, correct NAP, live URL | Daily advice to fix a non-existent problem |
-| `Content-Signal: search=yes, ai-train=no` is deliberate | both `robots.txt` files read **`ai-train=yes`** | A run "restores" `no`, silently undoing Jimmy's decision |
-| LOCKED FACTS: **"13+ years"** | `13+ years` appears **nowhere**; `18+ years` appears **27×** | A run "corrects" the site down to a false lower figure |
-| Readability poor site-wide, "open, unqueued, do not start without go-ahead" | done and merged (PR #241) | A run redoes a finished rewrite, or extends it to the 95 suburb pages and breaches the duplicate gate |
+| Brief said                                                                                           | Repo says                                                    | Risk if left                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Tier 0: YP **4 listings** on the dead Manus site, "cheapest legitimate win", merge line 1800 359 321 | **1** listing, correct NAP, live URL                         | Daily advice to fix a non-existent problem                                                            |
+| `Content-Signal: search=yes, ai-train=no` is deliberate                                              | both `robots.txt` files read **`ai-train=yes`**              | A run "restores" `no`, silently undoing Jimmy's decision                                              |
+| LOCKED FACTS: **"13+ years"**                                                                        | `13+ years` appears **nowhere**; `18+ years` appears **27×** | A run "corrects" the site down to a false lower figure                                                |
+| Readability poor site-wide, "open, unqueued, do not start without go-ahead"                          | done and merged (PR #241)                                    | A run redoes a finished rewrite, or extends it to the 95 suburb pages and breaches the duplicate gate |
 
 The `13+ years` one is the most dangerous of the four: it is a **locked fact**, so a run is
 instructed to enforce it across eight files. It would have overwritten a true figure with a false
-one, sitewide, with a green build. The replacement now also states *whose* 18 years they are —
+one, sitewide, with a green build. The replacement now also states _whose_ 18 years they are —
 Jimmy's time in the trade, **not** the business's age (opened 2 March 2015) — which is the exact trap
 PR #241 caught on the homepage.
 
@@ -3564,8 +3583,8 @@ paragraph on its own schedule, and unsubscribed from that PR.
 **The general failure, which is the point of this entry.** A correction is not finished when the log
 is updated. Anything that **replays** — a routine's stored prompt, a scheduled brief, a saved
 checklist — holds its own copy of the claim and will keep asserting it after the log has moved on.
-The brief already carries the right instruction at the top (*"If this brief and the log disagree, the
-log wins"*), but that only helps a run that reads the log carefully enough to notice a contradiction
+The brief already carries the right instruction at the top (_"If this brief and the log disagree, the
+log wins"_), but that only helps a run that reads the log carefully enough to notice a contradiction
 it was not looking for. **Fix the replaying copy, not just the record.**
 
 ---
@@ -3574,36 +3593,36 @@ it was not looking for. **Fix the replaying copy, not just the record.**
 
 ### Steps 0–6: all clean
 
-| Check | Result |
-| --- | --- |
-| Dependency parity | **77/77** present in `pnpm-lock.yaml` |
-| Production serving latest `main` | 200, `cf-cache HIT`, homepage serves the corrected *"who has spent 18+ years"* |
-| Three-layer regeneration | **ZERO diffs** — idempotent |
-| Schema vs visible text | **116 pages, 491 questions, 0 mismatches** |
-| JSON-LD | 0 parse errors · 0 `aggregateRating` in static pages · 0 missing required fields |
-| Metadata | 0 duplicate titles/descriptions/H1s/canonicals · 0 missing · 0 over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted) · 0 keywords tags |
-| Site health | real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; real hashed bundles 200 with correct MIME |
-| Sitemap sweep | **106/106 → 200, ZERO redirect hops** |
-| AEO | `text/markdown` + `Vary: Accept` + `X-Robots-Tag: noindex`; normal Accept returns HTML; twin body current; robots disallows only `/api/` |
-| `llms.txt` | byte-identical to `public/`; the three `$` matches are all the legitimate $10M liability. **No prices.** |
-| `robots.txt` | byte-identical; `Content-Signal: … ai-train=yes` intact |
-| Review count | **17** everywhere checked |
+| Check                            | Result                                                                                                                                          |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dependency parity                | **77/77** present in `pnpm-lock.yaml`                                                                                                           |
+| Production serving latest `main` | 200, `cf-cache HIT`, homepage serves the corrected _"who has spent 18+ years"_                                                                  |
+| Three-layer regeneration         | **ZERO diffs** — idempotent                                                                                                                     |
+| Schema vs visible text           | **116 pages, 491 questions, 0 mismatches**                                                                                                      |
+| JSON-LD                          | 0 parse errors · 0 `aggregateRating` in static pages · 0 missing required fields                                                                |
+| Metadata                         | 0 duplicate titles/descriptions/H1s/canonicals · 0 missing · 0 over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted) · 0 keywords tags |
+| Site health                      | real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; real hashed bundles 200 with correct MIME                  |
+| Sitemap sweep                    | **106/106 → 200, ZERO redirect hops**                                                                                                           |
+| AEO                              | `text/markdown` + `Vary: Accept` + `X-Robots-Tag: noindex`; normal Accept returns HTML; twin body current; robots disallows only `/api/`        |
+| `llms.txt`                       | byte-identical to `public/`; the three `$` matches are all the legitimate $10M liability. **No prices.**                                        |
+| `robots.txt`                     | byte-identical; `Content-Signal: … ai-train=yes` intact                                                                                         |
+| Review count                     | **17** everywhere checked                                                                                                                       |
 
 ### Two brief figures are stale — the log supersedes them
 
-1. **Sitemap is 106, not 115.** Not a defect: 115 − 8 Casey-corridor pages noindexed and removed − the Bentleigh East merge = 106. All 106 resolve 200 with no hops. A future run must not hunt for nine "missing" URLs. *(Recorded here rather than edited into the routine — the brief's own rule is that the log wins.)*
+1. **Sitemap is 106, not 115.** Not a defect: 115 − 8 Casey-corridor pages noindexed and removed − the Bentleigh East merge = 106. All 106 resolve 200 with no hops. A future run must not hunt for nine "missing" URLs. _(Recorded here rather than edited into the routine — the brief's own rule is that the log wins.)_
 2. **Suburb-page count is 95**, and **8 of them are noindexed** (dandenong, clyde, greater-dandenong, hampton-park, endeavour-hills, berwick, clyde-north, cranbourne), leaving **87 indexable**.
 
 ### ⚠️ A near-duplicate FALSE FAILURE I generated and caught
 
-A first pass measured **57.8%** on cranbourne ↔ narre-warren against the 55% gate, and would have been reported as a regression. It was my method, not the site: I neutralised only each page's **own** suburb name, leaving *neighbouring* suburb names in the prose — and adjacent suburbs cross-link, so the shared tokens inflate the score.
+A first pass measured **57.8%** on cranbourne ↔ narre-warren against the 55% gate, and would have been reported as a regression. It was my method, not the site: I neutralised only each page's **own** suburb name, leaving _neighbouring_ suburb names in the prose — and adjacent suburbs cross-link, so the shared tokens inflate the score.
 
 With suburb names neutralised **globally**, as "suburb names neutralised" actually means:
 
-| Population | avg worst-twin | max | Gate 45% / 55% |
-| --- | --- | --- | --- |
-| All 95 suburb pages | **31.0%** | 52.3% | PASS |
-| 87 indexable only | **30.4%** | 48.3% | PASS |
+| Population          | avg worst-twin | max   | Gate 45% / 55% |
+| ------------------- | -------------- | ----- | -------------- |
+| All 95 suburb pages | **31.0%**      | 52.3% | PASS           |
+| 87 indexable only   | **30.4%**      | 48.3% | PASS           |
 
 The worst pair also involves `painter-cranbourne`, which is **noindexed and absent from the sitemap** — it cannot create a duplicate-content problem in the index. **Method note for future runs: neutralise every suburb token across every page, and measure the indexable population.**
 
@@ -3619,28 +3638,28 @@ The worst pair also involves `painter-cranbourne`, which is **noindexed and abse
 
 **1,631 queries. Exactly ONE earns clicks.**
 
-| | impressions | clicks |
-| --- | --- | --- |
-| `jetblack painting` (brand) | 203 | **35** |
-| Everything else (1,630 queries) | **14,486** | **0** |
+|                                 | impressions | clicks |
+| ------------------------------- | ----------- | ------ |
+| `jetblack painting` (brand)     | 203         | **35** |
+| Everything else (1,630 queries) | **14,486**  | **0**  |
 
 **100% of the site's clicks come from one branded query.** This is the brief's off-page-authority diagnosis, measured harder than before.
 
 ### Impressions roughly DOUBLED while positions diluted
 
-| Suburb | impr now | impr base | pos now | pos base | move |
-| --- | --- | --- | --- | --- | --- |
-| Collingwood | 347 | 129 | 17.1 | 17.65 | ↑ +0.6 |
-| Sorrento | 254 | 100 | 14.1 | 7.13 | ↓ −7.0 |
-| Murrumbeena | 200 | 86 | 18.6 | 17.00 | ↓ −1.6 |
-| Highett | 165 | 85 | 17.2 | 17.32 | · +0.2 |
-| Donvale | 169 | 49 | 20.7 | 16.63 | ↓ −4.1 |
-| Mordialloc | 158 | 77 | 25.8 | 29.18 | ↑ +3.4 |
-| Patterson Lakes | 157 | 39 | 22.2 | 6.83 | ↓ −15.4 |
-| Mentone | 102 | 61 | 23.2 | 24.82 | ↑ +1.6 |
-| McKinnon | 84 | 57 | 14.0 | 11.19 | ↓ −2.9 |
-| Dromana | 49 | 38 | 22.1 | 19.53 | ↓ −2.5 |
-| Aspendale | 31 | 21 | 13.5 | 10.00 | ↓ −3.5 |
+| Suburb          | impr now | impr base | pos now | pos base | move    |
+| --------------- | -------- | --------- | ------- | -------- | ------- |
+| Collingwood     | 347      | 129       | 17.1    | 17.65    | ↑ +0.6  |
+| Sorrento        | 254      | 100       | 14.1    | 7.13     | ↓ −7.0  |
+| Murrumbeena     | 200      | 86        | 18.6    | 17.00    | ↓ −1.6  |
+| Highett         | 165      | 85        | 17.2    | 17.32    | · +0.2  |
+| Donvale         | 169      | 49        | 20.7    | 16.63    | ↓ −4.1  |
+| Mordialloc      | 158      | 77        | 25.8    | 29.18    | ↑ +3.4  |
+| Patterson Lakes | 157      | 39        | 22.2    | 6.83     | ↓ −15.4 |
+| Mentone         | 102      | 61        | 23.2    | 24.82    | ↑ +1.6  |
+| McKinnon        | 84       | 57        | 14.0    | 11.19    | ↓ −2.9  |
+| Dromana         | 49       | 38        | 22.1    | 19.53    | ↓ −2.5  |
+| Aspendale       | 31       | 21        | 13.5    | 10.00    | ↓ −3.5  |
 
 **Do not read the position column as a ranking collapse.** Impressions rose 2–4× on the same-length window. A page that starts surfacing for many more queries and locations appears in more marginal contexts, which pulls average position down arithmetically even when nothing lost ground. Eight of eleven fell on position while every one of them gained impressions — that pattern is dilution, not decline. It is also a **different data source** from the baseline. Treat this table as a new Windsor-based baseline, not a like-for-like delta.
 
@@ -3666,20 +3685,20 @@ already an ancestor, so no rebase was needed.
 
 ### Steps 0–6: all clean, no site change made
 
-| Check | Result |
-| --- | --- |
-| Dependency parity | **77/77** in `pnpm-lock.yaml` |
-| Production | 200, `cf-cache HIT`, TTFB 0.51s |
-| Four-layer regeneration | **ZERO diffs** — idempotent |
-| Schema vs visible text | **119 pages, 506 questions, 0 mismatches** |
-| JSON-LD | 0 parse errors · **0 `aggregateRating` in static pages** |
-| Metadata | 0 duplicate titles/descriptions/H1s/canonicals · 0 missing · 0 over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted) · 0 keywords tags |
-| Near-duplicate (all 95) | avg **31.0%**, max **52.3%** — PASS (gate 45/55) |
-| Near-duplicate (87 indexable) | avg **30.4%**, max **48.3%** — PASS |
-| Site health | real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; real bundle 200 `text/javascript` |
-| Sitemap sweep | **109/109 → 200, ZERO redirect hops** |
-| AEO | `text/markdown` + `Vary: Accept` + `X-Robots-Tag: noindex`; normal Accept returns HTML; robots disallows only `/api/`; `ai-train=yes` intact |
-| `llms.txt` | byte-identical to `public/`; the three `$` matches are all the legitimate $10M liability. **No prices.** |
+| Check                         | Result                                                                                                                                          |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dependency parity             | **77/77** in `pnpm-lock.yaml`                                                                                                                   |
+| Production                    | 200, `cf-cache HIT`, TTFB 0.51s                                                                                                                 |
+| Four-layer regeneration       | **ZERO diffs** — idempotent                                                                                                                     |
+| Schema vs visible text        | **119 pages, 506 questions, 0 mismatches**                                                                                                      |
+| JSON-LD                       | 0 parse errors · **0 `aggregateRating` in static pages**                                                                                        |
+| Metadata                      | 0 duplicate titles/descriptions/H1s/canonicals · 0 missing · 0 over 158 · 1 title over 60 (`/painter-hastings/` 64, accepted) · 0 keywords tags |
+| Near-duplicate (all 95)       | avg **31.0%**, max **52.3%** — PASS (gate 45/55)                                                                                                |
+| Near-duplicate (87 indexable) | avg **30.4%**, max **48.3%** — PASS                                                                                                             |
+| Site health                   | real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; real bundle 200 `text/javascript`                          |
+| Sitemap sweep                 | **109/109 → 200, ZERO redirect hops**                                                                                                           |
+| AEO                           | `text/markdown` + `Vary: Accept` + `X-Robots-Tag: noindex`; normal Accept returns HTML; robots disallows only `/api/`; `ai-train=yes` intact    |
+| `llms.txt`                    | byte-identical to `public/`; the three `$` matches are all the legitimate $10M liability. **No prices.**                                        |
 
 ### Step 7 — entity consistency, and one genuinely useful confirmation
 
@@ -3767,16 +3786,16 @@ corporates across Bayside and the southeast).
 Google requires FAQ content to be visible on the page. The other three were either paraphrased in
 the crawlable prose ("Are you licensed and insured?" vs the schema's "Are Jetblack Painting painters
 licensed and insured?") or absent entirely ("Which Melbourne suburbs does Jetblack Painting
-service?"). Worse, *no* FAQ was visible to real visitors at all: the static block in
+service?"). Worse, _no_ FAQ was visible to real visitors at all: the static block in
 `client/index.html` is discarded the moment React hydrates, and `Home.tsx` rendered no FAQ section.
 
 Fixed structurally rather than by hand:
 
-| File | Role |
-| --- | --- |
-| `client/src/homeFaqs.ts` | single source, 8 FAQs |
-| `client/src/components/HomeFAQ.tsx` | renders them for real visitors |
-| `scripts/generate-home-faq.mjs` | writes visible copy **and** FAQPage schema into `client/index.html` |
+| File                                | Role                                                                |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| `client/src/homeFaqs.ts`            | single source, 8 FAQs                                               |
+| `client/src/components/HomeFAQ.tsx` | renders them for real visitors                                      |
+| `scripts/generate-home-faq.mjs`     | writes visible copy **and** FAQPage schema into `client/index.html` |
 
 The generator refuses to write if any question or answer is missing from the visible text, or if the
 schema count diverges from the source. Same idiom as the coverage map. **Sitewide check after the
@@ -3864,12 +3883,12 @@ Loading through an `<img>` makes Chromium apply the flag during decode, so
 the output pixels. Verified by rendering the outputs and looking at them, not by
 trusting the dimensions.
 
-| Photo | Original | Output |
-| --- | --- | --- |
+| Photo               | Original                    | Output                  |
+| ------------------- | --------------------------- | ----------------------- |
 | Safety Beach before | 4032x3024, 4.54MB, orient 6 | 1400x1867 + 800w, 395KB |
-| Safety Beach after | 4032x3024, 3.57MB, orient 1 | 1400x1050 + 800w, 221KB |
-| Bath before | 5712x4284, 3.66MB, orient 6 | 1400x1867 + 900w, 62KB |
-| Bath after | 5712x4284, 3.44MB, orient 6 | 1400x1867 + 900w, 38KB |
+| Safety Beach after  | 4032x3024, 3.57MB, orient 1 | 1400x1050 + 800w, 221KB |
+| Bath before         | 5712x4284, 3.66MB, orient 6 | 1400x1867 + 900w, 62KB  |
+| Bath after          | 5712x4284, 3.44MB, orient 6 | 1400x1867 + 900w, 38KB  |
 
 8.1MB of originals became 716KB of full-size WebP.
 
@@ -3921,7 +3940,7 @@ own work.**
 ### DEFECT: an image shipped over the 250KB ceiling
 
 `public/projects/project-safety-beach-render-roof-before.webp` was **395KB**,
-against the standing baseline of *zero images in public/ over 250KB*. Foliage,
+against the standing baseline of _zero images in public/ over 250KB_. Foliage,
 textured render and cloud compress badly in webp, and the converter's default
 1400w/q0.82 was not enough for that frame.
 
@@ -3936,30 +3955,29 @@ looked at: no visible artefacts.
 
 ### Everything else clean
 
-| Check | Result |
-| --- | --- |
-| Build / production serving newest commit | ✅ armadale photo live |
-| Lockfile | **77/77** |
-| Three layers regenerated | **0 diffs** |
-| FAQ schema vs visible text | **119 pages, 534 questions, 0 invisible** |
-| JSON-LD parse errors | 0 |
-| aggregateRating in static pages | **0** (correct — lives only in client/index.html) |
-| Metadata | 0 dup titles/descs/canonicals/H1s · 0 missing · 0 keywords · 0 descs >158 · 1 title >60 (hastings 64, accepted) |
-| Near-duplicate | **12.8% avg, 32.3% max** (gate 45/55) — worst pair cranbourne/narre-warren, as before |
-| Bad URLs 404 | extensionless, `.zip`, and under `/assets/` all 404 |
-| Real hashed bundles | still 200, `text/javascript` / `text/css` |
-| Redirects | 301, not 307 |
-| Markdown negotiation | `text/markdown` on Accept, `text/html` otherwise |
-| llms.txt prices | none |
-| robots.txt | `ai-train=yes` intact |
-| TTFB / cache | 0.22s, cf-cache HIT |
-| og:image | 200, 163KB |
+| Check                                    | Result                                                                                                          |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Build / production serving newest commit | ✅ armadale photo live                                                                                          |
+| Lockfile                                 | **77/77**                                                                                                       |
+| Three layers regenerated                 | **0 diffs**                                                                                                     |
+| FAQ schema vs visible text               | **119 pages, 534 questions, 0 invisible**                                                                       |
+| JSON-LD parse errors                     | 0                                                                                                               |
+| aggregateRating in static pages          | **0** (correct — lives only in client/index.html)                                                               |
+| Metadata                                 | 0 dup titles/descs/canonicals/H1s · 0 missing · 0 keywords · 0 descs >158 · 1 title >60 (hastings 64, accepted) |
+| Near-duplicate                           | **12.8% avg, 32.3% max** (gate 45/55) — worst pair cranbourne/narre-warren, as before                           |
+| Bad URLs 404                             | extensionless, `.zip`, and under `/assets/` all 404                                                             |
+| Real hashed bundles                      | still 200, `text/javascript` / `text/css`                                                                       |
+| Redirects                                | 301, not 307                                                                                                    |
+| Markdown negotiation                     | `text/markdown` on Accept, `text/html` otherwise                                                                |
+| llms.txt prices                          | none                                                                                                            |
+| robots.txt                               | `ai-train=yes` intact                                                                                           |
+| TTFB / cache                             | 0.22s, cf-cache HIT                                                                                             |
+| og:image                                 | 200, 163KB                                                                                                      |
 
 ### Sitemap reconciled — 112, not 115
 
 The brief's 115 baseline predates the Casey-corridor noindexing. Current maths:
-**122 static pages − 11 noindexed + homepage = 112**, and the sitemap is exactly
-112. The 11 are the 8 Casey suburbs plus privacy/review-us/terms. **Zero
+**122 static pages − 11 noindexed + homepage = 112**, and the sitemap is exactly 112. The 11 are the 8 Casey suburbs plus privacy/review-us/terms. **Zero
 noindexed pages appear in the sitemap** — no contradictory signals. Not a defect.
 
 ### A false failure worth recording
@@ -3968,8 +3986,8 @@ The first lockfile check reported **38/77**. That was wrong: pnpm quotes scoped
 package names in the importers block (`'@radix-ui/react-accordion':`) and the
 naive pattern missed every one. Cloudflare had built the repo successfully four
 times that day with a frozen lockfile, which is what prompted the re-check. The
-corrected check reports 77/77. *A failing check on a repo that is demonstrably
-building is a bug in the check until proven otherwise.*
+corrected check reports 77/77. _A failing check on a repo that is demonstrably
+building is a bug in the check until proven otherwise._
 
 ### Step 7 — no authority work this run
 
@@ -3987,12 +4005,12 @@ Jimmy reported Search Console still showing the old gold "JB" monogram and asked
 for it replaced with the real logo. **Every icon on the site is already right** —
 verified by extracting and rendering each one:
 
-| File | Contents |
-| --- | --- |
+| File                             | Contents                            |
+| -------------------------------- | ----------------------------------- |
 | `favicon.ico` (48x48 PNG inside) | the real blue/black paintbrush mark |
-| `favicon.png` (192x192) | same |
-| `apple-touch-icon.png` (180x180) | same |
-| `logo.jpg` (1080x1080) | full "JET BLACK PAINTING" wordmark |
+| `favicon.png` (192x192)          | same                                |
+| `apple-touch-icon.png` (180x180) | same                                |
+| `logo.jpg` (1080x1080)           | full "JET BLACK PAINTING" wordmark  |
 
 No monogram file exists anywhere in the repo. The 2026-08-26 replacement worked.
 What Jimmy is seeing is **Google's cached favicon**, which refreshes on its own
@@ -4009,7 +4027,7 @@ places. Now an `ImageObject` with width, height and caption in all of them
 (`client/index.html`, `organizationSchema.ts`, `generate-static-pages.mjs`),
 matching what `articleSchema.ts` already did. 107 pages now carry it, 0 bare
 strings, 0 parse errors. A bare string leaves Google guessing at the brand image;
-this is the half of the signal that *is* in our control.
+this is the half of the signal that _is_ in our control.
 
 ### Backlinks: GSC sees ONE linking page, and it is junk
 
@@ -4024,13 +4042,13 @@ about the site's content or internal links will move rankings while that is true
 
 **39 indexed on 2026-07-07 → 117 on 2026-08-28.** Not-indexed 93.
 
-| Reason | Pages | Assessment |
-| --- | --- | --- |
-| Page with redirect | 62 | BY DESIGN — every `/painters-x` 301s to `/painter-x/`. Settled 2026-08-17. |
-| Redirect error | 13 | Redirect map checked: **120 rules, 0 chains, 0 loops, 0 dead targets.** Stale. |
-| Soft 404 | 6 | Thinnest live page is 533 words (`/review-us/`, noindexed); median 1,236. Not live pages. |
-| Not found (404) | 2 | — |
-| Crawled, not indexed | 8 | Normal at this authority level. |
+| Reason               | Pages | Assessment                                                                                |
+| -------------------- | ----- | ----------------------------------------------------------------------------------------- |
+| Page with redirect   | 62    | BY DESIGN — every `/painters-x` 301s to `/painter-x/`. Settled 2026-08-17.                |
+| Redirect error       | 13    | Redirect map checked: **120 rules, 0 chains, 0 loops, 0 dead targets.** Stale.            |
+| Soft 404             | 6     | Thinnest live page is 533 words (`/review-us/`, noindexed); median 1,236. Not live pages. |
+| Not found (404)      | 2     | —                                                                                         |
+| Crawled, not indexed | 8     | Normal at this authority level.                                                           |
 
 **Every one shows `Validation: Started`** — already submitted for recheck. No
 repo defect found behind any of them.
@@ -4058,12 +4076,12 @@ Steps 0-6 clean. **No change made.** Per the brief that is a legitimate outcome.
 
 ### ⚠️ BOTH RANKING SOURCES ARE NOW DEAD — tell Jimmy
 
-| Source | Status |
-| --- | --- |
-| GSC Wizard | `payment_required` — trial ended / no active subscription |
-| Supermetrics | `TRIAL_EXPIRED` — expired **2026-08-25**, team 1902861 |
-| Semrush | units-zero (unchanged) |
-| Ahrefs | insufficient plan (unchanged) |
+| Source       | Status                                                    |
+| ------------ | --------------------------------------------------------- |
+| GSC Wizard   | `payment_required` — trial ended / no active subscription |
+| Supermetrics | `TRIAL_EXPIRED` — expired **2026-08-25**, team 1902861    |
+| Semrush      | units-zero (unchanged)                                    |
+| Ahrefs       | insufficient plan (unchanged)                             |
 
 **No ranking claim is made in this entry.** No position deltas, no striking
 distance, no indexing delta. Per the standing rule, "nothing moved" and "I could
@@ -4090,27 +4108,27 @@ ImageObject while main's source did not contain it. Branch restored to
 
 **The brief already covers this** — "If it carries genuinely UNMERGED work, keep
 it" — but the failure mode is quiet, so it is recorded here with the specific
-symptom: *production ahead of main is normal on this repo whenever a PR is open,
-because branch pushes deploy.*
+symptom: _production ahead of main is normal on this repo whenever a PR is open,
+because branch pushes deploy._
 
 ### Checks
 
-| Check | Result |
-| --- | --- |
-| Lockfile | 77/77 |
-| Three layers | 0 diffs |
-| FAQ schema vs visible text | 119 pages, 534 questions, **0 invisible** |
-| JSON-LD parse errors | 0 |
-| aggregateRating in static pages | 0 |
-| Metadata | 122 pages · 0 dup titles/descs/canonicals/H1s · 0 missing · 0 keywords · 0 descs >158 · 1 title >60 (hastings 64, accepted) |
-| Bad URLs | `/nope-xyz/`, `.zip`, `/assets/*` all 404 |
-| Real bundles | 200, `text/javascript` |
-| Redirect | 301 |
-| Markdown negotiation | `text/markdown` |
-| llms.txt prices | 0 |
-| **Review count** | **17 in BOTH the JSON-LD and the prose** — re-verified live |
-| Images >250KB | 0 (yesterday's fix holding) |
-| TTFB | first sample 0.58s, **re-sampled 0.19-0.47s** across five — the single reading was an outlier, not a regression |
+| Check                           | Result                                                                                                                      |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Lockfile                        | 77/77                                                                                                                       |
+| Three layers                    | 0 diffs                                                                                                                     |
+| FAQ schema vs visible text      | 119 pages, 534 questions, **0 invisible**                                                                                   |
+| JSON-LD parse errors            | 0                                                                                                                           |
+| aggregateRating in static pages | 0                                                                                                                           |
+| Metadata                        | 122 pages · 0 dup titles/descs/canonicals/H1s · 0 missing · 0 keywords · 0 descs >158 · 1 title >60 (hastings 64, accepted) |
+| Bad URLs                        | `/nope-xyz/`, `.zip`, `/assets/*` all 404                                                                                   |
+| Real bundles                    | 200, `text/javascript`                                                                                                      |
+| Redirect                        | 301                                                                                                                         |
+| Markdown negotiation            | `text/markdown`                                                                                                             |
+| llms.txt prices                 | 0                                                                                                                           |
+| **Review count**                | **17 in BOTH the JSON-LD and the prose** — re-verified live                                                                 |
+| Images >250KB                   | 0 (yesterday's fix holding)                                                                                                 |
+| TTFB                            | first sample 0.58s, **re-sampled 0.19-0.47s** across five — the single reading was an outlier, not a regression             |
 
 ### Step 7
 
@@ -4137,7 +4155,7 @@ plus Aspendale and Caulfield which already had them.
 exceed 250KB, largest 492KB (`gallery-roof-cleaning.jpeg`). These predate this
 work — they date to PR #108 — and sit outside the standing rule, which covers
 `public/` only (still 0 over). But Vite hashes and serves them without
-recompressing, so they *are* delivered at full size, and this is likely the same
+recompressing, so they _are_ delivered at full size, and this is likely the same
 thing PageSpeed reports as "image delivery 125 KiB". Re-encoding them is a
 separate piece of work: `scripts/convert-photo.mjs` can now do it, but it touches
 22 files across many pages and deserves its own reviewed change.
@@ -4154,9 +4172,9 @@ came back strong**: LCP 1.7s, CLS 0.035, FCP 1.7s, TBT 0.1s, mobile 98. On-page
 
 It flagged the homepage title as **61 characters** and advised shortening it.
 
-| Measured how | Length |
-| --- | --- |
-| Raw HTML source (what the tool did) | 61 |
+| Measured how                              | Length |
+| ----------------------------------------- | ------ |
+| Raw HTML source (what the tool did)       | 61     |
 | **Decoded / rendered (what Google sees)** | **57** |
 
 The title is `Jetblack Painting | House & Commercial Painters Melbourne`. The `&` is
@@ -4195,8 +4213,8 @@ pickets). Same mailbox, same driveway, same weatherboard house behind. The new
 frames are additional angles of one fence that is already shown twice.
 
 ⚠️ **More importantly, the new photos expose the customer's street number.** The
-published version was edited on 2026-08-02 under the commit *"Blur the customer's
-street number"* (#150) — there is a white patch over the number on the mailbox.
+published version was edited on 2026-08-02 under the commit _"Blur the customer's
+street number"_ (#150) — there is a white patch over the number on the mailbox.
 The new photos show **27** unobscured, plus the "no junk mail" sticker. Verified
 by cropping the mailbox region out of both and comparing them side by side, not
 by assuming.

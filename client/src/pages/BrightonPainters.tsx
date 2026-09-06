@@ -5,56 +5,64 @@ export default function BrightonPainters() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": `Premium House Painting Services in ${suburb}`,
-    "provider": {
+    name: `Premium House Painting Services in ${suburb}`,
+    provider: {
       "@type": "HomeAndConstructionBusiness",
-      "name": "Jetblack Painting",
-      "telephone": "0432 077 782",
-      "url": "https://jetblackpainting.com",
-      "address": {
+      name: "Jetblack Painting",
+      telephone: "0432 077 782",
+      url: "https://jetblackpainting.com",
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "Mordialloc",
-        "postalCode": "3195",
-        "addressRegion": "VIC",
-        "addressCountry": "AU"
-      }
+        addressLocality: "Mordialloc",
+        postalCode: "3195",
+        addressRegion: "VIC",
+        addressCountry: "AU",
+      },
     },
-    "areaServed": {
+    areaServed: {
       "@type": "City",
-      "name": suburb
+      name: suburb,
     },
-    "description": `Jetblack Painting offers luxury interior and exterior painting for Brighton's heritage and modern homes. Expert colour consulting and premium finishes.`,
-    "mainEntityOfPage": {
+    description: `Jetblack Painting offers luxury interior and exterior painting for Brighton's heritage and modern homes. Expert colour consulting and premium finishes.`,
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}`
-    }
+      "@id": `https://jetblackpainting.com/painter-${suburb.toLowerCase()}`,
+    },
   };
 
   const faqs = [
     {
       question: `Do you specialize in Brighton's heritage Victorian and Edwardian homes?`,
-      answer: `Yes, we are specialists in restoring and painting Brighton's iconic heritage properties. We understand the specific requirements for Victorian and Edwardian homes, including lead paint safety, meticulous timber restoration, and authentic heritage colour schemes.`
+      answer: `Yes, we are specialists in restoring and painting Brighton's iconic heritage properties. We understand the specific requirements for Victorian and Edwardian homes, including lead paint safety, meticulous timber restoration, and authentic heritage colour schemes.`,
     },
     {
       question: `How do you handle painting for Brighton's beachside properties?`,
-      answer: `Brighton's coastal location requires premium protection. We use high-performance, salt-resistant coatings and specialized application techniques to ensure your beachside home remains protected from the elements while maintaining its luxury aesthetic.`
+      answer: `Brighton's coastal location requires premium protection. We use high-performance, salt-resistant coatings and specialized application techniques to ensure your beachside home remains protected from the elements while maintaining its luxury aesthetic.`,
     },
     {
-      question: "Are your painters licensed and insured to work on luxury Brighton residences?",
-      answer: "Absolutely. All our painters are fully licensed, and we carry $10 million in public liability insurance. We pride ourselves on our professional conduct and respect for the high-end properties we work on in Brighton."
+      question:
+        "Are your painters licensed and insured to work on luxury Brighton residences?",
+      answer:
+        "Absolutely. All our painters are fully licensed, and we carry $10 million in public liability insurance. We pride ourselves on our professional conduct and respect for the high-end properties we work on in Brighton.",
     },
     {
-      question: "Do I need a permit to repaint a heritage-overlay home in Brighton?",
-      answer: "Whether a permit is needed depends on the colour and the element. Bayside's heritage overlay generally controls what's visible from the street on a contributory building — repainting an existing colour scheme like-for-like is usually exempt, but a significant colour change to a street-facing facade, or work to original render detailing and joinery, can trigger a planning permit. We check the specific overlay and property grading before quoting and tell you plainly whether a permit applies, rather than assuming either way."
+      question:
+        "Do I need a permit to repaint a heritage-overlay home in Brighton?",
+      answer:
+        "Whether a permit is needed depends on the colour and the element. Bayside's heritage overlay generally controls what's visible from the street on a contributory building — repainting an existing colour scheme like-for-like is usually exempt, but a significant colour change to a street-facing facade, or work to original render detailing and joinery, can trigger a planning permit. We check the specific overlay and property grading before quoting and tell you plainly whether a permit applies, rather than assuming either way.",
     },
     {
-      question: "Can you paint a brand new architect-built home in Brighton, not just heritage restorations?",
-      answer: "Yes — a large share of our Brighton work now is new architect-designed builds rather than heritage restoration, reflecting how much of the suburb has gone through knockdown-rebuild in the last decade. New render needs to cure fully before coating and gets tested for moisture and alkalinity first, since painting too early traps moisture and causes early failure. We work with builders and owners on the handover timeline so the first coat goes on when the substrate is actually ready, not just when the scaffold comes down."
+      question:
+        "Can you paint a brand new architect-built home in Brighton, not just heritage restorations?",
+      answer:
+        "Yes — a large share of our Brighton work now is new architect-designed builds rather than heritage restoration, reflecting how much of the suburb has gone through knockdown-rebuild in the last decade. New render needs to cure fully before coating and gets tested for moisture and alkalinity first, since painting too early traps moisture and causes early failure. We work with builders and owners on the handover timeline so the first coat goes on when the substrate is actually ready, not just when the scaffold comes down.",
     },
     {
-      question: "How do you protect an occupied, furnished home during painting in Brighton?",
-      answer: "Full drop sheeting, furniture moved and covered rather than worked around, and floors protected before anything is opened. On a high-value property we walk the scope with you first so there's no ambiguity about what's being painted and what isn't, and the crew works room by room so the rest of the house stays liveable. Every job finishes with a walk-through before we consider it done."
-    }
+      question:
+        "How do you protect an occupied, furnished home during painting in Brighton?",
+      answer:
+        "Full drop sheeting, furniture moved and covered rather than worked around, and floors protected before anything is opened. On a high-value property we walk the scope with you first so there's no ambiguity about what's being painted and what isn't, and the crew works room by room so the rest of the house stays liveable. Every job finishes with a walk-through before we consider it done.",
+    },
   ];
 
   return (
@@ -62,8 +70,46 @@ export default function BrightonPainters() {
       suburb={suburb}
       title="Brighton Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Brighton — heritage homes, modern beachside residences and premium materials. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`Interior repaint in ${suburb}. Walls rolled out in a room emptied of furniture but with the carpet, skirting and cornice still in place \u2014 which is exactly when rolling beats spraying.`}
+      projectSummary={`Three ${suburb} jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — an interior repaint rolled out room by room, through to the stair hall, and a new architect-designed build by the pool.`}
       projectImages={[
+        {
+          // Cropped in from the left. The original frame carried an enamel "11"
+          // house-number plate on the gate post, and street numbers do not go on
+          // this site — one was deliberately blurred on 2026-08-02, and fence
+          // photos were declined in #256 for republishing an address that had
+          // already been removed. RECT=600,0,2268,4032 puts the plate outside
+          // the frame. The after and during frames were checked too and carry
+          // no number. Do not widen this crop.
+          //
+          // All three exterior frames are 1200x2133 so the before and after line
+          // up in the grid — the after is a 1242x2208 phone frame and the before
+          // was cropped to the same ratio deliberately.
+          src: "/projects/project-brighton-exterior-before.webp",
+          small: "/projects/project-brighton-exterior-before-800.webp",
+          width: 1200,
+          height: 2133,
+          alt: `Weatherboard ${suburb} home in olive and cream before repainting, with a Jetblack Painting painter working the upper storey from the verandah roof`,
+          caption:
+            "Before. Olive weatherboard with cream trim — the paint was sound, the colour had dated. Working the upper storey off the verandah roof.",
+        },
+        {
+          src: "/projects/project-brighton-exterior-after.webp",
+          small: "/projects/project-brighton-exterior-after-800.webp",
+          width: 1200,
+          height: 2133,
+          alt: `The same ${suburb} weatherboard home after repainting, in dark charcoal with white fretwork, verandah posts and window frames`,
+          caption:
+            "After, from the same spot. Weatherboards in a dark charcoal with the fretwork, posts and window frames in white — on a house with this much detail the trim is the whole point of the colour.",
+        },
+        {
+          src: "/projects/project-brighton-exterior-cutting-in.webp",
+          small: "/projects/project-brighton-exterior-cutting-in-800.webp",
+          width: 1200,
+          height: 2133,
+          alt: `A Jetblack Painting painter on a ladder cutting in the verandah fretwork by brush during a ${suburb} exterior repaint`,
+          caption:
+            "Cutting in the verandah fretwork. There is no spraying this — every bracket and spindle is done by hand, off a ladder, over drop sheets.",
+        },
         {
           src: "/projects/project-brighton-interior-rolling.webp",
           small: "/projects/project-brighton-interior-rolling-800.webp",
@@ -71,7 +117,40 @@ export default function BrightonPainters() {
           height: 2146,
           alt: `Jimmy Demirci of Jetblack Painting rolling a wall with an extension pole during an interior repaint in ${suburb}`,
           caption:
-            "Rolling out a wall on an extension pole. The room is clear of furniture but the carpet and trim are staying, so it is rolled rather than sprayed \u2014 spraying here would mean masking every surface in the room to save an hour on the walls.",
+            "Rolling out a wall on an extension pole. The room is clear of furniture but the carpet and trim are staying, so it is rolled rather than sprayed — spraying here would mean masking every surface in the room to save an hour on the walls.",
+        },
+        {
+          // Deliberately last. The grid is two columns, so a fifth image sits
+          // alone on the final row — which works here because this is the
+          // finished result and the four above it are the work that got there.
+          // If a sixth is ever added, pair it with this one rather than pushing
+          // it down to a row of its own.
+          src: "/projects/project-brighton-stair-hall.webp",
+          small: "/projects/project-brighton-stair-hall-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Finished stair hall in a ${suburb} home after an interior repaint, curved staircase with white risers and balusters against timber treads, handrail and floorboards`,
+          caption:
+            "The stair hall finished. A curved string, turned balusters and an arched fretwork surround are all cut in by hand, and there is nowhere on a staircase to hide a wobbly line — it sits at eye level and you walk past it every day.",
+        },
+        {
+          // Jimmy supplied two interiors of this job as well. They are withheld
+          // deliberately and permanently: the crew in both wears "Quest
+          // Paintings LTD" shirts with an 021 number, not Jetblack's. Another
+          // company's branding should never be what a visitor finds when they
+          // zoom into Jetblack's portfolio. Jimmy confirmed on 2026-09-06 to
+          // run the pool exterior only. Do not add those two later.
+          //
+          // This frame carries no people and no branding: the glazing was
+          // zoomed and holds only bare trees, a neighbour's brickwork, a step
+          // ladder and drop sheets.
+          src: "/projects/project-brighton-architect-pool-house.webp",
+          small: "/projects/project-brighton-architect-pool-house-800.webp",
+          width: 1400,
+          height: 1050,
+          alt: `Architect-designed ${suburb} home after repainting, white rendered walls and a cantilevered upper storey above full-height glazing and a black lap pool`,
+          caption:
+            "A new architect-designed build. Flat white planes this size are the hardest thing in the trade to paint well — there is no detail anywhere to break the surface up, so a single roller lap, patch or join in the render reads straight across the whole wall the moment the light rakes along it.",
         },
       ]}
       neighbouringSuburbs={[
@@ -107,7 +186,8 @@ export default function BrightonPainters() {
           ],
         },
         {
-          heading: "Heritage Overlays Around the Golden Mile and Church Street Precinct",
+          heading:
+            "Heritage Overlays Around the Golden Mile and Church Street Precinct",
           body: [
             "Much of Brighton sits within Bayside's heritage overlay, particularly through the Golden Mile and the streets around Church Street and New Street. What that means for a repaint varies by property grading and by what's actually visible from the street — a like-for-like recolour of an existing scheme is usually straightforward, while a significant change to a contributory building's street-facing facade can require a planning permit first.",
             "We check the specific overlay and grading for the property before quoting, so you know upfront whether a permit conversation is needed rather than finding out halfway through a job. For homes not under overlay, there's more freedom in colour and finish — we scope both the same way, with the constraints made clear from the first visit.",

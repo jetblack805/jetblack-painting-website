@@ -19,7 +19,18 @@ export function organizationSchema() {
     "url": "https://jetblackpainting.com",
     "telephone": "+61432077782",
     "email": "jimmy@jetblackpainting.com",
-    "logo": "https://jetblackpainting.com/logo.jpg",
+    // ImageObject rather than a bare URL string: Google resolves a brand
+    // logo more confidently when the dimensions and caption are declared, and
+    // a bare string leaves it to guess. Jimmy reported Search still showing an
+    // old gold monogram on 2026-09-05 — the favicon files were already correct,
+    // so this tightens the other half of the brand-image signal.
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jetblackpainting.com/logo.jpg",
+      "width": 1080,
+      "height": 1080,
+      "caption": "Jetblack Painting",
+    },
     "image": "https://jetblackpainting.com/og-image.jpg",
     "description": "Melbourne's top-rated residential and commercial painting company with 18+ years experience",
     "address": {

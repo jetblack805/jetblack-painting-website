@@ -3951,3 +3951,145 @@ building is a bug in the check until proven otherwise.*
 Steps 0-6 turned up a real defect, so per the brief the run fixed that and
 stopped. Ranking data was not pulled. Tier 0 remains closed; growing past 17
 reviews remains the top authority priority.
+
+---
+
+## 2026-09-05 — Jimmy's GSC export: logo, coverage, links
+
+### The monogram: the SITE is already correct, Google's cache is not
+
+Jimmy reported Search Console still showing the old gold "JB" monogram and asked
+for it replaced with the real logo. **Every icon on the site is already right** —
+verified by extracting and rendering each one:
+
+| File | Contents |
+| --- | --- |
+| `favicon.ico` (48x48 PNG inside) | the real blue/black paintbrush mark |
+| `favicon.png` (192x192) | same |
+| `apple-touch-icon.png` (180x180) | same |
+| `logo.jpg` (1080x1080) | full "JET BLACK PAINTING" wordmark |
+
+No monogram file exists anywhere in the repo. The 2026-08-26 replacement worked.
+What Jimmy is seeing is **Google's cached favicon**, which refreshes on its own
+schedule and can lag months. Nothing in the codebase can force it; re-requesting
+indexing of the homepage in GSC is the only lever, and it is his to pull.
+
+⚠️ **Do NOT "fix" the favicon by swapping in the full wordmark.** At 48x48 a
+wordmark is an unreadable smudge. The paintbrush is lifted from the "T" of his
+own logo and is the correct mark for that size. Changing it would be a downgrade
+dressed as a fix.
+
+**What was actually changed:** the schema `logo` was a bare URL string in three
+places. Now an `ImageObject` with width, height and caption in all of them
+(`client/index.html`, `organizationSchema.ts`, `generate-static-pages.mjs`),
+matching what `articleSchema.ts` already did. 107 pages now carry it, 0 bare
+strings, 0 parse errors. A bare string leaves Google guessing at the brand image;
+this is the half of the signal that *is* in our control.
+
+### Backlinks: GSC sees ONE linking page, and it is junk
+
+The Latest Links export contains exactly one row:
+`https://www.addurl.in/domains/141469/...` last crawled 2026-05-08 — an
+auto-submit directory. **This is the authority diagnosis confirmed from Google's
+own mouth.** Ahrefs reported 44 links / 31 domains; GSC, which is authoritative
+for what Google actually counts, reports one, and it is spam-adjacent. Nothing
+about the site's content or internal links will move rankings while that is true.
+
+### Coverage: indexing is growing, the issues are historical
+
+**39 indexed on 2026-07-07 → 117 on 2026-08-28.** Not-indexed 93.
+
+| Reason | Pages | Assessment |
+| --- | --- | --- |
+| Page with redirect | 62 | BY DESIGN — every `/painters-x` 301s to `/painter-x/`. Settled 2026-08-17. |
+| Redirect error | 13 | Redirect map checked: **120 rules, 0 chains, 0 loops, 0 dead targets.** Stale. |
+| Soft 404 | 6 | Thinnest live page is 533 words (`/review-us/`, noindexed); median 1,236. Not live pages. |
+| Not found (404) | 2 | — |
+| Crawled, not indexed | 8 | Normal at this authority level. |
+
+**Every one shows `Validation: Started`** — already submitted for recheck. No
+repo defect found behind any of them.
+
+### Performance: one query earns every click
+
+3 months: `jetblack painting` 35 clicks. Every other query **zero** clicks on
+170-247 impressions each — fitzroy, bentleigh, collingwood, carlton, brunswick,
+cheltenham, caulfield, camberwell.
+
+28 days surfaced something new: **four fence queries in the top nine by
+impressions** — `fence painting melbourne` (highest), `fence painters melbourne`,
+`fence painting services melbourne`, `melbourne fence painting`. Fence is
+currently served only by `/services/roof-fence-painting/`, a combined page whose
+title and H1 split between two services, while **roof has its own dedicated page
+as well**. That asymmetry is worth raising with Jimmy — but a dedicated fence
+page overlaps an existing ranking page, so it is an architecture decision, not a
+drive-by change. Raised, not actioned.
+
+---
+
+## 2026-09-05 20:05 UTC — daily audit run
+
+Steps 0-6 clean. **No change made.** Per the brief that is a legitimate outcome.
+
+### ⚠️ BOTH RANKING SOURCES ARE NOW DEAD — tell Jimmy
+
+| Source | Status |
+| --- | --- |
+| GSC Wizard | `payment_required` — trial ended / no active subscription |
+| Supermetrics | `TRIAL_EXPIRED` — expired **2026-08-25**, team 1902861 |
+| Semrush | units-zero (unchanged) |
+| Ahrefs | insufficient plan (unchanged) |
+
+**No ranking claim is made in this entry.** No position deltas, no striking
+distance, no indexing delta. Per the standing rule, "nothing moved" and "I could
+not see" are different findings and this is the second.
+
+The only ranking data available now is what **Jimmy exports himself** from Search
+Console — as he did on 2026-09-05. That export is the source for the previous
+entry and remains the freshest picture. If he wants automated tracking to
+continue, one of the two subscriptions has to be renewed; otherwise every future
+run is blind on rankings and should say so rather than guessing.
+
+### ⚠️ A BRANCH HAZARD CAUGHT BEFORE IT DID DAMAGE
+
+The brief's first instruction is to recreate the working branch from main each
+run. Doing that today would have **reverted the logo fix out of production**.
+
+PR #253 is open, unmerged, and Cloudflare deploys branch pushes — so production
+was serving `78b4b2ec` (the ImageObject logo) while `main` sat two commits behind
+at `b050548`. Resetting to main and pushing would have rolled production back.
+
+Caught by checking the live site against main: the homepage served the
+ImageObject while main's source did not contain it. Branch restored to
+`78b4b2ec`, nothing pushed from the wrong base.
+
+**The brief already covers this** — "If it carries genuinely UNMERGED work, keep
+it" — but the failure mode is quiet, so it is recorded here with the specific
+symptom: *production ahead of main is normal on this repo whenever a PR is open,
+because branch pushes deploy.*
+
+### Checks
+
+| Check | Result |
+| --- | --- |
+| Lockfile | 77/77 |
+| Three layers | 0 diffs |
+| FAQ schema vs visible text | 119 pages, 534 questions, **0 invisible** |
+| JSON-LD parse errors | 0 |
+| aggregateRating in static pages | 0 |
+| Metadata | 122 pages · 0 dup titles/descs/canonicals/H1s · 0 missing · 0 keywords · 0 descs >158 · 1 title >60 (hastings 64, accepted) |
+| Bad URLs | `/nope-xyz/`, `.zip`, `/assets/*` all 404 |
+| Real bundles | 200, `text/javascript` |
+| Redirect | 301 |
+| Markdown negotiation | `text/markdown` |
+| llms.txt prices | 0 |
+| **Review count** | **17 in BOTH the JSON-LD and the prose** — re-verified live |
+| Images >250KB | 0 (yesterday's fix holding) |
+| TTFB | first sample 0.58s, **re-sampled 0.19-0.47s** across five — the single reading was an outlier, not a regression |
+
+### Step 7
+
+Nothing actionable. Both ranking tools are down, Tier 0 stays closed, and the one
+evidence-backed opportunity on the table — the fence-query asymmetry from
+Jimmy's own export — is an architecture decision awaiting his answer, not a
+drive-by change.

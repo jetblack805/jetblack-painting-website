@@ -241,6 +241,8 @@ export const KNOWN_PATHS = new Set([
   "/projects/project-armadale-high-st-complete.webp",
   "/projects/project-armadale-high-st-half-painted-800.webp",
   "/projects/project-armadale-high-st-half-painted.webp",
+  "/projects/project-armadale-ladder-two-tone-800.webp",
+  "/projects/project-armadale-ladder-two-tone.webp",
   "/projects/project-armadale-period-entry-800.webp",
   "/projects/project-armadale-period-entry.webp",
   "/projects/project-aspendale-eaves-skylights-after-800.webp",

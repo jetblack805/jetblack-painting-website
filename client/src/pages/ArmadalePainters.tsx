@@ -22,7 +22,7 @@ export default function ArmadalePainters() {
       suburb={suburb}
       title="Armadale Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Armadale — Victorian, Edwardian terraces and renovated period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`Commercial facade work on High Street, ${suburb}. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through. Also a period weatherboard entry in ${suburb}, finished in a single off-white with the door in black.`}
+      projectSummary={`Commercial facade work on High Street, ${suburb}. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through. Also ladder work on a two-tone commercial elevation, and a period weatherboard entry in ${suburb} finished in a single off-white with the door in black.`}
       projectImages={[
         {
           // Jimmy supplied a third frame of this job — the full "before", with
@@ -57,6 +57,23 @@ export default function ArmadalePainters() {
           alt: `Two Jetblack Painting painters in branded workwear repainting a rendered commercial facade in ${suburb} from an elevated work platform`,
           caption:
             "Commercial render repaint worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one — the painting is the same, the getting to it is not.",
+        },
+        {
+          // Cropped from the bottom: the original frame caught the top of a
+          // second person's head at the lower-left edge, masked and not
+          // identifiable, but an untidy intrusion on the crop line.
+          // RECT=0,0,1241,1545 removes it.
+          //
+          // Worth recording after the frames withheld in #258 and #259: the
+          // workwear here reads JET BLACK PAINTING and is verifiably Jetblack's
+          // own, which is exactly why this one is safe to caption as such.
+          src: "/projects/project-armadale-ladder-two-tone.webp",
+          small: "/projects/project-armadale-ladder-two-tone-800.webp",
+          width: 1200,
+          height: 1494,
+          alt: `A Jetblack Painting painter in branded orange workwear on an extension ladder, working the upper cream section of a two-tone commercial wall in ${suburb} above a dark navy band`,
+          caption:
+            "Ladder work on a commercial wall. Nothing on this elevation is decorative \u2014 a flat face, a straight band where the cream meets the navy, and filler marks still showing where the wall was made good before any topcoat went near it.",
         },
         {
           // Fourth image, which fills the two-column grid as two clean rows and

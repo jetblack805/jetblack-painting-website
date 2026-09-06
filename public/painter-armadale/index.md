@@ -86,7 +86,7 @@ Yes. We provide free, no-obligation written quotes across Armadale and the surro
 
 ## Recent work in Armadale
 
-Commercial facade work in Armadale. Render repaint on a shopfront and office building, worked off an elevated platform so the upper wall gets the same preparation as the parts people can reach.
+Commercial facade work on High Street, Armadale. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through.
 
 **Jetblack Painting** — House Painters Armadale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

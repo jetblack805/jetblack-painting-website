@@ -273,6 +273,8 @@ export const KNOWN_PATHS = new Set([
   "/projects/project-caulfield-scaffold-masked-windows.webp",
   "/projects/project-caulfield-street-before-800.webp",
   "/projects/project-caulfield-street-before.webp",
+  "/projects/project-hampton-rendered-facade-800.webp",
+  "/projects/project-hampton-rendered-facade.webp",
   "/projects/project-keysborough-entry-door-repaint-800.webp",
   "/projects/project-keysborough-entry-door-repaint.webp",
   "/projects/project-mordialloc-exterior-repaint-jimmy-800.webp",

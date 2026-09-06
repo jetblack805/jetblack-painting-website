@@ -56,6 +56,7 @@ const SprayVsBrushPaintingMelbourne = lazy(() => import("./pages/blog/SprayVsBru
 const PaintingMelbourneWinter = lazy(() => import("./pages/blog/PaintingMelbourneWinter"));
 const WhyExteriorPaintFails = lazy(() => import("./pages/blog/WhyExteriorPaintFails"));
 const PaintSheenLevelsExplained = lazy(() => import("./pages/blog/PaintSheenLevelsExplained"));
+const PaintingOverDarkWalls = lazy(() => import("./pages/blog/PaintingOverDarkWalls"));
 // </generated-blog-imports>
 const ArmadalePainters = lazy(() => import("./pages/ArmadalePainters"));
 const BerwickPainters = lazy(() => import("./pages/BerwickPainters"));
@@ -355,6 +356,7 @@ function Router() {
       <Route path={"/blog/painting-melbourne-winter"} component={PaintingMelbourneWinter} />
       <Route path={"/blog/why-exterior-paint-fails"} component={WhyExteriorPaintFails} />
       <Route path={"/blog/paint-sheen-levels-explained"} component={PaintSheenLevelsExplained} />
+      <Route path={"/blog/painting-over-dark-walls"} component={PaintingOverDarkWalls} />
 {/* </generated-blog-routes> */}
       <Route path={"/blog/best-paint-colors-melbourne"} component={BestPaintColours2025} />
       <Route path={"/blog/brighton-painters-guide"} component={BrightonPainters} />

@@ -24,6 +24,8 @@ export const KNOWN_PATHS = new Set([
   "/blog/paint-sheen-levels-explained/index.md",
   "/blog/painting-melbourne-winter/",
   "/blog/painting-melbourne-winter/index.md",
+  "/blog/painting-over-dark-walls/",
+  "/blog/painting-over-dark-walls/index.md",
   "/blog/prepare-home-for-painting/",
   "/blog/prepare-home-for-painting/index.md",
   "/blog/spray-vs-brush-painting-melbourne/",

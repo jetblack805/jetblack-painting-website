@@ -23,6 +23,7 @@ const articleMeta: Record<string, { published: string; modified: string; section
   "/blog/painting-melbourne-winter": { published: "2026-09-04", modified: "2026-09-04", section: "Method" },
   "/blog/why-exterior-paint-fails": { published: "2026-09-04", modified: "2026-09-04", section: "Guide" },
   "/blog/paint-sheen-levels-explained": { published: "2026-09-05", modified: "2026-09-05", section: "Guide" },
+  "/blog/painting-over-dark-walls": { published: "2026-09-06", modified: "2026-09-06", section: "Method" },
 // </generated-blog-meta>
 };
 
@@ -112,6 +113,15 @@ export default function Blog() {
     // <generated-blog-cards>
     {
       id: 1000,
+      title: "Painting Over Dark Walls Without the Extra Coats",
+      excerpt: "Going from a dark feature wall to a light colour looks simple until the second coat still shows shadow through it. The fix is the primer, not a fourth coat of topcoat.",
+      date: "September 2026",
+      category: "Method",
+      readTime: "5 min read",
+      slug: "/blog/painting-over-dark-walls"
+    },
+    {
+      id: 1001,
       title: "Matt, Low Sheen, Satin, Gloss: Which Goes Where",
       excerpt: "Sheen decides how a wall handles light, scrubbing and imperfection. Picking it by appearance alone is how people end up with a hallway they cannot clean.",
       date: "September 2026",
@@ -120,7 +130,7 @@ export default function Blog() {
       slug: "/blog/paint-sheen-levels-explained"
     },
     {
-      id: 1001,
+      id: 1002,
       title: "Why Exterior Paint Fails: Reading the Symptoms",
       excerpt: "Exterior paint does not just wear out. It fails in specific patterns, and each pattern points at a different cause. Here is how to read what your walls are telling you before anyone opens a tin.",
       date: "September 2026",
@@ -129,7 +139,7 @@ export default function Blog() {
       slug: "/blog/why-exterior-paint-fails"
     },
     {
-      id: 1002,
+      id: 1003,
       title: "Can You Paint Through a Melbourne Winter?",
       excerpt: "Most exterior work can continue through winter, but the limits are real. Surface temperature and overnight condensation decide the day, not the month on the calendar.",
       date: "September 2026",
@@ -138,7 +148,7 @@ export default function Blog() {
       slug: "/blog/painting-melbourne-winter"
     },
     {
-      id: 1003,
+      id: 1004,
       title: "Spray or Brush? When Each Method Belongs",
       excerpt: "Spraying gives a finish brushing cannot match, but it needs an empty, maskable room. Here is the rule we actually work to, and why an occupied house is usually brushed and rolled.",
       date: "September 2026",

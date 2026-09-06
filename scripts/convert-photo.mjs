@@ -24,6 +24,15 @@
 // so what we draw is already the right way up. The output carries no EXIF,
 // which is fine precisely because the rotation is now baked into the pixels.
 //
+// RECT=x,y,w,h crops an explicit rectangle before resizing, in POST-EXIF
+// coordinates — the same space naturalWidth/naturalHeight report, so a rect
+// measured off a decoded preview is the rect this applies. Added for Jimmy's
+// Chadstone mould job, which arrived as a single pre-composed before/after
+// collage with "Before"/"After" baked into it in a cartoon font. The site's
+// own before/after pattern is a two-up grid with real figcaptions, so the
+// halves are cut out and captioned by the page instead of shipping someone
+// else's overlay text across a premium-positioned site.
+//
 // Emits <basename>.webp at maxWidth and <basename>-900.webp, matching the
 // srcSet convention every other gallery image uses.
 
@@ -58,7 +67,9 @@ function loadPlaywright() {
 
 const [input, basename, maxWidthArg] = process.argv.slice(2);
 if (!input || !basename) {
-  console.error("usage: node scripts/convert-photo.mjs <input> <output-basename> [maxWidth]");
+  console.error(
+    "usage: node scripts/convert-photo.mjs <input> <output-basename> [maxWidth]",
+  );
   process.exit(1);
 }
 const MAX_WIDTH = Number(maxWidthArg) || 1400;
@@ -67,22 +78,40 @@ const MAX_WIDTH = Number(maxWidthArg) || 1400;
 // that at the default quality even at sensible dimensions, so allow it to be
 // tuned per photo rather than dropping the whole library's quality.
 const QUALITY = Number(process.env.QUALITY) || 0.82;
+// RECT=x,y,w,h — explicit crop rectangle, applied before any scaling.
+const RECT = process.env.RECT
+  ? (() => {
+      const n = process.env.RECT.split(",").map((v) => Number(v.trim()));
+      if (n.length !== 4 || n.some((v) => !Number.isFinite(v) || v < 0)) {
+        throw new Error(
+          `RECT must be four non-negative numbers "x,y,w,h", got "${process.env.RECT}"`,
+        );
+      }
+      return { x: n[0], y: n[1], w: n[2], h: n[3] };
+    })()
+  : null;
 if (!fs.existsSync(input)) throw new Error(`input not found: ${input}`);
 
 const pw = loadPlaywright();
 const browser = await pw.chromium.launch({
-  executablePath: fs.existsSync("/opt/pw-browsers/chromium") ? "/opt/pw-browsers/chromium" : undefined,
+  executablePath: fs.existsSync("/opt/pw-browsers/chromium")
+    ? "/opt/pw-browsers/chromium"
+    : undefined,
 });
 const page = await browser.newPage();
 
 // The page sits on about:blank, which cannot read file:// URLs, so the bytes
 // are handed to the browser as a data: URL instead of a path.
-const mime = /\.png$/i.test(input) ? "image/png" : /\.webp$/i.test(input) ? "image/webp" : "image/jpeg";
+const mime = /\.png$/i.test(input)
+  ? "image/png"
+  : /\.webp$/i.test(input)
+    ? "image/webp"
+    : "image/jpeg";
 const url = `data:${mime};base64,${fs.readFileSync(path.resolve(input)).toString("base64")}`;
 
 async function render(width) {
   return page.evaluate(
-    async ({ url, width, quality, cropLetterbox }) => {
+    async ({ url, width, quality, cropLetterbox, rect }) => {
       const img = new Image();
       img.decoding = "sync";
       await new Promise((res, rej) => {
@@ -96,6 +125,16 @@ async function render(width) {
         sw = img.naturalWidth,
         sh = img.naturalHeight;
 
+      // Explicit rectangle first: everything below it then operates on the
+      // cropped region. Clamped so an off-by-a-few rect cannot ask the canvas
+      // for pixels outside the image (which would silently letterbox black).
+      if (rect) {
+        sx = Math.min(rect.x, sw - 1);
+        sy = Math.min(rect.y, sh - 1);
+        sw = Math.min(rect.w, sw - sx);
+        sh = Math.min(rect.h, sh - sy);
+      }
+
       // Optional letterbox trim. Screen grabs of video arrive with black bars
       // top and bottom; shipping those would put black stripes across the page.
       // Scan inward for the first row that is not near-black. Opt-in, because a
@@ -107,19 +146,19 @@ async function render(width) {
         const pctx = probe.getContext("2d", { willReadFrequently: true });
         pctx.drawImage(img, 0, 0);
         const rowIsDark = (y) => {
-          const d = pctx.getImageData(0, y, sw, 1).data;
+          const d = pctx.getImageData(sx, y, sw, 1).data;
           for (let i = 0; i < d.length; i += 4 * 16) {
             if (d[i] > 24 || d[i + 1] > 24 || d[i + 2] > 24) return false;
           }
           return true;
         };
-        let top = 0;
-        while (top < sh / 3 && rowIsDark(top)) top++;
-        let bottom = sh - 1;
-        while (bottom > (sh * 2) / 3 && rowIsDark(bottom)) bottom--;
-        if (top > 0 || bottom < sh - 1) {
-          sy = top;
+        let top = sy;
+        while (top < sy + sh / 3 && rowIsDark(top)) top++;
+        let bottom = sy + sh - 1;
+        while (bottom > sy + (sh * 2) / 3 && rowIsDark(bottom)) bottom--;
+        if (top > sy || bottom < sy + sh - 1) {
           sh = bottom - top + 1;
+          sy = top;
         }
       }
 
@@ -135,7 +174,13 @@ async function render(width) {
       ctx.drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
       return { data: c.toDataURL("image/webp", quality), w, h, sw, sh, sy };
     },
-    { url, width, quality: QUALITY, cropLetterbox: process.env.CROP === "letterbox" },
+    {
+      url,
+      width,
+      quality: QUALITY,
+      cropLetterbox: process.env.CROP === "letterbox",
+      rect: RECT,
+    },
   );
 }
 
@@ -153,7 +198,11 @@ for (const [suffix, width] of [
 await browser.close();
 
 const first = results[0];
-console.log(`source ${first.sw}x${first.sh} (after EXIF rotation${first.sy ? `, letterbox trimmed ${first.sy}px` : ""})`);
+console.log(
+  `source ${first.sw}x${first.sh} (after EXIF rotation${RECT ? `, cropped to ${RECT.w}x${RECT.h} at ${RECT.x},${RECT.y}` : ""}${!RECT && first.sy ? `, letterbox trimmed ${first.sy}px` : ""})`,
+);
 for (const r of results) {
-  console.log(`  ${path.basename(r.out)}  ${r.w}x${r.h}  ${(r.bytes / 1024).toFixed(0)} KB`);
+  console.log(
+    `  ${path.basename(r.out)}  ${r.w}x${r.h}  ${(r.bytes / 1024).toFixed(0)} KB`,
+  );
 }

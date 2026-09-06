@@ -83,6 +83,10 @@ Definitely. Many Keysborough homes are modern estate builds with rendered façad
 
 Yes. We provide free, no-obligation written quotes across Keysborough and the surrounding Greater Dandenong area, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 or request a quote online.
 
+## Recent work in Keysborough
+
+A Keysborough exterior repaint on an established brick home. The brick was left exactly as it was and everything around it changed — roof, fascia, gutter, window frames, front door and the porch slab underfoot. On a house like this one that is the whole decision: nothing structural moves, and the place still reads as a different house from the footpath.
+
 **Jetblack Painting** — House Painters Keysborough | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -106,7 +106,7 @@ Yes. We are based in Mordialloc, and we paint shopfronts, cafes and hospitality 
 
 ## Recent work in Mordialloc
 
-Jimmy on an exterior repaint here in Mordialloc. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a Mordialloc quote gets done on site rather than estimated over the phone.
+A Mordialloc weatherboard exterior taken from pale grey to charcoal, plus Jimmy on the tools on another job here. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a Mordialloc quote gets done on site rather than estimated over the phone.
 
 **Jetblack Painting** — House Painters Mordialloc | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

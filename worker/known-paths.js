@@ -259,6 +259,8 @@ export const KNOWN_PATHS = new Set([
   "/projects/project-brighton-exterior-cutting-in.webp",
   "/projects/project-brighton-interior-rolling-800.webp",
   "/projects/project-brighton-interior-rolling.webp",
+  "/projects/project-brighton-stair-hall-800.webp",
+  "/projects/project-brighton-stair-hall.webp",
   "/projects/project-caulfield-before-after-800.webp",
   "/projects/project-caulfield-before-after.webp",
   "/projects/project-caulfield-eaves-prep-800.webp",

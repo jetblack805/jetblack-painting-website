@@ -70,7 +70,7 @@ export default function BrightonPainters() {
       suburb={suburb}
       title="Brighton Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Brighton — heritage homes, modern beachside residences and premium materials. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`Two ${suburb} jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — and an interior repaint rolled out room by room.`}
+      projectSummary={`Two ${suburb} jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — and an interior repaint rolled out room by room, through to the stair hall.`}
       projectImages={[
         {
           // Cropped in from the left. The original frame carried an enamel "11"
@@ -118,6 +118,20 @@ export default function BrightonPainters() {
           alt: `Jimmy Demirci of Jetblack Painting rolling a wall with an extension pole during an interior repaint in ${suburb}`,
           caption:
             "Rolling out a wall on an extension pole. The room is clear of furniture but the carpet and trim are staying, so it is rolled rather than sprayed \u2014 spraying here would mean masking every surface in the room to save an hour on the walls.",
+        },
+        {
+          // Deliberately last. The grid is two columns, so a fifth image sits
+          // alone on the final row \u2014 which works here because this is the
+          // finished result and the four above it are the work that got there.
+          // If a sixth is ever added, pair it with this one rather than pushing
+          // it down to a row of its own.
+          src: "/projects/project-brighton-stair-hall.webp",
+          small: "/projects/project-brighton-stair-hall-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Finished stair hall in a ${suburb} home after an interior repaint, curved staircase with white risers and balusters against timber treads, handrail and floorboards`,
+          caption:
+            "The stair hall finished. A curved string, turned balusters and an arched fretwork surround are all cut in by hand, and there is nowhere on a staircase to hide a wobbly line \u2014 it sits at eye level and you walk past it every day.",
         },
       ]}
       neighbouringSuburbs={[

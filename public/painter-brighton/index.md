@@ -110,7 +110,7 @@ Full drop sheeting, furniture moved and covered rather than worked around, and f
 
 ## Recent work in Brighton
 
-Two Brighton jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — and an interior repaint rolled out room by room.
+Two Brighton jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — and an interior repaint rolled out room by room, through to the stair hall.
 
 **Jetblack Painting** — House Painters Brighton | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

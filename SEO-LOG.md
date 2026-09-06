@@ -4158,3 +4158,33 @@ clean and exit 0. A gate that has never failed is not known to work.
 
 ⚠️ **Future audit runs: use this script rather than an inline glob.** The inline
 version silently skipped the homepage for weeks.
+
+### 2026-09-06 — fence photos declined: same job, and the street number is exposed
+
+Jimmy sent three fence photos to add to the fence service category. **Not added.**
+
+**They are the same job already published.** `/services/roof-fence-painting/`
+already carries this exact fence as a before/after — `gallery-fence-picket-before`
+(bare timber, yellow masking) and `gallery-fence-picket-after` (finished white
+pickets). Same mailbox, same driveway, same weatherboard house behind. The new
+frames are additional angles of one fence that is already shown twice.
+
+⚠️ **More importantly, the new photos expose the customer's street number.** The
+published version was edited on 2026-08-02 under the commit *"Blur the customer's
+street number"* (#150) — there is a white patch over the number on the mailbox.
+The new photos show **27** unobscured, plus the "no junk mail" sticker. Verified
+by cropping the mailbox region out of both and comparing them side by side, not
+by assuming.
+
+**Adding them as supplied would have republished a customer's address that was
+deliberately removed four weeks earlier.**
+
+If fence photos are ever added from this job again, the number must be masked
+first — `scripts/convert-photo.mjs` runs through a Chromium canvas and can draw
+the patch during conversion.
+
+**What the page actually needs is a DIFFERENT fence job.** It currently shows
+one painted picket fence, a black deck and an oiled merbau screen. Four fence
+queries sat in the top nine by impressions on the 28-day GSC export, and they all
+land on a page showing a single painted fence. A paling, Colorbond or stained
+fence would show range; another angle of this one would not.

@@ -4093,3 +4093,26 @@ Nothing actionable. Both ranking tools are down, Tier 0 stays closed, and the on
 evidence-backed opportunity on the table — the fence-query asymmetry from
 Jimmy's own export — is an architecture decision awaiting his answer, not a
 drive-by change.
+
+**Property maintenance got its photo — the last page without one.** A
+tradesperson on a ladder drilling into a bracket at the ceiling line of a
+hallway. 1206x1175, orientation 1, converted to webp + 900w (38KB / 25KB).
+
+It replaced `about-team-at-work.webp`, a generic crew shot that showed painting.
+This page sells repair and upkeep to managers and committees, so a drill and a
+tool belt is the honest image and a painting photo was selling the wrong thing.
+`About.tsx` still uses the old file, so nothing is orphaned. The tradesperson is
+**not** in branded workwear in this shot and the alt text does not claim he is.
+
+**Photo coverage is now complete** across every page that needed one: Mordialloc,
+Safety Beach, Armadale, Brighton, bathroom resurfacing, property maintenance,
+plus Aspendale and Caulfield which already had them.
+
+⚠️ **Noted, not actioned:** 22 source images in `client/src/assets/images/`
+exceed 250KB, largest 492KB (`gallery-roof-cleaning.jpeg`). These predate this
+work — they date to PR #108 — and sit outside the standing rule, which covers
+`public/` only (still 0 over). But Vite hashes and serves them without
+recompressing, so they *are* delivered at full size, and this is likely the same
+thing PageSpeed reports as "image delivery 125 KiB". Re-encoding them is a
+separate piece of work: `scripts/convert-photo.mjs` can now do it, but it touches
+22 files across many pages and deserves its own reviewed change.

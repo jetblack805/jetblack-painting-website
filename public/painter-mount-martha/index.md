@@ -87,6 +87,10 @@ Mount Martha has a diverse housing mix — older weatherboard beach houses and f
 
 Yes. We provide free, no-obligation written quotes across Mount Martha and the surrounding Mornington Peninsula area, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 or submit a request online — we're usually able to come out and quote within a few days.
 
+## Recent work in Mount Martha
+
+A Mount Martha exterior repaint on a hillside home above the bay. Grey walls with every post, beam, fascia and window surround cut in white — on a house shaped like this one the trim is what does the work, because the eye follows the horizontal lines of the balconies rather than the wall colour.
+
 **Jetblack Painting** — House Painters Mount Martha | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

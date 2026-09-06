@@ -4116,3 +4116,45 @@ recompressing, so they *are* delivered at full size, and this is likely the same
 thing PageSpeed reports as "image delivery 125 KiB". Re-encoding them is a
 separate piece of work: `scripts/convert-photo.mjs` can now do it, but it touches
 22 files across many pages and deserves its own reviewed change.
+
+---
+
+## 2026-09-06 — third-party audit: a false positive, and a real gap it exposed
+
+Jimmy ran the site through ai-audit.searchmarketinggroup.co. **Core Web Vitals
+came back strong**: LCP 1.7s, CLS 0.035, FCP 1.7s, TBT 0.1s, mobile 98. On-page
+94/100.
+
+### The one recommendation is WRONG — do not act on it
+
+It flagged the homepage title as **61 characters** and advised shortening it.
+
+| Measured how | Length |
+| --- | --- |
+| Raw HTML source (what the tool did) | 61 |
+| **Decoded / rendered (what Google sees)** | **57** |
+
+The title is `Jetblack Painting | House & Commercial Painters Melbourne`. The `&` is
+written `&amp;` in source — five characters instead of one. Google measures what
+it renders. **Shortening this title would make it worse for no reason.** The
+standing rule "measure on DECODED text" exists for exactly this.
+
+### The real finding: the homepage was never in the metadata audit
+
+Chasing the flag exposed something worse. Every daily audit globbed
+`public/**/index.html` — which **does not match `client/index.html`**. The
+homepage is the one page that does not go through generate-static-pages.mjs, so
+the single most important page on the site had been outside the metadata
+baseline the whole time. A third-party tool found it only because it audited the
+homepage directly, which nothing here was doing.
+
+`scripts/check-metadata.mjs` now covers **both layers, 124 pages**, measures
+decoded text, carries the `/painter-hastings/` exception explicitly, and exits
+non-zero so it can gate a run. Wired up as `pnpm check-metadata`.
+
+**Positive control run, not assumed:** injecting a 76-character homepage title
+made it report `/ title 76 > 60` and exit 1; restoring the real title returned
+clean and exit 0. A gate that has never failed is not known to work.
+
+⚠️ **Future audit runs: use this script rather than an inline glob.** The inline
+version silently skipped the homepage for weeks.

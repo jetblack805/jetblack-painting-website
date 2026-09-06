@@ -20,7 +20,8 @@
     "generate-markdown": "node scripts/generate-markdown.mjs",
     "generate-known-paths": "node scripts/generate-known-paths.mjs",
     "indexnow": "node scripts/indexnow.mjs",
-    "indexnow:changed": "node scripts/indexnow-on-deploy.mjs"
+    "indexnow:changed": "node scripts/indexnow-on-deploy.mjs",
+    "check-metadata": "node scripts/check-metadata.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -10,10 +10,15 @@ import { lazy, Suspense } from "react";
 
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 
-// Jimmy's own team on site. This page is aimed at managers and committees who
-// are buying reliability rather than a finish, so the honest image is the crew
-// working, not a styled interior.
-import imgTeamAtWork from "@/assets/images/about-team-at-work.webp";
+// Repair work at the ceiling line of a hallway — a drill and a tool belt, not a
+// brush. That is the honest image for this page: managers and committees are
+// buying someone who turns up and fixes things, and a styled interior would sell
+// the wrong thing. Replaced a generic crew photo that showed painting instead.
+//
+// Note the tradesperson is NOT in branded workwear in this shot, so the alt text
+// does not claim it. Supplied by Jimmy 2026-09-06.
+import imgCeilingRepair from "@/assets/images/gallery-maintenance-ceiling-repair.webp";
+import imgCeilingRepair900 from "@/assets/images/gallery-maintenance-ceiling-repair-900.webp";
 
 const DESCRIPTION =
   "Painting and property maintenance for Melbourne landlords, agents and body corporates. Repairs, touch-ups, repaints and scheduled upkeep. Free quotes.";
@@ -100,19 +105,22 @@ export default function PropertyMaintenance() {
 
       <section className="py-12 bg-[#131316]">
         <div className="container">
-          <figure className="m-0 max-w-3xl">
+          <figure className="m-0 max-w-2xl">
             <img
-              src={imgTeamAtWork}
-              width={1400}
-              height={1050}
+              src={imgCeilingRepair}
+              srcSet={`${imgCeilingRepair900} 900w, ${imgCeilingRepair} 1206w`}
+              sizes="(max-width: 768px) 100vw, 672px"
+              width={1206}
+              height={1175}
               loading="lazy"
               decoding="async"
-              alt="The Jetblack Painting team working on site in branded workwear on a Melbourne property"
+              alt="A Jetblack Painting tradesperson on a ladder drilling into a bracket at the ceiling line during repair work in a Melbourne hallway"
               className="w-full rounded-lg"
             />
             <figcaption className="text-[#8B8B90] text-sm mt-3">
-              The same crew every visit. For managed properties that consistency is the service —
-              you are not briefing a different contractor each time something needs attention.
+              Most maintenance calls start with a drill rather than a brush. Fixing what is behind
+              the finish — the loose fixing, the cracked join, the cause of the stain — is what
+              stops the same repair coming back next year.
             </figcaption>
           </figure>
         </div>

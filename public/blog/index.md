@@ -60,6 +60,10 @@ Exterior paint does not just wear out. It fails in specific patterns, and each p
 
 Sheen decides how a wall handles light, scrubbing and imperfection. Picking it by appearance alone is how people end up with a hallway they cannot clean.
 
+### Painting Over Dark Walls Without the Extra Coats
+
+Going from a dark feature wall to a light colour looks simple until the second coat still shows shadow through it. The fix is the primer, not a fourth coat of topcoat.
+
 ## Read the full articles
 
 Open any article below for the full guide.
@@ -75,6 +79,7 @@ Open any article below for the full guide.
 - [Can You Paint Through a Melbourne Winter?](/blog/painting-melbourne-winter/)
 - [Why Exterior Paint Fails: Reading the Symptoms](/blog/why-exterior-paint-fails/)
 - [Matt, Low Sheen, Satin, Gloss: Which Goes Where](/blog/paint-sheen-levels-explained/)
+- [Painting Over Dark Walls Without the Extra Coats](/blog/painting-over-dark-walls/)
 
 **Jetblack Painting** — Jetblack Painting Blog | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

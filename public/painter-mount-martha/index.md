@@ -89,7 +89,7 @@ Yes. We provide free, no-obligation written quotes across Mount Martha and the s
 
 ## Recent work in Mount Martha
 
-A Mount Martha exterior repaint on a hillside home above the bay. Grey walls with every post, beam, fascia and window surround cut in white — on a house shaped like this one the trim is what does the work, because the eye follows the horizontal lines of the balconies rather than the wall colour.
+A Mount Martha exterior repaint on a hillside home above the bay. Grey walls with every post, beam, fascia and window surround cut in white — on a house shaped like this one the trim is what does the work, because the eye follows the horizontal lines of the balconies rather than the wall colour. Inside, grey through the hall above white beaded panelling, with the timber floors and stairs left as timber.
 
 **Jetblack Painting** — House Painters Mount Martha | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

@@ -86,6 +86,10 @@ Yes. Weatherboard is a Hampton staple, and coastal timber needs particular care 
 
 Absolutely. As a local Bayside painter based nearby in Mordialloc, we provide free written quotes across Hampton with the full scope and preparation included. Call Jimmy on 0432 077 782 or submit a request online.
 
+## Recent work in Hampton
+
+A two-storey rendered facade in Hampton. Three tones and nothing else: greige across the render, white on the posts, gable battens and window surrounds, charcoal through the roofline and gutters.
+
 **Jetblack Painting** — House Painters Hampton | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

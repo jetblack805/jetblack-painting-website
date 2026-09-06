@@ -106,8 +106,33 @@ A run that investigates, finds nothing worth changing, and says so is a successf
 | **Bing Webmaster Tools** | ⚠️ **Now reachable, untested** | GSC Wizard ships a Bing suite (`get_bing_query_stats`, `get_bing_crawl_issues`, …). Never exercised — verify before quoting |
 | **Apple Business Connect** | ❌ **No access** | No connector exists |
 | Competitor intelligence | ❌ Largely unavailable | Semrush out of API units; Ahrefs returns "Insufficient plan" |
-| Instagram | ⚠️ Read-only via Supermetrics | `ds_id="IGI"`. Cannot post |
+| Instagram | ✅ **Metadata yes / pixels no** — Windsor `instagram`, connected 2026-09-06 | See the note below before promising Jimmy a photo |
 | The site itself | ✅ Full | curl + repo. Most reliable source |
+
+### Instagram — you can read the catalogue, you cannot download the photos
+
+Jimmy asked repeatedly for photos to be pulled off `instagram.com/jetblack_painting`. Settled
+2026-09-06, after five routes were tried. Do not re-litigate this from scratch:
+
+- **Windsor `instagram`** (account `17841408037108241`) reads the **full media catalogue back to
+  2018** — `media_shortcode`, `media_type`, `timestamp`, `media_caption`, `media_permalink`,
+  `media_url`, likes and comments. ~100 posts. This is the useful route: it turns "scroll your
+  camera roll and guess" into a named, dated shortlist.
+- **The image bytes are unreachable.** `media_url` resolves to `scontent-*.cdninstagram.com`,
+  which the egress proxy refuses at CONNECT (`403`). Verified against a live signed URL, not
+  assumed. There is no workaround and none should be attempted.
+- **vidIQ `vidiq_ig_profile_reels`** returns Reels with cover thumbnails rendered inline. Useful
+  for *seeing* what a clip contains. **Reels only** — it rejects image posts
+  (`not a video (mediaType=Image)`), and the covers are small thumbnails, not publishable files.
+- `curl`, `WebFetch` and the Graph API are all blocked at the domain.
+
+> **The practical rule:** read Instagram to decide *which* photo is wanted, then ask Jimmy to send
+> that original from his phone. That is the only path that has ever put a photo on the site.
+
+Windsor's Instagram connector also exposes **write** actions (`create_image_post`,
+`create_carousel_post`, `create_story`, `reply_to_comment`, …). Posting to Jimmy's Instagram is
+therefore now technically possible — which the old "cannot post" note said was impossible. It
+still requires his explicit confirmation of the specific post, every time.
 
 ### GSC Wizard — the primary ranking-data path since 2026-08-27
 

@@ -5,16 +5,16 @@ export default function KeysboroughPainters() {
   const faqs = [
     {
       question: `Are you based near ${suburb}?`,
-      answer: `Yes. Jetblack Painting is based just nearby in Mordialloc, so we're a genuinely local painter for ${suburb}. That means fast quotes, easy site visits and a team that knows the area's homes and estates well — we're not a call centre dispatching from the other side of Melbourne.`
+      answer: `Yes. Jetblack Painting is based just nearby in Mordialloc, so we're a genuinely local painter for ${suburb}. That means fast quotes, easy site visits and a team that knows the area's homes and estates well — we're not a call centre dispatching from the other side of Melbourne.`,
     },
     {
       question: `Do you paint new estate homes in ${suburb}?`,
-      answer: `Definitely. Many ${suburb} homes are modern estate builds with rendered façades and large open interiors that need crisp, seamless finishes. We use premium Dulux and Taubmans systems and take extra care with preparation on rendered surfaces so the topcoat sits cleanly and holds up through Melbourne's climate.`
+      answer: `Definitely. Many ${suburb} homes are modern estate builds with rendered façades and large open interiors that need crisp, seamless finishes. We use premium Dulux and Taubmans systems and take extra care with preparation on rendered surfaces so the topcoat sits cleanly and holds up through Melbourne's climate.`,
     },
     {
       question: `Do you offer free quotes in ${suburb}?`,
-      answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and the surrounding Greater Dandenong area, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 or request a quote online.`
-    }
+      answer: `Yes. We provide free, no-obligation written quotes across ${suburb} and the surrounding Greater Dandenong area, with the full scope and preparation included up front. Call Jimmy on 0432 077 782 or request a quote online.`,
+    },
   ];
 
   return (
@@ -22,6 +22,27 @@ export default function KeysboroughPainters() {
       suburb={suburb}
       title="Keysborough Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Keysborough — established brick family homes and commercial buildings. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`A ${suburb} exterior repaint on an established brick home. The brick was left exactly as it was and everything around it changed — roof, fascia, gutter, window frames, front door and the porch slab underfoot. On a house like this one that is the whole decision: nothing structural moves, and the place still reads as a different house from the footpath.`}
+      projectImages={[
+        {
+          // Cropped in from the left. The original frame carried the house
+          // number in cursive lettering on the brick, and street numbers do not
+          // go on this site — one was deliberately blurred on 2026-08-02, and
+          // fence photos were declined in #256 for republishing an address that
+          // had already been removed. RECT=504,605,2520,3360 puts the number
+          // outside the frame rather than blurring it.
+          //
+          // 1200x1600 at quality 0.74: brick texture and grass, which webp
+          // handles badly. At the default this was over the 250KB ceiling that
+          // the speed baseline sets for anything in public/.
+          src: "/projects/project-keysborough-entry-door-repaint.webp",
+          small: "/projects/project-keysborough-entry-door-repaint-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Entry of a ${suburb} brick home after an exterior repaint, with a navy front door, dark grey fascia and gutter, a black tile roof and a repainted porch slab`,
+          caption: `A ${suburb} entry after repainting. Navy on the door, dark grey through the fascia and gutter, the tile roof brought back to black and the porch slab recoated — the brick itself untouched.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Dandenong", link: "/painter-dandenong" },

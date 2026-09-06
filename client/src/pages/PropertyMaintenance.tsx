@@ -19,6 +19,10 @@ const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 // does not claim it. Supplied by Jimmy 2026-09-06.
 import imgCeilingRepair from "@/assets/images/gallery-maintenance-ceiling-repair.webp";
 import imgCeilingRepair900 from "@/assets/images/gallery-maintenance-ceiling-repair-900.webp";
+import imgMouldBefore from "@/assets/images/gallery-maintenance-mould-ceiling-before.webp";
+import imgMouldBefore900 from "@/assets/images/gallery-maintenance-mould-ceiling-before-900.webp";
+import imgMouldAfter from "@/assets/images/gallery-maintenance-mould-ceiling-after.webp";
+import imgMouldAfter900 from "@/assets/images/gallery-maintenance-mould-ceiling-after-900.webp";
 
 const DESCRIPTION =
   "Painting and property maintenance for Melbourne landlords, agents and body corporates. Repairs, touch-ups, repaints and scheduled upkeep. Free quotes.";
@@ -57,7 +61,8 @@ export default function PropertyMaintenance() {
         "Yes. Every job carries the same 5-year written workmanship guarantee and the same $10 million public liability cover, regardless of size. A half-day make-good is guaranteed on the same terms as a full exterior repaint.",
     },
     {
-      question: "Which Melbourne suburbs do you cover for property maintenance?",
+      question:
+        "Which Melbourne suburbs do you cover for property maintenance?",
       answer:
         "We work across Bayside, Kingston, Glen Eira, Stonnington, the southeast and the Mornington Peninsula from our base in Mordialloc — including Brighton, Bentleigh, Caulfield, Mentone, Sandringham, Cheltenham, Keysborough and surrounding suburbs.",
     },
@@ -87,10 +92,13 @@ export default function PropertyMaintenance() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Property Maintenance Melbourne</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Property Maintenance Melbourne
+            </h1>
             <p className="text-xl text-gray-300 mb-6">
-              Painting and upkeep for landlords, property managers and body corporates — make-goods,
-              repairs, touch-ups and scheduled maintenance across Bayside and Melbourne's southeast.
+              Painting and upkeep for landlords, property managers and body
+              corporates — make-goods, repairs, touch-ups and scheduled
+              maintenance across Bayside and Melbourne's southeast.
             </p>
             <a
               href="tel:0432077782"
@@ -118,11 +126,56 @@ export default function PropertyMaintenance() {
               className="w-full rounded-lg"
             />
             <figcaption className="text-[#8B8B90] text-sm mt-3">
-              Most maintenance calls start with a drill rather than a brush. Fixing what is behind
-              the finish — the loose fixing, the cracked join, the cause of the stain — is what
-              stops the same repair coming back next year.
+              Most maintenance calls start with a drill rather than a brush.
+              Fixing what is behind the finish — the loose fixing, the cracked
+              join, the cause of the stain — is what stops the same repair
+              coming back next year.
             </figcaption>
           </figure>
+
+          {/* Chadstone mould treatment and repaint. Jimmy sent this as a single
+              pre-composed collage with "Before"/"After" set into it in a cartoon
+              font. The two halves were cut back out (scripts/convert-photo.mjs,
+              RECT=) so the page labels them the way every other pair on the site
+              is labelled — the overlay would have been the one cheap-looking
+              thing on a page selling a premium service. */}
+          <div className="grid gap-4 md:grid-cols-2 mt-10">
+            <figure className="m-0">
+              <img
+                src={imgMouldBefore}
+                srcSet={`${imgMouldBefore900} 900w, ${imgMouldBefore} 1394w`}
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1394}
+                height={1859}
+                loading="lazy"
+                decoding="async"
+                alt="Mould and lifting paint across a bathroom ceiling in Chadstone before treatment, with water staining spreading out from the exhaust vent"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-[#8B8B90] text-sm mt-3">
+                Before. Mould across the ceiling and paint lifting in sheets,
+                with water staining spreading out from the exhaust vent.
+              </figcaption>
+            </figure>
+            <figure className="m-0">
+              <img
+                src={imgMouldAfter}
+                srcSet={`${imgMouldAfter900} 900w, ${imgMouldAfter} 1394w`}
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1394}
+                height={1859}
+                loading="lazy"
+                decoding="async"
+                alt="The same Chadstone bathroom ceiling after mould treatment and repainting by Jetblack Painting, finished clean and white around the exhaust vent"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-[#8B8B90] text-sm mt-3">
+                After. The same ceiling and exhaust vent, treated and repainted.
+                Painting straight over mould without treating it first only
+                hides it — the treatment is the part that lasts.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -138,21 +191,24 @@ export default function PropertyMaintenance() {
               Upkeep, Not Just Repaints
             </h2>
             <p className="text-[#B4B4B8] mb-4">
-              Most painting businesses are set up for the big job — the full interior, the whole
-              exterior. A managed property rarely needs that. It needs the hallway made good before
-              the next tenant, the ceiling stain that came back after the roof was fixed, the fence
-              that has gone grey on the street side, the render patched where a downpipe was
-              leaking.
+              Most painting businesses are set up for the big job — the full
+              interior, the whole exterior. A managed property rarely needs
+              that. It needs the hallway made good before the next tenant, the
+              ceiling stain that came back after the roof was fixed, the fence
+              that has gone grey on the street side, the render patched where a
+              downpipe was leaking.
             </p>
             <p className="text-[#B4B4B8] mb-4">
-              Those jobs are small individually and constant in aggregate, and the cost of getting
-              them done badly is that they come back. Jetblack Painting takes them on as ongoing
-              work rather than treating them as filler between larger projects.
+              Those jobs are small individually and constant in aggregate, and
+              the cost of getting them done badly is that they come back.
+              Jetblack Painting takes them on as ongoing work rather than
+              treating them as filler between larger projects.
             </p>
             <p className="text-[#B4B4B8]">
-              Eighteen years working this side of Melbourne means knowing what the local building
-              stock does — salt air and hard UV on the exposed Bayside elevations, period trim
-              through Glen Eira and Stonnington, render and newer estate builds further southeast.
+              Eighteen years working this side of Melbourne means knowing what
+              the local building stock does — salt air and hard UV on the
+              exposed Bayside elevations, period trim through Glen Eira and
+              Stonnington, render and newer estate builds further southeast.
             </p>
           </motion.div>
 
@@ -162,7 +218,9 @@ export default function PropertyMaintenance() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">What We Maintain</h2>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">
+              What We Maintain
+            </h2>
             <ul className="space-y-3">
               {[
                 "Between-tenancy make-goods and touch-ups on a fixed re-letting date",
@@ -175,7 +233,10 @@ export default function PropertyMaintenance() {
                 "Common areas, stairwells and facades for owners' corporations",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#D0A050] shrink-0 mt-1" aria-hidden="true" />
+                  <CheckCircle
+                    className="w-5 h-5 text-[#D0A050] shrink-0 mt-1"
+                    aria-hidden="true"
+                  />
                   <span className="text-[#B4B4B8]">{item}</span>
                 </li>
               ))}
@@ -194,16 +255,20 @@ export default function PropertyMaintenance() {
               For Property Managers and Agencies
             </h2>
             <p className="text-[#B4B4B8] mb-4">
-              The brief on a managed property is different from an owner-occupier repaint.
-              Turnaround and durability beat colour ambition: a washable low sheen outlives a
-              fashionable matt, and a finish that survives the next tenancy is worth more than one
-              that photographs well and marks in a month.
+              The brief on a managed property is different from an
+              owner-occupier repaint. Turnaround and durability beat colour
+              ambition: a washable low sheen outlives a fashionable matt, and a
+              finish that survives the next tenancy is worth more than one that
+              photographs well and marks in a month.
             </p>
             <p className="text-[#B4B4B8]">
-              We quote with the scope itemised, work to the date that cannot move, and report back
-              when something we find on site changes the picture — before doing the extra work
-              rather than after. See also{" "}
-              <Link href="/services/real-estate-painting" className="text-[#D0A050] hover:underline">
+              We quote with the scope itemised, work to the date that cannot
+              move, and report back when something we find on site changes the
+              picture — before doing the extra work rather than after. See also{" "}
+              <Link
+                href="/services/real-estate-painting"
+                className="text-[#D0A050] hover:underline"
+              >
                 real estate and pre-sale painting
               </Link>
               .
@@ -220,13 +285,16 @@ export default function PropertyMaintenance() {
               For Body Corporates and Owners' Corporations
             </h2>
             <p className="text-[#B4B4B8] mb-4">
-              Committees are buying predictability. Scope agreement up front, access arrangements
-              that respect occupied units, and staged scheduling are what determine whether a
-              building programme finishes on time — the painting itself is the straightforward part.
+              Committees are buying predictability. Scope agreement up front,
+              access arrangements that respect occupied units, and staged
+              scheduling are what determine whether a building programme
+              finishes on time — the painting itself is the straightforward
+              part.
             </p>
             <p className="text-[#B4B4B8]">
-              Quotes are itemised so a committee can compare like for like, and we can work to a
-              maintenance schedule across a year rather than a single annual shutdown. See also{" "}
+              Quotes are itemised so a committee can compare like for like, and
+              we can work to a maintenance schedule across a year rather than a
+              single annual shutdown. See also{" "}
               <Link
                 href="/services/body-corporate-painting"
                 className="text-[#D0A050] hover:underline"
@@ -247,8 +315,8 @@ export default function PropertyMaintenance() {
               Property Maintenance Service Areas
             </h2>
             <p className="text-[#B4B4B8] mb-4">
-              Based in Mordialloc, covering Bayside, Kingston, Glen Eira, Stonnington, the southeast
-              and the Mornington Peninsula.
+              Based in Mordialloc, covering Bayside, Kingston, Glen Eira,
+              Stonnington, the southeast and the Mornington Peninsula.
             </p>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {[
@@ -261,7 +329,11 @@ export default function PropertyMaintenance() {
                 ["Cheltenham", "/painter-cheltenham"],
                 ["Keysborough", "/keysborough-painters"],
               ].map(([name, href]) => (
-                <Link key={href} href={href} className="text-[#D0A050] hover:underline">
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-[#D0A050] hover:underline"
+                >
                   {name}
                 </Link>
               ))}
@@ -274,11 +346,15 @@ export default function PropertyMaintenance() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Property Maintenance FAQs</h2>
+            <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">
+              Property Maintenance FAQs
+            </h2>
             <div className="space-y-6">
               {faqs.map((faq, i) => (
                 <div key={i} className="border-b border-[#222227] pb-4">
-                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">{faq.question}</h3>
+                  <h3 className="text-lg font-bold text-[#EDEDEF] mb-2">
+                    {faq.question}
+                  </h3>
                   <p className="text-[#B4B4B8]">{faq.answer}</p>
                 </div>
               ))}
@@ -291,7 +367,9 @@ export default function PropertyMaintenance() {
             viewport={{ once: true }}
             className="mb-12 bg-[#101013] p-8 rounded-lg"
           >
-            <h3 className="text-xl font-bold text-[#EDEDEF] mb-4">Our Other Services</h3>
+            <h3 className="text-xl font-bold text-[#EDEDEF] mb-4">
+              Our Other Services
+            </h3>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/services/real-estate-painting"
@@ -314,7 +392,10 @@ export default function PropertyMaintenance() {
                 Bathroom &amp; Tile Resurfacing
               </Link>
               <span className="text-gray-300">|</span>
-              <Link href="/blog" className="text-[#D0A050] hover:underline font-medium">
+              <Link
+                href="/blog"
+                className="text-[#D0A050] hover:underline font-medium"
+              >
                 Painting Blog
               </Link>
             </div>
@@ -326,10 +407,12 @@ export default function PropertyMaintenance() {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-[#0a0a0a] to-[#151518] text-white p-12 rounded-lg text-center"
           >
-            <h2 className="text-3xl font-bold mb-4">Get Your Free Maintenance Quote</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Get Your Free Maintenance Quote
+            </h2>
             <p className="text-xl mb-6 text-gray-300">
-              One property or a portfolio — a free site visit and a written scope, answered within
-              24 to 48 hours.
+              One property or a portfolio — a free site visit and a written
+              scope, answered within 24 to 48 hours.
             </p>
             <a
               href="tel:0432077782"

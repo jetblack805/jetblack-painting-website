@@ -285,6 +285,8 @@ export const KNOWN_PATHS = new Set([
   "/projects/project-mount-martha-entry-portico.webp",
   "/projects/project-mount-martha-gable-brick-bayview-800.webp",
   "/projects/project-mount-martha-gable-brick-bayview.webp",
+  "/projects/project-murrumbeena-tudor-exterior-800.webp",
+  "/projects/project-murrumbeena-tudor-exterior.webp",
   "/projects/project-safety-beach-render-roof-after-800.webp",
   "/projects/project-safety-beach-render-roof-after.webp",
   "/projects/project-safety-beach-render-roof-before-800.webp",

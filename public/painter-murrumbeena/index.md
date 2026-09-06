@@ -105,6 +105,10 @@ Yes. Many of Murrumbeena's larger blocks have been subdivided into townhouses an
 
 Regularly. Murrumbeena sits close to Chadstone Shopping Centre and on the train line, which makes it popular with renters and investors. A good share of our work here is turnover painting between tenancies. Quick, tidy, and priced sensibly, without cutting the preparation short.
 
+## Recent work in Murrumbeena
+
+An exterior repaint on a Tudor-style Murrumbeena home with a first-floor addition. Only the render and the trim changed — the tile roof and the original red brick were left exactly as they were, because on a house of this era those are the two things worth keeping.
+
 **Jetblack Painting** — House Painters Murrumbeena | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

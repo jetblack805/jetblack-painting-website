@@ -56,7 +56,7 @@ export default function CanterburyPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Canterbury Painters | Heritage Home Painting | Jetblack Painting"
+      title="Canterbury Painters | Heritage Homes | Jetblack Painting"
       description="Heritage house painters in Canterbury — Federation and Edwardian homes, Maling Road frontages and Boroondara overlay work. Free quotes, 5-year guarantee."
       neighbouringSuburbs={[
         { name: "Camberwell", link: "/painter-camberwell" },

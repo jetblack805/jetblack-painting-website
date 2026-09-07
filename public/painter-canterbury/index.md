@@ -1,4 +1,4 @@
-<!-- Canterbury Painters | Heritage Home Painting | Jetblack Painting -->
+<!-- Canterbury Painters | Heritage Homes | Jetblack Painting -->
 <!-- Source: https://jetblackpainting.com/painter-canterbury/ -->
 <!-- Heritage house painters in Canterbury — Federation and Edwardian homes, Maling Road frontages and Boroondara overlay work. Free quotes, 5-year guarantee. -->
 

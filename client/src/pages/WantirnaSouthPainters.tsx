@@ -52,8 +52,8 @@ export default function WantirnaSouthPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Wantirna South Painters | Homes and Townhouses | Jetblack Painting"
-      description="House painters in Wantirna South — established brick-veneer homes and newer townhouse developments near Knox City. Free quotes, 5-year guarantee. Call 0432 077 782."
+      title="Wantirna South Painters | Homes and Townhouses in Knox"
+      description="House painters in Wantirna South — established brick-veneer homes and newer townhouses near Knox City. Free quotes, 5-year guarantee."
       neighbouringSuburbs={[
         { name: "Rowville", link: "/painter-rowville" },
         { name: "Glen Waverley", link: "/painter-glen-waverley" },

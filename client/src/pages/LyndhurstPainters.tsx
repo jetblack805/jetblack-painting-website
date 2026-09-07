@@ -52,7 +52,7 @@ export default function LyndhurstPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Lyndhurst Painters | Estate Home Repaints | Jetblack Painting"
+      title="Lyndhurst Painters | Estate Repaints | Jetblack Painting"
       description="House painters in Lyndhurst — rendered and brick-veneer estate homes reaching their first repaint. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
         { name: "Keysborough", link: "/keysborough-painters" },

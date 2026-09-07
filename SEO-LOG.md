@@ -5174,3 +5174,36 @@ under the 250KB speed baseline it had been quietly breaking.
 ⚠️ Prettier deliberately not run on `ExteriorPainting.tsx` or
 `CommercialPainting.tsx` — neither is prettier-clean on main. New blocks were
 diffed in isolation: zero formatting changes wanted.
+
+## 2026-09-07 — Google Business Profile cover photo set
+
+The profile had **no cover photo at all**, which is why Google kept choosing its
+own thumbnail — the empty-warehouse-floor shot. The connector has no
+delete-media action, so the warehouse image cannot be removed from here; setting
+a COVER is the way to replace what Google shows rather than remove the file.
+Deleting it still has to be done by Jimmy in the app.
+
+⚠️ **The COVER slot requires 16:9 and rejects a 4:3 upload** with a bare
+`status 400: Request contains an invalid argument` — no mention of aspect ratio.
+The first attempt used `project-safety-beach-render-roof-after.jpg` (1400x1050)
+and failed on exactly that. `public/social/cover-safety-beach-render-roof.jpg`
+is a purpose-cut 1440x810 band from the same job, and it went through.
+
+Chosen for what a cover actually has to survive: a hard wide crop. Symmetrical
+render-and-portico facade, blue sky, no people, no vehicles, no street number,
+no signage. Swappable in one call if Jimmy wants a different one.
+
+`scripts/make-social-jpegs.mjs` carries a note that `cover-*.jpg` files have no
+`.webp` source under `public/projects` and are therefore neither written nor
+pruned by it — deleting one would silently break the profile's cover.
+
+### ⚠️ Note on verifying the LOGO / PROFILE slot
+
+The Media table read-back lists the COVER upload but shows **no PROFILE or LOGO
+row**, and never has. That is not evidence the logo upload failed: the profile
+photo is a singleton resource (`.../media/profile`) that Google's `media.list`
+endpoint does not return. Both the earlier logo upload and a re-upload today
+returned success with that resource name. **The slot cannot be confirmed through
+this connector either way** — it has to be eyeballed on the live profile. Do not
+record it as verified on the strength of a read-back that structurally cannot
+show it.

@@ -108,6 +108,7 @@ Call 0432 077 782 or fill in the quote form on this page. We'll arrange a time t
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

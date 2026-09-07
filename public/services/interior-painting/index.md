@@ -53,6 +53,10 @@ We quote after seeing the property rather than publishing a rate per square metr
 
 ## Interior Painting FAQs
 
+### Do you varnish or clear-coat interior timber rather than painting it?
+
+Yes. Where timber is worth showing — a staircase, panelling, a solid front door, window reveals or exposed beams — we sand back and apply a clear varnish or coating instead of painting over the grain. Satin is the usual choice inside because full gloss shows every imperfection in the timber underneath and every mark afterwards. The preparation matters more than on a painted surface, because nothing is hidden: any sanding mark left behind stays visible through the finish.
+
 ### How long does interior painting take?
 
 Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required. A single room is usually a day or two; a full home repaint is staged across a working week or more.
@@ -132,6 +136,7 @@ Explore our other painting services across Melbourne.
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

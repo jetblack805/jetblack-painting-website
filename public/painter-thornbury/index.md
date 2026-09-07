@@ -106,6 +106,7 @@ Yes — we offer free, no-obligation quotes across Thornbury and the surrounding
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

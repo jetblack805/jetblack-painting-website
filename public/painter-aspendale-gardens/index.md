@@ -106,6 +106,7 @@ Yes. As a local painter based nearby in Mordialloc, we provide free written quot
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

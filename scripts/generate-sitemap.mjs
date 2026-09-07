@@ -58,6 +58,7 @@ const ROUTES = [
   { path: "/painter-endeavour-hills/",                       priority: "0.9", changefreq: "monthly" },
   { path: "/painter-greater-dandenong/",                     priority: "0.9", changefreq: "monthly" },
   { path: "/painter-hampton-park/",                          priority: "0.9", changefreq: "monthly" },
+  { path: "/painter-canterbury/",                            priority: "0.9", changefreq: "monthly" },
   { path: "/painter-lyndhurst/",                             priority: "0.9", changefreq: "monthly" },
   { path: "/painter-rowville/",                              priority: "0.9", changefreq: "monthly" },
   { path: "/painter-wantirna-south/",                        priority: "0.9", changefreq: "monthly" },

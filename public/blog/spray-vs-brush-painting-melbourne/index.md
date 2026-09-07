@@ -93,6 +93,7 @@ On porous or textured exterior surfaces it helps. Spraying deposits the paint an
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

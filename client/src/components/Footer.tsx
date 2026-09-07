@@ -40,6 +40,7 @@ const SERVICE_AREAS = [
   { name: "Brighton East", href: "/painter-brighton-east/" },
   { name: "Brunswick", href: "/painter-brunswick/" },
   { name: "Camberwell", href: "/painter-camberwell/" },
+  { name: "Canterbury", href: "/painter-canterbury/" },
   { name: "Carlton", href: "/painter-carlton/" },
   { name: "Carnegie", href: "/painter-carnegie/" },
   { name: "Carrum", href: "/painter-carrum/" },

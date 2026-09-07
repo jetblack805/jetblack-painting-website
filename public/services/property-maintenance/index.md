@@ -56,6 +56,10 @@ Enquiries are answered within 24 to 48 hours and written quotes follow in the sa
 
 ## Property Maintenance FAQs
 
+### Do you take on insurance work after water or fire damage?
+
+Yes. We quote and carry out the repair and repaint side of insurance claims — stain blocking and sealing after water damage, replacing failed plaster, treating affected surfaces and bringing the room back to match the rest of the house. We provide a written, itemised quote you or your insurer can work from. To be clear about the boundary: we do the repair work, we do not assess or adjudicate the claim itself.
+
 ### What does property maintenance painting cover?
 
 Everything that keeps a building presentable and weathertight between full repaints: touch-ups and make-goods between tenancies, plaster and cornice repairs, water damage and stain blocking, exterior washing, timber and window frame repair, fence and gate recoating, and concrete sealing. It is planned upkeep rather than one large job.
@@ -131,6 +135,7 @@ Explore our other painting services across Melbourne.
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

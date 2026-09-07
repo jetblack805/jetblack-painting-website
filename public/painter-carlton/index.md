@@ -106,6 +106,7 @@ We provide comprehensive interior painting for Carlton's modern apartments and h
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)
 - [Painters Caulfield](/painter-caulfield/)

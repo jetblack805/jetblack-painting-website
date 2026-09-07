@@ -105,6 +105,7 @@ Cost depends on size, scope, number of storeys, surface condition and whether yo
 - [Painters Brighton](/painter-brighton/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

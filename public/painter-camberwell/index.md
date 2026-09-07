@@ -12,11 +12,11 @@ Heritage and period home painters in Camberwell — Edwardian homes and Californ
 
 We understand Camberwell's tree-lined streets and diverse architectural character — from grand Edwardian homes on Cooloongatta Road to the Californian bungalows lining the quieter residential streets around Camberwell Junction. Our team has extensive experience with period preparation and premium finishes that enhance Camberwell's prestigious streetscapes.
 
-Camberwell's Edwardian homes, Californian bungalows, rendered period façades, modern renovations and apartment buildings across Camberwell and Canterbury.
+Camberwell's Edwardian homes, Californian bungalows, rendered period façades, modern renovations and apartment buildings across Camberwell and Camberwell Junction.
 
 Jetblack Painting helps homeowners, landlords, and commercial clients in Camberwell with detailed preparation, premium coatings, and clear project communication from quote through completion.
 
-## House Painters Serving Camberwell and Canterbury
+## House Painters Serving Camberwell
 
 Camberwell is prized for its elegant Edwardian and Californian bungalow homes, tree-lined avenues and the busy shopping precinct around Camberwell Junction. Jetblack Painting provides premium interior and exterior painting that respects the character and the value of these classic homes — while delivering the durable, flawless finish that Camberwell homeowners expect.
 
@@ -75,6 +75,7 @@ Every service below is available in Camberwell. Follow a link for service detail
 
 Explore nearby suburb pages for neighbouring areas around Camberwell.
 
+- [Canterbury](/painter-canterbury/)
 - [Balwyn](/painter-balwyn/)
 - [Hawthorn](/painter-hawthorn/)
 - [Malvern](/painter-malvern/)
@@ -126,6 +127,7 @@ Yes. Strip shopfronts around the Junction share party walls and awnings, so we a
 - [Painters Brighton](/painter-brighton/)
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

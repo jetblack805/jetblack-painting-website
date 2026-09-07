@@ -172,6 +172,34 @@ export default function CommercialPainting() {
               loading="lazy"
             />
           </div>
+          {/* A second row rather than a fourth tile in the row above: both of
+              these are crew-at-height shots and they read as a pair. Neither
+              came with a suburb, so the alt text stays with what is in frame.
+              The street number rendered on the wall of the first one is cropped
+              out, and a passing vehicle's plate is masked — see the MASK option
+              in scripts/convert-photo.mjs. */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <img
+              src="/projects/project-commercial-facade-scissor-lift.webp"
+              srcSet="/projects/project-commercial-facade-scissor-lift-800.webp 800w, /projects/project-commercial-facade-scissor-lift.webp 1200w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1200}
+              height={1698}
+              alt="Jetblack painter cutting in the top of a two-storey commercial facade from a scissor lift, with cones and pedestrian management set out across the footpath below"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-crew-elevated-platform.webp"
+              srcSet="/projects/project-crew-elevated-platform-800.webp 800w, /projects/project-crew-elevated-platform.webp 1200w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1200}
+              height={2133}
+              alt="Two Jetblack painters in branded workwear cutting in window reveals on a rendered facade from an elevated work platform"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

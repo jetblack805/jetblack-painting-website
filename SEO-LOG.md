@@ -5064,3 +5064,146 @@ inconsistent with this site's standing practice: a street number was deliberatel
 2026-08-02 and fence photos were declined in #256 for republishing an address already removed.
 Not changed unilaterally because swapping the social preview image is a visible brand decision,
 but it should be swapped for one of the 37 privacy-passed project photos.
+
+## 2026-09-07 — Real job photos on the exterior painting page; markdown layer caught up
+
+**Deploy of PR #269 verified live** before this change: `/painter-canterbury/` 200 with the
+right title, `noindex` 0, 6 JSON-LD blocks, canonical correct; `/painters-canterbury`
+301s to it; `/painter-camberwell/` heading narrowed to Camberwell alone; the three new
+service FAQs (structural steel, clear-coat timber, insurance work) all reach the crawler
+layer; sitemap 125. The Cloudflare build succeeded — Canterbury is a new page and it is
+serving, which it could not be if the build had failed.
+
+**Exterior painting was the weakest service page.** Counting crawler-visible `<img>` across
+all 11 service pages: interior 8, roof-fence 5, commercial 4, body-corporate 4,
+real-estate 4, roof 4, epoxy 3, cabinetry 3, maintenance 3, bathroom 2 — and
+**exterior 1**. The highest-intent service on the site had a single stock strip and not one
+photograph of Jimmy's own work. Added six real job photos: Brighton weatherboard,
+Murrumbeena Tudor, Caulfield render, Mount Martha brick-and-gable, Aspendale render
+repair, Mordialloc weatherboard. Six different substrates on purpose — the page's whole
+argument is that exterior work is substrate-dependent.
+
+Alt text is **reused verbatim** from each photo's own suburb page rather than rewritten.
+Every one of those descriptions was confirmed with Jimmy when the photo was first
+published; rewriting them here would be a fresh chance to get a colour or a material wrong
+for no gain. (Same reasoning that put the Dulux Monument / Silkwort naming under a
+do-not-extend comment on the Murrumbeena page.)
+
+**Generator fix this depended on.** `extractServiceImages` only accepted `src` starting
+`/gallery/`, so any real job photo added to a service page would have rendered for humans
+and been **invisible to crawlers** — the same class of bug as the hashed-asset one fixed
+earlier today, silently. Widened to accept `/projects/` as well, in both the guard and the
+srcset small-variant match. Exterior page: **1 → 7** crawler-visible images.
+
+**`public/index.md` was stale.** The Canterbury push ran the page and sitemap generators
+but not `generate-markdown.mjs`, so the markdown layer still said *81 suburbs* and did not
+list Canterbury. Regenerated: 82, Canterbury present. Worth remembering that the markdown
+layer is a separate generator and does not follow from the others.
+
+⚠️ Prettier was **not** run on `ExteriorPainting.tsx` — that file is not prettier-clean on
+main and formatting it would bury a 90-line change in several hundred lines of unrelated
+churn, exactly as happened with `worker/index.js` and `App.tsx` earlier. The added block
+was checked in isolation and is already prettier-shaped.
+
+## 2026-09-07 — Five photos from Jimmy: two were already published, three are new, and the "7" is finally gone
+
+Jimmy sent five photos with no captions and no suburbs.
+
+**Two of the five are already on the site.** Checked rather than assumed, with a
+32x32 grayscale mean-absolute-difference test (`/tmp` one-off, method recorded here):
+
+| Photo | Nearest published file | MAD /255 | Verdict |
+| --- | --- | --- | --- |
+| courtyard with bifolds | `project-mordialloc-courtyard-wide` | 6.9 | same frame |
+| staircase | `gallery-interior-staircase` | 5.7 | same frame |
+| two-storey brick/render house | `gallery-exterior-navy-weatherboard` (control) | 53.3 | different |
+
+Republishing either would have been duplicate image content for nothing. Skipped
+both. Worth keeping the check: the courtyard frame in particular is the one
+already marked posted in `social/gbp-queue.json`, so it would also have gone out
+to the Business Profile twice.
+
+**Three were new and are now published**, at `/projects/`:
+`project-render-gable-green-trim` (exterior page), and
+`project-commercial-facade-scissor-lift` + `project-crew-elevated-platform`
+(commercial page, as a paired second row — both are crew-at-height shots).
+Service-page crawler images **47 → 50**.
+
+⚠️ **No suburb was given for any of them, so none claims one.** The alt text
+describes only what is visibly in frame — substrate, trim colour, roof, access
+equipment. Naming a suburb we were not told is a guess published as fact, and
+these photos are exactly where that would be invisible until it was wrong. Once
+Jimmy names the suburbs they can also go on the matching suburb pages.
+
+### Privacy: three separate identifiers removed
+
+1. **`35` painted on a verandah post** — cropped out of the house photo (`RECT=110,0,1330,1800`).
+2. **`95 Kooyong` rendered on the wall** of the commercial job — cropped out (`RECT=0,0,1820,2576`).
+3. **A third party's number plate** on a ute parked in the same frame — pixelated.
+
+That last one could not be cropped without throwing the photograph away, which
+is why `scripts/convert-photo.mjs` gained a **`MASK=x,y,w,h[;...]`** option:
+pixelate rectangles at full source resolution, before the downscale, so the
+-800 variant does not end up with a coarser patch than the full-size file.
+Pixelation rather than a black box — a hard redaction block on a marketing page
+reads as though something is being hidden.
+
+### The `og-image.jpg` "7" is fixed — on both surfaces
+
+This was flagged twice and left unactioned twice. It turned out to be worse than
+recorded: the photo with the visible **`7`** on the gate is not only the social
+preview (`og-image.jpg`, referenced from `SEOHead`, `SuburbPageTemplate`,
+`Home` and `MordiallocPainters`), it is **also the hero image of the exterior
+painting page**, as `gallery-exterior-navy-weatherboard`. Same street number,
+two surfaces, one of them the image every share to Messenger and WhatsApp uses.
+
+Both are now masked. The gallery pair was regenerated with `MASK=944,590,32,44`;
+`og-image.jpg` is a separate hand-made 1200x630 crop that is **not** generated
+from the gallery file, so it was edited in place at `MASK=1084,468,26,42` rather
+than re-cropped from the portrait original and risking a different framing.
+At display size the patch reads as a shadow on the gate post; at 8x it is
+plainly unreadable. Verified both by zooming the output, not by trusting the
+coordinates.
+
+The car's number plate in the same photo was checked and is **already**
+illegible in the published file (focus blur) — no mask needed, and none added.
+
+While the file was being rewritten anyway it came down from 283KB to **224KB**,
+under the 250KB speed baseline it had been quietly breaking.
+
+⚠️ Prettier deliberately not run on `ExteriorPainting.tsx` or
+`CommercialPainting.tsx` — neither is prettier-clean on main. New blocks were
+diffed in isolation: zero formatting changes wanted.
+
+## 2026-09-07 — Google Business Profile cover photo set
+
+The profile had **no cover photo at all**, which is why Google kept choosing its
+own thumbnail — the empty-warehouse-floor shot. The connector has no
+delete-media action, so the warehouse image cannot be removed from here; setting
+a COVER is the way to replace what Google shows rather than remove the file.
+Deleting it still has to be done by Jimmy in the app.
+
+⚠️ **The COVER slot requires 16:9 and rejects a 4:3 upload** with a bare
+`status 400: Request contains an invalid argument` — no mention of aspect ratio.
+The first attempt used `project-safety-beach-render-roof-after.jpg` (1400x1050)
+and failed on exactly that. `public/social/cover-safety-beach-render-roof.jpg`
+is a purpose-cut 1440x810 band from the same job, and it went through.
+
+Chosen for what a cover actually has to survive: a hard wide crop. Symmetrical
+render-and-portico facade, blue sky, no people, no vehicles, no street number,
+no signage. Swappable in one call if Jimmy wants a different one.
+
+`scripts/make-social-jpegs.mjs` carries a note that `cover-*.jpg` files have no
+`.webp` source under `public/projects` and are therefore neither written nor
+pruned by it — deleting one would silently break the profile's cover.
+
+### ⚠️ Note on verifying the LOGO / PROFILE slot
+
+The Media table read-back lists the COVER upload but shows **no PROFILE or LOGO
+row**, and never has. That is not evidence the logo upload failed: the profile
+photo is a singleton resource (`.../media/profile`) that Google's `media.list`
+endpoint does not return. Both the earlier logo upload and a re-upload today
+returned success with that resource name. **The slot cannot be confirmed through
+this connector either way** — it has to be eyeballed on the live profile. Do not
+record it as verified on the strength of a read-back that structurally cannot
+show it.

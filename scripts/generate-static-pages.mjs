@@ -1451,12 +1451,16 @@ function extractServiceImages(source) {
       return b ? b[1] : "";
     };
     const src = pick("src");
-    if (!src.startsWith("/gallery/")) continue;
+    // /gallery/ is the stock-and-studio library; /projects/ is Jimmy's own job
+    // photography. Both appear on service pages and both must reach the crawler
+    // layer — restricting this to /gallery/ silently dropped every real job
+    // photo added to a service page.
+    if (!src.startsWith("/gallery/") && !src.startsWith("/projects/")) continue;
     const srcset = pick("srcSet");
     // Suburb project photos use an 800w small variant; the service gallery uses
     // 900w. Read the descriptor rather than assuming, or the browser is handed a
     // width that does not match the file and picks the wrong one.
-    const smallMatch = srcset.match(/(\/gallery\/[\w-]+\.webp)\s+(\d+)w/);
+    const smallMatch = srcset.match(/(\/(?:gallery|projects)\/[\w-]+\.webp)\s+(\d+)w/);
     const small = smallMatch ? smallMatch[1] : "";
     const smallWidth = smallMatch ? Number(smallMatch[2]) : 800;
     // JSX text: collapse whitespace and decode the couple of entities used.

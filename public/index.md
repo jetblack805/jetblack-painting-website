@@ -38,7 +38,7 @@ Jetblack Painting services 90+ Melbourne suburbs across the southeast, Bayside, 
 
 ## Service Area Coverage Map
 
-Jetblack Painting is based in Mordialloc VIC 3195 and services 81 Melbourne suburbs across
+Jetblack Painting is based in Mordialloc VIC 3195 and services 82 Melbourne suburbs across
 Bayside, Kingston, Glen Eira, Stonnington, the inner east, the southeast and the Mornington Peninsula.
 The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings measured from our Mordialloc base.
 
@@ -58,6 +58,7 @@ The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings me
 - [Brighton East](/painter-brighton-east/)
 - [Brunswick](/painter-brunswick/)
 - [Camberwell](/painter-camberwell/)
+- [Canterbury](/painter-canterbury/)
 - [Carlton](/painter-carlton/)
 - [Carnegie](/painter-carnegie/)
 - [Carrum](/painter-carrum/)

@@ -133,6 +133,94 @@ export default function ExteriorPainting() {
             className="rounded-lg shadow-md w-full max-h-[420px] object-cover"
             loading="lazy"
           />
+          {/* Real Jetblack exterior jobs rather than gallery stock. Every one of
+              these is already published on its own suburb page, so the alt text
+              is reused verbatim from there — the substrate, the colours and the
+              detail called out have all been confirmed with Jimmy once already,
+              and rewriting them here would be a second chance to get a fact
+              wrong for no gain. Six substrates deliberately: weatherboard,
+              render, Tudor half-timbering, brick-and-gable, and render repair.
+              These live under /projects/, not /gallery/, which is why
+              extractServiceImages in the static generator accepts both. */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+            <img
+              src="/projects/project-brighton-exterior-after.webp"
+              srcSet="/projects/project-brighton-exterior-after-800.webp 800w, /projects/project-brighton-exterior-after.webp 1200w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1200}
+              height={2133}
+              alt="A Brighton weatherboard home after repainting, in dark charcoal with white fretwork, verandah posts and window frames"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-murrumbeena-tudor-exterior.webp"
+              srcSet="/projects/project-murrumbeena-tudor-exterior-800.webp 800w, /projects/project-murrumbeena-tudor-exterior.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1400}
+              height={1050}
+              alt="Tudor-style Murrumbeena home after an exterior repaint, render in Dulux Silkwort with Dulux Monument picked out through the half-timbering, fascias and gutters, above original red brick"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-caulfield-rendered-facade.webp"
+              srcSet="/projects/project-caulfield-rendered-facade-800.webp 800w, /projects/project-caulfield-rendered-facade.webp 1200w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1200}
+              height={1600}
+              alt="Repainted cream render, columns and eaves on a Caulfield property"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-mount-martha-gable-brick-bayview.webp"
+              srcSet="/projects/project-mount-martha-gable-brick-bayview-800.webp 800w, /projects/project-mount-martha-gable-brick-bayview.webp 1200w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1200}
+              height={1600}
+              alt="White painted cladding and fascia meeting the original brickwork on the upper gable of a Mount Martha home, with Port Phillip Bay behind"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+            {/* Sent through by Jimmy with no suburb given, so the alt text
+                describes only what is visibly in the frame — substrate, trim
+                colour, roof. Naming a suburb we were not told would be a guess
+                published as fact, and the street number that was on the gate
+                post has been cropped out of this file. */}
+            <img
+              src="/projects/project-render-gable-green-trim.webp"
+              srcSet="/projects/project-render-gable-green-trim-800.webp 800w, /projects/project-render-gable-green-trim.webp 1200w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1200}
+              height={1624}
+              alt="Two-storey home after an exterior repaint, with dark green picked out through the gable strapping, fascias, gutters and downpipes above a red brick ground floor and a terracotta tile roof"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-aspendale-facade-after.webp"
+              srcSet="/projects/project-aspendale-facade-after-800.webp 800w, /projects/project-aspendale-facade-after.webp 1200w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1200}
+              height={1600}
+              alt="Finished render and gutter line on a two-storey Aspendale house after repainting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-mordialloc-weatherboard-after.webp"
+              srcSet="/projects/project-mordialloc-weatherboard-after-800.webp 800w, /projects/project-mordialloc-weatherboard-after.webp 874w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={874}
+              height={880}
+              alt="A Mordialloc weatherboard home after repainting in charcoal with white eaves, fretwork and window frames"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

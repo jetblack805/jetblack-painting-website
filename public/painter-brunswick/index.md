@@ -106,6 +106,7 @@ Yes — we provide free, no-obligation quotes across Brunswick and surrounding s
 - [Painters Brighton](/painter-brighton/)
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

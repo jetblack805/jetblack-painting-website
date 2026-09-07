@@ -553,6 +553,13 @@ export const SUBURBS_DATA = {
     description: "Western Port coastal town on the Mornington Peninsula with weatherboard cottages, brick veneer homes and a working port heritage",
     areasServed: ["Hastings"]
   },
+  canterbury: {
+    name: "Canterbury",
+    coordinates: { lat: -37.8243, lng: 145.0787 },
+    postcode: "3126",
+    description: "Intact Federation and Edwardian suburb in Boroondara, centred on the heritage Maling Road shopping strip",
+    areasServed: ["Canterbury"]
+  },
   lyndhurst: {
     name: "Lyndhurst",
     coordinates: { lat: -38.0489, lng: 145.2456 },

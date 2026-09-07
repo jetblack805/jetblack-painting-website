@@ -63,6 +63,7 @@ const PATH_REDIRECTS = {
   "/painters-mentone":              "/painter-mentone/",
   "/painters-carlton":              "/painter-carlton/",
   "/painters-mornington-peninsula": "/painter-mornington-peninsula/",
+  "/painters-canterbury":           "/painter-canterbury/",
   "/painters-lyndhurst":            "/painter-lyndhurst/",
   "/painters-rowville":             "/painter-rowville/",
   "/painters-wantirna-south":       "/painter-wantirna-south/",

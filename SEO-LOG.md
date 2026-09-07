@@ -4992,3 +4992,75 @@ So Toorak is not quietly earning work; it is page-8 rankings producing nothing. 
 because Jimmy asked for it kept — which is reason enough — not because the numbers argue for
 it.** Anyone re-reading the page-level stats will reach the wrong conclusion, which is why the
 query detail is recorded here.
+
+---
+
+## Service-area and service coverage closed; logo audited — 2026-09-07
+
+Jimmy asked for every service covered, every service area showing, and the logo fixed wherever
+it was wrong.
+
+### Service areas — the only gap was Canterbury
+
+Checked all 20 areas listed on the Google Business Profile against the site. **19 already had a
+page. Only Canterbury did not**, so `/painter-canterbury/` was built and wired through all eight
+points plus the footer.
+
+⚠️ **Camberwell was silently absorbing Canterbury.** Its main heading read "House Painters
+Serving Camberwell and Canterbury" and its `propertyTypes` claimed "across Camberwell and
+Canterbury". Two pages targeting one suburb name is the Bentleigh East situation. Camberwell was
+narrowed to itself and now **links** to Canterbury as a neighbour instead of claiming it.
+
+**Recorded honestly: Canterbury had ZERO impressions in three months.** There is no measured
+demand for it, and Camberwell — a bigger suburb with an established page — sits at position 84.8
+on 735 impressions. The page was built because Jimmy asked for full service-area coverage, and
+it is genuinely distinct (Maling Road, Federation/Edwardian, Boroondara overlay, mature-garden
+access). It should not be expected to produce traffic on its own, and page coverage is not what
+is limiting this site.
+
+### Services — three genuine gaps, covered without new pages
+
+The GBP services list (now 26 after today's cleanup) was checked against site content. Almost
+everything was already covered somewhere. Only three were not:
+
+| Service | Now covered in | How |
+| --- | --- | --- |
+| Metal painting | `/services/roof-fence-painting/` | FAQ on rust treatment, etch priming galvanised steel, chalked Colorbond, structural steel |
+| Varnishing | `/services/interior-painting/` | FAQ on clear-coating timber rather than painting it, satin vs gloss, prep showing through |
+| Insurance work | `/services/property-maintenance/` | FAQ on repair and repaint after water/fire damage, with the boundary stated: we do the work, we do not assess the claim |
+
+⚠️ **Deliberately NOT three new service pages.** Building a thin page per service is the doorway
+pattern this site has already had to undo once. Each service was added to the page a searcher
+would actually land on.
+
+⚠️ **Service-page FAQs are hand-maintained in BOTH layers** — the `.tsx` and the `servicePages`
+array in `scripts/generate-static-pages.mjs`. Unlike suburb pages, nothing parses them. Every
+addition must be made twice or the layers diverge. All three were.
+
+### Logo — nothing on the site was broken
+
+Audited every logo surface. All correct:
+
+| Asset | Used by | Correct |
+| --- | --- | --- |
+| `logo.jpg` (full, white ground) | `client/index.html`, `organizationSchema`, `articleSchema` | yes |
+| `logo-dark-bg.png` (cream, for dark UI) | `Navbar`, `Footer` | yes |
+| `favicon.png` / `.ico` (brush mark) | browser tab | yes |
+| `apple-touch-icon.png` | iOS home screen | yes |
+
+**The only place the logo was wrong was the Google Business Profile, which had NO logo set at
+all** — that is why Google was choosing an empty-warehouse photo as the thumbnail. Fixed
+2026-09-07 by uploading `logo.jpg` to the LOGO slot.
+
+⚠️ **Still no COVER photo on the GBP.** Until one is set Google keeps picking for itself. And
+the connector has **no delete-media action**, so the warehouse photo can only be removed by
+Jimmy in the app.
+
+### Flagged, not actioned: og-image.jpg carries a street number
+
+`public/og-image.jpg` — the image shown whenever the site is shared to social or messaging — is
+a Mordialloc weatherboard with a **visible "7" street number** on the fence post. That is
+inconsistent with this site's standing practice: a street number was deliberately blurred on
+2026-08-02 and fence photos were declined in #256 for republishing an address already removed.
+Not changed unilaterally because swapping the social preview image is a visible brand decision,
+but it should be swapped for one of the 37 privacy-passed project photos.

@@ -25,6 +25,10 @@ const CANONICAL = "https://jetblackpainting.com/services/property-maintenance/";
 export default function PropertyMaintenance() {
   const faqs = [
     {
+      question: "Do you take on insurance work after water or fire damage?",
+      answer: "Yes. We quote and carry out the repair and repaint side of insurance claims \u2014 stain blocking and sealing after water damage, replacing failed plaster, treating affected surfaces and bringing the room back to match the rest of the house. We provide a written, itemised quote you or your insurer can work from. To be clear about the boundary: we do the repair work, we do not assess or adjudicate the claim itself."
+    },
+    {
       question: "What does property maintenance painting cover?",
       answer:
         "Everything that keeps a building presentable and weathertight between full repaints: touch-ups and make-goods between tenancies, plaster and cornice repairs, water damage and stain blocking, exterior washing, timber and window frame repair, fence and gate recoating, and concrete sealing. It is planned upkeep rather than one large job.",

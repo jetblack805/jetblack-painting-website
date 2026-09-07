@@ -37,6 +37,10 @@ export default function InteriorPainting() {
   // crawler layer and rendered layer must describe the same page.
   const faqs = [
     {
+      question: "Do you varnish or clear-coat interior timber rather than painting it?",
+      answer: "Yes. Where timber is worth showing \u2014 a staircase, panelling, a solid front door, window reveals or exposed beams \u2014 we sand back and apply a clear varnish or coating instead of painting over the grain. Satin is the usual choice inside because full gloss shows every imperfection in the timber underneath and every mark afterwards. The preparation matters more than on a painted surface, because nothing is hidden: any sanding mark left behind stays visible through the finish."
+    },
+    {
       question: "How long does interior painting take?",
       answer: "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required. A single room is usually a day or two; a full home repaint is staged across a working week or more."
     },

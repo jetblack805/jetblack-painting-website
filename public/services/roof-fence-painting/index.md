@@ -64,6 +64,10 @@ There's a presentation argument too. A restored roof above a grey, splitting fen
 
 ## Roof & Fence Painting FAQs
 
+### Do you paint metal fences, gates and structural steel?
+
+Yes. Metal is a different job to timber and the preparation is where it is won or lost. Rust has to be taken back to sound metal and treated, not painted over, and bare or galvanised steel needs an etch or self-etching primer before any topcoat will hold. Colorbond that has chalked gets washed and keyed rather than simply recoated. We handle fencing, gates, railings, roller doors and commercial structural steel, matching the coating system to the metal instead of using one product across all of it.
+
 ### Can you do the roof and fences in one project?
 
 Yes, and it's usually the cheaper way to do it. The access equipment, the site setup and the weather window are shared across both. Quoting them together costs less than booking two separate jobs. The exterior also reads as one finished thing from the street, rather than a new roof above a tired fence.
@@ -143,6 +147,7 @@ Explore our other painting services across Melbourne.
 - [Painters Brighton East](/painter-brighton-east/)
 - [Painters Brunswick](/painter-brunswick/)
 - [Painters Camberwell](/painter-camberwell/)
+- [Painters Canterbury](/painter-canterbury/)
 - [Painters Carlton](/painter-carlton/)
 - [Painters Carnegie](/painter-carnegie/)
 - [Painters Carrum](/painter-carrum/)

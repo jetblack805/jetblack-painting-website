@@ -1113,6 +1113,7 @@ const allSuburbPages = [
   { route: "/painter-brighton", source: "BrightonPainters.tsx" },
   { route: "/painter-camberwell", source: "CamberwellPainters.tsx" },
   { route: "/painter-carlton", source: "CarltonPainters.tsx" },
+  { route: "/painter-canterbury", source: "CanterburyPainters.tsx" },
   { route: "/painter-caulfield", source: "CaulfieldPainters.tsx" },
   { route: "/painter-cranbourne", source: "CranbournePainters.tsx" },
   { route: "/painter-croydon", source: "CroydonPainters.tsx" },
@@ -1552,6 +1553,11 @@ const servicePages = [
     ],
     faqs: [
       {
+        question: "Do you varnish or clear-coat interior timber rather than painting it?",
+        answer:
+          "Yes. Where timber is worth showing \u2014 a staircase, panelling, a solid front door, window reveals or exposed beams \u2014 we sand back and apply a clear varnish or coating instead of painting over the grain. Satin is the usual choice inside because full gloss shows every imperfection in the timber underneath and every mark afterwards. The preparation matters more than on a painted surface, because nothing is hidden: any sanding mark left behind stays visible through the finish.",
+      },
+      {
         question: "How long does interior painting take?",
         answer:
           "Most interior painting projects take a few days to a week depending on the size of the home, access, and the preparation required. A single room is usually a day or two; a full home repaint is staged across a working week or more.",
@@ -1976,6 +1982,11 @@ const servicePages = [
       },
     ],
     faqs: [
+      {
+        question: "Do you paint metal fences, gates and structural steel?",
+        answer:
+          "Yes. Metal is a different job to timber and the preparation is where it is won or lost. Rust has to be taken back to sound metal and treated, not painted over, and bare or galvanised steel needs an etch or self-etching primer before any topcoat will hold. Colorbond that has chalked gets washed and keyed rather than simply recoated. We handle fencing, gates, railings, roller doors and commercial structural steel, matching the coating system to the metal instead of using one product across all of it.",
+      },
       {
         question: "Can you do the roof and fences in one project?",
         answer:
@@ -2587,6 +2598,11 @@ const servicePages = [
       },
     ],
     faqs: [
+      {
+        question: "Do you take on insurance work after water or fire damage?",
+        answer:
+          "Yes. We quote and carry out the repair and repaint side of insurance claims \u2014 stain blocking and sealing after water damage, replacing failed plaster, treating affected surfaces and bringing the room back to match the rest of the house. We provide a written, itemised quote you or your insurer can work from. To be clear about the boundary: we do the repair work, we do not assess or adjudicate the claim itself.",
+      },
       {
         question: "What does property maintenance painting cover?",
         answer:

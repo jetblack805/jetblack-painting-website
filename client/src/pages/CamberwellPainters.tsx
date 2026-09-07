@@ -31,6 +31,7 @@ export default function CamberwellPainters() {
       title="Camberwell Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Camberwell — Edwardian homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
       neighbouringSuburbs={[
+        { name: "Canterbury", link: "/painter-canterbury" },
         { name: "Balwyn", link: "/painter-balwyn" },
         { name: "Hawthorn", link: "/painter-hawthorn" },
         { name: "Malvern", link: "/painter-malvern" },
@@ -39,10 +40,10 @@ export default function CamberwellPainters() {
         { name: "Kew", link: "/painter-kew" },
       ]}
       localExpertise={`We understand ${suburb}'s tree-lined streets and diverse architectural character — from grand Edwardian homes on Cooloongatta Road to the Californian bungalows lining the quieter residential streets around ${suburb} Junction. Our team has extensive experience with period preparation and premium finishes that enhance ${suburb}'s prestigious streetscapes.`}
-      propertyTypes={`${suburb}'s Edwardian homes, Californian bungalows, rendered period façades, modern renovations and apartment buildings across ${suburb} and Canterbury.`}
+      propertyTypes={`${suburb}'s Edwardian homes, Californian bungalows, rendered period façades, modern renovations and apartment buildings across ${suburb} and Camberwell Junction.`}
       localContent={[
         {
-          heading: `House Painters Serving Camberwell and Canterbury`,
+          heading: `House Painters Serving Camberwell`,
           body: [
             `Camberwell is prized for its elegant Edwardian and Californian bungalow homes, tree-lined avenues and the busy shopping precinct around Camberwell Junction. Jetblack Painting provides premium interior and exterior painting that respects the character and the value of these classic homes — while delivering the durable, flawless finish that Camberwell homeowners expect.`,
             `From full exterior repaints of period façades to interior colour refreshes, feature walls and cabinetry, we bring detailed preparation and a careful, tidy approach to every ${suburb} project. Our quotes are clear and complete, with all preparation included up front — no scope creep, no surprises once work begins.`,

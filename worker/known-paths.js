@@ -133,6 +133,8 @@ export const KNOWN_PATHS = new Set([
   "/painter-brunswick/index.md",
   "/painter-camberwell/",
   "/painter-camberwell/index.md",
+  "/painter-canterbury/",
+  "/painter-canterbury/index.md",
   "/painter-carlton/",
   "/painter-carlton/index.md",
   "/painter-carnegie/",

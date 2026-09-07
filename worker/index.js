@@ -358,6 +358,21 @@ export default {
       headers.set("X-Robots-Tag", "noindex");
     }
 
+    // /social/ holds JPEG twins of the project photos, built by
+    // scripts/make-social-jpegs.mjs purely so Google Business Profile can fetch
+    // a post image — GBP will not accept the webp originals. They are the same
+    // photographs already published under /projects/, so letting them be indexed
+    // separately would put a duplicate copy of every project image in Google
+    // Images for no gain.
+    //
+    // noindex by header, NOT a robots.txt Disallow: Google fetches the post
+    // image itself, and a Disallow risks blocking that fetch and failing the
+    // post. A noindex header keeps the file fetchable while keeping it out of
+    // the index, which is exactly the split we want.
+    if (pathname.startsWith("/social/")) {
+      headers.set("X-Robots-Tag", "noindex");
+    }
+
     // RFC 8288 Link headers on real HTML pages, pointing agents at resources
     // that actually exist: the canonical URL (same value as the in-page meta
     // tag, exposed here too for agents that read headers without parsing

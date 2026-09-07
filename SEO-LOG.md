@@ -4347,3 +4347,116 @@ real CTR signal the property has produced.
 Chose option 2 — re-measure the tracked set — since options 1 and 3 need Jimmy, and Tier 0 is
 closed. Nothing crossed into the top 10 except Sorrento above. **Growing past 17 reviews remains
 the top priority and is Jimmy's to act on.**
+
+---
+
+## 2026-09-07 — Jimmy's GSC exports: four files, and the numbers that matter
+
+Four exports supplied: Performance on Search, Performance on **Search Generative AI Features**,
+Coverage, and Coverage Drilldown. All "last 3 months". **No site change made** — this entry is the
+analysis and two decisions it forces.
+
+### Site totals, 3 months
+
+**21,083 impressions · 59 clicks · 0.28% CTR.**
+
+### ⚠️ THE DEVICE SPLIT IS THE MOST IMPORTANT NUMBER IN THESE FILES
+
+| Device  | Clicks | Impressions | CTR       | Avg position |
+| ------- | ------ | ----------- | --------- | ------------ |
+| Mobile  | **43** | 781         | **5.51%** | **22.84**    |
+| Desktop | 16     | **20,286**  | 0.08%     | 46.94        |
+| Tablet  | 0      | 16          | 0%        | 61.69        |
+
+**Desktop is 96% of impressions and 27% of clicks. Mobile is 3.7% of impressions and 73% of
+clicks.** Desktop averages position 46.9 — page five — while mobile averages 22.8.
+
+This reframes the "742 impressions, zero clicks" story that has driven several runs: the property's
+impression count is overwhelmingly deep desktop placement that was never going to convert. The
+traffic that behaves like a real customer is mobile, and mobile is not doing badly. **Judge future
+runs on mobile position and mobile clicks, not on blended totals.**
+
+### ⚠️ THE CASEY NOINDEX COST 16.5% OF IMPRESSIONS — Jimmy's call whether to keep it
+
+The eight Casey-corridor pages noindexed on 2026-09-06 carried, over these three months:
+
+| Page                          | Clicks | Impressions | Position |
+| ----------------------------- | ------ | ----------- | -------- |
+| `/painter-clyde-north/`       | 1      | **2,385**   | 26.64    |
+| `/painter-endeavour-hills/`   | 0      | 520         | 40.71    |
+| `/painter-clyde/`             | 0      | 297         | 55.83    |
+| `/painter-dandenong/`         | 0      | 123         | 73.48    |
+| `/painter-greater-dandenong/` | 1      | 105         | 64.08    |
+| `/painter-berwick/`           | 0      | 47          | 91.96    |
+| `/painter-cranbourne/`        | 0      | 4           | 63.50    |
+| `/painter-hampton-park/`      | 0      | 3           | 9.67     |
+| **Total**                     | **2**  | **3,484**   |          |
+
+`/painter-clyde-north/` was **the single highest-impression page on the property** and is now
+noindexed. The set was **16.5% of all impressions and 3.4% of clicks**, at a 0.057% CTR.
+
+**The decision is defensible** — Clyde North is ~50 km from Mordialloc, outside the stated Bayside
+and south-east focus, and 3,484 impressions producing 2 clicks are worth almost nothing. **But the
+size of it was not known when the call was made, and Jimmy should get to weigh it.** Expect a
+visible impressions drop in GSC over the coming weeks; it is deliberate, not a penalty. Reversible
+in one edit per page.
+
+### ⚠️ THE REAL OPPORTUNITY: commercial intent is being served by the wrong pages
+
+Commercial and body-corporate queries carry **1,499 impressions and ZERO clicks** across the
+property — 7.1% of all impressions. Meanwhile:
+
+| Page                                 | Impressions | Position  |
+| ------------------------------------ | ----------- | --------- |
+| `/services/commercial-painting/`     | 295         | **58.88** |
+| `/services/body-corporate-painting/` | 155         | **53.03** |
+
+- `body corporate painting melbourne` — 66 imp @ 42.68
+- `body corporate painters melbourne` — 65 imp @ 56.95
+- `commercial painter bentleigh` — 37 @ 29.11 · `commercial painters mount eliza` — 31 @ 25.61
+
+**A suburb page was outranking the commercial service page on commercial queries.** Clyde North sat
+at 26.64 on commercial long-tail (`office painters near me clyde north` 15.35,
+`commercial weatherproof painting melbourne clyde north` 12.65) while
+`/services/commercial-painting/` sits at 58.88 for the same intent.
+
+Body corporates and commercial were named in Jimmy's own brief as target audiences. The demand is
+measurable and repeated. **The dedicated pages rank on page 5-6 for their own core terms** — which
+is not purely an authority ceiling, since the property clearly can rank at 12-28 for this intent
+when a different page carries it. Worth a proper diagnosis next run. **Do NOT respond by generating
+suburb × service pages — that is the doorway pattern already undone by hand once.**
+
+### AI Features (AI Overviews / AI Mode) — the AEO goal, measured for the first time
+
+**286 impressions over 3 months. The export carries NO clicks column at all.** 1.4% of total
+impressions. Australia 254 of 286. Desktop 242 vs mobile 44.
+
+Top AI-surfaced pages: `/painter-mordialloc/` 39 · `/painter-collingwood/` 37 · homepage 20 ·
+**`/painter-clyde-north/` 20** · `/painter-sorrento/` 20 · `/painter-caulfield/` 17 ·
+`/painter-chelsea/` 15 · `/painter-parkdale/` 14 · `/painter-sandringham/` 12 ·
+`/keysborough-painters/` 9. Only three service pages appear at all (commercial 3, real-estate 3,
+roof 2).
+
+So the site **is** being surfaced in AI answers, modestly. Note the Casey noindex also removes the
+4th-highest AI-surfaced page.
+
+### Coverage — 118 indexed / 100 not indexed
+
+| Issue                           | Pages | Read                                                                               |
+| ------------------------------- | ----- | ---------------------------------------------------------------------------------- |
+| Page with redirect              | 62    | **By design** — drilldown confirms non-slash, www, http, /au/ variants. Do not fix |
+| Redirect error                  | 13    | **Unresolved — no URL list supplied**                                              |
+| Crawled – currently not indexed | 9     | No URL list                                                                        |
+| Soft 404                        | 7     | **Unresolved — no URL list supplied**                                              |
+| Excluded by 'noindex'           | 4     | Expected (`/privacy/`, `/review-us/`, `/terms/` + one)                             |
+| Not found (404)                 | 3     | **Unresolved — no URL list supplied**                                              |
+| Discovered – not indexed        | 2     | Passed                                                                             |
+
+**Redirect chains were tested directly and are clean**: 40 non-slash suburb variants, 10 plural
+`/painters-<slug>` variants, `/au/`, `http://`, and three service variants — every one a single
+301 to a 200. No chains, no loops. The 13 "Redirect error" URLs are most likely the `www` variants,
+which **cannot be tested from this sandbox** (proxy refuses `www` with CONNECT 403).
+
+**ASK JIMMY FOR:** the Coverage drilldown exports for **Redirect error**, **Soft 404** and
+**Not found (404)**. The supplied drilldown covers only "Page with redirect". Without the URL lists
+those three cannot be diagnosed, and Soft 404 in particular can silently de-index real pages.

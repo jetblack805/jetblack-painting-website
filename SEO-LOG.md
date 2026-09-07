@@ -4659,3 +4659,78 @@ the same confirmation.
 ⚠️ **Standing rule, unchanged: never read a paint colour off a photograph.** Monument in
 particular is guessed constantly because it is the most common dark grey in Melbourne — a
 plausible guess published as fact is still a fabrication.
+
+---
+
+## Three new suburb pages — Lyndhurst, Rowville, Wantirna South, 2026-09-07
+
+Jimmy asked for all three. Site goes from 94 to **97** live suburb pages; sitemap **113 → 116**.
+
+### ⚠️ Lyndhurst is in the City of Casey — read this before touching it
+
+Eight Casey-corridor pages were deliberately noindexed on 2026-09-06 (Clyde, Clyde North,
+Cranbourne, Berwick, Hampton Park, Endeavour Hills, Dandenong, Greater Dandenong). Adding an
+**indexed** Casey page looks like a contradiction, so the reasoning is recorded here:
+
+- The Casey cut was justified by **distance and worthlessness** — Clyde North is ~50 km from
+  Mordialloc and produced 2,385 impressions for 1 click, a 0.057% CTR across the whole set.
+- **Lyndhurst is the near edge of Casey, not the corridor.** It adjoins Keysborough, which is
+  live and indexed, and `suburbsData.ts` has listed Lyndhurst under Keysborough's
+  `areasServed` since well before this page existed.
+- Google was already crawling `/painter-lyndhurst/` — it turned up in today's **Not found**
+  drilldown, because the unguarded plural fallback had been pointing at it.
+
+Jimmy was told the tension explicitly and asked for the page anyway. **If Casey is ever
+revisited, judge Lyndhurst on its own numbers rather than sweeping it in with Clyde North.**
+
+### The angle on each page — do not flatten these into one template
+
+| Page | The argument the page makes |
+| --- | --- |
+| **Lyndhurst** | Housing is unusually uniform in age (2000s–2010s estates), so the suburb is hitting its **first repaint cycle all at once**. A builder's handover coat is not a repaint. Flat, open, no tree cover, so north and west elevations go first. |
+| **Rowville** | 1970s–80s brick veneer on large blocks, where the brick is never painted and **the job is entirely trim** — fascia, barge, eaves, gutters, frames, garage door. Plus the newer rendered estates at Rowville Lakes as a genuinely different scope. |
+| **Wantirna South** | **Two housing types in the same street** — original brick veneer needing heavy prep on a small painted area, and townhouses/owners corporations needing light prep on a large one. Body-corporate common property is the hook. |
+
+### Duplicate-content check
+
+Measured 7-gram overlap on body text with the footer directory stripped (the sitewide suburb
+list is identical everywhere and would report a false ~90%):
+
+| Comparison | n | min | median | max |
+| --- | --- | --- | --- | --- |
+| Baseline — existing pages vs each other | 28 | 33.6% | **39.8%** | 43.7% |
+| New pages vs each other | 3 | 29.4% | **31.0%** | 32.2% |
+| New pages vs existing | 24 | 33.0% | **38.0%** | 44.6% |
+
+The three new pages are **more distinct from each other than the existing library is**, and sit
+on the existing baseline against it. No new doorway risk.
+
+### Wiring — CLAUDE.md's checklist is incomplete, two more steps
+
+The documented 8-step checklist misses two things that a new suburb page needs:
+
+9. **`client/src/components/Footer.tsx` carries a hardcoded 94-entry suburb list.** The static
+   generator builds its own directory from `allSuburbPages`, so a page added without touching
+   the footer appears to crawlers and is invisible to users in the SPA. Added alphabetically.
+10. **`scripts/generate-coverage-map.mjs`** must be run after `suburbsData.ts` changes. It
+    rewrites `coverageMapData.ts` and the map inside `client/index.html` — the homepage prose
+    literally counts the suburbs ("services 72 Melbourne suburbs" → 75).
+
+⚠️ **`pnpm format` / prettier is a trap in this repo.** `App.tsx`, `suburbsData.ts`,
+`SuburbPageTemplate.tsx` and `worker/index.js` are **not** prettier-clean on main and are
+hand-aligned. Running prettier on them turned a 33-line change into 998 lines of churn; it was
+reverted and the additions re-applied in each file's native style. Format only files you
+created.
+
+### Verification
+
+- All three static pages: canonical correct, **zero** `noindex`, zero `${...}` leakage, zero
+  `\u` escapes, 6 JSON-LD blocks each parsing clean, identical schema shape to an existing page
+  (LocalBusiness, BreadcrumbList, Service, WebPage, FAQPage, WebPage)
+- **Zero `aggregateRating`** on all three — the 2026-08-11 "multiple aggregate ratings" error
+  stays fixed
+- FAQ schema and visible copy in sync, 4/4 on each page
+- All 18 neighbour links resolve to entries in `KNOWN_LANDING_PATHS`
+- Redirect simulation: 227 probes terminal, no chains, no self-redirects, no loops; **123**
+  `PATH_REDIRECTS` targets all present in `KNOWN_PATHS`
+- Sitewide static diff is exactly **+3 footer links per page** and nothing else

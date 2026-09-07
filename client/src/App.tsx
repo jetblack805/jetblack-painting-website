@@ -132,6 +132,9 @@ const RichmondPainters = lazy(() => import("./pages/RichmondPainters"));
 const NorthcotePainters = lazy(() => import("./pages/NorthcotePainters"));
 const BrunswickPainters = lazy(() => import("./pages/BrunswickPainters"));
 const SouthMelbournePainters = lazy(() => import("./pages/SouthMelbournePainters"));
+const LyndhurstPainters = lazy(() => import("./pages/LyndhurstPainters"));
+const RowvillePainters = lazy(() => import("./pages/RowvillePainters"));
+const WantirnaSouthPainters = lazy(() => import("./pages/WantirnaSouthPainters"));
 
 function Router() {
   return (
@@ -342,6 +345,12 @@ function Router() {
       <Route path={"/painters-brunswick"} component={BrunswickPainters} />
       <Route path={"/painter-south-melbourne"} component={SouthMelbournePainters} />
       <Route path={"/painters-south-melbourne"} component={SouthMelbournePainters} />
+      <Route path={"/painter-lyndhurst"} component={LyndhurstPainters} />
+      <Route path={"/painters-lyndhurst"} component={LyndhurstPainters} />
+      <Route path={"/painter-rowville"} component={RowvillePainters} />
+      <Route path={"/painters-rowville"} component={RowvillePainters} />
+      <Route path={"/painter-wantirna-south"} component={WantirnaSouthPainters} />
+      <Route path={"/painters-wantirna-south"} component={WantirnaSouthPainters} />
       {/* Blog Pages */}
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/best-paint-colours-melbourne-2025"} component={BestPaintColours2025} />

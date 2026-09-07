@@ -4954,3 +4954,41 @@ Bigger fish visible in the same data, not actioned: `/painter-clyde-north/` **1,
 (now re-indexed), `/painter-doncaster/` 909 at position 76, `/painter-malvern-east/` 791 at 55,
 `/painter-narre-warren/` 718 at 35, `/painter-camberwell/` 735 at 85. And `/painter-toorak/` still
 took 485 impressions and 3 clicks despite being off-target since 2026-08-17.
+
+---
+
+## ⚠️ TOORAK: "off-target" means DO NOT PROMOTE, not delete — 2026-09-07
+
+Jimmy's instruction, verbatim: **"Don't lose Toorak."**
+
+There is a standing rule in this log and in the weekly GBP Routine's prompt that new copy must
+not mention Toorak, Kew, Camberwell, Hawthorn or Malvern, because Jimmy moved them off-target on
+2026-08-17 and asked twice for Toorak off his homepage. **That rule governs promotion, not
+existence.**
+
+| Do | Do NOT |
+| --- | --- |
+| Keep `/painter-toorak/` live, indexed, in the sitemap, in the footer and in `KNOWN_LANDING_PATHS` | Delete, merge, `noindex`, or drop it from the sitemap |
+| Keep it out of the homepage coverage map (`HOMEPAGE_EXCLUDED` in `generate-coverage-map.mjs` — the correct and only suppression) | Write Toorak into new suburb copy, GBP posts or homepage prose |
+
+A protection comment is now at the top of `ToorakPainters.tsx` so this is visible to anyone
+editing the file, not only to whoever reads this log.
+
+⚠️ This is the same reasoning error that produced the Casey corridor cut — treating "we are not
+targeting this" as "therefore remove it" — and that cut had to be reversed the same day.
+
+### Correcting a claim made earlier today
+
+Earlier in this session Toorak was described to Jimmy as "the only page besides the homepage
+converting at all", on the strength of page-level figures: **485 impressions, ~3 clicks**. The
+query-level breakdown does not support that reading and the record should not stand:
+
+- Every Toorak-intent query is at **position 59–94 with ZERO clicks** — `painters toorak` 78
+  impressions at 79.2, `house painters toorak` 48 at 79.3, plus roughly 25 more in the same band.
+- The **only** query with a click is **`jetblack painting`** — the brand name, 3 impressions,
+  position 18.3. That click would have landed somewhere regardless of this page.
+
+So Toorak is not quietly earning work; it is page-8 rankings producing nothing. **It is kept
+because Jimmy asked for it kept — which is reason enough — not because the numbers argue for
+it.** Anyone re-reading the page-level stats will reach the wrong conclusion, which is why the
+query detail is recorded here.

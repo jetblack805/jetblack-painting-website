@@ -70,8 +70,21 @@ export default function BrightonPainters() {
       suburb={suburb}
       title="Brighton Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Brighton — heritage homes, modern beachside residences and premium materials. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`Three ${suburb} jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — an interior repaint rolled out room by room, through to the stair hall, and a new architect-designed build by the pool.`}
+      projectSummary={`Two ${suburb} jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — an interior repaint rolled out room by room, through to the stair hall.`}
       projectImages={[
+        // The architect-designed pool house that used to sit here was REMOVED at
+        // Jimmy's instruction on 2026-09-07. It came from the batch whose other two
+        // frames showed "Quest Paintings LTD" workwear; those two were never
+        // published, and he has now asked for the whole job off the site. Do not
+        // re-add it.
+        //
+        // The two exterior alts below deliberately say "a painter", not "a Jetblack
+        // Painting painter". Both were zoomed at full resolution on 2026-09-07: the
+        // cutting-in painter wears plain orange with no logo, and the before-shot
+        // painter is in yellow/green hi-vis, not Jetblack's orange. Compare the
+        // Armadale frames, where the workwear plainly reads JET BLACK PAINTING and
+        // the claim is therefore made. Do not re-assert the company here without
+        // verifying the branding in the photograph itself.
         {
           // Cropped in from the left. The original frame carried an enamel "11"
           // house-number plate on the gate post, and street numbers do not go on
@@ -88,7 +101,7 @@ export default function BrightonPainters() {
           small: "/projects/project-brighton-exterior-before-800.webp",
           width: 1200,
           height: 2133,
-          alt: `Weatherboard ${suburb} home in olive and cream before repainting, with a Jetblack Painting painter working the upper storey from the verandah roof`,
+          alt: `Weatherboard ${suburb} home in olive and cream before repainting, with a painter working the upper storey from the verandah roof`,
           caption:
             "Before. Olive weatherboard with cream trim — the paint was sound, the colour had dated. Working the upper storey off the verandah roof.",
         },
@@ -106,7 +119,7 @@ export default function BrightonPainters() {
           small: "/projects/project-brighton-exterior-cutting-in-800.webp",
           width: 1200,
           height: 2133,
-          alt: `A Jetblack Painting painter on a ladder cutting in the verandah fretwork by brush during a ${suburb} exterior repaint`,
+          alt: `A painter on a ladder cutting in the verandah fretwork by brush during a ${suburb} exterior repaint`,
           caption:
             "Cutting in the verandah fretwork. There is no spraying this — every bracket and spindle is done by hand, off a ladder, over drop sheets.",
         },
@@ -132,25 +145,6 @@ export default function BrightonPainters() {
           alt: `Finished stair hall in a ${suburb} home after an interior repaint, curved staircase with white risers and balusters against timber treads, handrail and floorboards`,
           caption:
             "The stair hall finished. A curved string, turned balusters and an arched fretwork surround are all cut in by hand, and there is nowhere on a staircase to hide a wobbly line — it sits at eye level and you walk past it every day.",
-        },
-        {
-          // Jimmy supplied two interiors of this job as well. They are withheld
-          // deliberately and permanently: the crew in both wears "Quest
-          // Paintings LTD" shirts with an 021 number, not Jetblack's. Another
-          // company's branding should never be what a visitor finds when they
-          // zoom into Jetblack's portfolio. Jimmy confirmed on 2026-09-06 to
-          // run the pool exterior only. Do not add those two later.
-          //
-          // This frame carries no people and no branding: the glazing was
-          // zoomed and holds only bare trees, a neighbour's brickwork, a step
-          // ladder and drop sheets.
-          src: "/projects/project-brighton-architect-pool-house.webp",
-          small: "/projects/project-brighton-architect-pool-house-800.webp",
-          width: 1400,
-          height: 1050,
-          alt: `Architect-designed ${suburb} home after repainting, white rendered walls and a cantilevered upper storey above full-height glazing and a black lap pool`,
-          caption:
-            "A new architect-designed build. Flat white planes this size are the hardest thing in the trade to paint well — there is no detail anywhere to break the surface up, so a single roller lap, patch or join in the render reads straight across the whole wall the moment the light rakes along it.",
         },
       ]}
       neighbouringSuburbs={[

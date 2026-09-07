@@ -5064,3 +5064,43 @@ inconsistent with this site's standing practice: a street number was deliberatel
 2026-08-02 and fence photos were declined in #256 for republishing an address already removed.
 Not changed unilaterally because swapping the social preview image is a visible brand decision,
 but it should be swapped for one of the 37 privacy-passed project photos.
+
+## 2026-09-07 — Real job photos on the exterior painting page; markdown layer caught up
+
+**Deploy of PR #269 verified live** before this change: `/painter-canterbury/` 200 with the
+right title, `noindex` 0, 6 JSON-LD blocks, canonical correct; `/painters-canterbury`
+301s to it; `/painter-camberwell/` heading narrowed to Camberwell alone; the three new
+service FAQs (structural steel, clear-coat timber, insurance work) all reach the crawler
+layer; sitemap 125. The Cloudflare build succeeded — Canterbury is a new page and it is
+serving, which it could not be if the build had failed.
+
+**Exterior painting was the weakest service page.** Counting crawler-visible `<img>` across
+all 11 service pages: interior 8, roof-fence 5, commercial 4, body-corporate 4,
+real-estate 4, roof 4, epoxy 3, cabinetry 3, maintenance 3, bathroom 2 — and
+**exterior 1**. The highest-intent service on the site had a single stock strip and not one
+photograph of Jimmy's own work. Added six real job photos: Brighton weatherboard,
+Murrumbeena Tudor, Caulfield render, Mount Martha brick-and-gable, Aspendale render
+repair, Mordialloc weatherboard. Six different substrates on purpose — the page's whole
+argument is that exterior work is substrate-dependent.
+
+Alt text is **reused verbatim** from each photo's own suburb page rather than rewritten.
+Every one of those descriptions was confirmed with Jimmy when the photo was first
+published; rewriting them here would be a fresh chance to get a colour or a material wrong
+for no gain. (Same reasoning that put the Dulux Monument / Silkwort naming under a
+do-not-extend comment on the Murrumbeena page.)
+
+**Generator fix this depended on.** `extractServiceImages` only accepted `src` starting
+`/gallery/`, so any real job photo added to a service page would have rendered for humans
+and been **invisible to crawlers** — the same class of bug as the hashed-asset one fixed
+earlier today, silently. Widened to accept `/projects/` as well, in both the guard and the
+srcset small-variant match. Exterior page: **1 → 7** crawler-visible images.
+
+**`public/index.md` was stale.** The Canterbury push ran the page and sitemap generators
+but not `generate-markdown.mjs`, so the markdown layer still said *81 suburbs* and did not
+list Canterbury. Regenerated: 82, Canterbury present. Worth remembering that the markdown
+layer is a separate generator and does not follow from the others.
+
+⚠️ Prettier was **not** run on `ExteriorPainting.tsx` — that file is not prettier-clean on
+main and formatting it would bury a 90-line change in several hundred lines of unrelated
+churn, exactly as happened with `worker/index.js` and `App.tsx` earlier. The added block
+was checked in isolation and is already prettier-shaped.

@@ -10,11 +10,6 @@ import { lazy, Suspense } from "react";
 // Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
 // out of the initial payload and the form loads below the fold.
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
-import imgService from "@/assets/images/gallery-commercial-comfortel-building.webp";
-import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.webp";
-import imgBeforeAfter900 from "@/assets/images/gallery-commercial-before-after-900.webp";
-import imgComfortelFront from "@/assets/images/gallery-commercial-comfortel-front.webp";
-import imgIndustrialLift from "@/assets/images/gallery-commercial-industrial-lift.webp";
 
 export default function CommercialPainting() {
   const services = [
@@ -142,7 +137,7 @@ export default function CommercialPainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgService}
+            src="/gallery/gallery-commercial-comfortel-building.webp"
             width={1400}
             height={1050}
             alt="Commercial building exterior painted by Jetblack Painting in Melbourne"
@@ -151,8 +146,8 @@ export default function CommercialPainting() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
-              src={imgBeforeAfter}
-              srcSet={`${imgBeforeAfter900} 900w, ${imgBeforeAfter} 1400w`}
+              src="/gallery/gallery-commercial-before-after.webp"
+              srcSet="/gallery/gallery-commercial-before-after-900.webp 900w, /gallery/gallery-commercial-before-after.webp 1400w"
               sizes="(max-width: 1024px) 100vw, 1152px"
               width={1400}
               height={1400}
@@ -161,7 +156,7 @@ export default function CommercialPainting() {
               loading="lazy"
             />
             <img
-              src={imgComfortelFront}
+              src="/gallery/gallery-commercial-comfortel-front.webp"
               width={1050}
               height={1400}
               alt="Commercial office and warehouse frontage painted by Jetblack Painting"
@@ -169,7 +164,7 @@ export default function CommercialPainting() {
               loading="lazy"
             />
             <img
-              src={imgIndustrialLift}
+              src="/gallery/gallery-commercial-industrial-lift.webp"
               width={1050}
               height={1400}
               alt="Industrial building painting in progress with access equipment by Jetblack Painting"

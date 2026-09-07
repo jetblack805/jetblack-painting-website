@@ -10,14 +10,6 @@ import { lazy, Suspense } from "react";
 // Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
 // out of the initial payload and the form loads below the fold.
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
-import imgHallway from "@/assets/images/service-interior-painting.webp";
-import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.webp";
-import imgKitchenTimber from "@/assets/images/gallery-interior-kitchen-timber.webp";
-import imgLounge from "@/assets/images/gallery-interior-lounge.webp";
-import imgStaircase from "@/assets/images/gallery-interior-staircase.webp";
-import imgStagedLiving from "@/assets/images/gallery-interior-staged-living.webp";
-import imgOpenLiving from "@/assets/images/gallery-interior-open-living.webp";
-import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.webp";
 
 export default function InteriorPainting() {
   const benefits = [
@@ -143,7 +135,7 @@ export default function InteriorPainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgHallway}
+            src="/gallery/service-interior-painting.webp"
             width={1050}
             height={1400}
             alt="Elegant painted hallway with ornate cornices and parquet flooring by Jetblack Painting"
@@ -152,7 +144,7 @@ export default function InteriorPainting() {
           />
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
             <img
-              src={imgOpenPlanLiving}
+              src="/gallery/gallery-interior-open-plan-living.webp"
               width={823}
               height={561}
               alt="Open plan living room and kitchen interior painted by Jetblack Painting"
@@ -160,7 +152,7 @@ export default function InteriorPainting() {
               loading="lazy"
             />
             <img
-              src={imgKitchenTimber}
+              src="/gallery/gallery-interior-kitchen-timber.webp"
               width={823}
               height={561}
               alt="Modern kitchen with timber panelling painted by Jetblack Painting"
@@ -168,7 +160,7 @@ export default function InteriorPainting() {
               loading="lazy"
             />
             <img
-              src={imgLounge}
+              src="/gallery/gallery-interior-lounge.webp"
               width={823}
               height={561}
               alt="Freshly painted lounge room by Jetblack Painting"
@@ -176,7 +168,7 @@ export default function InteriorPainting() {
               loading="lazy"
             />
             <img
-              src={imgStaircase}
+              src="/gallery/gallery-interior-staircase.webp"
               width={1050}
               height={1400}
               alt="Staircase balustrade and walls painted white by Jetblack Painting"
@@ -186,7 +178,7 @@ export default function InteriorPainting() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
-              src={imgStagedLiving}
+              src="/gallery/gallery-interior-staged-living.webp"
               width={1206}
               height={804}
               alt="Freshly painted staged living room by Jetblack Painting"
@@ -194,7 +186,7 @@ export default function InteriorPainting() {
               loading="lazy"
             />
             <img
-              src={imgOpenLiving}
+              src="/gallery/gallery-interior-open-living.webp"
               width={1170}
               height={782}
               alt="Bright open living room interior painted by Jetblack Painting"
@@ -202,7 +194,7 @@ export default function InteriorPainting() {
               loading="lazy"
             />
             <img
-              src={imgBoucleLiving}
+              src="/gallery/gallery-interior-boucle-living.webp"
               width={1050}
               height={1400}
               alt="Styled living and dining room interior painted by Jetblack Painting"

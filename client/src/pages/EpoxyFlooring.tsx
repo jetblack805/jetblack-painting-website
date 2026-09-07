@@ -12,15 +12,9 @@ import { lazy, Suspense } from "react";
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 // After shot. Already in the repo and used in Gallery.tsx — reused rather than
 // re-imported as a second copy of the same photo.
-import imgEpoxyAfter from "@/assets/images/gallery-commercial-epoxy-floor.webp";
-import imgEpoxyAfter900 from "@/assets/images/gallery-commercial-epoxy-floor-900.webp";
 // Before shot: the same warehouse in its original condition, ahead of the
 // walls, beams and floor being done.
-import imgEpoxyBefore from "@/assets/images/gallery-epoxy-warehouse-original.webp";
-import imgEpoxyBefore900 from "@/assets/images/gallery-epoxy-warehouse-original-900.webp";
 // Mid-job: walls and beams finished, slab bare and ready to coat.
-import imgEpoxySlab from "@/assets/images/gallery-epoxy-warehouse-before.webp";
-import imgEpoxySlab900 from "@/assets/images/gallery-epoxy-warehouse-before-900.webp";
 
 export default function EpoxyFlooring() {
   const benefits = [
@@ -138,8 +132,8 @@ export default function EpoxyFlooring() {
           <div className="grid gap-4 md:grid-cols-2">
             <figure className="m-0">
               <img
-                src={imgEpoxyBefore}
-                srcSet={`${imgEpoxyBefore900} 900w, ${imgEpoxyBefore} 1400w`}
+                src="/gallery/gallery-epoxy-warehouse-original.webp"
+                srcSet="/gallery/gallery-epoxy-warehouse-original-900.webp 900w, /gallery/gallery-epoxy-warehouse-original.webp 1400w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1400}
                 height={1050}
@@ -153,8 +147,8 @@ export default function EpoxyFlooring() {
             </figure>
             <figure className="m-0">
               <img
-                src={imgEpoxyAfter}
-                srcSet={`${imgEpoxyAfter900} 900w, ${imgEpoxyAfter} 1120w`}
+                src="/gallery/gallery-commercial-epoxy-floor.webp"
+                srcSet="/gallery/gallery-commercial-epoxy-floor-900.webp 900w, /gallery/gallery-commercial-epoxy-floor.webp 1120w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1120}
                 height={1400}
@@ -218,8 +212,8 @@ export default function EpoxyFlooring() {
             <h2 className="text-3xl font-bold text-[#EDEDEF] mb-6">Preparation Is the Whole Job</h2>
             <figure className="m-0 mb-6">
               <img
-                src={imgEpoxySlab}
-                srcSet={`${imgEpoxySlab900} 900w, ${imgEpoxySlab} 1400w`}
+                src="/gallery/gallery-epoxy-warehouse-before.webp"
+                srcSet="/gallery/gallery-epoxy-warehouse-before-900.webp 900w, /gallery/gallery-epoxy-warehouse-before.webp 1400w"
                 sizes="(max-width: 1024px) 100vw, 896px"
                 width={1400}
                 height={1050}

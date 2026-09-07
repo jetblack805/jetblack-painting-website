@@ -64,8 +64,21 @@ export default function SorrentoPainters() {
   return (
     <SuburbPageTemplate
       suburb={suburb}
-      title="Sorrento Painters | Coastal & Heritage | Jetblack Painting"
-      description="Coastal house painters in Sorrento — limestone cottages, weatherboard and premium holiday homes near the front and back beach. Free quotes. Call 0432 077 782."
+      // CTR rewrite 2026-09-07. Over three months this page took 266 impressions
+      // and ZERO clicks — with individual queries genuinely high: "painters
+      // sorrento bay" at position 5.8, "house painters sorrento" at 8.8. The old
+      // title said "Coastal & Heritage", which describes the houses rather than
+      // giving a searcher a reason to pick this result over the Sorrento-based
+      // painters sitting beside it in the SERP. Both now carry a concrete promise
+      // and the review rating, the two things a stranger scans for.
+      //
+      // Honest caveat recorded so nobody over-reads a later change: a title can
+      // only win the click once the result is seen. Zero clicks at these
+      // positions is mostly the local pack taking them, and at ~49km from
+      // Mordialloc this business will not enter Sorrento's map pack. Reviews are
+      // the lever that would.
+      title="Sorrento Painters | Coastal Homes, 5-Year Guarantee"
+      description="Sorrento painters — limestone cottages, weatherboard and holiday homes near the front and back beach. 5.0 from 17 reviews. Free quotes, 5-year guarantee."
       neighbouringSuburbs={[
         { name: "Rye", link: "/painter-rye" },
         { name: "Safety Beach", link: "/painter-safety-beach" },

@@ -10,12 +10,6 @@ import { lazy, Suspense } from "react";
 // Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
 // out of the initial payload and the form loads below the fold.
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
-import imgService from "@/assets/images/gallery-roof-charcoal-tiles.webp";
-import imgMetalRoof from "@/assets/images/gallery-roof-metal-colorbond.webp";
-import imgRoofCleaning from "@/assets/images/gallery-roof-cleaning.webp";
-import imgRoofCleaning900 from "@/assets/images/gallery-roof-cleaning-900.webp";
-import imgVictorianRoof from "@/assets/images/gallery-roof-victorian-restoration.webp";
-import imgVictorianRoof900 from "@/assets/images/gallery-roof-victorian-restoration-900.webp";
 
 export default function RoofPainting() {
   const benefits = [
@@ -111,7 +105,7 @@ export default function RoofPainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgService}
+            src="/gallery/gallery-roof-charcoal-tiles.webp"
             width={640}
             height={480}
             alt="Charcoal grey tiled roof freshly painted by Jetblack Painting"
@@ -120,7 +114,7 @@ export default function RoofPainting() {
           />
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
             <img
-              src={imgMetalRoof}
+              src="/gallery/gallery-roof-metal-colorbond.webp"
               width={1050}
               height={1400}
               alt="Colorbond metal roof painted by Jetblack Painting"
@@ -128,8 +122,8 @@ export default function RoofPainting() {
               loading="lazy"
             />
             <img
-              src={imgRoofCleaning}
-              srcSet={`${imgRoofCleaning900} 900w, ${imgRoofCleaning} 1123w`}
+              src="/gallery/gallery-roof-cleaning.webp"
+              srcSet="/gallery/gallery-roof-cleaning-900.webp 900w, /gallery/gallery-roof-cleaning.webp 1123w"
               sizes="(max-width: 1024px) 100vw, 1152px"
               width={1123}
               height={1400}
@@ -138,8 +132,8 @@ export default function RoofPainting() {
               loading="lazy"
             />
             <img
-              src={imgVictorianRoof}
-              srcSet={`${imgVictorianRoof900} 900w, ${imgVictorianRoof} 1050w`}
+              src="/gallery/gallery-roof-victorian-restoration.webp"
+              srcSet="/gallery/gallery-roof-victorian-restoration-900.webp 900w, /gallery/gallery-roof-victorian-restoration.webp 1050w"
               sizes="(max-width: 1024px) 100vw, 1152px"
               width={1050}
               height={1400}

@@ -14,15 +14,6 @@ const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 // second name, so the same photo shipped twice. Points at the canonical one.
 // No -900 variant: the source is only 640x480, so a "900" file would be the same
 // pixels under a misleading name.
-import imgRoof from "@/assets/images/gallery-roof-charcoal-tiles.webp";
-import imgFenceBefore from "@/assets/images/gallery-fence-picket-before.webp";
-import imgFenceBefore900 from "@/assets/images/gallery-fence-picket-before-900.webp";
-import imgFenceAfter from "@/assets/images/gallery-fence-picket-after.webp";
-import imgFenceAfter900 from "@/assets/images/gallery-fence-picket-after-900.webp";
-import imgFenceBlackDeck from "@/assets/images/gallery-fence-black-deck.webp";
-import imgFenceBlackDeck900 from "@/assets/images/gallery-fence-black-deck-900.webp";
-import imgFenceMerbau from "@/assets/images/gallery-fence-merbau-oiled.webp";
-import imgFenceMerbau900 from "@/assets/images/gallery-fence-merbau-oiled-900.webp";
 
 export default function RoofFencePainting() {
   const benefits = [
@@ -122,7 +113,7 @@ export default function RoofFencePainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgRoof}
+            src="/gallery/gallery-roof-charcoal-tiles.webp"
             width={640}
             height={480}
             alt="Charcoal tiled roof resprayed by Jetblack Painting in Melbourne"
@@ -138,8 +129,8 @@ export default function RoofFencePainting() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
             <figure className="relative m-0">
               <img
-                src={imgFenceBefore}
-                srcSet={`${imgFenceBefore900} 900w, ${imgFenceBefore} 1200w`}
+                src="/gallery/gallery-fence-picket-before.webp"
+                srcSet="/gallery/gallery-fence-picket-before-900.webp 900w, /gallery/gallery-fence-picket-before.webp 1200w"
                 sizes="(max-width: 640px) 100vw, 50vw"
                 width={1200}
                 height={900}
@@ -154,8 +145,8 @@ export default function RoofFencePainting() {
             </figure>
             <figure className="relative m-0">
               <img
-                src={imgFenceAfter}
-                srcSet={`${imgFenceAfter900} 675w, ${imgFenceAfter} 1125w`}
+                src="/gallery/gallery-fence-picket-after.webp"
+                srcSet="/gallery/gallery-fence-picket-after-900.webp 675w, /gallery/gallery-fence-picket-after.webp 1125w"
                 sizes="(max-width: 640px) 100vw, 50vw"
                 width={1125}
                 height={1500}
@@ -172,8 +163,8 @@ export default function RoofFencePainting() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
             <img
-              src={imgFenceBlackDeck}
-              srcSet={`${imgFenceBlackDeck900} 900w, ${imgFenceBlackDeck} 1206w`}
+              src="/gallery/gallery-fence-black-deck.webp"
+              srcSet="/gallery/gallery-fence-black-deck-900.webp 900w, /gallery/gallery-fence-black-deck.webp 1206w"
               sizes="(max-width: 640px) 100vw, 50vw"
               width={1206}
               height={1056}
@@ -183,8 +174,8 @@ export default function RoofFencePainting() {
               decoding="async"
             />
             <img
-              src={imgFenceMerbau}
-              srcSet={`${imgFenceMerbau900} 900w, ${imgFenceMerbau} 1206w`}
+              src="/gallery/gallery-fence-merbau-oiled.webp"
+              srcSet="/gallery/gallery-fence-merbau-oiled-900.webp 900w, /gallery/gallery-fence-merbau-oiled.webp 1206w"
               sizes="(max-width: 640px) 100vw, 50vw"
               width={1206}
               height={505}

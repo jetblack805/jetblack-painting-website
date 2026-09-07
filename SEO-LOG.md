@@ -4862,3 +4862,95 @@ warns "stores no MCP connectors" on every trigger this org can create, self-boun
 2026-09-03 advice post proves the Routine has posted successfully at least once before, which is
 good evidence it works — but that is inference, not a verified firing of the current prompt. The
 first alternating run is 2026-09-08 23:00 UTC.
+
+---
+
+## Casey reversed, service images fixed, Sorrento CTR — 2026-09-07
+
+Jimmy asked for three fixes in one go.
+
+### 1. ⚠️ The Casey noindex is REVERSED — it rested on a wrong number
+
+All eight pages (Clyde, Clyde North, Cranbourne, Berwick, Hampton Park, Endeavour Hills,
+Dandenong, Greater Dandenong) are **indexed again and back in the sitemap**.
+
+The 2026-08-29 cut had two justifications and **both fail on inspection**:
+
+**Distance was wrong by a factor of two.** SEO-LOG recorded "Clyde North is ~50 km from
+Mordialloc". Computed from the coordinates in `suburbsData.ts` it is **23.2 km**. Every page
+in that cut is closer to base than nine pages that stayed indexed:
+
+| Noindexed (cut) | km | Indexed (kept) | km |
+| --- | --- | --- | --- |
+| Clyde | 27.2 | Sorrento | 48.6 |
+| Clyde North | 23.2 | Rye | 46.4 |
+| Cranbourne | 19.0 | Rosebud | 41.8 |
+| Endeavour Hills | 15.0 | Dromana | 37.5 |
+| Hampton Park | 14.6 | Safety Beach | 35.4 |
+| Greater Dandenong | 10.6 | Mount Martha | 30.0 |
+
+Mount Martha, Safety Beach and Sorrento are suburbs Jimmy has **real job photos from**. Cutting
+Clyde at 27 km while keeping Sorrento at 49 km was never coherent.
+
+**"Low CTR proves it is worthless" is circular.** A 0.057% CTR at average position 26–56 is
+approximately what *any* result gets down there. It describes the ranking, not the page. Clyde
+North took **1,955 impressions** in the last three months at position 28 — that is real demand
+on a page that had been made permanently ineligible to ever earn a click from it.
+
+Content depth was checked too, and does not support the cut: Clyde North is 875 words / 6 FAQs
+/ 4 sections against indexed Wheelers Hill at 470 / 3 / 2. Berwick (461/3/2) is line-ball with
+Wheelers Hill. These pages are not thinner than what was kept.
+
+⚠️ **Do not re-cut this corridor on the "~50km" figure. It is wrong.** If it is ever revisited,
+recompute from `suburbsData.ts` and compare against what is actually kept.
+
+### 2. Service pages: 0 → 41 crawler-visible images
+
+Every service photograph was invisible to any crawler that does not run JavaScript — the
+Chadstone mould before/after, bathroom, kitchen cabinetry, epoxy floors, roofs and fences. The
+static layer emitted **zero** `<img>` tags on all 11 service pages while suburb pages emitted five.
+
+**Root cause:** service pages imported images as Vite assets (`@/assets/images/…`), whose final
+URLs are content-hashed and unknowable until *after* `vite build` — which runs *after*
+`generate-static-pages.mjs`. The generator therefore could not name them. Suburb project photos
+never had this problem because they live in `public/` with stable URLs.
+
+**Fix:** the 54 gallery files are copied to `public/gallery/`, the 11 service pages now
+reference stable `/gallery/…` URLs, and the generator parses their `<img>` tags with
+`extractServiceImages()` — the same one-source-of-truth approach `extractProjectImages()` takes
+for suburbs. Edit an alt or caption in the `.tsx` and the crawler layer follows.
+
+⚠️ **`SuburbPageTemplate.tsx`, `Services.tsx` and `Gallery.tsx` were deliberately NOT migrated.**
+They share 13 of these images and still import from `assets/`, which still resolves because the
+files were **copied, not moved**. Migrating them would mean editing the template all 97 suburb
+pages depend on, and `pnpm build` cannot run in this environment (no `node_modules`), so a React
+refactor cannot be compile-checked here. The cost of stopping is ~6.5MB duplicated; the cost of
+being wrong is the whole site. Finish the migration only somewhere the build actually runs.
+
+Two bugs found and fixed while doing it:
+- The first extractor required a `<figcaption>` after each `<img>`, so the caption-less grids
+  (roof, interior, commercial, cabinetry) silently emitted nothing — 4 of 11 pages worked.
+  Captions are now optional in both extractor and renderer.
+- The renderer hard-coded `800w` for the small variant, from the suburb convention. The service
+  gallery uses **900w**. A wrong width descriptor makes the browser choose the wrong file, so the
+  descriptor is now read from the source rather than assumed.
+
+### 3. Sorrento CTR — rewritten, with the limit stated
+
+266 impressions, **zero clicks**, over three months. Individual queries rank genuinely well:
+"painters sorrento bay" 5.8, "house painters sorrento" 8.8, "painters sorrento" 13.3 on 151
+impressions. Title and description now lead with a concrete promise and the review rating rather
+than "Coastal & Heritage", which describes the houses instead of giving a stranger a reason to
+click.
+
+⚠️ **Correcting an earlier characterisation in this log:** Sorrento was described as the standout
+zero-click page. Fresh data says otherwise — it is the sitewide pattern. Across every page with
+40+ impressions, roughly **20,000 impressions produced about 52 clicks**, and the homepage is the
+only page converting properly (628 impressions, 36 clicks, 5.7% CTR). A title rewrite can only win
+a click once the result is seen; at ~49km from Mordialloc this business will not enter Sorrento's
+map pack, which is where those clicks are going. **Reviews remain the lever.**
+
+Bigger fish visible in the same data, not actioned: `/painter-clyde-north/` **1,955 impressions**
+(now re-indexed), `/painter-doncaster/` 909 at position 76, `/painter-malvern-east/` 791 at 55,
+`/painter-narre-warren/` 718 at 35, `/painter-camberwell/` 735 at 85. And `/painter-toorak/` still
+took 485 impressions and 3 clicks despite being off-target since 2026-08-17.

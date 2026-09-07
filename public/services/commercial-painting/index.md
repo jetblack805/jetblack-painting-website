@@ -107,6 +107,8 @@ Explore our other painting services across Melbourne.
 - [Roof Painting](/services/roof-painting/)
 - [Roof & Fence Painting](/services/roof-fence-painting/)
 
+## Commercial Painting work
+
 **Jetblack Painting** — Commercial Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

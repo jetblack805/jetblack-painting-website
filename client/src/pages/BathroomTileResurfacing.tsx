@@ -21,10 +21,6 @@ const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 // scripts/convert-photo.mjs started using headless Chromium as the pipeline.
 // That script applies the EXIF rotation during decode — without it the pair
 // would have shipped sideways.
-import imgBathBefore from "@/assets/images/gallery-bathroom-bath-before.webp";
-import imgBathBefore900 from "@/assets/images/gallery-bathroom-bath-before-900.webp";
-import imgBathAfter from "@/assets/images/gallery-bathroom-bath-after.webp";
-import imgBathAfter900 from "@/assets/images/gallery-bathroom-bath-after-900.webp";
 
 const DESCRIPTION =
   "Bathroom vanity, tile and bathtub resurfacing across Melbourne. Durable 2-pack coatings that renew a dated bathroom without a full strip-out. Free quotes.";
@@ -117,8 +113,8 @@ export default function BathroomTileResurfacing() {
           <div className="grid gap-4 md:grid-cols-2">
             <figure className="m-0">
               <img
-                src={imgBathBefore}
-                srcSet={`${imgBathBefore900} 900w, ${imgBathBefore} 1400w`}
+                src="/gallery/gallery-bathroom-bath-before.webp"
+                srcSet="/gallery/gallery-bathroom-bath-before-900.webp 900w, /gallery/gallery-bathroom-bath-before.webp 1400w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1400}
                 height={1867}
@@ -134,8 +130,8 @@ export default function BathroomTileResurfacing() {
             </figure>
             <figure className="m-0">
               <img
-                src={imgBathAfter}
-                srcSet={`${imgBathAfter900} 900w, ${imgBathAfter} 1400w`}
+                src="/gallery/gallery-bathroom-bath-after.webp"
+                srcSet="/gallery/gallery-bathroom-bath-after-900.webp 900w, /gallery/gallery-bathroom-bath-after.webp 1400w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1400}
                 height={1867}

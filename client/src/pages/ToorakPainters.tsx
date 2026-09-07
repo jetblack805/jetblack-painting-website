@@ -1,3 +1,27 @@
+/**
+ * ⚠️ KEEP THIS PAGE. Jimmy said "Don't lose Toorak" on 2026-09-07.
+ *
+ * There is a standing rule that new copy must NOT mention Toorak — it is in
+ * SEO-LOG and in the weekly GBP Routine's prompt, because Jimmy moved Toorak
+ * off-target on 2026-08-17 and asked twice for it off the homepage. That rule is
+ * about PROMOTION, not existence. It means: do not write Toorak into new
+ * suburb copy, GBP posts, or the homepage coverage map (see HOMEPAGE_EXCLUDED in
+ * scripts/generate-coverage-map.mjs, which is the correct and only suppression).
+ *
+ * It does NOT mean delete, merge, noindex or drop this page from the sitemap.
+ * That is precisely the reasoning error that produced the Casey corridor cut,
+ * which had to be reversed on 2026-09-07 after its stated justification turned
+ * out to be wrong.
+ *
+ * For the record, so nobody re-litigates this from the page-level numbers: over
+ * the three months to 2026-09-07 this page took 485 impressions and ~3 clicks,
+ * which reads as "converting" until you look at the queries. Every Toorak-intent
+ * query — "painters toorak" (78 impressions), "house painters toorak" (48), and
+ * around 25 others — sits at position 59-94 with ZERO clicks. The only query
+ * with a click is "jetblack painting", the brand name. The page is not earning
+ * Toorak work. It is kept because Jimmy asked for it kept, which is reason
+ * enough, not because the numbers argue for it.
+ */
 import SuburbPageTemplate from "@/components/SuburbPageTemplate";
 
 export default function ToorakPainters() {

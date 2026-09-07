@@ -18,6 +18,7 @@
  *   node scripts/gbp-post.mjs --mark <id>     record <id> as posted today
  *   node scripts/gbp-post.mjs --validate      check the whole queue, exit 1 on any problem
  *   node scripts/gbp-post.mjs --status        human summary of progress
+ *   node scripts/gbp-post.mjs --due           whose turn this week: exit 0 photo, exit 10 advice
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -102,6 +103,34 @@ if (args.includes("--status")) {
   console.log(`  next      ${remaining[0] ? remaining[0].id : "— queue exhausted"}`);
   if (problems.length) console.log(`  ⚠ ${problems.length} validation problem(s); run --validate`);
   process.exit(0);
+}
+
+// Jimmy runs ONE Google Business Profile post a week, alternating between a job
+// photo from this queue and a written advice post. Both are driven by the single
+// weekly Routine, which asks this first.
+//
+// Alternation is derived from the posting history rather than from a second cron,
+// because cron cannot express "every other week": restricting both day-of-month
+// and day-of-week makes cron fire when EITHER matches, which would silently post
+// far more often than intended. Deriving it here is also self-correcting — a
+// missed or failed week does not permanently invert the rotation.
+//
+// Threshold is 8 days, not 14: the weekly slot has jitter, and a strict 14 would
+// make a slot that fires at 13.9 days skip the photo and hand advice two turns.
+const ALTERNATE_AFTER_DAYS = 8;
+if (args.includes("--due")) {
+  const last = q.posted[q.posted.length - 1];
+  if (!last) {
+    console.log("photo — nothing has been posted from the queue yet");
+    process.exit(0);
+  }
+  const days = Math.floor((Date.now() - Date.parse(`${last.date}T00:00:00Z`)) / 86400000);
+  if (days >= ALTERNATE_AFTER_DAYS) {
+    console.log(`photo — last photo post was ${days} days ago (${last.id})`);
+    process.exit(0);
+  }
+  console.log(`advice — last photo post was only ${days} days ago (${last.id}), so it is the written post's turn`);
+  process.exit(10);
 }
 
 if (args.includes("--mark")) {

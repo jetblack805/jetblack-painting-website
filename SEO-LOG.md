@@ -4809,3 +4809,56 @@ dollar figure).
 **The queue does not wrap around.** When all 34 are posted the runner exits 3 and
 reports, rather than silently republishing an eight-month-old post. A visible gap is
 the prompt to add new photos.
+
+---
+
+## ⚠️ Two weekly GBP Routines existed — merged into one alternating slot, 2026-09-07
+
+**My error, recorded so it is not repeated.** When Jimmy asked for weekly photo posts I built a
+new Routine without first checking `list_triggers`. A weekly GBP Routine **already existed**
+(`trig_01CYjqUXPSeJTBAVvC5mKa51`, created 2026-09-04, bound to this same session), publishing
+150–350 word **advice posts** rotating across method / seasonal / diagnosis / materials /
+property type / commercial / what-to-ask. The 2026-09-03 "spray or brush" post came from it.
+
+For about an hour there were **two** weekly jobs pointing at the same profile — mine Mondays,
+the original Tuesdays. With the photo already published that day, three posts would have landed
+inside ~36 hours.
+
+⚠️ **Check `list_triggers` before creating any Routine.** Two Routines can silently duplicate
+each other for a week before anyone notices, and the symptom is on the customer-facing profile.
+
+### Resolution — Jimmy chose alternating
+
+One post a week, alternating photo / advice, both driven by the **single** pre-existing Tuesday
+Routine. Its prompt now opens with a Step 0 that calls `gbp-post.mjs --due`; the entire original
+advice prompt is preserved **verbatim** below that and still governs written weeks. The duplicate
+Routine was deleted.
+
+**Alternation is derived from posting history, not from a second cron.** ⚠️ Cron cannot express
+"every other week": if both day-of-month and day-of-week are restricted, cron fires when
+**either** matches, so `0 23 1-7,15-21 * 2` would fire far more often than intended, not
+fortnightly. Deriving it in the script is also self-correcting — a missed or failed week does
+not permanently invert the rotation. Threshold is **8 days**, not 14, because the weekly slot
+has jitter and a strict 14 would let a 13.9-day gap hand advice two turns in a row.
+
+So the photo queue advances **roughly fortnightly**: 34 photos is now ~16 months, not ~8.
+
+### The photo queue was checked against the advice Routine's locked rules
+
+That Routine carries constraints the photo captions must also honour, since both publish unread.
+Verified across all 34 entries: **0** mentions of Toorak / Kew / Camberwell / Hawthorn / Malvern
+(off-target since 2026-08-17), **0** price figures, **0** discounts or percentages, **0** invented
+review, rating or years claims. Those rules are now written into the queue file's own readme.
+
+One prior objection resolved rather than overridden: the advice Routine says "no photo_url —
+picking blind from the gallery risks the empty-warehouse-floor image Google surfaces badly."
+That reasoning holds for blind gallery picks. It does not apply here, because every photo in this
+queue is hand-selected and hand-captioned against the published suburb-page text.
+
+### Still unproven
+
+Whether a **session-bound** Routine retains the Windsor connector when it fires. `create_trigger`
+warns "stores no MCP connectors" on every trigger this org can create, self-bound included. The
+2026-09-03 advice post proves the Routine has posted successfully at least once before, which is
+good evidence it works — but that is inference, not a verified firing of the current prompt. The
+first alternating run is 2026-09-08 23:00 UTC.

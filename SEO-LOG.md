@@ -4460,3 +4460,75 @@ which **cannot be tested from this sandbox** (proxy refuses `www` with CONNECT 4
 **ASK JIMMY FOR:** the Coverage drilldown exports for **Redirect error**, **Soft 404** and
 **Not found (404)**. The supplied drilldown covers only "Page with redirect". Without the URL lists
 those three cannot be diagnosed, and Soft 404 in particular can silently de-index real pages.
+
+---
+
+## 2026-09-07 — Quest/PSA photos removed, and a real Soft 404 fixed
+
+Jimmy: _"Fix my photos / Remove the PSA quest photos"_, plus the Coverage **Soft 404** drilldown
+that the previous entry asked for.
+
+### Photos — one removed, two captions corrected
+
+**Removed `/projects/project-brighton-architect-pool-house.webp`** and its 800w variant. It came
+from the batch whose other two frames showed **"Quest Paintings LTD"** workwear. Those two were
+never published; Jimmy has now asked for the whole job off the site. Assets deleted, entry removed,
+`projectSummary` back to two Brighton jobs, and a note left in the source so it is not re-added.
+
+**Two live alt texts were asserting a company the photograph cannot support.** Both were zoomed at
+full resolution before changing anything:
+
+| Photo                            | Workwear seen                      | Verdict           |
+| -------------------------------- | ---------------------------------- | ----------------- |
+| Brighton exterior **before**     | yellow/green hi-vis, no logo       | **claim removed** |
+| Brighton exterior **cutting-in** | plain orange, no logo at all       | **claim removed** |
+| Armadale **scissor lift**        | shirt reads **JET BLACK**          | claim kept ✅     |
+| Armadale **ladder**              | shirt reads **JET BLACK PAINTING** | claim kept ✅     |
+
+Both Brighton alts now say _"a painter"_ rather than _"a Jetblack Painting painter"_. The Armadale
+pair are verifiable and unchanged. **The rule going forward: assert the company in alt text only
+when the branding is legible in the frame.** Left as a comment in `BrightonPainters.tsx`.
+
+⚠️ **Not changed, flagged for Jimmy:** three older captions still assert Jetblack crew and predate
+this session — `ArmadalePainters.tsx:57` ("Two Jetblack Painting painters **in branded workwear**"),
+`RoofPainting.tsx:146`, and `PropertyMaintenance.tsx:125`. He supplied all three describing them as
+his own painters, so they are left alone rather than rewritten unilaterally. Worth him confirming.
+
+### ⚠️ REAL DEFECT FOUND AND FIXED — colon paths were 307ing, not 404ing
+
+The Soft 404 drilldown listed seven URLs. Three are of the form:
+
+```
+/assets/index-CZFSjOkP.js:2:77119
+```
+
+— JS bundle paths with a `:line:column` suffix, which Google picks up from stack traces and
+source-map references. **They were answering 307**, a _temporary_ redirect to the percent-encoded
+form (`...js%3A2%3A77119`), which then 404s. Google follows the 307 and judges what it lands on,
+hence the Soft 404 classification.
+
+It is not the colon being special-cased anywhere — the Cloudflare **assets binding normalises any
+path containing a colon**, verified: `/nope:1:2` and `/painter-brighton:1:2` both 307 too, while
+`/assets/index-FAKE.js` correctly 404s. This is the same failure mode the trailing-slash 301 in the
+worker already exists to pre-empt, and the file even documents it: _"the assets binding normalises
+/painter-x to /painter-x/ with a 307 … Issue the 301 ourselves, before the assets binding gets a
+chance to 307."_
+
+**Fix:** `worker/index.js` now answers any colon-containing path that is not in `KNOWN_PATHS` with
+a hard **404**, before the assets binding sees it. Guarded on `KNOWN_PATHS` so a real path could
+never be caught — verified that **zero** entries in `known-paths.js` contain a colon.
+
+### The other four Soft 404s — no code change needed
+
+| URL                              | Status  | Tested 2026-09-07                                     |
+| -------------------------------- | ------- | ----------------------------------------------------- |
+| `/blog`                          | Failed  | 301 → `/blog/` → **200**, 12 post links, real content |
+| `/services/real-estate-painting` | Pending | 301 → slash form → 200                                |
+| `/painter-mount-martha`          | Pending | 301 → slash form → 200                                |
+| `/painter-bentleigh`             | Pending | 301 → slash form → 200                                |
+
+All four are healthy now. `/blog` is the only one marked **Failed** (crawled 2026-09-04) and it is
+demonstrably a real index page — ask Google to revalidate rather than changing anything.
+
+**Still outstanding:** the drilldowns for **Redirect error (13)** and **Not found (3)** were not
+supplied. The 13 are most likely `www` variants, which this sandbox cannot reach.

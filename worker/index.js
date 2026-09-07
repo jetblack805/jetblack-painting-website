@@ -188,6 +188,25 @@ export default {
       return Response.redirect(`${url.origin}${singular}/`, 301);
     }
 
+    // A path containing a colon never belongs to this site, and left alone the
+    // assets binding answers it with a 307 to the percent-encoded form
+    // (/assets/index-abc.js:2:77119 -> /assets/index-abc.js%3A2%3A77119), which
+    // then 404s. Google reported the three it had found under Soft 404 in the
+    // 2026-09-07 Coverage export: it follows the temporary redirect and judges
+    // what it lands on. Same failure mode the trailing-slash 301 below exists to
+    // pre-empt — answer it ourselves before the assets binding can 307.
+    //
+    // These URLs come from JS stack traces and source-map references
+    // (bundle.js:line:column), so they are never legitimate and never will be.
+    // Guarded on KNOWN_PATHS so a real path could never be caught by it —
+    // verified that zero entries in known-paths.js contain a colon.
+    if (url.pathname.includes(":") && !KNOWN_PATHS.has(url.pathname)) {
+      return new Response("Not Found", {
+        status: 404,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      });
+    }
+
     // Canonical URLs on this site all end in a slash. Left to itself, the assets
     // binding normalises /painter-x to /painter-x/ with a 307 — a *temporary*
     // redirect, which tells Google not to consolidate ranking signals onto the

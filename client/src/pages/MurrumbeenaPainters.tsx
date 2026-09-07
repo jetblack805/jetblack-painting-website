@@ -33,13 +33,19 @@ export default function MurrumbeenaPainters() {
       projectSummary={`An exterior repaint on a Tudor-style ${suburb} home with a first-floor addition. Only the render and the trim changed — the tile roof and the original red brick were left exactly as they were, because on a house of this era those are the two things worth keeping.`}
       projectImages={[
         {
+          // The two colours are named because Jimmy confirmed them on
+          // 2026-09-07 — Dulux Silkwort on the render, Dulux Monument on the
+          // trim. They were written as "pale grey" and "charcoal" until then,
+          // deliberately, because reading a colour name off a photograph is
+          // guessing and this site does not guess. Do not extend the same
+          // naming to any other job without the same confirmation.
           src: "/projects/project-murrumbeena-tudor-exterior.webp",
           small: "/projects/project-murrumbeena-tudor-exterior-800.webp",
           width: 1400,
           height: 1050,
-          alt: `Tudor-style ${suburb} home after an exterior repaint, pale grey render with charcoal picked out through the half-timbering, fascias and gutters, above original red brick and a terracotta tile roof`,
+          alt: `Tudor-style ${suburb} home after an exterior repaint, render in Dulux Silkwort with Dulux Monument picked out through the half-timbering, fascias and gutters, above original red brick and a terracotta tile roof`,
           caption:
-            "Pale grey on the render with the charcoal taken through the half-timbering, the fascias, the gutters and the downpipes. The brick and the terracotta roof were not touched — picking out the timbering in a dark colour is what modernises a house like this, and painting the brick would have thrown away the part that gives it its character.",
+            "Dulux Silkwort on the render with Dulux Monument taken through the half-timbering, the fascias, the gutters and the downpipes. The brick and the terracotta roof were not touched — picking out the timbering in a dark colour is what modernises a house like this, and painting the brick would have thrown away the part that gives it its character.",
         },
       ]}
       neighbouringSuburbs={[

@@ -4607,3 +4607,55 @@ terminal, no self-redirects, no loops.
 Both defects found today are the same mistake in different clothes: a redirect issued
 speculatively, on a pattern rather than on knowledge of what is actually published. Every
 redirect in this worker must resolve to something in `KNOWN_PATHS`.
+
+---
+
+## Mordialloc courtyard set published, Murrumbeena colours confirmed — 2026-09-07
+
+Jimmy released the four held **Mordialloc courtyard** frames and confirmed the
+**Murrumbeena** colours. Both were the last two open questions on the photo batches.
+
+### Mordialloc — four frames, now live
+
+A separate job from the weatherboard exterior already on the page: the double-height rear
+courtyard of a two-storey townhouse. Brickwork in white, joinery and balcony framing in a
+grey-green. Published as `project-mordialloc-courtyard-{wide,brickwork,balcony,bifolds}`,
+all 1200x1600 so the eight images on the page sit as four clean two-column rows.
+
+**Captioned as mid-job, not as a finished result.** The balustrade glass is still in its
+protective film and the interior is under dust sheets — the captions say so rather than
+implying a completed finish.
+
+**No colour names on these.** The brick is plainly white and the joinery a grey-green, but
+naming a product off a photograph is guessing. Contrast Murrumbeena below.
+
+**Full-resolution privacy pass on all four.** No street number, no number plate, no person,
+and nothing legible in the interior visible through the glass — the furniture is sheeted
+and the one framed object on the wall is a mirror reflecting a dark room. The single human
+trace is the **photographer's own reflection** in the door glass of the bifolds frame: a
+backlit, unidentifiable silhouette holding a phone, on Jimmy's own job. Kept.
+
+Two frames were cropped, and **for the photographer's finger over the lens, not for
+privacy** — worth recording so a later pass does not go looking for a redaction that isn't
+there:
+
+- courtyard/balcony — `RECT=1050,0,2268,3024`, which also squares a 4:3 landscape to 3:4
+  so it pairs in the grid
+- courtyard/brickwork — `RECT=114,0,2910,3880`
+
+Three of the four carried **EXIF orientation 6** and were rotated on decode by the usual
+data:-URL pipeline.
+
+### Murrumbeena — Dulux Silkwort and Dulux Monument
+
+Jimmy confirmed the two colours, so the caption and alt on
+`project-murrumbeena-tudor-exterior` now name them: **Silkwort** on the render, **Monument**
+on the half-timbering, fascias, gutters and downpipes.
+
+They were written as "pale grey" and "charcoal" until today, deliberately. A comment in the
+page records why, and that the same naming must not be extended to any other job without
+the same confirmation.
+
+⚠️ **Standing rule, unchanged: never read a paint colour off a photograph.** Monument in
+particular is guessed constantly because it is the most common dark grey in Melbourne — a
+plausible guess published as fact is still a fabrication.

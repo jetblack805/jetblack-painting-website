@@ -403,6 +403,7 @@ export const KNOWN_PATHS = new Set([
   "/services/roof-painting/",
   "/services/roof-painting/index.md",
   "/sitemap.xml",
+  "/social/cover-safety-beach-render-roof.jpg",
   "/social/project-armadale-commercial-facade.jpg",
   "/social/project-armadale-high-st-complete.jpg",
   "/social/project-armadale-high-st-half-painted.jpg",

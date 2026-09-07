@@ -56,6 +56,12 @@ const sources = fs
   .filter((f) => f.endsWith(".webp") && !f.endsWith("-800.webp"))
   .sort();
 
+// public/social/ also holds cover-*.jpg — 16:9 crops built by hand for the
+// Business Profile's COVER slot, which rejects the 4:3 project photos outright
+// with a bare "invalid argument". They have no .webp source under
+// public/projects, so this script neither writes nor prunes them; deleting one
+// would silently break the profile's cover image.
+
 const browser = await loadPlaywright().chromium.launch({
   executablePath: fs.existsSync("/opt/pw-browsers/chromium")
     ? "/opt/pw-browsers/chromium"

@@ -33,6 +33,10 @@
 // halves are cut out and captioned by the page instead of shipping someone
 // else's overlay text across a premium-positioned site.
 //
+// MASK=x,y,w,h[;x,y,w,h] pixelates rectangles in the same coordinate space,
+// for third-party detail that cannot be cropped away without losing the shot —
+// a neighbour's number plate, a street number rendered mid-composition.
+//
 // Emits <basename>.webp at maxWidth and <basename>-900.webp, matching the
 // srcSet convention every other gallery image uses.
 
@@ -90,6 +94,35 @@ const RECT = process.env.RECT
       return { x: n[0], y: n[1], w: n[2], h: n[3] };
     })()
   : null;
+// MASK=x,y,w,h[;x,y,w,h...] — pixelate one or more rectangles, in the SAME
+// post-EXIF source coordinates as RECT and applied before any scaling.
+//
+// This exists for third-party detail that happens to be in frame on a job
+// photo: a neighbour's number plate, a client's street number rendered on a
+// wall. Cropping is the first choice and RECT already does that, but a detail
+// sitting in the middle of the composition cannot be cropped out without
+// throwing the photograph away. Pixelation rather than a black box: a hard
+// redaction block on a marketing page reads as though something is being
+// hidden, where a softened patch just reads as depth of field.
+//
+// Downscale-then-upscale with smoothing off is the pixelation — it destroys
+// the information rather than smearing it, so it cannot be recovered by
+// sharpening the way a blur sometimes can.
+const MASKS = process.env.MASK
+  ? process.env.MASK.split(";")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((part) => {
+      const n = part.split(",").map((v) => Number(v.trim()));
+      if (n.length !== 4 || n.some((v) => !Number.isFinite(v) || v < 0)) {
+        throw new Error(
+          `MASK entries must be four non-negative numbers "x,y,w,h", got "${part}"`,
+        );
+      }
+      return { x: n[0], y: n[1], w: n[2], h: n[3] };
+    })
+  : [];
+
 if (!fs.existsSync(input)) throw new Error(`input not found: ${input}`);
 
 const pw = loadPlaywright();
@@ -111,7 +144,7 @@ const url = `data:${mime};base64,${fs.readFileSync(path.resolve(input)).toString
 
 async function render(width) {
   return page.evaluate(
-    async ({ url, width, quality, cropLetterbox, rect }) => {
+    async ({ url, width, quality, cropLetterbox, rect, masks }) => {
       const img = new Image();
       img.decoding = "sync";
       await new Promise((res, rej) => {
@@ -162,6 +195,34 @@ async function render(width) {
         }
       }
 
+      // Masks are applied at FULL source resolution, before the downscale.
+      // Doing it after would mean the pixel blocks scale with the output and a
+      // -800 variant would carry a coarser patch than the full-size one; worse,
+      // the size of the readable detail changes with the output width, so a
+      // block tuned on one variant could under-cover the other.
+      let source = img;
+      if (masks.length) {
+        const m = document.createElement("canvas");
+        m.width = img.naturalWidth;
+        m.height = img.naturalHeight;
+        const mctx = m.getContext("2d");
+        mctx.drawImage(img, 0, 0);
+        for (const r of masks) {
+          // ~9px blocks in source space, floor of 1 so a tiny rect still works.
+          const bw = Math.max(1, Math.round(r.w / 9));
+          const bh = Math.max(1, Math.round(r.h / 9));
+          const tmp = document.createElement("canvas");
+          tmp.width = bw;
+          tmp.height = bh;
+          const tctx = tmp.getContext("2d");
+          tctx.imageSmoothingEnabled = true;
+          tctx.drawImage(img, r.x, r.y, r.w, r.h, 0, 0, bw, bh);
+          mctx.imageSmoothingEnabled = false;
+          mctx.drawImage(tmp, 0, 0, bw, bh, r.x, r.y, r.w, r.h);
+        }
+        source = m;
+      }
+
       const scale = Math.min(1, width / sw);
       const w = Math.round(sw * scale);
       const h = Math.round(sh * scale);
@@ -171,7 +232,7 @@ async function render(width) {
       const ctx = c.getContext("2d");
       ctx.imageSmoothingEnabled = true;
       ctx.imageSmoothingQuality = "high";
-      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
+      ctx.drawImage(source, sx, sy, sw, sh, 0, 0, w, h);
       return { data: c.toDataURL("image/webp", quality), w, h, sw, sh, sy };
     },
     {
@@ -180,6 +241,7 @@ async function render(width) {
       quality: QUALITY,
       cropLetterbox: process.env.CROP === "letterbox",
       rect: RECT,
+      masks: MASKS,
     },
   );
 }

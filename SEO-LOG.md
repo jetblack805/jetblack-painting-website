@@ -5104,3 +5104,73 @@ layer is a separate generator and does not follow from the others.
 main and formatting it would bury a 90-line change in several hundred lines of unrelated
 churn, exactly as happened with `worker/index.js` and `App.tsx` earlier. The added block
 was checked in isolation and is already prettier-shaped.
+
+## 2026-09-07 — Five photos from Jimmy: two were already published, three are new, and the "7" is finally gone
+
+Jimmy sent five photos with no captions and no suburbs.
+
+**Two of the five are already on the site.** Checked rather than assumed, with a
+32x32 grayscale mean-absolute-difference test (`/tmp` one-off, method recorded here):
+
+| Photo | Nearest published file | MAD /255 | Verdict |
+| --- | --- | --- | --- |
+| courtyard with bifolds | `project-mordialloc-courtyard-wide` | 6.9 | same frame |
+| staircase | `gallery-interior-staircase` | 5.7 | same frame |
+| two-storey brick/render house | `gallery-exterior-navy-weatherboard` (control) | 53.3 | different |
+
+Republishing either would have been duplicate image content for nothing. Skipped
+both. Worth keeping the check: the courtyard frame in particular is the one
+already marked posted in `social/gbp-queue.json`, so it would also have gone out
+to the Business Profile twice.
+
+**Three were new and are now published**, at `/projects/`:
+`project-render-gable-green-trim` (exterior page), and
+`project-commercial-facade-scissor-lift` + `project-crew-elevated-platform`
+(commercial page, as a paired second row — both are crew-at-height shots).
+Service-page crawler images **47 → 50**.
+
+⚠️ **No suburb was given for any of them, so none claims one.** The alt text
+describes only what is visibly in frame — substrate, trim colour, roof, access
+equipment. Naming a suburb we were not told is a guess published as fact, and
+these photos are exactly where that would be invisible until it was wrong. Once
+Jimmy names the suburbs they can also go on the matching suburb pages.
+
+### Privacy: three separate identifiers removed
+
+1. **`35` painted on a verandah post** — cropped out of the house photo (`RECT=110,0,1330,1800`).
+2. **`95 Kooyong` rendered on the wall** of the commercial job — cropped out (`RECT=0,0,1820,2576`).
+3. **A third party's number plate** on a ute parked in the same frame — pixelated.
+
+That last one could not be cropped without throwing the photograph away, which
+is why `scripts/convert-photo.mjs` gained a **`MASK=x,y,w,h[;...]`** option:
+pixelate rectangles at full source resolution, before the downscale, so the
+-800 variant does not end up with a coarser patch than the full-size file.
+Pixelation rather than a black box — a hard redaction block on a marketing page
+reads as though something is being hidden.
+
+### The `og-image.jpg` "7" is fixed — on both surfaces
+
+This was flagged twice and left unactioned twice. It turned out to be worse than
+recorded: the photo with the visible **`7`** on the gate is not only the social
+preview (`og-image.jpg`, referenced from `SEOHead`, `SuburbPageTemplate`,
+`Home` and `MordiallocPainters`), it is **also the hero image of the exterior
+painting page**, as `gallery-exterior-navy-weatherboard`. Same street number,
+two surfaces, one of them the image every share to Messenger and WhatsApp uses.
+
+Both are now masked. The gallery pair was regenerated with `MASK=944,590,32,44`;
+`og-image.jpg` is a separate hand-made 1200x630 crop that is **not** generated
+from the gallery file, so it was edited in place at `MASK=1084,468,26,42` rather
+than re-cropped from the portrait original and risking a different framing.
+At display size the patch reads as a shadow on the gate post; at 8x it is
+plainly unreadable. Verified both by zooming the output, not by trusting the
+coordinates.
+
+The car's number plate in the same photo was checked and is **already**
+illegible in the published file (focus blur) — no mask needed, and none added.
+
+While the file was being rewritten anyway it came down from 283KB to **224KB**,
+under the 250KB speed baseline it had been quietly breaking.
+
+⚠️ Prettier deliberately not run on `ExteriorPainting.tsx` or
+`CommercialPainting.tsx` — neither is prettier-clean on main. New blocks were
+diffed in isolation: zero formatting changes wanted.

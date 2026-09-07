@@ -142,7 +142,7 @@ export default function ExteriorPainting() {
               render, Tudor half-timbering, brick-and-gable, and render repair.
               These live under /projects/, not /gallery/, which is why
               extractServiceImages in the static generator accepts both. */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
             <img
               src="/projects/project-brighton-exterior-after.webp"
               srcSet="/projects/project-brighton-exterior-after-800.webp 800w, /projects/project-brighton-exterior-after.webp 1200w"
@@ -180,6 +180,23 @@ export default function ExteriorPainting() {
               width={1200}
               height={1600}
               alt="White painted cladding and fascia meeting the original brickwork on the upper gable of a Mount Martha home, with Port Phillip Bay behind"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+            {/* Sent through by Jimmy with no suburb given, so the alt text
+                describes only what is visibly in the frame — substrate, trim
+                colour, roof. Naming a suburb we were not told would be a guess
+                published as fact, and the street number that was on the gate
+                post has been cropped out of this file. */}
+            <img
+              src="/projects/project-render-gable-green-trim.webp"
+              srcSet="/projects/project-render-gable-green-trim-800.webp 800w, /projects/project-render-gable-green-trim.webp 1200w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1200}
+              height={1624}
+              alt="Two-storey home after an exterior repaint, with dark green picked out through the gable strapping, fascias, gutters and downpipes above a red brick ground floor and a terracotta tile roof"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />

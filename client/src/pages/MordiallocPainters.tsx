@@ -152,7 +152,7 @@ export default function MordiallocPainters() {
       suburb={suburb}
       title="Mordialloc Painters | Coastal Painting | Jetblack Painting"
       description="Mordialloc painters based in the 3195 — beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782."
-      projectSummary={`A ${suburb} weatherboard exterior taken from pale grey to charcoal, plus Jimmy on the tools on another job here. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a ${suburb} quote gets done on site rather than estimated over the phone.`}
+      projectSummary={`Two ${suburb} exteriors, plus Jimmy on the tools on a third. A weatherboard home taken from pale grey to charcoal, and the double-height rear courtyard of a two-storey townhouse — brickwork in white, joinery and balcony framing in a grey-green, photographed mid-job with the balustrade glass still masked. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a ${suburb} quote gets done on site rather than estimated over the phone.`}
       projectImages={[
         {
           // Split out of a single 1819x1819 side-by-side Jimmy composed himself.
@@ -198,6 +198,61 @@ export default function MordiallocPainters() {
           alt: `Jimmy Demirci of Jetblack Painting cutting in by hand around a downpipe during an exterior repaint in ${suburb}, with Dulux masking film protecting the windows`,
           caption:
             "Cutting in around the downpipe by hand. The windows are masked before a brush is opened — the preparation is most of the day, and it is what decides whether the edges still look sharp in five years.",
+        },
+        // The four courtyard frames below are a separate job from the
+        // weatherboard above and are captioned so they never read as the same
+        // house. They are also mid-job, not a finished result — the balustrade
+        // glass is still in its protective film and the interior is under dust
+        // sheets — so nothing here claims a completed finish.
+        //
+        // No colour names. The brick is plainly white and the joinery a
+        // grey-green, but naming a product off a photograph is guessing.
+        // Compare Murrumbeena, where the Dulux colours ARE named because Jimmy
+        // confirmed them.
+        //
+        // Two frames were cropped for the photographer's finger over the lens,
+        // not for privacy: the courtyard shot at RECT=1050,0,2268,3024 (which
+        // also squares it to 3:4 so all four sit as two clean grid rows) and
+        // the brickwork shot at RECT=114,0,2910,3880. Full-resolution privacy
+        // pass done on all four: no street number, no plate, no person, and the
+        // interior visible through the glass holds nothing legible. The one
+        // human trace is the photographer's own reflection in the door glass,
+        // an unidentifiable backlit silhouette.
+        {
+          src: "/projects/project-mordialloc-courtyard-wide.webp",
+          small: "/projects/project-mordialloc-courtyard-wide-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Rear courtyard of a two-storey ${suburb} townhouse during an exterior repaint, white painted brickwork and grey-green joinery below a glass balustrade, with bluestone paving and rendered planters`,
+          caption:
+            "The whole courtyard. White on the brickwork, grey-green on the joinery and the balcony framing, and the rendered planters left white to match the walls. A space this narrow bounces light off every surface, so the wall colour ends up doing far more work here than the same colour would on an open elevation.",
+        },
+        {
+          src: "/projects/project-mordialloc-courtyard-brickwork.webp",
+          small: "/projects/project-mordialloc-courtyard-brickwork-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Double-height painted brickwork in the courtyard of a ${suburb} townhouse, white brick meeting a timber boundary fence, with a glass balustrade balcony above`,
+          caption:
+            "The same corner from the other end, two full storeys of painted brick. Coating brick is a one-way decision — once it is painted it has to stay painted, so the preparation and the choice of system matter more here than they would on render.",
+        },
+        {
+          src: "/projects/project-mordialloc-courtyard-balcony.webp",
+          small: "/projects/project-mordialloc-courtyard-balcony-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Upper balcony and glass balustrade above the bifold doors of a ${suburb} townhouse courtyard, the glass still covered in protective film during the repaint`,
+          caption:
+            "Looking up at the balcony. The balustrade glass is still in its protective film, and it stays on until the end rather than coming off early — everything above and behind it gets cut in first, and glass is the one surface on the job you cannot sand a mistake back off.",
+        },
+        {
+          src: "/projects/project-mordialloc-courtyard-bifolds.webp",
+          small: "/projects/project-mordialloc-courtyard-bifolds-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Freshly painted grey-green bifold door frames in the courtyard of a ${suburb} townhouse, with the interior under dust sheets behind the glass`,
+          caption:
+            "The bifolds, with the house still under dust sheets behind them. Every leaf, edge and rebate is brushed, and the doors have to keep folding once it cures — too heavy a coat in the wrong place and the set binds the first time someone closes it.",
         },
       ]}
       neighbouringSuburbs={[

@@ -38,7 +38,7 @@ Jetblack Painting services 90+ Melbourne suburbs across the southeast, Bayside, 
 
 ## Service Area Coverage Map
 
-Jetblack Painting is based in Mordialloc VIC 3195 and services 72 Melbourne suburbs across
+Jetblack Painting is based in Mordialloc VIC 3195 and services 75 Melbourne suburbs across
 Bayside, Kingston, Glen Eira, Stonnington, the inner east, the southeast and the Mornington Peninsula.
 The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings measured from our Mordialloc base.
 
@@ -87,6 +87,7 @@ The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings me
 - [Kew](/painter-kew/)
 - [Keysborough](/keysborough-painters/)
 - [Kingston](/painter-kingston/)
+- [Lyndhurst](/painter-lyndhurst/)
 - [Malvern](/painter-malvern/)
 - [Malvern East](/painter-malvern-east/)
 - [Mentone](/painter-mentone/)
@@ -104,6 +105,7 @@ The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings me
 - [Prahran](/painter-prahran/)
 - [Richmond](/painter-richmond/)
 - [Rosebud](/painter-rosebud/)
+- [Rowville](/painter-rowville/)
 - [Rye](/painter-rye/)
 - [Safety Beach](/painter-safety-beach/)
 - [Sandringham](/painter-sandringham/)
@@ -114,6 +116,7 @@ The map below shows every suburb we cover, with 15, 30 and 45 kilometre rings me
 - [South Yarra](/painter-south-yarra/)
 - [St Kilda](/painter-st-kilda/)
 - [Thornbury](/painter-thornbury/)
+- [Wantirna South](/painter-wantirna-south/)
 - [Waterways](/painter-waterways/)
 - [Windsor](/painter-windsor/)
 

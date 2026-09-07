@@ -553,6 +553,27 @@ export const SUBURBS_DATA = {
     description: "Western Port coastal town on the Mornington Peninsula with weatherboard cottages, brick veneer homes and a working port heritage",
     areasServed: ["Hastings"]
   },
+  lyndhurst: {
+    name: "Lyndhurst",
+    coordinates: { lat: -38.0489, lng: 145.2456 },
+    postcode: "3975",
+    description: "City of Casey estate suburb east of Keysborough, built out through the 2000s and 2010s and now moving through its first repaint cycle",
+    areasServed: ["Lyndhurst", "Lynbrook"]
+  },
+  rowville: {
+    name: "Rowville",
+    coordinates: { lat: -37.9280, lng: 145.2360 },
+    postcode: "3178",
+    description: "Established City of Knox suburb of 1970s and 80s brick veneer family homes on large blocks, with newer estates toward Rowville Lakes",
+    areasServed: ["Rowville", "Lysterfield"]
+  },
+  wantirnaSouth: {
+    name: "Wantirna South",
+    coordinates: { lat: -37.8730, lng: 145.2270 },
+    postcode: "3152",
+    description: "City of Knox suburb around the Knox City centre, mixing original brick veneer homes with townhouse and owners-corporation development",
+    areasServed: ["Wantirna South", "Knox Gardens"]
+  },
 };
 
 export type SuburbKey = keyof typeof SUBURBS_DATA;

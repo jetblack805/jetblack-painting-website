@@ -106,7 +106,7 @@ Yes. We are based in Mordialloc, and we paint shopfronts, cafes and hospitality 
 
 ## Recent work in Mordialloc
 
-A Mordialloc weatherboard exterior taken from pale grey to charcoal, plus Jimmy on the tools on another job here. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a Mordialloc quote gets done on site rather than estimated over the phone.
+Two Mordialloc exteriors, plus Jimmy on the tools on a third. A weatherboard home taken from pale grey to charcoal, and the double-height rear courtyard of a two-storey townhouse — brickwork in white, joinery and balcony framing in a grey-green, photographed mid-job with the balustrade glass still masked. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a Mordialloc quote gets done on site rather than estimated over the phone.
 
 **Jetblack Painting** — House Painters Mordialloc | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
@@ -171,6 +171,7 @@ A Mordialloc weatherboard exterior taken from pale grey to charcoal, plus Jimmy 
 - [Painters Kew](/painter-kew/)
 - [Painters Keysborough](/keysborough-painters/)
 - [Painters Kingston](/painter-kingston/)
+- [Painters Lyndhurst](/painter-lyndhurst/)
 - [Painters Malvern](/painter-malvern/)
 - [Painters Malvern East](/painter-malvern-east/)
 - [Painters McKinnon](/painter-mckinnon/)
@@ -192,6 +193,7 @@ A Mordialloc weatherboard exterior taken from pale grey to charcoal, plus Jimmy 
 - [Painters Richmond](/painter-richmond/)
 - [Painters Ringwood](/painter-ringwood/)
 - [Painters Rosebud](/painter-rosebud/)
+- [Painters Rowville](/painter-rowville/)
 - [Painters Rye](/painter-rye/)
 - [Painters Safety Beach](/painter-safety-beach/)
 - [Painters Sandringham](/painter-sandringham/)
@@ -205,6 +207,7 @@ A Mordialloc weatherboard exterior taken from pale grey to charcoal, plus Jimmy 
 - [Painters Templestowe](/painter-templestowe/)
 - [Painters Thornbury](/painter-thornbury/)
 - [Painters Toorak](/painter-toorak/)
+- [Painters Wantirna South](/painter-wantirna-south/)
 - [Painters Waterways](/painter-waterways/)
 - [Painters Wheelers Hill](/painter-wheelers-hill/)
 - [Painters Windsor](/painter-windsor/)

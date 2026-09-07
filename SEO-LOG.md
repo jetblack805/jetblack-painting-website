@@ -4532,3 +4532,78 @@ demonstrably a real index page — ask Google to revalidate rather than changing
 
 **Still outstanding:** the drilldowns for **Redirect error (13)** and **Not found (3)** were not
 supplied. The 13 are most likely `www` variants, which this sandbox cannot reach.
+
+---
+
+## Coverage drilldowns, 2026-09-07 — the plural fallback was manufacturing its own errors
+
+Jimmy supplied four more drilldown exports: **Excluded by 'noindex' (4)**, **Not found /
+404 (3)**, **Crawled - currently not indexed (9)** and **Soft 404 (7)**.
+
+Three of the four buckets needed nothing. The fourth exposed a real defect in the worker
+that had been quietly generating crawl errors since the plural aliases were introduced.
+
+### The defect: `/painters-<slug>` 301'd to pages that do not exist
+
+`worker/index.js` had a fallback that rewrote **any** unmapped `/painters-x` to
+`/painter-x/` and 301'd to it, without checking whether the target existed. Verified live
+before the fix:
+
+```
+/painters-lyndhurst     301 -> /painter-lyndhurst/   (404)
+/painters-madeupsuburb  301 -> /painter-madeupsuburb/ (404)
+```
+
+Google follows the 301, lands on a 404, and books the original as a redirect error. The
+fallback existed to consolidate ranking signals and was instead **producing the exact
+bucket it was meant to clean up** — and doing so for an unbounded set of URLs, since any
+invented plural got a redirect.
+
+`/painter-lyndhurst/` in the "Not found" drilldown is the live evidence. **No Lyndhurst
+page has ever existed in this repo** — `git log --all -- '*Lyndhurst*'` is empty, and the
+name appears only as an `areasServed` value on the Keysborough entry in `suburbsData.ts`.
+Google most likely found it by following our own `/painters-lyndhurst` redirect.
+
+**Fix:** the fallback is now guarded on `KNOWN_PATHS`. A plural whose singular is not a
+real page falls through to the ordinary 404, which is the honest answer for a URL that
+never was.
+
+**Deliberately did NOT add a Lyndhurst redirect.** Pointing it at Keysborough would convert
+a correct 404 into a redirect that carries no links and no history, for a page that never
+existed — that is doorway-adjacent and buys nothing. A 404 is the right answer.
+
+Verified across all **94** live suburb pages that every plural still reaches its canonical
+page (0 regressions), and separately that all **120** explicit `PATH_REDIRECTS` targets are
+in `KNOWN_PATHS` — no mapped redirect lands on a 404.
+
+### The www chain, collapsed
+
+`www.jetblackpainting.com/painters-bentleigh` was in "Crawled - currently not indexed" and
+took **two** hops: a 301 to the apex plural, then a second 301 to `/painter-bentleigh/`.
+The www branch now resolves the path through a shared `canonicalPathname()` helper and
+issues a **single** 301 to the final URL.
+
+The helper mirrors the redirect order in `fetch()` — explicit table, guarded plural
+fallback, trailing-slash canonicalisation — and **must be kept in step with it**. It does
+not replicate the colon guard, which answers 404 rather than redirecting.
+
+Tested 221 probes (every redirect target, every suburb plural, plus edge cases): all
+terminal, no self-redirects, no loops.
+
+### The three buckets that needed nothing
+
+- **Excluded by 'noindex' (4)** — `/painter-clyde/` and `/painter-endeavour-hills/` are two
+  of the eight deliberately noindexed Casey pages; `/terms/` and `/privacy/` are noindexed
+  on purpose. This bucket is working as intended, not a problem to fix.
+- **Soft 404 (7)** — already handled: three colon-path assets fixed by the guard shipped
+  earlier the same day, and four non-slash variants that 301 cleanly.
+- **Crawled - currently not indexed (9)** — five colon-path assets (now hard 404, they will
+  age out), the www chain above, and non-slash variants of `/painter-beaumaris`,
+  `/painter-parkdale` and `/painter-clyde` that already 301 correctly.
+
+### Standing note
+
+⚠️ **Never add a redirect rule that rewrites a path without checking the target exists.**
+Both defects found today are the same mistake in different clothes: a redirect issued
+speculatively, on a pattern rather than on knowledge of what is actually published. Every
+redirect in this worker must resolve to something in `KNOWN_PATHS`.

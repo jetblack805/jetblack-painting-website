@@ -157,6 +157,40 @@ function acceptsMarkdown(request) {
     .some((part) => part.trim().split(";")[0].toLowerCase() === "text/markdown");
 }
 
+// Resolve a pathname to its canonical form on the apex host, or null if it is
+// already canonical (or unknown, in which case the normal 404 path handles it).
+//
+// This exists so the www -> apex 301 can land on the FINAL URL in one hop.
+// Previously www.jetblackpainting.com/painters-bentleigh took two: a 301 to the
+// apex plural, then a second 301 to /painter-bentleigh/. Google follows chains
+// but discounts them, and that exact URL was sitting in "Crawled - currently
+// not indexed" in the 2026-09-07 drilldown.
+//
+// It deliberately mirrors — and must be kept in step with — the redirect order
+// in fetch() below: explicit table, then guarded plural fallback, then
+// trailing-slash canonicalisation. It does not replicate the colon guard, which
+// answers 404 rather than redirecting; a www URL with a colon simply lands on
+// the apex and is refused there.
+function canonicalPathname(pathname) {
+  const path = pathname.replace(/\/$/, "") || "/";
+
+  const mapped = PATH_REDIRECTS[path];
+  if (mapped) return mapped;
+
+  if (path.startsWith("/painters-")) {
+    const singular = path.replace("/painters-", "/painter-");
+    if (KNOWN_PATHS.has(`${singular}/`) || KNOWN_PATHS.has(singular)) {
+      return `${singular}/`;
+    }
+  }
+
+  if (pathname.startsWith("/assets/") || KNOWN_PATHS.has(pathname)) return null;
+  const slashed = pathname.endsWith("/") ? pathname : `${pathname}/`;
+  if (KNOWN_PATHS.has(slashed) && !pathname.endsWith("/")) return slashed;
+
+  return null;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -164,6 +198,10 @@ export default {
     if (url.hostname.startsWith("www.")) {
       url.hostname = url.hostname.slice(4);
       url.protocol = "https:";
+      // Collapse the host change and any path canonicalisation into one 301
+      // rather than handing the crawler a two-hop chain.
+      const canonical = canonicalPathname(url.pathname);
+      if (canonical) url.pathname = canonical;
       return Response.redirect(url.toString(), 301);
     }
 
@@ -183,9 +221,21 @@ export default {
     // Fallback: canonicalise common plural suburb aliases. If a /painters-<slug>
     // path was not explicitly mapped above, redirect it to the singular
     // /painter-<slug>/ form so ranking signals consolidate onto the canonical.
+    //
+    // Guarded on KNOWN_PATHS. Unguarded, this rewrote *any* plural path and
+    // 301'd it onto a page that does not exist — /painters-madeupsuburb became
+    // a 301 to a 404. Google follows the redirect, lands on the 404 and books
+    // the original as a redirect error, so the fallback was manufacturing the
+    // exact bucket it was meant to clean up. /painter-lyndhurst/ in the
+    // 2026-09-07 "Not found" drilldown is the live example: no Lyndhurst page
+    // has ever existed in this repo, yet /painters-lyndhurst pointed at it.
+    // A plural whose singular is not a real page now falls through to the
+    // ordinary 404 below, which is the honest answer for a URL that never was.
     if (path.startsWith("/painters-")) {
       const singular = path.replace("/painters-", "/painter-");
-      return Response.redirect(`${url.origin}${singular}/`, 301);
+      if (KNOWN_PATHS.has(`${singular}/`) || KNOWN_PATHS.has(singular)) {
+        return Response.redirect(`${url.origin}${singular}/`, 301);
+      }
     }
 
     // A path containing a colon never belongs to this site, and left alone the

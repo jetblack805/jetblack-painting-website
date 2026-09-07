@@ -26,7 +26,12 @@
   ],
   "cta_type": "LEARN_MORE",
   "photo_base": "https://jetblackpainting.com/social/",
-  "posted": [],
+  "posted": [
+    {
+      "id": "mordialloc-courtyard-wide",
+      "date": "2026-09-07"
+    }
+  ],
   "queue": [
     {
       "id": "mordialloc-courtyard-wide",

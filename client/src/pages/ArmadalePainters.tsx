@@ -22,7 +22,7 @@ export default function ArmadalePainters() {
       suburb={suburb}
       title="Armadale Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Armadale — Victorian, Edwardian terraces and renovated period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`Commercial facade work on High Street, ${suburb}. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through.`}
+      projectSummary={`Commercial facade work on High Street, ${suburb}. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through. Also ladder work on a two-tone commercial elevation, and a period weatherboard entry in ${suburb} finished in a single off-white with the door in black.`}
       projectImages={[
         {
           // Jimmy supplied a third frame of this job — the full "before", with
@@ -57,6 +57,44 @@ export default function ArmadalePainters() {
           alt: `Two Jetblack Painting painters in branded workwear repainting a rendered commercial facade in ${suburb} from an elevated work platform`,
           caption:
             "Commercial render repaint worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one — the painting is the same, the getting to it is not.",
+        },
+        {
+          // Cropped from the bottom: the original frame caught the top of a
+          // second person's head at the lower-left edge, masked and not
+          // identifiable, but an untidy intrusion on the crop line.
+          // RECT=0,0,1241,1545 removes it.
+          //
+          // Worth recording after the frames withheld in #258 and #259: the
+          // workwear here reads JET BLACK PAINTING and is verifiably Jetblack's
+          // own, which is exactly why this one is safe to caption as such.
+          src: "/projects/project-armadale-ladder-two-tone.webp",
+          small: "/projects/project-armadale-ladder-two-tone-800.webp",
+          width: 1200,
+          height: 1494,
+          alt: `A Jetblack Painting painter in branded orange workwear on an extension ladder, working the upper cream section of a two-tone commercial wall in ${suburb} above a dark navy band`,
+          caption:
+            "Ladder work on a commercial wall. Nothing on this elevation is decorative \u2014 a flat face, a straight band where the cream meets the navy, and filler marks still showing where the wall was made good before any topcoat went near it.",
+        },
+        {
+          // Fourth image, which fills the two-column grid as two clean rows and
+          // keeps the commercial before/after pair together on the first.
+          //
+          // It is here because the page had an argument with no evidence: the
+          // copy and every FAQ are about Victorian and Edwardian period homes,
+          // while all three photographs above are the one commercial job on
+          // High Street. This is the only residential period work on the page.
+          //
+          // 1080x1080 — under the usual 1200-1400 because that is the real size
+          // of the supplied file (an Instagram-sized export, 171KB, already
+          // compressed once). Published at native size rather than upscaled.
+          // Same call as the Hampton facade.
+          src: "/projects/project-armadale-period-entry.webp",
+          small: "/projects/project-armadale-period-entry-800.webp",
+          width: 1080,
+          height: 1080,
+          alt: `Finished entry of a period weatherboard home in ${suburb}, off-white boards and shingle course with a white turned verandah post, black front door and black coach light`,
+          caption:
+            "A period weatherboard entry, finished. Almost all of it is the one off-white \u2014 boards, shingle course, turned post, door surround, eaves \u2014 so the only thing giving the front any depth is the shadow each profile throws. On a scheme like this there is no contrast anywhere to hide a wandering cut.",
         },
       ]}
       neighbouringSuburbs={[

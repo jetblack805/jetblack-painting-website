@@ -100,7 +100,7 @@ A run that investigates, finds nothing worth changing, and says so is a successf
 
 | Source                     | Status                                                                      | Notes                                                                                                                                                                                        |
 | -------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Google Search Console      | ✅ **GSC Wizard (primary)**                                                 | Connected and verified 2026-08-27. Supermetrics `ds_id="GW"` is the fallback                                                                                                                 |
+| Google Search Console      | ✅ **Windsor `searchconsole` (primary since 2026-09-06)**                   | GSC Wizard is DEAD — `payment_required`, trial over. Windsor works and returns query/impressions/clicks/position. See the note below                                                         |
 | Google Business Profile    | ⚠️ Via Supermetrics MCP only                                                | `ds_id="GMB"`, **read-only** — cannot post. GSC Wizard does NOT cover GBP                                                                                                                    |
 | GA4                        | ❌ Effectively broken                                                       | Connected property `545100608` has **zero data in 20 months**; site fires `G-6NC2597W9L`. GSC Wizard has a GA4 suite but it reads the same empty property — the gap is upstream, not tooling |
 | **Bing Webmaster Tools**   | ⚠️ **Now reachable, untested**                                              | GSC Wizard ships a Bing suite (`get_bing_query_stats`, `get_bing_crawl_issues`, …). Never exercised — verify before quoting                                                                  |
@@ -108,6 +108,33 @@ A run that investigates, finds nothing worth changing, and says so is a successf
 | Competitor intelligence    | ❌ Largely unavailable                                                      | Semrush out of API units; Ahrefs returns "Insufficient plan"                                                                                                                                 |
 | Instagram                  | ✅ **Metadata yes / pixels no** — Windsor `instagram`, connected 2026-09-06 | See the note below before promising Jimmy a photo                                                                                                                                            |
 | The site itself            | ✅ Full                                                                     | curl + repo. Most reliable source                                                                                                                                                            |
+
+### Search Console — GSC Wizard is dead, use Windsor instead
+
+The daily brief still names **GSC Wizard as PRIMARY** and says it was "connected and verified
+2026-08-27". As of **2026-09-06 that is false**: every call returns
+`payment_required: Your GSC Wizard trial has ended`. Supermetrics, the brief's documented fallback,
+expired 2026-08-25. Taken together the brief implies there is no ranking data at all.
+
+**There is.** Windsor's `searchconsole` connector is connected to `sc-domain:jetblackpainting.com`
+and returns real Search Analytics rows — the brief only ever mentions Windsor for the separate
+weekly sweep, so this route was being missed.
+
+```
+get_fields(connector="searchconsole")   -> query, page, impressions, clicks, position, ctr, date
+get_data(connector="searchconsole",
+         accounts=["sc-domain:jetblackpainting.com"],
+         fields=["query","impressions","clicks","position"],
+         date_preset="last_28d",
+         filters=[["impressions","gte",20]])
+```
+
+The `impressions >= 20` filter matters: it applies the log's own interpretation rule at the query
+rather than sifting hundreds of 1–8 impression rows by hand.
+
+**Still unavailable:** GSC Wizard's analysis suite (anomalies, change points, indexing tracker,
+cannibalisation, Core Web Vitals) has no Windsor equivalent — those specific tools are gone until
+someone resubscribes. Windsor gives the raw rows, not the analysis.
 
 ### Instagram — you can read the catalogue, you cannot download the photos
 
@@ -4231,3 +4258,92 @@ one painted picket fence, a black deck and an oiled merbau screen. Four fence
 queries sat in the top nine by impressions on the 28-day GSC export, and they all
 land on a page showing a single painted fence. A paling, Colorbond or stained
 fence would show range; another angle of this one would not.
+
+---
+
+## 2026-09-06 20:05 UTC — daily audit run
+
+**Outcome: everything checked is clean. No site change made.** The run's value is a corrected data
+path and the first fresh ranking measurement since the tooling died.
+
+### Two corrections to this log's own Data access section
+
+1. **GSC Wizard is dead.** Every call returns `payment_required` — the trial ended. The daily brief
+   still names it PRIMARY and "verified 2026-08-27". Supermetrics, its documented fallback, expired
+   2026-08-25. On the brief alone the conclusion would have been "no ranking data available".
+2. **Windsor's `searchconsole` connector works** and was being overlooked — the brief mentions
+   Windsor only for the separate weekly sweep. It is now the primary route. Method recorded above.
+
+### Steps 0 and 2–6 — all clean
+
+| Check                             | Result                                         | Note                                                        |
+| --------------------------------- | ---------------------------------------------- | ----------------------------------------------------------- |
+| Lockfile coverage                 | **77/77**                                      | First attempt read 0/77 — shell-escaping artefact, not real |
+| Three layers regenerated          | **0 diffs**                                    |                                                             |
+| Metadata (`check-metadata`)       | **124 pages, clean**                           | 0 dupes, 0 over-length, measured on decoded text            |
+| Schema vs visible text            | **539 FAQ questions, 0 problems**              | Baseline said 489 — grew with the two new service pages     |
+| JSON-LD parse errors              | **0**                                          |                                                             |
+| BlogPosting/HowTo required fields | **0 missing**                                  |                                                             |
+| `aggregateRating` outside index   | **0**                                          | Rating lives only in `client/index.html`                    |
+| Near-duplicate                    | **30.6% avg, 0 pages over 55%**                | Worst pair cranbourne~narre-warren 52.3%, under gate        |
+| Sitemap                           | **113/113 200, zero redirect hops**            | Reconciles exactly: 112 indexable + homepage                |
+| Bad URLs                          | 404 on all three forms; real bundles still 200 | Both directions checked                                     |
+| Markdown negotiation              | `text/markdown`, `Vary`, `no-store`, `noindex` |                                                             |
+| TTFB                              | 0.15–0.19s, `cf-cache HIT`                     |                                                             |
+| Images in `public/` over 250KB    | **0**                                          |                                                             |
+| Review count                      | **17 in all eight places, and live**           | No stale 14/15 anywhere                                     |
+| llms.txt prices                   | **none** — only the legitimate $10M liability  |                                                             |
+
+**Counts differ from the brief's baselines and that is expected, not drift:** 95 suburb pages (not
+96 — Bentleigh East was merged), 113 sitemap URLs (not 115 — 8 Casey pages noindexed, 2 service
+pages added), 124 metadata pages, 539 FAQ questions.
+
+⚠️ **`www.jetblackpainting.com` could not be checked** — the sandbox proxy refuses it
+(`CONNECT tunnel failed, 403`). DNS resolves it to the same Cloudflare IPs as the apex and the
+www→apex redirect is intact at `worker/index.js:164`. **Unverifiable from here, NOT a defect.**
+
+### Ranking — measured, last 28 days, impressions ≥ 20
+
+**Broad positional improvement across the tracked set, and still ZERO non-brand clicks.**
+
+| Suburb      | Baseline (to 2026-08-16) | Now                                                                         |
+| ----------- | ------------------------ | --------------------------------------------------------------------------- |
+| Mordialloc  | 77 imp @ **29.18**       | 35 @ **17.09** / 33 @ 17.09 / 22 @ 15.50 — **biggest move on the property** |
+| Mentone     | 61 @ 24.82               | 30 @ **18.13**                                                              |
+| Collingwood | 129 @ 17.65              | 182 @ **15.60** — impressions up 40%                                        |
+| Highett     | 85 @ 17.32               | 42 @ **13.60** / 41 @ 14.20 / 45 @ 15.00                                    |
+| Murrumbeena | 86 @ 17.00               | 95 @ **16.27**                                                              |
+| Sorrento    | 100 @ 7.13               | 173 @ 13.45, plus two top-10 rows below                                     |
+| McKinnon    | 57 @ 11.19               | 32 @ 10.97 — flat                                                           |
+| Donvale     | 49 @ 16.63               | 37 @ 15.46 / 31 @ 15.52 / 23 @ 14.48                                        |
+
+Aspendale, Dromana and Patterson Lakes have fallen below 20 impressions and are no longer
+measurable at this threshold.
+
+### ⚠️ FIRST TOP-10 HOLDER WITH VOLUME — the brief said to flag this
+
+`painters sorrento bay` **34 imp @ 5.68** and `house painters sorrento` **27 imp @ 8.70**, both
+with **zero clicks**. The settled diagnosis says CTR is not the limiting factor and to "re-test when
+a page holds top-10 on a term with volume". It now does, marginally.
+
+**No change made, deliberately.** The Sorrento page's title is 58 chars and its description 158 —
+both healthy, and the log forbids rewriting healthy metadata. At 34 and 27 impressions this is one
+cycle of thin data; "Sorrento Bay" may not even be the Victorian Sorrento. **Re-measure next run
+before touching anything.** If it holds top-10 with zero clicks across two cycles, that is the first
+real CTR signal the property has produced.
+
+### Also observed
+
+- **`jetblack` 58 imp @ 3.64 with ZERO clicks**, while `jetblack painting` earns 6 clicks from 36
+  imp @ 2.86. The 2026-08-27 open question is confirmed with fresh data, not resolved. Almost
+  certainly different intent — the bare word is not a Jetblack search.
+- **Body-corporate intent is now appearing**: `body corporate painting melbourne` 51 imp @ 35.6 and
+  `body corporate painters melbourne` 43 imp @ 43.2. Commercially valuable and squarely on-message
+  for the property-manager audience, but positions are page 4–5. Watch, do not chase with content.
+- Every click the property earned in 28 days is brand. Unchanged.
+
+### Authority (Step 7)
+
+Chose option 2 — re-measure the tracked set — since options 1 and 3 need Jimmy, and Tier 0 is
+closed. Nothing crossed into the top 10 except Sorrento above. **Growing past 17 reviews remains
+the top priority and is Jimmy's to act on.**

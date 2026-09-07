@@ -1,0 +1,270 @@
+{
+  "_readme": [
+    "Weekly Google Business Profile post queue for Jetblack Painting.",
+    "",
+    "Consumed by scripts/gbp-post.mjs, which is run by a weekly Routine. Each run",
+    "takes the first entry in `queue` whose id is not in `posted`, publishes it via",
+    "the Windsor google_my_business connector's create_local_post action, appends",
+    "the id and date to `posted`, and commits.",
+    "",
+    "RULES FOR ANYONE EDITING THIS FILE:",
+    "- Every summary names its suburb. That is the whole local-SEO point of the",
+    "  post, and it is also the only 'geotag' available: neither GBP's create_local_post",
+    "  nor Instagram's create_image_post accepts a per-post location. The post is",
+    "  attached to the Mordialloc listing regardless of which suburb the job was in.",
+    "- NEVER add a price, a timeframe, a review count or a capability that is not",
+    "  already true on the site. These publish automatically with no human read.",
+    "- Summaries are grounded in the captions already published on the suburb pages.",
+    "  Do not invent detail about a photograph you have not looked at.",
+    "- photo_url must be a /social/*.jpg twin, not the /projects/*.webp original.",
+    "  GBP rejects webp. Run scripts/make-social-jpegs.mjs after adding a photo.",
+    "- cta_url must be a real live page. A post pointing at a 404 is worse than no post.",
+    "",
+    "When `posted` covers every id, the runner stops and reports rather than",
+    "recycling — repeating an eight-month-old post unannounced would be worse than",
+    "a gap. Add new entries when new job photos are published."
+  ],
+  "cta_type": "LEARN_MORE",
+  "photo_base": "https://jetblackpainting.com/social/",
+  "posted": [],
+  "queue": [
+    {
+      "id": "mordialloc-courtyard-wide",
+      "suburb": "Mordialloc",
+      "photo": "project-mordialloc-courtyard-wide.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mordialloc/",
+      "summary": "A rear courtyard repaint in Mordialloc — our home suburb. White through the brickwork, a grey-green on the joinery and balcony framing, and the rendered planters kept white to match the walls. A courtyard this narrow bounces light off every surface, so the wall colour ends up doing far more work here than the same colour would on an open elevation."
+    },
+    {
+      "id": "brighton-exterior-after",
+      "suburb": "Brighton",
+      "photo": "project-brighton-exterior-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-brighton/",
+      "summary": "A weatherboard exterior in Brighton, finished. Dark charcoal on the boards with the fretwork, verandah posts and window frames picked out in white. On a house carrying this much detail the trim is the whole point of the colour — the gables and brackets only become shapes once there is something for them to sit against."
+    },
+    {
+      "id": "armadale-high-st-complete",
+      "suburb": "Armadale",
+      "photo": "project-armadale-high-st-complete.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "Commercial facade repaint completed on High Street, Armadale. Taking a heritage frontage this light is unforgiving — every patch, every crack and every join in the render will show if the preparation underneath was rushed. Worked off a scissor lift on a main road with the footpath kept open throughout."
+    },
+    {
+      "id": "mount-martha-entry-portico",
+      "suburb": "Mount Martha",
+      "photo": "project-mount-martha-entry-portico.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mount-martha/",
+      "summary": "An entry elevation in Mount Martha after an exterior repaint. Grey through the walls, white on the posts and beams, and the front door left black — three colours doing the entire job. Restraint like this only reads well if the cuts between the three are dead straight."
+    },
+    {
+      "id": "caulfield-before-after",
+      "suburb": "Caulfield",
+      "photo": "project-caulfield-before-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-caulfield/",
+      "summary": "The same Caulfield elevation, before and after. The paintwork here is the render, parapet, fascia and garage door. Two-storey render jobs are decided at the parapet and fascia line, which is why the scaffold goes up before a brush is lifted."
+    },
+    {
+      "id": "aspendale-facade-after",
+      "suburb": "Aspendale",
+      "photo": "project-aspendale-facade-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-aspendale/",
+      "summary": "Finished render in Aspendale, with the cut-out repairs invisible under the topcoat and a clean line where the wall meets the gutter. Bayside render takes salt air on the water-facing elevations, so those sides get the closest preparation before anything is coated."
+    },
+    {
+      "id": "mordialloc-weatherboard-after",
+      "suburb": "Mordialloc",
+      "photo": "project-mordialloc-weatherboard-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mordialloc/",
+      "summary": "A Mordialloc weatherboard taken from pale grey to charcoal, with the eaves, fretwork and window frames in white. Same spot, same fence as the before shot. Nothing was wrong with the old scheme — every line on the house had simply disappeared into the one tone."
+    },
+    {
+      "id": "murrumbeena-tudor-exterior",
+      "suburb": "Murrumbeena",
+      "photo": "project-murrumbeena-tudor-exterior.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-murrumbeena/",
+      "summary": "A Tudor-style home in Murrumbeena: Dulux Silkwort on the render, Dulux Monument taken through the half-timbering, fascias, gutters and downpipes. The original red brick and terracotta roof were left alone. Picking out the timbering in a dark colour is what modernises a house of this era — painting the brick would have thrown away the part that gives it its character."
+    },
+    {
+      "id": "safety-beach-render-roof-after",
+      "suburb": "Safety Beach",
+      "photo": "project-safety-beach-render-roof-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-safety-beach/",
+      "summary": "Render and roof repaint in Safety Beach. Mid grey through the render, dark charcoal on the roof and gutters. Same house, same garden as the before shot — the colour is doing all of the work. The north and west elevations had taken the most sun and were the reason the old scheme looked tired."
+    },
+    {
+      "id": "brighton-stair-hall",
+      "suburb": "Brighton",
+      "photo": "project-brighton-stair-hall.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-brighton/",
+      "summary": "A stair hall finished in Brighton. Curved string, turned balusters and an arched fretwork surround, all cut in by hand. There is nowhere on a staircase to hide a wobbly line — it sits at eye level and you walk past it every single day."
+    },
+    {
+      "id": "keysborough-entry-door-repaint",
+      "suburb": "Keysborough",
+      "photo": "project-keysborough-entry-door-repaint.jpg",
+      "cta_url": "https://jetblackpainting.com/keysborough-painters/",
+      "summary": "An entry in Keysborough after repainting. Navy on the door, dark grey through the fascia and gutter, the tile roof brought back to black and the porch slab recoated. The brick itself was left untouched — not every surface on a house needs paint to lift the whole front."
+    },
+    {
+      "id": "armadale-period-entry",
+      "suburb": "Armadale",
+      "photo": "project-armadale-period-entry.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "A period weatherboard entry in Armadale, finished. Boards, shingle course, turned post, door surround and eaves are almost all the one off-white, so the only thing giving the front any depth is the shadow each profile throws. On a scheme like this there is no contrast anywhere to hide a wandering cut."
+    },
+    {
+      "id": "mount-martha-gable-brick-bayview",
+      "suburb": "Mount Martha",
+      "photo": "project-mount-martha-gable-brick-bayview.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mount-martha/",
+      "summary": "Up at the gable on a Mount Martha hillside, with the bay behind. The brick was left as it was and the cladding, fascia and barge board cut in white against it. That line has to be straight — on a slope like this one it is read from a long way off."
+    },
+    {
+      "id": "mordialloc-courtyard-brickwork",
+      "suburb": "Mordialloc",
+      "photo": "project-mordialloc-courtyard-brickwork.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mordialloc/",
+      "summary": "Two full storeys of painted brick in a Mordialloc courtyard. Coating brick is a one-way decision — once it is painted it has to stay painted — so the preparation and the choice of coating system matter more here than they would on render. Worth thinking about properly before the first coat, not after."
+    },
+    {
+      "id": "caulfield-rendered-facade",
+      "suburb": "Caulfield",
+      "photo": "project-caulfield-rendered-facade.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-caulfield/",
+      "summary": "A rendered facade in Caulfield. Render this flat and this pale shows every roller mark, so it gets laid off carefully rather than rushed. Pale colours are not the easy option they look like — they are the least forgiving thing you can put on a large flat wall."
+    },
+    {
+      "id": "hampton-rendered-facade",
+      "suburb": "Hampton",
+      "photo": "project-hampton-rendered-facade.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-hampton/",
+      "summary": "A rendered two-storey in Hampton. Greige through the render, white on the posts and gable battens, charcoal along the roofline and gutters. On a facade this plain there is no ornament to distract the eye from a crooked line, so the entire job comes down to whether the cuts between the three colours are straight."
+    },
+    {
+      "id": "aspendale-roofline-bay-view",
+      "suburb": "Aspendale",
+      "photo": "project-aspendale-roofline-bay-view.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-aspendale/",
+      "summary": "From the roofline of an Aspendale job, with the bay behind it. This is the exposure every coating on this house has to survive — salt air, sun and onshore wind on the same elevation. It is the reason a bayside repaint is a different specification to an inland one."
+    },
+    {
+      "id": "brighton-exterior-cutting-in",
+      "suburb": "Brighton",
+      "photo": "project-brighton-exterior-cutting-in.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-brighton/",
+      "summary": "Cutting in verandah fretwork on a Brighton exterior. There is no spraying this — every bracket and every spindle is done by hand, off a ladder, over drop sheets. It is slow, and it is the difference between a heritage verandah that looks restored and one that looks coated."
+    },
+    {
+      "id": "armadale-high-st-half-painted",
+      "suburb": "Armadale",
+      "photo": "project-armadale-high-st-half-painted.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "Halfway through a commercial repaint on High Street, Armadale — new white meeting the original charcoal on a hard edge. Note the cones, the bunting and the pedestrian signage: this is a live bus stop on a main road, and the footpath stayed open and safe the whole way through."
+    },
+    {
+      "id": "mordialloc-exterior-repaint-jimmy",
+      "suburb": "Mordialloc",
+      "photo": "project-mordialloc-exterior-repaint-jimmy.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mordialloc/",
+      "summary": "Cutting in around a downpipe by hand on a Mordialloc exterior. The windows are masked before a brush is even opened. Preparation is most of the day on a job like this, and it is what decides whether the edges still look sharp in five years."
+    },
+    {
+      "id": "mount-martha-hall-panelling",
+      "suburb": "Mount Martha",
+      "photo": "project-mount-martha-hall-panelling.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mount-martha/",
+      "summary": "Inside a Mount Martha job: grey above, white beaded panelling below, timber left as timber. Panelling is the slowest thing in a house to paint — every groove has to be cut and laid off individually, because a roller alone leaves the grooves starved and it shows the moment the light rakes across it."
+    },
+    {
+      "id": "caulfield-scaffold-masked-windows",
+      "suburb": "Caulfield",
+      "photo": "project-caulfield-scaffold-masked-windows.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-caulfield/",
+      "summary": "Windows and frames masked out on a Caulfield job before any coating goes on. Masking is the slow, unglamorous part that nobody photographs, and it is the entire reason the finished lines are sharp. If a quote looks cheap, this is usually the step that was left out of it."
+    },
+    {
+      "id": "aspendale-eaves-skylights-after",
+      "suburb": "Aspendale",
+      "photo": "project-aspendale-eaves-skylights-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-aspendale/",
+      "summary": "Eaves lining, fascia and downpipes recoated on an Aspendale home, with the skylights masked rather than cut around freehand. Masking takes longer than cutting and leaves a line that is straight because it was never freehand in the first place."
+    },
+    {
+      "id": "mordialloc-courtyard-bifolds",
+      "suburb": "Mordialloc",
+      "photo": "project-mordialloc-courtyard-bifolds.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mordialloc/",
+      "summary": "Bifold doors mid-job in a Mordialloc courtyard, house still under dust sheets behind them. Every leaf, edge and rebate is brushed, and the doors have to keep folding once it cures — too heavy a coat in the wrong place and the whole set binds the first time somebody closes it."
+    },
+    {
+      "id": "brighton-interior-rolling",
+      "suburb": "Brighton",
+      "photo": "project-brighton-interior-rolling.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-brighton/",
+      "summary": "Rolling out an interior wall in Brighton on an extension pole. The room is clear of furniture but the carpet and trim are staying, so it gets rolled rather than sprayed — spraying here would mean masking every surface in the room to save about an hour on the walls."
+    },
+    {
+      "id": "armadale-commercial-facade",
+      "suburb": "Armadale",
+      "photo": "project-armadale-commercial-facade.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "Commercial render repaint in Armadale, worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one — the painting itself is the same, the getting to it is not. We are fully licensed and carry $10 million in public liability insurance."
+    },
+    {
+      "id": "caulfield-eaves-prep",
+      "suburb": "Caulfield",
+      "photo": "project-caulfield-eaves-prep.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-caulfield/",
+      "summary": "Preparation under way on a Caulfield home — drop sheets down, tape up, everything covered before the first coat goes anywhere near a surface. This is what the first part of the job actually looks like, and it is the part that decides how the last part turns out."
+    },
+    {
+      "id": "mount-martha-balcony-elevation",
+      "suburb": "Mount Martha",
+      "photo": "project-mount-martha-balcony-elevation.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mount-martha/",
+      "summary": "A Mount Martha home from the garden, soffits, beams and posts all cut in white against the grey. Soffits are the part of an exterior that shows every shortcut and holds none of the colour — nobody looks at them until they are wrong, and then nobody stops looking."
+    },
+    {
+      "id": "mordialloc-weatherboard-deck",
+      "suburb": "Mordialloc",
+      "photo": "project-mordialloc-weatherboard-deck.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mordialloc/",
+      "summary": "Round the back of a Mordialloc weatherboard, where nobody from the street will ever see it. The cut between the charcoal and the white is exactly the same here as it is on the front elevation. That is the whole standard, really — the back of the house gets the same job as the front."
+    },
+    {
+      "id": "aspendale-render-patches-before",
+      "suburb": "Aspendale",
+      "photo": "project-aspendale-render-patches-before.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-aspendale/",
+      "summary": "Render cut out and patched on an Aspendale exterior. The patches are then left to cure before priming. Coating a fresh patch early is exactly what causes the flashing you see on a rushed job — different sheen and colour showing through the topcoat months later."
+    },
+    {
+      "id": "armadale-ladder-two-tone",
+      "suburb": "Armadale",
+      "photo": "project-armadale-ladder-two-tone.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "Ladder work on a two-tone commercial wall in Armadale. Nothing on this elevation is decorative — a flat face, a straight band where the cream meets the navy, and filler marks still showing where the wall was made good before any topcoat went near it."
+    },
+    {
+      "id": "mordialloc-courtyard-balcony",
+      "suburb": "Mordialloc",
+      "photo": "project-mordialloc-courtyard-balcony.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-mordialloc/",
+      "summary": "Looking up at a balcony mid-job in Mordialloc. The balustrade glass is still in its protective film and stays that way until the end rather than coming off early — everything above and behind it gets cut in first, and glass is the one surface on a job you cannot sand a mistake back off."
+    },
+    {
+      "id": "caulfield-street-before",
+      "suburb": "Caulfield",
+      "photo": "project-caulfield-street-before.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-caulfield/",
+      "summary": "Access set up on a Caulfield job before a brush is lifted — scaffold to the upper balcony. On a two-storey render job the parapet and fascia are where the result is decided, and you cannot do that work properly off a ladder held at arm's length."
+    },
+    {
+      "id": "aspendale-render-repair-scaffold",
+      "suburb": "Aspendale",
+      "photo": "project-aspendale-render-repair-scaffold.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-aspendale/",
+      "summary": "Scaffold up on the water-facing elevation of an Aspendale home. That side takes the salt and weathers first, so it gets the closest preparation of anywhere on the house. Treating all four elevations identically is how a bayside repaint ends up failing on one wall years before the others."
+    }
+  ]
+}

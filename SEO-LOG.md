@@ -4734,3 +4734,78 @@ created.
 - Redirect simulation: 227 probes terminal, no chains, no self-redirects, no loops; **123**
   `PATH_REDIRECTS` targets all present in `KNOWN_PATHS`
 - Sitewide static diff is exactly **+3 footer links per page** and nothing else
+
+---
+
+## Weekly Google Business Profile posts — automated, 2026-09-07
+
+Jimmy asked for a weekly post to "the profile" with real job photos and geotagged
+captions, and chose **Google Business Profile** over Instagram, and **automatic
+publishing** over draft-for-approval.
+
+### ⚠️ There is no such thing as a geotagged post here — read before "fixing" this
+
+Neither platform exposes a per-post location through the Windsor connectors:
+
+- GBP `create_local_post` takes `summary`, `photo_url`, `cta_type`, `cta_url`. Nothing else.
+  The post is attached to the Mordialloc listing whatever suburb the job was in.
+- Instagram `create_image_post` takes `image_url` and `caption`. No `location_id`.
+
+So "geotagged" is implemented as **the suburb named in the summary text**, which is
+what actually feeds local relevance anyway. `scripts/gbp-post.mjs --validate` fails any
+entry whose summary does not contain its own suburb name, so this cannot silently rot.
+Jimmy was told this before the build started.
+
+### Why the photos needed a second copy
+
+GBP will not accept **webp**, and the entire project library is webp.
+`scripts/make-social-jpegs.mjs` builds JPEG twins of all 37 published photos into
+`public/social/`, from the **cropped, EXIF-corrected** `public/projects/*.webp` — not
+from the phone originals, which would reintroduce every rotation and privacy crop
+that was fixed by hand.
+
+**The 250KB ceiling deliberately does not apply to `public/social/`.** That ceiling
+exists because project photos are on the critical path of a suburb page load. Nothing
+on the site ever requests these files — Google fetches each one once, server-side, at
+post time. Enforcing 250KB pushed several down to quality 0.54, visibly degrading the
+work in the Maps panel to protect a page-load budget they are not part of. They are
+built at quality 0.85 under a 900KB sanity cap; the whole set is 9.5MB.
+
+`/social/` is served with **`X-Robots-Tag: noindex`** from the worker, and is not in
+the sitemap. It is byte-for-byte the same photographs already published under
+`/projects/`, so a second indexable copy would be duplicate image content for nothing.
+
+⚠️ **noindex by header, NOT a robots.txt `Disallow`.** Google fetches the post image
+itself; a `Disallow` risks blocking that fetch and failing the post outright. The
+header keeps the file fetchable while keeping it out of the index. Do not "tidy this
+up" into robots.txt.
+
+### The queue
+
+`social/gbp-queue.json` — **34 posts across 10 suburbs**, roughly eight months at one
+a week. Ordered so no two consecutive weeks name the same suburb (asserted in the
+validator). Every summary is grounded in a caption already published on the
+corresponding suburb page rather than freshly invented, and each carries a
+`LEARN_MORE` button pointing at that suburb's own landing page.
+
+CTA is `LEARN_MORE` to the suburb page rather than `CALL` on purpose: the listing's
+phone number is already one tap away in the Maps panel, so a CALL button duplicates
+what is there, while the suburb page is the thing a Maps visitor cannot otherwise reach.
+
+### Why the publish is split between a script and the session
+
+The post itself goes through an MCP action, which a shell script cannot call. So
+`scripts/gbp-post.mjs` owns everything deterministic — which post is next, whether it
+is safe, and recording that it went out — and the weekly session makes exactly one
+call with the params the script prints.
+
+**These publish with no human read**, so the failure modes that matter are checked by
+code, not left to judgement on a Monday morning: posting twice (`--mark` refuses a
+duplicate), a dead CTA link (checked against `known-paths.js`), a missing or non-JPEG
+photo, a summary over GBP's 1500 chars, a summary that has lost its suburb name, and
+any price figure (locked rule — `$10 million` public liability is the sole allowed
+dollar figure).
+
+**The queue does not wrap around.** When all 34 are posted the runner exits 3 and
+reports, rather than silently republishing an eight-month-old post. A visible gap is
+the prompt to add new photos.

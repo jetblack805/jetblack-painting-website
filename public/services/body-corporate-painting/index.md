@@ -106,6 +106,8 @@ Explore our other painting services across Melbourne.
 - [Roof Painting](/services/roof-painting/)
 - [Commercial Painting](/services/commercial-painting/)
 
+## Body Corporate Painting work
+
 **Jetblack Painting** — Body Corporate Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

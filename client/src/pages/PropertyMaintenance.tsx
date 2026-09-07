@@ -17,12 +17,6 @@ const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 //
 // Note the tradesperson is NOT in branded workwear in this shot, so the alt text
 // does not claim it. Supplied by Jimmy 2026-09-06.
-import imgCeilingRepair from "@/assets/images/gallery-maintenance-ceiling-repair.webp";
-import imgCeilingRepair900 from "@/assets/images/gallery-maintenance-ceiling-repair-900.webp";
-import imgMouldBefore from "@/assets/images/gallery-maintenance-mould-ceiling-before.webp";
-import imgMouldBefore900 from "@/assets/images/gallery-maintenance-mould-ceiling-before-900.webp";
-import imgMouldAfter from "@/assets/images/gallery-maintenance-mould-ceiling-after.webp";
-import imgMouldAfter900 from "@/assets/images/gallery-maintenance-mould-ceiling-after-900.webp";
 
 const DESCRIPTION =
   "Painting and property maintenance for Melbourne landlords, agents and body corporates. Repairs, touch-ups, repaints and scheduled upkeep. Free quotes.";
@@ -115,8 +109,8 @@ export default function PropertyMaintenance() {
         <div className="container">
           <figure className="m-0 max-w-2xl">
             <img
-              src={imgCeilingRepair}
-              srcSet={`${imgCeilingRepair900} 900w, ${imgCeilingRepair} 1206w`}
+              src="/gallery/gallery-maintenance-ceiling-repair.webp"
+              srcSet="/gallery/gallery-maintenance-ceiling-repair-900.webp 900w, /gallery/gallery-maintenance-ceiling-repair.webp 1206w"
               sizes="(max-width: 768px) 100vw, 672px"
               width={1206}
               height={1175}
@@ -142,8 +136,8 @@ export default function PropertyMaintenance() {
           <div className="grid gap-4 md:grid-cols-2 mt-10">
             <figure className="m-0">
               <img
-                src={imgMouldBefore}
-                srcSet={`${imgMouldBefore900} 900w, ${imgMouldBefore} 1394w`}
+                src="/gallery/gallery-maintenance-mould-ceiling-before.webp"
+                srcSet="/gallery/gallery-maintenance-mould-ceiling-before-900.webp 900w, /gallery/gallery-maintenance-mould-ceiling-before.webp 1394w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1394}
                 height={1859}
@@ -159,8 +153,8 @@ export default function PropertyMaintenance() {
             </figure>
             <figure className="m-0">
               <img
-                src={imgMouldAfter}
-                srcSet={`${imgMouldAfter900} 900w, ${imgMouldAfter} 1394w`}
+                src="/gallery/gallery-maintenance-mould-ceiling-after.webp"
+                srcSet="/gallery/gallery-maintenance-mould-ceiling-after-900.webp 900w, /gallery/gallery-maintenance-mould-ceiling-after.webp 1394w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1394}
                 height={1859}

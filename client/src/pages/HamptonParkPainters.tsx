@@ -21,11 +21,17 @@ export default function HamptonParkPainters() {
     }
   ];
 
-  // Casey/Cardinia corridor — this page stays live but is out of the index
-  // as of 2026-08-29. Rationale and the query-level numbers are in SEO-LOG.md.
+  // Re-indexed 2026-09-07. This page was noindexed on 2026-08-29 as part of the
+  // Casey/Cardinia corridor cut, on two grounds that both turned out to be wrong:
+  // that it was far outside the service area, and that its low CTR proved it was
+  // worthless. Measured from Mordialloc, every page in that cut is CLOSER than
+  // nine pages that stayed indexed — Clyde, the furthest, is 27km against
+  // Sorrento 49km, Rye 46km, Rosebud 42km and Mount Martha 30km, all live and all
+  // suburbs Jimmy has job photos from. SEO-LOG had recorded Clyde North as "~50km";
+  // it is 23km. And a 0.06% CTR at average position 26-56 describes the position,
+  // not the page: that is roughly what any result gets down there. See SEO-LOG.
   return (
     <SuburbPageTemplate
-      noindex
       suburb={suburb}
       title="Hampton Park Painters | Family Homes | Jetblack Painting"
       description="House painters in Hampton Park — brick veneer family homes, rentals and investment properties across Casey. Free quotes. Call 0432 077 782."

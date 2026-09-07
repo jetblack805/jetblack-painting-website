@@ -10,10 +10,6 @@ import { lazy, Suspense } from "react";
 // Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
 // out of the initial payload and the form loads below the fold.
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
-import imgService from "@/assets/images/gallery-interior-staged-living.webp";
-import imgBoucleLiving from "@/assets/images/gallery-interior-boucle-living.webp";
-import imgOpenLiving from "@/assets/images/gallery-interior-open-living.webp";
-import imgOpenPlanLiving from "@/assets/images/gallery-interior-open-plan-living.webp";
 
 export default function RealEstatePainting() {
   const benefits = [
@@ -121,7 +117,7 @@ export default function RealEstatePainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgService}
+            src="/gallery/gallery-interior-staged-living.webp"
             width={1206}
             height={804}
             alt="Sale-ready living room repainted by Jetblack Painting for a Melbourne real estate campaign"
@@ -130,7 +126,7 @@ export default function RealEstatePainting() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
-              src={imgOpenLiving}
+              src="/gallery/gallery-interior-open-living.webp"
               width={1170}
               height={782}
               alt="Freshly painted open living room presented for sale by Jetblack Painting"
@@ -138,7 +134,7 @@ export default function RealEstatePainting() {
               loading="lazy"
             />
             <img
-              src={imgBoucleLiving}
+              src="/gallery/gallery-interior-boucle-living.webp"
               width={1050}
               height={1400}
               alt="Styled living and dining room repainted by Jetblack Painting for sale presentation"
@@ -146,7 +142,7 @@ export default function RealEstatePainting() {
               loading="lazy"
             />
             <img
-              src={imgOpenPlanLiving}
+              src="/gallery/gallery-interior-open-plan-living.webp"
               width={823}
               height={561}
               alt="Open plan living and kitchen repainted by Jetblack Painting for a property sale"

@@ -10,12 +10,6 @@ import { lazy, Suspense } from "react";
 // Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
 // out of the initial payload and the form loads below the fold.
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
-import imgService from "@/assets/images/gallery-commercial-heritage-white.webp";
-import imgService900 from "@/assets/images/gallery-commercial-heritage-white-900.webp";
-import imgBeforeAfter from "@/assets/images/gallery-commercial-before-after.webp";
-import imgBeforeAfter900 from "@/assets/images/gallery-commercial-before-after-900.webp";
-import imgComfortelBuilding from "@/assets/images/gallery-commercial-comfortel-building.webp";
-import imgComfortelFront from "@/assets/images/gallery-commercial-comfortel-front.webp";
 
 export default function BodyCorporatePainting() {
   const benefits = [
@@ -123,8 +117,8 @@ export default function BodyCorporatePainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgService}
-            srcSet={`${imgService900} 900w, ${imgService} 1400w`}
+            src="/gallery/gallery-commercial-heritage-white.webp"
+            srcSet="/gallery/gallery-commercial-heritage-white-900.webp 900w, /gallery/gallery-commercial-heritage-white.webp 1400w"
             sizes="(max-width: 1024px) 100vw, 1152px"
             width={1400}
             height={1050}
@@ -134,8 +128,8 @@ export default function BodyCorporatePainting() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
-              src={imgBeforeAfter}
-              srcSet={`${imgBeforeAfter900} 900w, ${imgBeforeAfter} 1400w`}
+              src="/gallery/gallery-commercial-before-after.webp"
+              srcSet="/gallery/gallery-commercial-before-after-900.webp 900w, /gallery/gallery-commercial-before-after.webp 1400w"
               sizes="(max-width: 1024px) 100vw, 1152px"
               width={1400}
               height={1400}
@@ -144,7 +138,7 @@ export default function BodyCorporatePainting() {
               loading="lazy"
             />
             <img
-              src={imgComfortelBuilding}
+              src="/gallery/gallery-commercial-comfortel-building.webp"
               width={1400}
               height={1050}
               alt="Commercial and strata building exterior painted by Jetblack Painting"
@@ -152,7 +146,7 @@ export default function BodyCorporatePainting() {
               loading="lazy"
             />
             <img
-              src={imgComfortelFront}
+              src="/gallery/gallery-commercial-comfortel-front.webp"
               width={1050}
               height={1400}
               alt="Multi-tenancy building frontage painted by Jetblack Painting"

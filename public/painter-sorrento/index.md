@@ -1,10 +1,10 @@
-<!-- Sorrento Painters | Coastal & Heritage | Jetblack Painting -->
+<!-- Sorrento Painters | Coastal Homes, 5-Year Guarantee -->
 <!-- Source: https://jetblackpainting.com/painter-sorrento/ -->
-<!-- Coastal house painters in Sorrento — limestone cottages, weatherboard and premium holiday homes near the front and back beach. Free quotes. Call 0432 077 782. -->
+<!-- Sorrento painters — limestone cottages, weatherboard and holiday homes near the front and back beach. 5.0 from 17 reviews. Free quotes, 5-year guarantee. -->
 
 # House Painters Sorrento
 
-Coastal house painters in Sorrento — limestone cottages, weatherboard and premium holiday homes near the front and back beach. Free quotes. Call 0432 077 782. Searching for painters near you in Sorrento? Jetblack Painting are your trusted local Sorrento painters, servicing Sorrento and the surrounding suburbs.
+Sorrento painters — limestone cottages, weatherboard and holiday homes near the front and back beach. 5.0 from 17 reviews. Free quotes, 5-year guarantee. Searching for painters near you in Sorrento? Jetblack Painting are your trusted local Sorrento painters, servicing Sorrento and the surrounding suburbs.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 

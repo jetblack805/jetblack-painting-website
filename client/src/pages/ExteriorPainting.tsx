@@ -10,8 +10,6 @@ import { lazy, Suspense } from "react";
 // Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
 // out of the initial payload and the form loads below the fold.
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
-import imgService from "@/assets/images/gallery-exterior-navy-weatherboard.webp";
-import imgService900 from "@/assets/images/gallery-exterior-navy-weatherboard-900.webp";
 
 export default function ExteriorPainting() {
   const benefits = [
@@ -126,8 +124,8 @@ export default function ExteriorPainting() {
       <section className="py-12 bg-[#131316]">
         <div className="container">
           <img
-            src={imgService}
-            srcSet={`${imgService900} 900w, ${imgService} 1050w`}
+            src="/gallery/gallery-exterior-navy-weatherboard.webp"
+            srcSet="/gallery/gallery-exterior-navy-weatherboard-900.webp 900w, /gallery/gallery-exterior-navy-weatherboard.webp 1050w"
             sizes="(max-width: 1024px) 100vw, 1152px"
             width={1050}
             height={1400}

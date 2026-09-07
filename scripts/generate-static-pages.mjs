@@ -481,8 +481,8 @@ function pageHtml({
 ${projectSummary ? `    <p>${escapeHtml(projectSummary)}</p>\n` : ""}${projectImages
         .map(
           (img) => `    <figure>
-      <img src="${img.src}"${img.small ? ` srcset="${img.small} 800w, ${img.src} ${img.width}w" sizes="(max-width: 768px) 100vw, 50vw"` : ""} width="${img.width}" height="${img.height}" alt="${escapeHtml(img.alt)}" loading="lazy" decoding="async">
-      <figcaption>${escapeHtml(img.caption)}</figcaption>
+      <img src="${img.src}"${img.small ? ` srcset="${img.small} ${img.smallWidth ?? 800}w, ${img.src} ${img.width}w" sizes="(max-width: 768px) 100vw, 50vw"` : ""} width="${img.width}" height="${img.height}" alt="${escapeHtml(img.alt)}" loading="lazy" decoding="async">
+${img.caption ? `\n      <figcaption>${escapeHtml(img.caption)}</figcaption>` : ""}
     </figure>`,
         )
         .join("\n")}
@@ -1416,6 +1416,66 @@ const serviceSuburbLinks = {
     { label: "Painters Aspendale", href: "/painter-aspendale/" },
   ],
 };
+
+
+// Real photographs on the service pages, parsed off the same <img> tags the
+// React page renders — the identical approach extractProjectImages() takes for
+// suburb pages, and for the same reason: one source of truth. Edit an alt or a
+// caption in the .tsx and the crawler layer follows on the next generate.
+//
+// WHY THIS EXISTS: service pages used to emit ZERO <img> tags into the static
+// layer while suburb pages emitted five. Every service photograph — the
+// Chadstone mould before/after, the bathroom, the kitchen cabinetry, the epoxy
+// floors, the roofs and fences — was invisible to any crawler that does not run
+// JavaScript. The images were imported as Vite assets (@/assets/images/...),
+// whose final URLs are content-hashed and unknowable until AFTER vite build,
+// which runs after this script. That is precisely why they could never be
+// emitted here. The 11 service pages now reference stable /gallery/ URLs
+// instead, so both layers can name the same file.
+function extractServiceImages(source) {
+  const out = [];
+  // Two layouts occur on these pages: a <figure> with a <figcaption>, and bare
+  // <img> tags in a grid with alt text but no caption. Match the image first and
+  // treat the caption as optional, or the caption-less grids (roof, interior,
+  // commercial, cabinetry) silently emit nothing — which is how the first pass
+  // of this function found images on only 4 of the 11 pages.
+  const re = /<img\s([^>]*?)\/>(\s*<figcaption[^>]*>([\s\S]*?)<\/figcaption>)?/g;
+  let m;
+  while ((m = re.exec(source))) {
+    const attrs = m[1];
+    const pick = (name) => {
+      const q = attrs.match(new RegExp(`\\b${name}="([^"]*)"`));
+      if (q) return q[1];
+      const b = attrs.match(new RegExp(`\\b${name}=\\{(\\d+)\\}`));
+      return b ? b[1] : "";
+    };
+    const src = pick("src");
+    if (!src.startsWith("/gallery/")) continue;
+    const srcset = pick("srcSet");
+    // Suburb project photos use an 800w small variant; the service gallery uses
+    // 900w. Read the descriptor rather than assuming, or the browser is handed a
+    // width that does not match the file and picks the wrong one.
+    const smallMatch = srcset.match(/(\/gallery\/[\w-]+\.webp)\s+(\d+)w/);
+    const small = smallMatch ? smallMatch[1] : "";
+    const smallWidth = smallMatch ? Number(smallMatch[2]) : 800;
+    // JSX text: collapse whitespace and decode the couple of entities used.
+    const caption = (m[3] || "")
+      .replace(/\{"([^"]*)"\}/g, "$1")
+      .replace(/&mdash;/g, "\u2014")
+      .replace(/\s+/g, " ")
+      .trim();
+    out.push({
+      src,
+      small,
+      smallWidth,
+      width: Number(pick("width")) || 1200,
+      height: Number(pick("height")) || 1600,
+      alt: pick("alt"),
+      caption,
+    });
+  }
+  return out;
+}
 
 const servicePages = [
   {
@@ -2567,8 +2627,32 @@ const servicePages = [
   },
 ];
 
+
+// Which .tsx renders each service route, so extractServiceImages() knows where
+// to read. Kept next to the render loop rather than inside servicePages so the
+// big content structure above stays about content.
+const serviceSourceFiles = {
+  "/services/interior-painting": "InteriorPainting.tsx",
+  "/services/exterior-painting": "ExteriorPainting.tsx",
+  "/services/commercial-painting": "CommercialPainting.tsx",
+  "/services/kitchen-cabinet-resurfacing": "KitchenCabinetResurfacing.tsx",
+  "/services/roof-painting": "RoofPainting.tsx",
+  "/services/roof-fence-painting": "RoofFencePainting.tsx",
+  "/services/real-estate-painting": "RealEstatePainting.tsx",
+  "/services/body-corporate-painting": "BodyCorporatePainting.tsx",
+  "/services/epoxy-flooring": "EpoxyFlooring.tsx",
+  "/services/property-maintenance": "PropertyMaintenance.tsx",
+  "/services/bathroom-tile-resurfacing": "BathroomTileResurfacing.tsx",
+};
+
 for (const service of servicePages) {
   const canonical = canonicalForRoute(service.route);
+  const sourceFile = serviceSourceFiles[service.route];
+  const servicePhotos = sourceFile
+    ? extractServiceImages(
+        fs.readFileSync(path.join(PAGE_DIR, sourceFile), "utf8"),
+      )
+    : [];
   writePage(
     service.route,
     pageHtml({
@@ -2577,6 +2661,8 @@ for (const service of servicePages) {
       canonical,
       heroTitle: service.heroTitle,
       heroBody: service.heroBody,
+      projectImages: servicePhotos,
+      projectHeading: `${service.name} work`,
       schema: [
         ...serviceSchema({
           name: service.name,

@@ -10,12 +10,6 @@ import { lazy, Suspense } from "react";
 // Lazy, as on the homepage and suburb pages: react-hook-form and zod stay
 // out of the initial payload and the form loads below the fold.
 const QuoteForm = lazy(() => import("@/components/QuoteForm"));
-import imgSprayBooth from "@/assets/images/gallery-cabinet-doors-spray-booth.webp";
-import imgSprayBooth900 from "@/assets/images/gallery-cabinet-doors-spray-booth-900.webp";
-import imgSprayDetail from "@/assets/images/gallery-cabinet-spray-finish-detail.webp";
-import imgSprayDetail900 from "@/assets/images/gallery-cabinet-spray-finish-detail-900.webp";
-import imgFinishedKitchen from "@/assets/images/gallery-cabinet-finished-white-kitchen.webp";
-import imgFinishedKitchen900 from "@/assets/images/gallery-cabinet-finished-white-kitchen-900.webp";
 
 export default function KitchenCabinetResurfacing() {
   const benefits = [
@@ -127,8 +121,8 @@ export default function KitchenCabinetResurfacing() {
               the three, and the one a visitor deciding on the service wants to
               see first. */}
           <img
-            src={imgFinishedKitchen}
-            srcSet={`${imgFinishedKitchen900} 900w, ${imgFinishedKitchen} 1170w`}
+            src="/gallery/gallery-cabinet-finished-white-kitchen.webp"
+            srcSet="/gallery/gallery-cabinet-finished-white-kitchen-900.webp 900w, /gallery/gallery-cabinet-finished-white-kitchen.webp 1170w"
             sizes="(max-width: 1024px) 100vw, 1152px"
             width={1170}
             height={798}
@@ -141,8 +135,8 @@ export default function KitchenCabinetResurfacing() {
               a taller box rather than being cropped into a wide strip. */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
             <img
-              src={imgSprayBooth}
-              srcSet={`${imgSprayBooth900} 675w, ${imgSprayBooth} 1200w`}
+              src="/gallery/gallery-cabinet-doors-spray-booth.webp"
+              srcSet="/gallery/gallery-cabinet-doors-spray-booth-900.webp 675w, /gallery/gallery-cabinet-doors-spray-booth.webp 1200w"
               sizes="(max-width: 640px) 100vw, 50vw"
               width={1200}
               height={1600}
@@ -152,8 +146,8 @@ export default function KitchenCabinetResurfacing() {
               decoding="async"
             />
             <img
-              src={imgSprayDetail}
-              srcSet={`${imgSprayDetail900} 675w, ${imgSprayDetail} 1200w`}
+              src="/gallery/gallery-cabinet-spray-finish-detail.webp"
+              srcSet="/gallery/gallery-cabinet-spray-finish-detail-900.webp 675w, /gallery/gallery-cabinet-spray-finish-detail.webp 1200w"
               sizes="(max-width: 640px) 100vw, 50vw"
               width={1200}
               height={1600}

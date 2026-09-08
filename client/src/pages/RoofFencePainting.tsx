@@ -134,10 +134,10 @@ export default function RoofFencePainting() {
             <figure className="relative m-0">
               <img
                 src="/gallery/gallery-fence-picket-before.webp"
-                srcSet="/gallery/gallery-fence-picket-before-900.webp 900w, /gallery/gallery-fence-picket-before.webp 1200w"
+                srcSet="/gallery/gallery-fence-picket-before-900.webp 900w, /gallery/gallery-fence-picket-before.webp 1150w"
                 sizes="(max-width: 640px) 100vw, 50vw"
-                width={1200}
-                height={900}
+                width={1150}
+                height={863}
                 alt="Bare timber picket fence masked up and prepared before painting by Jetblack Painting"
                 className="rounded-lg shadow-md w-full h-72 sm:h-96 object-cover"
                 loading="lazy"

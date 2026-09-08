@@ -148,10 +148,8 @@ export default function EpoxyFlooring() {
             <figure className="m-0">
               <img
                 src="/gallery/gallery-commercial-epoxy-floor.webp"
-                srcSet="/gallery/gallery-commercial-epoxy-floor-900.webp 900w, /gallery/gallery-commercial-epoxy-floor.webp 1120w"
-                sizes="(max-width: 768px) 100vw, 576px"
-                width={1120}
-                height={1400}
+                width={900}
+                height={1125}
                 alt="Grey and black decorative epoxy flake floor finished by Jetblack Painting in the same Melbourne warehouse"
                 className="rounded-lg shadow-md w-full h-72 object-cover"
                 loading="lazy"

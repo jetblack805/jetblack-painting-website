@@ -1,4 +1,4 @@
-<!-- Lyndhurst Painters | Estate Home Repaints | Jetblack Painting -->
+<!-- Lyndhurst Painters | Estate Repaints | Jetblack Painting -->
 <!-- Source: https://jetblackpainting.com/painter-lyndhurst/ -->
 <!-- House painters in Lyndhurst — rendered and brick-veneer estate homes reaching their first repaint. Free quotes, 5-year guarantee. Call 0432 077 782. -->
 

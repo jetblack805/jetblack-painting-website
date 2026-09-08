@@ -5207,3 +5207,90 @@ returned success with that resource name. **The slot cannot be confirmed through
 this connector either way** — it has to be eyeballed on the live profile. Do not
 record it as verified on the strength of a read-back that structurally cannot
 show it.
+
+## 2026-09-07 (evening) — Daily audit: metadata fixed, oversized images found and deliberately NOT fixed
+
+Steps 0–6 run against the merged main.
+
+### Fixed: 4 metadata problems, all self-inflicted this week
+
+`check-metadata.mjs` on 128 pages:
+
+| Page | Problem | Now |
+| --- | --- | --- |
+| `/painter-canterbury/` | title 64 > 60 | 56 |
+| `/painter-lyndhurst/` | title 61 > 60 | 56 |
+| `/painter-wantirna-south/` | title 66 > 60 | 54 |
+| `/painter-wantirna-south/` | description 164 > 158 | 133 |
+
+All four are on pages built in the last few days, so there is no ranking history
+to destabilise — the standing "do not rewrite healthy titles" rule does not
+apply to a title Google is truncating on a page with no impressions. House
+style (`<Suburb> Painters | <descriptor> | Jetblack Painting`) kept on two;
+Wantirna South drops the brand suffix, which Sorrento already does.
+
+⚠️ This is the **second** time an over-length description has shipped and been
+caught the next day. The brief already warns about it. The lesson is that
+writing the description and checking its length have to be the same step —
+`node scripts/check-metadata.mjs` before the commit, not after.
+
+### Found, NOT fixed: six images over the 250KB baseline
+
+The brief's Step 5 says *"Zero images in public/ exceed 250KB"*. **That is no
+longer true**, and has not been for some time — these all predate today:
+
+| KB | File | On |
+| --- | --- | --- |
+| 456 | `gallery-roof-cleaning.webp` | roof-fence-painting |
+| 427 | `gallery-commercial-epoxy-floor.webp` | epoxy-flooring |
+| 351 | `gallery-commercial-before-after.webp` | commercial (×2) |
+| 328 | `gallery-commercial-heritage-white.webp` | commercial |
+| 266 | `gallery-fence-picket-before.webp` | roof-fence-painting |
+| 259 | `gallery-roof-victorian-restoration.webp` | roof-painting |
+
+~2MB across six files, every one referenced by a live service page.
+
+⚠️ **I started fixing this and stopped, on purpose.** Stepping WebP quality down
+until each file cleared 250KB drove three of them to q=0.54–0.60 and still left
+two over — which is the exact mistake called out in the header of
+`make-social-jpegs.mjs`: hitting a byte budget by visibly degrading Jimmy's
+photographs. Reverted from git; the files are untouched.
+
+**The right fix is dimensions, not quality.** These are 1400px wide and are
+displayed at ~1150px at most, and inside grids at ~380px. Re-rendering at
+1200px wide at q≈0.80 should clear the budget with no visible loss — the same
+route that took `gallery-exterior-navy-weatherboard` from 283KB to 224KB this
+morning. Left for a run of its own rather than bolted onto a metadata fix.
+
+### Clean, no change needed
+
+- **Build** — production serves the newest commit; TTFB 0.42s, `cf-cache HIT`
+- **Lockfile** — 77/77 package.json deps present
+- **Three layers** — all generators re-run, **zero diffs** before my edit
+- **Locked facts** — review count reads **17** in every hardcoded place
+- **Schema vs visible text** — 123 FAQPage blocks, **551 questions, 0 problems**,
+  0 JSON-LD parse errors, **0 aggregateRating in static pages**
+  ⚠️ The first version of this check returned "0 blocks, 0 problems" and looked
+  clean. It was a broken regex: the tags carry `data-static-schema`, so
+  `<script type="application/ld+json">` never matched. **A checker reporting zero
+  findings AND zero items examined is a failed check, not a pass.**
+- **Near-duplicate** — 99 suburb pages, avg worst-twin **30.5%** (gate 45%),
+  highest pair **50.6%** chelsea-heights/dingley-village (gate 55%), zero over 55.
+  Up from the 25.5%/47% baseline — inside the gates, but moving the wrong way.
+  The four newest pages are not among the worst pairs.
+- **Site health** — real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`,
+  `/assets/fake.css` all 404; real hashed bundles still 200 with correct
+  content-types (both directions checked); `/painters-canterbury` 301s
+- **Sitemap** — **125/125 URLs clean 200**, zero redirect hops
+- **AEO** — markdown negotiation returns `text/markdown` with Vary, Cache-Control
+  and `X-Robots-Tag: noindex`; normal Accept returns HTML; robots.txt disallows
+  only `/api/`; `Content-Signal: search=yes, ai-train=yes, ai-input=yes` intact;
+  llms.txt carries **no prices** (all three `$` matches are the legitimate
+  $10 million liability figure); root and `public/` copies byte-identical
+- **Indexing** — og:image and twitter:image resolve to one URL, 200
+
+### Not measured this run
+
+No ranking claim is made. GSC Wizard and Supermetrics were not queried — the run
+found a real defect at Step 3 and the brief says fix it and stop. **"Not
+measured" is not "nothing moved."**

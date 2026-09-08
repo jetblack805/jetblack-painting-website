@@ -1,10 +1,10 @@
-<!-- Wantirna South Painters | Homes and Townhouses | Jetblack Painting -->
+<!-- Wantirna South Painters | Homes and Townhouses in Knox -->
 <!-- Source: https://jetblackpainting.com/painter-wantirna-south/ -->
-<!-- House painters in Wantirna South — established brick-veneer homes and newer townhouse developments near Knox City. Free quotes, 5-year guarantee. Call 0432 077 782. -->
+<!-- House painters in Wantirna South — established brick-veneer homes and newer townhouses near Knox City. Free quotes, 5-year guarantee. -->
 
 # House Painters Wantirna South
 
-House painters in Wantirna South — established brick-veneer homes and newer townhouse developments near Knox City. Free quotes, 5-year guarantee. Call 0432 077 782. Searching for painters near you in Wantirna South? Jetblack Painting are your trusted local Wantirna South painters, servicing Wantirna South and the surrounding suburbs.
+House painters in Wantirna South — established brick-veneer homes and newer townhouses near Knox City. Free quotes, 5-year guarantee. Searching for painters near you in Wantirna South? Jetblack Painting are your trusted local Wantirna South painters, servicing Wantirna South and the surrounding suburbs.
 
 [Call Jimmy — 0432 077 782](tel:0432077782)
 

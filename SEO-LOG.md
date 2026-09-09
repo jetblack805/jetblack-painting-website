@@ -5603,3 +5603,98 @@ Malvern 83.6 · Camberwell 86.8 · Hawthorn 88.3 · Kew 92.5.**
 
 Total across Stonnington + these four Boroondara suburbs: **3,637 impressions in
 90 days for zero clicks.**
+
+---
+
+## 2026-09-09 (evening) — Daily audit: Sorrento reaches the top 10, and the near-duplicate gate gets an implementation
+
+### The finding: Sorrento is in the top 10, and CTR is finally testable
+
+The standing diagnosis has said since 2026-08-19 that CTR is **not** the
+limiting factor, with the explicit caveat *"re-test when a page holds top-10 on
+a term with volume."* That condition is now met. Over the last 28 days:
+
+| Query | Impressions | Position | Clicks |
+|---|---|---|---|
+| `painters sorrento bay` | 32 | **5.3** | 0 |
+| `house painters sorrento` | 27 | **8.4** | 0 |
+
+**59 impressions inside the top 10, zero clicks.** At those positions the
+expected return is roughly three or four clicks. Zero is low — but 59
+impressions is a small sample and the gap is not yet statistically strong.
+
+**No title or description was changed, deliberately.** These pages have only
+just settled into the top 10, and the brief's own rule is that Google needs a
+stable title to settle a page's ranking. Rewriting metadata on a page the week
+it arrives destroys the measurement being set up. **Re-measure next run; if the
+zero holds across a second 28-day window at ~100 impressions, that is a real CTR
+finding and the title becomes a justified change.**
+
+### Positions improved broadly against the 2026-05/08 baseline
+
+Mordialloc 29.18 → 14.09 · Mentone 24.82 → 17.66 · Highett 17.32 → 13.49 ·
+Collingwood 17.65 → 15.34 · Murrumbeena 17.00 → 16.17 · Donvale 16.63 → 15.52 ·
+McKinnon 11.19 → 10.97 (flat). Sorrento is mixed: `painters sorrento` moved the
+wrong way (7.13 → 13.27) while `painters sorrento bay` sits at 5.34.
+
+**Still zero non-brand clicks anywhere on the property.** Every click in the
+28-day window came from `jetblack painting` (4 clicks, position 3.4).
+
+`jetblack` remains the anomaly the 2026-08-27 entry flagged: 59 impressions at
+position 3.8, zero clicks. A plain-English explanation now looks more likely
+than a technical one — "jetblack" is an ambiguous one-word query and most of
+the people issuing it are not looking for a painter. Not worth further work.
+
+### The real defect: a gate nobody could re-measure
+
+The brief has quoted a near-duplicate baseline for weeks — *25.5% avg, worst
+~47%, gate 45%/55%* — but **the script that produced those numbers was never
+committed.** Today a freshly written check returned 31.4% avg and 55.3% worst,
+apparently breaching the gate. Investigating:
+
+- Measured the same page pair with identical code at four commits across the 8
+  days of history available in this clone: **58.8% → 59.1%.** Flat. No drift.
+- Then wrote the check properly as `scripts/check-suburb-duplicates.mjs`, which
+  reads **31.0% avg, worst 53.7% (cranbourne vs narre-warren), 0 over gate.**
+
+So three hand-written implementations of "the same" check produced 47%, 55.3%
+and 53.7% on the same pair — two of them straddling the gate line in opposite
+directions. **A gate that cannot be reproduced is not a gate**, and for weeks
+this one has been reported as passing or failing on the strength of whichever
+throwaway script the run happened to write.
+
+`scripts/check-suburb-duplicates.mjs` is now the implementation of record. Its
+numbers are comparable to each other and **to nothing that came before** — the
+25.5%/47% baseline should be treated as retired, not as a trend line to compare
+against. New baseline, 2026-09-09: **99 pages, avg worst-twin 31.0%, worst
+53.7%, zero over gate.**
+
+Cranbourne/Narre Warren at 53.7% is high and worth watching — both are indexed
+(the Casey noindex was reversed in 884464b) — but it is inside the gate and has
+not moved.
+
+### Everything else checked, all clean
+
+Build health (77/77 deps in the lockfile, Workers Builds green) · three layers
+regenerate to zero diffs · 127 pages, 123 FAQPage blocks, **551 questions, 0 not
+present as visible text**, 0 JSON-LD parse errors, 0 missing required fields, **0
+aggregateRating in static pages** · metadata clean across 128 pages · blog
+near-duplicate 0 failed · site health (real pages 200, bad URLs 404 both
+extensionless and under `/assets/`, real hashed bundles still 200 with correct
+content types, `/painters-malvern` 301s cleanly) · TTFB 0.30s, cf-cache HIT ·
+markdown negotiation returns `text/markdown`, HTML accept returns HTML ·
+llms.txt carries no prices (all three `$` matches are the $10M liability line)
+and root/public are byte-identical · **review count reads 17 in every one of the
+eight hardcoded places and on the live site.**
+
+Speed baseline holds: **zero images over 250KB anywhere on the site's critical
+path.** The 30 files over that size all sit under `public/social/`, which is
+never requested by a page — they are fetched server-side by Google and Instagram
+at post time. That exemption is deliberate and predates this run.
+
+### Not done, and why
+
+No content changes. No metadata rewrites. The phase set on 2026-08-19 puts
+authority acquisition first and content depth last, nothing in the checks
+demanded a content fix, and the one number that looked like a breach turned out
+to be a measurement artefact. One change this run: the check script.

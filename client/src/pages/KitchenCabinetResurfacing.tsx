@@ -164,35 +164,42 @@ export default function KitchenCabinetResurfacing() {
               the same 0.75 aspect at comparable subject scale so the comparison
               is honest rather than flattering. The after is genuinely mid
               clean-up: the bench had not been cleared when the photo was taken,
-              and it is left as it is rather than implying a staged handover. */}
+              and it is left as it is rather than implying a staged handover.
+
+              ⚠️ Malvern is named here deliberately. It was on the do-not-promote
+              list from 2026-08-17, and Jimmy reversed that on 2026-09-09:
+              "definitely promote Malvern and all Stonnington suburbs make that a
+              priority". Do not strip the suburb back out on the strength of an
+              older brief — see SEO-LOG.md for the reversal and the measured
+              position data behind it. */}
           <div className="grid gap-4 md:grid-cols-2 mt-8">
             <figure className="m-0">
               <img
-                src="/projects/project-kitchen-cabinets-before.webp"
-                srcSet="/projects/project-kitchen-cabinets-before-800.webp 800w, /projects/project-kitchen-cabinets-before.webp 1200w"
+                src="/projects/project-malvern-kitchen-cabinets-before.webp"
+                srcSet="/projects/project-malvern-kitchen-cabinets-before-800.webp 800w, /projects/project-malvern-kitchen-cabinets-before.webp 1200w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1200}
                 height={1600}
                 loading="lazy"
                 decoding="async"
-                alt="Kitchen before resurfacing, doors removed from the wall and pantry cabinets and the original cream carcasses left in place"
+                alt="A Malvern kitchen before resurfacing, doors removed from the wall and pantry cabinets and the original cream carcasses left in place"
                 className="w-full rounded-lg"
               />
               <figcaption className="text-[#8B8B90] text-sm mt-3">
-                Before. The doors and drawer fronts come off and go to the booth; the carcasses,
-                the benchtop and the splashback stay exactly where they are.
+                Before, in Malvern. The doors and drawer fronts come off and go to the booth;
+                the carcasses, the benchtop and the splashback stay exactly where they are.
               </figcaption>
             </figure>
             <figure className="m-0">
               <img
-                src="/projects/project-kitchen-cabinets-after.webp"
-                srcSet="/projects/project-kitchen-cabinets-after-800.webp 800w, /projects/project-kitchen-cabinets-after.webp 1200w"
+                src="/projects/project-malvern-kitchen-cabinets-after.webp"
+                srcSet="/projects/project-malvern-kitchen-cabinets-after-800.webp 800w, /projects/project-malvern-kitchen-cabinets-after.webp 1200w"
                 sizes="(max-width: 768px) 100vw, 576px"
                 width={1200}
                 height={1600}
                 loading="lazy"
                 decoding="async"
-                alt="The same kitchen after resurfacing by Jetblack Painting, doors rehung in a white gloss finish with the original benchtop and splashback untouched"
+                alt="The same Malvern kitchen after resurfacing by Jetblack Painting, doors rehung in a white gloss finish with the original benchtop and splashback untouched"
                 className="w-full rounded-lg"
               />
               <figcaption className="text-[#8B8B90] text-sm mt-3">

@@ -1,0 +1,161 @@
+{
+  "_readme": "Instagram Reels queue for Jetblack Painting. The standing creative brief is social/reels-plan.md — read that first; this file is the shot-by-shot detail. Two reels a week, Tuesday and Friday, rotating format A > B > C > D. Every entry is ONE continuous vertical phone clip: no multi-clip edits, no still-photo slideshows. `status` is either `ready` (footage exists) or `to-film` (waiting on a job of this type — film it when one comes up, order is a preference not a requirement). Captions are final text: first line carries the suburb, four to six hashtags, no location tag is possible because Instagram's publishing API exposes no location field. Before sending any clip, check the frame for house numbers, number plates, mail, and legible shopfronts through windows — see rule 7 in the plan.",
+  "cadence": "2/week — Tuesday and Friday",
+  "rotation": ["A", "B", "C", "D"],
+  "posted": [],
+  "queue": [
+    {
+      "id": "malvern-kitchen-doors",
+      "format": "A",
+      "status": "footage-sent-unverified",
+      "suburb": "Malvern",
+      "job": "Kitchen cabinet resurface, doors and drawer fronts sprayed off-site, carcasses and benchtop untouched.",
+      "shot": "Already filmed — the 7.9s clip sent on 9 September. I cannot decode it in this session, so I have not seen what it shows. Tell me in a line what's in it and I'll post it with the caption below.",
+      "on_screen_text": "The kitchen stayed. The doors went to the booth.",
+      "caption": "A kitchen in Malvern that didn't need replacing.\n\nThe doors and drawer fronts come off and get sprayed properly. The carcasses, the benchtop and the tiled splashback stay exactly where they are. You're paying for a finish, not for a demolition and a new kitchen on top of it.\n\nSprayed rather than brushed because the house was empty and we could mask it out properly. That's where a glass-smooth door finish comes from — the method and the dust control, not a dearer tin of paint.\n\nIf your kitchen's sound and you just hate the colour, ask about resurfacing before you price a new one.",
+      "hashtags": [
+        "#malvern",
+        "#stonnington",
+        "#melbournepainter",
+        "#kitchenresurfacing",
+        "#cabinetspraying"
+      ],
+      "notes": "Priority suburb #1 on Jimmy's instruction of 9 Sept. Before/after stills already live on the Kitchen & Cabinet Resurfacing page."
+    },
+    {
+      "id": "tape-pull",
+      "format": "B",
+      "status": "to-film",
+      "suburb": "any current job",
+      "job": "Any interior where masking tape is coming off a finished line.",
+      "shot": "Phone braced, vertical, framed tight on about 300mm of the line. Start rolling BEFORE the pull. Pull the tape slow and steady, one continuous movement, toward the camera and slightly down. Ten seconds. The whole reel is the edge appearing.",
+      "on_screen_text": "no text — let it play",
+      "caption": "{SUBURB}, this morning.\n\nThe line's only that sharp because the tape went on straight and came off at the right time. Leave it on too long, especially in the sun, and it takes the paint with it.\n\nNo filter, no clever edit. Just the bit of the job that feels good.",
+      "hashtags": [
+        "{#SUBURB}",
+        "#melbournepainter",
+        "#satisfying",
+        "#paintersofinstagram",
+        "#stonnington"
+      ],
+      "notes": "Highest non-follower reach of anything in this queue. Swap the suburb in the caption to wherever it's actually filmed."
+    },
+    {
+      "id": "advice-dont-paint-over-it",
+      "format": "C",
+      "status": "to-film",
+      "suburb": "any current job",
+      "job": "Jimmy to camera, standing in front of a surface that has been prepped, ideally mid-job.",
+      "shot": "Vertical, phone propped at chest height about a metre away — not held at arm's length. Compressor OFF. Jimmy talks straight to the lens for twenty seconds. One take, no script read: he knows this cold, he just has to say it.",
+      "on_screen_text": "\"Can I just paint over it?\"",
+      "talking_points": [
+        "The question every second customer asks.",
+        "Over gloss or a hard enamel, paint has nothing to grip — it has to be dulled off first or it peels in sheets later.",
+        "Over flaking render or bubbling paint, painting over it just seals the problem in and you pay for the same wall twice.",
+        "The honest answer: sometimes yes. On sound, clean, dull surfaces you can go straight over. That's why someone should look at it first."
+      ],
+      "caption": "\"Can I just paint over it?\"\n\nGet asked this constantly, so here's the actual answer.\n\nOver gloss or enamel — no, not without dulling it off first. Paint needs something to grip. Skip that and it comes off in sheets in a year or two, usually in one big piece.\n\nOver flaking render or bubbling paint — no. You're sealing the problem in and you'll pay to do the same wall twice.\n\nOver a sound, clean, dull surface — often yes, straight over. Which is the whole reason it's worth having someone look at it before you buy the paint.",
+      "hashtags": [
+        "#melbournepainter",
+        "#painting",
+        "#homerenovation",
+        "#malverneast",
+        "#askapainter"
+      ],
+      "notes": "Format C converts. Do not let it become a monthly thing — one in four."
+    },
+    {
+      "id": "prep-the-invisible-bit",
+      "format": "D",
+      "status": "to-film",
+      "suburb": "any current job",
+      "job": "Filling, sanding and caulking an interior before any colour goes on.",
+      "shot": "Vertical. Two beats in ONE continuous move: start tight on the filling knife going across a crack, then pull back slowly to show the wall covered in filled patches. Twelve seconds. One take, no cut.",
+      "on_screen_text": "This is the part you can't see in the after photo.",
+      "caption": "{SUBURB}. Nobody photographs this bit.\n\nEvery crack filled, every join caulked, the whole lot sanded back before a drop of colour goes near it. It is most of the labour on an interior repaint and none of it shows up in the finished photo.\n\nWhen a quote comes in well under everyone else's, this is usually the part that's been left out. It won't look different on handover day. It'll look different in two years.",
+      "hashtags": [
+        "{#SUBURB}",
+        "#boroondara",
+        "#melbournepainter",
+        "#interiorpainting",
+        "#prepwork"
+      ],
+      "notes": "This is the answer to the cheaper-quote objection. Prefer filming it on a priority-suburb job so {SUBURB} resolves to one of them — Kew measures worst of any suburb on the site (position 92.5) and is the best candidate if the choice is open."
+    },
+    {
+      "id": "armadale-facade-cut",
+      "format": "A",
+      "status": "to-film",
+      "suburb": "Armadale",
+      "job": "Next period facade or High St shopfront in Armadale.",
+      "shot": "BEFORE: stand across the footpath, tape an X where you're standing, film ten seconds vertical, slow pan up the facade. AFTER: same X, same height, same slow pan, same speed. The two shots must match or the format doesn't work.",
+      "on_screen_text": "Same spot. Same angle.",
+      "caption": "Armadale, before and after.\n\nPeriod frontage, so the trim colour matters more than the wall colour — get it wrong and a 100-year-old facade reads as brand new and cheap. Prep on these is render repair first, then paint, in that order.\n\nIf you're in Stonnington and the outside of the house is on the list, get in touch.",
+      "hashtags": [
+        "#armadale",
+        "#stonnington",
+        "#exteriorpainting",
+        "#periodhome",
+        "#melbournepainter"
+      ],
+      "notes": "Armadale is the best-positioned suburb on the property (27.8) — reels won't move that, but it's the suburb where a reel is most likely to reach someone already half-aware of the business."
+    },
+    {
+      "id": "cutting-in-freehand",
+      "format": "B",
+      "status": "to-film",
+      "suburb": "any current job",
+      "job": "Cutting in a wall-to-ceiling line freehand, no tape.",
+      "shot": "Vertical, close on the brush. Camera braced or moving very slowly along the line at the same speed as the hand. Get a metre of clean travel in one take. Ten seconds — do not stop and restart.",
+      "on_screen_text": "No tape.",
+      "on_screen_text_note": "Two words, top third, plain sans. That's the entire hook — people stop to see whether the line holds.",
+      "caption": "Cutting in by hand in {SUBURB}.\n\nEighteen years of doing it is the only reason this doesn't need tape. It's faster than masking and the line is better, but it is genuinely not worth attempting on your own ceiling on a Saturday.\n\nIf you've got a cornice line you don't trust yourself with, that's the phone call.",
+      "hashtags": [
+        "{#SUBURB}",
+        "#cuttingin",
+        "#melbournepainter",
+        "#housepainter",
+        "#stonnington"
+      ],
+      "notes": "18+ years is Jimmy's trade experience, NOT the age of the business (opened 2 March 2015). Do not let this caption drift into implying the business is 18 years old."
+    },
+    {
+      "id": "weatherboard-cut",
+      "format": "A",
+      "status": "to-film",
+      "suburb": "any weatherboard exterior",
+      "job": "Next full weatherboard exterior repaint.",
+      "shot": "BEFORE: from the front fence, X on the ground, ten seconds vertical, hold still — no pan on this one, the house fills the frame. AFTER: identical position. If the sun has moved, wait and shoot the after at the same time of day as the before.",
+      "on_screen_text": "Same house.",
+      "caption": "Same house, before and after.\n\nWeatherboards are the ones where prep is nearly the whole job — scrape, fill, prime the bare timber, then paint. The colour change gets the attention but it's the boards underneath that decide whether it still looks like this in five years.\n\nEvery exterior we do carries a five-year guarantee.",
+      "hashtags": [
+        "#weatherboard",
+        "#exteriorpainting",
+        "#melbournepainter",
+        "#bayside",
+        "#housepainting"
+      ],
+      "notes": "Five-year guarantee is a real, established fact and safe to state. Do NOT add a price or a job duration to this caption — if a genuine before/after gap is worth naming, Jimmy has to supply the actual figure."
+    },
+    {
+      "id": "spray-booth-doors",
+      "format": "B",
+      "status": "to-film",
+      "suburb": "workshop",
+      "job": "Cabinet doors laid out on trestles, spray gun passing over them.",
+      "shot": "Vertical. Camera low and to the side so the doors run away from the lens — that gives depth and makes the gun pass read. Film one full pass, edge to edge, ten seconds. Do not follow the gun with the phone; hold the frame and let the gun travel through it.",
+      "on_screen_text": "no text — let it play",
+      "caption": "Cabinet doors from a Malvern kitchen, in the booth.\n\nThis is why a resurfaced kitchen doesn't look resurfaced. Doors come off, get sprayed flat and horizontal in a controlled space, and go back on. Brushing them on the hinges is what makes a resurface look like a resurface.\n\nBenchtop, carcasses and splashback never moved.",
+      "hashtags": [
+        "#malvern",
+        "#kitchenresurfacing",
+        "#cabinetspraying",
+        "#stonnington",
+        "#melbournepainter"
+      ],
+      "notes": "Pairs with the Kitchen & Cabinet Resurfacing page. Second Malvern reel in the rotation — deliberate, per the priority instruction."
+    }
+  ],
+  "rotation_note": "Run A > B > C > D and repeat. These eight are a full cycle (reels 1-4) then A/B/A/B, because there is only one C and one D worth filming in this batch — a second 'one thing I'd tell you' needs a genuinely different piece of advice, not a rerun. The next batch of eight should carry a second C and D.",
+  "_placeholders": "{SUBURB} and {#SUBURB} MUST be replaced with the suburb the footage was actually filmed in before posting — see 'Suburb weighting' in social/reels-plan.md. Never name a suburb the job was not in. If the job is outside the priority set, use the real suburb anyway and drop the second location hashtag rather than substituting a priority suburb."
+}

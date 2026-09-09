@@ -118,10 +118,10 @@ export default function BodyCorporatePainting() {
         <div className="container">
           <img
             src="/gallery/gallery-commercial-heritage-white.webp"
-            srcSet="/gallery/gallery-commercial-heritage-white-900.webp 900w, /gallery/gallery-commercial-heritage-white.webp 1400w"
+            srcSet="/gallery/gallery-commercial-heritage-white-900.webp 900w, /gallery/gallery-commercial-heritage-white.webp 1200w"
             sizes="(max-width: 1024px) 100vw, 1152px"
-            width={1400}
-            height={1050}
+            width={1200}
+            height={900}
             alt="Heritage multi-storey building repainted white by Jetblack Painting for a Melbourne owners corporation"
             className="rounded-lg shadow-md w-full max-h-[520px] object-cover"
             loading="lazy"
@@ -129,10 +129,10 @@ export default function BodyCorporatePainting() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
               src="/gallery/gallery-commercial-before-after.webp"
-              srcSet="/gallery/gallery-commercial-before-after-900.webp 900w, /gallery/gallery-commercial-before-after.webp 1400w"
+              srcSet="/gallery/gallery-commercial-before-after-900.webp 900w, /gallery/gallery-commercial-before-after.webp 1200w"
               sizes="(max-width: 1024px) 100vw, 1152px"
-              width={1400}
-              height={1400}
+              width={1200}
+              height={1200}
               alt="Before and after of a strata building façade repaint by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"

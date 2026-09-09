@@ -123,20 +123,20 @@ export default function RoofPainting() {
             />
             <img
               src="/gallery/gallery-roof-cleaning.webp"
-              srcSet="/gallery/gallery-roof-cleaning-900.webp 900w, /gallery/gallery-roof-cleaning.webp 1123w"
+              srcSet="/gallery/gallery-roof-cleaning-900.webp 900w, /gallery/gallery-roof-cleaning.webp 1000w"
               sizes="(max-width: 1024px) 100vw, 1152px"
-              width={1123}
-              height={1400}
+              width={1000}
+              height={1247}
               alt="High-pressure roof cleaning and preparation by Jetblack Painting"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"
             />
             <img
               src="/gallery/gallery-roof-victorian-restoration.webp"
-              srcSet="/gallery/gallery-roof-victorian-restoration-900.webp 900w, /gallery/gallery-roof-victorian-restoration.webp 1050w"
+              srcSet="/gallery/gallery-roof-victorian-restoration-900.webp 900w, /gallery/gallery-roof-victorian-restoration.webp 1000w"
               sizes="(max-width: 1024px) 100vw, 1152px"
-              width={1050}
-              height={1400}
+              width={1000}
+              height={1333}
               alt="Roof restoration in progress on a weatherboard home, with a Jetblack Painting painter working from the ridge"
               className="rounded-lg shadow-md w-full h-56 object-cover"
               loading="lazy"

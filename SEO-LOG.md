@@ -5294,3 +5294,68 @@ morning. Left for a run of its own rather than bolted onto a metadata fix.
 No ranking claim is made. GSC Wizard and Supermetrics were not queried — the run
 found a real defect at Step 3 and the brief says fix it and stop. **"Not
 measured" is not "nothing moved."**
+
+## 2026-09-08 (evening) — Daily audit: the six oversized images, fixed the right way
+
+Yesterday's run found six gallery images over the 250KB baseline and deliberately
+left them, because clearing the budget by dropping WebP quality drove three of
+them to q=0.54–0.60 and still left two over. This run does it by **width**, with
+quality held at 0.80.
+
+| File | Before | After | Change |
+| --- | --- | --- | --- |
+| `gallery-roof-cleaning` | 456KB @ 1123w | **239KB @ 1000w** | q0.74 — see below |
+| `gallery-commercial-epoxy-floor` | 427KB @ 1120w | **244KB @ 900w** | q0.80 |
+| `gallery-commercial-before-after` | 351KB @ 1400w | **219KB @ 1200w** | q0.80 |
+| `gallery-commercial-heritage-white` | 328KB @ 1400w | **200KB @ 1200w** | q0.80 |
+| `gallery-fence-picket-before` | 266KB @ 1200w | **241KB @ 1150w** | q0.80 |
+| `gallery-roof-victorian-restoration` | 259KB @ 1050w | **187KB @ 1000w** | q0.80 |
+
+**2090KB → 1332KB, 36% off, 757KB saved**, all on live service pages.
+
+The largest CSS slot on any of these pages is 1152px, so 1200w is still ≥1x
+there and the 576px slots have far more headroom. **Aspect ratios preserved to
+within 0.0007**, so no CLS change — and `width`/`height`/srcSet descriptors in
+the `.tsx` were updated to match the new intrinsic sizes, since the static
+generator reads those from source.
+
+`gallery-roof-cleaning` was the one exception: it would not clear 250KB on width
+alone (900w @ q0.80 was still over). Took 1000w @ **q0.74** rather than 1100w @
+~q0.69 — an 11% resolution drop is imperceptible where 0.69 starts showing
+artefacts in exactly the dense tile-and-spray texture this photo is made of.
+Both it and the fence photo were opened and eyeballed at full size afterwards:
+no visible degradation.
+
+### ⚠️ Two defects I introduced and caught before pushing
+
+1. **`900w, 900w`.** Once the epoxy image came down to 900 wide it collided with
+   its own `-900` twin, leaving a srcSet with two identical width descriptors —
+   not a responsive image, just a duplicate. Removed the srcSet/sizes pair on
+   that one `<img>`; a single 900w file already covers its 576px slot at 1.56x.
+   Added a sweep that flags duplicate width descriptors in any srcSet.
+2. **A near build-break.** Having removed that srcSet I deleted the `-900` twin
+   as redundant — but `Services.tsx` and `Gallery.tsx` **import it directly from
+   `@/assets/images/`**, independently of the epoxy page. Vite would have failed
+   to resolve the import and the deploy would have broken. Restored it.
+   ⚠️ **A file being unreferenced by the layer you are working in does not mean
+   it is unreferenced.** Now checked by a sweep asserting every
+   `@/assets/images/*` import resolves (34/34) and every `/gallery/` URL in the
+   static layer exists (52/52).
+
+⚠️ **And a bad check.** My first orphan grep printed `(empty = clean)`
+unconditionally after the grep, so it announced "clean" on the very output that
+listed the two importing files. Same class as yesterday's zero-matching regex:
+**a check whose pass message does not depend on its own result is not a check.**
+
+### Clean, no change needed
+
+Build serving with the #271 titles live, TTFB 0.58s `cf-cache HIT`, lockfile
+77/77, three layers regenerate with zero diffs, metadata clean (yesterday's fix
+held), 123 FAQPage blocks / 551 questions / 0 problems, 0 JSON-LD parse errors,
+0 aggregateRating in static pages, og:image single URL 200.
+
+### Not measured
+
+No ranking claim. GSC Wizard and Supermetrics were not queried — Step 5 found a
+real defect and the brief says fix it and stop. **"Not measured" is not "nothing
+moved."**

@@ -5405,4 +5405,21 @@ lifted from the site: `project-murrumbeena-tudor-exterior`,
 not travel off-site before it was fixed. Their listing has the wrong Tradie
 Category ("Landscapers"); Jimmy is asking them to correct it. traydes.com.au is
 **blocked from this sandbox** (403 at the proxy), so everything known about that
-listing comes from Jimmy's screenshots, not from a fetch.
+listing comes from Jimmy's screenshots and his own checks, not from a fetch.
+
+**NAP verified 2026-09-09 by Jimmy tapping the buttons himself:** the Call
+button dials the correct number and the Website button goes to the live site,
+not the dead Manus one. With the address already reading Mordialloc VIC 3195,
+that makes this a **NAP-consistent citation** — the useful half of the listing,
+and worth something while off-page authority is the measured bottleneck.
+
+Outstanding on it: the wrong category, the map pin sitting in parkland off
+Kingston Road, and the **Reviews tab, which nobody has opened**. If that tab
+carries a rating or count it must read 5.0 from 17; a scraped or invented figure
+there would be a false claim under Jetblack's name.
+
+⚠️ Nicholas also asked for a reciprocal link from a "links or partners page".
+The site has no such page and should not gain one for this: by his own wording
+the link helps **his** listing rank, and a page built solely to host reciprocal
+directory links is the thin-page pattern this site has already had to undo once.
+Declined in Jimmy's reply. The inbound listing is kept either way.

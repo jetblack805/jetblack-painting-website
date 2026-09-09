@@ -1,0 +1,153 @@
+{
+  "_readme": "Instagram CAROUSEL queue for Jetblack Painting. Carousels are a separate track from social/reels-queue.json and run alongside it — Instagram's own Best Practices note that carousels out-reach single photo posts, and unlike reels these need no filming because they are built from the existing project library. Published with Windsor's `create_carousel_post`: 2-10 JPEG URLs, at most 8MB each, aspect ratio between 4:5 and 1.91:1. Every slide is displayed at the FIRST slide's aspect ratio, so a set must not mix shapes — `ratio` records the shared shape and scripts/make-instagram-jpegs.mjs is what produced files of that shape. Images are fetched by Instagram from our own origin at post time, so they must be deployed and publicly reachable before a post is created.",
+  "cadence": "2/week, alongside the reels",
+  "image_base": "https://jetblackpainting.com/social/ig/",
+  "posted": [],
+  "queue": [
+    {
+      "id": "malvern-kitchen",
+      "suburb": "Malvern",
+      "ratio": 0.8,
+      "slides": [
+        "project-malvern-kitchen-cabinets-before.jpg",
+        "project-malvern-kitchen-cabinets-after.jpg"
+      ],
+      "slide1_text": "This kitchen didn't need replacing.",
+      "caption": "A kitchen in Malvern that didn't need replacing.\n\nThe doors and drawer fronts come off and get sprayed properly off-site. The carcasses, the benchtop and the tiled splashback stay exactly where they are. You're paying for a finish, not for a demolition and a new kitchen on top of it.\n\nSprayed rather than brushed, because the house was empty and we could mask it out properly. That's where a glass-smooth door finish comes from — the method and the dust control, not a dearer tin of paint.\n\nIf your kitchen is sound and you just hate the colour, what's stopping you? Nine times out of ten it's the assumption that the whole thing has to go.",
+      "hashtags": [
+        "#malvern",
+        "#stonnington",
+        "#kitchenresurfacing",
+        "#melbournepainter",
+        "#cabinetspraying"
+      ],
+      "notes": "Strongest set in the library and the top priority suburb. Run this one first."
+    },
+    {
+      "id": "caulfield-prep-story",
+      "suburb": "Caulfield",
+      "ratio": 0.8,
+      "slides": [
+        "project-caulfield-street-before.jpg",
+        "project-caulfield-scaffold-masked-windows.jpg",
+        "project-caulfield-eaves-prep.jpg",
+        "project-caulfield-rendered-facade.jpg"
+      ],
+      "slide1_text": "Four slides. Only the last one is paint.",
+      "caption": "Caulfield, start to finish — and only the last slide is paint.\n\nScaffold up, windows masked, eaves cut back and prepped. That is three quarters of the job and none of it is what anyone photographs.\n\nSwipe to the end and the facade looks simple. It looks simple because of slides two and three.\n\nWhen a quote comes in well under everyone else's, this is the part that's been left out. It won't look different on handover day. It'll look different in two years.",
+      "hashtags": [
+        "#caulfield",
+        "#gleneira",
+        "#exteriorpainting",
+        "#melbournepainter",
+        "#prepwork"
+      ],
+      "notes": "The single best argument-for-the-price post available from existing photos. Slide order is the whole point — do not reorder."
+    },
+    {
+      "id": "aspendale-render-repair",
+      "suburb": "Aspendale",
+      "ratio": 0.8,
+      "slides": [
+        "project-aspendale-render-patches-before.jpg",
+        "project-aspendale-render-repair-scaffold.jpg",
+        "project-aspendale-eaves-skylights-after.jpg",
+        "project-aspendale-facade-after.jpg"
+      ],
+      "slide1_text": "You can't paint over this. We get asked anyway.",
+      "caption": "Aspendale. The render had to be repaired before anything else happened.\n\nPainting over failing render buys you a season. The patches keep moving, the new paint cracks along the same lines, and you pay to do the whole wall twice.\n\nSo: cut out, patch, let it cure, then paint. Slides three and four are what that buys.\n\nIf you've got hairline cracks spreading on a rendered wall, get someone to look before you buy paint.",
+      "hashtags": [
+        "#aspendale",
+        "#renderrepair",
+        "#exteriorpainting",
+        "#melbournepainter",
+        "#bayside"
+      ],
+      "notes": "Pairs with the advice reel on 'can I just paint over it' — do not run them in the same week."
+    },
+    {
+      "id": "mordialloc-courtyard",
+      "suburb": "Mordialloc",
+      "ratio": 0.8,
+      "slides": [
+        "project-mordialloc-courtyard-wide.jpg",
+        "project-mordialloc-courtyard-bifolds.jpg",
+        "project-mordialloc-courtyard-brickwork.jpg",
+        "project-mordialloc-courtyard-balcony.jpg"
+      ],
+      "slide1_text": "Three surfaces, one courtyard.",
+      "caption": "A courtyard in Mordialloc — brick, timber bifolds and a rendered balcony, all in one small space.\n\nThree different surfaces means three different preparations and three different products. The brick and the bifolds cannot take the same coating and will not weather the same way, which is most of the thinking on a job like this.\n\nGetting the colours to sit together across all three is the other half.",
+      "hashtags": [
+        "#mordialloc",
+        "#bayside",
+        "#exteriorpainting",
+        "#melbournepainter",
+        "#courtyard"
+      ],
+      "notes": "Local — Jetblack is based in Mordialloc. Good for the home-suburb audience."
+    },
+    {
+      "id": "mordialloc-weatherboard",
+      "suburb": "Mordialloc",
+      "ratio": 0.9932,
+      "slides": [
+        "project-mordialloc-weatherboard-before.jpg",
+        "project-mordialloc-weatherboard-after.jpg"
+      ],
+      "slide1_text": "Same house.",
+      "caption": "Same house, same spot, before and after. Mordialloc weatherboard.\n\nWeatherboards are the ones where prep is nearly the whole job — scrape back, fill, prime every bit of bare timber, then paint. The colour change gets the attention but it's the boards underneath that decide whether it still looks like this in five years.\n\nEvery exterior we do carries a five-year guarantee.\n\nWeatherboard or brick — which is the harder repaint? Most people guess wrong.",
+      "hashtags": [
+        "#mordialloc",
+        "#weatherboard",
+        "#exteriorpainting",
+        "#melbournepainter",
+        "#bayside"
+      ],
+      "notes": "These two are 0.9932, not 0.8 — near-square. The set is internally consistent, which is what matters; do not add a 4:5 slide to it."
+    },
+    {
+      "id": "armadale-high-st",
+      "suburb": "Armadale",
+      "ratio": 0.8,
+      "slides": [
+        "project-armadale-high-st-half-painted.jpg",
+        "project-armadale-high-st-complete.jpg",
+        "project-armadale-ladder-two-tone.jpg"
+      ],
+      "slide1_text": "Half done. The line down the middle says it all.",
+      "caption": "High St, Armadale — caught halfway through.\n\nThe split down the middle of slide one is the honest before-and-after. No lighting trick, no different time of day, just the same wall with the work half finished.\n\nShopfront and period frontage work has to happen around a trading business, which mostly means early starts and keeping the footpath clear.\n\nIf you're in Stonnington and the outside is on the list, get in touch.",
+      "hashtags": [
+        "#armadale",
+        "#stonnington",
+        "#shopfront",
+        "#commercialpainting",
+        "#melbournepainter"
+      ],
+      "notes": "Armadale is the best-positioned suburb on the site. Slide 3 is 0.803 against 0.8 — a 0.4% difference, imperceptible, and inside Instagram's tolerance."
+    },
+    {
+      "id": "mount-martha",
+      "suburb": "Mount Martha",
+      "ratio": 0.8,
+      "slides": [
+        "project-mount-martha-gable-brick-bayview.jpg",
+        "project-mount-martha-balcony-elevation.jpg",
+        "project-mount-martha-hall-panelling.jpg"
+      ],
+      "slide1_text": "Outside and in.",
+      "caption": "Mount Martha — gable, balcony and the hall panelling inside.\n\nExterior and interior on the same house is the efficient way to do it: one set-up, one crew, and the inside colours get chosen knowing what the outside is going to be. Doing them a year apart is how you end up with a hallway that fights the front door.\n\nPanelling like slide three is slow work. It is also the thing people notice first when they walk in.",
+      "hashtags": [
+        "#mountmartha",
+        "#morningtonpeninsula",
+        "#interiorpainting",
+        "#exteriorpainting",
+        "#melbournepainter"
+      ],
+      "notes": "Outside the priority suburbs, but a strong-looking set. Use it to fill a week when nothing better is ready."
+    }
+  ],
+  "_excluded": {
+    "safety-beach-before-after": "The before is 4:5 and the after is 4:3 — different source shapes, so they cannot go in one carousel without Instagram cropping the second to match the first. Post them as two single image posts, or as a reel if the job is ever refilmed.",
+    "story-shaped": "Seven photos are 9:16 or near it and cannot reach 4:5 without losing about 30% — the four Brighton exteriors, the crew on the elevated platform, the Armadale commercial facade, and the scissor-lift shot. scripts/make-instagram-jpegs.mjs lists them on every run. They suit create_story, which takes 9:16 natively."
+  }
+}

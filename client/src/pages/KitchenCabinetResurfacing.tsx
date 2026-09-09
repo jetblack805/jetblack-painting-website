@@ -157,6 +157,50 @@ export default function KitchenCabinetResurfacing() {
               decoding="async"
             />
           </div>
+          {/* One kitchen, before and after — the only thing on this page that
+              answers the actual objection, which is whether resurfacing ends up
+              looking like a paint job. Captioned rather than bare, because
+              side-by-side portraits are ambiguous without labels, and cropped to
+              the same 0.75 aspect at comparable subject scale so the comparison
+              is honest rather than flattering. The after is genuinely mid
+              clean-up: the bench had not been cleared when the photo was taken,
+              and it is left as it is rather than implying a staged handover. */}
+          <div className="grid gap-4 md:grid-cols-2 mt-8">
+            <figure className="m-0">
+              <img
+                src="/projects/project-kitchen-cabinets-before.webp"
+                srcSet="/projects/project-kitchen-cabinets-before-800.webp 800w, /projects/project-kitchen-cabinets-before.webp 1200w"
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1200}
+                height={1600}
+                loading="lazy"
+                decoding="async"
+                alt="Kitchen before resurfacing, doors removed from the wall and pantry cabinets and the original cream carcasses left in place"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-[#8B8B90] text-sm mt-3">
+                Before. The doors and drawer fronts come off and go to the booth; the carcasses,
+                the benchtop and the splashback stay exactly where they are.
+              </figcaption>
+            </figure>
+            <figure className="m-0">
+              <img
+                src="/projects/project-kitchen-cabinets-after.webp"
+                srcSet="/projects/project-kitchen-cabinets-after-800.webp 800w, /projects/project-kitchen-cabinets-after.webp 1200w"
+                sizes="(max-width: 768px) 100vw, 576px"
+                width={1200}
+                height={1600}
+                loading="lazy"
+                decoding="async"
+                alt="The same kitchen after resurfacing by Jetblack Painting, doors rehung in a white gloss finish with the original benchtop and splashback untouched"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-[#8B8B90] text-sm mt-3">
+                After. Same carcasses, same benchtop, same tiles — doors rehung in white gloss.
+                Photographed on the last day, before the bench was cleared.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

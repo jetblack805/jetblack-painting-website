@@ -5423,3 +5423,59 @@ The site has no such page and should not gain one for this: by his own wording
 the link helps **his** listing rank, and a page built solely to host reciprocal
 directory links is the thin-page pattern this site has already had to undo once.
 Declined in Jimmy's reply. The inbound listing is kept either way.
+
+## 2026-09-09 — Kitchen cabinet before/after published; Malvern left unnamed
+
+Jimmy sent four photos and a video from a job he described as "Malvern interior
+repaint and kitchen resurface".
+
+**Published:** a genuine before/after pair on `/services/kitchen-cabinet-resurfacing/`
+(`project-kitchen-cabinets-before` / `-after`). That page had three images and
+**no before/after**, which is the one thing that answers the actual objection to
+resurfacing — whether it ends up looking like a paint job. Page 3 → 5 images.
+
+The raw "before" was a wide room shot with the cabinets small in frame, so it was
+cropped (`RECT=0,800,1300,1733`) to the kitchen at the **same 0.75 aspect as the
+after**, so the two sit side by side at comparable subject scale. Captioned via
+`<figure>/<figcaption>` following the BathroomTileResurfacing pattern, because
+side-by-side portraits are ambiguous unlabelled. Both captions and both images
+confirmed in the crawler layer.
+
+⚠️ The after is **mid clean-up** — the bench had not been cleared. Said so in the
+caption ("Photographed on the last day, before the bench was cleared") rather
+than implying a staged handover. A cleared-bench shot of this kitchen would be
+materially better and has been asked for.
+
+### ⚠️ Malvern is deliberately not named anywhere in this content
+
+Jimmy's own standing instruction (2026-08-17, restated since) is that **Toorak,
+Kew, Camberwell, Hawthorn and Malvern do not go in new copy** — they were moved
+to off-page channels as organically unreachable. So the suburb appears in neither
+the alt text, the captions, nor the **filenames** (a filename is in the URL and
+Google reads it).
+
+This costs nothing here: the value of a cabinet before/after sits on a service
+page with no suburb targeting, so the attribution was incidental. **Raised with
+Jimmy rather than decided silently** — it is his rule and his job photo, and
+`MalvernPainters.tsx` does exist and could carry it if he wants the exception.
+
+### Privacy check before publishing
+
+- Bedroom shot **held back**: the window looks onto a legible **"Moda"
+  shopfront** across the road, which together with a suburb narrows the client's
+  flat to a few doors. The red SUV's plate was checked at 9x and is an
+  unreadable smear — no mask needed for that. The shopfront is a public business
+  advertising itself, not private data, so this is a judgement call and it is
+  Jimmy's client relationship: put to him rather than decided here.
+- Kitchen shots: paperwork on the benchtop was zoomed and read — it is an
+  appliance instruction card (rice/soup timings), not personal information.
+- The third "after" angle was processed then **deleted** rather than left as an
+  orphan in `public/` and `known-paths.js`; the pair carries the argument.
+
+### ⚠️ Video cannot be processed in this environment
+
+The 18MB `.mov` is unusable here: **no ffmpeg/ffprobe**, and the Playwright
+Chromium build rejects the container outright (`MEDIA_ELEMENT_ERROR: Unable to
+load URL due to content type`) because it ships without the proprietary codecs.
+Not a fixable gap from inside the sandbox — video has to go straight from Jimmy's
+phone to Instagram or the Business Profile, which is where it performs anyway.

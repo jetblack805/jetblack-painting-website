@@ -5359,3 +5359,67 @@ held), 123 FAQPage blocks / 551 questions / 0 problems, 0 JSON-LD parse errors,
 No ranking claim. GSC Wizard and Supermetrics were not queried — Step 5 found a
 real defect and the brief says fix it and stop. **"Not measured" is not "nothing
 moved."**
+
+## 2026-09-09 — Number plates masked on the body corporate hero
+
+Spotted while matching the four photos Traydes had taken from the site:
+`gallery-commercial-heritage-white.webp`, the hero on `/services/body-corporate-painting/`,
+carried a **fully legible Victorian number plate** on a Mercedes parked in the
+foreground, plus a second, partly legible plate on a red car further back. Both
+are third parties' vehicles on a public street. Same class as the `7` on the
+og-image gate post fixed 2026-09-07.
+
+Both masked in one pass with `MASK="910,972,108,78;1250,604,44,18"` — coordinates
+measured on the **1400x1050 original recovered from git**, not on the 1200px file
+#272 produced, so the mask is applied once at full resolution instead of
+re-compressing an already-compressed file. Output is 1200x900 at q0.80, so the
+`width`/`height`/srcSet declarations from #272 are still correct and **no markup
+changed** — the diff is four image files and nothing else.
+
+Verified by zooming the output at 6–8x: the Mercedes plate is unreadable in
+**both** the full-size and the `-900` variant (the mask runs before the
+downscale, which is what makes the small variant safe too), and the red car's
+plate area is now flat body colour with no characters.
+
+### Swept the other vehicle-bearing images, no further action
+
+- `gallery-commercial-industrial-lift` — yellow wagon's plate is present but its
+  characters are an unreadable smear at 7x. Left alone.
+- `project-murrumbeena-tudor-exterior` — the red car shows only windscreen and
+  wing mirror; no plate in frame.
+- `gallery-exterior-navy-weatherboard` — checked 2026-09-07, plate already
+  illegible from focus blur. Left alone.
+- `project-commercial-facade-scissor-lift` — masked 2026-09-07.
+
+⚠️ This sweep covered only images already opened for other reasons. **The
+remaining ~130 files in `public/` have not been examined for plates or street
+numbers**, and no automated check exists for either — both have been found by
+eye, twice, on images that had been live for months.
+
+### Context worth keeping: the Traydes listing
+
+A directory (traydes.com.au) listed Jetblack on 2026-09-08 using four photos
+lifted from the site: `project-murrumbeena-tudor-exterior`,
+`gallery-commercial-comfortel-front`, a balcony elevation, and
+`service-interior-painting`. **None was the navy weatherboard**, so the `7` did
+not travel off-site before it was fixed. Their listing has the wrong Tradie
+Category ("Landscapers"); Jimmy is asking them to correct it. traydes.com.au is
+**blocked from this sandbox** (403 at the proxy), so everything known about that
+listing comes from Jimmy's screenshots and his own checks, not from a fetch.
+
+**NAP verified 2026-09-09 by Jimmy tapping the buttons himself:** the Call
+button dials the correct number and the Website button goes to the live site,
+not the dead Manus one. With the address already reading Mordialloc VIC 3195,
+that makes this a **NAP-consistent citation** — the useful half of the listing,
+and worth something while off-page authority is the measured bottleneck.
+
+Outstanding on it: the wrong category, the map pin sitting in parkland off
+Kingston Road, and the **Reviews tab, which nobody has opened**. If that tab
+carries a rating or count it must read 5.0 from 17; a scraped or invented figure
+there would be a false claim under Jetblack's name.
+
+⚠️ Nicholas also asked for a reciprocal link from a "links or partners page".
+The site has no such page and should not gain one for this: by his own wording
+the link helps **his** listing rank, and a page built solely to host reciprocal
+directory links is the thin-page pattern this site has already had to undo once.
+Declined in Jimmy's reply. The inbound listing is kept either way.

@@ -5479,3 +5479,75 @@ Chromium build rejects the container outright (`MEDIA_ELEMENT_ERROR: Unable to
 load URL due to content type`) because it ships without the proprietary codecs.
 Not a fixable gap from inside the sandbox — video has to go straight from Jimmy's
 phone to Instagram or the Business Profile, which is where it performs anyway.
+
+## 2026-09-09 — ⚠️ REVERSAL: Malvern and all Stonnington suburbs are now a PRIORITY
+
+**This supersedes the 2026-08-17 rule.** Jimmy on 2026-09-09, verbatim:
+*"definitely promote Malvern and all Stonnington suburbs make that a priority."*
+
+The old rule — *"Do NOT mention Toorak, Kew, Camberwell, Hawthorn or Malvern in
+new copy; organically unreachable; do not re-queue them for content"* — is
+**withdrawn for the Stonnington suburbs**: Malvern, Malvern East, Toorak,
+Prahran, South Yarra, Windsor, Armadale and Glen Iris. Name them, write for them,
+queue them.
+
+⚠️ **Kew, Camberwell and Hawthorn are Boroondara, not Stonnington, and were NOT
+part of this instruction.** They stay off-target until Jimmy says otherwise. Do
+not quietly widen the reversal to cover them.
+
+⚠️ **Two automated briefs still carry the old ban** and will contradict this:
+the daily SEO audit (`trig_01FUpfmKU1BRp5CDgoEhjbU9`) and the weekly GBP post
+(`trig_01CYjqUXPSeJTBAVvC5mKa51`). The daily brief resolves this itself — it says
+the log is more current and wins on conflict — but **the GBP brief has no such
+clause**, so it was edited directly. If a future run sees the ban anywhere, this
+entry wins.
+
+### Measured before acting — and the old ban was too broad
+
+Windsor Search Console connector, 90 days (⚠️ **GSC Wizard is dead: its trial has
+ended, every call returns `payment_required`**. Reported to Jimmy. Windsor's
+`searchconsole` connector is the working substitute and was used here).
+
+| Suburb | Impressions | Weighted position | Best single query |
+| --- | --- | --- | --- |
+| **Armadale** | 26 | **27.8** | 14.6 `painter armadale` |
+| **Malvern East** | 497 | **29.6** | **11.1** `render painting malvern east` |
+| **Windsor** | 342 | 47.7 | 39.9 `painters windsor` |
+| **Prahran** | 313 | 61.6 | 48.2 `painters prahran` |
+| Glen Iris | 129 | 63.8 | 40.4 |
+| Toorak | 310 | 80.9 | 73.5 |
+| **Malvern** | **631** | **83.6** | 57.6 |
+| South Yarra | 135 | 89.2 | 87.4 |
+
+**2,383 Stonnington impressions in 90 days, ZERO clicks.** That is one of the
+largest clusters on the property and it earns nothing.
+
+**The ban lumped together suburbs that behave nothing alike.** Twelve Malvern
+East queries sit inside position 32, one at **11.1**. Armadale's head term is at
+14.6. Those are page-2 positions, not "unreachable". Meanwhile **Malvern proper
+carries the most impressions of any Stonnington suburb (631) and nearly the worst
+position (83.6)** — so Jimmy's named priority is also the hardest single target
+in the group.
+
+### ⚠️ The stated cause of the Malvern / Malvern East split is WRONG
+
+The standing note says *"the longer page wins regardless of which suburb the
+query names."* Measured: **MalvernPainters is 2,316 words, MalvernEastPainters is
+1,925** — Malvern is the *longer* page and ranks 54 positions worse. Depth does
+not explain this split, so adding words to the Malvern page is not the fix. The
+cause is still unknown and should be diagnosed before any content is written.
+
+### Sequencing recommendation (not yet actioned, put to Jimmy)
+
+Work Malvern East, Armadale and Windsor first — they are within striking distance
+and will show movement. Malvern proper is the priority Jimmy named but is a
+longer haul from position 83.6; treat it as sustained work, not a quick win, and
+do not judge the whole effort by how fast it moves.
+
+### Done in this change
+
+The Malvern kitchen cabinet before/after on `/services/kitchen-cabinet-resurfacing/`
+now **names Malvern** in the alt text, the caption and the filenames
+(`project-malvern-kitchen-cabinets-before/-after`). A comment on the page records
+the reversal so a later run does not strip the suburb back out on the strength of
+an older brief.

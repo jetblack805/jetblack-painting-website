@@ -1,42 +1,5 @@
 {
-  "_readme": [
-    "Weekly Google Business Profile post queue for Jetblack Painting.",
-    "",
-    "Jimmy runs ONE GBP post a week, ALTERNATING between a job photo from this",
-    "queue and a written advice post. Both are driven by a single weekly Routine",
-    "(trig_01CYjqUXPSeJTBAVvC5mKa51, Tuesdays 23:00 UTC) which calls",
-    "`scripts/gbp-post.mjs --due` first to decide whose turn it is: exit 0 photo,",
-    "exit 10 advice. So this queue advances roughly fortnightly, not weekly.",
-    "",
-    "Alternation lives in the script, not in a second cron, because cron cannot",
-    "express 'every other week' — restricting both day-of-month and day-of-week",
-    "makes cron fire when EITHER matches, which would post far more often than",
-    "intended. Deriving it from history is also self-correcting: a missed or",
-    "failed week does not permanently invert the rotation.",
-    "",
-    "On a photo week the runner takes the first entry in `queue` not in `posted`,",
-    "publishes it with create_local_post, appends the id and date to `posted`,",
-    "and commits.",
-    "",
-    "RULES FOR ANYONE EDITING THIS FILE:",
-    "- Every summary names its suburb. That is the whole local-SEO point of the",
-    "  post, and it is also the only 'geotag' available: neither GBP's create_local_post",
-    "  nor Instagram's create_image_post accepts a per-post location. The post is",
-    "  attached to the Mordialloc listing regardless of which suburb the job was in.",
-    "- NEVER add a price, a timeframe, a review count or a capability that is not",
-    "  already true on the site. These publish automatically with no human read.",
-    "- NEVER mention Toorak, Kew, Camberwell, Hawthorn or Malvern. Jimmy moved",
-    "  those off-target on 2026-08-17; the same rule governs the advice posts.",
-    "- Summaries are grounded in the captions already published on the suburb pages.",
-    "  Do not invent detail about a photograph you have not looked at.",
-    "- photo_url must be a /social/*.jpg twin, not the /projects/*.webp original.",
-    "  GBP rejects webp. Run scripts/make-social-jpegs.mjs after adding a photo.",
-    "- cta_url must be a real live page. A post pointing at a 404 is worse than no post.",
-    "",
-    "When `posted` covers every id, the runner stops and reports rather than",
-    "recycling; the weekly Routine then writes an advice post instead so the slot",
-    "is not wasted. Add new entries when new job photos are published."
-  ],
+  "_readme": "Weekly Google Business Profile post queue for Jetblack Painting.,,Jimmy runs ONE GBP post a week, ALTERNATING between a job photo from this,queue and a written advice post. Both are driven by a single weekly Routine,(trig_01CYjqUXPSeJTBAVvC5mKa51, Tuesdays 23:00 UTC) which calls,`scripts/gbp-post.mjs --due` first to decide whose turn it is: exit 0 photo,,exit 10 advice. So this queue advances roughly fortnightly, not weekly.,,Alternation lives in the script, not in a second cron, because cron cannot,express 'every other week' — restricting both day-of-month and day-of-week,makes cron fire when EITHER matches, which would post far more often than,intended. Deriving it from history is also self-correcting: a missed or,failed week does not permanently invert the rotation.,,On a photo week the runner takes the first entry in `queue` not in `posted`,,publishes it with create_local_post, appends the id and date to `posted`,,and commits.,,RULES FOR ANYONE EDITING THIS FILE:,- Every summary names its suburb. That is the whole local-SEO point of the,  post, and it is also the only 'geotag' available: neither GBP's create_local_post,  nor Instagram's create_image_post accepts a per-post location. The post is,  attached to the Mordialloc listing regardless of which suburb the job was in.,- NEVER add a price, a timeframe, a review count or a capability that is not,  already true on the site. These publish automatically with no human read.,- NEVER mention Toorak, Kew, Camberwell, Hawthorn or Malvern. Jimmy moved,  those off-target on 2026-08-17; the same rule governs the advice posts.,- Summaries are grounded in the captions already published on the suburb pages.,  Do not invent detail about a photograph you have not looked at.,- photo_url must be a /social/*.jpg twin, not the /projects/*.webp original.,  GBP rejects webp. Run scripts/make-social-jpegs.mjs after adding a photo.,- cta_url must be a real live page. A post pointing at a 404 is worse than no post.,,When `posted` covers every id, the runner stops and reports rather than,recycling; the weekly Routine then writes an advice post instead so the slot,is not wasted. Add new entries when new job photos are published. | 2026-09-09: Stonnington moved to the front of the rotation and a Malvern entry added, after Jimmy made Malvern and all Stonnington suburbs a priority. Kew/Camberwell/Hawthorn are Boroondara and remain off-target.",
   "cta_type": "LEARN_MORE",
   "photo_base": "https://jetblackpainting.com/social/",
   "posted": [
@@ -54,11 +17,11 @@
       "summary": "A rear courtyard repaint in Mordialloc — our home suburb. White through the brickwork, a grey-green on the joinery and balcony framing, and the rendered planters kept white to match the walls. A courtyard this narrow bounces light off every surface, so the wall colour ends up doing far more work here than the same colour would on an open elevation."
     },
     {
-      "id": "brighton-exterior-after",
-      "suburb": "Brighton",
-      "photo": "project-brighton-exterior-after.jpg",
-      "cta_url": "https://jetblackpainting.com/painter-brighton/",
-      "summary": "A weatherboard exterior in Brighton, finished. Dark charcoal on the boards with the fretwork, verandah posts and window frames picked out in white. On a house carrying this much detail the trim is the whole point of the colour — the gables and brackets only become shapes once there is something for them to sit against."
+      "id": "malvern-kitchen-cabinets",
+      "suburb": "Malvern",
+      "photo": "project-malvern-kitchen-cabinets-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-malvern/",
+      "summary": "A kitchen cabinet resurface in Malvern. The doors and drawer fronts come off and go to the spray booth; the carcasses, the benchtop and the tiled splashback stay exactly where they are. That is the whole argument for resurfacing rather than replacing — you are paying for a finish, not for a demolition and a new kitchen on top of it.\n\nSprayed rather than brushed, because the house was empty and we could mask it properly. That is where a glass-smooth door finish comes from: the application method and dust control, not a more expensive tin of paint.\n\nPhotographed on the last day, before the bench was cleared."
     },
     {
       "id": "armadale-high-st-complete",
@@ -66,6 +29,41 @@
       "photo": "project-armadale-high-st-complete.jpg",
       "cta_url": "https://jetblackpainting.com/painter-armadale/",
       "summary": "Commercial facade repaint completed on High Street, Armadale. Taking a heritage frontage this light is unforgiving — every patch, every crack and every join in the render will show if the preparation underneath was rushed. Worked off a scissor lift on a main road with the footpath kept open throughout."
+    },
+    {
+      "id": "armadale-period-entry",
+      "suburb": "Armadale",
+      "photo": "project-armadale-period-entry.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "A period weatherboard entry in Armadale, finished. Boards, shingle course, turned post, door surround and eaves are almost all the one off-white, so the only thing giving the front any depth is the shadow each profile throws. On a scheme like this there is no contrast anywhere to hide a wandering cut."
+    },
+    {
+      "id": "armadale-high-st-half-painted",
+      "suburb": "Armadale",
+      "photo": "project-armadale-high-st-half-painted.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "Halfway through a commercial repaint on High Street, Armadale — new white meeting the original charcoal on a hard edge. Note the cones, the bunting and the pedestrian signage: this is a live bus stop on a main road, and the footpath stayed open and safe the whole way through."
+    },
+    {
+      "id": "armadale-commercial-facade",
+      "suburb": "Armadale",
+      "photo": "project-armadale-commercial-facade.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "Commercial render repaint in Armadale, worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one — the painting itself is the same, the getting to it is not. We are fully licensed and carry $10 million in public liability insurance."
+    },
+    {
+      "id": "armadale-ladder-two-tone",
+      "suburb": "Armadale",
+      "photo": "project-armadale-ladder-two-tone.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-armadale/",
+      "summary": "Ladder work on a two-tone commercial wall in Armadale. Nothing on this elevation is decorative — a flat face, a straight band where the cream meets the navy, and filler marks still showing where the wall was made good before any topcoat went near it."
+    },
+    {
+      "id": "brighton-exterior-after",
+      "suburb": "Brighton",
+      "photo": "project-brighton-exterior-after.jpg",
+      "cta_url": "https://jetblackpainting.com/painter-brighton/",
+      "summary": "A weatherboard exterior in Brighton, finished. Dark charcoal on the boards with the fretwork, verandah posts and window frames picked out in white. On a house carrying this much detail the trim is the whole point of the colour — the gables and brackets only become shapes once there is something for them to sit against."
     },
     {
       "id": "mount-martha-entry-portico",
@@ -124,13 +122,6 @@
       "summary": "An entry in Keysborough after repainting. Navy on the door, dark grey through the fascia and gutter, the tile roof brought back to black and the porch slab recoated. The brick itself was left untouched — not every surface on a house needs paint to lift the whole front."
     },
     {
-      "id": "armadale-period-entry",
-      "suburb": "Armadale",
-      "photo": "project-armadale-period-entry.jpg",
-      "cta_url": "https://jetblackpainting.com/painter-armadale/",
-      "summary": "A period weatherboard entry in Armadale, finished. Boards, shingle course, turned post, door surround and eaves are almost all the one off-white, so the only thing giving the front any depth is the shadow each profile throws. On a scheme like this there is no contrast anywhere to hide a wandering cut."
-    },
-    {
       "id": "mount-martha-gable-brick-bayview",
       "suburb": "Mount Martha",
       "photo": "project-mount-martha-gable-brick-bayview.jpg",
@@ -171,13 +162,6 @@
       "photo": "project-brighton-exterior-cutting-in.jpg",
       "cta_url": "https://jetblackpainting.com/painter-brighton/",
       "summary": "Cutting in verandah fretwork on a Brighton exterior. There is no spraying this — every bracket and every spindle is done by hand, off a ladder, over drop sheets. It is slow, and it is the difference between a heritage verandah that looks restored and one that looks coated."
-    },
-    {
-      "id": "armadale-high-st-half-painted",
-      "suburb": "Armadale",
-      "photo": "project-armadale-high-st-half-painted.jpg",
-      "cta_url": "https://jetblackpainting.com/painter-armadale/",
-      "summary": "Halfway through a commercial repaint on High Street, Armadale — new white meeting the original charcoal on a hard edge. Note the cones, the bunting and the pedestrian signage: this is a live bus stop on a main road, and the footpath stayed open and safe the whole way through."
     },
     {
       "id": "mordialloc-exterior-repaint-jimmy",
@@ -222,13 +206,6 @@
       "summary": "Rolling out an interior wall in Brighton on an extension pole. The room is clear of furniture but the carpet and trim are staying, so it gets rolled rather than sprayed — spraying here would mean masking every surface in the room to save about an hour on the walls."
     },
     {
-      "id": "armadale-commercial-facade",
-      "suburb": "Armadale",
-      "photo": "project-armadale-commercial-facade.jpg",
-      "cta_url": "https://jetblackpainting.com/painter-armadale/",
-      "summary": "Commercial render repaint in Armadale, worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one — the painting itself is the same, the getting to it is not. We are fully licensed and carry $10 million in public liability insurance."
-    },
-    {
       "id": "caulfield-eaves-prep",
       "suburb": "Caulfield",
       "photo": "project-caulfield-eaves-prep.jpg",
@@ -255,13 +232,6 @@
       "photo": "project-aspendale-render-patches-before.jpg",
       "cta_url": "https://jetblackpainting.com/painter-aspendale/",
       "summary": "Render cut out and patched on an Aspendale exterior. The patches are then left to cure before priming. Coating a fresh patch early is exactly what causes the flashing you see on a rushed job — different sheen and colour showing through the topcoat months later."
-    },
-    {
-      "id": "armadale-ladder-two-tone",
-      "suburb": "Armadale",
-      "photo": "project-armadale-ladder-two-tone.jpg",
-      "cta_url": "https://jetblackpainting.com/painter-armadale/",
-      "summary": "Ladder work on a two-tone commercial wall in Armadale. Nothing on this elevation is decorative — a flat face, a straight band where the cream meets the navy, and filler marks still showing where the wall was made good before any topcoat went near it."
     },
     {
       "id": "mordialloc-courtyard-balcony",

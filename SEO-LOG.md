@@ -5551,3 +5551,55 @@ now **names Malvern** in the alt text, the caption and the filenames
 (`project-malvern-kitchen-cabinets-before/-after`). A comment on the page records
 the reversal so a later run does not strip the suburb back out on the strength of
 an older brief.
+
+## 2026-09-09 (later) — Kew, Camberwell and Hawthorn added to the priority list
+
+Jimmy: *"Include Kew Camberwell and hawthorn in my top priority suburbs."*
+
+**The Boroondara carve-out from earlier today is withdrawn.** The full priority
+set is now: **Malvern, Malvern East, Toorak, Prahran, South Yarra, Windsor,
+Armadale, Glen Iris** (Stonnington) **+ Kew, Camberwell, Hawthorn** (Boroondara).
+The 2026-08-17 do-not-promote rule is dead in its entirety. Name them, write for
+them, queue them.
+
+### Measured, 90 days, Windsor Search Console connector
+
+| Suburb | Impressions | Weighted position | Best query |
+| --- | --- | --- | --- |
+| **Balwyn** *(not requested)* | 207 | **49.0** | **23.8** `painters balwyn north` |
+| Camberwell | **730** | 86.8 | 68.2 |
+| Hawthorn | 53 | 88.3 | 65.0 |
+| Kew | 264 | **92.5** | 50.4 |
+
+**1,254 impressions, zero clicks.** Camberwell alone carries 730 — more than any
+single Stonnington suburb — but at position 86.8.
+
+⚠️ **These three are the worst-positioned suburbs measured anywhere on this
+property.** Kew at 92.5 is the lowest figure recorded to date; nine of its
+queries sit past position 96. For comparison, Malvern East is at 29.6 and
+Armadale at 27.8. That does not make them wrong to pursue — they are dense,
+high-value housing stock and Jimmy has said twice that he wants them — but they
+are a *long* campaign, not a quarter's work, and progress on them should not be
+the measure of whether the Stonnington/Boroondara push is working.
+
+### ⚠️ Balwyn is the Boroondara opportunity nobody has named
+
+**Balwyn sits at weighted position 49.0 with 207 impressions — and at 23.8 on
+`painters balwyn north`, 28.2 on `painter balwyn`, 29.4–29.5 on `balwyn
+painters` / `painters balwyn`.** That is 40–60 positions better than Kew,
+Camberwell and Hawthorn, in the same council, against the same competitors, and
+it has never appeared on any priority list in either direction.
+
+`BalwynPainters.tsx` exists and is indexed. If the goal is Boroondara clicks
+rather than Boroondara effort, **Balwyn is where they are cheapest** — put to
+Jimmy, not actioned unilaterally, because he named three specific suburbs and
+Balwyn was not one of them.
+
+### Running order across the whole priority set
+
+By reachability, on measured position: **Armadale 27.8 · Malvern East 29.6 ·
+Windsor 47.7 · Balwyn 49.0 · Prahran 61.6 · Glen Iris 63.8 · Toorak 80.9 ·
+Malvern 83.6 · Camberwell 86.8 · Hawthorn 88.3 · Kew 92.5.**
+
+Total across Stonnington + these four Boroondara suburbs: **3,637 impressions in
+90 days for zero clicks.**

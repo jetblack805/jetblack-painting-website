@@ -172,14 +172,19 @@ export default function KitchenCabinetResurfacing() {
               priority". Do not strip the suburb back out on the strength of an
               older brief — see SEO-LOG.md for the reversal and the measured
               position data behind it. */}
+          {/* No srcSet on this pair, unlike every other project photo. Jimmy
+              supplied these as a single 1536x1024 before/after collage, so each
+              half is only 768 wide after the overlay labels are cut off — an
+              "-800" twin would carry the same 768 pixels and produce two
+              identical width descriptors, which is the bug that shipped on the
+              epoxy image. One src is correct here until full-resolution
+              originals turn up. */}
           <div className="grid gap-4 md:grid-cols-2 mt-8">
             <figure className="m-0">
               <img
                 src="/projects/project-malvern-kitchen-cabinets-before.webp"
-                srcSet="/projects/project-malvern-kitchen-cabinets-before-800.webp 800w, /projects/project-malvern-kitchen-cabinets-before.webp 1200w"
-                sizes="(max-width: 768px) 100vw, 576px"
-                width={1200}
-                height={1600}
+                width={768}
+                height={784}
                 loading="lazy"
                 decoding="async"
                 alt="A Malvern kitchen before resurfacing, doors removed from the wall and pantry cabinets and the original cream carcasses left in place"
@@ -193,13 +198,11 @@ export default function KitchenCabinetResurfacing() {
             <figure className="m-0">
               <img
                 src="/projects/project-malvern-kitchen-cabinets-after.webp"
-                srcSet="/projects/project-malvern-kitchen-cabinets-after-800.webp 800w, /projects/project-malvern-kitchen-cabinets-after.webp 1200w"
-                sizes="(max-width: 768px) 100vw, 576px"
-                width={1200}
-                height={1600}
+                width={768}
+                height={784}
                 loading="lazy"
                 decoding="async"
-                alt="The same Malvern kitchen after resurfacing by Jetblack Painting, doors rehung in a white gloss finish with the original benchtop and splashback untouched"
+                alt="The same Malvern kitchen after resurfacing by Jetblack Painting, doors rehung in a white gloss finish with the original black benchtop and cream tiled splashback untouched"
                 className="w-full rounded-lg"
               />
               <figcaption className="text-[#8B8B90] text-sm mt-3">

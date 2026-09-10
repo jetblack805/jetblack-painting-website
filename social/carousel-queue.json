@@ -7,7 +7,7 @@
     {
       "id": "malvern-kitchen",
       "suburb": "Malvern",
-      "ratio": 0.8,
+      "ratio": 0.9796,
       "slides": [
         "project-malvern-kitchen-cabinets-before.jpg",
         "project-malvern-kitchen-cabinets-after.jpg"
@@ -21,7 +21,7 @@
         "#melbournepainter",
         "#cabinetspraying"
       ],
-      "notes": "Strongest set in the library and the top priority suburb. Run this one first."
+      "notes": "Strongest set in the library and the top priority suburb. Run this one first. Both slides are 0.98 (near-square), not 0.80 — they are the two halves of the collage Jimmy supplied on 2026-09-10, cut free of its burned-in BEFORE/AFTER labels. They match each other, which is what the carousel requires; do not add a 4:5 slide to this set."
     },
     {
       "id": "caulfield-prep-story",

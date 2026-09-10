@@ -1,6 +1,6 @@
 {
-  "_readme": "Instagram Reels queue for Jetblack Painting. The standing creative brief is social/reels-plan.md — read that first; this file is the shot-by-shot detail. Two reels a week, Tuesday and Friday, rotating format A > B > C > D. Every entry is ONE continuous vertical phone clip: no multi-clip edits, no still-photo slideshows. `status` is either `ready` (footage exists) or `to-film` (waiting on a job of this type — film it when one comes up, order is a preference not a requirement). Captions are final text: first line carries the suburb, four to six hashtags, no location tag is possible because Instagram's publishing API exposes no location field. Before sending any clip, check the frame for house numbers, number plates, mail, and legible shopfronts through windows — see rule 7 in the plan.",
-  "cadence": "2/week — Tuesday and Friday",
+  "_readme": "Instagram Reels queue for Jetblack Painting. The standing creative brief is social/reels-plan.md — read that first; this file is the shot-by-shot detail. Three reels a week — Tuesday, Thursday, Saturday — rotating format A > B > C > D. Carousels run on a separate track in social/carousel-queue.json. Every entry is ONE continuous vertical phone clip: no multi-clip edits, no still-photo slideshows. `status` is either `ready` (footage exists) or `to-film` (waiting on a job of this type — film it when one comes up, order is a preference not a requirement). Captions are final text: first line carries the suburb, four to six hashtags, no location tag is possible because Instagram's publishing API exposes no location field. Before sending any clip, check the frame for house numbers, number plates, mail, and legible shopfronts through windows — see rule 7 in the plan. Trim every clip so it OPENS on the action: Instagram's first three seconds decide whether anyone stays, so film with a lead-in but never publish one. Never post silent — see the Audio section of the plan.",
+  "cadence": "3/week — Tuesday, Thursday, Saturday (Instagram's guidance: 10+ reels a month)",
   "rotation": ["A", "B", "C", "D"],
   "posted": [],
   "queue": [
@@ -20,7 +20,8 @@
         "#kitchenresurfacing",
         "#cabinetspraying"
       ],
-      "notes": "Priority suburb #1 on Jimmy's instruction of 9 Sept. Before/after stills already live on the Kitchen & Cabinet Resurfacing page."
+      "notes": "Priority suburb #1 on Jimmy's instruction of 9 Sept. Before/after stills already live on the Kitchen & Cabinet Resurfacing page.",
+      "audio": "Trending track at normal volume."
     },
     {
       "id": "tape-pull",
@@ -28,7 +29,7 @@
       "status": "to-film",
       "suburb": "any current job",
       "job": "Any interior where masking tape is coming off a finished line.",
-      "shot": "Phone braced, vertical, framed tight on about 300mm of the line. Start rolling BEFORE the pull. Pull the tape slow and steady, one continuous movement, toward the camera and slightly down. Ten seconds. The whole reel is the edge appearing.",
+      "shot": "Phone braced, vertical, framed tight on about 300mm of the line. Start rolling BEFORE the pull. Pull the tape slow and steady, one continuous movement, toward the camera and slightly down. Ten seconds. The whole reel is the edge appearing. Then trim the front off so the posted reel STARTS with the tape already moving — the lead-in exists so you don't clip the start, not to be published.",
       "on_screen_text": "no text — let it play",
       "caption": "{SUBURB}, this morning.\n\nThe line's only that sharp because the tape went on straight and came off at the right time. Leave it on too long, especially in the sun, and it takes the paint with it.\n\nNo filter, no clever edit. Just the bit of the job that feels good.",
       "hashtags": [
@@ -38,7 +39,8 @@
         "#paintersofinstagram",
         "#stonnington"
       ],
-      "notes": "Highest non-follower reach of anything in this queue. Swap the suburb in the caption to wherever it's actually filmed."
+      "notes": "Highest non-follower reach of anything in this queue. Swap the suburb in the caption to wherever it's actually filmed.",
+      "audio": "Natural sound, kept up. The rip is the whole point. Optional trending track underneath, low."
     },
     {
       "id": "advice-dont-paint-over-it",
@@ -46,7 +48,7 @@
       "status": "to-film",
       "suburb": "any current job",
       "job": "Jimmy to camera, standing in front of a surface that has been prepped, ideally mid-job.",
-      "shot": "Vertical, phone propped at chest height about a metre away — not held at arm's length. Compressor OFF. Jimmy talks straight to the lens for twenty seconds. One take, no script read: he knows this cold, he just has to say it.",
+      "shot": "Vertical, phone propped at chest height about a metre away — not held at arm's length. Compressor OFF. Jimmy talks straight to the lens for twenty seconds. One take, no script read: he knows this cold, he just has to say it. Open on the sentence, not on a breath — the first three seconds carry it.",
       "on_screen_text": "\"Can I just paint over it?\"",
       "talking_points": [
         "The question every second customer asks.",
@@ -62,7 +64,8 @@
         "#malverneast",
         "#askapainter"
       ],
-      "notes": "Format C converts. Do not let it become a monthly thing — one in four."
+      "notes": "Format C converts. Do not let it become a monthly thing — one in four.",
+      "audio": "Voice only. No music — it makes the advice unintelligible on a phone speaker."
     },
     {
       "id": "prep-the-invisible-bit",
@@ -70,7 +73,7 @@
       "status": "to-film",
       "suburb": "any current job",
       "job": "Filling, sanding and caulking an interior before any colour goes on.",
-      "shot": "Vertical. Two beats in ONE continuous move: start tight on the filling knife going across a crack, then pull back slowly to show the wall covered in filled patches. Twelve seconds. One take, no cut.",
+      "shot": "Vertical. Two beats in ONE continuous move: start tight on the filling knife going across a crack, then pull back slowly to show the wall covered in filled patches. Twelve seconds. One take, no cut. Trim so the reel opens on the knife already moving, not on the approach.",
       "on_screen_text": "This is the part you can't see in the after photo.",
       "caption": "{SUBURB}. Nobody photographs this bit.\n\nEvery crack filled, every join caulked, the whole lot sanded back before a drop of colour goes near it. It is most of the labour on an interior repaint and none of it shows up in the finished photo.\n\nWhen a quote comes in well under everyone else's, this is usually the part that's been left out. It won't look different on handover day. It'll look different in two years.",
       "hashtags": [
@@ -80,7 +83,8 @@
         "#interiorpainting",
         "#prepwork"
       ],
-      "notes": "This is the answer to the cheaper-quote objection. Prefer filming it on a priority-suburb job so {SUBURB} resolves to one of them — Kew measures worst of any suburb on the site (position 92.5) and is the best candidate if the choice is open."
+      "notes": "This is the answer to the cheaper-quote objection. Prefer filming it on a priority-suburb job so {SUBURB} resolves to one of them — Kew measures worst of any suburb on the site (position 92.5) and is the best candidate if the choice is open.",
+      "audio": "Trending track at normal volume — there is nothing worth hearing in a filling knife."
     },
     {
       "id": "armadale-facade-cut",
@@ -98,7 +102,8 @@
         "#periodhome",
         "#melbournepainter"
       ],
-      "notes": "Armadale is the best-positioned suburb on the property (27.8) — reels won't move that, but it's the suburb where a reel is most likely to reach someone already half-aware of the business."
+      "notes": "Armadale is the best-positioned suburb on the property (27.8) — reels won't move that, but it's the suburb where a reel is most likely to reach someone already half-aware of the business.",
+      "audio": "Trending track at normal volume."
     },
     {
       "id": "cutting-in-freehand",
@@ -106,7 +111,7 @@
       "status": "to-film",
       "suburb": "any current job",
       "job": "Cutting in a wall-to-ceiling line freehand, no tape.",
-      "shot": "Vertical, close on the brush. Camera braced or moving very slowly along the line at the same speed as the hand. Get a metre of clean travel in one take. Ten seconds — do not stop and restart.",
+      "shot": "Vertical, close on the brush. Camera braced or moving very slowly along the line at the same speed as the hand. Get a metre of clean travel in one take. Ten seconds — do not stop and restart. Trim so the reel opens with the brush already travelling.",
       "on_screen_text": "No tape.",
       "on_screen_text_note": "Two words, top third, plain sans. That's the entire hook — people stop to see whether the line holds.",
       "caption": "Cutting in by hand in {SUBURB}.\n\nEighteen years of doing it is the only reason this doesn't need tape. It's faster than masking and the line is better, but it is genuinely not worth attempting on your own ceiling on a Saturday.\n\nIf you've got a cornice line you don't trust yourself with, that's the phone call.",
@@ -117,7 +122,8 @@
         "#housepainter",
         "#stonnington"
       ],
-      "notes": "18+ years is Jimmy's trade experience, NOT the age of the business (opened 2 March 2015). Do not let this caption drift into implying the business is 18 years old."
+      "notes": "18+ years is Jimmy's trade experience, NOT the age of the business (opened 2 March 2015). Do not let this caption drift into implying the business is 18 years old.",
+      "audio": "Natural sound. Optional trending track underneath, low."
     },
     {
       "id": "weatherboard-cut",
@@ -135,7 +141,8 @@
         "#bayside",
         "#housepainting"
       ],
-      "notes": "Five-year guarantee is a real, established fact and safe to state. Do NOT add a price or a job duration to this caption — if a genuine before/after gap is worth naming, Jimmy has to supply the actual figure."
+      "notes": "Five-year guarantee is a real, established fact and safe to state. Do NOT add a price or a job duration to this caption — if a genuine before/after gap is worth naming, Jimmy has to supply the actual figure.",
+      "audio": "Trending track at normal volume."
     },
     {
       "id": "spray-booth-doors",
@@ -153,7 +160,8 @@
         "#stonnington",
         "#melbournepainter"
       ],
-      "notes": "Pairs with the Kitchen & Cabinet Resurfacing page. Second Malvern reel in the rotation — deliberate, per the priority instruction."
+      "notes": "Pairs with the Kitchen & Cabinet Resurfacing page. Second Malvern reel in the rotation — deliberate, per the priority instruction.",
+      "audio": "Natural sound of the gun, kept up. Optional track underneath, low."
     }
   ],
   "rotation_note": "Run A > B > C > D and repeat. These eight are a full cycle (reels 1-4) then A/B/A/B, because there is only one C and one D worth filming in this batch — a second 'one thing I'd tell you' needs a genuinely different piece of advice, not a rerun. The next batch of eight should carry a second C and D.",

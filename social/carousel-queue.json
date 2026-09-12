@@ -7,6 +7,11 @@
       "id": "malvern-kitchen",
       "date": "2026-09-12",
       "media_id": "18097274396377281"
+    },
+    {
+      "id": "caulfield-prep-story",
+      "date": "2026-09-12",
+      "media_id": "18110464312855435"
     }
   ],
   "queue": [
@@ -34,13 +39,12 @@
       "suburb": "Caulfield",
       "ratio": 0.8,
       "slides": [
-        "project-caulfield-street-before.jpg",
         "project-caulfield-scaffold-masked-windows.jpg",
         "project-caulfield-eaves-prep.jpg",
         "project-caulfield-rendered-facade.jpg"
       ],
-      "slide1_text": "Four slides. Only the last one is paint.",
-      "caption": "Caulfield, start to finish — and only the last slide is paint.\n\nScaffold up, windows masked, eaves cut back and prepped. That is three quarters of the job and none of it is what anyone photographs.\n\nSwipe to the end and the facade looks simple. It looks simple because of slides two and three.\n\nWhen a quote comes in well under everyone else's, this is the part that's been left out. It won't look different on handover day. It'll look different in two years.",
+      "slide1_text": "Three slides. Only the last one is paint.",
+      "caption": "Caulfield — and only the last slide is paint.\n\nScaffold up and every window masked out. Then drop sheets down, tape up, eaves cut back. Two of these three frames are preparation, and none of it is what anyone photographs.\n\nThe render in the last frame looks simple. It looks simple because of the first two.\n\nWhen a quote comes in well under everyone else's, this is the part that's been left out. It won't look different on handover day. It'll look different in two years.",
       "hashtags": [
         "#caulfield",
         "#gleneira",
@@ -48,7 +52,7 @@
         "#melbournepainter",
         "#prepwork"
       ],
-      "notes": "The single best argument-for-the-price post available from existing photos. Slide order is the whole point — do not reorder."
+      "notes": "Three slides, not four. project-caulfield-street-before was dropped on 2026-09-12: it is a DIFFERENT house — white contemporary render with a garage, no columns, no ashlar banding — while these three are one cream rendered property. CaulfieldPainters.tsx already captions the finished facade as \"A second Caulfield property\", so the site had this right and the original four-slide grouping contradicted it. Do not add street-before or before-after back to this set; they belong to the other house. Slide order is the argument — do not reorder."
     },
     {
       "id": "aspendale-render-repair",
@@ -82,7 +86,7 @@
         "project-mordialloc-courtyard-balcony.jpg"
       ],
       "slide1_text": "Three surfaces, one courtyard.",
-      "caption": "A courtyard in Mordialloc — brick, timber bifolds and a rendered balcony, all in one small space.\n\nThree different surfaces means three different preparations and three different products. The brick and the bifolds cannot take the same coating and will not weather the same way, which is most of the thinking on a job like this.\n\nGetting the colours to sit together across all three is the other half.",
+      "caption": "A courtyard in Mordialloc — brick, timber bifolds and a rendered balcony, all in one small space.\n\nThree different surfaces means three different preparations and three different products. The brick and the bifolds cannot take the same coating and will not weather the same way, which is most of the thinking on a job like this.\n\nGetting the colours to sit together across all three is the other half.\n\nShot mid-job, not on handover — the balustrade glass is still in its protective film.",
       "hashtags": [
         "#mordialloc",
         "#bayside",
@@ -90,7 +94,7 @@
         "#melbournepainter",
         "#courtyard"
       ],
-      "notes": "Local — Jetblack is based in Mordialloc. Good for the home-suburb audience."
+      "notes": "Local — Jetblack is based in Mordialloc. All four frames are one job, and a separate job from the weatherboard set. MordiallocPainters.tsx records that they are MID-JOB, not a finished result (balustrade glass still filmed, interior under dust sheets), so the caption must not imply a completed finish. Do not merge with mordialloc-weatherboard."
     },
     {
       "id": "mordialloc-weatherboard",

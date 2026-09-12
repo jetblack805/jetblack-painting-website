@@ -5698,3 +5698,73 @@ No content changes. No metadata rewrites. The phase set on 2026-08-19 puts
 authority acquisition first and content depth last, nothing in the checks
 demanded a content fix, and the one number that looked like a breach turned out
 to be a measurement artefact. One change this run: the check script.
+
+---
+
+## 2026-09-12 — Daily audit: four queries in the top 10, and a correction on how to read them
+
+Two daily runs fired while the session was idle (11th and 12th). This is one run
+covering both; nothing in the 11th's brief differed.
+
+### Four queries now sit in the top 10 — all on zero clicks
+
+| Query | Impressions | Position | Clicks |
+|---|---|---|---|
+| `painters sorrento bay` | 31 | **5.3** | 0 |
+| `house painters sorrento` | 30 | **8.6** | 0 |
+| `painter mordialloc` | 36 | **8.7** | 0 |
+| `painter mentone` | 22 | **9.9** | 0 |
+
+**119 impressions inside the top 10, zero clicks.**
+
+`painter mordialloc` is the mover: **14.09 → 8.69** on 36 impressions. Mordialloc
+is the home suburb and has carried the most inbound internal links on the site
+while sitting at the worst position of the tracked eleven; it is now top-10.
+
+### ⚠️ Correction: this is NOT the second window, and no title changes on it
+
+The 2026-09-09 entry said: *"if the zero holds across a second 28-day window at
+~100 impressions, that is a real CTR finding and the title becomes a justified
+change."* It is tempting to call that condition met. **It is not.**
+
+Both readings are `last_28d`, taken three days apart. They overlap by 25 of 28
+days — the same impressions counted twice, not two samples. Adding 59 and 61 to
+claim "120 impressions with zero clicks" would be double-counting, and would
+manufacture a finding out of one observation.
+
+At ~61 top-10 impressions the expected return is roughly three or four clicks.
+Zero is suggestive and no more. **A genuinely independent read needs a
+non-overlapping window — no earlier than 2026-10-07.** No title or description
+was touched. Re-check then.
+
+### The first non-brand click on record
+
+`painters balwyn` — 76 impressions, position 32.7, **1 click.**
+
+Every previous audit has closed with "every click the site earns is brand." That
+is no longer strictly true. One click is one click and proves nothing on its
+own, but it is the first, and it landed on **Balwyn** — the Boroondara suburb
+flagged on 2026-09-09 as measuring 40–60 positions better than the three Jimmy
+named, and still not on any priority list.
+
+Brand terms this window: `jetblack painting` 27 impressions at **2.63** (up from
+3.38) with 4 clicks; `jetblack` 64 impressions at 4.16 with **zero** clicks —
+the same anomaly, and the ambiguous-query explanation from 2026-09-09 still fits
+better than a technical one.
+
+### Everything checked, all clean
+
+77/77 deps in the lockfile · three layers regenerate to zero diffs · metadata
+clean · suburb near-duplicate 31.0% avg / 53.7% worst, zero over gate · blog
+duplicates 0 failed · site health both directions (real pages 200, bad URLs 404
+extensionless, extensioned and under `/assets/`, real hashed bundles 200 with
+correct content types, `/painters-malvern` 301s cleanly) · TTFB 0.20s, cf-cache
+HIT · markdown negotiation returns `text/markdown` · llms.txt's three `$`
+matches are all the $10M liability line · **review count reads 17 live** · zero
+images over 250KB outside `public/social/`.
+
+### Change this run
+
+None to the site. The Malvern kitchen carousel was published to Instagram on
+Jimmy's instruction (media id 18097274396377281) and recorded in
+`social/carousel-queue.json`; next in that rotation is the Caulfield prep set.

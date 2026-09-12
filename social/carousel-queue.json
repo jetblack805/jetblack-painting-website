@@ -2,7 +2,13 @@
   "_readme": "Instagram CAROUSEL queue for Jetblack Painting. Carousels are a separate track from social/reels-queue.json and run alongside it — Instagram's own Best Practices note that carousels out-reach single photo posts, and unlike reels these need no filming because they are built from the existing project library. Published with Windsor's `create_carousel_post`: 2-10 JPEG URLs, at most 8MB each, aspect ratio between 4:5 and 1.91:1. Every slide is displayed at the FIRST slide's aspect ratio, so a set must not mix shapes — `ratio` records the shared shape and scripts/make-instagram-jpegs.mjs is what produced files of that shape. Images are fetched by Instagram from our own origin at post time, so they must be deployed and publicly reachable before a post is created.",
   "cadence": "2/week, alongside the reels",
   "image_base": "https://jetblackpainting.com/social/ig/",
-  "posted": [],
+  "posted": [
+    {
+      "id": "malvern-kitchen",
+      "date": "2026-09-12",
+      "media_id": "18097274396377281"
+    }
+  ],
   "queue": [
     {
       "id": "malvern-kitchen",

@@ -5857,3 +5857,59 @@ call, not a defect.
 **Note the audit is two weeks stale on rankings.** It reports average position
 38–42 with nothing near page one. As of 2026-09-12 four queries sit in the top
 10 and `painter mordialloc` has moved 14.09 → 8.69.
+
+---
+
+## 2026-09-13 — GBP primary phone: Google refuses the write. Jimmy has to do it in the app.
+
+Jimmy gave the go-ahead to set the primary phone. **It could not be done through
+the API.** Recording this so no future run burns another round of attempts.
+
+### What was tried
+
+`google_my_business` → `update_location` → `primary_phone`, four formats:
+
+| Value sent | Result |
+|---|---|
+| `0432 077 782` | 400 — "Request contains an invalid argument" |
+| `+61 432 077 782` | 400 — same |
+| `+61432077782` | 400 — same |
+| `0432077782` | 400 — same |
+
+### The action itself is not the problem
+
+The discriminating test: the same `update_location` action was called with
+`website_url` set to **the value the listing already holds**
+(`https://jetblackpainting.com/`) — a deliberate no-op. It **succeeded**.
+
+So permissions, the connector, the account and the action all work. Google is
+rejecting the `primary_phone` field on this listing specifically, and returning
+a bare "invalid argument" with no detail — the same uninformative 400 this API
+gives for the COVER-slot aspect-ratio rejection.
+
+Listing state read immediately after, all clean: `has_pending_edits` null,
+`duplicate_location` null, `has_google_updated` null, `has_voice_of_merchant`
+true, status OPEN. Nothing is visibly blocking it.
+
+### Most plausible cause, unverified
+
+**The number is probably still held by the deleted duplicate listing**
+(`17466191655420256122`). Google rejects a phone number already associated with
+another Business Profile, and this repo has already recorded that
+`accounts_discovery` still returns that duplicate from a stale cache. That fits
+the evidence exactly: the number works in the Ads location extension, which is a
+separate system, but cannot be attached as a listing primary phone.
+
+This cannot be confirmed from here — Google, Maps and share.google are blocked
+from this sandbox and the duplicate is deleted.
+
+### What Jimmy has to do
+
+Set it in the **Google Business Profile app on his phone**, where the failure
+reason is shown in plain language instead of a bare 400. If the app refuses it
+too, the duplicate-listing theory is almost certainly right and it becomes a
+Google support case to release the number.
+
+**Do not retry the API write.** Four formats have been tried; a fifth adds
+nothing. Re-read `location_primary_phone` to confirm once Jimmy says he has done
+it — the field going non-null is the check.

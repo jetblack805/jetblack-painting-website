@@ -5913,3 +5913,62 @@ Google support case to release the number.
 **Do not retry the API write.** Four formats have been tried; a fifth adds
 nothing. Re-read `location_primary_phone` to confirm once Jimmy says he has done
 it — the field going non-null is the check.
+
+---
+
+## 2026-09-13 — Correction: conversion tracking IS live. GA4 property 545100608 returns nothing at all.
+
+### Correcting the 2026-09-13 audit-review entry
+
+That entry said of the external audit's GA4 claim: *"The tag fires; what is
+missing is conversion events."* **The second half is wrong.** The conversion
+events exist and are deployed.
+
+Verified in the live bundles:
+
+| Event | Where |
+|---|---|
+| `phone_call_click`, `email_click` | main bundle — one delegated listener in `main.tsx` covering all 42 `tel:` anchors |
+| `generate_lead`, `quote_form_undelivered` | `QuoteForm-DKYikHWG.js` |
+
+`client/src/lib/analytics.ts` is present with the lazy-gtag `dataLayer` fallback.
+So the measurement layer described in the conversion-tracking plan shipped.
+
+**How the wrong conclusion nearly got recorded twice.** Grepping the main bundle
+for `generate_lead` returns 0 — QuoteForm is a lazy chunk. The first fix
+attempt scanned asset paths from `worker/known-paths.js`, which does not list
+hashed bundles, so the loop iterated over an empty list and printed nothing.
+The second scanned 146 chunk paths parsed out of the main bundle and again found
+nothing, because nested dynamic imports (Home → QuoteForm) are declared in the
+*child* chunk, not the entry. Only a transitive fetch, plus a positive control
+searching for `api/quote` to prove the scan could find the QuoteForm chunk at
+all, produced the right answer. **Three "not found" results in a row were all
+false.** Any bundle grep needs a positive control that fails loudly.
+
+### The real gap: the GA4 property is empty
+
+Read live through the connector, property **545100608**:
+
+- `event_name` / `event_count` / `conversions`, last 28 days → **zero rows**
+- `date` / `sessions`, last 28 days → **zero rows**
+
+Not even sessions. So this is not "the events aren't firing" — the property
+returns no data whatsoever. Either the tag's measurement ID
+(`G-6NC2597W9L`) reports into a different property than the one connected here,
+or the data stream is misconfigured. Cannot be resolved from this sandbox; both
+diagnoses need GA4 admin access.
+
+This matters now because Jimmy has a live Google Ads account
+(**766-739-6088**, advertiser-verified, Customer Match just enabled). **Ads
+conversions cannot be imported from a property with no data**, so this is the
+blocker between the tracking that exists and automated bidding that works.
+
+No `AW-` conversion tag on the site — by design; the intended route is GA4 key
+events imported into Ads, not a second tag.
+
+### What only Jimmy can do
+
+1. GA4 → Admin → Data streams: confirm the stream's measurement ID is
+   `G-6NC2597W9L`, and that Realtime shows traffic.
+2. Once data flows, mark `generate_lead` and `phone_call_click` as key events.
+3. Link GA4 to Ads account 766-739-6088 and import them.

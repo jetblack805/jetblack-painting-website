@@ -5768,3 +5768,92 @@ images over 250KB outside `public/social/`.
 None to the site. The Malvern kitchen carousel was published to Instagram on
 Jimmy's instruction (media id 18097274396377281) and recorded in
 `social/carousel-queue.json`; next in that rotation is the Caulfield prep set.
+
+---
+
+## 2026-09-13 — Third-party audit checked against live data: one real defect our own log was suppressing
+
+Jimmy supplied an 11-page external SEO/AI audit dated **30 August 2026**. Every
+contested claim in it was checked against the live site and the live Business
+Profile rather than taken on trust. Results below.
+
+### ⚠️ CORRECTION TO THE LOCKED RECORD: the Business Profile has NO primary phone
+
+Read live from the connector on 2026-09-13:
+
+```
+location_primary_phone      : null
+location_adwords_ad_phone   : "0432 077 782"
+location_website_uri        : https://jetblackpainting.com/
+```
+
+**The standing note in this log and in the daily brief — "phone and website
+correct … No config defect — do not re-raise" — is wrong on the phone**, and
+because it said *do not re-raise*, it locked the defect out of every daily audit
+since it was written. The website URI is correct; the phone is not set.
+
+The only number Google holds is in the **Ads location extension**, which does
+not populate the profile. The practical effect is that the listing has **no Call
+button** — for a painter, that is the conversion — and profile completeness is a
+local-pack ranking input.
+
+`update_location` accepts `primary_phone`, so this is a one-call fix from here.
+**Not executed:** writing to the live listing is a state change on an external
+platform and needs Jimmy's explicit go-ahead on the specific change.
+
+**Lesson: "do not re-raise" notes need an expiry or a re-verification date.**
+This one converted a single observation into a permanent blind spot. Any future
+"no defect, do not re-raise" entry must name the date it was verified and the
+field it was verified against.
+
+### Review-authenticity risk — the verifiable parts check out
+
+Pulled all 17 reviewers live. All five stars. The audit's §7.5 concerns are
+grounded on everything that can be machine-checked:
+
+- **Two reviewers share Jimmy's surname** — Helen Demirci (2026-02-10) and Penny
+  Demirci (2026-02-05). Confirmed.
+- **Andy Blackwell** (2026-08-21) exists. The audit reports that a separate
+  review thanks "Jimmy and Andy", which would make this a review from someone on
+  the crew. *Not verified here* — reviewer names were pulled, review bodies were
+  not.
+- **Pace matches exactly**: Jan 1 · Feb 7 · Mar 3 · Apr 0 · May 1 · Jun 2 ·
+  Jul 0 · Aug 3.
+
+Reviews from family or staff are a direct breach of Google's prohibited-content
+policy. **This has a specific consequence for this repo:** the review count
+**17** is a locked fact hardcoded in eight places plus llms.txt. If Google
+filters those reviews the true count drops and the site publishes a false one
+sitewide until someone notices. Flagged to Jimmy; no content changed.
+
+### Claims that did NOT survive verification
+
+| Audit claim | Checked | Reality |
+|---|---|---|
+| "No GA4 tag — no gtag, no dataLayer, no googletagmanager script" | live HTML | **False.** `G-6NC2597W9L` is in `client/index.html` and live. The tag fires; what is missing is *conversion events*, which is a fair point wearing a wrong diagnosis. |
+| "llms.txt says 13+ years" | `public/llms.txt` | **False.** It says **18+ years** in three places. The only "15 years" strings are roof-life claims ("extends roof life 10–15 years"). |
+| "http:// and non-slash variants both indexed, splitting signals" | live curl | **Already correct.** `http://` 301s to `https://` + slash; non-slash 301s to slash; canonical is self-referencing and slashed. |
+| "Add FAQPage to service and suburb pages" | generators | **Already done** — 123 FAQPage blocks, 551 questions, all present as visible text. |
+| "Merge Bentleigh East into Bentleigh — if you only do one thing" | repo history | **Already done.** |
+| `manus:disable-auto-review-schema` "needs re-enabling" | live HTML | Tag **is** present, but it suppresses the dead Manus platform's auto-injected schema. Our `aggregateRating` is hand-written and **is live** on the homepage. Removing the tag would not "enable" anything. |
+
+⚠️ The audit also recommends adding `aggregateRating` to suburb and service
+pages. **Do not.** The standing rule — rating lives ONLY in `client/index.html`,
+zero `aggregateRating` in static pages — exists deliberately; self-serving
+rating markup sprayed across service pages is exactly what Google's structured
+data policies penalise.
+
+### Where the audit agrees with the settled diagnosis
+
+Authority and local prominence are the bottleneck, not content; reviews are the
+top authority priority; directory citations and trade accreditation (Dulux,
+Master Painters, Haymes/Taubmans) are the route. All of that matches the
+2026-08-19 diagnosis and the Tier 0–3 targets already recorded here.
+
+Its pruning recommendation (96 → 25–30 suburb pages) was partly actioned for the
+Casey corridor and then **reversed by Jimmy**. Raised again by the audit; his
+call, not a defect.
+
+**Note the audit is two weeks stale on rankings.** It reports average position
+38–42 with nothing near page one. As of 2026-09-12 four queries sit in the top
+10 and `painter mordialloc` has moved 14.09 → 8.69.

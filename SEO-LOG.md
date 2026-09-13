@@ -6034,3 +6034,40 @@ The export carries counts, not URLs, so the 12 genuinely-failing pages cannot be
 named from here. Getting them needs the per-reason drilldown in Search Console
 (click the reason row, then Export). With that list the 3 × 404 and 9 ×
 crawled-not-indexed are almost certainly fixable in one pass.
+
+---
+
+## 2026-09-13 — CLOSED: the Business Profile now has a primary phone
+
+Read live from the connector at 11:16 UTC:
+
+```
+location_primary_phone : "0432 077 782"
+```
+
+Jimmy set it in the Business Profile app after the API refused four formats.
+The listing now has a **Call button**, which it had not had for as long as this
+log has been kept.
+
+This closes the item raised on 2026-09-13 from the external audit — the single
+highest-value fix in that document, and one this log had actively suppressed
+with a "phone and website correct … do not re-raise" note that was wrong on the
+phone.
+
+**Do not re-raise, and this time the note carries its evidence:** verified
+non-null on 2026-09-13 by reading `location_primary_phone` through the
+`google_my_business` connector. If it ever needs re-checking, that field is the
+check — not the SERP, which lags.
+
+The API refusal remains unexplained and is now moot. The working theory (the
+number still being held by the deleted duplicate listing) is neither confirmed
+nor needed; Jimmy's app write went through where four API formats did not.
+
+### Still open: the GA4 property is empty
+
+Property **545100608** returned zero rows again at 11:16 UTC — no events, no
+sessions, and zero across a two-year range. Unchanged across five checks.
+
+Until that stream records, `generate_lead` and `phone_call_click` cannot be
+marked as key events and cannot be imported into Ads account **766-739-6088**.
+The measurement code is deployed and correct; the property is the blocker.

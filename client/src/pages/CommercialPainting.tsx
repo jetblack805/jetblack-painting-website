@@ -200,6 +200,47 @@ export default function CommercialPainting() {
               loading="lazy"
             />
           </div>
+          {/* Office fitout interiors, sent through 13 September 2026.
+              All three are AFTER shots — no before exists for this job, so
+              nothing here is captioned as a transformation and none of it is
+              the before/after proof the site still needs. They earn a place
+              because the rest of this grid is facades and at-height access:
+              there was no interior commercial work on the page at all.
+              No suburb came with them, so the alt text stays with what is in
+              frame. A neighbouring tenant's signage and a car-bay number are
+              masked — see the MASK option in scripts/convert-photo.mjs. */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            <img
+              src="/projects/project-office-fitout-stairwell.webp"
+              srcSet="/projects/project-office-fitout-stairwell-800.webp 800w, /projects/project-office-fitout-stairwell.webp 1200w"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              width={1200}
+              height={1600}
+              alt="Stairwell in a two-level commercial office fitout painted by Jetblack Painting, with cut-in edges running against a glazed partition and stainless handrails"
+              className="rounded-lg shadow-md w-full h-64 object-cover object-[center_85%]"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-office-fitout-corner-window.webp"
+              srcSet="/projects/project-office-fitout-corner-window-800.webp 800w, /projects/project-office-fitout-corner-window.webp 1200w"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              width={1200}
+              height={1600}
+              alt="Corner office painted by Jetblack Painting, showing painted window reveals and wall surfaces between full-height glazing"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-office-fitout-open-room.webp"
+              srcSet="/projects/project-office-fitout-open-room-800.webp 800w, /projects/project-office-fitout-open-room.webp 1200w"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              width={1200}
+              height={1600}
+              alt="Open office room painted by Jetblack Painting, with a continuous wall run finished to the ceiling grid and skirting line"
+              className="rounded-lg shadow-md w-full h-64 object-cover object-[center_75%]"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

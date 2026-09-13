@@ -5972,3 +5972,65 @@ events imported into Ads, not a second tag.
    `G-6NC2597W9L`, and that Realtime shows traffic.
 2. Once data flows, mark `generate_lead` and `phone_call_click` as key events.
 3. Link GA4 to Ads account 766-739-6088 and import them.
+
+---
+
+## 2026-09-13 — Coverage export: indexing plateaued on 30 July
+
+Jimmy supplied the Search Console Coverage export (counts only, no URL list).
+
+### The 100 "not indexed" decompose exactly — and two thirds are intentional
+
+| Reason | Pages | Validation | Real problem? |
+|---|---|---|---|
+| Page with redirect | 62 | Started | **No** — the `/painters-<slug>` plural forms, 301 by design |
+| Excluded by `noindex` | 4 | Started | **No** — /privacy/, /review-us/, /terms/ |
+| Redirect error | 13 | Started | Under re-validation |
+| Crawled – currently not indexed | 9 | **Failed** | **Yes** |
+| Soft 404 | 7 | Started | Under re-validation |
+| Not found (404) | 3 | **Failed** | **Yes** |
+| Discovered – not indexed | 2 | Passed | No |
+
+**66 of the 100 should not be indexed.** Only the two rows marked *Failed* are
+live problems — **12 pages**. Everything else is either by design or mid
+re-validation, where the only correct action is to wait.
+
+### Everything testable from here is clean
+
+- **All 124 `PATH_REDIRECTS` entries: exactly one hop to a 200.** No chains, no
+  loops. Run with two controls (a known 404 and a known-good redirect) so a
+  silent pass could not be mistaken for a clean result.
+- **Sitemap 125/125 return 200.**
+- **Exactly three `noindex` pages, none of them in the sitemap.**
+
+So the 13 redirect errors are not reproducible against the live site, which is
+consistent with them being already fixed and awaiting Google's re-check.
+
+### ⚠️ The finding that matters: indexing stopped on 30 July
+
+| Date | Indexed | Not indexed | % indexed |
+|---|---|---|---|
+| 2026-06-30 | 1 | 10 | 9% |
+| 2026-07-30 | **118** | 85 | 58% |
+| 2026-08-29 | 118 | 100 | 54% |
+| 2026-09-04 | **118** | 100 | 54% |
+
+**Indexed hit 118 on 30 July and has not moved since** — 116, 117, 118 across
+five weeks of noise. Over the last 14 days: indexed **+1**, not indexed **+7**.
+
+Google is still crawling and still discovering URLs; it has simply stopped
+adding this site's pages to the index. On a domain this young that is the
+classic signal that page count has outrun authority — which is the same
+conclusion as the 2026-08-19 diagnosis and the same conclusion the external
+audit reached independently on 30 August.
+
+It is also the strongest evidence yet for the pruning recommendation Jimmy
+reversed for the Casey corridor: 99 suburb pages competing for an index budget
+that stopped growing five weeks ago.
+
+### Blocked on
+
+The export carries counts, not URLs, so the 12 genuinely-failing pages cannot be
+named from here. Getting them needs the per-reason drilldown in Search Console
+(click the reason row, then Export). With that list the 3 × 404 and 9 ×
+crawled-not-indexed are almost certainly fixable in one pass.

@@ -35,6 +35,25 @@
       "notes": "Strongest set in the library and the top priority suburb. Run this one first. Both slides are 0.98 (near-square), not 0.80 — they are the two halves of the collage Jimmy supplied on 2026-09-10, cut free of its burned-in BEFORE/AFTER labels. They match each other, which is what the carousel requires; do not add a 4:5 slide to this set."
     },
     {
+      "id": "mordialloc-rear-extension",
+      "suburb": "Mordialloc",
+      "ratio": 0.8,
+      "slides": [
+        "project-mordialloc-rear-extension-before.jpg",
+        "project-mordialloc-rear-extension-after.jpg"
+      ],
+      "slide1_text": "Three surfaces, three colours, one small yard.",
+      "caption": "Mordialloc, from the same spot before and after.\n\nBrown brick on one wall, green weatherboard on the next, and a new outbuilding still in its building wrap. Three surfaces, three colours, one small yard — and each one takes a different preparation before any of them can carry the same white.\n\nThat is the whole job on a rear elevation like this: not the colour, but getting brick, timber and new cladding to sit as one building once they are all the same shade.\n\nStraight up: the cladding, the slab and the gate went in between these two photos. That is not our work. The paint on it is.",
+      "hashtags": [
+        "#mordialloc",
+        "#bayside",
+        "#exteriorpainting",
+        "#melbournepainter",
+        "#beforeandafter"
+      ],
+      "notes": "The only properly MATCHED before/after in the library — same position, same lens. It is also the one set where the frame changes for reasons that are not painting: the outbuilding was clad, the slab poured and the gate installed between shots. The caption says so explicitly and must keep saying so. Mordialloc is the home suburb and moved 14.1 to 8.7 on `painter mordialloc` in September."
+    },
+    {
       "id": "caulfield-prep-story",
       "suburb": "Caulfield",
       "ratio": 0.8,

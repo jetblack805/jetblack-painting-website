@@ -152,7 +152,7 @@ export default function MordiallocPainters() {
       suburb={suburb}
       title="Mordialloc Painters | Coastal Painting | Jetblack Painting"
       description="Mordialloc painters based in the 3195 — beach houses, bayside homes and Main Street shopfronts. Interior, exterior, roof and commercial. Call 0432 077 782."
-      projectSummary={`Two ${suburb} exteriors, plus Jimmy on the tools on a third. A weatherboard home taken from pale grey to charcoal, and the double-height rear courtyard of a two-storey townhouse — brickwork in white, joinery and balcony framing in a grey-green, photographed mid-job with the balustrade glass still masked. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a ${suburb} quote gets done on site rather than estimated over the phone.`}
+      projectSummary={`Three ${suburb} exteriors, plus Jimmy on the tools on another. A weatherboard home taken from pale grey to charcoal, and the double-height rear courtyard of a two-storey townhouse — brickwork in white, joinery and balcony framing in a grey-green, photographed mid-job with the balustrade glass still masked. And a rear elevation taken from brown brick and green weatherboard to a single white, shot from the same spot before and after. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a ${suburb} quote gets done on site rather than estimated over the phone.`}
       projectImages={[
         {
           // Split out of a single 1819x1819 side-by-side Jimmy composed himself.
@@ -253,6 +253,32 @@ export default function MordiallocPainters() {
           alt: `Freshly painted grey-green bifold door frames in the courtyard of a ${suburb} townhouse, with the interior under dust sheets behind the glass`,
           caption:
             "The bifolds, with the house still under dust sheets behind them. Every leaf, edge and rebate is brushed, and the doors have to keep folding once it cures — too heavy a coat in the wrong place and the set binds the first time someone closes it.",
+        },
+        /* ⚠️ The rear-extension pair below is a MATCHED before/after — same
+           position, same lens — which almost nothing else in the library is.
+           It is also the one set where the frame changes for reasons that are
+           NOT painting: between the two shots the outbuilding was clad, the
+           slab was poured and the gate went in. The captions name the
+           paintwork specifically and do not claim the build, the same way the
+           Caulfield page does. Do not reword them into "we transformed this
+           space". */
+        {
+          src: "/projects/project-mordialloc-rear-extension-before.webp",
+          small: "/projects/project-mordialloc-rear-extension-before-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Rear of a ${suburb} property before painting, with brown brick, green weatherboard and a new outbuilding still in building wrap`,
+          caption:
+            "Before. Brown brick on one wall, green weatherboard on the next, and a new outbuilding still in its building wrap — three different surfaces and three different colours in one small yard.",
+        },
+        {
+          src: "/projects/project-mordialloc-rear-extension-after.webp",
+          small: "/projects/project-mordialloc-rear-extension-after-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `The same ${suburb} rear elevation after painting, with the brick, weatherboard and new cladding all finished in white`,
+          caption:
+            "After, from the same spot. The brick, the weatherboard and the new cladding all carry the same white, which is what makes three surfaces read as one building. The cladding, slab and gate went in between the two photos — that part is not our work, only the paint on it is.",
         },
       ]}
       neighbouringSuburbs={[

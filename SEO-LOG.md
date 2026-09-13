@@ -6071,3 +6071,98 @@ sessions, and zero across a two-year range. Unchanged across five checks.
 Until that stream records, `generate_lead` and `phone_call_click` cannot be
 marked as key events and cannot be imported into Ads account **766-739-6088**.
 The measurement code is deployed and correct; the property is the blocker.
+
+---
+
+## 2026-09-13 — Second external audit (`jetblack_painting_website_audit.pdf`), verified claim by claim
+
+Jimmy attached two PDFs. The first, `292a0cad-Perp_audit.pdf`, is **byte-identical
+to the Perplexity audit already analysed** — MD5 `75913a0956505353d2a670f96efd2dd2`,
+1,050,839 bytes, same as `46b5a3db-Perp_audit.pdf`. Nothing new in it; its claims
+were verified and logged in PR #280.
+
+The second is new: a 4-page website audit dated 13 September 2026. Same rule as
+last time — every claim checked against the repo or live data before it is
+believed. Same result, too: **most of its headline recommendations are already
+shipped**, because it was written from public pages without opening the site's
+own instrumentation.
+
+### Already done — the audit is describing a site that no longer exists
+
+| Audit recommendation | Actual state |
+|---|---|
+| "Add a sticky mobile call button" | `client/src/components/StickyCallBar.tsx`, mounted globally in `App.tsx:413`, `lg:hidden` |
+| "Add a quote form on the homepage and every major service page" | On Home + all 11 service pages (12 files import `QuoteForm`), plus all 95 suburb pages since `0339c06` |
+| "Track phone calls, emails and quote submissions as conversions" | Deployed: `generate_lead` (QuoteForm.tsx:191), `phone_call_click` / `email_click` (main.tsx:37) |
+| "Add LocalBusiness and Service structured data" | Both present. Suburb pages emit `LocalBusiness` + `Service` + `HomeAndConstructionBusiness` + `FAQPage` + `BreadcrumbList`; service pages emit `Service` + the rest |
+| "Link directly to the Google review profile" | Footer, every suburb page (`SuburbPageTemplate.tsx:587`), and `/review-us` |
+| "Give each page a unique title, meta description" | Done; verified in earlier passes |
+| "Add a prominent project gallery with before-and-after images" | `Gallery.tsx` on the homepage, 12 images incl. a matched Keysborough before/after |
+| "Add testimonials" | Six on the homepage with name, source and date |
+
+### Verified as real, still open
+
+1. **The homepage H1 is an unsubstantiated superlative.** `Home.tsx:146` reads
+   *"Melbourne's Best-Rated Local House Painters"*, echoed in `Hero.tsx`,
+   `NorthcotePainters.tsx` and `ElsternwickPainters.tsx`. "Best-rated" asserts a
+   ranking against every painter in Melbourne. 5.0 from 17 reviews supports
+   "5-star rated"; it does not support "best-rated". This is the audit's
+   compliance point and it lands. It is also the page's only keyword-bearing H1,
+   so changing it is an SEO decision, not just a wording one — **needs Jimmy's
+   call before it moves.**
+
+2. **The same trust sentence is pasted into 26 suburb pages.** Not template
+   chrome — it sits inside the hand-written `localExpertise` copy:
+   - 16 pages: *"All work is backed by our $10M public liability insurance and 5-year written workmanship guarantee."*
+   - 10 pages: the same sentence with `across ${suburb}` inserted.
+
+   47 of 98 static suburb pages contain the insurance phrase, 53 the guarantee
+   phrase. This is the audit's "similar wording around the rating, insurance and
+   guarantee" claim, and it is correct. It is also the cheapest duplicate-content
+   win available: the sentence adds nothing the trust badges do not already say.
+
+3. **The guarantee is asserted, never explained.** One sentence in `FAQ.tsx:22`.
+   No exclusions, no claim process, no statement of when the written guarantee is
+   supplied. For a five-year promise on the site's main trust pillar, that is thin.
+
+4. **No dedicated Projects, Reviews, Guarantee or Quote pages.** `/our-work`,
+   `/about` and `/contact` are all `Route ... component={Home}` (`App.tsx`). They
+   resolve, so nothing 404s, but there is no destination to link a case study to.
+
+5. **Testimonials carry no suburb or project type.** Six names, sources and dates
+   — but "Danni F, Jan 2026" is weaker proof than "Danni F, Mordialloc,
+   weatherboard exterior" would be.
+
+### Claims that do not stand
+
+- **The Google Business Profile suspension.** The audit found a forum thread about
+  a Jetblack Painting reinstatement and, to its credit, hedged. Checked directly:
+  the profile is live, titled exactly `Jetblack Painting` (no keyword stuffing),
+  phone `0432 077 782`, website correct, category *Painter and Decorator*, and it
+  served impressions every day through 8 September. The trailing zeroes from
+  9 September are GBP's normal reporting lag, not a takedown. **Not a current issue.**
+
+- **"Indicative pricing can help pre-qualify visitors"**, listed as a strength.
+  There is no published pricing. The only dollar figures on the site are the
+  `$5,000` / `$10,000` budget bands in the quote-form dropdown and the $10M
+  insurance cover. The audit credited something that is not there.
+
+- **"Search results show substantial suburb coverage."** True — Doncaster, Kew,
+  Frankston, Stonnington and Brighton all have real pages. Stated as an
+  observation, not a defect, and accurate.
+
+### What the audit could not see, and it matters more than anything in it
+
+It was written from public pages, so it missed the two things actually capping
+growth:
+
+- **GA4 property 545100608 is empty.** Zero events, zero sessions, two-year range.
+  Its recommendation to "install or review conversion tracking" is half right for
+  the wrong reason — the tracking is installed and correct; the property is not
+  recording. That is the blocker, and only Jimmy can clear it.
+- **Indexing has been flat at 118 since 30 July.** Publishing more suburb pages,
+  which the audit rightly warns against, would not move it.
+
+On its central judgement — *add proof rather than more location pages* — the audit
+is right, and it agrees with the duplicate-content gate already in the repo
+(`scripts/check-suburb-duplicates.mjs`: 31.0% average, 53.7% worst, 0 over gate).

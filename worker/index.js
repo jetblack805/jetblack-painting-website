@@ -1,5 +1,6 @@
 import { KNOWN_PATHS } from "./known-paths.js";
 import { handleQuoteRequest } from "./quote.js";
+import { handleReviewRequest } from "./review-request.js";
 
 // Redirect www.jetblackpainting.com → jetblackpainting.com, apply path
 // redirects, then serve static assets.
@@ -214,6 +215,14 @@ export default {
     // below. robots.txt already disallows /api/.
     if (url.pathname === "/api/quote") {
       return handleQuoteRequest(request, env);
+    }
+
+    // Same treatment as /api/quote: an API path, never a page, so it must not be
+    // trailing-slash redirected or swallowed by the SPA fallback. robots.txt
+    // already disallows /api/. Fails closed with 503 when REVIEW_REQUEST_TOKEN
+    // is unset, so it is inert until Jimmy configures it.
+    if (url.pathname === "/api/review-request") {
+      return handleReviewRequest(request, env);
     }
 
     const path = url.pathname.replace(/\/$/, "") || "/";

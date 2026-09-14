@@ -6967,3 +6967,87 @@ verdict as the strategy document: sequence it after traffic exists.
 | 1. Pricing above the fold | Observation **verified**. Idea arguable; **proposed wording is not** — "from $5k" invents a floor the FAQ does not claim |
 | 2. Suburb checker | Observation **verified**. Worth doing **additively** — never at the cost of the 81 crawlable links |
 | 3. Lead magnet | Accurate, wrong order |
+
+---
+
+## 2026-09-14 — Post-job review request built
+
+Jimmy authorised the review-automation item — the strongest of the three in the external
+strategy document and the top authority priority in this log. Growing past **17 reviews** is
+the lever on the Business Profile, which produced **3 phone calls in 90 days**.
+
+### The design constraint that shaped everything
+
+Not the email. **Jimmy finishes a job with paint on his hands.** Anything needing a laptop, a
+login or a CRM does not get done. Target: **fifteen seconds, on a phone, in a driveway.**
+
+So: `/ask/` is a single mobile screen he keeps on his home screen. First name, email,
+optionally suburb and job. One tap.
+
+### What was built
+
+- **`worker/review-request.js`** — `POST /api/review-request`. Follows the `worker/quote.js`
+  pattern: field limits, validation, Resend send. **Fails closed with 503 when
+  `REVIEW_REQUEST_TOKEN` is unset**, so it is inert until configured rather than shipping as
+  an open relay branded with this business.
+- **`public/ask/index.html`** — the tool. `noindex, nofollow`, absent from the sitemap,
+  linked from nowhere. Token entered once per device, kept in `localStorage`; a wrong token
+  clears itself so the next attempt re-prompts instead of failing silently forever.
+- **`worker/review-request.test.mjs`** — **16 assertions, all passing.** Plain node, not
+  vitest, because vitest needs `node_modules` which cannot be installed here; this runs with
+  `node worker/review-request.test.mjs` and stubs `fetch`, so running it never sends mail.
+- **`scripts/generate-markdown.mjs`** — `/ask/` excluded from twin generation. It had already
+  produced `public/ask/index.md`, which would have served an AI agent the text of a form only
+  Jimmy is meant to see. privacy/terms/review-us keep their twins; they are real pages.
+
+### ⚠️ Google policy — the part most likely to be broken by a later edit
+
+Two things get reviews stripped or a listing penalised, and both are easy to write by accident:
+
+1. **Review gating** — asking only happy customers, or routing unhappy ones somewhere private.
+   The email asks everyone identically and says **"good or bad"** out loud. **Do not** add a
+   "were you happy?" fork, a star picker, or "if there was a problem, reply instead" — that
+   last one reads as steering even when kindly meant. The offer to come back and fix something
+   sits **after** the review link and is framed as service, not as an alternative.
+2. **Incentives** — nothing of value is offered and nothing may be added.
+
+Three of the sixteen tests assert exactly this against the rendered copy, because the penalty
+for a well-meaning rewrite is the listing, not a red build.
+
+⚠️ **Only send to finished jobs.** A quote enquiry is not a customer, and reviews from people
+who never hired you are fake reviews. **The quote form's contact list must never be wired into
+this endpoint.**
+
+### The email
+
+> Hi Danni,
+>
+> Thanks for having us at Mordialloc. The exterior repaint is finished and I hope it looks how
+> you wanted.
+>
+> If you have a minute, an honest Google review would genuinely help — good or bad. Most of
+> our work comes from people finding us online, and what a customer actually says counts for
+> more than anything I can write about myself.
+>
+> [link] · And if anything needs looking at, call me on 0432 077 782 and I will come back.
+>
+> Cheers, Jimmy
+
+Replies go to `jimmy@jetblackpainting.com` on purpose: *"actually, can you look at the laundry
+door"* is worth more than the review.
+
+### ⚠️ Not live until Jimmy sets two Cloudflare secrets
+
+`RESEND_API_KEY` already exists for the quote form. **`REVIEW_REQUEST_TOKEN` does not** — until
+it is set, the endpoint returns 503 and `/ask/` cannot send. Set it in the Worker's settings as
+a long random string; it is the access code the page asks for once.
+
+⚠️ **The send path has never been exercised against the real Resend API** — only against a
+stubbed `fetch`. First real use should be Jimmy sending one to himself.
+
+### Checks
+
+Resend domain `jetblackpainting.com` **verified, sending enabled**. 16/16 tests pass. Workers
+all import clean. Near-duplicate 30.9%/53.7% 0 over gate. Metadata clean (a description was
+added to `/ask/` rather than carve an exemption into the checker). 0 JSON-LD errors.
+`aggregateRating` still 0. Generators stable on a second pass. 128 twins, 501 known paths.

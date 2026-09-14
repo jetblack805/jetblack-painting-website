@@ -6,6 +6,7 @@ export const KNOWN_PATHS = new Set([
   "/236b45859f0cf903f27f5160088eba04.txt",
   "/BingSiteAuth.xml",
   "/apple-touch-icon.png",
+  "/ask/",
   "/blog/",
   "/blog/best-paint-colours-melbourne-2025/",
   "/blog/best-paint-colours-melbourne-2025/index.md",

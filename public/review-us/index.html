@@ -35,16 +35,29 @@
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <script>
+    /* The stub is installed SYNCHRONOUSLY and only the network fetch is
+       deferred. It used to sit inside _loadGA, which meant window.gtag did
+       not exist until requestIdleCallback ran, so lib/analytics.ts fell back
+       to pushing ["event", name, params] onto dataLayer by hand. That is NOT
+       the shape gtag queues in — gtag pushes its own arguments object — so an
+       early tap on the sticky call bar was being queued in a form gtag.js is
+       not documented to replay. The phone tap is the conversion that matters
+       most for a painter, so it must not depend on that.
+       Defining the stub costs no request: gtag() only pushes to an array
+       until the library arrives, so LCP is unaffected and the fetch stays on
+       idle exactly as before. This is Google's own documented snippet order.
+       ⚠️ Mirrored between client/index.html and generate-static-pages.mjs.
+       Keep both in step — GA4 was in only one of them until 2026-08-30. */
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-6NC2597W9L');
     function _loadGA() {
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6NC2597W9L';
       document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', 'G-6NC2597W9L');
     }
     if ('requestIdleCallback' in window) {
       requestIdleCallback(_loadGA);

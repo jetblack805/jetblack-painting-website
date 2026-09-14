@@ -6728,3 +6728,99 @@ Also re-confirmed in the same read: the interior painting description still has 
 
 15 structured + 12 free-form = **27**. Every service with a page on the site is now on the
 listing, and llms.txt lists all 11 service pages. Site, llms.txt and Google listing agree.
+
+---
+
+## 2026-09-14 — GA4: the website is not the problem, and a real defect in the tag loader
+
+Jimmy asked for GA4 to be fixed. Eight prior checks had asserted "only Jimmy can fix this in
+GA4 Admin" **without ever testing whether the tag fires.** That assumption is now tested as
+far as this environment allows.
+
+### What is now proven about the site
+
+| Check | Result |
+| --- | --- |
+| Pages carrying the gtag loader | **127/127** |
+| Pages carrying `G-6NC2597W9L` | **127/127** |
+| Any page missing the tag | **none** |
+| Any conflicting measurement ID | **none** — 256 occurrences, all one ID |
+
+**The website is correctly instrumented.** Whatever is wrong is not missing or duplicated
+tags, and not a second property competing for the same pages.
+
+### What cannot be tested from here — a policy denial, not a workaround
+
+A live firing test was attempted with Playwright against the real site. It cannot work:
+**`www.googletagmanager.com:443` and `www.google-analytics.com:443` are both refused by the
+sandbox proxy** — `gateway answered 403 to CONNECT (policy denial)`, confirmed in
+`/__agentproxy/status`. The page cannot load gtag.js here, so no browser test in this
+environment can ever observe a GA4 hit. Reported, not worked around.
+
+### The real defect found and fixed: the stub was deferred
+
+`window.gtag` was defined **inside** `_loadGA`, which runs on `requestIdleCallback`. Until
+that fired, `window.gtag` was undefined, so `lib/analytics.ts` took its fallback and pushed
+`["event", name, params]` — a plain array — onto `dataLayer`. **That is not the shape gtag
+queues in**; gtag pushes its own arguments object, and replay of a plain array is not
+documented behaviour.
+
+The window is small but it covers exactly the wrong moment: a visitor who taps the sticky
+call bar immediately. For a painter the phone tap is the conversion that matters most.
+
+**Fixed** by installing the stub synchronously and deferring only the network fetch — which
+is Google's own documented snippet order:
+
+```
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', 'G-6NC2597W9L');
+function _loadGA() { /* only the <script> append */ }
+```
+
+LCP is unaffected: defining the stub costs no request, and the fetch stays on idle exactly as
+before. Applied in **both** mirrored copies — `client/index.html` and
+`generate-static-pages.mjs` — and the stale comment in `lib/analytics.ts` was corrected, since
+it described the fallback as the normal path when it is now a last resort.
+
+⚠️ **This does NOT explain zero rows.** Sessions come from `gtag('config', …)` firing
+page_view, which never depended on `trackEvent` at all. A site with this defect would still
+have recorded sessions. The fix is worth having; it is not the cause.
+
+### What the cause must be
+
+GA4 property **545100608** returns nothing for any metric over two years — and also nothing
+for `measurement_id` and `property_timezone`, which are **configuration** fields from the
+Admin API, not report data. A property with a working web stream should return those
+regardless of traffic.
+
+That points at the link between the tag and the property. **The check that settles it is in
+GA4 Admin → Data Streams:** does property 545100608 have a web data stream, and is its
+measurement ID exactly `G-6NC2597W9L`? If the site's ID belongs to a different property, every
+hit has been landing there and 545100608 has correctly always been empty.
+
+### ⚠️ Process failure worth keeping
+
+The generator **crashed** on the first attempt at this change and it was nearly missed twice:
+
+1. The generator runs were piped to `/dev/null`, so a `SyntaxError` printed nothing. The
+   comment added to `generate-static-pages.mjs` contained backticks around a word, and that
+   block lives inside a template literal — the backticks terminated the string.
+2. The verification greps did not discriminate. `window.gtag = gtag;` appears in **both** the
+   old and the new loader, so "127/127 pages have it" was true and meaningless. A
+   multi-line `grep -P` for the old shape silently matched nothing because grep is
+   line-based, and reported a reassuring `0`.
+
+It surfaced only on dumping one generated page in full and parsing it. **Rules:** never pipe
+a generator to `/dev/null`; and a check must be able to FAIL — verify by comparing the
+position of the stub against the fetch, not by grepping a string common to both versions.
+
+### Checks after the fix
+
+- 127 pages, 128 twins, 499 known paths, single measurement ID
+- Generated GA block parses as valid JavaScript; stub precedes the fetch on 127/127
+- Generators stable on a second pass
+- Near-duplicate 30.9%/53.7% 0 over gate; metadata clean; 0 JSON-LD errors;
+  `aggregateRating` still 0; `sameAs` 111/127

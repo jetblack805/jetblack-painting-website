@@ -1,13 +1,18 @@
 /*
  * GA4 event helper.
  *
- * Why this exists rather than calling window.gtag directly: client/index.html
- * loads gtag.js lazily inside requestIdleCallback (see the _loadGA block), so
- * BOTH window.gtag and window.dataLayer are undefined for the first moments of
- * a visit. A visitor who taps the sticky call bar straight away would otherwise
- * be lost — and for a painter, the phone tap is the conversion that matters
- * most. The fallback below pushes the call onto dataLayer in the same array
- * shape gtag's own queue uses, so gtag replays it once the library initialises.
+ * Why this exists rather than calling window.gtag directly: it is a guard, not
+ * a queue. The gtag stub is now installed synchronously in the page head, so
+ * window.gtag exists from the first moment and the branch below is the one that
+ * runs — early taps queue in gtag's own `arguments` shape and are replayed when
+ * the library arrives. For a painter the phone tap is the conversion that
+ * matters most, so it must not depend on a load order.
+ *
+ * ⚠️ The dataLayer fallback is a LAST RESORT for a page that somehow ships
+ * without the snippet. It pushes ["event", name, params] — a plain array, which
+ * is NOT the shape gtag.js documents for its queue, so replay is not guaranteed.
+ * Until 2026-09-14 this was the normal path, because the stub lived inside
+ * requestIdleCallback. Do not move the stub back into the deferred block.
  *
  * ⚠️ NEVER pass personal information through here. Sending a visitor's name,
  * email address or phone number to GA4 breaches Google's policy on PII in

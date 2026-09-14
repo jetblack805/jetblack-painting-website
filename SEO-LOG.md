@@ -6558,3 +6558,73 @@ ancestor of main. If it is not, it carries unmerged work and must be the base.**
 - Sitemap moved exactly one `lastmod` (`/painter-murrumbeena/`)
 - The new carport caption reaches the markdown twin — which it would not have done
   before the figcaption fix in #288
+
+---
+
+## 2026-09-14 — "Melbourne's best" removed from the GBP listing; epoxy added to llms.txt
+
+### GBP write executed and verified
+
+Jimmy authorised stripping the superlative from the listing. The phrase lived in the
+**interior painting service item description**, not the business description, so
+`update_location` could not reach it — it needed `update_service_items`.
+
+⚠️ **`update_service_items` replaces the ENTIRE list.** All 26 items had to be resent, and
+a malformed payload would have wiped every service off the live listing. Before writing:
+
+- read `location_service_items` fresh and recorded a restore reference
+- confirmed `location_primary_category_id` is `categories/gcid:painter`, which is the
+  category the 11 free-form items reference — without that the free-form items would have
+  been rejected
+- noted that `job_type_id:deck_painting` and `job_type_id:wallpaper_removal` do **not**
+  appear in the `gcid:painting` serviceTypes list, so they belong to the primary
+  `gcid:painter` category. They are currently set, so Google accepts them; resent verbatim
+  rather than dropped.
+
+**Was:** "…Professional, tidy, and dedicated to high-end results. Elevate your space with
+Melbourne's best. Get a free quote!"
+**Now:** "…Professional, tidy, and dedicated to high-end results. Get a free quote!"
+
+**Verified by re-reading the listing after the write**: 26 items present, same order, every
+other description byte-identical, and no occurrence of "Melbourne's best" anywhere. Nothing
+lost. The site H1 and the Google listing now carry the same defensible claim.
+
+⚠️ **If this action is ever run again, read the full item list first and resend it.** The
+API has no partial update for service items.
+
+### ⚠️ Correction: epoxy flooring was already settled, and I re-raised it
+
+Epoxy flooring was added to `llms.txt` (both copies, byte-identical, still price-free),
+bringing it to **all 11 service pages**. That part is correct.
+
+**But the question should never have been asked.** This log already recorded, on the
+2026-08 entry at "The trigger brief is now stale in six places":
+
+> Epoxy flooring is **real and shipped**. Jimmy confirmed with job photos;
+> `/services/epoxy-flooring/` is live (PRs #199, #201). The brief still says "do not add
+> until Jimmy confirms".
+
+I read the daily brief's stale "do not add until Jimmy confirms" note and treated it as
+live, then put a settled question back to Jimmy — **the exact failure the log's own opening
+rule exists to prevent**: "⚠️ Read this before acting on any brief… If this brief and the
+log disagree, the log wins." An earlier entry at line 518 is the original open question; the
+later entry closed it. Reading only the first match, not the latest, is how this happened.
+
+**Rule: grep the log for a topic and read the LAST entry, not the first.** An open question
+recorded once may have been answered a hundred lines further down.
+
+### Epoxy coverage audit (after the llms.txt fix)
+
+- 100/127 static pages link to `/services/epoxy-flooring/`
+- all 100 markdown twins carry the link
+- its own page emits `Service` + `LocalBusiness` + `FAQPage` + `BreadcrumbList` + more
+- present in the sitemap
+
+`llms.txt` was the only surface missing it.
+
+### Still open
+
+- **Google Ads 766-739-6088 reads "(SUSPENDED)"** — only Jimmy can see the notice and appeal.
+- **Epoxy flooring is NOT in the GBP service items.** It is a real, confirmed service absent
+  from the listing, so adding it would help Maps. Not done: Jimmy authorised stripping the
+  superlative, not adding services, and each addition is another full-list replace. Offer it.

@@ -6166,3 +6166,107 @@ growth:
 On its central judgement — *add proof rather than more location pages* — the audit
 is right, and it agrees with the duplicate-content gate already in the repo
 (`scripts/check-suburb-duplicates.mjs`: 31.0% average, 53.7% worst, 0 over gate).
+
+---
+
+## 2026-09-13 (evening) — Daily audit: first top-10 positions, and GSC Wizard is dead
+
+### ⚠️ Tooling regression: GSC Wizard subscription has lapsed
+
+Every GSC Wizard tool now returns `payment_required: Your GSC Wizard trial has ended`.
+Tried `score_opportunities` and `get_indexing_tracker`; both refused. **The daily brief
+leans on this tool for Step 1 and Step 6 and that route is now closed** — the brief needs
+updating, or the subscription renewing at tool.gscwizard.com/settings/subscription.
+
+**Working fallback, and it is a good one:** the Windsor.ai `searchconsole` connector returned
+1,563 query rows for the last 28 days against `sc-domain:jetblackpainting.com`. All ranking
+figures below come from it. Indexing-tracker data has no fallback and was **not** measured
+this run — that is a gap, not a clean result.
+
+### The headline: four commercial terms are holding the top 10
+
+For the first time in this log, pages are averaging top-10 on non-brand commercial queries:
+
+| Query | Impressions (28d) | Avg position |
+| --- | --- | --- |
+| painter mordialloc | 39 | **8.54** |
+| house painters sorrento | 29 | **8.55** |
+| painter mentone | 22 | **9.09** |
+| render painting malvern east | 20 | **10.15** |
+
+All four carry zero clicks. **Do not read that as a CTR defect yet** — at positions 8–10 the
+expected yield on 110 combined impressions is roughly one or two clicks, so zero is low but
+inside noise. The brief's rule was that CTR becomes testable once something holds top-10;
+that condition is now met, but the volume is not yet enough to test it. Re-measure before
+touching a single title.
+
+### Volume is climbing fast; clicks are not
+
+**14,019 impressions and 6 clicks across 28 days.** Of those six: four are brand
+(`jetblack painting`, position 2.71), one is a junk one-impression query (`in line`), and one
+is `painters balwyn` at position 32.6. **Non-brand commercial clicks in 28 days: one.**
+
+Position distribution across all 1,563 queries:
+
+| Band | Queries | Impressions |
+| --- | --- | --- |
+| 1–3 | 24 | 90 |
+| 4–10 | 129 | 616 |
+| 11–20 | 399 | 3,500 |
+| 21–50 | 526 | 5,501 |
+| 51+ | 485 | 4,312 |
+
+3,500 impressions sit at 11–20 — one page short. That band, not content, is where the
+remaining value is, and it moves with authority. **The 2026-08-19 diagnosis stands.**
+
+### Tracked eleven, re-measured (28d)
+
+Collingwood 398 impr @ 16.98 · Sorrento 274 @ 14.37 · Murrumbeena 201 @ 16.81 ·
+Donvale 208 @ 23.38 · Mordialloc 145 @ 15.34 · Highett 136 @ 14.06 · Mentone 111 @ 17.22 ·
+Patterson Lakes 101 @ 25.22 · McKinnon 39 @ 11.64 · Dromana 22 @ 19.32 · Aspendale 4 @ 15.25.
+
+Per-day impressions are up several-fold on every one of them against the May–August baseline.
+Position is mixed, not uniformly better: Mordialloc improved sharply (29.18 → 15.34) and
+Mentone improved (24.82 → 17.22), while Sorrento (7.13 → 14.37) and Patterson Lakes
+(6.83 → 25.22) went backwards. ⚠️ The baseline covered 87 days and this window is 28, so
+compare rates, not totals.
+
+### `jetblack` at position 4 with zero clicks — probably not a defect
+
+65 impressions on the bare word `jetblack` at position 4.15, no clicks, while
+`jetblack painting` converts 4 of 28 at position 2.71. The brief flagged this as unexplained.
+Most likely reading: **`jetblack` is an ambiguous term** — it is also a bike-components brand
+and a band — so those impressions are largely not people looking for this business, and
+position 4 on it is unremarkable. Not worth chasing. Recorded so it stops being re-raised.
+
+### Checks — all clean
+
+- **Build health**: production serves the newest commit; lockfile **77/77** complete
+  (⚠️ a naive grep reported 39 missing — the lockfile single-quotes scoped names; the
+  matcher was wrong, not the lockfile. Match on `^ {6}'?name'?:` under `importers:`.)
+- **Three layers**: static-pages → markdown → known-paths regenerated, **zero diffs**
+- **Near-duplicate**: 99 pages, 31.0% avg, 53.7% worst (cranbourne/narre-warren), 0 over gate
+- **Metadata**: 128 pages, clean
+- **Site health**: real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css`
+  all 404; hashed bundles still 200 with correct MIME; `/painters-mordialloc` → 301
+- **Sitemap**: 125 URLs, all 200, zero redirect hops
+- **Structured data**: 127 pages, 0 JSON-LD parse errors, 0 `aggregateRating` in static pages
+- **AEO**: markdown negotiation returns `text/markdown` with `Vary: Accept`, `no-store`,
+  `X-Robots-Tag: noindex`; normal Accept returns HTML; robots.txt carries
+  `Content-Signal: search=yes, ai-train=yes, ai-input=yes`
+- **llms.txt**: three `$` matches, all read — the $10M insurance figure. No prices.
+- **Review count**: 17 in every hardcoded place; no stray 15 or 14
+- **Speed**: TTFB 0.486s, `cf-cache-status: HIT`
+
+### ⚠️ The ">250KB images" check needs qualifying
+
+It now reports **32 hits**, and every one is under `public/social/`. Those are the Instagram
+upload JPEGs — Instagram's API fetches them by URL and re-compressing them degrades what gets
+posted. **Zero pages reference `/social/`** (verified by grep across `client/src` and
+`public/**/index.html`), so nothing there touches LCP or page weight. Excluding that
+directory, **no site-served image exceeds 250KB.** A future run must not "fix" these.
+
+### Change made this run
+
+**None to the site.** Steps 0–6 were clean and the authority diagnosis is unchanged, so
+per the brief's own Step 7.4 the correct outcome is to report and stop.

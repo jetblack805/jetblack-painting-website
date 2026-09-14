@@ -6728,3 +6728,169 @@ Also re-confirmed in the same read: the interior painting description still has 
 
 15 structured + 12 free-form = **27**. Every service with a page on the site is now on the
 listing, and llms.txt lists all 11 service pages. Site, llms.txt and Google listing agree.
+
+---
+
+## 2026-09-14 — GA4: the website is not the problem, and a real defect in the tag loader
+
+Jimmy asked for GA4 to be fixed. Eight prior checks had asserted "only Jimmy can fix this in
+GA4 Admin" **without ever testing whether the tag fires.** That assumption is now tested as
+far as this environment allows.
+
+### What is now proven about the site
+
+| Check | Result |
+| --- | --- |
+| Pages carrying the gtag loader | **127/127** |
+| Pages carrying `G-6NC2597W9L` | **127/127** |
+| Any page missing the tag | **none** |
+| Any conflicting measurement ID | **none** — 256 occurrences, all one ID |
+
+**The website is correctly instrumented.** Whatever is wrong is not missing or duplicated
+tags, and not a second property competing for the same pages.
+
+### What cannot be tested from here — a policy denial, not a workaround
+
+A live firing test was attempted with Playwright against the real site. It cannot work:
+**`www.googletagmanager.com:443` and `www.google-analytics.com:443` are both refused by the
+sandbox proxy** — `gateway answered 403 to CONNECT (policy denial)`, confirmed in
+`/__agentproxy/status`. The page cannot load gtag.js here, so no browser test in this
+environment can ever observe a GA4 hit. Reported, not worked around.
+
+### The real defect found and fixed: the stub was deferred
+
+`window.gtag` was defined **inside** `_loadGA`, which runs on `requestIdleCallback`. Until
+that fired, `window.gtag` was undefined, so `lib/analytics.ts` took its fallback and pushed
+`["event", name, params]` — a plain array — onto `dataLayer`. **That is not the shape gtag
+queues in**; gtag pushes its own arguments object, and replay of a plain array is not
+documented behaviour.
+
+The window is small but it covers exactly the wrong moment: a visitor who taps the sticky
+call bar immediately. For a painter the phone tap is the conversion that matters most.
+
+**Fixed** by installing the stub synchronously and deferring only the network fetch — which
+is Google's own documented snippet order:
+
+```
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', 'G-6NC2597W9L');
+function _loadGA() { /* only the <script> append */ }
+```
+
+LCP is unaffected: defining the stub costs no request, and the fetch stays on idle exactly as
+before. Applied in **both** mirrored copies — `client/index.html` and
+`generate-static-pages.mjs` — and the stale comment in `lib/analytics.ts` was corrected, since
+it described the fallback as the normal path when it is now a last resort.
+
+⚠️ **This does NOT explain zero rows.** Sessions come from `gtag('config', …)` firing
+page_view, which never depended on `trackEvent` at all. A site with this defect would still
+have recorded sessions. The fix is worth having; it is not the cause.
+
+### What the cause must be
+
+GA4 property **545100608** returns nothing for any metric over two years — and also nothing
+for `measurement_id` and `property_timezone`, which are **configuration** fields from the
+Admin API, not report data. A property with a working web stream should return those
+regardless of traffic.
+
+That points at the link between the tag and the property. **The check that settles it is in
+GA4 Admin → Data Streams:** does property 545100608 have a web data stream, and is its
+measurement ID exactly `G-6NC2597W9L`? If the site's ID belongs to a different property, every
+hit has been landing there and 545100608 has correctly always been empty.
+
+### ⚠️ Process failure worth keeping
+
+The generator **crashed** on the first attempt at this change and it was nearly missed twice:
+
+1. The generator runs were piped to `/dev/null`, so a `SyntaxError` printed nothing. The
+   comment added to `generate-static-pages.mjs` contained backticks around a word, and that
+   block lives inside a template literal — the backticks terminated the string.
+2. The verification greps did not discriminate. `window.gtag = gtag;` appears in **both** the
+   old and the new loader, so "127/127 pages have it" was true and meaningless. A
+   multi-line `grep -P` for the old shape silently matched nothing because grep is
+   line-based, and reported a reassuring `0`.
+
+It surfaced only on dumping one generated page in full and parsing it. **Rules:** never pipe
+a generator to `/dev/null`; and a check must be able to FAIL — verify by comparing the
+position of the stub against the fetch, not by grepping a string common to both versions.
+
+### Checks after the fix
+
+- 127 pages, 128 twins, 499 known paths, single measurement ID
+- Generated GA block parses as valid JavaScript; stub precedes the fetch on 127/127
+- Generators stable on a second pass
+- Near-duplicate 30.9%/53.7% 0 over gate; metadata clean; 0 JSON-LD errors;
+  `aggregateRating` still 0; `sameAs` 111/127
+
+---
+
+## 2026-09-14 — External marketing strategy assessed: Clyde North traffic is not human
+
+Jimmy supplied a third-party "Marketing Strategy & Execution Roadmap" (enrichlabs). Its
+whole Phase 1 rests on Clyde North. Checked before believing.
+
+### Credit first — it found something this log had missed
+
+**Clyde North is the single largest impression cluster on the property**, and it has never
+appeared in the tracked eleven or in any baseline here. 28 days: **510 queries, 2,178
+impressions** — about **15.5% of the site's entire impression volume**. The strategy's "2,610
+monthly impressions" is close (2,178/28d ≈ 2,334/month). **That figure is broadly right and
+the blind spot was ours.**
+
+### But the traffic is almost certainly synthetic
+
+| Suburb | Queries | Impressions | Impressions per query |
+| --- | --- | --- | --- |
+| **Clyde North** | **510** | 2,178 | **4.3** |
+| Caulfield | 5 | 294 | 58.8 |
+| Murrumbeena | 6 | 201 | 33.5 |
+| Collingwood | 12 | 398 | 33.2 |
+| Sorrento | 11 | 274 | 24.9 |
+| Mordialloc | 9 | 145 | 16.1 |
+| Mentone | 7 | 111 | 15.9 |
+| Brighton | 6 | 17 | 2.8 |
+
+Every other suburb draws **5–12 distinct queries**. Clyde North draws **510** — forty to a
+hundred times the variety, at the lowest impressions each.
+
+Real search concentrates. Every Mordialloc query, in full: *painter mordialloc* (39),
+*painters mordialloc* (38), *house painters mordialloc* (31), *spray painting mordialloc*
+(13), *smash painting mordialloc* (14), *roof painting mordialloc* (7), and three singles.
+That is what human demand looks like.
+
+Clyde North is a permutation grid: *cafe exterior painting clyde* · *cafe interior painting
+clyde north* · *commercial building interior painters clyde* · *commercial building interior
+painting clyde north* · *balustrade and railing painting clyde* · *after hours office painting
+clyde north* — {affordable|best|cheap|business} × {cafe|office|apartment|commercial building}
+× {painters|painting} × {clyde|clyde north}, each seen 1–12 times.
+
+**The clincher:** the page ranks for *"balustrade and railing painting clyde"* and the word
+**balustrade appears nowhere on it** (0 occurrences). The page is otherwise structurally
+identical to its siblings — 2,632 words and 121 links against Mordialloc's 2,933 and 122 — so
+nothing about its content explains the spread.
+
+**Conclusion: this is automated query traffic, not customers.** 2,178 impressions, **0
+clicks**, and 89 of those queries already rank in the **top 10** carrying 311 impressions
+while earning nothing. Ranking is demonstrably not the blocker on this cluster.
+
+### Verdict on each item
+
+| Item | Verdict |
+| --- | --- |
+| **1. Rewrite Clyde North meta** | ⚠️ **Don't.** Rests on synthetic volume. |
+| **2. Capture "near-page-1" commercial terms** | ⚠️ **Don't.** The two queries it names carry **8** and **2** impressions. The largest Clyde query is 18. **Zero clear the 20-impression bar** this log requires before treating a mover as real. |
+| **3. "Standardize" Brighton / Mentone / Mornington Peninsula pages** | ⚠️ **Actively harmful.** All three already exist and return 200. Standardising is precisely what the near-duplicate gate prevents: worst pair sits at **53.7%** against a **55%** revert threshold — 1.3 points of headroom. Brighton also draws 17 impressions in 28 days; it is not high-value by the data. |
+| **4. Price transparency near the homepage CTA** | Reverses a deliberate decision, in Jimmy's own voice on the commercial page: no rate per square metre, because a number quoted without seeing the substrate changes later. llms.txt must never carry prices. A legitimate business call — but a conscious reversal, not a CRO tweak. |
+| **5. Cost-guide lead magnet** | Right idea, wrong order. `/blog/house-painting-cost-melbourne/` already exists, and organic delivers about **one non-brand click a month** — an email capture on a page nobody reaches collects nothing. |
+| **6. 14-day before/after cadence** | Reasonable. Constrained by footage, not by planning. |
+| **7. Review automation past 17** | ✅ **The best item in the document.** Matches this log's own diagnosis: growing past 17 reviews is the top authority priority, and an automated post-job flow was offered and never built. |
+
+### What actually follows
+
+Do **7**. Leave **1–3**. Treat **4** as a business decision. Sequence **5** after traffic exists.
+
+⚠️ **Do not let the 2,178 figure re-enter a brief as an opportunity.** It will look like the
+biggest number on the property to anyone reading the GSC export cold. It is a robot.

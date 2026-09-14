@@ -107,6 +107,16 @@ Yes, and we treat them as genuinely different jobs. Aspendale Gardens is a separ
 
 Render repairs and a full exterior repaint on a beachfront home at Gnotuk, Aspendale — a property that takes salt-laden wind off the bay year round. Damaged render was cut out and patched, the patches primed, and the whole exterior recoated including the eaves lining, fascia and downpipes.
 
+Render cut out and patched. The patches are left to cure before priming — coating them early is what causes the flashing you see on a rushed job.
+
+Scaffold up on the elevation facing the water. That side takes the salt and weathers first, so it gets the closest preparation.
+
+Eaves lining, fascia and downpipes recoated. Skylights masked rather than cut around freehand.
+
+Finished render with the repairs invisible under the topcoat, and a clean line where the wall meets the gutter.
+
+From the roofline, with the bay behind. This is the exposure every coating on this house has to survive.
+
 **Jetblack Painting** — House Painters Aspendale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

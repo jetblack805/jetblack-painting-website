@@ -124,6 +124,10 @@ Explore our other painting services across Melbourne.
 
 ## Roof & Fence Painting work
 
+Before — Bare timber picket fence masked up and prepared before painting by Jetblack Painting
+
+After — The same picket fence finished in white by Jetblack Painting
+
 **Jetblack Painting** — Roof & Fence Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

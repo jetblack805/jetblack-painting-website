@@ -6270,3 +6270,124 @@ directory, **no site-served image exceeds 250KB.** A future run must not "fix" t
 
 **None to the site.** Steps 0–6 were clean and the authority diagnosis is unchanged, so
 per the brief's own Step 7.4 the correct outcome is to report and stop.
+
+---
+
+## 2026-09-14 — Chadstone gets its first project photographs
+
+Jimmy confirmed the office fitout photos sent on 13 September were a **Chadstone**
+job. Acted on that in two places:
+
+- **`/painter-chadstone/`** — the page had **no project photographs at all**. Added the
+  three fitout images as `projectImages` with a `projectSummary` and three written
+  captions. This is the audit's "include a local project example and unique
+  photographs" recommendation, on a page that sits at **position 12.2 with 37
+  impressions** for `painter chadstone` — inside the striking-distance band.
+- **`/services/commercial-painting/`** — the three alt texts now name Chadstone
+  instead of describing an unplaced office.
+
+⚠️ **The photos are commercial; the Chadstone page is residential end to end.** The
+summary and all three captions say "office" explicitly so no reader mistakes them
+for a house interior, and a comment in the source says why. They are completion
+shots with no matching before, so nothing is worded as a transformation. No colour
+names — none were confirmed for this job.
+
+### Finding: markdown twins drop `projectImages` captions
+
+The twin for a page with project photographs carries the **heading and the
+`projectSummary` but not the per-image captions**. Confirmed pre-existing, not a
+regression from this change: `painter-murrumbeena/index.md` contains zero matches for
+"Dulux Silkwort" while its `index.html` contains two.
+
+That means **every one of the 11 pages with `projectImages` is serving AI agents a
+shorter page than it serves browsers**, and the missing text is the most specific,
+least templated copy on those pages — exactly what an assistant would quote. Worth
+fixing in `generate-markdown.mjs`, but it touches all 11 pages at once so it is a
+separate change, not a rider on this one. **Not yet actioned.**
+
+### Checks after the change
+
+- Three layers regenerated; only Chadstone and the commercial page moved
+- `generate-sitemap.mjs /painter-chadstone/` bumped exactly one `lastmod` line
+- Near-duplicate **30.9% avg** (was 31.0%), worst 53.7%, 0 over gate — the new
+  Chadstone copy is unique enough to move the average down slightly
+- Metadata 128 pages clean
+- Both edited `.tsx` files parse clean
+
+---
+
+## 2026-09-14 (evening) — Windsor reconnected: wider access, and one real fix applied
+
+Jimmy reactivated Windsor. The connector list is materially larger than the four
+recorded before.
+
+### ⚠️ Google Ads account 766-739-6088 is returning as "(SUSPENDED)"
+
+`get_connectors` lists the account with the literal name **`(SUSPENDED)`**, and a
+30-day pull of campaigns/clicks/impressions/spend returns **zero rows**. That label is
+Google's, relayed through Windsor — not an inference. The reason is not visible from
+here, and the Ads UI cannot be reached from this sandbox.
+
+This account was advertiser-verified with Customer Match newly enabled as of
+2026-09-13. **Only Jimmy can see the suspension notice and appeal.** Raised with him
+2026-09-14. Do not attempt any `google_ads` write action against it.
+
+### Connectors now available (was four)
+
+`searchconsole` · `googleanalytics4` · `instagram` · `google_my_business` ·
+**`bing`** (Bing Ads, account 189340282) · **`google_ads`** (suspended) ·
+**`youtube`** (jimmy@jetblackpainting.com).
+
+**`google_my_business` now exposes write actions**: `create_local_post`,
+`reply_to_review`, `upload_media`, `update_location`, `update_service_items`,
+`update_categories`, `update_service_area`, `update_attributes`, `set_regular_hours`.
+⚠️ These write to the live listing. Per the standing rule, run `execute_action` only
+after Jimmy confirms the specific change.
+
+### GBP read: config is strong, one thing unverifiable
+
+Primary category *Painter and Decorator*; additional *Painting* and *Property
+maintenance*; **26 service items** with written descriptions; profile description
+accurate and on-message; phone, website and OPEN status correct.
+
+⚠️ **`location_service_area` reads null — this is NOT evidence it is empty.**
+`location_address_lines`, `location_address_locality`, `location_address_postal_code`,
+`location_latitude` and `location_longitude` all read null too, and the business
+demonstrably has an address. For a hidden-address service-area business those nulls are
+expected, so the connector cannot distinguish "unset" from "not exposed". **Ask Jimmy
+to read the service area in the GBP app rather than asserting anything.** Recorded this
+way on purpose — it is the Yellow Pages lesson again.
+
+⚠️ One GBP service description (interior painting) ends **"Elevate your space with
+Melbourne's best."** — the same unsubstantiated superlative the 13 Sep audit flagged on
+the homepage H1. Flagged to Jimmy; not changed, because it is a write to his live listing.
+
+### Applied: markdown twins were dropping every figcaption
+
+`bodyToMd` in `scripts/generate-markdown.mjs` matched only
+`h1|h2|h3|h4|p|ul|ol|table`, so **every `<figcaption>` on the site was silently dropped
+from the twin**. 54 captions across 16 pages — the most specific, least templated prose
+the site has, and precisely what an assistant would quote — were visible to browsers and
+invisible to AI agents.
+
+Fixed by handling `<figure>` as a unit before the block walk. **Which of alt and caption
+to emit is decided by length, not a magic threshold:**
+
+- caption **shorter** than its alt → a bare label (`Before`, `After`) that means nothing
+  without an image, so it is prefixed with the alt for a referent:
+  `Before — Bare timber picket fence masked up and prepared before painting`
+- caption **longer** than its alt → authored prose that already says what the alt says,
+  so it stands alone and the alt is dropped rather than duplicated
+- figure with no caption → left alone, so decorative image alt text does not bloat twins
+
+**108 lines added across 16 twins.** Shortest addition is 70 characters; no orphan
+fragments. Verified both branches of the rule against real output before committing.
+
+### Checks
+
+- Three layers regenerate stably; near-duplicate **30.9%** avg / 53.7% worst, 0 over gate
+- Metadata 128 pages clean
+- **Internal links: 129 distinct targets, 0 unresolvable.** ⚠️ The first version of this
+  check reported 129 of 129 broken — the filter returned `true` for *known* paths, so
+  everything landed in the missing list. Re-run with a positive control
+  (`/favicon.ico` known → true, `/definitely-not-a-page` → false) before believing it.

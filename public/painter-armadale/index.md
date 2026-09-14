@@ -88,6 +88,16 @@ Yes. We provide free, no-obligation written quotes across Armadale and the surro
 
 Commercial facade work on High Street, Armadale. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through. Also ladder work on a two-tone commercial elevation, and a period weatherboard entry in Armadale finished in a single off-white with the door in black.
 
+White meeting the original charcoal on a hard edge, halfway through. Note the cones, the bunting and the pedestrian sign — this is a live bus stop on a main road, and the footpath stayed open the whole time.
+
+Finished. Going this light on a heritage frontage is unforgiving — every patch, every crack and every join in the render shows if the preparation underneath was rushed.
+
+Commercial render repaint worked from an elevated platform. Height access is most of what separates a commercial quote from a residential one — the painting is the same, the getting to it is not.
+
+Ladder work on a commercial wall. Nothing on this elevation is decorative — a flat face, a straight band where the cream meets the navy, and filler marks still showing where the wall was made good before any topcoat went near it.
+
+A period weatherboard entry, finished. Almost all of it is the one off-white — boards, shingle course, turned post, door surround, eaves — so the only thing giving the front any depth is the shadow each profile throws. On a scheme like this there is no contrast anywhere to hide a wandering cut.
+
 **Jetblack Painting** — House Painters Armadale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

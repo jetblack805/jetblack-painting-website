@@ -109,6 +109,8 @@ Regularly. Murrumbeena sits close to Chadstone Shopping Centre and on the train 
 
 An exterior repaint on a Tudor-style Murrumbeena home with a first-floor addition. Only the render and the trim changed — the tile roof and the original red brick were left exactly as they were, because on a house of this era those are the two things worth keeping.
 
+Dulux Silkwort on the render with Dulux Monument taken through the half-timbering, the fascias, the gutters and the downpipes. The brick and the terracotta roof were not touched — picking out the timbering in a dark colour is what modernises a house like this, and painting the brick would have thrown away the part that gives it its character.
+
 **Jetblack Painting** — House Painters Murrumbeena | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

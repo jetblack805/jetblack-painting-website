@@ -91,6 +91,14 @@ Yes. We provide free, no-obligation written quotes across Mount Martha and the s
 
 A Mount Martha exterior repaint on a hillside home above the bay. Grey walls with every post, beam, fascia and window surround cut in white — on a house shaped like this one the trim is what does the work, because the eye follows the horizontal lines of the balconies rather than the wall colour. Inside, grey through the hall above white beaded panelling, with the timber floors and stairs left as timber.
 
+The entry elevation. Grey walls, white posts and beams, and the door left black — three colours doing the whole job. — Entry elevation of a Mount Martha home after an exterior repaint, with grey walls, white posts and beams and a black front door
+
+The same house from the garden. Soffits, beams and posts all cut in white against the grey — the part of an exterior that shows every shortcut and holds none of the colour.
+
+Up at the gable, with the bay behind it. The brick was left as it was and the cladding, fascia and barge board cut in white against it — a line that has to be straight, because on a Mount Martha hillside it is read from a long way off.
+
+Inside a Mount Martha job. Grey above, white beaded panelling below, and the timber left as timber. Panelling like this is the slowest thing in the house to paint — every groove has to be cut and laid off individually, and a roller alone leaves the grooves starved.
+
 **Jetblack Painting** — House Painters Mount Martha | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

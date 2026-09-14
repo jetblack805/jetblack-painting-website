@@ -90,6 +90,8 @@ Absolutely. As a local Bayside painter based nearby in Mordialloc, we provide fr
 
 A two-storey rendered facade in Hampton. Three tones and nothing else: greige across the render, white on the posts, gable battens and window surrounds, charcoal through the roofline and gutters.
 
+A rendered two-storey in Hampton. Greige on the render, white on the posts and gable battens, charcoal through the roofline and gutters — on a facade this plain there is no ornament to distract from a crooked line, so the whole job is whether the cuts between the three are straight.
+
 **Jetblack Painting** — House Painters Hampton | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

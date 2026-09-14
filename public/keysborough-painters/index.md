@@ -87,6 +87,8 @@ Yes. We provide free, no-obligation written quotes across Keysborough and the su
 
 A Keysborough exterior repaint on an established brick home. The brick was left exactly as it was and everything around it changed — roof, fascia, gutter, window frames, front door and the porch slab underfoot. On a house like this one that is the whole decision: nothing structural moves, and the place still reads as a different house from the footpath.
 
+A Keysborough entry after repainting. Navy on the door, dark grey through the fascia and gutter, the tile roof brought back to black and the porch slab recoated — the brick itself untouched.
+
 **Jetblack Painting** — House Painters Keysborough | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -108,6 +108,26 @@ Yes. We are based in Mordialloc, and we paint shopfronts, cafes and hospitality 
 
 Three Mordialloc exteriors, plus Jimmy on the tools on another. A weatherboard home taken from pale grey to charcoal, and the double-height rear courtyard of a two-storey townhouse — brickwork in white, joinery and balcony framing in a grey-green, photographed mid-job with the balustrade glass still masked. And a rear elevation taken from brown brick and green weatherboard to a single white, shot from the same spot before and after. This is the home suburb — the yard is a few minutes from most of these jobs, which is why a Mordialloc quote gets done on site rather than estimated over the phone.
 
+Before. Pale grey weatherboard and a grey roof — nothing wrong with it, but every line on the house disappears into the one tone.
+
+After, same spot, same fence. Charcoal on the boards with the eaves, fretwork and window frames in white — the gables and the verandah detail only exist as shapes once there is something for them to sit against.
+
+Round the back, where nobody from the street will ever see it. The cut between the charcoal and the white is the same here as it is on the front.
+
+Cutting in around the downpipe by hand. The windows are masked before a brush is opened — the preparation is most of the day, and it is what decides whether the edges still look sharp in five years.
+
+The whole courtyard. White on the brickwork, grey-green on the joinery and the balcony framing, and the rendered planters left white to match the walls. A space this narrow bounces light off every surface, so the wall colour ends up doing far more work here than the same colour would on an open elevation.
+
+The same corner from the other end, two full storeys of painted brick. Coating brick is a one-way decision — once it is painted it has to stay painted, so the preparation and the choice of system matter more here than they would on render.
+
+Looking up at the balcony. The balustrade glass is still in its protective film, and it stays on until the end rather than coming off early — everything above and behind it gets cut in first, and glass is the one surface on the job you cannot sand a mistake back off.
+
+The bifolds, with the house still under dust sheets behind them. Every leaf, edge and rebate is brushed, and the doors have to keep folding once it cures — too heavy a coat in the wrong place and the set binds the first time someone closes it.
+
+Before. Brown brick on one wall, green weatherboard on the next, and a new outbuilding still in its building wrap — three different surfaces and three different colours in one small yard.
+
+After, from the same spot. The brick, the weatherboard and the new cladding all carry the same white, which is what makes three surfaces read as one building. The cladding, slab and gate went in between the two photos — that part is not our work, only the paint on it is.
+
 **Jetblack Painting** — House Painters Mordialloc | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

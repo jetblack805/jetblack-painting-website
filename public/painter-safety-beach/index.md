@@ -89,6 +89,10 @@ Yes. We service the Mornington Peninsula and provide free written quotes across 
 
 A Safety Beach render and roof repaint. The house had gone the way most Peninsula exteriors do — cream render dulled by salt air and hard UV, and a green Colorbond roof well past its best. Repainted in a mid grey with the roof brought to a dark charcoal, which is what changes the whole reading of the house from the street.
 
+Before. Cream render and a green roof — sound underneath, but the colour dates the house and the north and west elevations had taken the most sun.
+
+After. Render in a mid grey, roof and gutters in a dark charcoal. Same house, same garden — the colour is doing all the work.
+
 **Jetblack Painting** — House Painters Safety Beach | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -206,8 +206,9 @@ export default function CommercialPainting() {
               the before/after proof the site still needs. They earn a place
               because the rest of this grid is facades and at-height access:
               there was no interior commercial work on the page at all.
-              No suburb came with them, so the alt text stays with what is in
-              frame. A neighbouring tenant's signage and a car-bay number are
+              The job was in Chadstone (confirmed by Jimmy 2026-09-14), so the alt
+              text names it; it did not at first because no suburb came with
+              the photos. A neighbouring tenant's signage and a car-bay number are
               masked — see the MASK option in scripts/convert-photo.mjs. */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             <img
@@ -216,7 +217,7 @@ export default function CommercialPainting() {
               sizes="(max-width: 640px) 100vw, 33vw"
               width={1200}
               height={1600}
-              alt="Stairwell in a two-level commercial office fitout painted by Jetblack Painting, with cut-in edges running against a glazed partition and stainless handrails"
+              alt="Stairwell in a two-level Chadstone office fitout painted by Jetblack Painting, with cut-in edges running against a glazed partition and stainless handrails"
               className="rounded-lg shadow-md w-full h-64 object-cover object-[center_85%]"
               loading="lazy"
             />
@@ -226,7 +227,7 @@ export default function CommercialPainting() {
               sizes="(max-width: 640px) 100vw, 33vw"
               width={1200}
               height={1600}
-              alt="Corner office painted by Jetblack Painting, showing painted window reveals and wall surfaces between full-height glazing"
+              alt="Corner office in a Chadstone commercial fitout painted by Jetblack Painting, showing finished window reveals and wall surfaces between full-height glazing"
               className="rounded-lg shadow-md w-full h-64 object-cover"
               loading="lazy"
             />
@@ -236,7 +237,7 @@ export default function CommercialPainting() {
               sizes="(max-width: 640px) 100vw, 33vw"
               width={1200}
               height={1600}
-              alt="Open office room painted by Jetblack Painting, with a continuous wall run finished to the ceiling grid and skirting line"
+              alt="Open office room in a Chadstone commercial fitout painted by Jetblack Painting, with a continuous wall run finished to the ceiling grid and skirting line"
               className="rounded-lg shadow-md w-full h-64 object-cover object-[center_75%]"
               loading="lazy"
             />

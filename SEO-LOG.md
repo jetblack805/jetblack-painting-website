@@ -6270,3 +6270,46 @@ directory, **no site-served image exceeds 250KB.** A future run must not "fix" t
 
 **None to the site.** Steps 0–6 were clean and the authority diagnosis is unchanged, so
 per the brief's own Step 7.4 the correct outcome is to report and stop.
+
+---
+
+## 2026-09-14 — Chadstone gets its first project photographs
+
+Jimmy confirmed the office fitout photos sent on 13 September were a **Chadstone**
+job. Acted on that in two places:
+
+- **`/painter-chadstone/`** — the page had **no project photographs at all**. Added the
+  three fitout images as `projectImages` with a `projectSummary` and three written
+  captions. This is the audit's "include a local project example and unique
+  photographs" recommendation, on a page that sits at **position 12.2 with 37
+  impressions** for `painter chadstone` — inside the striking-distance band.
+- **`/services/commercial-painting/`** — the three alt texts now name Chadstone
+  instead of describing an unplaced office.
+
+⚠️ **The photos are commercial; the Chadstone page is residential end to end.** The
+summary and all three captions say "office" explicitly so no reader mistakes them
+for a house interior, and a comment in the source says why. They are completion
+shots with no matching before, so nothing is worded as a transformation. No colour
+names — none were confirmed for this job.
+
+### Finding: markdown twins drop `projectImages` captions
+
+The twin for a page with project photographs carries the **heading and the
+`projectSummary` but not the per-image captions**. Confirmed pre-existing, not a
+regression from this change: `painter-murrumbeena/index.md` contains zero matches for
+"Dulux Silkwort" while its `index.html` contains two.
+
+That means **every one of the 11 pages with `projectImages` is serving AI agents a
+shorter page than it serves browsers**, and the missing text is the most specific,
+least templated copy on those pages — exactly what an assistant would quote. Worth
+fixing in `generate-markdown.mjs`, but it touches all 11 pages at once so it is a
+separate change, not a rider on this one. **Not yet actioned.**
+
+### Checks after the change
+
+- Three layers regenerated; only Chadstone and the commercial page moved
+- `generate-sitemap.mjs /painter-chadstone/` bumped exactly one `lastmod` line
+- Near-duplicate **30.9% avg** (was 31.0%), worst 53.7%, 0 over gate — the new
+  Chadstone copy is unique enough to move the average down slightly
+- Metadata 128 pages clean
+- Both edited `.tsx` files parse clean

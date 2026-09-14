@@ -58,6 +58,43 @@ export default function ChadsonePainters() {
       ]}
       localExpertise={`Chadstone sits in Melbourne's Monash council area, best known for Chadstone Shopping Centre, and surrounded by well-established residential suburbs. The housing stock ranges from post-war brick originals to newer townhouse developments on subdivided lots. We service Chadstone as part of our regular coverage across the Monash and Glen Eira council areas, alongside Oakleigh, Murrumbeena and the surrounding suburbs.`}
       propertyTypes={`Chadstone's residential stock spans post-war brick homes, 1960s–1980s residences and modern townhouse infill — all benefiting from proper surface assessment and quality coatings applied over correct preparation.`}
+      /* ⚠️ These are the only Chadstone project photographs the library holds,
+         and they are from a COMMERCIAL office fitout, not a house. This page is
+         otherwise residential end to end, so the summary and every caption say
+         "office" explicitly — a reader must not come away thinking these are
+         someone's living room. They are also completion shots with no matching
+         before, so nothing here is worded as a transformation. Do not add
+         colour names: none were confirmed for this job. */
+      projectSummary={`A commercial office fitout we painted in ${suburb} — walls, ceilings and stairwell, photographed on completion before the tenant moved in.`}
+      projectImages={[
+        {
+          src: "/projects/project-office-fitout-stairwell.webp",
+          small: "/projects/project-office-fitout-stairwell-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Painted stairwell in a two-level ${suburb} office fitout, with cut-in edges running against a black-framed glazed partition and stainless handrails on both sides`,
+          caption:
+            "The stairwell is the part of a fitout where the cutting-in shows. Every edge here runs against something unforgiving — a black-framed glass partition, two stainless handrails and their brackets, and the bulkhead line above the landing — and all of it is cut by hand on a stair, where you cannot set a ladder square.",
+        },
+        {
+          src: "/projects/project-office-fitout-corner-window.webp",
+          small: "/projects/project-office-fitout-corner-window-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Corner office in ${suburb} after painting, showing finished wall surfaces and window reveals between two runs of full-height glazing`,
+          caption:
+            "A corner office with glazing on two sides. Rooms like this are the hardest to finish well because the light rakes across the wall from two directions at once and shows up every roller mark and every patch that was not sanded back properly.",
+        },
+        {
+          src: "/projects/project-office-fitout-open-room.webp",
+          small: "/projects/project-office-fitout-open-room-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Open office room in ${suburb} after painting, with a continuous wall run finished cleanly to the suspended ceiling grid and the skirting line`,
+          caption:
+            "A long uninterrupted wall run, finished to the suspended ceiling grid above and the skirting below. Commercial plasterboard at this length is where joins telegraph if the substrate was not prepared, so it is the honest test of the wall behind the paint.",
+        },
+      ]}
       localContent={[
         {
           heading: "Painters in Chadstone for Homes and Townhouses",

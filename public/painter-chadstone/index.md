@@ -85,6 +85,10 @@ Yes. Interior painting is a core part of our work. In Chadstone we regularly com
 
 A typical exterior repaint on a single-storey brick home in Chadstone takes 3–5 days for the painting phase, with additional time if significant surface preparation or crack repair is needed. Two-storey homes take longer, and larger or more complex properties more still. We'll provide an estimated timeline in your written quote after the on-site inspection — we don't give timelines without seeing the property first.
 
+## Recent work in Chadstone
+
+A commercial office fitout we painted in Chadstone — walls, ceilings and stairwell, photographed on completion before the tenant moved in.
+
 **Jetblack Painting** — House Painters Chadstone | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

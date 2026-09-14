@@ -6142,10 +6142,19 @@ own instrumentation.
   served impressions every day through 8 September. The trailing zeroes from
   9 September are GBP's normal reporting lag, not a takedown. **Not a current issue.**
 
-- **"Indicative pricing can help pre-qualify visitors"**, listed as a strength.
-  There is no published pricing. The only dollar figures on the site are the
-  `$5,000` / `$10,000` budget bands in the quote-form dropdown and the $10M
-  insurance cover. The audit credited something that is not there.
+- ~~**"Indicative pricing can help pre-qualify visitors"**, listed as a strength.
+  There is no published pricing…~~ **❌ THIS ENTRY WAS WRONG — CORRECTED 2026-09-14.**
+  The site DOES publish indicative pricing, on the homepage, in the FAQ:
+  "a whole-house interior repaint typically runs $5,000 to $12,000 for a
+  3-bedroom home. An exterior repaint runs $4,000 to $8,000 for a single-storey
+  home, or $8,000 to $15,000 for a double-storey." The Perplexity audit was
+  **right** and was marked unfounded here in error.
+  **Cause:** the check grepped `pages/Home.tsx` and `components/*.tsx` only. The
+  copy lives in `client/src/homeFaqs.ts`, mirrored into `client/index.html` and
+  `generate-static-pages.mjs` — none of which were searched. Absence from a
+  partial grep was reported as absence from the site.
+  **Rule: to prove a string is absent, grep the whole repo, not the files you
+  expect it in.**
 
 - **"Search results show substantial suburb coverage."** True — Doncaster, Kew,
   Frankston, Stonnington and Brighton all have real pages. Stated as an
@@ -6894,3 +6903,67 @@ Do **7**. Leave **1–3**. Treat **4** as a business decision. Sequence **5** af
 
 ⚠️ **Do not let the 2,178 figure re-enter a brief as an opportunity.** It will look like the
 biggest number on the property to anyone reading the GSC export cold. It is a robot.
+
+---
+
+## 2026-09-14 — Homepage CRO audit assessed: accurate, unlike the last two
+
+Jimmy supplied a third-party homepage CRO audit (enrichlabs). **Every observation in it
+checks out.** That is the first externally-supplied document in this log of which that is
+true, and it is worth saying plainly.
+
+### ❌ It also caught an error in this log
+
+The audit states that indicative pricing sits in the homepage FAQ. **It does**, and the
+2026-09-13 entry above recorded the same claim from the Perplexity audit as unfounded. That
+entry has been struck through and corrected in place; see it for the cause and the rule.
+
+Short version: the check grepped `pages/Home.tsx` and `components/*.tsx`. The copy lives in
+`client/src/homeFaqs.ts`, mirrored into `client/index.html` and `generate-static-pages.mjs`.
+**Absence from a partial grep was reported as absence from the site.**
+
+### Observation 1 — pricing is in the FAQ. Verified.
+
+Live homepage carries `$5,000`, `$12,000`, `$4,000`, `$8,000`, `$15,000`. The full copy:
+
+> "…we quote after a site visit rather than over the phone. As a budgeting guide: a
+> whole-house interior repaint typically runs $5,000 to $12,000 for a 3-bedroom home. An
+> exterior repaint runs $4,000 to $8,000 for a single-storey home, or $8,000 to $15,000 for a
+> double-storey. **These are indicative ranges only.**"
+
+⚠️ **The recommended wording is not equivalent to what is there.** The audit proposes
+*"Whole-Home Interior Repaints from $5k, Single-Storey Exterior from $4k"*. The FAQ says
+ranges "typically run" between two numbers; **"from $5k" asserts a floor**, which is a
+different and stronger claim, and it drops "indicative ranges only" and the site-visit
+condition. Moving the number up the page is arguable; **moving it up in that wording is a
+new pricing claim** and would breach the standing rule against publishing figures the
+business has not agreed to.
+
+If it moves, it should keep the range and the caveat — e.g. "Most interior repaints land
+between $5,000 and $12,000. Free written quote after a site visit." Hero change → draft PR,
+Jimmy's call.
+
+### Observation 2 — 81 suburb links, no checker. Verified.
+
+The homepage carries **81 distinct `/painter-*` links** and **zero `<input>` or `<select>`
+elements**. The friction claim is fair on mobile.
+
+⚠️ **Do not replace the links with a checker.** Those 81 are crawler-visible internal links
+into the suburb pages; PR #194 deliberately added 384 such links and the log records internal
+linking as a spent lever precisely because it was invested in. A JS dropdown renders nothing
+for a crawler. **A checker may be added ALONGSIDE the list, never instead of it.** The audit
+does not mention this and following it literally would undo prior work.
+
+### Observation 3 — lead magnet. Right, and still the wrong order.
+
+Accurate that the only paths are call or quote form. But organic delivers roughly **one
+non-brand click a month**; a gated download on pages nobody reaches collects nothing. Same
+verdict as the strategy document: sequence it after traffic exists.
+
+### Verdict
+
+| Item | Verdict |
+| --- | --- |
+| 1. Pricing above the fold | Observation **verified**. Idea arguable; **proposed wording is not** — "from $5k" invents a floor the FAQ does not claim |
+| 2. Suburb checker | Observation **verified**. Worth doing **additively** — never at the cost of the 81 crawlable links |
+| 3. Lead magnet | Accurate, wrong order |

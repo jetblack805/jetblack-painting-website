@@ -112,6 +112,16 @@ Full drop sheeting, furniture moved and covered rather than worked around, and f
 
 Two Brighton jobs. An exterior repaint on a weatherboard home — olive and cream taken to a dark charcoal, with the fretwork, verandah posts and window frames picked out in white — an interior repaint rolled out room by room, through to the stair hall.
 
+Before. Olive weatherboard with cream trim — the paint was sound, the colour had dated. Working the upper storey off the verandah roof.
+
+After, from the same spot. Weatherboards in a dark charcoal with the fretwork, posts and window frames in white — on a house with this much detail the trim is the whole point of the colour.
+
+Cutting in the verandah fretwork. There is no spraying this — every bracket and spindle is done by hand, off a ladder, over drop sheets.
+
+Rolling out a wall on an extension pole. The room is clear of furniture but the carpet and trim are staying, so it is rolled rather than sprayed — spraying here would mean masking every surface in the room to save an hour on the walls.
+
+The stair hall finished. A curved string, turned balusters and an arched fretwork surround are all cut in by hand, and there is nowhere on a staircase to hide a wobbly line — it sits at eye level and you walk past it every day.
+
 **Jetblack Painting** — House Painters Brighton | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

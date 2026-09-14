@@ -118,6 +118,10 @@ Explore our other painting services across Melbourne.
 
 ## Kitchen Cabinet Resurfacing work
 
+Before, in Malvern. The doors and drawer fronts come off and go to the booth; the carcasses, the benchtop and the splashback stay exactly where they are.
+
+After. Same carcasses, same benchtop, same tiles — doors rehung in white gloss. Photographed on the last day, before the bench was cleared. — The same Malvern kitchen after resurfacing by Jetblack Painting, doors rehung in a white gloss finish with the original black benchtop and cream tiled splashback untouched
+
 **Jetblack Painting** — Kitchen Cabinet Resurfacing Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

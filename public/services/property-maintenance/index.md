@@ -112,6 +112,12 @@ Explore our other painting services across Melbourne.
 
 ## Property Maintenance work
 
+Most maintenance calls start with a drill rather than a brush. Fixing what is behind the finish — the loose fixing, the cracked join, the cause of the stain — is what stops the same repair coming back next year.
+
+Before. Mould across the ceiling and paint lifting in sheets, with water staining spreading out from the exhaust vent. — Mould and lifting paint across a bathroom ceiling in Chadstone before treatment, with water staining spreading out from the exhaust vent
+
+After. The same ceiling and exhaust vent, treated and repainted. Painting straight over mould without treating it first only hides it — the treatment is the part that lasts.
+
 **Jetblack Painting** — Property Maintenance Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

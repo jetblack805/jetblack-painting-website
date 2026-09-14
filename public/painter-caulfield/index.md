@@ -112,6 +112,16 @@ Yes. Common property around the station and the racecourse is a regular part of 
 
 Exterior repaints on rendered homes in Caulfield. The before-and-after below is one of them: the render, parapet, fascia and garage door were repainted. The gate, letterbox and planting visible in that frame are not painting work.
 
+The same elevation, before and after. The paintwork is the render, parapet, fascia and garage door — the gate, letterbox and garden beds in the after frame are not ours to claim.
+
+Access set up before a brush is lifted. Scaffold to the upper balcony, because on a two-storey render job the parapet and fascia are where the result is decided.
+
+Windows and frames masked out before any coating goes on. Masking is the slow, unglamorous part and the reason the finished lines are sharp.
+
+A second Caulfield property. Render this flat and this pale shows every roller mark, so it gets laid off carefully rather than rushed.
+
+Preparation under way — drop sheets down, tape up, everything covered before the first coat. — Drop sheets, ladder and masking tape in place on Caulfield eaves and rendered wall before painting
+
 **Jetblack Painting** — House Painters Caulfield | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

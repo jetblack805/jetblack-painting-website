@@ -130,6 +130,33 @@ function bodyToMd(html) {
   // phone number survives into the Markdown.
   body = body.replace(/<a class="btn"[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (_, href, text) => `<p><a href="${href}">${text}</a></p>`);
 
+  // A <figure> carries two pieces of reading content and the twins were
+  // publishing neither: the img alt and the figcaption. Sixteen pages have
+  // project photographs, and their captions are the most specific, least
+  // templated prose on the site — exactly what an assistant would quote — so
+  // AI agents were being served a shorter page than browsers got.
+  //
+  // Which of the two to emit is decided by length rather than a magic
+  // threshold. A caption SHORTER than its alt is a label ("Before", "After")
+  // and is meaningless here because the twins carry no images, so it is
+  // prefixed with the alt to give it a referent. A caption LONGER than its alt
+  // is authored prose that already says everything the alt does, so it stands
+  // alone and the alt is dropped rather than duplicated.
+  //
+  // A figure with no caption is left alone deliberately: emitting alt text for
+  // every decorative image on the site would bloat the twins without adding
+  // anything an assistant needs.
+  body = body.replace(/<figure\b[^>]*>([\s\S]*?)<\/figure>/gi, (whole, inner) => {
+    const cap = (inner.match(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/i) || [])[1];
+    if (!cap) return whole;
+    const capText = stripTagsLoose(cap).trim();
+    if (!capText) return whole;
+    const alt = (inner.match(/<img\b[^>]*\balt="([^"]*)"/i) || [])[1];
+    const altText = alt ? decodeEntities(alt).trim() : "";
+    const text = altText && altText.length > capText.length ? `${capText} — ${altText}` : capText;
+    return `<p>${text}</p>`;
+  });
+
   const blocks = [];
   const blockRe = /<(h1|h2|h3|h4|p|ul|ol|table)\b[^>]*>([\s\S]*?)<\/\1>/gi;
   let match;

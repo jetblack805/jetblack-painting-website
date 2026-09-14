@@ -114,6 +114,12 @@ Explore our other painting services across Melbourne.
 
 ## Epoxy Flooring work
 
+Before — original condition — Melbourne warehouse in original condition before Jetblack Painting repainted the walls and beams and laid an epoxy flake floor
+
+After — walls, beams and epoxy flake floor — Grey and black decorative epoxy flake floor finished by Jetblack Painting in the same Melbourne warehouse
+
+The same warehouse mid-job: walls and beams finished, slab bare and ready to coat. — Warehouse slab with walls and beams repainted, concrete bare and ready for the epoxy coating
+
 **Jetblack Painting** — Epoxy Flooring & Concrete Resurfacing Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

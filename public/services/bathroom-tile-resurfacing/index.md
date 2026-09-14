@@ -108,6 +108,10 @@ Explore our other painting services across Melbourne.
 
 ## Bathroom & Tile Resurfacing work
 
+Before. The original coating has worn through to the pink undercoat across the base — the part that holds standing water always fails first.
+
+After. Stripped, prepared and refinished. The tiling, the tapware and the plumbing are exactly where they were — nothing was removed.
+
 **Jetblack Painting** — Bathroom & Tile Resurfacing Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

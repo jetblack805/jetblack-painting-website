@@ -6824,3 +6824,73 @@ position of the stub against the fetch, not by grepping a string common to both 
 - Generators stable on a second pass
 - Near-duplicate 30.9%/53.7% 0 over gate; metadata clean; 0 JSON-LD errors;
   `aggregateRating` still 0; `sameAs` 111/127
+
+---
+
+## 2026-09-14 — External marketing strategy assessed: Clyde North traffic is not human
+
+Jimmy supplied a third-party "Marketing Strategy & Execution Roadmap" (enrichlabs). Its
+whole Phase 1 rests on Clyde North. Checked before believing.
+
+### Credit first — it found something this log had missed
+
+**Clyde North is the single largest impression cluster on the property**, and it has never
+appeared in the tracked eleven or in any baseline here. 28 days: **510 queries, 2,178
+impressions** — about **15.5% of the site's entire impression volume**. The strategy's "2,610
+monthly impressions" is close (2,178/28d ≈ 2,334/month). **That figure is broadly right and
+the blind spot was ours.**
+
+### But the traffic is almost certainly synthetic
+
+| Suburb | Queries | Impressions | Impressions per query |
+| --- | --- | --- | --- |
+| **Clyde North** | **510** | 2,178 | **4.3** |
+| Caulfield | 5 | 294 | 58.8 |
+| Murrumbeena | 6 | 201 | 33.5 |
+| Collingwood | 12 | 398 | 33.2 |
+| Sorrento | 11 | 274 | 24.9 |
+| Mordialloc | 9 | 145 | 16.1 |
+| Mentone | 7 | 111 | 15.9 |
+| Brighton | 6 | 17 | 2.8 |
+
+Every other suburb draws **5–12 distinct queries**. Clyde North draws **510** — forty to a
+hundred times the variety, at the lowest impressions each.
+
+Real search concentrates. Every Mordialloc query, in full: *painter mordialloc* (39),
+*painters mordialloc* (38), *house painters mordialloc* (31), *spray painting mordialloc*
+(13), *smash painting mordialloc* (14), *roof painting mordialloc* (7), and three singles.
+That is what human demand looks like.
+
+Clyde North is a permutation grid: *cafe exterior painting clyde* · *cafe interior painting
+clyde north* · *commercial building interior painters clyde* · *commercial building interior
+painting clyde north* · *balustrade and railing painting clyde* · *after hours office painting
+clyde north* — {affordable|best|cheap|business} × {cafe|office|apartment|commercial building}
+× {painters|painting} × {clyde|clyde north}, each seen 1–12 times.
+
+**The clincher:** the page ranks for *"balustrade and railing painting clyde"* and the word
+**balustrade appears nowhere on it** (0 occurrences). The page is otherwise structurally
+identical to its siblings — 2,632 words and 121 links against Mordialloc's 2,933 and 122 — so
+nothing about its content explains the spread.
+
+**Conclusion: this is automated query traffic, not customers.** 2,178 impressions, **0
+clicks**, and 89 of those queries already rank in the **top 10** carrying 311 impressions
+while earning nothing. Ranking is demonstrably not the blocker on this cluster.
+
+### Verdict on each item
+
+| Item | Verdict |
+| --- | --- |
+| **1. Rewrite Clyde North meta** | ⚠️ **Don't.** Rests on synthetic volume. |
+| **2. Capture "near-page-1" commercial terms** | ⚠️ **Don't.** The two queries it names carry **8** and **2** impressions. The largest Clyde query is 18. **Zero clear the 20-impression bar** this log requires before treating a mover as real. |
+| **3. "Standardize" Brighton / Mentone / Mornington Peninsula pages** | ⚠️ **Actively harmful.** All three already exist and return 200. Standardising is precisely what the near-duplicate gate prevents: worst pair sits at **53.7%** against a **55%** revert threshold — 1.3 points of headroom. Brighton also draws 17 impressions in 28 days; it is not high-value by the data. |
+| **4. Price transparency near the homepage CTA** | Reverses a deliberate decision, in Jimmy's own voice on the commercial page: no rate per square metre, because a number quoted without seeing the substrate changes later. llms.txt must never carry prices. A legitimate business call — but a conscious reversal, not a CRO tweak. |
+| **5. Cost-guide lead magnet** | Right idea, wrong order. `/blog/house-painting-cost-melbourne/` already exists, and organic delivers about **one non-brand click a month** — an email capture on a page nobody reaches collects nothing. |
+| **6. 14-day before/after cadence** | Reasonable. Constrained by footage, not by planning. |
+| **7. Review automation past 17** | ✅ **The best item in the document.** Matches this log's own diagnosis: growing past 17 reviews is the top authority priority, and an automated post-job flow was offered and never built. |
+
+### What actually follows
+
+Do **7**. Leave **1–3**. Treat **4** as a business decision. Sequence **5** after traffic exists.
+
+⚠️ **Do not let the 2,178 figure re-enter a brief as an opportunity.** It will look like the
+biggest number on the property to anyone reading the GSC export cold. It is a robot.

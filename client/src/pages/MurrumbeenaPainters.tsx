@@ -30,7 +30,7 @@ export default function MurrumbeenaPainters() {
       suburb={suburb}
       title="Murrumbeena Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in Murrumbeena — Californian bungalows and interwar. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`An exterior repaint on a Tudor-style ${suburb} home with a first-floor addition. Only the render and the trim changed — the tile roof and the original red brick were left exactly as they were, because on a house of this era those are the two things worth keeping.`}
+      projectSummary={`An exterior repaint on a Tudor-style ${suburb} home with a first-floor addition. Only the render and the trim changed — the tile roof and the original red brick were left exactly as they were, because on a house of this era those are the two things worth keeping. The carport was part of the same scope.`}
       projectImages={[
         {
           // The two colours are named because Jimmy confirmed them on
@@ -46,6 +46,22 @@ export default function MurrumbeenaPainters() {
           alt: `Tudor-style ${suburb} home after an exterior repaint, render in Dulux Silkwort with Dulux Monument picked out through the half-timbering, fascias and gutters, above original red brick and a terracotta tile roof`,
           caption:
             "Dulux Silkwort on the render with Dulux Monument taken through the half-timbering, the fascias, the gutters and the downpipes. The brick and the terracotta roof were not touched — picking out the timbering in a dark colour is what modernises a house like this, and painting the brick would have thrown away the part that gives it its character.",
+        },
+        {
+          /* Same job, same day, second frame — Jimmy confirmed on 2026-09-14
+             that the carport was in scope. Cropped from a wider shot to the
+             gable and the fascia line; the full frame carried a car, a ladder
+             and stacked tins across the foreground and read as a work site
+             rather than a finished detail. The colours are named because they
+             are the SAME confirmed pair as the image above, on the same job —
+             do not name colours on any other job without that confirmation. */
+          src: "/projects/project-murrumbeena-carport-gable.webp",
+          small: "/projects/project-murrumbeena-carport-gable-800.webp",
+          width: 980,
+          height: 590,
+          alt: `Carport gable on the same ${suburb} exterior repaint, with charcoal battens, barge board, fascia, gutter and downpipe set against pale render, original red brick and a terracotta tile roof`,
+          caption:
+            "The carport on the same job, close up. Battens, barge board, fascia, gutter and downpipe all in Dulux Monument against Dulux Silkwort render — the same two colours as the house, carried across so the carport reads as part of the building instead of something bolted on. The brick pier and the tiles were left alone here too.",
         },
       ]}
       neighbouringSuburbs={[

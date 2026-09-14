@@ -143,7 +143,7 @@ export default function Home() {
               one, which is an on-page SEO fault. Classes are unchanged, so
               this is not a visual change. */}
           <h1 className="text-2xl md:text-3xl text-[#FCFCFC] mb-3" style={{ fontFamily: "Georgia, serif" }}>
-            Melbourne's Best-Rated Local House Painters
+            Melbourne's 5-Star Rated Local House Painters
           </h1>
           <p className="text-[#98989D] text-sm md:text-base font-light leading-relaxed">
             5-star rated, fully insured, and servicing 90+ suburbs across Melbourne — interior, exterior, roof, cabinet, and commercial painting.

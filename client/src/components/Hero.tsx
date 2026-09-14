@@ -38,7 +38,7 @@ export default function Hero() {
           {/* Headline — serif, flyer treatment.
               h2, not h1: this is a brand slogan and carries no search terms.
               The page's single H1 is the keyword-bearing line in Home.tsx
-              ("Melbourne's Best-Rated Local House Painters"), which is what a
+              ("Melbourne's 5-Star Rated Local House Painters"), which is what a
               crawler should read as the page's subject. Kept as a heading
               rather than a <p> deliberately — index.css:120 styles h1–h6 with
               Georgia serif, so demoting it to a paragraph would silently

@@ -101,6 +101,22 @@ Explore our other painting services across Melbourne.
 
 ## Exterior Painting work
 
+Navy weatherboard home with white picket fence and window trim painted by Jetblack Painting
+
+A Brighton weatherboard home after repainting, in dark charcoal with white fretwork, verandah posts and window frames
+
+Tudor-style Murrumbeena home after an exterior repaint, render in Dulux Silkwort with Dulux Monument picked out through the half-timbering, fascias and gutters, above original red brick
+
+Repainted cream render, columns and eaves on a Caulfield property
+
+White painted cladding and fascia meeting the original brickwork on the upper gable of a Mount Martha home, with Port Phillip Bay behind
+
+Two-storey home after an exterior repaint, with dark green picked out through the gable strapping, fascias, gutters and downpipes above a red brick ground floor and a terracotta tile roof
+
+Finished render and gutter line on a two-storey Aspendale house after repainting
+
+A Mordialloc weatherboard home after repainting in charcoal with white eaves, fretwork and window frames
+
 **Jetblack Painting** — Exterior Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

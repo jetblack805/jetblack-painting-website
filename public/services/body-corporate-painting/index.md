@@ -108,6 +108,14 @@ Explore our other painting services across Melbourne.
 
 ## Body Corporate Painting work
 
+Heritage multi-storey building repainted white by Jetblack Painting for a Melbourne owners corporation
+
+Before and after of a strata building façade repaint by Jetblack Painting
+
+Commercial and strata building exterior painted by Jetblack Painting
+
+Multi-tenancy building frontage painted by Jetblack Painting
+
 **Jetblack Painting** — Body Corporate Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

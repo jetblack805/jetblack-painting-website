@@ -6391,3 +6391,81 @@ fragments. Verified both branches of the rule against real output before committ
   check reported 129 of 129 broken — the filter returned `true` for *known* paths, so
   everything landed in the missing list. Re-run with a positive control
   (`/favicon.ico` known → true, `/definitely-not-a-page` → false) before believing it.
+
+---
+
+## 2026-09-14 — AEO pass: everything an assistant reads, and who it resolves to
+
+Follow-on from the figcaption fix in #288. Three further gaps between what a browser
+gets and what an AI agent gets, all closed.
+
+### 1. Captionless figure alt text was still being dropped (43 images)
+
+The #288 fix deliberately left figures with no caption alone, to avoid bloating the
+twins with decorative alt text. That judgement was wrong on inspection: **all 43 are
+distinct, descriptive sentences** — "Heritage multi-storey building repainted white by
+Jetblack Painting for a Melbourne owners corporation", "Industrial building painting in
+progress with access equipment" — and they are capability evidence, not decoration.
+Nothing on the site repeats them.
+
+A figure with no caption now emits its alt as a paragraph. **86 lines across 8 pages,
+every one a service page** — interior, exterior, roof, roof & fence, commercial, body
+corporate, real estate, kitchen cabinet resurfacing. Those are the commercially
+important pages, and they were the ones losing the most.
+
+### 2. Service pages described a service with no resolvable provider
+
+Service pages emitted `Service` + `FAQPage` + `BreadcrumbList` but **no business
+entity**: no `sameAs`, no logo, no address, no phone in structured data. An assistant
+reading `/services/commercial-painting/` could see the service and not reliably tie it
+to Jetblack.
+
+`localBusinessSchema()` is now included on all 11. It is the **same `@id`**
+(`${SITE_URL}/#business`) the suburb pages already use, which is how schema.org expects
+one organisation to appear across many pages — a reference, not a duplicate entity.
+
+⚠️ It carries **no `aggregateRating`**, so the rule that the rating is declared exactly
+once on the homepage is intact. Verified after the change: **0 static pages contain
+`aggregateRating`.**
+
+### 3. Blog and FAQ pages pointed at a different, thinner entity
+
+Blog posts named their author and publisher as a bare
+`Organization {name, url, logo}` — a second, weaker node describing the same business,
+with no `sameAs` and no address. Those now carry `"@id": "${SITE_URL}/#business"`, so
+they resolve to the one entity rather than standing beside it.
+
+The FAQ page carried **no business entity at all** — 27 questions and answers about this
+business with no subject an assistant could resolve. It now includes
+`localBusinessSchema()` too.
+
+**Coverage after: `sameAs` on 111/127 pages; 124/127 resolve to `#business`.** The three
+that do not are `/privacy/`, `/terms/` and `/review-us/`, all `noindex` — correct, they
+should not carry business markup.
+
+### 4. llms.txt listed 8 of 11 services
+
+Two live service pages were invisible to any assistant reading llms.txt. Added, with
+descriptions taken from the pages' own meta descriptions rather than written fresh:
+
+- **Bathroom Tile Resurfacing** — corroborated twice: live 200 page, and GBP service
+  items already list "Tile painting" and "Bathtub painting".
+- **Property Maintenance** — corroborated twice: live 200 page, and "Property
+  maintenance" is a GBP **additional category**.
+
+Root and `public/` copies re-verified byte-identical. Price check re-read line by line:
+the only `$` matches are the $10 million public liability figure. **No prices.**
+
+⚠️ **Epoxy flooring was deliberately NOT added.** `/services/epoxy-flooring/` is live,
+200, 3,018 words and in the sitemap — but it appears **nowhere in the GBP service
+items**, and SEO-LOG carries a standing open question that it may not be a real
+capability. Listing it in llms.txt would assert a service on a second surface on the
+strength of a page whose accuracy is already in doubt. **Raised with Jimmy: either
+confirm it and it goes in, or the page comes down.** Do not resolve this by guessing.
+
+### Checks
+
+- Generators re-run twice; output **stable** on the second pass, no drift
+- **0 JSON-LD parse errors** across 127 pages after editing schema on 28 of them
+- `aggregateRating` still 0 in static pages
+- Near-duplicate 30.9% avg / 53.7% worst, 0 over gate; metadata 128 pages clean

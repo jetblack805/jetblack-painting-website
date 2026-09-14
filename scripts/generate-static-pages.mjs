@@ -2684,6 +2684,14 @@ for (const service of servicePages) {
       projectImages: servicePhotos,
       projectHeading: `${service.name} work`,
       schema: [
+        // The business entity belongs on service pages too. Without it these
+        // pages described a service with no resolvable provider: no sameAs, no
+        // logo, no address. Suburb pages have carried it all along, so this is
+        // the same entity under the same @id (SITE_URL/#business), which is how
+        // schema.org expects one organisation to appear across many pages —
+        // not a duplicate. It carries NO aggregateRating, so the rule that the
+        // rating is declared exactly once on the homepage is untouched.
+        localBusinessSchema(),
         ...serviceSchema({
           name: service.name,
           title: service.title,
@@ -2892,6 +2900,7 @@ writePage(
           "Painting advice, colour guides and cost tips from Jetblack Painting. Read Melbourne-focused blog articles on interior, exterior and cabinet painting.",
         publisher: {
           "@type": "Organization",
+          "@id": `${SITE_URL}/#business`,
           name: "Jetblack Painting",
           url: SITE_URL,
         },
@@ -3657,11 +3666,13 @@ for (const article of articlePages) {
     image: `${SITE_URL}/og-image.jpg`,
     author: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#business`,
       name: "Jetblack Painting",
       url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#business`,
       name: "Jetblack Painting",
       url: SITE_URL,
       logo: {
@@ -3925,6 +3936,10 @@ writePage(
     heroBody:
       "Get answers to the common questions Melbourne homeowners, landlords, and businesses ask before booking a painting project.",
     schema: [
+      // The FAQ answers questions about this business, so the business itself
+      // should be on the page. Without it an assistant reads 27 answers with no
+      // resolvable subject. Same @id as everywhere else, no aggregateRating.
+      localBusinessSchema(),
       faqSchema(faqItems),
       breadcrumbTrail([
         { name: "Home", item: "/" },

@@ -118,6 +118,12 @@ Explore our other painting services across Melbourne.
 
 ## Kitchen Cabinet Resurfacing work
 
+Kitchen with white resurfaced cabinetry, stone island bench and stainless steel appliances
+
+Kitchen cabinet doors being spray painted in Jetblack Painting's spray booth
+
+Spray gun laying an even coat across a kitchen cabinet door in the booth
+
 Before, in Malvern. The doors and drawer fronts come off and go to the booth; the carcasses, the benchtop and the splashback stay exactly where they are.
 
 After. Same carcasses, same benchtop, same tiles — doors rehung in white gloss. Photographed on the last day, before the bench was cleared. — The same Malvern kitchen after resurfacing by Jetblack Painting, doors rehung in a white gloss finish with the original black benchtop and cream tiled splashback untouched

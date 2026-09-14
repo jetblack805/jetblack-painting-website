@@ -143,16 +143,17 @@ function bodyToMd(html) {
   // is authored prose that already says everything the alt does, so it stands
   // alone and the alt is dropped rather than duplicated.
   //
-  // A figure with no caption is left alone deliberately: emitting alt text for
-  // every decorative image on the site would bloat the twins without adding
-  // anything an assistant needs.
+  // A figure with no caption emits its alt text instead. There are 43 of
+  // these and every alt is distinct, descriptive prose ("Heritage multi-storey
+  // building repainted white for a Melbourne owners corporation") — the kind of
+  // sentence an assistant needs in order to say what this business actually
+  // does. Dropping them was leaving real capability evidence out of the twins.
   body = body.replace(/<figure\b[^>]*>([\s\S]*?)<\/figure>/gi, (whole, inner) => {
     const cap = (inner.match(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/i) || [])[1];
-    if (!cap) return whole;
-    const capText = stripTagsLoose(cap).trim();
-    if (!capText) return whole;
+    const capText = cap ? stripTagsLoose(cap).trim() : "";
     const alt = (inner.match(/<img\b[^>]*\balt="([^"]*)"/i) || [])[1];
     const altText = alt ? decodeEntities(alt).trim() : "";
+    if (!capText) return altText ? `<p>${altText}</p>` : whole;
     const text = altText && altText.length > capText.length ? `${capText} — ${altText}` : capText;
     return `<p>${text}</p>`;
   });

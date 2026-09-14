@@ -224,11 +224,20 @@ function canonicalForDir(dir) {
 
 let written = 0;
 
+/*
+ * Directories that are NOT public reading material and must never get a twin.
+ * /ask/ is Jimmy's internal review-request tool: noindex, linked from nowhere,
+ * and its twin would have served an AI agent the text of a form only he is
+ * meant to see. The other noindex pages (privacy, terms, review-us) DO get
+ * twins and should — they are real pages, just kept out of the index.
+ */
+const NO_TWIN = new Set(["ask"]);
+
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      walk(full);
+      if (!NO_TWIN.has(entry.name)) walk(full);
       continue;
     }
     if (entry.name !== "index.html") continue;

@@ -6628,3 +6628,103 @@ recorded once may have been answered a hundred lines further down.
 - **Epoxy flooring is NOT in the GBP service items.** It is a real, confirmed service absent
   from the listing, so adding it would help Maps. Not done: Jimmy authorised stripping the
   superlative, not adding services, and each addition is another full-list replace. Offer it.
+
+---
+
+## 2026-09-14 — Google Ads history recovered: it ran once, and it was cheap
+
+Jimmy asked what to do about the suspended Ads account. Windsor's `google_ads` connector
+turned out to hold history nobody had seen before — earlier entries recorded the account as
+"not connected to Windsor", so this is the first look at it.
+
+### The only campaign ever run
+
+**"Want A Professional Painter?" — 18 November to 1 December 2025, 14 days.**
+
+| | |
+| --- | --- |
+| Impressions | 1,030 |
+| Clicks | 95 |
+| Spend | **$150.40** |
+| CTR | **9.2%** |
+| Cost per click | **$1.58** |
+| Conversions | **0** |
+
+⚠️ **The zero does NOT mean it produced no work.** GA4 has never recorded a single row, and
+`generate_lead` / `phone_call_click` were only deployed in September 2026 — nine months
+*after* this campaign ran. Nothing was measuring, so the correct reading is **unmeasured**,
+not "failed". Do not cite this as evidence that ads do not work for this business.
+
+What the numbers do support: **9.2% CTR and $1.58 a click are cheap** for a trade in
+Melbourne. 95 clicks in a fortnight is more site traffic than organic produces in a year.
+
+### Context — what the other channels actually deliver
+
+| Channel | Window | Result |
+| --- | --- | --- |
+| Organic search | 28 days | 14,019 impressions → **6 clicks** (4 of them brand) |
+| Google Business Profile | 90 days | **3 phone calls**, 25 website clicks |
+| Google Ads | 14 days, Nov 2025 | 95 clicks at $1.58 |
+
+Non-brand commercial clicks from organic run at roughly **one a month**. The off-page
+authority ceiling means that does not change quickly. Paid is the only fast lever available.
+
+### What cannot be done from here
+
+**The suspension cannot be fixed through this tooling.** Google Ads UI is blocked from the
+sandbox, and there is no appeal endpoint. Windsor's `google_ads` write actions are campaign
+management — `create_campaign`, `push_keywords`, `set_campaign_budget`, bidding — and all of
+them are meaningless against a suspended account. **Do not attempt them.** Only Jimmy can
+read the suspension notice and appeal.
+
+### The sequencing that matters
+
+1. **GA4 first.** Property 545100608 has recorded nothing for two years. Relaunching ads
+   before it works repeats the November 2025 mistake exactly: money spent, outcome unknown.
+2. **Then the appeal**, once Jimmy has read the reason in the account.
+3. **Then relaunch**, with `generate_lead` and `phone_call_click` marked as key events and
+   imported into Ads, so the next $150 produces an answer as well as clicks.
+
+Windsor can build and manage the campaign once steps 1 and 2 are done.
+
+---
+
+## 2026-09-14 — Epoxy flooring added to the GBP listing, and a read-after-write trap
+
+Jimmy authorised adding epoxy flooring to the Google Business Profile. Done: the listing now
+carries **27 service items**, up from 26.
+
+**New item** — free-form, under `gcid:property_maintenance` so it groups with Concrete
+sealing, placed immediately before it:
+
+> **Epoxy flooring** — "Decorative epoxy flake floors, solid colour coatings and clear-sealed
+> concrete for garages, workshops and warehouses. Slabs are mechanically ground back before
+> coating, so the finish keys into the concrete instead of sitting on top of it."
+
+Written from the service page's own visible content — flake broadcast into the base coat,
+solid colour, clear-sealed concrete, mechanical grinding — not invented. Free-form rather
+than structured because **no epoxy or floor-coating `job_type_id` exists** in the service
+types offered by any of this location's three categories.
+
+### ⚠️ READ-AFTER-WRITE LAGS. Do not act on a single verification read.
+
+The write returned `Set 27 service item(s)… Epoxy flooring…`. The **first** verification read
+came back with **26 items and no Epoxy flooring**. On that evidence alone the obvious
+conclusion was that Google had silently dropped the item — and the obvious next move, resending
+it, would have meant a second full-list replace against a listing whose true state was unknown.
+
+A second read moments later returned all **27**, epoxy present, in the right position, with the
+correct description. **The first read was stale, not a failed write.**
+
+**Rule: when a GBP read contradicts a write that reported success, read again before
+concluding anything and before re-sending. Never re-issue a full-list replace off one
+disagreeing read.** The verification step is still mandatory — it is what caught the
+discrepancy — but one sample is not a verdict.
+
+Also re-confirmed in the same read: the interior painting description still has no
+"Melbourne's best", so the earlier fix survived this second full replace intact.
+
+### Current GBP service coverage
+
+15 structured + 12 free-form = **27**. Every service with a page on the site is now on the
+listing, and llms.txt lists all 11 service pages. Site, llms.txt and Google listing agree.

@@ -4,7 +4,7 @@
 
 ## Preparation is the job. The finish is the proof.
 
-# Melbourne's Best-Rated Local House Painters
+# Melbourne's 5-Star Rated Local House Painters
 
 Jetblack Painting is Melbourne's top-rated local painting company — 5-star rated, fully insured, and servicing 90+ suburbs.
 We offer interior, exterior, commercial, roof, and cabinet painting for homeowners, landlords, and businesses.

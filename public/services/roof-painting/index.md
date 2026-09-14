@@ -110,6 +110,14 @@ Explore our other painting services across Melbourne.
 
 ## Roof Painting work
 
+Charcoal grey tiled roof freshly painted by Jetblack Painting
+
+Colorbond metal roof painted by Jetblack Painting
+
+High-pressure roof cleaning and preparation by Jetblack Painting
+
+Roof restoration in progress on a weatherboard home, with a Jetblack Painting painter working from the ridge
+
 **Jetblack Painting** — Roof Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

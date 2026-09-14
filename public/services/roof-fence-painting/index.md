@@ -124,9 +124,15 @@ Explore our other painting services across Melbourne.
 
 ## Roof & Fence Painting work
 
+Charcoal tiled roof resprayed by Jetblack Painting in Melbourne
+
 Before — Bare timber picket fence masked up and prepared before painting by Jetblack Painting
 
 After — The same picket fence finished in white by Jetblack Painting
+
+Paling fence painted charcoal black beside a freshly oiled timber deck
+
+Merbau front fence finished with oil, bringing out the grain in the timber
 
 **Jetblack Painting** — Roof & Fence Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

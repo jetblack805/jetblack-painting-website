@@ -114,6 +114,14 @@ Explore our other painting services across Melbourne.
 
 ## Real Estate Painting work
 
+Sale-ready living room repainted by Jetblack Painting for a Melbourne real estate campaign
+
+Freshly painted open living room presented for sale by Jetblack Painting
+
+Styled living and dining room repainted by Jetblack Painting for sale presentation
+
+Open plan living and kitchen repainted by Jetblack Painting for a property sale
+
 **Jetblack Painting** — Real Estate Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

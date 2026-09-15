@@ -7051,3 +7051,72 @@ Resend domain `jetblackpainting.com` **verified, sending enabled**. 16/16 tests 
 all import clean. Near-duplicate 30.9%/53.7% 0 over gate. Metadata clean (a description was
 added to `/ask/` rather than carve an exemption into the checker). 0 JSON-LD errors.
 `aggregateRating` still 0. Generators stable on a second pass. 128 twins, 501 known paths.
+
+---
+
+## 2026-09-14 (evening) — Daily audit: all clean, no change made
+
+### Checks — every one passed
+
+| Step | Result |
+| --- | --- |
+| 0 Build health | Lockfile **77/77**; `/ask/` (merged 15:09) serving 200 |
+| 2.1 Three layers | Regenerate to **zero diffs** |
+| 2.3 Near-duplicate | 99 pages, **30.9%** avg, 53.7% worst, 0 over gate |
+| 2.4 Site health | Real pages 200; `/nope`, `/nope.zip`, `/assets/nope.js`, `/assets/fake.css` all 404; hashed bundles 200 with correct MIME |
+| 2.5 Structured data | 128 pages, **0 JSON-LD errors**, `aggregateRating` still 0 |
+| 3 Metadata | Clean |
+| 4 AEO | `text/markdown` with `Vary: Accept`, `no-store`, `X-Robots-Tag: noindex`; `ai-train=yes` intact; `/ask/` correctly has no twin |
+| 5 Speed | TTFB **0.40s**, `cf-cache-status: HIT`, 0 site-served images over 250KB |
+| 6 Indexing | og:image 200, sitemap 125 URLs, `/ask/` absent from it |
+| — | `worker/review-request.test.mjs` **16/16 pass** |
+
+**⚠️ New standing check, added today:** `POST /api/review-request` must return **503 "Not
+configured"** until `REVIEW_REQUEST_TOKEN` is set. Verified 503 again this run. If it ever
+returns anything else while that secret is unset, that is an unprotected send endpoint on the
+live domain and is the run's problem.
+
+### Ranking — 24 hours on, and why that is nearly meaningless
+
+| | Yesterday | Today |
+| --- | --- | --- |
+| Queries | 1,563 | 1,586 |
+| Impressions | 14,019 | **14,528** |
+| Clicks | 6 | **7** |
+
+The four terms that crossed into the top 10 yesterday all held:
+`painter mordialloc` 8.54 → **7.68** · `house painters sorrento` 8.55 → 8.59 ·
+`painter mentone` 9.09 → 9.43 · `render painting malvern east` 10.15 → **9.67**.
+
+⚠️ **Do not read that as a trend.** These are two 28-day rolling windows taken a day apart —
+**27 of the 28 days are the same data.** Any movement is one new day minus one dropped day.
+Holding is mildly reassuring against yesterday's "could be a single SERP sample" worry; it is
+not confirmation. The honest next check is a week out, not tomorrow.
+
+Still **0 clicks** across all four (≈113 impressions). The extra click was brand:
+`jetblack painting` 4 → 5.
+
+### Change made this run: none
+
+Steps 0–6 were clean, and today's authority work — the post-job review request tool — already
+merged as **#294**. Per Step 7.4, reporting and stopping is the correct outcome.
+
+### ⚠️ The daily brief is now stale in six places
+
+The log wins, per the brief's own rule. Flagged so the next run does not act on them:
+
+1. **"OFFERED, NOT BUILT: automated review-request flow"** — **BUILT**, merged today (#294).
+   Awaiting only the `REVIEW_REQUEST_TOKEN` secret.
+2. **"epoxy flooring … no service page and no evidence Jetblack offers it. Do not add until
+   Jimmy confirms"** — Jimmy confirmed 2026-09-14. The page has been live all along; epoxy is
+   now in `llms.txt` and on the GBP listing.
+3. **GSC Wizard listed as the connected primary source** — the subscription has **lapsed**;
+   every tool returns `payment_required`. Windsor's `searchconsole` connector is the working
+   route for queries. Indexing-tracker data has **no** fallback.
+4. **Near-duplicate baseline "96 suburb pages, 25.5% avg, worst ~47%"** — actually **99 pages,
+   30.9% avg, 53.7% worst**.
+5. **"sitemap 115/115"** — actually **125**.
+6. **"BASELINE 117 pages"** — actually **128**.
+
+Also worth noting for the next run: `/ask/` is a new noindex page that is deliberately absent
+from the sitemap and has no markdown twin. Neither is a defect.

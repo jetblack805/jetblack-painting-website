@@ -31,6 +31,8 @@ export const KNOWN_PATHS = new Set([
   "/blog/prepare-home-for-painting/index.md",
   "/blog/spray-vs-brush-painting-melbourne/",
   "/blog/spray-vs-brush-painting-melbourne/index.md",
+  "/blog/what-to-paint-before-you-sell/",
+  "/blog/what-to-paint-before-you-sell/index.md",
   "/blog/why-exterior-paint-fails/",
   "/blog/why-exterior-paint-fails/index.md",
   "/faq/",

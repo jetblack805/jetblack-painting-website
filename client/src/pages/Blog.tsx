@@ -24,6 +24,7 @@ const articleMeta: Record<string, { published: string; modified: string; section
   "/blog/why-exterior-paint-fails": { published: "2026-09-04", modified: "2026-09-04", section: "Guide" },
   "/blog/paint-sheen-levels-explained": { published: "2026-09-05", modified: "2026-09-05", section: "Guide" },
   "/blog/painting-over-dark-walls": { published: "2026-09-06", modified: "2026-09-06", section: "Method" },
+  "/blog/what-to-paint-before-you-sell": { published: "2026-09-15", modified: "2026-09-15", section: "Guide" },
 // </generated-blog-meta>
 };
 
@@ -113,6 +114,15 @@ export default function Blog() {
     // <generated-blog-cards>
     {
       id: 1000,
+      title: "What to Paint Before You Sell, and What to Skip",
+      excerpt: "Most vendors either paint everything or paint nothing. Both are expensive. The useful question is narrower: which surfaces are actually working on a buyer, and which ones nobody looks at.",
+      date: "September 2026",
+      category: "Guide",
+      readTime: "7 min read",
+      slug: "/blog/what-to-paint-before-you-sell"
+    },
+    {
+      id: 1001,
       title: "Painting Over Dark Walls Without the Extra Coats",
       excerpt: "Going from a dark feature wall to a light colour looks simple until the second coat still shows shadow through it. The fix is the primer, not a fourth coat of topcoat.",
       date: "September 2026",
@@ -121,7 +131,7 @@ export default function Blog() {
       slug: "/blog/painting-over-dark-walls"
     },
     {
-      id: 1001,
+      id: 1002,
       title: "Matt, Low Sheen, Satin, Gloss: Which Goes Where",
       excerpt: "Sheen decides how a wall handles light, scrubbing and imperfection. Picking it by appearance alone is how people end up with a hallway they cannot clean.",
       date: "September 2026",
@@ -130,7 +140,7 @@ export default function Blog() {
       slug: "/blog/paint-sheen-levels-explained"
     },
     {
-      id: 1002,
+      id: 1003,
       title: "Why Exterior Paint Fails: Reading the Symptoms",
       excerpt: "Exterior paint does not just wear out. It fails in specific patterns, and each pattern points at a different cause. Here is how to read what your walls are telling you before anyone opens a tin.",
       date: "September 2026",
@@ -139,7 +149,7 @@ export default function Blog() {
       slug: "/blog/why-exterior-paint-fails"
     },
     {
-      id: 1003,
+      id: 1004,
       title: "Can You Paint Through a Melbourne Winter?",
       excerpt: "Most exterior work can continue through winter, but the limits are real. Surface temperature and overnight condensation decide the day, not the month on the calendar.",
       date: "September 2026",
@@ -148,7 +158,7 @@ export default function Blog() {
       slug: "/blog/painting-melbourne-winter"
     },
     {
-      id: 1004,
+      id: 1005,
       title: "Spray or Brush? When Each Method Belongs",
       excerpt: "Spraying gives a finish brushing cannot match, but it needs an empty, maskable room. Here is the rule we actually work to, and why an occupied house is usually brushed and rolled.",
       date: "September 2026",

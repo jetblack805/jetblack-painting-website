@@ -64,6 +64,10 @@ Sheen decides how a wall handles light, scrubbing and imperfection. Picking it b
 
 Going from a dark feature wall to a light colour looks simple until the second coat still shows shadow through it. The fix is the primer, not a fourth coat of topcoat.
 
+### What to Paint Before You Sell, and What to Skip
+
+Most vendors either paint everything or paint nothing. Both are expensive. The useful question is narrower: which surfaces are actually working on a buyer, and which ones nobody looks at.
+
 ## Read the full articles
 
 Open any article below for the full guide.
@@ -80,6 +84,7 @@ Open any article below for the full guide.
 - [Why Exterior Paint Fails: Reading the Symptoms](/blog/why-exterior-paint-fails/)
 - [Matt, Low Sheen, Satin, Gloss: Which Goes Where](/blog/paint-sheen-levels-explained/)
 - [Painting Over Dark Walls Without the Extra Coats](/blog/painting-over-dark-walls/)
+- [What to Paint Before You Sell, and What to Skip](/blog/what-to-paint-before-you-sell/)
 
 **Jetblack Painting** — Jetblack Painting Blog | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

@@ -321,6 +321,8 @@ export const KNOWN_PATHS = new Set([
   "/projects/project-aspendale-render-repair-scaffold.webp",
   "/projects/project-aspendale-roofline-bay-view-800.webp",
   "/projects/project-aspendale-roofline-bay-view.webp",
+  "/projects/project-brighton-east-gable-fascia-800.webp",
+  "/projects/project-brighton-east-gable-fascia.webp",
   "/projects/project-brighton-exterior-after-800.webp",
   "/projects/project-brighton-exterior-after.webp",
   "/projects/project-brighton-exterior-before-800.webp",

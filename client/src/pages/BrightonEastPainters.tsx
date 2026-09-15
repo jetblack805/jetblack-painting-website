@@ -47,6 +47,29 @@ export default function BrightonEastPainters() {
       suburb={suburb}
       title="Brighton East Painters | Coastal Homes | Jetblack Painting"
       description="Coastal house painters in Brighton East — quality renovations on generous blocks. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`A ${suburb} exterior on a two-storey brick home where the whole job is the black: gable trusses, fascia, gutter, downpipes and the balcony balustrade all carried in one dark charcoal, against red brick that was never going to be painted.`}
+      projectImages={[
+        {
+          // Landscape, not the usual 1200x1600. Cropped RECT=130,600,1802,1000
+          // from the phone frame for two reasons: a parked car filled the
+          // bottom-right quarter, and roughly the top fifth was empty overcast
+          // sky. What is left is the part of the job worth looking at — the
+          // gable, the roofline and the balcony. The grid is md:grid-cols-2
+          // with object-cover and already carries 1400x1050, 1200x900 and
+          // square frames, so a landscape ratio needs no template change.
+          //
+          // No masking needed. Checked at 3x on the car (angled away, no plate
+          // and no rego label in frame), on the ground-floor glazing (curtains
+          // and tree reflections only) and for a street number (none visible
+          // anywhere in the frame). The crop removes the car regardless.
+          src: "/projects/project-brighton-east-gable-fascia.webp",
+          small: "/projects/project-brighton-east-gable-fascia-800.webp",
+          width: 1400,
+          height: 777,
+          alt: `Two-storey red brick ${suburb} home after exterior painting, with decorative gable trusses, fascia, gutter and balcony balustrade in dark charcoal against off-white gable infill and cream window frames`,
+          caption: `Gable trusses picked out in dark charcoal against off-white infill. Every truss is a separate shape to cut around and the lines have to hold straight across a pitch, where nothing you can rest a straightedge on is level. The fascia, gutter and downpipe carry the same charcoal so the roofline reads as one continuous edge, and the brick is left alone.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Brighton", link: "/painter-brighton" },
         { name: "Bentleigh", link: "/painter-bentleigh" },

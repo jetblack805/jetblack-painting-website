@@ -83,6 +83,12 @@ Yes. Interior repaints are one of our core services. We work with original plast
 
 Cost depends on size, scope, number of storeys, surface condition and whether you're doing interior, exterior or both. As a guide, a full interior repaint of a 3-bedroom Melbourne home typically runs $5,000 to $12,000, and an exterior repaint $4,000 to $8,000 for a single-storey home or $8,000 to $15,000 for a double-storey. These are indicative ranges — every job is priced after a site visit, because condition, access and scope move the number more than floor area does. We provide a detailed written quote after inspecting the property — no rough estimates over the phone. Call 0432 077 782 or use the quote form to book an inspection.
 
+## Recent work in Brighton East
+
+A Brighton East exterior on a two-storey brick home where the whole job is the black: gable trusses, fascia, gutter, downpipes and the balcony balustrade all carried in one dark charcoal, against red brick that was never going to be painted.
+
+Gable trusses picked out in dark charcoal against off-white infill. Every truss is a separate shape to cut around and the lines have to hold straight across a pitch, where nothing you can rest a straightedge on is level. The fascia, gutter and downpipe carry the same charcoal so the roofline reads as one continuous edge, and the brick is left alone.
+
 **Jetblack Painting** — House Painters Brighton East | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -85,9 +85,13 @@ Yes. We provide free, no-obligation written quotes across Keysborough and the su
 
 ## Recent work in Keysborough
 
-A Keysborough exterior repaint on an established brick home. The brick was left exactly as it was and everything around it changed — roof, fascia, gutter, window frames, front door and the porch slab underfoot. On a house like this one that is the whole decision: nothing structural moves, and the place still reads as a different house from the footpath.
+Three Keysborough jobs on the same principle: the brick is never painted. On an established brick home that meant the roof, fascia, gutter, window frames, front door and porch slab all changed while the brickwork stayed exactly as it was. On the newer estate homes it means the render and one feature element carry the colour and the brick sits against them untouched. Nothing structural moves, and the place still reads as a different house from the footpath.
 
 A Keysborough entry after repainting. Navy on the door, dark grey through the fascia and gutter, the tile roof brought back to black and the porch slab recoated — the brick itself untouched.
+
+A Keysborough estate home where the render and the balcony box do all the work. Pale grey runs across every rendered face, the box under the upper window is carried in a deep red-brown, and the brick to the right is untouched — so the colour reads as a deliberate choice against the brick rather than a coat over everything.
+
+The entry return on a single-storey Keysborough home, in a deep terracotta red against an off-white column. A feature wall this saturated only works if the cutting-in is clean — every edge here runs to brick, to a window reveal or to a corner, and there is nowhere for a wobble to hide.
 
 **Jetblack Painting** — House Painters Keysborough | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 

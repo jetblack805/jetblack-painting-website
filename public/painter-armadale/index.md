@@ -88,6 +88,8 @@ Yes. We provide free, no-obligation written quotes across Armadale and the surro
 
 Commercial facade work on High Street, Armadale. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through. Also ladder work on a two-tone commercial elevation, and a period weatherboard entry in Armadale finished in a single off-white with the door in black.
 
+Before. The frontage in its original dark charcoal, drop sheets already down along the footpath. The bus shelter sits hard against the building and the stop stayed in service the whole way through — that constraint shaped the job more than the paint did.
+
 White meeting the original charcoal on a hard edge, halfway through. Note the cones, the bunting and the pedestrian sign — this is a live bus stop on a main road, and the footpath stayed open the whole time.
 
 Finished. Going this light on a heritage frontage is unforgiving — every patch, every crack and every join in the render shows if the preparation underneath was rushed.

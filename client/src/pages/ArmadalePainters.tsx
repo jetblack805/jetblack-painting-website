@@ -25,6 +25,37 @@ export default function ArmadalePainters() {
       projectSummary={`Commercial facade work on High Street, ${suburb}. A rendered heritage frontage taken from charcoal to white and worked off a scissor lift, on a main road with a bus stop against the building — so the footpath had to stay open and safe the whole way through. Also ladder work on a two-tone commercial elevation, and a period weatherboard entry in ${suburb} finished in a single off-white with the door in black.`}
       projectImages={[
         {
+          // The BEFORE the page never had. projectSummary has always promised
+          // "taken from charcoal to white", but the images jumped straight from
+          // half-painted to complete, so the charcoal was never shown.
+          //
+          // Source was a pre-composed two-up collage from Jimmy; only the top
+          // half is used (RECT=0,0,2048,1010) and the page supplies its own
+          // figcaption, the same handling the Chadstone collage got. Collages
+          // with someone else's overlay text do not ship on this site.
+          //
+          // MASK=175,778,110,40 pixelates an enamel "95 Kooyong Rd" plate on the
+          // render, left of the door. Street numbers do not go on this site —
+          // one was blurred on 2026-08-02 and the Brighton before was cropped
+          // for the same reason. It sits mid-composition here with the building
+          // running the full width, so cropping it out would take a third of
+          // the frontage with it; masking is what MASK exists for. Verified
+          // unreadable at 10x in the output.
+          //
+          // Also checked and NOT masked: number plates on the parked cars are
+          // not legible even at 5x on the source, and the person at the bus
+          // stop is masked and in sunglasses, incidental in a public street.
+          // The EDWORKS sign is a tenant's own advertising on their own
+          // building, left as found.
+          src: "/projects/project-armadale-high-st-before.webp",
+          small: "/projects/project-armadale-high-st-before-800.webp",
+          width: 1400,
+          height: 690,
+          alt: `A High Street ${suburb} commercial building in its original dark charcoal render before repainting, with drop sheets laid along the footpath and a bus shelter against the frontage`,
+          caption:
+            "Before. The frontage in its original dark charcoal, drop sheets already down along the footpath. The bus shelter sits hard against the building and the stop stayed in service the whole way through — that constraint shaped the job more than the paint did.",
+        },
+        {
           // Jimmy supplied a third frame of this job — the full "before", with
           // the whole terrace still in charcoal. It is not here on purpose. That
           // frame carried the building's street number and road name painted on

@@ -303,6 +303,8 @@ export const KNOWN_PATHS = new Set([
   "/privacy/index.md",
   "/projects/project-armadale-commercial-facade-800.webp",
   "/projects/project-armadale-commercial-facade.webp",
+  "/projects/project-armadale-high-st-before-800.webp",
+  "/projects/project-armadale-high-st-before.webp",
   "/projects/project-armadale-high-st-complete-800.webp",
   "/projects/project-armadale-high-st-complete.webp",
   "/projects/project-armadale-high-st-half-painted-800.webp",

@@ -209,7 +209,13 @@ function extractLocalContent(source, suburb) {
 function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    // HousePainter is schema.org's specific subtype for this trade; LocalBusiness
+    // and HomeAndConstructionBusiness are its broader parents. Declaring all three
+    // keeps every consumer that only understands the general types working while
+    // giving the specific one to those that do. Kept identical to the same #business
+    // node in client/index.html and client/src/pages/Home.tsx — one entity, three
+    // rendering layers, so a change here must be made in all three.
+    "@type": ["HousePainter", "HomeAndConstructionBusiness", "LocalBusiness"],
     "@id": `${SITE_URL}/#business`,
     name: "Jetblack Painting",
     image: `${SITE_URL}/og-image.jpg`,
@@ -225,6 +231,12 @@ function localBusinessSchema() {
     telephone: PHONE_DISPLAY,
     email: EMAIL,
     url: SITE_URL,
+    // Jimmy is on site on every job — the business's single biggest
+    // differentiator, and until now it was absent from structured data on
+    // every page except the hand-maintained homepage. Stable identity fact on
+    // a shared @id, so repeating it per page is restatement of one node, not a
+    // duplicated claim (unlike aggregateRating — see the note above).
+    founder: { "@type": "Person", name: "Jimmy Demirci" },
     priceRange: "$$",
     sameAs: [
       "https://www.instagram.com/jetblack_painting",

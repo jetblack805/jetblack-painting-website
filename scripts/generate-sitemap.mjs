@@ -138,6 +138,7 @@ const ROUTES = [
   { path: "/blog/why-exterior-paint-fails/", priority: "0.5", changefreq: "yearly" },
   { path: "/blog/paint-sheen-levels-explained/", priority: "0.5", changefreq: "yearly" },
   { path: "/blog/painting-over-dark-walls/", priority: "0.5", changefreq: "yearly" },
+  { path: "/blog/what-to-paint-before-you-sell/", priority: "0.5", changefreq: "yearly" },
 // </generated-blog-routes>
   { path: "/faq/",                                              priority: "0.5", changefreq: "monthly" },
   // /review-us/ is deliberately absent: it is noindex (a thin utility page),

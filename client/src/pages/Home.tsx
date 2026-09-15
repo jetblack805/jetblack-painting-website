@@ -21,13 +21,16 @@ const QuoteForm = lazy(() => import("@/components/QuoteForm"));
 const homeSchema = [
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    // Same #business node as client/index.html and the generator's
+    // localBusinessSchema(). All three must stay in step.
+    "@type": ["HousePainter", "HomeAndConstructionBusiness", "LocalBusiness"],
     "@id": "https://jetblackpainting.com/#business",
     "name": "Jetblack Painting",
     "image": "https://jetblackpainting.com/og-image.jpg",
     "telephone": "0432 077 782",
     "email": "jimmy@jetblackpainting.com",
     "url": "https://jetblackpainting.com",
+    "founder": { "@type": "Person", "name": "Jimmy Demirci" },
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",

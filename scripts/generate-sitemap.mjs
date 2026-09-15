@@ -3,6 +3,14 @@ import path from "node:path";
 
 const SITE_URL = "https://jetblackpainting.com";
 const OUT_PATH = path.resolve("public/sitemap.xml");
+// sitemap.xml exists at the repo root as well as in public/. Only the public/
+// copy is deployed, so the root copy silently rotted to 50 URLs while the real
+// one grew to 125 — harmless on the live site, but a loaded gun: anyone
+// treating the root file as current (or copying it over public/) would cut the
+// sitemap by 60%. robots.txt, llms.txt and local-seo.json are kept in step by
+// hand; this one is generated, so the generator writes both and the pair
+// cannot drift again.
+const ROOT_MIRROR_PATH = path.resolve("sitemap.xml");
 
 const ROUTES = [
   { path: "/",                                                 priority: "1.0", changefreq: "weekly"  },
@@ -180,4 +188,6 @@ ${ROUTES.map(r => `  <url>
 
 fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
 fs.writeFileSync(OUT_PATH, xml, "utf-8");
+fs.writeFileSync(ROOT_MIRROR_PATH, xml, "utf-8");
 console.log(`Sitemap written to ${OUT_PATH} with ${ROUTES.length} URLs (${touched.size} lastmod bumped to ${today}).`);
+console.log(`Root mirror written to ${ROOT_MIRROR_PATH} (not deployed; kept identical so the pair cannot drift).`);

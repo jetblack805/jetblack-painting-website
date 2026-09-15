@@ -94,6 +94,7 @@ export const KNOWN_PATHS = new Set([
   "/gallery/gallery-roof-victorian-restoration.webp",
   "/gallery/service-interior-painting.webp",
   "/googlebc9e38933d2233a8",
+  "/guides/before-you-list.pdf",
   "/hero-poolhouse.webp",
   "/index.md",
   "/keysborough-painters/",

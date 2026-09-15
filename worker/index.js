@@ -383,6 +383,25 @@ export default {
       headers.set("X-Robots-Tag", "noindex");
     }
 
+    // /guides/ holds print-ready PDF handouts — the one-page version of a guide
+    // that already exists as a full HTML page. before-you-list.pdf condenses
+    // /blog/what-to-paint-before-you-sell/.
+    //
+    // Same split as the Markdown twins and /social/ above: fetchable, not
+    // indexable. The HTML page is the canonical version and carries the schema,
+    // the FAQ block and a path to a quote; a PDF outranking it would strip all
+    // three and leave a reader in a dead end. noindex by header rather than a
+    // robots.txt Disallow so the file stays fetchable for anyone the link is
+    // sent to, and so it can still be shared directly.
+    //
+    // Cached for a day rather than a year: the URL is stable and handed out by
+    // hand, so a revised sheet has to be able to replace the old one without a
+    // filename change invalidating every link already in circulation.
+    if (pathname.startsWith("/guides/")) {
+      headers.set("X-Robots-Tag", "noindex");
+      headers.set("Cache-Control", "public, max-age=86400");
+    }
+
     // RFC 8288 Link headers on real HTML pages, pointing agents at resources
     // that actually exist: the canonical URL (same value as the in-page meta
     // tag, exposed here too for agents that read headers without parsing

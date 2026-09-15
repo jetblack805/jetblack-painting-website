@@ -7120,3 +7120,105 @@ The log wins, per the brief's own rule. Flagged so the next run does not act on 
 
 Also worth noting for the next run: `/ask/` is a new noindex page that is deliberately absent
 from the sitemap and has no markdown twin. Neither is a defect.
+
+---
+
+## 2026-09-15 (evening) — Daily audit: first top-10 holdings on non-brand terms
+
+Steps 0–6 clean. No site change made; the finding is the change in what is now measurable.
+
+### Checks: all passed
+
+Lockfile **77/77** (control assertion returned False, so the check could fail) · three layers
+regenerate to **zero diffs** · FAQ schema vs visible text **125 pages, 565 questions, 0 problems**
+· suburb near-duplicate **30.9% avg, worst 53.4%** (narre-warren/cranbourne), **0 over the 55%
+gate** · blog gate 6 checked, 0 failed · **731 JSON-LD blocks, 0 parse errors, 0 missing required
+fields, 0 `aggregateRating` in static pages** · metadata across **129 pages**: 0 duplicate
+titles/descriptions/H1s/canonicals, 0 missing descriptions, 0 keywords tags, 0 descriptions over
+158, 1 title over 60 (`/painter-hastings/` at 64, accepted) · bad URLs 404 in both forms **and**
+under `/assets/`, while real hashed bundles still serve 200 with correct content types ·
+**sitemap 126/126 all 200, zero redirect hops** · markdown negotiation returns `text/markdown`
+with `Vary: Accept` and `X-Robots-Tag: noindex`, normal Accept returns HTML · `ai-train=yes`
+intact · **llms.txt carries no price figures** — all three `$` matches read and confirmed as the
+legitimate $10 million / $10M public liability · TTFB 0.20–0.60s, all cache HIT · **0 site-served
+images over 250KB** · og:image and twitter:image resolve to one URL, 200.
+
+### ⚠️ The CTR re-test condition has been met for the first time
+
+The settled diagnosis says CTR is **not** the limiting factor, with an explicit release
+condition: *"Re-test when a page holds top-10 on a term with volume."* As of this run, six
+queries hold the top 10 with 20+ impressions:
+
+| Query | Pos | Impr | Clicks |
+| --- | --- | --- | --- |
+| `jetblack painting` | 2.57 | 28 | **5** |
+| `jetblack` | 4.21 | 63 | 0 |
+| `painters sorrento bay` | 5.47 | 30 | 0 |
+| `painter mordialloc` | 7.63 | 38 | 0 |
+| `house painters sorrento` | 8.73 | 30 | 0 |
+| `render painting malvern east` | 9.50 | 22 | 0 |
+
+**This is not yet evidence of a CTR problem, and must not be reported as one.** The four
+non-brand top-10 queries carry **120 impressions between them**. At those positions that predicts
+roughly 3 clicks; 0 were observed. Suggestive, nowhere near conclusive — a single week of normal
+variance covers it. The honest threshold is ~100+ impressions on *one* top-10 query.
+
+`jetblack` at position 4.2 with 63 impressions and zero clicks is **not** a CTR failure either:
+"jetblack" is a generic term with its own unrelated brands, and those searchers are not looking
+for a painter. `jetblack painting` — the query that actually means this business — converts at
+5 clicks from 28 impressions.
+
+There is also a confound that must be stated before anyone treats organic position as visibility:
+`painter mordialloc` is a **local-intent** query, so the map pack sits above the organic block.
+An organic 7.6 on that query is well below the fold in practice. This reinforces rather than
+challenges the standing finding that **the map pack is the binding constraint on leads**.
+
+### Tracked eleven vs the 2026-08-19 baseline
+
+Impressions are up sharply almost everywhere; clicks remain 0 on all eleven.
+
+| Suburb | Impr (base) | Position (base) | Move |
+| --- | --- | --- | --- |
+| Mordialloc | 144 (77) | 14.69 (29.18) | **▲14.5** |
+| Mentone | 121 (61) | 15.92 (24.82) | ▲8.9 |
+| Highett | 131 (85) | 13.96 (17.32) | ▲3.4 |
+| Collingwood | 398 (129) | 17.04 (17.65) | ▲0.6 |
+| Dromana | 17 (38) | 18.94 (19.53) | ▲0.6 |
+| Murrumbeena | 198 (86) | 16.47 (17.00) | ▲0.5 |
+| McKinnon | 46 (57) | 13.02 (11.19) | ▼1.8 |
+| Aspendale | 4 (21) | 15.25 (10.00) | ▼5.3 |
+| Donvale | 216 (49) | 23.39 (16.63) | ▼6.8 |
+| Sorrento | 269 (100) | 14.80 (7.13) | ▼7.7 |
+| **Patterson Lakes** | 88 (39) | **24.89 (6.83)** | **▼18.1** |
+
+Two declines clear the 20-impression noise threshold and are therefore real, not SERP sampling:
+**Patterson Lakes ▼18.1** and **Sorrento ▼7.7**. Both had been among the strongest positions on
+the property, and both fell while their impressions more than doubled — consistent with ranking
+for a wider, more competitive query set rather than losing ground on the original terms. Worth
+watching; not worth acting on from one reading.
+
+Property totals, 28 days: **14,414 impressions, 8 clicks** (yesterday's window: 14,528 / 7).
+⚠️ Same caveat as yesterday — consecutive 28-day windows share 27 of 28 days.
+
+### Change made this run: none
+
+Steps 0–6 clean, and the authority work available this run was measurement, not a site edit. Per
+Step 7.4 that is the correct outcome. Today's three shipped changes (#296 schema `founder` +
+`HousePainter`, #297 the pre-sale vendor guide, #298 the hosted one-pager) were all Jimmy-directed
+and are already merged and verified live.
+
+### Brief staleness — carried forward, plus new items
+
+Items 1–6 from this morning's entry still stand. Additionally:
+
+7. **"Root sitemap.xml (50 URLs) is stale vs public/sitemap.xml"** — **fixed** in #298's
+   predecessor; `generate-sitemap.mjs` now writes both paths from the same string, so the pair
+   cannot drift. Both are 126 URLs.
+8. **"OPEN QUESTION: epoxy flooring … do not add until Jimmy confirms"** — still listed in the
+   brief's standing context as well as its step list; confirmed real on 2026-09-14.
+9. Baselines have moved again: **129 pages** (brief says 117), **sitemap 126** (brief says 115),
+   **565 FAQ questions across 125 pages** (brief says 489 across 117).
+10. New since this morning: `/guides/before-you-list.pdf` is a hosted PDF served `noindex` with
+    `Cache-Control: public, max-age=86400`, deliberately absent from the sitemap and with no
+    markdown twin. Not a defect. `api.indexnow.org` remains proxy-blocked, so the new URLs from
+    #297 and #298 could not be submitted from here.

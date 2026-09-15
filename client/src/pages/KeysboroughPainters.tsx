@@ -22,7 +22,7 @@ export default function KeysboroughPainters() {
       suburb={suburb}
       title="Keysborough Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Keysborough — established brick family homes and commercial buildings. Free quotes, 5-year guarantee. Call 0432 077 782."
-      projectSummary={`A ${suburb} exterior repaint on an established brick home. The brick was left exactly as it was and everything around it changed — roof, fascia, gutter, window frames, front door and the porch slab underfoot. On a house like this one that is the whole decision: nothing structural moves, and the place still reads as a different house from the footpath.`}
+      projectSummary={`Three ${suburb} jobs on the same principle: the brick is never painted. On an established brick home that meant the roof, fascia, gutter, window frames, front door and porch slab all changed while the brickwork stayed exactly as it was. On the newer estate homes it means the render and one feature element carry the colour and the brick sits against them untouched. Nothing structural moves, and the place still reads as a different house from the footpath.`}
       projectImages={[
         {
           // Cropped in from the left. The original frame carried the house
@@ -41,6 +41,32 @@ export default function KeysboroughPainters() {
           height: 1600,
           alt: `Entry of a ${suburb} brick home after an exterior repaint, with a navy front door, dark grey fascia and gutter, a black tile roof and a repainted porch slab`,
           caption: `A ${suburb} entry after repainting. Navy on the door, dark grey through the fascia and gutter, the tile roof brought back to black and the porch slab recoated — the brick itself untouched.`,
+        },
+        {
+          // 1200x1600 at QUALITY=0.68. Lower than the 0.74 used on the entry
+          // door above, and for the same reason pushed further: this frame is
+          // mostly foliage, mown grass and flat overcast sky, all of which webp
+          // spends bits on badly. At the 0.82 default it came out at 339KB,
+          // over the 250KB ceiling the speed baseline sets for anything in
+          // public/. 0.72 still landed at 253KB; 0.68 gets it to 242KB with no
+          // visible loss on the render faces, which are what the photo is of.
+          src: "/projects/project-keysborough-render-two-storey.webp",
+          small: "/projects/project-keysborough-render-two-storey-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Two-storey brick and render home in ${suburb} after painting, with pale grey render, a deep red-brown clad box beneath the upper balcony, charcoal window frames and the brickwork left unpainted`,
+          caption: `A ${suburb} estate home where the render and the balcony box do all the work. Pale grey runs across every rendered face, the box under the upper window is carried in a deep red-brown, and the brick to the right is untouched — so the colour reads as a deliberate choice against the brick rather than a coat over everything.`,
+        },
+        {
+          // 1200x1600 at QUALITY=0.72 → 248KB, just under the ceiling. Kept a
+          // notch higher than the frame above because the saturated red render
+          // is the subject here and blocks up first when webp is pushed.
+          src: "/projects/project-keysborough-entry-feature-wall.webp",
+          small: "/projects/project-keysborough-entry-feature-wall-800.webp",
+          width: 1200,
+          height: 1600,
+          alt: `Entry of a single-storey ${suburb} home after painting, with an off-white rendered portico column beside a deep terracotta-red feature wall and unpainted brick to either side`,
+          caption: `The entry return on a single-storey ${suburb} home, in a deep terracotta red against an off-white column. A feature wall this saturated only works if the cutting-in is clean — every edge here runs to brick, to a window reveal or to a corner, and there is nowhere for a wobble to hide.`,
         },
       ]}
       neighbouringSuburbs={[

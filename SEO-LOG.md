@@ -7222,3 +7222,92 @@ Items 1–6 from this morning's entry still stand. Additionally:
     `Cache-Control: public, max-age=86400`, deliberately absent from the sitemap and with no
     markdown twin. Not a defect. `api.indexnow.org` remains proxy-blocked, so the new URLs from
     #297 and #298 could not be submitted from here.
+
+---
+
+## 2026-09-16 — Daily audit: the zero-click period has ended
+
+Steps 0–6 clean. No site change. Step 7 was entity/AEO consistency, also clean. The finding
+is in the ranking data, and it corrects two standing entries in the brief.
+
+### Checks: all passed
+
+Lockfile **77/77** (control returned False, so the check could fail) · three layers regenerate to
+**zero diffs** · FAQ schema vs visible text **125 pages, 565 questions, 0 mismatches** · **732
+JSON-LD blocks, 0 parse errors, 0 `aggregateRating` in static pages, 0 missing required fields** ·
+suburb near-duplicate **30.8% avg / 53.7% worst, 0 over** the 45%/55% gates · blog gate 6 checked,
+0 failed · metadata across **129 pages**: 0 duplicate titles/descriptions/H1s/canonicals, 0 missing
+descriptions, 0 keywords tags, 0 descriptions over 158, 1 title over 60 (`/painter-hastings/` at
+64, accepted) · bad URLs 404 in both forms **and** under `/assets/`, real hashed bundles still 200
+with correct content types · **sitemap 126/126 at 200, zero redirect hops** · markdown negotiation
+returns `text/markdown` with `Vary: Accept` and `X-Robots-Tag: noindex`, normal Accept returns HTML
+· `ai-train=yes` intact · TTFB 0.23–0.27s, all cache HIT · **0 site-served images over 250KB** ·
+og:image and twitter:image resolve to one URL, 200 · **no competitor watermark anywhere**.
+
+### Step 7 — entity / AEO consistency, clean
+
+Swept the locked facts across `client/index.html`, `llms.txt`, `local-seo.json`,
+`organizationSchema.ts`, `aggregateRatingSchema.ts` and the generator. No drift.
+
+**Review count: 11 genuine occurrences, every one reads 17.** The brief says eight places; it has
+grown to eleven. Four apparent misses were my own regex catching `$10 million` and `18+ years`
+sitting near the word "reviews" — read before reporting, exactly as the brief's `$`-in-llms.txt
+warning demands.
+
+**Phone format differs by design and is not a defect:** prose and `llms.txt` carry the display
+form `0432 077 782`; `local-seo.json` and `organizationSchema.ts` carry E.164 `+61432077782`,
+which is what schema.org/telephone wants.
+
+**Markdown twins checked against the HTML they mirror** — 129 twins, 0 wrong phone numbers, 0 wrong
+review counts, 0 wrong years claims, and **0 price figures that do not also appear in that twin's
+own HTML**. The 56 `$` matches are the homepage FAQ's published indicative ranges
+(`$4,000`–`$15,000`, sourced from `client/src/homeFaqs.ts`) correctly mirrored. `llms.txt` carries
+**zero** price figures. Control: 129/129 twins carry the correct phone, proving the scan read them.
+
+### ⚠️ Two standing entries are now wrong
+
+**1. "Clicks stepped to 0/day on 2026-08-11, sustained."** No longer true. Daily clicks for the
+last 13 settled days: 0, 0, 1, 0, 1, 3, 1, 2, 1, 0, 1, 1, 2 — **13 clicks in 13 days**. The
+zero-click period has ended.
+
+**2. "Every click the site earns is brand."** No longer true. Seven clicks in the last seven days,
+across **six different pages**, none of them brand queries:
+
+| Page | Impr | Clicks |
+| --- | --- | --- |
+| `/painter-toorak/` | 106 | **2** |
+| `/` | 133 | 1 |
+| `/painter-balwyn/` | 117 | 1 |
+| `/painter-cheltenham/` | 61 | 1 |
+| `/painter-mordialloc/` | 41 | 1 |
+| `/services/body-corporate-painting/` | 28 | 1 |
+
+Toorak is notable: the brief lists it among suburbs that are "organically unreachable", moved to
+off-page channels on 2026-08-17. It is the single best-converting page this week.
+`/services/body-corporate-painting/` earning a click matters more than its size suggests — that is
+the commercial segment, not a homeowner browsing.
+
+### ⚠️ Clyde North is still inflating the impression count
+
+Property totals read **17,664 impressions / 16 clicks** over 28 days, against 14,414 / 8 measured
+yesterday. Two windows a day apart share 27 of 28 days, so that delta is one day entering and one
+leaving — do not read the headline as a doubling.
+
+Over the last 7 days: **5,151 impressions, 7 clicks**. `/painter-clyde-north/` alone accounts for
+**1,120 impressions (21.7%) and zero clicks**, consistent with the synthetic pattern established
+earlier (510 queries against 5–12 for every sibling, 4.3 impressions per query, ranking for terms
+absent from the page). Excluding it, the property saw 4,031 real impressions.
+
+**So: impression growth is substantially Clyde North noise. Click growth is not.** The clicks are
+spread across six genuine pages and include a commercial service page.
+
+### Change made this run: none
+
+Steps 0–6 clean and Step 7 found no inconsistency to fix. Per Step 7.4 that is the correct outcome.
+
+### Brief staleness — carried forward, plus two new
+
+Previous items stand. New:
+11. **"clicks 0/day since 2026-08-11, sustained"** — ended; ~1/day for the last 13 days.
+12. **"Every click the site earns is brand"** — false; 7 non-brand clicks across 6 pages this week.
+13. Review count lives in **eleven** places now, not eight. All read 17.

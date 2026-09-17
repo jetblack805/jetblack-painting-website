@@ -7538,6 +7538,41 @@ Recorded honestly: **GBP posts are a freshness signal, not a discovery lever.** 
 not fix 33 mobile Maps impressions. It was published because the cadence is already approved and the
 surface is free, not because it addresses the finding above.
 
+### Second action: Instagram revived
+
+Instagram read before acting: **582 followers**, and daily reach sits at **0–2** — except 12–14 July
+(72 / 134 / 46) and 5 August (137). Those are the days he posted. The audience exists and the
+account is dormant; a post is worth roughly 130 reach.
+
+Published a two-image before/after carousel — the Mordialloc weatherboard two-storey, pale grey to
+near-black with the roof reversed to light. Media id `18111719153039473`. Both images verified 200
+and inside Instagram's 4:5–1.91:1 ratio window (874×880, ratio 0.993) before posting.
+
+Caption describes only what is visible in the photographs. **No paint brand or colour name was
+stated** — those are not known and must not be guessed.
+
+### Listing suppression ruled out
+
+Checked, because 33 mobile Maps impressions is low enough to suggest filtering rather than mere
+prominence: `location_metadata_duplicate_location` is **null** (no duplicate splitting signals),
+`location_open_info_status` is **OPEN**, opening year **2015** (an eleven-year age signal), and
+`has_google_updated` is null. Address and lat/long read null, which is correct and expected for a
+service-area business with a hidden address. **Nothing is suppressing the listing. It is simply
+not prominent enough.**
+
+### ⚠️ `/ask/` is dead weight until the token is set
+
+Confirmed by reading the page: `public/ask/index.html` posts to `/api/review-request` and has **no
+fallback path** — no `sms:` link, no `mailto:`, no copyable review URL. With `REVIEW_REQUEST_TOKEN`
+unset the whole tool does nothing. An SMS-link fallback would remove the token dependency entirely
+and is the obvious next build, but it is a component change and therefore needs Jimmy's go-ahead
+before it ships.
+
+Zero-setup interim: Jimmy can send the ask by text himself using the verified deep link
+`https://g.page/r/CS0L-iKiqJlHEBM/review`. Any wording must keep the policy shape the worker file
+already documents — same ask to every customer, "good or bad" said out loud, no incentive, and the
+offer to come back and fix something placed **after** the link and framed as service.
+
 ### Brief staleness — carried forward, plus three new
 
 Previous items stand. New:

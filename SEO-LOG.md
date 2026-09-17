@@ -7425,3 +7425,159 @@ Previous items stand, except #12 which is **superseded** by the correction above
     at 0.07% CTR. Segment by device before quoting either figure.
 15. **Mobile CTR is 4.79% at position 23** — the site converts when a real person sees it.
 16. **Peak click week was 2026-07-06 (16 clicks / 198 impressions)**, not any recent week.
+
+---
+
+## 2026-09-17 — Maps diagnosis: the profile converts at 7.6% and is shown to nobody
+
+Jimmy asked to be made visible "all over the net, socials and AI and maps immediately". Audited the
+Google Business Profile end to end before changing anything. The result is the clearest diagnosis
+this log has recorded.
+
+### The profile itself is not the problem — it is close to complete
+
+| Field | State |
+| --- | --- |
+| Primary category | Painter and Decorator (`gcid:painter`) ✓ |
+| Additional categories | Painting, Property maintenance ✓ |
+| Service items | **27** (15 structured + 12 free-form) ✓ |
+| Service area | **20 places — Google's hard cap** ✓ |
+| Description | 750-char limit, uses 18 years / $10M / 5-year guarantee ✓ |
+| Hours | 7 days, Mon–Fri 07:00–17:00 ✓ |
+| Social URLs | Instagram, YouTube, TikTok, Facebook, LinkedIn, Pinterest ✓ |
+| Photos | **100+**, most recent 2026-09-10 ✓ |
+| Reviews | 17, **all five stars, every one replied to** ✓ |
+| Voice of Merchant | **true** — listing is healthy ✓ |
+| Pending edits | none |
+
+There is no meaningful on-profile gap left to close. Do not spend another cycle "optimising the
+GBP fields" — that work is finished.
+
+### ⚠️ And it is invisible
+
+Google Business Profile, last 3 months:
+
+| Metric | Value |
+| --- | --- |
+| Mobile **Maps** impressions | **33** |
+| Desktop Maps impressions | 70 |
+| Mobile Search impressions | 133 |
+| Desktop Search impressions | 157 |
+| **Total** | **393** (≈4/day) |
+| Call clicks | 5 |
+| Website clicks | 25 |
+| Direction requests | 1 |
+
+**33 mobile Maps impressions in ninety days.** The listing essentially never enters the map pack.
+
+Conversion is not the issue — **31 actions from 393 impressions is a 7.9% action rate.** People who
+see this profile act on it.
+
+### ⚠️ THE FINDING: 100% of discovery is brand
+
+The search keywords that surfaced the profile in 3 months, in full:
+
+| Keyword | Unique users |
+| --- | --- |
+| jetblack | 37 |
+| jetblack | 26 |
+| jet black | <15 |
+| jet-black | <15 |
+
+**That is the complete list.** Not one discovery term — no "painters near me", no "house painters
+bayside", nothing. The Maps listing is found only by people who already know the name.
+
+Set beside the 2026-09-17 website finding (roughly half of organic clicks are the query "jetblack
+painting"), the conclusion is the same on both surfaces and should be treated as the central fact
+about this business's search presence:
+
+> **Jetblack has no discovery channel operating. Every surface that works is brand.**
+
+### Which lever actually moves Maps
+
+Maps ranking is proximity + prominence + relevance.
+
+- **Proximity** — fixed. Mordialloc. Not a lever.
+- **Relevance** — maxed. Categories and 27 service items are done.
+- **Prominence** — the only remaining lever, and for a service-area business the dominant component
+  is **reviews: count, velocity and recency.**
+
+Review velocity has stalled. Dates of the last reviews: 2026-08-21, 2026-08-21, 2026-08-11,
+2026-06-30, 2026-06-01, 2026-05-01. **Twenty-seven days since the most recent one.** February alone
+produced seven; the rate has fallen away since.
+
+### ⚠️ The review engine is built, correct, and switched OFF
+
+`worker/review-request.js` exists and is deployed. `/ask/` returns 200 — a single-screen phone tool
+designed for Jimmy to fire a request in fifteen seconds standing in a driveway. It is written to
+Google policy: no gating, no star-picker, no incentive, asks every customer the same way.
+
+It fails closed without its secret:
+
+```
+$ curl -X POST https://jetblackpainting.com/api/review-request -d '{"token":"probe"}'
+{"error":"Not configured"}
+```
+
+`REVIEW_REQUEST_TOKEN` has never been set in the Cloudflare Worker settings. **The single highest-
+leverage growth mechanism this property has is complete and has never been turned on.** This is one
+environment variable and only Jimmy can set it.
+
+Verified the same run: the review deep link `g.page/r/CS0L-iKiqJlHEBM/review` is **correct**. The
+sandbox proxy 403s `g.page`, so it could not be fetched — but base64url-decoding the short link
+yields `092D0BFA22A2A899471013`, carrying CID `5159340262454594349` little-endian, which matches the
+`location_metadata_maps_uri` Google reports for this listing. The link is not the blocker.
+
+### Action taken this run
+
+Published the queued GBP post `armadale-high-st-complete` (Armadale High Street commercial facade,
+LEARN_MORE → `/painter-armadale/`), post id `3520865280135392973`, state PROCESSING. Queue updated:
+3 posted, 32 remaining, next `armadale-period-entry`.
+
+Recorded honestly: **GBP posts are a freshness signal, not a discovery lever.** One more post will
+not fix 33 mobile Maps impressions. It was published because the cadence is already approved and the
+surface is free, not because it addresses the finding above.
+
+### Second action: Instagram revived
+
+Instagram read before acting: **582 followers**, and daily reach sits at **0–2** — except 12–14 July
+(72 / 134 / 46) and 5 August (137). Those are the days he posted. The audience exists and the
+account is dormant; a post is worth roughly 130 reach.
+
+Published a two-image before/after carousel — the Mordialloc weatherboard two-storey, pale grey to
+near-black with the roof reversed to light. Media id `18111719153039473`. Both images verified 200
+and inside Instagram's 4:5–1.91:1 ratio window (874×880, ratio 0.993) before posting.
+
+Caption describes only what is visible in the photographs. **No paint brand or colour name was
+stated** — those are not known and must not be guessed.
+
+### Listing suppression ruled out
+
+Checked, because 33 mobile Maps impressions is low enough to suggest filtering rather than mere
+prominence: `location_metadata_duplicate_location` is **null** (no duplicate splitting signals),
+`location_open_info_status` is **OPEN**, opening year **2015** (an eleven-year age signal), and
+`has_google_updated` is null. Address and lat/long read null, which is correct and expected for a
+service-area business with a hidden address. **Nothing is suppressing the listing. It is simply
+not prominent enough.**
+
+### ⚠️ `/ask/` is dead weight until the token is set
+
+Confirmed by reading the page: `public/ask/index.html` posts to `/api/review-request` and has **no
+fallback path** — no `sms:` link, no `mailto:`, no copyable review URL. With `REVIEW_REQUEST_TOKEN`
+unset the whole tool does nothing. An SMS-link fallback would remove the token dependency entirely
+and is the obvious next build, but it is a component change and therefore needs Jimmy's go-ahead
+before it ships.
+
+Zero-setup interim: Jimmy can send the ask by text himself using the verified deep link
+`https://g.page/r/CS0L-iKiqJlHEBM/review`. Any wording must keep the policy shape the worker file
+already documents — same ask to every customer, "good or bad" said out loud, no incentive, and the
+offer to come back and fix something placed **after** the link and framed as service.
+
+### Brief staleness — carried forward, plus three new
+
+Previous items stand. New:
+17. **GBP field optimisation is DONE** — 27 services, 20/20 service areas, 100+ photos, all replied
+    reviews. Stop re-auditing it; it is not where the problem is.
+18. **GBP discovery keywords are 100% brand** (4 keywords, all "jetblack" variants, 3 months).
+19. **`REVIEW_REQUEST_TOKEN` is the top open blocker on the whole account** — the engine is built and
+    off. Reviews are the only lever left that moves Maps prominence.

@@ -7309,5 +7309,119 @@ Steps 0–6 clean and Step 7 found no inconsistency to fix. Per Step 7.4 that is
 
 Previous items stand. New:
 11. **"clicks 0/day since 2026-08-11, sustained"** — ended; ~1/day for the last 13 days.
-12. **"Every click the site earns is brand"** — false; 7 non-brand clicks across 6 pages this week.
+12. **"Every click the site earns is brand"** — SUPERSEDED 2026-09-17: roughly half of clicks are brand (homepage took 41 of 80 over 3 months; "jetblack painting" took 38 of 41 named query clicks). See the 2026-09-17 entry.
 13. Review count lives in **eleven** places now, not eight. All read 17.
+
+---
+
+## 2026-09-17 — GSC Performance export, 3 months: the device split, and a correction
+
+Source: Jimmy's own GSC export, "Performance on Search", Search type Web, **Last 3 months**
+(2026-06-15 → 2026-09-14). Seven CSVs. This is GSC's own data, not the Windsor connector, and it
+is authoritative where the two disagree.
+
+### ⚠️ CORRECTION to yesterday's entry #12
+
+Yesterday this log recorded: *"Every click the site earns is brand." No longer true. Seven clicks
+in the last seven days, across six different pages, **none of them brand queries**.*
+
+**The "none of them brand queries" part was wrong, and it was wrong at the moment I wrote it.**
+That claim came from *page*-level data, which records which page received a click and says nothing
+about the query behind it. I could not have known those queries were non-brand, and the table I
+printed to support the claim even listed `/` — the homepage — which is where brand traffic lands.
+
+GSC's query export for the 3-month window:
+
+| Query | Clicks | Impr | CTR | Pos |
+| --- | --- | --- | --- | --- |
+| **jetblack painting** | **38** | 151 | 25.17% | 3.7 |
+| painters balwyn | 1 | 98 | 1.02% | 31.9 |
+| painters mordialloc | 1 | 84 | 1.19% | 19.3 |
+| in line | 1 | 1 | 100% | 1.0 |
+
+That is every named query that earned a click in three months. **38 of 41 are brand.**
+
+Two honest caveats, so this correction is not itself overstated:
+- `Queries.csv` totals 41 clicks against 71 in `Devices.csv`/`Countries.csv` and 80 in `Pages.csv`.
+  GSC drops anonymised queries, so **30 clicks (42%) sit behind queries GSC will not name** and
+  cannot be attributed to brand or non-brand either way.
+- Page-level, the homepage took **41 of 80 clicks**; the other 39 are spread one or two each across
+  27 pages.
+
+**The defensible statement is: roughly half the site's clicks are brand, and brand is by a wide
+margin the single largest source. Neither "every click is brand" nor yesterday's flat rebuttal is
+right.** Entry #12 is superseded by this.
+
+Entry #11 (the zero-click period ended) **stands** — the weekly series confirms it.
+
+### ⚠️ THE FINDING: desktop and mobile are two different websites
+
+| Device | Impressions | Clicks | CTR | Avg position |
+| --- | --- | --- | --- | --- |
+| **Mobile** | 1,065 | **51** | **4.79%** | 23.2 |
+| **Desktop** | **26,763** | 20 | **0.07%** | 43.1 |
+| Tablet | 17 | 0 | 0% | 58.7 |
+
+Desktop is **96.1% of all impressions and 0.07% CTR**. Mobile is 3.8% of impressions and converts
+**68× better**. A genuine desktop audience for "painters near me" does not behave like this.
+
+This reframes every sitewide number. The property's headline average position of 42.5 and CTR of
+0.26% are desktop noise averaged over real performance. **Mobile alone — 1,065 impressions, 51
+clicks, 4.79% CTR at position 23 — is a healthy small local site.** The site is not failing; its
+real audience is mobile, and that audience clicks.
+
+Treat "average position" and "CTR" at property level as meaningless until the desktop flood is
+segmented out. Always split by device first.
+
+### The synthetic impression flood, now quantified property-wide
+
+Of the 1,000 queries in the export (the export caps at 1,000):
+
+| Query length | Queries | Impressions | Clicks |
+| --- | --- | --- | --- |
+| 1 word | 3 | 123 | 0 |
+| 2 words | 103 | 7,334 | **41** |
+| 3 words | 281 | 8,014 | 0 |
+| 4 words | 289 | 3,962 | 0 |
+| 5+ words | 324 | 2,938 | 0 |
+
+**Every named click came from a 2-word query.** 897 queries and ~15,000 impressions of 3-plus-word
+traffic produced zero. The 5+ word band is the formulaic machine-generated shape already on record
+("commercial facade painting melbourne clyde north", "house painting quotes malvern east").
+
+Impression sinks, 3 months: `/painter-clyde-north/` **3,514** (1 click), `/painter-malvern-east/`
+1,264 (0), `/painter-doncaster/` 1,162 (0), `/painter-camberwell/` 919 (0, position 82).
+
+### Impressions grew 20×; clicks did not
+
+Weekly totals:
+
+| Week of | Clicks | Impressions |
+| --- | --- | --- |
+| 2026-07-06 | **16** | 198 |
+| 2026-07-20 | 8 | 1,064 |
+| 2026-08-03 | 10 | 1,827 |
+| 2026-08-17 | 1 | 4,161 |
+| 2026-08-31 | 3 | 4,233 |
+| 2026-09-07 | 9 | 4,824 |
+
+**The week of 6 July earned 16 clicks on 198 impressions (8.1% CTR). The week of 17 August earned 1
+click on 4,161.** Impressions rose twentyfold while clicks fell. Current performance is a return
+toward early-July levels, not a new high — do not report impression growth as progress.
+
+### Geography
+
+Australia is 26,364 of 27,845 impressions (94.7%) and 68 of 71 clicks. Non-AU is 1,481 impressions
+and 3 clicks, led by Russia (459, position 55.6, zero clicks) — noise, not a market.
+
+### Change made this run: none
+
+Nothing in the export points at a site defect. No code change.
+
+### Brief staleness — carried forward, plus three new
+
+Previous items stand, except #12 which is **superseded** by the correction above. New:
+14. **Property-level "average position" and "CTR" are not usable** — 96% of impressions are desktop
+    at 0.07% CTR. Segment by device before quoting either figure.
+15. **Mobile CTR is 4.79% at position 23** — the site converts when a real person sees it.
+16. **Peak click week was 2026-07-06 (16 clicks / 198 impressions)**, not any recent week.

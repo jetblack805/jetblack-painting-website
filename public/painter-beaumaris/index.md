@@ -83,6 +83,16 @@ Yes. Coastal proximity means salt air, moisture and UV exposure all work harder 
 
 Cost depends on property size, number of storeys, surface condition and scope — interior only, exterior only, or both. As a guide, a full interior repaint of a 3-bedroom Melbourne home typically runs $5,000 to $12,000, and an exterior repaint $4,000 to $8,000 for a single-storey home or $8,000 to $15,000 for a double-storey. These are indicative ranges — every job is priced after a site visit, because condition, access and scope move the number more than floor area does. We provide a detailed, no-obligation written quote after inspecting the property. Call 0432 077 782 or use the quote form to get started.
 
+## Recent work in Beaumaris
+
+A Beaumaris home's tall internal stairwell void, from bare plaster to a finished white space, plus the kitchen and dining area from the same job.
+
+Before. A stairwell void this tall and this narrow has nowhere to stand — a straight ladder is hooked over the top edge and a plank run from a rung down to a trestle at the stair end, so the whole height can be worked without moving gear for every metre.
+
+Finished. Every join in a tall plain void like this is visible in the downlight, so the walls have to come up genuinely flat and even, not just white — there is nothing else in the space to distract from a patch or a roller lap.
+
+The kitchen and dining area from the same job — walls and ceiling only, with the cabinetry and joinery left exactly as they were. Matching the new white against existing fittings without a visible seam is the part of a partial repaint that has to be gotten right.
+
 **Jetblack Painting** — House Painters Beaumaris | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

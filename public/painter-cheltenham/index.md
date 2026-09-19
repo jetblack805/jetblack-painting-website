@@ -103,6 +103,12 @@ Yes, and on a lot of Cheltenham brick veneer homes that is exactly the right sco
 
 It depends on the coating the builder used and how hard the place is lived in, not on a fixed number of years. Builder-grade paint is applied thin and specified on price, so the first signs are usually scuffing and patchy sheen in hallways and stairwells rather than anything failing outright. We are happy to look and tell you honestly if it can wait.
 
+## Recent work in Cheltenham
+
+A commercial fitout corridor in Cheltenham, mid-repaint — walls freshly painted below the suspended ceiling grid, floor still sheeted for protection.
+
+Walls painted and drying, floor still sheeted — the protection stays down until the space is fully signed off, not just once the last coat goes on. A corridor like this gets walked constantly during a fitout, so the drop sheets have to survive foot traffic as well as catch drips.
+
 **Jetblack Painting** — House Painters Cheltenham | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

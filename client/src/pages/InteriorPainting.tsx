@@ -206,6 +206,85 @@ export default function InteriorPainting() {
               loading="lazy"
             />
           </div>
+          {/* Real Jetblack interior jobs rather than gallery stock. Every one
+              of these is already published on its own suburb page, so the alt
+              text is reused verbatim from there rather than re-described here.
+              These live under /projects/, which extractServiceImages in the
+              static generator accepts alongside /gallery/. */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+            <img
+              src="/projects/project-beaumaris-stairwell-void-before.webp"
+              srcSet="/projects/project-beaumaris-stairwell-void-before-800.webp 800w, /projects/project-beaumaris-stairwell-void-before.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1400}
+              height={1867}
+              alt="Tall, narrow internal stairwell void in a Beaumaris home before painting, in bare plaster with a ladder and plank staged as a working platform"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-beaumaris-stairwell-void-after.webp"
+              srcSet="/projects/project-beaumaris-stairwell-void-after-800.webp 800w, /projects/project-beaumaris-stairwell-void-after.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1400}
+              height={1867}
+              alt="The same Beaumaris stairwell void after painting, finished in white with downlights, a glass stair balustrade and timber treads"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-highett-interior-kitchen-hall.webp"
+              srcSet="/projects/project-highett-interior-kitchen-hall-800.webp 800w, /projects/project-highett-interior-kitchen-hall.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1400}
+              height={1867}
+              alt="Kitchen and hallway in a Highett home after repainting, with white ceiling and walls above dark kitchen cabinetry and a timber-floored hallway leading to the front door"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-highett-interior-corner-doorway.webp"
+              srcSet="/projects/project-highett-interior-corner-doorway-800.webp 800w, /projects/project-highett-interior-corner-doorway.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 33vw"
+              width={1400}
+              height={1867}
+              alt="Corner of a room in a Highett home after repainting, with light grey walls, white cornice and skirting, and a doorway through to another room"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            <img
+              src="/projects/project-beaumaris-kitchen-dining-after.webp"
+              srcSet="/projects/project-beaumaris-kitchen-dining-after-800.webp 800w, /projects/project-beaumaris-kitchen-dining-after.webp 1400w"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              width={1400}
+              height={1867}
+              alt="Kitchen and dining area in the same Beaumaris home after painting, with white walls and ceiling above the existing cabinetry and dining table"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-hampton-east-hallway-after.webp"
+              srcSet="/projects/project-hampton-east-hallway-after-800.webp 800w, /projects/project-hampton-east-hallway-after.webp 1400w"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              width={1400}
+              height={1867}
+              alt="The same Hampton East hallway after repainting, walls and ceiling in a cool off-white with white trims, carpet uncovered and the house back in use"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-prahran-black-trim.webp"
+              srcSet="/projects/project-prahran-black-trim-800.webp 800w, /projects/project-prahran-black-trim.webp 1400w"
+              sizes="(max-width: 640px) 100vw, 33vw"
+              width={1400}
+              height={1867}
+              alt="Room in a Prahran property after painting, with white walls and ceiling against a black panelled door, black architraves and black skirting, floor protection still down"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

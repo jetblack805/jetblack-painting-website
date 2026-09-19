@@ -221,6 +221,28 @@ export default function ExteriorPainting() {
               loading="lazy"
             />
           </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <img
+              src="/projects/project-sandringham-eaves-fascia-ladder.webp"
+              srcSet="/projects/project-sandringham-eaves-fascia-ladder-800.webp 800w, /projects/project-sandringham-eaves-fascia-ladder.webp 950w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={950}
+              height={1267}
+              alt="Painter on an extension ladder cutting in fascia and eaves against a red brick wall on a Sandringham home"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-sorrento-gable-brick-coastal.webp"
+              srcSet="/projects/project-sorrento-gable-brick-coastal-800.webp 800w, /projects/project-sorrento-gable-brick-coastal.webp 1400w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1400}
+              height={1867}
+              alt="Gable end of an elevated Sorrento home after exterior painting, white weatherboard cladding against an original exposed brick corner, with the bay visible in the distance"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

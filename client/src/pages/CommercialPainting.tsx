@@ -242,6 +242,35 @@ export default function CommercialPainting() {
               loading="lazy"
             />
           </div>
+          {/* Commercial/community exterior, already published on the Mentone
+              suburb page — named directly per Jimmy's confirmation, since this
+              is a public building's own signage rather than a private
+              residence. Paired with a Cheltenham commercial fitout corridor,
+              also already published on its own suburb page — a third-party
+              shop sign and a car's number plate visible through the doorway
+              there have been pixelated. */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <img
+              src="/projects/project-mentone-baptist-church-facade.webp"
+              srcSet="/projects/project-mentone-baptist-church-facade-800.webp 800w, /projects/project-mentone-baptist-church-facade.webp 950w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={950}
+              height={1267}
+              alt="Exterior of Mentone Baptist Church after repainting, showing the blue-grey fascia and grey brick facade with the church's signage and cross"
+              className="rounded-lg shadow-md w-full h-64 object-cover object-top"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-cheltenham-office-fitout-corridor.webp"
+              srcSet="/projects/project-cheltenham-office-fitout-corridor-800.webp 800w, /projects/project-cheltenham-office-fitout-corridor.webp 1400w"
+              sizes="(max-width: 640px) 100vw, 50vw"
+              width={1400}
+              height={1867}
+              alt="Commercial office corridor in Cheltenham mid-repaint, with freshly painted white walls below a suspended acoustic ceiling grid, and the floor sheeted for protection the length of the hallway"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

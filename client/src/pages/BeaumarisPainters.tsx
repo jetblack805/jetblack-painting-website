@@ -47,6 +47,45 @@ export default function BeaumarisPainters() {
       suburb={suburb}
       title="Beaumaris Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Beaumaris — generous suburban residences. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`A ${suburb} home's tall internal stairwell void, from bare plaster to a finished white space, plus the kitchen and dining area from the same job.`}
+      projectImages={[
+        {
+          // Before. A void this narrow and this tall can't be reached off a
+          // freestanding ladder alone — a straight ladder is hooked over the
+          // top and a plank bridges from a rung down to a trestle at the
+          // stair end, making a working platform the full length of the
+          // space. No identifying detail in frame.
+          src: "/projects/project-beaumaris-stairwell-void-before.webp",
+          small: "/projects/project-beaumaris-stairwell-void-before-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Tall, narrow internal stairwell void in a ${suburb} home before painting, in bare plaster with a ladder and plank staged as a working platform`,
+          caption: `Before. A stairwell void this tall and this narrow has nowhere to stand — a straight ladder is hooked over the top edge and a plank run from a rung down to a trestle at the stair end, so the whole height can be worked without moving gear for every metre.`,
+        },
+        {
+          // After. Same void, finished — downlights in, walls and ceiling
+          // painted, glass balustrade fitted at the base of the stairs. No
+          // identifying detail; a TV and media console are visible at the
+          // edge of frame but carry no personal content.
+          src: "/projects/project-beaumaris-stairwell-void-after.webp",
+          small: "/projects/project-beaumaris-stairwell-void-after-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `The same ${suburb} stairwell void after painting, finished in white with downlights, a glass stair balustrade and timber treads`,
+          caption: `Finished. Every join in a tall plain void like this is visible in the downlight, so the walls have to come up genuinely flat and even, not just white — there is nothing else in the space to distract from a patch or a roller lap.`,
+        },
+        {
+          // Kitchen and dining area, same job. No identifying documents,
+          // photos or readable text visible; a hand is visible at the far
+          // right opening an appliance, not otherwise identifying.
+          src: "/projects/project-beaumaris-kitchen-dining-after.webp",
+          small: "/projects/project-beaumaris-kitchen-dining-after-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Kitchen and dining area in the same ${suburb} home after painting, with white walls and ceiling above the existing cabinetry and dining table`,
+          caption: `The kitchen and dining area from the same job — walls and ceiling only, with the cabinetry and joinery left exactly as they were. Matching the new white against existing fittings without a visible seam is the part of a partial repaint that has to be gotten right.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Sandringham", link: "/painter-sandringham" },

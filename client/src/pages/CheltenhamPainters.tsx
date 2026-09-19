@@ -58,6 +58,24 @@ export default function CheltenhamPainters() {
       suburb={suburb}
       title="Cheltenham Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Cheltenham — weatherboard cottages near the foreshore and newer townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`A commercial fitout corridor in ${suburb}, mid-repaint — walls freshly painted below the suspended ceiling grid, floor still sheeted for protection.`}
+      projectImages={[
+        {
+          // Commercial fitout corridor, in progress, not a before/after. A
+          // third-party shop sign and a parked car's number plate were
+          // visible through the open doorway at the end of the corridor and
+          // have been pixelated — neither is Jetblack's or the client's own
+          // signage, and street-level detail like that doesn't belong on the
+          // site regardless of whose it is. No other identifying detail in
+          // frame; the keys on the ladder platform aren't identifying.
+          src: "/projects/project-cheltenham-office-fitout-corridor.webp",
+          small: "/projects/project-cheltenham-office-fitout-corridor-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Commercial office corridor in ${suburb} mid-repaint, with freshly painted white walls below a suspended acoustic ceiling grid, and the floor sheeted for protection the length of the hallway`,
+          caption: `Walls painted and drying, floor still sheeted — the protection stays down until the space is fully signed off, not just once the last coat goes on. A corridor like this gets walked constantly during a fitout, so the drop sheets have to survive foot traffic as well as catch drips.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Mentone", link: "/painter-mentone" },
         { name: "Moorabbin", link: "/painter-moorabbin" },

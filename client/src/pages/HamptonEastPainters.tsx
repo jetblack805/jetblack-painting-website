@@ -22,6 +22,44 @@ export default function HamptonEastPainters() {
       suburb={suburb}
       title="Hampton East Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Hampton East — post-war brick veneer homes and Californian bungalows. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`An occupied ${suburb} home repainted throughout — hallway, stairwell and landing taken from a warm cream to a cool off-white, with the family living around the work.`}
+      projectImages={[
+        {
+          // Same hallway, same camera position, mid-job and finished. Kept as a
+          // pair deliberately: the value is that the walls and the floor
+          // protection are the only things that change between the two frames.
+          src: "/projects/project-hampton-east-hallway-during.webp",
+          small: "/projects/project-hampton-east-hallway-during-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Hallway in a ${suburb} home mid-repaint, floor fully covered with canvas drop sheets and a ladder and paint tins set up in the room beyond`,
+          caption: `The same hallway mid-job. This was an occupied house, so it is brushed and rolled rather than sprayed, and the floor is covered wall to wall before anything is opened. Canvas, not plastic — plastic slides underfoot on a hard floor and it does not hold a spill.`,
+        },
+        {
+          src: "/projects/project-hampton-east-hallway-after.webp",
+          small: "/projects/project-hampton-east-hallway-after-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `The same ${suburb} hallway after repainting, walls and ceiling in a cool off-white with white trims, carpet uncovered and the house back in use`,
+          caption: `Finished, sheets up, carpet back. The warm cream has gone cool, which is the change that does the work in a narrow hall — a warm wall closes the space in, a cooler one pushes the walls apart. Trims and architraves stay white so the doorways still read as edges.`,
+        },
+        {
+          src: "/projects/project-hampton-east-stair-landing.webp",
+          small: "/projects/project-hampton-east-stair-landing-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Stair landing in a ${suburb} home during repainting, with masking and floor protection in place below a high window and a dark timber balustrade`,
+          caption: `The landing, with the protection still down. A stairwell is the one interior space you cannot reach off a plain ladder — the floor falls away under you — so it is staged off the treads, and the cutting-in around the high window happens from an awkward position rather than a comfortable one.`,
+        },
+        {
+          src: "/projects/project-hampton-east-stairwell-window.webp",
+          small: "/projects/project-hampton-east-stairwell-window-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Stairwell wall in a ${suburb} home after repainting, in a cool off-white with a white-framed window and cornice above the stairs`,
+          caption: `The stairwell wall after coating. A tall unbroken wall like this is where side light from the window shows up every roller lap and every skipped bit of filling, so it is laid off in one direction and kept wet edge to wet edge rather than worked back over.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Highett", link: "/painter-highett" },

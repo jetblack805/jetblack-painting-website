@@ -50,6 +50,25 @@ export default function PrahranPainters() {
       suburb={suburb}
       title="Prahran Painters | Period Home Painting | Jetblack Painting"
       description="Heritage and period home painters in Prahran — Art Deco flats and apartment blocks from the 1930s–1940s. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`A ${suburb} interior in two tones — walls and ceilings in white, with every door, architrave and skirting carried in black.`}
+      projectImages={[
+        {
+          // Empty room, floor fully sheeted. Nothing identifying in frame — no
+          // street number, no window onto a neighbouring property, no personal
+          // effects — so no masking was needed.
+          //
+          // The caption deliberately does NOT name the application method.
+          // Jimmy sprays vacant properties and brushes and rolls occupied ones,
+          // and which this was is not established, so saying "cut by hand"
+          // here would have asserted a method the photo does not show.
+          src: "/projects/project-prahran-black-trim.webp",
+          small: "/projects/project-prahran-black-trim-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Room in a ${suburb} property after painting, with white walls and ceiling against a black panelled door, black architraves and black skirting, floor protection still down`,
+          caption: `Black joinery against white walls is unforgiving, because the two colours meet along every edge in the room and there is no third tone to soften the join — every one of those lines is either dead straight or obvious. Black also shows each ripple in old timber, so the doors and architraves get filled and sanded well beyond what a mid-tone would ever need.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Windsor", link: "/painter-windsor" },
         { name: "Richmond", link: "/painter-richmond" },

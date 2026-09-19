@@ -83,6 +83,18 @@ Mostly in the preparation. Brick veneer and rendered surfaces in Hampton East ar
 
 Yes, and it's common work for us here given how tightly Hampton East sits between Hampton and Moorabbin. We work to agent timelines with durable, neutral, easy-clean finishes, concentrating on the surfaces that carry a photograph and an inspection — facade, front door, walls, ceilings and trims.
 
+## Recent work in Hampton East
+
+An occupied Hampton East home repainted throughout — hallway, stairwell and landing taken from a warm cream to a cool off-white, with the family living around the work.
+
+The same hallway mid-job. This was an occupied house, so it is brushed and rolled rather than sprayed, and the floor is covered wall to wall before anything is opened. Canvas, not plastic — plastic slides underfoot on a hard floor and it does not hold a spill.
+
+Finished, sheets up, carpet back. The warm cream has gone cool, which is the change that does the work in a narrow hall — a warm wall closes the space in, a cooler one pushes the walls apart. Trims and architraves stay white so the doorways still read as edges.
+
+The landing, with the protection still down. A stairwell is the one interior space you cannot reach off a plain ladder — the floor falls away under you — so it is staged off the treads, and the cutting-in around the high window happens from an awkward position rather than a comfortable one.
+
+The stairwell wall after coating. A tall unbroken wall like this is where side light from the window shows up every roller lap and every skipped bit of filling, so it is laid off in one direction and kept wet edge to wet edge rather than worked back over.
+
 **Jetblack Painting** — House Painters Hampton East | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -30,6 +30,41 @@ export default function DromanaPainters() {
       suburb={suburb}
       title="Dromana Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Dromana — weatherboard, fibro beach houses and rendered permanent homes. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`A ${suburb} kitchen resurface and built-in joinery repaint, shown at prep stage — floor protection down and cabinet doors open ready for coating.`}
+      projectImages={[
+        {
+          // Prep-stage shot: floor sheeting and painter's tape are down but the
+          // splashback tile, appliances and cabinetry are all still in place
+          // and uncoated. No identifying detail in frame — a diffuser, a
+          // kettle and a cutlery tray, nothing with a name or address on it.
+          src: "/projects/project-dromana-kitchen-before-splashback.webp",
+          small: "/projects/project-dromana-kitchen-before-splashback-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Kitchen in a ${suburb} home before cabinet resurfacing, with a retro blue and gold tile splashback, timber benchtop and white cabinetry, floor sheeted for protection`,
+          caption: `Before the cabinets come off. Every appliance and fitting gets moved and the floor is sheeted and taped off first, because a 2-pack resurface throws overspray and dust well beyond the cabinet carcass itself.`,
+        },
+        {
+          // Same kitchen, wider angle, same prep stage.
+          src: "/projects/project-dromana-kitchen-before-wide.webp",
+          small: "/projects/project-dromana-kitchen-before-wide-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Wider view of a ${suburb} kitchen before resurfacing, showing a leadlight window, blue and gold tile splashback and white cabinetry along two benches`,
+          caption: `The same kitchen from the sink end. Leadlight windows and patterned tile like this are original to the house and are staying exactly as they are — the job is the cabinetry, not a gut renovation, so everything around it is masked and protected rather than removed.`,
+        },
+        {
+          // Built-in wall shelving/joinery, different room, same property and
+          // job. Cabinet doors open, paint tin and drop sheet visible mid-prep.
+          // No identifying detail in the room.
+          src: "/projects/project-dromana-builtin-joinery-during.webp",
+          small: "/projects/project-dromana-builtin-joinery-during-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Long run of built-in wall shelving and cabinetry in a ${suburb} home mid-repaint, with cabinet doors open and a paint tin and drop sheet on the floor`,
+          caption: `The same visit covered a full run of built-in shelving in another room. Doors come off their hinges to be coated flat rather than upright, which is the only way to get an even finish without a run or a sag catching the light along an edge this long.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Sorrento", link: "/painter-sorrento" },
         { name: "Mount Martha", link: "/painter-mount-martha" },

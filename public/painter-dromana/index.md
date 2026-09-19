@@ -91,6 +91,16 @@ Yes. Plenty of properties here are holiday lets, so we are used to working to a 
 
 Yes. We service the Mornington Peninsula and quote across Dromana for free, in writing. The coastal preparation, primers and topcoats are itemised, so you can see exactly what the salt-air protection involves. Call Jimmy on 0432 077 782.
 
+## Recent work in Dromana
+
+A Dromana kitchen resurface and built-in joinery repaint, shown at prep stage — floor protection down and cabinet doors open ready for coating.
+
+Before the cabinets come off. Every appliance and fitting gets moved and the floor is sheeted and taped off first, because a 2-pack resurface throws overspray and dust well beyond the cabinet carcass itself.
+
+The same kitchen from the sink end. Leadlight windows and patterned tile like this are original to the house and are staying exactly as they are — the job is the cabinetry, not a gut renovation, so everything around it is masked and protected rather than removed.
+
+The same visit covered a full run of built-in shelving in another room. Doors come off their hinges to be coated flat rather than upright, which is the only way to get an even finish without a run or a sag catching the light along an edge this long.
+
 **Jetblack Painting** — House Painters Dromana | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -55,6 +55,31 @@ export default function HighettPainters() {
       suburb={suburb}
       title="Highett Painters | House & Townhouse | Jetblack Painting"
       description="House painters in Highett — post-war brick homes, 1960s–1980s residences and modern townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`An interior repaint in an occupied ${suburb} home — kitchen, hallway and a corner room taken from a dated tone to a clean, current palette while the family kept living in the house.`}
+      projectImages={[
+        {
+          // Kitchen and hallway sightline. The fridge front carried business
+          // cards, a school newsletter and family photos — masked as one
+          // block rather than picked apart, since the point was to remove
+          // all of it, not just the most obviously identifying piece.
+          src: "/projects/project-highett-interior-kitchen-hall.webp",
+          small: "/projects/project-highett-interior-kitchen-hall-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Kitchen and hallway in a ${suburb} home after repainting, with white ceiling and walls above dark kitchen cabinetry and a timber-floored hallway leading to the front door`,
+          caption: `Walls and ceilings only — the dark kitchen cabinetry here was staying exactly as it is, so the job was cutting a clean line against it rather than working around it. An occupied kitchen like this one gets painted around daily life, not by clearing the house out.`,
+        },
+        {
+          // Corner room with cornice, ducted vent and a doorway into a room
+          // being used for storage during the job. No identifying detail.
+          src: "/projects/project-highett-interior-corner-doorway.webp",
+          small: "/projects/project-highett-interior-corner-doorway-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Corner of a room in a ${suburb} home after repainting, with light grey walls, white cornice and skirting, and a doorway through to another room`,
+          caption: `A plain corner like this is where a rushed job shows first — the cornice line has to stay dead straight the full length of the wall, and the cut-in around the doorframe is the kind of edge that gets checked from across the room, not just up close.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Hampton East", link: "/painter-hampton-east" },
         { name: "Cheltenham", link: "/painter-cheltenham" },

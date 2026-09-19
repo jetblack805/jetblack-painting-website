@@ -103,6 +103,16 @@ Yes. The stretch near Beach Road and the esplanade holds a good number of newer 
 
 Yes. Mentone has a solid commercial strip along the Nepean Highway and Bay Road, and established schools including Mentone Grammar. We handle facade repaints, signage surrounds and general maintenance for businesses and facilities as well as homes. Commercial work is quoted with a clear scope and scheduled around trading hours or school terms.
 
+## Recent work in Mentone
+
+Two Mentone jobs on the commercial side of our work: a body-corporate fire stair repainted top to bottom, and an exterior repaint at Mentone Baptist Church.
+
+Common-property stairs like this one get used constantly and weather from both sides — foot traffic on the treads, sun and rain on everything else. Charcoal was chosen because it holds its look under that kind of use far longer than a lighter tread colour would.
+
+The walkway and balustrade from the top of the same stair. Body corporate work like this is coordinated around residents coming and going the whole time it's underway, not done to an empty building.
+
+Mentone Baptist Church, exterior repaint. A commercial or community building like this one gets painted for durability first — the fascia and eaves take the most weather of any surface on the building — with the finish still sharp enough that the signage and brickwork read cleanly from the street.
+
 **Jetblack Painting** — House Painters Mentone | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

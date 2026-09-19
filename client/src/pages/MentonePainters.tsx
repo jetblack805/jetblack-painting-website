@@ -58,6 +58,42 @@ export default function MentonePainters() {
       suburb={suburb}
       title="Mentone Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Mentone — California bungalow-style period homes. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`Two ${suburb} jobs on the commercial side of our work: a body-corporate fire stair repainted top to bottom, and an exterior repaint at Mentone Baptist Church.`}
+      projectImages={[
+        {
+          // Common-property fire stair, apartment building. A small unit
+          // number was visible on the neighbouring fence gate and has been
+          // pixelated — street numbers and unit numbers don't go on this
+          // site. Nothing else identifying in frame.
+          src: "/projects/project-mentone-body-corp-stairs-lower.webp",
+          small: "/projects/project-mentone-body-corp-stairs-lower-800.webp",
+          width: 950,
+          height: 1267,
+          alt: `Fire stair in a ${suburb} apartment building after repainting, charcoal treads and black steel balustrade against a white brick wall`,
+          caption: `Common-property stairs like this one get used constantly and weather from both sides — foot traffic on the treads, sun and rain on everything else. Charcoal was chosen because it holds its look under that kind of use far longer than a lighter tread colour would.`,
+        },
+        {
+          // Same stair, upper landing and walkway. No identifying detail.
+          src: "/projects/project-mentone-body-corp-stairs-upper.webp",
+          small: "/projects/project-mentone-body-corp-stairs-upper-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Upper landing and walkway of a ${suburb} apartment building after repainting, with a charcoal steel balustrade and painted concrete walkway`,
+          caption: `The walkway and balustrade from the top of the same stair. Body corporate work like this is coordinated around residents coming and going the whole time it's underway, not done to an empty building.`,
+        },
+        {
+          // Mentone Baptist Church, exterior repaint. Named directly per
+          // Jimmy's confirmation — this is a public building's own signage,
+          // not a private residence. No people or other identifying detail
+          // in frame.
+          src: "/projects/project-mentone-baptist-church-facade.webp",
+          small: "/projects/project-mentone-baptist-church-facade-800.webp",
+          width: 950,
+          height: 1267,
+          alt: `Exterior of Mentone Baptist Church after repainting, showing the blue-grey fascia and grey brick facade with the church's signage and cross`,
+          caption: `Mentone Baptist Church, exterior repaint. A commercial or community building like this one gets painted for durability first — the fascia and eaves take the most weather of any surface on the building — with the finish still sharp enough that the signage and brickwork read cleanly from the street.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Mordialloc", link: "/painter-mordialloc" },
         { name: "Parkdale", link: "/painter-parkdale" },

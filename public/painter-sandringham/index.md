@@ -103,6 +103,12 @@ It changes the preparation more than the paint. Salt settles on the surface as a
 
 Mostly exposure and preparation rather than the brand on the tin. The elevations facing the water weather fastest, and the board ends and joints go before the faces do because end grain absorbs water. Sealing those ends and using a filler that stays flexible is what buys the extra years.
 
+## Recent work in Sandringham
+
+Eaves and fascia repainted on a Sandringham brick home, cut in at height against a red brick wall that stays untouched.
+
+Fascia and eaves against exposed brick, with no gutter guard or scaffold to work from — just the ladder, moved along the wall a section at a time. The line where the paint meets the brick has to hold straight the whole run, cut by hand from height rather than sprayed.
+
 **Jetblack Painting** — House Painters Sandringham | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

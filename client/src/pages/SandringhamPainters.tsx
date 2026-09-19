@@ -58,6 +58,21 @@ export default function SandringhamPainters() {
       suburb={suburb}
       title="Sandringham Painters | Coastal Painting | Jetblack Painting"
       description="Coastal house painters in Sandringham — Edwardian and interwar homes along Royal Avenue. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`Eaves and fascia repainted on a ${suburb} brick home, cut in at height against a red brick wall that stays untouched.`}
+      projectImages={[
+        {
+          // Working shot, not a before/after — the crew mid-job on an
+          // extension ladder against the fascia. No street number, no
+          // vehicle plates, no faces identifiable; the only wall fixture is
+          // a generic gas hot water unit with its factory rating label.
+          src: "/projects/project-sandringham-eaves-fascia-ladder.webp",
+          small: "/projects/project-sandringham-eaves-fascia-ladder-800.webp",
+          width: 950,
+          height: 1267,
+          alt: `Painter on an extension ladder cutting in fascia and eaves against a red brick wall on a ${suburb} home`,
+          caption: `Fascia and eaves against exposed brick, with no gutter guard or scaffold to work from — just the ladder, moved along the wall a section at a time. The line where the paint meets the brick has to hold straight the whole run, cut by hand from height rather than sprayed.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Hampton", link: "/painter-hampton" },
         { name: "Black Rock", link: "/painter-black-rock" },

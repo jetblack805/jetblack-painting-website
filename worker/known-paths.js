@@ -433,6 +433,8 @@ export const KNOWN_PATHS = new Set([
   "/projects/project-safety-beach-render-roof-after.webp",
   "/projects/project-safety-beach-render-roof-before-800.webp",
   "/projects/project-safety-beach-render-roof-before.webp",
+  "/projects/project-sandringham-eaves-fascia-ladder-800.webp",
+  "/projects/project-sandringham-eaves-fascia-ladder.webp",
   "/projects/project-sorrento-gable-brick-coastal-800.webp",
   "/projects/project-sorrento-gable-brick-coastal.webp",
   "/projects/project-sorrento-hallway-stairs-during-800.webp",

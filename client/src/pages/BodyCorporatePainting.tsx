@@ -154,6 +154,53 @@ export default function BodyCorporatePainting() {
               loading="lazy"
             />
           </div>
+          {/* Real Jetblack body-corporate jobs rather than gallery stock. Every
+              one of these is already published on its own suburb page, so the
+              alt text is reused verbatim from there. These live under
+              /projects/, which extractServiceImages in the static generator
+              accepts alongside /gallery/. */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+            <img
+              src="/projects/project-south-yarra-stairwell.webp"
+              srcSet="/projects/project-south-yarra-stairwell-800.webp 800w, /projects/project-south-yarra-stairwell.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 25vw"
+              width={1400}
+              height={1867}
+              alt="Fire stair in a South Yarra apartment building after repainting, with white walls and ceiling above black tiled treads and a stainless steel handrail"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-south-yarra-lift-lobby.webp"
+              srcSet="/projects/project-south-yarra-lift-lobby-800.webp 800w, /projects/project-south-yarra-lift-lobby.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 25vw"
+              width={1400}
+              height={1867}
+              alt="Lift lobby and corridor in a South Yarra apartment building after repainting, with white walls and ceiling, dark polished floor tiles and recessed downlighting"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-mentone-body-corp-stairs-lower.webp"
+              srcSet="/projects/project-mentone-body-corp-stairs-lower-800.webp 800w, /projects/project-mentone-body-corp-stairs-lower.webp 950w"
+              sizes="(max-width: 640px) 50vw, 25vw"
+              width={950}
+              height={1267}
+              alt="Fire stair in a Mentone apartment building after repainting, charcoal treads and black steel balustrade against a white brick wall"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-mentone-body-corp-stairs-upper.webp"
+              srcSet="/projects/project-mentone-body-corp-stairs-upper-800.webp 800w, /projects/project-mentone-body-corp-stairs-upper.webp 1400w"
+              sizes="(max-width: 640px) 50vw, 25vw"
+              width={1400}
+              height={1867}
+              alt="Upper landing and walkway of a Mentone apartment building after repainting, with a charcoal steel balustrade and painted concrete walkway"
+              className="rounded-lg shadow-md w-full h-56 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

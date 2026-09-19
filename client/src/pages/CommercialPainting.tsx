@@ -242,6 +242,22 @@ export default function CommercialPainting() {
               loading="lazy"
             />
           </div>
+          {/* Commercial/community exterior, already published on the Mentone
+              suburb page — named directly per Jimmy's confirmation, since this
+              is a public building's own signage rather than a private
+              residence. */}
+          <div className="grid grid-cols-1 mt-4">
+            <img
+              src="/projects/project-mentone-baptist-church-facade.webp"
+              srcSet="/projects/project-mentone-baptist-church-facade-800.webp 800w, /projects/project-mentone-baptist-church-facade.webp 950w"
+              sizes="(max-width: 1024px) 100vw, 1152px"
+              width={950}
+              height={1267}
+              alt="Exterior of Mentone Baptist Church after repainting, showing the blue-grey fascia and grey brick facade with the church's signage and cross"
+              className="rounded-lg shadow-md w-full max-h-[420px] object-cover object-top"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

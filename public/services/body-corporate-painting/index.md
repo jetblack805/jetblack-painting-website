@@ -116,6 +116,14 @@ Commercial and strata building exterior painted by Jetblack Painting
 
 Multi-tenancy building frontage painted by Jetblack Painting
 
+Fire stair in a South Yarra apartment building after repainting, with white walls and ceiling above black tiled treads and a stainless steel handrail
+
+Lift lobby and corridor in a South Yarra apartment building after repainting, with white walls and ceiling, dark polished floor tiles and recessed downlighting
+
+Fire stair in a Mentone apartment building after repainting, charcoal treads and black steel balustrade against a white brick wall
+
+Upper landing and walkway of a Mentone apartment building after repainting, with a charcoal steel balustrade and painted concrete walkway
+
 **Jetblack Painting** — Body Corporate Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

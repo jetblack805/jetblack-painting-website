@@ -117,6 +117,10 @@ Finished render and gutter line on a two-storey Aspendale house after repainting
 
 A Mordialloc weatherboard home after repainting in charcoal with white eaves, fretwork and window frames
 
+Painter on an extension ladder cutting in fascia and eaves against a red brick wall on a Sandringham home
+
+Gable end of an elevated Sorrento home after exterior painting, white weatherboard cladding against an original exposed brick corner, with the bay visible in the distance
+
 **Jetblack Painting** — Exterior Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

@@ -127,6 +127,8 @@ Corner office in a Chadstone commercial fitout painted by Jetblack Painting, sho
 
 Open office room in a Chadstone commercial fitout painted by Jetblack Painting, with a continuous wall run finished to the ceiling grid and skirting line
 
+Exterior of Mentone Baptist Church after repainting, showing the blue-grey fascia and grey brick facade with the church's signage and cross
+
 **Jetblack Painting** — Commercial Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

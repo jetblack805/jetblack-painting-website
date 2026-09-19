@@ -129,6 +129,20 @@ Bright open living room interior painted by Jetblack Painting
 
 Styled living and dining room interior painted by Jetblack Painting
 
+Tall, narrow internal stairwell void in a Beaumaris home before painting, in bare plaster with a ladder and plank staged as a working platform
+
+The same Beaumaris stairwell void after painting, finished in white with downlights, a glass stair balustrade and timber treads
+
+Kitchen and hallway in a Highett home after repainting, with white ceiling and walls above dark kitchen cabinetry and a timber-floored hallway leading to the front door
+
+Corner of a room in a Highett home after repainting, with light grey walls, white cornice and skirting, and a doorway through to another room
+
+Kitchen and dining area in the same Beaumaris home after painting, with white walls and ceiling above the existing cabinetry and dining table
+
+The same Hampton East hallway after repainting, walls and ceiling in a cool off-white with white trims, carpet uncovered and the house back in use
+
+Room in a Prahran property after painting, with white walls and ceiling against a black panelled door, black architraves and black skirting, floor protection still down
+
 **Jetblack Painting** — Interior Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

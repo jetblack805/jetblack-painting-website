@@ -142,6 +142,33 @@ export default function RoofPainting() {
               loading="lazy"
             />
           </div>
+          {/* Real Jetblack roof job rather than gallery stock. Already
+              published on its own suburb page, so the alt text is reused
+              verbatim from there. Lives under /projects/, which
+              extractServiceImages in the static generator accepts alongside
+              /gallery/. */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <img
+              src="/projects/project-donvale-roof-restoration-before.webp"
+              srcSet="/projects/project-donvale-roof-restoration-before-800.webp 800w, /projects/project-donvale-roof-restoration-before.webp 1100w"
+              sizes="(max-width: 1024px) 100vw, 576px"
+              width={1100}
+              height={1467}
+              alt="Donvale homestead-style home before roof restoration, with a weathered, unevenly toned tile roof and a gap visible in the ridge capping"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <img
+              src="/projects/project-donvale-roof-restoration-after.webp"
+              srcSet="/projects/project-donvale-roof-restoration-after-800.webp 800w, /projects/project-donvale-roof-restoration-after.webp 1400w"
+              sizes="(max-width: 1024px) 100vw, 576px"
+              width={1400}
+              height={1867}
+              alt="The same Donvale home after roof restoration, with a uniform light grey-taupe tile roof and the ridge capping repaired"
+              className="rounded-lg shadow-md w-full h-64 object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 

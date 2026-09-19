@@ -118,6 +118,10 @@ High-pressure roof cleaning and preparation by Jetblack Painting
 
 Roof restoration in progress on a weatherboard home, with a Jetblack Painting painter working from the ridge
 
+Donvale homestead-style home before roof restoration, with a weathered, unevenly toned tile roof and a gap visible in the ridge capping
+
+The same Donvale home after roof restoration, with a uniform light grey-taupe tile roof and the ridge capping repaired
+
 **Jetblack Painting** — Roof Painting Melbourne | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [FAQ](/faq/) | [Blog](/blog/)

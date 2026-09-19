@@ -111,6 +111,14 @@ Yes, but it gets planned rather than improvised. Plenty of Sorrento blocks fall 
 
 Yes. We service the full Mornington Peninsula and quote across Sorrento for free, in writing, with no obligation. The full scope and the preparation are itemised up front. Call Jimmy on 0432 077 782 or ask for one online.
 
+## Recent work in Sorrento
+
+Two recent Sorrento jobs: an interior repaint mid-way through a hallway and stairwell, and an exterior gable repaint on an elevated home looking straight out over the bay.
+
+Grey above, white beadboard below, cut in dead straight along the chair rail the whole length of the hallway. The stairs and their timber handrail are masked off rather than removed, since the job is the walls, and every board of that floor stays exactly as it is.
+
+An elevated, cantilevered upper storey like this one means there's no ground directly under most of the gable to stand a ladder on, so access has to be worked out board by board rather than assumed. The brick corner was left exposed on purpose — it's the original material and the new cladding is built to sit against it, not over it.
+
 **Jetblack Painting** — House Painters Sorrento | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

@@ -79,6 +79,34 @@ export default function SorrentoPainters() {
       // the lever that would.
       title="Sorrento Painters | Coastal Homes, 5-Year Guarantee"
       description="Sorrento painters — limestone cottages, weatherboard and holiday homes near the front and back beach. 5.0 from 17 reviews. Free quotes, 5-year guarantee."
+      projectSummary={`Two recent ${suburb} jobs: an interior repaint mid-way through a hallway and stairwell, and an exterior gable repaint on an elevated home looking straight out over the bay.`}
+      projectImages={[
+        {
+          // Interior job, unrelated property to the gable shot below — kept as
+          // two separate entries rather than implied as one job. Grey walls,
+          // white beadboard wainscot, timber stair. No identifying detail: no
+          // street numbers, no mail, nothing personal in frame.
+          src: "/projects/project-sorrento-hallway-stairs-during.webp",
+          small: "/projects/project-sorrento-hallway-stairs-during-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Hallway and staircase in a ${suburb} home mid-repaint, with grey walls above white beadboard wainscoting and a polished timber staircase`,
+          caption: `Grey above, white beadboard below, cut in dead straight along the chair rail the whole length of the hallway. The stairs and their timber handrail are masked off rather than removed, since the job is the walls, and every board of that floor stays exactly as it is.`,
+        },
+        {
+          // Elevated coastal position, ocean visible past the hedge line.
+          // Exposed brick corner meeting new white cladding on the gable end.
+          // No house number, no signage, nothing identifying beyond the
+          // property's general elevated position, which does not pin an
+          // address.
+          src: "/projects/project-sorrento-gable-brick-coastal.webp",
+          small: "/projects/project-sorrento-gable-brick-coastal-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Gable end of an elevated ${suburb} home after exterior painting, white weatherboard cladding against an original exposed brick corner, with the bay visible in the distance`,
+          caption: `An elevated, cantilevered upper storey like this one means there's no ground directly under most of the gable to stand a ladder on, so access has to be worked out board by board rather than assumed. The brick corner was left exposed on purpose — it's the original material and the new cladding is built to sit against it, not over it.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Rye", link: "/painter-rye" },
         { name: "Safety Beach", link: "/painter-safety-beach" },

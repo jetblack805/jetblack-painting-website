@@ -103,6 +103,14 @@ Green or black growth on a shaded wall is almost always mould and lichen rather 
 
 Yes, though it is worth talking through first. A lot of the 1970s split-levels here use cedar cladding and exposed beams that were oiled or stained rather than painted. Both can be painted and the result lasts well. But it is effectively a one-way decision. Going back to a natural oiled finish means stripping, which is slow and rarely worth it. We will tell you that at the quote, not after.
 
+## Recent work in Donvale
+
+A roof restoration on a large Donvale homestead-style home, from a weathered, unevenly toned tile roof to a uniform protective finish.
+
+Before. The tile itself is sound — this is a restoration, not a re-roof — but decades of weathering leave the surface porous and the colour uneven from tile to tile, and the ridge capping had settled enough to open a gap near the chimney.
+
+After. The roof is pressure cleaned, any cracked or bedding-loose tiles and capping repaired, then sealed with a protective membrane, which is what pulls every tile back to one even colour rather than the patchwork a straight repaint would leave on porous, weathered concrete tile.
+
 **Jetblack Painting** — House Painters Donvale | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

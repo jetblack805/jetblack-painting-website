@@ -30,6 +30,32 @@ export default function DonvalePainters() {
       suburb={suburb}
       title="Donvale Painters | Premium Painting | Jetblack Painting"
       description="Premium house painters in Donvale — large established family homes on generous blocks and rendered façades. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`A roof restoration on a large ${suburb} homestead-style home, from a weathered, unevenly toned tile roof to a uniform protective finish.`}
+      projectImages={[
+        {
+          // Before. A gap in the ridge capping is visible right of the
+          // chimney peak, and the tile tone reads uneven and weathered
+          // compared with the after shot. No street number, no vehicles,
+          // no people in frame.
+          src: "/projects/project-donvale-roof-restoration-before.webp",
+          small: "/projects/project-donvale-roof-restoration-before-800.webp",
+          width: 1100,
+          height: 1467,
+          alt: `${suburb} homestead-style home before roof restoration, with a weathered, unevenly toned tile roof and a gap visible in the ridge capping`,
+          caption: `Before. The tile itself is sound — this is a restoration, not a re-roof — but decades of weathering leave the surface porous and the colour uneven from tile to tile, and the ridge capping had settled enough to open a gap near the chimney.`,
+        },
+        {
+          // After. Same house, later visit — the roses are further along and
+          // fuller than in the before shot. Uniform tone across the whole
+          // roof, ridge line intact. No identifying detail in frame.
+          src: "/projects/project-donvale-roof-restoration-after.webp",
+          small: "/projects/project-donvale-roof-restoration-after-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `The same ${suburb} home after roof restoration, with a uniform light grey-taupe tile roof and the ridge capping repaired`,
+          caption: `After. The roof is pressure cleaned, any cracked or bedding-loose tiles and capping repaired, then sealed with a protective membrane, which is what pulls every tile back to one even colour rather than the patchwork a straight repaint would leave on porous, weathered concrete tile.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Doncaster", link: "/painter-doncaster" },
         { name: "Templestowe", link: "/painter-templestowe" },

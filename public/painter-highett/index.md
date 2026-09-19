@@ -104,6 +104,14 @@ Yes, and Highett has plenty of them. The suburb has taken on a lot of medium-den
 
 On the 1960s to 1980s homes that make up much of Highett, it is almost always the timber before the walls. Fascia boards, barge boards, eaves linings and window joinery on the north and west elevations get the hardest sun. The paint chalks, then cracks, then lets water into the end grain. The brickwork below can still look fine while that timber is well past due. Book an inspection when you notice the eaves rather than waiting for the walls. Replacing rotted fascia costs considerably more than repainting sound timber would have.
 
+## Recent work in Highett
+
+An interior repaint in an occupied Highett home — kitchen, hallway and a corner room taken from a dated tone to a clean, current palette while the family kept living in the house.
+
+Walls and ceilings only — the dark kitchen cabinetry here was staying exactly as it is, so the job was cutting a clean line against it rather than working around it. An occupied kitchen like this one gets painted around daily life, not by clearing the house out.
+
+A plain corner like this is where a rushed job shows first — the cornice line has to stay dead straight the full length of the wall, and the cut-in around the doorframe is the kind of edge that gets checked from across the room, not just up close.
+
 **Jetblack Painting** — House Painters Highett | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

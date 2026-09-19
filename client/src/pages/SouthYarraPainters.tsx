@@ -50,6 +50,33 @@ export default function SouthYarraPainters() {
       suburb={suburb}
       title="South Yarra Painters | Heritage Homes | Jetblack Painting"
       description="Heritage and period home painters in South Yarra — Victorian terraces, apartments and townhouses. Free quotes, 5-year guarantee. Call 0432 077 782."
+      projectSummary={`Common property in a ${suburb} apartment building — fire stair, lift lobby and corridors repainted while the building stayed occupied and every exit route stayed open.`}
+      projectImages={[
+        {
+          // Portrait 1400x1867 straight off the phone, no crop. Checked at 3x
+          // for anything identifying before publishing: the only signage in
+          // frame is a generic "fire hose reel / fire extinguisher" door label
+          // and an exit sign. No unit numbers, no building name, no street
+          // number anywhere in the frame, so no masking was needed.
+          src: "/projects/project-south-yarra-stairwell.webp",
+          small: "/projects/project-south-yarra-stairwell-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Fire stair in a ${suburb} apartment building after repainting, with white walls and ceiling above black tiled treads and a stainless steel handrail`,
+          caption: `A fire stair is the hardest part of a common-property repaint to get right, because it is the one part that cannot be closed. Residents use it while you are in it, so the work goes in sections and the exit path stays clear the whole time. White walls above black tile leave nowhere to hide a wavy cut — the tile edge runs dead straight and the paint line has to match it.`,
+        },
+        {
+          // Same building, same visit. A resident is walking the corridor
+          // mid-frame at a distance, face turned down and partly behind a
+          // hand; no unit numbers or door plates are legible at any zoom.
+          src: "/projects/project-south-yarra-lift-lobby.webp",
+          small: "/projects/project-south-yarra-lift-lobby-800.webp",
+          width: 1400,
+          height: 1867,
+          alt: `Lift lobby and corridor in a ${suburb} apartment building after repainting, with white walls and ceiling, dark polished floor tiles and recessed downlighting`,
+          caption: `The lift lobby is the first thing anyone sees walking in, and a polished dark floor reflects the wall straight back at you. Roller texture, a missed cut around the lift architrave, a patch that flashes under the downlights — all of it doubles in the floor. Owners corporations notice this one.`,
+        },
+      ]}
       neighbouringSuburbs={[
         { name: "Richmond", link: "/painter-richmond" },
         { name: "Toorak", link: "/painter-toorak" },

@@ -84,6 +84,14 @@ We're experienced with strata and body corporate painting across South Yarra, wo
 
 South Yarra properties tend to suit warm whites, soft greige tones and restrained accent colours that photograph well and complement the architectural detail. We offer colour consultation as part of every quote, helping you choose a scheme that suits your home's era and maximises its appeal — whether you're living in it or preparing it for sale.
 
+## Recent work in South Yarra
+
+Common property in a South Yarra apartment building — fire stair, lift lobby and corridors repainted while the building stayed occupied and every exit route stayed open.
+
+A fire stair is the hardest part of a common-property repaint to get right, because it is the one part that cannot be closed. Residents use it while you are in it, so the work goes in sections and the exit path stays clear the whole time. White walls above black tile leave nowhere to hide a wavy cut — the tile edge runs dead straight and the paint line has to match it.
+
+The lift lobby is the first thing anyone sees walking in, and a polished dark floor reflects the wall straight back at you. Roller texture, a missed cut around the lift architrave, a patch that flashes under the downlights — all of it doubles in the floor. Owners corporations notice this one.
+
 **Jetblack Painting** — House Painters South Yarra | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

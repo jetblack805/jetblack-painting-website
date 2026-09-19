@@ -85,6 +85,12 @@ Yes. Prahran and Windsor have a high proportion of rental properties and investm
 
 Yes. We provide free, no-obligation written quotes across Prahran, Windsor and the surrounding inner-south suburbs, with the full scope and preparation itemised up front. Call Jimmy on 0432 077 782 or submit a request online — we're usually able to come out and quote within a few days.
 
+## Recent work in Prahran
+
+A Prahran interior in two tones — walls and ceilings in white, with every door, architrave and skirting carried in black.
+
+Black joinery against white walls is unforgiving, because the two colours meet along every edge in the room and there is no third tone to soften the join — every one of those lines is either dead straight or obvious. Black also shows each ripple in old timber, so the doors and architraves get filled and sanded well beyond what a mid-tone would ever need.
+
 **Jetblack Painting** — House Painters Prahran | Phone: [0432 077 782](tel:0432077782) | Email: [jimmy@jetblackpainting.com](mailto:jimmy@jetblackpainting.com)
 
 [Home](/) | [Interior Painting](/services/interior-painting/) | [Exterior Painting](/services/exterior-painting/)

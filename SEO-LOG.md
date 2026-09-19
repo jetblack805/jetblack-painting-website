@@ -7581,3 +7581,93 @@ Previous items stand. New:
 18. **GBP discovery keywords are 100% brand** (4 keywords, all "jetblack" variants, 3 months).
 19. **`REVIEW_REQUEST_TOKEN` is the top open blocker on the whole account** — the engine is built and
     off. Reviews are the only lever left that moves Maps prominence.
+
+---
+
+## 2026-09-19 — Three suburb pages get real project photos; Bing correction
+
+### ⚠️ CORRECTION — Bing Webmaster is NOT returning zero
+
+This log has carried, since 2026-09-16: *"Bing Webmaster: connector authenticates, no longer
+throttling, returns ZERO rows over 28d and 6m. Same shape of problem as GA4 — pending which exact
+site URL is verified in his Bing Webmaster account."*
+
+**That framing was wrong.** Jimmy supplied a screenshot of Bing Webmaster Tools and the matching
+Search Performance CSV export. The property is verified, it is reporting, and it has data:
+
+| Window | Clicks | Impressions |
+| --- | --- | --- |
+| 25 Aug – 15 Sep 2026 (22 days) | **2** | **18** |
+
+Non-zero days: 29 Aug (1 click / 8 impr, 12.5% CTR), 2 Sep (0/1), 7 Sep (0/1), 12 Sep (1/6,
+16.67%), 13 Sep (0/2). Every other day is genuinely zero.
+
+So there was never a site-URL mismatch to chase. **The Windsor connector is misreporting a property
+that works** — the same failure mode as GA4, but with the opposite conclusion: with GA4 the property
+really does appear to be empty, whereas here the connector returns zero against a property holding
+real rows. Do not ask Jimmy again which Bing URL is verified; that question is answered and withdrawn.
+
+Scale, for honesty: 18 impressions in three weeks against 27,845 on Google over three months. Bing
+is **0.06%** of the search surface for this business. It is not a growth channel and should not be
+treated as one.
+
+### Bing's own two recommendations, assessed
+
+**1. "Set up IndexNow" (flagged red).** Checked rather than assumed. IndexNow is already installed:
+`scripts/indexnow.mjs` and `scripts/indexnow-on-deploy.mjs` exist, wired to `pnpm indexnow` and
+`pnpm indexnow:changed`. The ownership key file is live and valid —
+`https://jetblackpainting.com/236b45859f0cf903f27f5160088eba04.txt` returns **HTTP 200, text/plain,
+32 bytes**, and its body exactly equals its filename, which is the whole ownership proof.
+
+**The setup is correct and complete. What has never happened is a submission.** `api.indexnow.org`
+is refused by the sandbox proxy, so this environment has never been able to POST a URL list. Bing
+is reporting truthfully — it has received nothing. Only Jimmy can run it, from his own machine.
+
+**2. "Not enough inbound links from high quality domains" (amber).** This independently corroborates
+the diagnosis settled 2026-08-19 from a completely different source. Bing, Google position data and
+the GBP keyword breakdown now all point at off-page authority as the limiting factor. Nothing to
+change; noted as confirmation.
+
+### Change made this run: project photos on three suburb pages
+
+Jimmy sent seven photos across three jobs. All seven checked as new before processing — none of the
+102 existing project images matched. In particular `project-office-fitout-stairwell` was opened and
+compared, because a "stairwell" name could easily have been a duplicate: it is a different building
+entirely (glass partitions, carpet tiles, timber floor, shot looking down). Not a duplicate.
+
+**`/painter-south-yarra/` — 2 photos.** Common property in an apartment building: fire stair and
+lift lobby. This is **body-corporate work**, the commercial segment, and the page had no photos at
+all. Privacy checked at 3×: the only signage is a generic "fire hose reel / fire extinguisher" door
+label and an exit sign; a resident walks the corridor mid-frame at distance, face turned down and
+partly behind a hand, and no unit numbers or door plates are legible at any zoom. No masking needed.
+
+**`/painter-hampton-east/` — 4 photos.** Occupied interior repaint, warm cream to cool off-white.
+The hallway pair is the same camera position mid-job and finished, kept as a pair deliberately.
+
+**`/painter-prahran/` — 1 photo.** White walls against black doors, architraves and skirting.
+
+⚠️ **Caught in my own draft before it shipped:** the Prahran caption originally read *"Each of those
+lines is cut by hand"* while the summary called the property vacant. Jimmy **sprays vacant
+properties** and brushes and rolls occupied ones — so that sentence asserted a method that
+contradicts a locked fact. Both the vacancy claim and the method claim were removed; the caption now
+describes the finish and the difficulty without naming an application method, and a comment in the
+file records why so it is not reintroduced.
+
+### Verification
+
+All 7 images converted through `scripts/convert-photo.mjs` at 1400px with `-800` variants, 14 files.
+Largest **145KB**, ceiling 250KB, 0 over. Generator extraction confirmed against the emitted HTML:
+**7 `<img>` from `/projects/`, 7/7 non-empty alt, 7 non-empty figcaptions, zero unsubstituted
+`${suburb}`** — this is the check that matters, because the extractor splits on `src:` and has
+silently dropped alt text before. Generators re-run a second time produce no further diff.
+`worker/known-paths.js` gained exactly the 14 new image paths, additive, nothing removed.
+
+Near-duplicate gate re-run across **99** suburb pages with suburb names neutralised: Hampton East
+**32.0%** worst twin, Prahran 27.9%, South Yarra 27.3%, average of the three **29.1%**. Gate is 55%
+any page / 45% average. **Passes with room.**
+
+### Not done this run
+
+The daily audit routine fired 2026-09-17 20:06 and 2026-09-18 20:05 and **neither run happened** —
+the session was occupied with Jimmy's own requests. Steps 0–6 have therefore not been executed since
+the 2026-09-16 run. Stated plainly rather than implied.
